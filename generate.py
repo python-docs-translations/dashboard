@@ -37,7 +37,7 @@ with TemporaryDirectory() as tmpdir:
                 continue
             else:
                 break
-        completion_progress.append((language, completion, branch))
+        completion_progress.append((language, completion))
         print(completion_progress[-1])
 
 template = Template("""
@@ -50,13 +50,12 @@ template = Template("""
 <h1>Python Docs Translation Dashboard</h1>
 <table>
 <thead>
-<tr><th>language</th><th>branch</th><th>completion</th></tr>
+<tr><th>language</th><th>completion</th></tr>
 </thead>
 <tbody>
-{% for language, completion, branch in completion_progress | sort(attribute=1) | reverse %}
+{% for language, completion in completion_progress | sort(attribute=1) | reverse %}
 <tr>
   <td data-label="language">{{ language }}</td>
-  <td data-label="branch">{{ branch }}</td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
   </td>
