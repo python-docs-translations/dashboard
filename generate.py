@@ -4,13 +4,16 @@
 #     "potodo",
 #     "jinja2",
 # ]
+#
+# [tool.uv.sources]
+# potodo = { git = "https://git.afpy.org/maciek/potodo", branch = "pot" }
 # ///
 from datetime import datetime, timezone
 from pathlib import Path
 from shutil import rmtree
 from tempfile import TemporaryDirectory
 from git import Repo, GitCommandError
-from potodo.potodo import scan_path
+from potodo.potodo import merge_and_scan_path
 from jinja2 import Template
 
 completion_progress = []
@@ -26,7 +29,8 @@ with TemporaryDirectory() as tmpdir:
                 print(f'failed to clone {language} {branch}')
                 continue
             try:
-                completion = scan_path(clone_path, no_cache=True, hide_reserved=False, api_url='').completion
+                with TemporaryDirectory() as tmpdir:
+                    completion = merge_and_scan_path(clone_path, pot_path=Path('../cpython/Doc/build/gettext'), tmpdir=Path(tmpdir), hide_reserved=False, api_url='').completion
             except OSError:
                 print(f'failed to scan {language} {branch}')
                 rmtree(clone_path)
