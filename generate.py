@@ -26,7 +26,7 @@ with TemporaryDirectory() as clones_dir:
     Repo.clone_from(f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch='3.13')
     run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
     for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
-        clone_path = Path(tmpdir, language)
+        clone_path = Path(clones_dir, language)
         for branch in ('3.13', '3.12', '3.11', '3.10', '3.9'):
             try:
                 Repo.clone_from(f'https://github.com/python/python-docs-{language}.git', clone_path, depth=1, branch=branch)
