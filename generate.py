@@ -3,6 +3,7 @@
 #     "gitpython",
 #     "potodo",
 #     "jinja2",
+#     "sphinx",
 # ]
 #
 # [tool.uv.sources]
