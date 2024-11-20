@@ -15,6 +15,7 @@ jobs:
       - uses: actions/setup-python@main
       - uses: astral-sh/setup-uv@main
       - uses: actions/checkout@main
+      - run: sudo apt-get install -y gettext
       - run: uv run generate.py  # generates "index.html"
       - run: mkdir -p build && cp index.html style.css build
       - name: Deploy 🚀
