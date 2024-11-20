@@ -24,7 +24,7 @@ th {
   min-width: 50px;
   box-sizing: border-box;
 }
-td:nth-child(3) {
+td:last-child {
   width: 100%;
 }
 @media screen and (max-width: 600px) {
@@ -52,7 +52,7 @@ td:nth-child(3) {
     left: 10px;
     position: absolute;
   }
-  td:nth-child(3) {
+  td:last-child {
     width: inherit;
   }
   .progress-bar {
