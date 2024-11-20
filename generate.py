@@ -36,8 +36,8 @@ with TemporaryDirectory() as clones_dir:
             try:
                 with TemporaryDirectory() as tmpdir:
                     completion = merge_and_scan_path(clone_path, pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'), tmpdir=Path(tmpdir), hide_reserved=False, api_url='').completion
-            except OSError:
-                print(f'failed to scan {language} {branch}')
+            except OSError as e:
+                print(f'failed to scan {language} {branch}: {e}')
                 rmtree(clone_path)
                 continue
             else:
