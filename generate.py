@@ -35,21 +35,14 @@ with TemporaryDirectory() as clones_dir:
             except GitCommandError:
                 print(f'failed to clone {language} {branch}')
                 continue
-            try:
-                with TemporaryDirectory() as tmpdir:
-                    completion = merge_and_scan_path(
-                        clone_path,
-                        pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
-                        tmpdir=Path(tmpdir),
-                        hide_reserved=False,
-                        api_url='',
-                    ).completion
-            except OSError as e:
-                print(f'failed to scan {language} {branch}: {e}')
-                rmtree(clone_path)
-                continue
-            else:
-                break
+            with TemporaryDirectory() as tmpdir:
+                completion = merge_and_scan_path(
+                    clone_path,
+                    pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
+                    tmpdir=Path(tmpdir),
+                    hide_reserved=False,
+                    api_url='',
+                ).completion
         completion_progress.append((language, completion))
         print(completion_progress[-1])
 
