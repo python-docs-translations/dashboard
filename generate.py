@@ -11,6 +11,7 @@
 from datetime import datetime, timezone
 from pathlib import Path
 from shutil import rmtree
+from subprocess import run
 from tempfile import TemporaryDirectory
 from git import Repo, GitCommandError
 from potodo.potodo import merge_and_scan_path
@@ -19,7 +20,9 @@ from jinja2 import Template
 completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
-with TemporaryDirectory() as tmpdir:
+with TemporaryDirectory() as clones_dir:
+    Repo.clone_from(f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch='3.13')
+    run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
     for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
         clone_path = Path(tmpdir, language)
         for branch in ('3.13', '3.12', '3.11', '3.10', '3.9'):
@@ -30,7 +33,7 @@ with TemporaryDirectory() as tmpdir:
                 continue
             try:
                 with TemporaryDirectory() as tmpdir:
-                    completion = merge_and_scan_path(clone_path, pot_path=Path('../cpython/Doc/build/gettext'), tmpdir=Path(tmpdir), hide_reserved=False, api_url='').completion
+                    completion = merge_and_scan_path(clone_path, pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'), tmpdir=Path(tmpdir), hide_reserved=False, api_url='').completion
             except OSError:
                 print(f'failed to scan {language} {branch}')
                 rmtree(clone_path)
