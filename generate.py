@@ -4,6 +4,7 @@
 #     "potodo",
 #     "jinja2",
 #     "sphinx",
+#     "blurb",
 # ]
 #
 # [tool.uv.sources]
