@@ -12,7 +12,6 @@
 # ///
 from datetime import datetime, timezone
 from pathlib import Path
-from shutil import rmtree
 from subprocess import run
 from tempfile import TemporaryDirectory
 from git import Repo, GitCommandError
