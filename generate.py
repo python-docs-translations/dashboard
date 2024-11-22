@@ -3,8 +3,6 @@
 #     "gitpython",
 #     "potodo",
 #     "jinja2",
-#     "sphinx",
-#     "blurb",
 # ]
 #
 # [tool.uv.sources]
@@ -23,6 +21,7 @@ generation_time = datetime.now(timezone.utc)
 
 with TemporaryDirectory() as clones_dir:
     Repo.clone_from(f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch='3.13')
+    run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
     run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
     for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
         clone_path = Path(clones_dir, language)
