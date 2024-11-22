@@ -42,33 +42,31 @@ with TemporaryDirectory() as clones_dir:
         completion_progress.append((language, completion))
         print(completion_progress[-1])
 
-template = Template(
-    """<html lang="en">
-    <head>
-      <title>Python Docs Translation Dashboard</title>
-      <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-    <h1>Python Docs Translation Dashboard</h1>
-    <table>
-    <thead>
-    <tr><th>language</th><th>completion</th></tr>
-    </thead>
-    <tbody>
-    {% for language, completion in completion_progress | sort(attribute=1) | reverse %}
-    <tr>
-      <td data-label="language">{{ language }}</td>
-      <td data-label="completion">
-        <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
-      </td>
-    </tr>
-    {% endfor %}
-    </tbody>
-    </table>
-    <p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
-    </body>
-    </html>"""
-)
+template = Template("""<html lang="en">
+<head>
+  <title>Python Docs Translation Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Python Docs Translation Dashboard</h1>
+<table>
+<thead>
+<tr><th>language</th><th>completion</th></tr>
+</thead>
+<tbody>
+{% for language, completion in completion_progress | sort(attribute=1) | reverse %}
+<tr>
+  <td data-label="language">{{ language }}</td>
+  <td data-label="completion">
+    <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
+  </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
+</body>
+</html>""")
 
 output = template.render(completion_progress=completion_progress, generation_time=generation_time)
 
