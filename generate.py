@@ -51,7 +51,11 @@ template = Template("""
 <tbody>
 {% for language, completion, branch in completion_progress | sort(attribute=1) | reverse %}
 <tr>
-  <td data-label="language">{{ language }}</td>
+  <td data-label="language">
+    <a href="https://github.com/python/python-docs-{{ language }}" target="_blank">
+      {{ language }}
+    </a>
+  </td>
   <td data-label="branch">{{ branch }}</td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
