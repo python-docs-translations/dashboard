@@ -13,7 +13,7 @@ from git import Repo, GitCommandError
 from potodo.potodo import scan_path
 from jinja2 import Template
 
-#completion_progress = []
+completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
 with TemporaryDirectory() as tmpdir:
