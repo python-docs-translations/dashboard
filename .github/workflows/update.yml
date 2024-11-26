@@ -31,3 +31,7 @@ jobs:
           curl -Lo index.html-public https://github.com/m-aciek/pydocs-translation-dashboard/raw/refs/heads/gh-pages/index.html
           diff --color=always -u index.html-public index.html || :
           cat index.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build
