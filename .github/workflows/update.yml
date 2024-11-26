@@ -12,11 +12,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/setup-python@main
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - uses: astral-sh/setup-uv@main
-      - uses: actions/checkout@main
+      - uses: astral-sh/setup-uv@v4
+      - uses: actions/checkout@v4
       - run: uv run generate.py  # generates "index.html"
       - run: mkdir -p build && cp index.html style.css build
       - name: Deploy 🚀
