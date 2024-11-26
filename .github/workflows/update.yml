@@ -13,6 +13,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/setup-python@main
+        with:
+          python-version: "3.x"
       - uses: astral-sh/setup-uv@main
       - uses: actions/checkout@main
       - run: uv run generate.py  # generates "index.html"
