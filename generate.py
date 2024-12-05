@@ -56,7 +56,11 @@ template = Template("""<html lang="en">
 <tbody>
 {% for language, completion in completion_progress | sort(attribute=1) | reverse %}
 <tr>
-  <td data-label="language">{{ language }}</td>
+  <td data-label="language">
+    <a href="https://github.com/python/python-docs-{{ language }}" target="_blank">
+      {{ language }}
+    </a>
+  </td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
   </td>
@@ -65,6 +69,7 @@ template = Template("""<html lang="en">
 </tbody>
 </table>
 <p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
+<p>Note that the completion value is based on files available in language Git repository and <a href="https://github.com/m-aciek/pydocs-translation-dashboard/issues/2" target="_blank">may not include</a> e.g. resources which translation hasn't yet started.</p>
 </body>
 </html>""")
 
