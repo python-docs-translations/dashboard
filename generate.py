@@ -34,7 +34,7 @@ with TemporaryDirectory() as clones_dir:
                 break
         with TemporaryDirectory() as tmpdir:
             completion = merge_and_scan_path(
-                clone_path, pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'), hide_reserved=False, api_url='', merge_path=Path(tmpdir)
+                clone_path, pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'), merge_path=Path(tmpdir), hide_reserved=False, api_url=''
             ).completion
         completion_progress.append((language, completion))
         print(completion_progress[-1])

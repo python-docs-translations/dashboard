@@ -12,6 +12,7 @@ build:
     - asdf plugin add uv
     - asdf install uv latest
     - asdf global uv latest
+    - sudo apt-get install -y gettext
     - uv run generate.py
     - mkdir -p _readthedocs/html
     - mv index.html style.css _readthedocs/html
