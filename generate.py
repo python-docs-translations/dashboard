@@ -3,37 +3,36 @@
 #     "gitpython",
 #     "potodo",
 #     "jinja2",
+#     "requests",
+#     "humanize",
 # ]
 # ///
+import csv
+import io
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 from shutil import rmtree
 from tempfile import TemporaryDirectory
+from urllib.parse import urlencode
+
+import humanize
+import requests
 from git import Repo, GitCommandError
 from potodo.potodo import scan_path
 from jinja2 import Template
+
+import completion
+import visitors
 
 completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
 with TemporaryDirectory() as tmpdir:
     for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
-        clone_path = Path(tmpdir, language)
-        for branch in ('3.13', '3.12', '3.11', '3.10', '3.9'):
-            try:
-                Repo.clone_from(f'https://github.com/python/python-docs-{language}.git', clone_path, depth=1, branch=branch)
-            except GitCommandError:
-                print(f'failed to clone {language} {branch}')
-                continue
-            try:
-                completion = scan_path(clone_path, no_cache=True, hide_reserved=False, api_url='').completion
-            except OSError:
-                print(f'failed to scan {language} {branch}')
-                rmtree(clone_path)
-                continue
-            else:
-                break
-        completion_progress.append((language, completion, branch))
+        completion_number, branch = completion.get_completion_and_branch(tmpdir, language)
+        visitors_number = visitors.get_number_of_visitors(language)
+        completion_progress.append((language, completion_number, branch, visitors_number))
         print(completion_progress[-1])
 
 template = Template("""
@@ -46,14 +45,24 @@ template = Template("""
 <h1>Python Docs Translation Dashboard</h1>
 <table>
 <thead>
-<tr><th>language</th><th>branch</th><th>completion</th></tr>
+<tr>
+  <th>language</th>
+  <th><a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies">visitors<a/></th>
+  <th>branch</th>
+  <th>completion</th>
+</tr>
 </thead>
 <tbody>
-{% for language, completion, branch in completion_progress | sort(attribute=1) | reverse %}
+{% for language, completion, branch, visitors in completion_progress | sort(attribute=1) | reverse %}
 <tr>
   <td data-label="language">
     <a href="https://github.com/python/python-docs-{{ language }}" target="_blank">
       {{ language }}
+    </a>
+  </td>
+  <td data-label="visitors">
+    <a href="https://https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
+      {{ visitors }}
     </a>
   </td>
   <td data-label="branch">{{ branch }}</td>
