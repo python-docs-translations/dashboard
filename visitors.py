@@ -3,7 +3,6 @@ import io
 import urllib
 import zipfile
 
-import humanize
 import requests
 
 
