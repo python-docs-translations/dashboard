@@ -11,10 +11,7 @@ from datetime import datetime, timezone
 from tempfile import TemporaryDirectory
 from urllib.parse import urlencode
 
-import humanize
-import requests
-from git import Repo, GitCommandError
-from potodo.potodo import scan_path
+from git import GitCommandError
 from jinja2 import Template
 
 import completion
