@@ -18,7 +18,7 @@ def get_completion(clones_dir: str, language: str) -> float:
             continue
         else:
             break
-    with tempfile.TemporaryDirectory() as tmpdir:
+    with TemporaryDirectory() as tmpdir:
         completion = potodo.merge_and_scan_path(
             clone_path, pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'), merge_path=Path(tmpdir), hide_reserved=False, api_url=''
         ).completion
