@@ -3,11 +3,25 @@ import shutil
 
 import git
 from potodo import potodo
+import requests
+
+
+def branches_from_devguide() -> list[str]:
+    r = requests.get(
+        "https://raw.githubusercontent.com/"
+        "python/devguide/main/include/release-cycle.json",
+        timeout=10,
+    )
+    data = r.json()
+    return [
+        branch for branch in data if data[branch]["status"] in ("bugfix", "security")
+    ]
 
 
 def get_completion_and_branch(tmpdir: str, language: str) -> tuple[float, str]:
     clone_path = pathlib.Path(tmpdir, language)
-    for branch in ('3.13', '3.12', '3.11', '3.10', '3.9'):
+
+    for branch in branches_from_devguide():
         try:
             git.Repo.clone_from(f'https://github.com/python/python-docs-{language}.git', clone_path, depth=1, branch=branch)
         except git.GitCommandError:
