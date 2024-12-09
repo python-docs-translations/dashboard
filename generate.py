@@ -8,9 +8,7 @@
 # ///
 from datetime import datetime, timezone
 from tempfile import TemporaryDirectory
-from urllib.parse import urlencode
 
-from git import GitCommandError
 from jinja2 import Template
 
 import completion
@@ -53,7 +51,7 @@ template = Template("""
   </td>
   <td data-label="visitors">
     <a href="https://https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
-      {{ visitors }}
+      {{ '{:,}'.format(visitors) }}
     </a>
   </td>
   <td data-label="branch">{{ branch }}</td>
