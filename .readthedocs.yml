@@ -8,11 +8,12 @@ build:
   os: ubuntu-24.04
   tools:
     python: "3"
+  apt_packages:
+    - gettext
   commands:
     - asdf plugin add uv
     - asdf install uv latest
     - asdf global uv latest
-    - apt-get install -y gettext
     - uv run generate.py
     - mkdir -p _readthedocs/html
     - mv index.html style.css _readthedocs/html
