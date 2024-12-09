@@ -8,8 +8,6 @@
 # ]
 # ///
 from datetime import datetime, timezone
-from pathlib import Path
-from shutil import rmtree
 from tempfile import TemporaryDirectory
 from urllib.parse import urlencode
 
