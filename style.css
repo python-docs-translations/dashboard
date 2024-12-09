@@ -9,6 +9,7 @@ th, td {
   border: 1px solid #ddd;
   padding: 8px 12px;
   text-align: left;
+  white-space: nowrap;
 }
 th {
   background-color: #f4f4f4;
@@ -23,6 +24,9 @@ th {
   white-space: nowrap;
   min-width: 50px;
   box-sizing: border-box;
+}
+td:nth-child(2) {
+  text-align: right;
 }
 td:last-child {
   width: 100%;

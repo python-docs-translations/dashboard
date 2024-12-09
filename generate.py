@@ -3,40 +3,25 @@
 #     "gitpython",
 #     "potodo",
 #     "jinja2",
+#     "requests",
 # ]
 # ///
 from datetime import datetime, timezone
-from pathlib import Path
-from subprocess import run
 from tempfile import TemporaryDirectory
-from git import Repo, GitCommandError
-from potodo.potodo import merge_and_scan_path
+
 from jinja2 import Template
+
+import completion
+import visitors
 
 completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
 with TemporaryDirectory() as clones_dir:
-    Repo.clone_from(f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch='3.13')
-    run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
-    run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
     for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
-        clone_path = Path(clones_dir, language)
-        for branch in ('3.13', '3.12', '3.11', '3.10', '3.9'):
-            try:
-                Repo.clone_from(
-                    f'https://github.com/python/python-docs-{language}.git', clone_path, depth=1, branch=branch
-                )
-            except GitCommandError:
-                print(f'failed to clone {language} {branch}')
-                continue
-            else:
-                break
-        with TemporaryDirectory() as tmpdir:
-            completion = merge_and_scan_path(
-                clone_path, pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'), merge_path=Path(tmpdir), hide_reserved=False, api_url=''
-            ).completion
-        completion_progress.append((language, completion))
+        completion_number = completion.get_completion(clones_dir, language)
+        visitors_number = visitors.get_number_of_visitors(language)
+        completion_progress.append((language, completion_number, visitors_number))
         print(completion_progress[-1])
 
 template = Template("""
@@ -49,14 +34,23 @@ template = Template("""
 <h1>Python Docs Translation Dashboard</h1>
 <table>
 <thead>
-<tr><th>language</th><th>completion</th></tr>
+<tr>
+  <th>language</th>
+  <th><a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies">visitors<a/></th>
+  <th>completion</th>
+</tr>
 </thead>
 <tbody>
-{% for language, completion in completion_progress | sort(attribute=1) | reverse %}
+{% for language, completion, visitors in completion_progress | sort(attribute=1) | reverse %}
 <tr>
   <td data-label="language">
     <a href="https://github.com/python/python-docs-{{ language }}" target="_blank">
       {{ language }}
+    </a>
+  </td>
+  <td data-label="visitors">
+    <a href="https://https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
+      {{ '{:,}'.format(visitors) }}
     </a>
   </td>
   <td data-label="completion">
