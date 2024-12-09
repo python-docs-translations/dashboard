@@ -11,9 +11,9 @@ build:
   apt_packages:
     - gettext
   jobs:
-    post_checkout:
-      - asdf plugin add uv
+    post_checkout: []
     install:
+      - asdf plugin add uv
       - asdf install uv latest
     pre_build:
       - asdf global uv latest
