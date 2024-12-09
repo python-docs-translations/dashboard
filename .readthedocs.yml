@@ -10,10 +10,15 @@ build:
     python: "3"
   apt_packages:
     - gettext
-  commands:
-    - asdf plugin add uv
-    - asdf install uv latest
-    - asdf global uv latest
-    - uv run generate.py
-    - mkdir -p _readthedocs/html
-    - mv index.html style.css _readthedocs/html
+  jobs:
+    post_checkout:
+      - asdf plugin add uv
+    install:
+      - asdf install uv latest
+    pre_build:
+      - asdf global uv latest
+    build:
+      html:
+        - uv run generate.py
+        - mkdir -p _readthedocs/html
+        - mv index.html style.css _readthedocs/html
