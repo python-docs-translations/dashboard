@@ -1,5 +1,6 @@
 import shutil
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import git
 from potodo import potodo
@@ -17,7 +18,7 @@ def get_completion(clones_dir: str, language: str) -> float:
             continue
         else:
             break
-    with TemporaryDirectory() as tmpdir:
+    with tempfile.TemporaryDirectory() as tmpdir:
         completion = potodo.merge_and_scan_path(
             clone_path, pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'), merge_path=Path(tmpdir), hide_reserved=False, api_url=''
         ).completion
