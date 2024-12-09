@@ -4,7 +4,6 @@
 #     "potodo",
 #     "jinja2",
 #     "requests",
-#     "humanize",
 # ]
 # ///
 from datetime import datetime, timezone
