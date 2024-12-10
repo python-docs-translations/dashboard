@@ -14,18 +14,20 @@ from tempfile import TemporaryDirectory
 from git import Repo
 from jinja2 import Template
 
-import completion
 import visitors
+from completion import branches_from_devguide, get_completion
 
 completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
 with TemporaryDirectory() as clones_dir:
-    Repo.clone_from(f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch='3.13')
+    Repo.clone_from(
+        f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch=branches_from_devguide()[0]
+    )
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
     for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
-        completion_number = completion.get_completion(clones_dir, language)
+        completion_number = get_completion(clones_dir, language)
         visitors_number = visitors.get_number_of_visitors(language)
         completion_progress.append((language, completion_number, visitors_number))
         print(completion_progress[-1])
@@ -55,7 +57,7 @@ template = Template("""
     </a>
   </td>
   <td data-label="visitors">
-    <a href="https://https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
+    <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
       {{ '{:,}'.format(visitors) }}
     </a>
   </td>

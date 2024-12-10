@@ -1,14 +1,28 @@
-import shutil
+from functools import cache
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
 import git
 from potodo import potodo
+import requests
+
+@cache
+def branches_from_devguide() -> list[str]:
+    r = requests.get(
+        "https://raw.githubusercontent.com/"
+        "python/devguide/main/include/release-cycle.json",
+        timeout=10,
+    )
+    data = r.json()
+    return [
+        branch for branch in data if data[branch]["status"] in ("bugfix", "security")
+    ]
 
 
 def get_completion(clones_dir: str, language: str) -> float:
     clone_path = Path(clones_dir, language)
-    for branch in ('3.13', '3.12', '3.11', '3.10', '3.9'):
+
+    for branch in branches_from_devguide():
         try:
             git.Repo.clone_from(
                 f'https://github.com/python/python-docs-{language}.git', clone_path, depth=1, branch=branch
