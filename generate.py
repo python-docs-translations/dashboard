@@ -4,6 +4,7 @@
 #     "potodo",
 #     "jinja2",
 #     "requests",
+#     "docutils",
 # ]
 # ///
 import subprocess
@@ -14,6 +15,7 @@ from tempfile import TemporaryDirectory
 from git import Repo
 from jinja2 import Template
 
+import repositories
 import visitors
 from completion import branches_from_devguide, get_completion
 
@@ -26,10 +28,13 @@ with TemporaryDirectory() as clones_dir:
     )
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
-    for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
-        completion_number = get_completion(clones_dir, language)
-        visitors_number = visitors.get_number_of_visitors(language)
-        completion_progress.append((language, completion_number, visitors_number))
+    for language, repo in repositories.get_languages_and_repos():
+        if repo:
+            completion_number = get_completion(clones_dir, repo)
+            visitors_number = visitors.get_number_of_visitors(language)
+        else:
+            completion_number, branch, visitors_number = 0., "", 0
+        completion_progress.append((language, repo, completion_number, visitors_number))
         print(completion_progress[-1])
 
 template = Template("""
@@ -49,10 +54,11 @@ template = Template("""
 </tr>
 </thead>
 <tbody>
-{% for language, completion, visitors in completion_progress | sort(attribute=1) | reverse %}
+{% for language, repo, completion, visitors in completion_progress | sort(attribute=2) | reverse %}
 <tr>
+  {% if repo %}
   <td data-label="language">
-    <a href="https://github.com/python/python-docs-{{ language }}" target="_blank">
+    <a href="https://github.com/{{ repo }}" target="_blank">
       {{ language }}
     </a>
   </td>
@@ -61,6 +67,10 @@ template = Template("""
       {{ '{:,}'.format(visitors) }}
     </a>
   </td>
+  {% else %}
+  <td data-label="language">{{ language }}</td>
+  <td data-label="visitors">0</td>
+  {% endif %}
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
   </td>

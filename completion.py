@@ -19,16 +19,15 @@ def branches_from_devguide() -> list[str]:
     ]
 
 
-def get_completion(clones_dir: str, language: str) -> float:
-    clone_path = Path(clones_dir, language)
-
-    for branch in branches_from_devguide():
+def get_completion(clones_dir: str, repo: str) -> float:
+    clone_path = Path(clones_dir, repo)
+    for branch in branches_from_devguide() + ['master']:
         try:
             git.Repo.clone_from(
-                f'https://github.com/python/python-docs-{language}.git', clone_path, depth=1, branch=branch
+                f'https://github.com/{repo}.git', clone_path, depth=1, branch=branch
             )
         except git.GitCommandError:
-            print(f'failed to clone {language} {branch}')
+            print(f'failed to clone {repo} {branch}')
             continue
         else:
             break
