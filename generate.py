@@ -50,7 +50,7 @@ template = Template("""
     </a>
   </td>
   <td data-label="visitors">
-    <a href="https://https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
+    <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
       {{ '{:,}'.format(visitors) }}
     </a>
   </td>
