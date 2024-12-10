@@ -6,9 +6,12 @@
 #     "requests",
 # ]
 # ///
+import subprocess
 from datetime import datetime, timezone
+from pathlib import Path
 from tempfile import TemporaryDirectory
 
+from git import Repo
 from jinja2 import Template
 
 import completion
@@ -18,6 +21,9 @@ completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
 with TemporaryDirectory() as clones_dir:
+    Repo.clone_from(f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch='3.13')
+    subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
+    subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
     for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
         completion_number = completion.get_completion(clones_dir, language)
         visitors_number = visitors.get_number_of_visitors(language)
