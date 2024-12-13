@@ -6,29 +6,37 @@
 #     "requests",
 # ]
 # ///
+import subprocess
 from datetime import datetime, timezone
+from pathlib import Path
 from tempfile import TemporaryDirectory
 
+from git import Repo
 from jinja2 import Template
 
-import completion
 import visitors
+from completion import branches_from_devguide, get_completion
 
 completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
-with TemporaryDirectory() as tmpdir:
+with TemporaryDirectory() as clones_dir:
+    Repo.clone_from(
+        f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch=branches_from_devguide()[0]
+    )
+    subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
+    subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
     for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
-        completion_number, branch = completion.get_completion_and_branch(tmpdir, language)
+        completion_number = get_completion(clones_dir, language)
         visitors_number = visitors.get_number_of_visitors(language)
-        completion_progress.append((language, completion_number, branch, visitors_number))
+        completion_progress.append((language, completion_number, visitors_number))
         print(completion_progress[-1])
 
 template = Template("""
 <html lang="en">
 <head>
-<title>Python Docs Translation Dashboard</title>
-<link rel="stylesheet" href="style.css">
+  <title>Python Docs Translation Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Python Docs Translation Dashboard</h1>
@@ -37,12 +45,11 @@ template = Template("""
 <tr>
   <th>language</th>
   <th><a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies">visitors<a/></th>
-  <th>branch</th>
   <th>completion</th>
 </tr>
 </thead>
 <tbody>
-{% for language, completion, branch, visitors in completion_progress | sort(attribute=1) | reverse %}
+{% for language, completion, visitors in completion_progress | sort(attribute=1) | reverse %}
 <tr>
   <td data-label="language">
     <a href="https://github.com/python/python-docs-{{ language }}" target="_blank">
@@ -54,7 +61,6 @@ template = Template("""
       {{ '{:,}'.format(visitors) }}
     </a>
   </td>
-  <td data-label="branch">{{ branch }}</td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
   </td>
@@ -63,7 +69,6 @@ template = Template("""
 </tbody>
 </table>
 <p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
-<p>Note that the completion value is based on files available in language Git repository and <a href="https://github.com/m-aciek/pydocs-translation-dashboard/issues/2" target="_blank">may not include</a> e.g. resources which translation hasn't yet started.</p>
 </body>
 </html>
 """)
