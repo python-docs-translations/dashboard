@@ -33,7 +33,7 @@ with TemporaryDirectory() as clones_dir:
             completion_number = get_completion(clones_dir, repo)
             visitors_number = visitors.get_number_of_visitors(language)
         else:
-            completion_number, branch, visitors_number = 0., "", 0
+            completion_number, visitors_number = 0., 0
         completion_progress.append((language, repo, completion_number, visitors_number))
         print(completion_progress[-1])
 
