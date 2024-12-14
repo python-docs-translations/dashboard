@@ -3,14 +3,12 @@ import pathlib
 import re
 from typing import Generator, Optional
 
-import git
 from docutils import core
 from docutils.nodes import table, row
 
-def get_languages_and_repos() -> Generator[tuple[str, Optional[str]], None, None]:
-    with tempfile.TemporaryDirectory() as clone_path:
-        git.Repo.clone_from(f'https://github.com/python/devguide.git', clone_path, depth=1)
-        translating = pathlib.Path(clone_path, 'documentation/translating.rst').read_text()
+
+def get_languages_and_repos(devguide_dir: pathlib.Path) -> Generator[tuple[str, Optional[str]], None, None]:
+    translating = devguide_dir.joinpath('documentation/translating.rst').read_text()
     doctree = core.publish_doctree(translating)
 
     for node in doctree.traverse(table):

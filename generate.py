@@ -23,21 +23,24 @@ completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
 with TemporaryDirectory() as clones_dir:
+    Repo.clone_from(f'https://github.com/python/devguide.git', devguide_dir := Path(clones_dir, 'devguide'), depth=1)
+    latest_branch = branches_from_devguide(devguide_dir)[0]
     Repo.clone_from(
-        f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch=branches_from_devguide()[0]
+        f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch=latest_branch
     )
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
-    for language, repo in repositories.get_languages_and_repos():
+    for language, repo in repositories.get_languages_and_repos(devguide_dir):
         if repo:
             completion_number = get_completion(clones_dir, repo)
             visitors_number = visitors.get_number_of_visitors(language)
         else:
-            completion_number, visitors_number = 0., 0
+            completion_number, visitors_number = 0.0, 0
         completion_progress.append((language, repo, completion_number, visitors_number))
         print(completion_progress[-1])
 
-template = Template("""
+template = Template(
+    """
 <html lang="en">
 <head>
   <title>Python Docs Translation Dashboard</title>
@@ -81,7 +84,8 @@ template = Template("""
 <p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
 </body>
 </html>
-""")
+"""
+)
 
 output = template.render(completion_progress=completion_progress, generation_time=generation_time)
 
