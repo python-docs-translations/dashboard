@@ -4,6 +4,7 @@
 #     "potodo",
 #     "jinja2",
 #     "requests",
+#     "docutils",
 # ]
 # ///
 import subprocess
@@ -14,6 +15,7 @@ from tempfile import TemporaryDirectory
 from git import Repo
 from jinja2 import Template
 
+import repositories
 import visitors
 from completion import branches_from_devguide, get_completion
 
@@ -21,18 +23,24 @@ completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
 with TemporaryDirectory() as clones_dir:
+    Repo.clone_from(f'https://github.com/python/devguide.git', devguide_dir := Path(clones_dir, 'devguide'), depth=1)
+    latest_branch = branches_from_devguide(devguide_dir)[0]
     Repo.clone_from(
-        f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch=branches_from_devguide()[0]
+        f'https://github.com/python/cpython.git', Path(clones_dir, 'cpython'), depth=1, branch=latest_branch
     )
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
-    for language in ('es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt-br', 'tr', 'uk', 'zh-cn', 'zh-tw'):
-        completion_number = get_completion(clones_dir, language)
-        visitors_number = visitors.get_number_of_visitors(language)
-        completion_progress.append((language, completion_number, visitors_number))
+    for language, repo in repositories.get_languages_and_repos(devguide_dir):
+        if repo:
+            completion_number = get_completion(clones_dir, repo)
+            visitors_number = visitors.get_number_of_visitors(language)
+        else:
+            completion_number, visitors_number = 0.0, 0
+        completion_progress.append((language, repo, completion_number, visitors_number))
         print(completion_progress[-1])
 
-template = Template("""
+template = Template(
+    """
 <html lang="en">
 <head>
   <title>Python Docs Translation Dashboard</title>
@@ -49,10 +57,11 @@ template = Template("""
 </tr>
 </thead>
 <tbody>
-{% for language, completion, visitors in completion_progress | sort(attribute=1) | reverse %}
+{% for language, repo, completion, visitors in completion_progress | sort(attribute=2) | reverse %}
 <tr>
+  {% if repo %}
   <td data-label="language">
-    <a href="https://github.com/python/python-docs-{{ language }}" target="_blank">
+    <a href="https://github.com/{{ repo }}" target="_blank">
       {{ language }}
     </a>
   </td>
@@ -61,6 +70,10 @@ template = Template("""
       {{ '{:,}'.format(visitors) }}
     </a>
   </td>
+  {% else %}
+  <td data-label="language">{{ language }}</td>
+  <td data-label="visitors">0</td>
+  {% endif %}
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
   </td>
@@ -71,7 +84,8 @@ template = Template("""
 <p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
 </body>
 </html>
-""")
+"""
+)
 
 output = template.render(completion_progress=completion_progress, generation_time=generation_time)
 
