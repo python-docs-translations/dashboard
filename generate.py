@@ -33,16 +33,17 @@ with TemporaryDirectory() as clones_dir:
     for language, repo in repositories.get_languages_and_repos(devguide_dir):
         if repo:
             completion_number, translators_number = get_completion(clones_dir, repo)
-            visitors_number = visitors.get_number_of_visitors(language)
+            visitors_number, p = visitors.get_number_of_visitors(language)
         else:
             completion_number, visitors_number = 0.0, 0
-        completion_progress.append((language, repo, completion_number, translators_number, visitors_number))
+        completion_progress.append((language, repo, completion_number, translators_number, visitors_number, p))
         print(completion_progress[-1])
 
 template = Template(
     """
 <html lang="en">
 <head>
+  <meta charset="utf-8">
   <title>Python Docs Translation Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -58,7 +59,7 @@ template = Template(
 </tr>
 </thead>
 <tbody>
-{% for language, repo, completion, translators, visitors in completion_progress | sort(attribute=2) | reverse %}
+{% for language, repo, completion, translators, visitors, p in completion_progress | sort(attribute=2) | reverse %}
 <tr>
   {% if repo %}
   <td data-label="language">
@@ -68,8 +69,8 @@ template = Template(
   </td>
   <td data-label="visitors">
     <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
-      {{ '{:,}'.format(visitors) }}
-    </a>
+      {{ '{:,}'.format(visitors) }}</a>
+    {% if p %}({{ p | round(2) }}‱){% endif %}
   </td>
   <td data-label="translators">{{ '{:,}'.format(translators) }}</td>
   {% else %}
