@@ -26,6 +26,8 @@ jobs:
         with:
           folder: build
           clean: true
+          git-config-name: github-actions[bot]
+          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
       - name: Debug index.html if pull request
         if: github.event_name == 'pull_request'
         run: |
