@@ -18,5 +18,9 @@ def _fetch_translators(path: Path) -> Generator[str, None, None]:
         if 'Translators:' not in header:
             continue
         for translator_record in header[header.index('Translators:') + 1:]:
-            translator, _year = translator_record.split(', ')
-            yield translator
+            try:
+                translator, _year = translator_record.split(', ')
+            except ValueError:
+                yield translator_record
+            else:
+                yield translator
