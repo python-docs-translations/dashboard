@@ -28,7 +28,7 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, int]:
             translators_number = 0
             continue
         else:
-            translators_number = translators.get_number_of_translators(clone_path)
+            translators_number = translators.get_number(clone_path)
             break
     with TemporaryDirectory() as tmpdir:
         completion = potodo.merge_and_scan_path(
