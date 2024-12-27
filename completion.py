@@ -6,6 +6,9 @@ from tempfile import TemporaryDirectory
 import git
 from potodo import potodo
 
+import translators
+
+
 @cache
 def branches_from_devguide(devguide_dir: Path) -> list[str]:
     p = devguide_dir.joinpath('include/release-cycle.json')
@@ -15,7 +18,7 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
     ]
 
 
-def get_completion(clones_dir: str, repo: str) -> float:
+def get_completion(clones_dir: str, repo: str) -> tuple[float, int]:
     clone_path = Path(clones_dir, repo)
     for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + ['master']:
         try:
@@ -31,4 +34,5 @@ def get_completion(clones_dir: str, repo: str) -> float:
         completion = potodo.merge_and_scan_path(
             clone_path, pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'), merge_path=Path(tmpdir), hide_reserved=False, api_url=''
         ).completion
-    return completion
+    translators_number = translators.get_number_of_translators(clone_path)
+    return completion, translators_number
