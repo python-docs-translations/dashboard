@@ -1,4 +1,5 @@
 # /// script
+# requires-python = ">=3.11"
 # dependencies = [
 #     "gitpython",
 #     "potodo",
@@ -16,6 +17,7 @@ from git import Repo
 from jinja2 import Template
 
 import repositories
+import switcher
 import visitors
 from completion import branches_from_devguide, get_completion
 
@@ -30,13 +32,23 @@ with TemporaryDirectory() as clones_dir:
     )
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
     subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True)
+    switcher_languages = switcher.get_languages()
     for language, repo in repositories.get_languages_and_repos(devguide_dir):
         if repo:
             completion_number, translators_number = get_completion(clones_dir, repo)
             visitors_number = visitors.get_number_of_visitors(language)
         else:
             completion_number, visitors_number = 0.0, 0
-        completion_progress.append((language, repo, completion_number, translators_number, visitors_number))
+        completion_progress.append(
+            (
+                language,
+                repo,
+                completion_number,
+                translators_number,
+                visitors_number,
+                switcher_languages[language],
+            )
+        )
         print(completion_progress[-1])
 
 template = Template(
@@ -58,13 +70,14 @@ template = Template(
 </tr>
 </thead>
 <tbody>
-{% for language, repo, completion, translators, visitors in completion_progress | sort(attribute=2) | reverse %}
+{% for language, repo, completion, translators, visitors, in_switcher in completion_progress | sort(attribute=2) | reverse %}
 <tr>
   {% if repo %}
   <td data-label="language">
     <a href="https://github.com/{{ repo }}" target="_blank">
-      {{ language }}
+      {{ language -}}
     </a>
+    {{- "*" if in_switcher else "" }}
   </td>
   <td data-label="visitors">
     <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
@@ -84,6 +97,7 @@ template = Template(
 {% endfor %}
 </tbody>
 </table>
+<p>* Language is in the <a href="https://docs.python.org">docs.python.org</a> switcher.</p>
 <p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
 </body>
 </html>
