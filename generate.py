@@ -64,6 +64,7 @@ template = Template(
 <thead>
 <tr>
   <th>language</th>
+  <th>build</th>
   <th><a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies">visitors<a/></th>
   <th>translators</th>
   <th>completion</th>
@@ -75,9 +76,15 @@ template = Template(
   {% if repo %}
   <td data-label="language">
     <a href="https://github.com/{{ repo }}" target="_blank">
-      {{ language -}}
+      {{ language }}
     </a>
-    {{- "*" if in_switcher else "" }}
+  </td>  
+  <td data-label="build">
+    {% if in_switcher %}
+      <a href="https://docs.python.org/{{ language }}/">in switcher</a>
+    {% else %}
+      ✗
+    {% endif %}
   </td>
   <td data-label="visitors">
     <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
@@ -97,7 +104,6 @@ template = Template(
 {% endfor %}
 </tbody>
 </table>
-<p>* Language is in the <a href="https://docs.python.org">docs.python.org</a> switcher.</p>
 <p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
 </body>
 </html>
