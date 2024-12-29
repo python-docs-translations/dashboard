@@ -25,10 +25,10 @@ th {
   min-width: 50px;
   box-sizing: border-box;
 }
-td:nth-child(2) {
+td[data-label="visitors"] {
   text-align: right;
 }
-td:last-child {
+td[data-label="completion"] {
   width: 100%;
 }
 @media screen and (max-width: 600px) {
@@ -56,7 +56,7 @@ td:last-child {
     left: 10px;
     position: absolute;
   }
-  td:last-child {
+  td[data-label="completion"] {
     width: inherit;
   }
   .progress-bar {
