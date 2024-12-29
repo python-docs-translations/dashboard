@@ -11,20 +11,18 @@ from collections import defaultdict
 import requests
 
 
-def get_languages() -> defaultdict[str, bool]:
-    # Languages missing from config.toml are not in production
-    in_prod = defaultdict(lambda: False)
+def get_languages() -> Generator[str, None, None]:
     data = requests.get(
         "https://raw.githubusercontent.com/"
         "python/docsbuild-scripts/refs/heads/main/config.toml",
         timeout=10,
     ).text
-    languages = tomllib.loads(data)["languages"]
+    config = tomllib.loads(data)
+    languages = config["languages"]
+    defaults = config["defaults"]
     for code, language in languages.items():
-        code = code.lower().replace("_", "-")
-        # Languages in config.toml default to being in production
-        in_prod[code] = language.get("in_prod", True)
-    return in_prod
+        if language.get("in_prod", defaults["in_prod"]):
+            yield code.lower().replace("_", "-")
 
 
 def main() -> None:
