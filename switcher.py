@@ -7,6 +7,7 @@ whether it is in the language switcher.
 
 import tomllib
 from collections import defaultdict
+from typing import Generator
 
 import requests
 
@@ -26,10 +27,10 @@ def get_languages() -> Generator[str, None, None]:
 
 
 def main() -> None:
-    languages = get_languages()
+    languages = list(get_languages())
     print(languages)
     for code in ("en", "pl", "ar", "zh-cn"):
-        print(f"{code}: {languages[code]}")
+        print(f"{code}: {code in languages}")
 
 
 if __name__ == "__main__":
