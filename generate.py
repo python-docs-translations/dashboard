@@ -94,6 +94,7 @@ template = Template(
   <td data-label="translators">{{ '{:,}'.format(translators) }}</td>
   {% else %}
   <td data-label="language">{{ language }}</td>
+  <td data-label="build">✗</td>
   <td data-label="visitors">0</td>
   <td data-label="translators">0</td>
   {% endif %}
