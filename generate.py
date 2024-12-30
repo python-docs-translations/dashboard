@@ -26,20 +26,20 @@ generation_time = datetime.now(timezone.utc)
 
 with TemporaryDirectory() as clones_dir:
     Repo.clone_from(
-        "https://github.com/python/devguide.git",
-        devguide_dir := Path(clones_dir, "devguide"),
+        'https://github.com/python/devguide.git',
+        devguide_dir := Path(clones_dir, 'devguide'),
         depth=1,
     )
     latest_branch = branches_from_devguide(devguide_dir)[0]
     Repo.clone_from(
-        "https://github.com/python/cpython.git",
-        Path(clones_dir, "cpython"),
+        'https://github.com/python/cpython.git',
+        Path(clones_dir, 'cpython'),
         depth=1,
         branch=latest_branch,
     )
-    subprocess.run(["make", "-C", Path(clones_dir, "cpython/Doc"), "venv"], check=True)
+    subprocess.run(['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True)
     subprocess.run(
-        ["make", "-C", Path(clones_dir, "cpython/Doc"), "gettext"], check=True
+        ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True
     )
     switcher_languages = list(switcher.get_languages())
     for language, repo in repositories.get_languages_and_repos(devguide_dir):
@@ -124,5 +124,5 @@ output = template.render(
     completion_progress=completion_progress, generation_time=generation_time
 )
 
-with open("index.html", "w") as file:
+with open('index.html', 'w') as file:
     file.write(output)
