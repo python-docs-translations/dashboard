@@ -6,7 +6,6 @@ whether it is in the language switcher.
 """
 
 import tomllib
-from collections import defaultdict
 from typing import Generator
 
 import requests
