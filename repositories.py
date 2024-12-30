@@ -1,4 +1,3 @@
-import tempfile
 import pathlib
 import re
 from typing import Generator, Optional
