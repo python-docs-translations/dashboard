@@ -25,7 +25,7 @@ th {
   min-width: 50px;
   box-sizing: border-box;
 }
-td[data-label="visitors"] {
+td[data-label="visitors"], td[data-label="translators"] {
   text-align: right;
 }
 td[data-label="completion"] {
