@@ -71,7 +71,7 @@ template = Template(
 </tr>
 </thead>
 <tbody>
-{% for language, repo, completion, translators, visitors, in_switcher in completion_progress | sort(2,3) | reverse %}
+{% for language, repo, completion, translators, visitors, in_switcher in completion_progress | sort(attribute='2,3') | reverse %}
 <tr>
   {% if repo %}
   <td data-label="language">
