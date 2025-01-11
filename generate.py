@@ -78,7 +78,10 @@ template = Template(
     <a href="https://github.com/{{ repo }}" target="_blank">
       {{ language }}
     </a>
-  </td>  
+  </td>
+  {% else %}
+  <td data-label="language">{{ language }}</td>
+  {% endif %}
   <td data-label="build">
     {% if in_switcher %}
       <a href="https://docs.python.org/{{ language }}/">in switcher</a>
@@ -92,12 +95,6 @@ template = Template(
     </a>
   </td>
   <td data-label="translators">{{ '{:,}'.format(translators) }}</td>
-  {% else %}
-  <td data-label="language">{{ language }}</td>
-  <td data-label="build">✗</td>
-  <td data-label="visitors">0</td>
-  <td data-label="translators">0</td>
-  {% endif %}
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
   </td>
