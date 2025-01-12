@@ -94,7 +94,7 @@ template = Template(
   {% endif %}
   <td data-label="build">
     {% if build %}
-      <a href="https://docs.python.org/{{ language }}/" target="_blank">✓ {% if in_switcher %}in switcher{% endif %}</a>
+      <a href="https://docs.python.org/{{ language }}/" target="_blank">✓{% if in_switcher %} in switcher{% endif %}</a>
     {% else %}
       ✗
     {% endif %}
