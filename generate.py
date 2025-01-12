@@ -61,66 +61,10 @@ with TemporaryDirectory() as clones_dir:
         )
         print(completion_progress[-1])
 
-template = Template(
-    """
-<html lang="en">
-<head>
-  <title>Python Docs Translation Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<h1>Python Docs Translation Dashboard</h1>
-<table>
-<thead>
-<tr>
-  <th>language</th>
-  <th>build</th>
-  <th><a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies">visitors<a/></th>
-  <th>translators</th>
-  <th>completion</th>
-</tr>
-</thead>
-<tbody>
-{% for language, repo, completion, translators, visitors, build, in_switcher in completion_progress | sort(attribute='2,3') | reverse %}
-<tr>
-  {% if repo %}
-  <td data-label="language">
-    <a href="https://github.com/{{ repo }}" target="_blank">
-      {{ language }}
-    </a>
-  </td>
-  {% else %}
-  <td data-label="language">{{ language }}</td>
-  {% endif %}
-  <td data-label="build">
-    {% if build %}
-      <a href="https://docs.python.org/{{ language }}/" target="_blank">✓{% if in_switcher %} in switcher{% endif %}</a>
-    {% else %}
-      ✗
-    {% endif %}
-  </td>
-  <td data-label="visitors">
-    <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
-      {{ '{:,}'.format(visitors) }}
-    </a>
-  </td>
-  <td data-label="translators">{{ '{:,}'.format(translators) }}</td>
-  <td data-label="completion">
-    <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
-  </td>
-</tr>
-{% endfor %}
-</tbody>
-</table>
-<p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
-</body>
-</html>
-"""
-)
+template = Template(Path('template.html').read_text())
 
 output = template.render(
     completion_progress=completion_progress, generation_time=generation_time
 )
 
-with open('index.html', 'w') as file:
-    file.write(output)
+Path('index.html').write_text(output)
