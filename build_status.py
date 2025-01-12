@@ -18,11 +18,9 @@ def get_languages() -> Iterator[tuple[str, bool]]:
         timeout=10,
     ).text
     config = tomllib.loads(data)
-    languages = config['languages']
-    defaults = config['defaults']
-    for code, language in languages.items():
+    for code, language in config['languages'].items():
         language_code = code.lower().replace('_', '-')
-        in_switcher = language.get('in_prod', defaults['in_prod'])
+        in_switcher = language.get('in_prod', config['defaults']['in_prod'])
         yield language_code, in_switcher
 
 
