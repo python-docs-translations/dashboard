@@ -71,11 +71,12 @@ def get_completion_progress() -> (
             )
 
 
-template = Template(Path('template.html').read_text())
+if __name__ == '__main__':
+    template = Template(Path('template.html').read_text())
 
-output = template.render(
-    completion_progress=tuple(get_completion_progress()),
-    generation_time=generation_time,
-)
+    output = template.render(
+        completion_progress=get_completion_progress(),
+        generation_time=generation_time,
+    )
 
-Path('index.html').write_text(output)
+    Path('index.html').write_text(output)
