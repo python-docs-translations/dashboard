@@ -35,9 +35,13 @@
     {% endif %}
   </td>
   <td data-label="visitors">
-    <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
-      {{ '{:,}'.format(visitors) }}
-    </a>
+    {% if build %}
+      <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ language }}/)))" target="_blank">
+        {{ '{:,}'.format(visitors) }}
+      </a>
+    {% else %}
+      0
+    {% endif %}
   </td>
   <td data-label="translators">{{ translators }}</td>
   <td data-label="completion">
