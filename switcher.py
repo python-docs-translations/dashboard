@@ -1,17 +1,17 @@
 """
-Fetch languages in the https://docs.python.org language switcher.
+Fetch build status of languages in the https://docs.python.org.
 
-Return a defaultdict mapping language codes to a Boolean indicating
+Yield a tuple of language code and a Boolean indicating
 whether it is in the language switcher.
 """
 
 import tomllib
-from typing import Generator
+from collections.abc import Generator
 
 import requests
 
 
-def get_languages() -> Generator[str, None, None]:
+def get_languages() -> Generator[tuple[str, str]]:
     data = requests.get(
         'https://raw.githubusercontent.com/'
         'python/docsbuild-scripts/refs/heads/main/config.toml',
@@ -21,15 +21,16 @@ def get_languages() -> Generator[str, None, None]:
     languages = config['languages']
     defaults = config['defaults']
     for code, language in languages.items():
-        if language.get('in_prod', defaults['in_prod']):
-            yield code.lower().replace('_', '-')
+        language_code = code.lower().replace('_', '-')
+        switcher = language.get('in_prod', defaults['in_prod'])
+        yield language_code, switcher
 
 
 def main() -> None:
-    languages = list(get_languages())
+    languages = {language: switcher for language, switcher in get_languages()}
     print(languages)
-    for code in ('en', 'pl', 'ar', 'zh-cn'):
-        print(f'{code}: {code in languages}')
+    for code in ('en', 'pl', 'ar', 'zh-cn', 'id'):
+        print(f'{code}: {code in languages and languages[code]}')
 
 
 if __name__ == '__main__':
