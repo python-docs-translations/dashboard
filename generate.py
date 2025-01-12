@@ -41,7 +41,7 @@ with TemporaryDirectory() as clones_dir:
     subprocess.run(
         ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True
     )
-    switcher_languages = {
+    languages_built = {
         language: switcher for language, switcher in build_status.get_languages()
     }
     for language, repo in repositories.get_languages_and_repos(devguide_dir):
@@ -57,8 +57,8 @@ with TemporaryDirectory() as clones_dir:
                 completion_number,
                 translators_number,
                 visitors_number,
-                language in switcher_languages,
-                switcher_languages.get(language),
+                language in languages_built,
+                languages_built.get(language),
             )
         )
         print(completion_progress[-1])
