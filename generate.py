@@ -17,7 +17,7 @@ from git import Repo
 from jinja2 import Template
 
 import repositories
-import switcher
+import build_status
 import visitors
 from completion import branches_from_devguide, get_completion
 
@@ -41,7 +41,7 @@ with TemporaryDirectory() as clones_dir:
     subprocess.run(
         ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True
     )
-    switcher_languages = list(switcher.get_languages())
+    languages_built = dict(build_status.get_languages())
     for language, repo in repositories.get_languages_and_repos(devguide_dir):
         if repo:
             completion_number, translators_number = get_completion(clones_dir, repo)
@@ -55,7 +55,8 @@ with TemporaryDirectory() as clones_dir:
                 completion_number,
                 translators_number,
                 visitors_number,
-                language in switcher_languages,
+                language in languages_built,  # built on docs.python.org
+                languages_built.get(language),  # in switcher
             )
         )
         print(completion_progress[-1])
@@ -80,7 +81,7 @@ template = Template(
 </tr>
 </thead>
 <tbody>
-{% for language, repo, completion, translators, visitors, in_switcher in completion_progress | sort(attribute='2,3') | reverse %}
+{% for language, repo, completion, translators, visitors, build, in_switcher in completion_progress | sort(attribute='2,3') | reverse %}
 <tr>
   {% if repo %}
   <td data-label="language">
@@ -92,8 +93,8 @@ template = Template(
   <td data-label="language">{{ language }}</td>
   {% endif %}
   <td data-label="build">
-    {% if in_switcher %}
-      <a href="https://docs.python.org/{{ language }}/">in switcher</a>
+    {% if build %}
+      <a href="https://docs.python.org/{{ language }}/" target="_blank">✓{% if in_switcher %} in switcher{% endif %}</a>
     {% else %}
       ✗
     {% endif %}
