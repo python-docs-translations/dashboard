@@ -47,7 +47,7 @@ with TemporaryDirectory() as clones_dir:
             completion_number, translators_number = get_completion(clones_dir, repo)
             visitors_number = visitors.get_number_of_visitors(language)
         else:
-            completion_number, visitors_number = 0.0, 0
+            completion_number, translators_number, visitors_number = 0.0, 0, 0
         completion_progress.append(
             (
                 language,
@@ -80,7 +80,7 @@ template = Template(
 </tr>
 </thead>
 <tbody>
-{% for language, repo, completion, translators, visitors, in_switcher in completion_progress | sort(attribute=2) | reverse %}
+{% for language, repo, completion, translators, visitors, in_switcher in completion_progress | sort(attribute='2,3') | reverse %}
 <tr>
   {% if repo %}
   <td data-label="language">
@@ -88,6 +88,9 @@ template = Template(
       {{ language }}
     </a>
   </td>
+  {% else %}
+  <td data-label="language">{{ language }}</td>
+  {% endif %}
   <td data-label="build">
     {% if in_switcher %}
       <a href="https://docs.python.org/{{ language }}/">in switcher</a>
@@ -101,12 +104,6 @@ template = Template(
     </a>
   </td>
   <td data-label="translators">{{ '{:,}'.format(translators) }}</td>
-  {% else %}
-  <td data-label="language">{{ language }}</td>
-  <td data-label="build">✗</td>
-  <td data-label="visitors">0</td>
-  <td data-label="translators">0</td>
-  {% endif %}
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
   </td>
