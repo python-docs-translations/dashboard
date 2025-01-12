@@ -54,6 +54,7 @@ def get_completion_progress() -> (
             in_switcher = languages_built.get(language)
             if not repo:
                 yield language, repo, 0.0, 0, 0, built_on_docs_python_org, in_switcher
+                continue
             completion_number, translators_number = get_completion(clones_dir, repo)
             if built_on_docs_python_org:
                 visitors_number = visitors.get_number_of_visitors(language)
