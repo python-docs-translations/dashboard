@@ -17,7 +17,7 @@ from git import Repo
 from jinja2 import Template
 
 import repositories
-import switcher
+import build_status
 import visitors
 from completion import branches_from_devguide, get_completion
 
