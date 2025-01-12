@@ -42,7 +42,7 @@ with TemporaryDirectory() as clones_dir:
         ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True
     )
     languages_built = {
-        language: switcher for language, switcher in build_status.get_languages()
+        language: in_switcher for language, in_switcher in build_status.get_languages()
     }
     for language, repo in repositories.get_languages_and_repos(devguide_dir):
         if repo:
