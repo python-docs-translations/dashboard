@@ -11,7 +11,7 @@ from collections.abc import Generator
 import requests
 
 
-def get_languages() -> Generator[tuple[str, str]]:
+def get_languages() -> Generator[tuple[str, bool]]:
     data = requests.get(
         'https://raw.githubusercontent.com/'
         'python/docsbuild-scripts/refs/heads/main/config.toml',
