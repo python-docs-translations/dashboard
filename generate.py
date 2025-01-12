@@ -57,8 +57,8 @@ with TemporaryDirectory() as clones_dir:
                 completion_number,
                 translators_number,
                 visitors_number,
-                language in languages_built,
-                languages_built.get(language),
+                language in languages_built,  # built on docs.python.org
+                languages_built.get(language),  # in switcher
             )
         )
         print(completion_progress[-1])
