@@ -6,12 +6,12 @@ whether it is in the language switcher.
 """
 
 import tomllib
-from collections.abc import Generator
+from collections.abc import Iterator
 
 import requests
 
 
-def get_languages() -> Generator[tuple[str, bool]]:
+def get_languages() -> Iterator[tuple[str, bool]]:
     data = requests.get(
         'https://raw.githubusercontent.com/'
         'python/docsbuild-scripts/refs/heads/main/config.toml',
