@@ -43,9 +43,13 @@ with TemporaryDirectory() as clones_dir:
     )
     languages_built = dict(build_status.get_languages())
     for language, repo in repositories.get_languages_and_repos(devguide_dir):
+        built_on_docs_python_org = language in languages_built
         if repo:
             completion_number, translators_number = get_completion(clones_dir, repo)
-            visitors_number = visitors.get_number_of_visitors(language)
+            if built_on_docs_python_org:
+                visitors_number = visitors.get_number_of_visitors(language)
+            else:
+                visitors_number = 0
         else:
             completion_number, translators_number, visitors_number = 0.0, 0, 0
         completion_progress.append(
@@ -55,7 +59,7 @@ with TemporaryDirectory() as clones_dir:
                 completion_number,
                 translators_number,
                 visitors_number,
-                language in languages_built,  # built on docs.python.org
+                built_on_docs_python_org,
                 languages_built.get(language),  # in switcher
             )
         )
