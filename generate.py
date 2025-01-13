@@ -13,6 +13,7 @@ from collections.abc import Iterator
 from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from typing import cast
 
 from git import Repo
 from jinja2 import Template
@@ -22,7 +23,6 @@ import build_status
 import visitors
 from completion import branches_from_devguide, get_completion
 
-completion_progress = []
 generation_time = datetime.now(timezone.utc)
 
 
@@ -53,7 +53,15 @@ def get_completion_progress() -> (
             built_on_docs_python_org = language in languages_built
             in_switcher = languages_built.get(language)
             if not repo:
-                yield language, repo, 0.0, 0, 0, built_on_docs_python_org, in_switcher
+                yield (
+                    language,
+                    cast(str, repo),
+                    0.0,
+                    0,
+                    0,
+                    built_on_docs_python_org,
+                    in_switcher,
+                )
                 continue
             completion_number, translators_number = get_completion(clones_dir, repo)
             if built_on_docs_python_org:

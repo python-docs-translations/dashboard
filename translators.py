@@ -18,7 +18,7 @@ def get_number_from_git_history(path: Path) -> int:
 def yield_from_headers(path: Path) -> Generator[str, None, None]:
     for file in path.rglob('*.po'):
         try:
-            header = pofile(file).header.splitlines()
+            header = pofile(file).header.splitlines()  # type: ignore[call-overload]  # https://github.com/python/typeshed/pull/13396
         except IOError:
             continue
         if 'Translators:' not in header:
