@@ -1,14 +1,12 @@
-import pathlib
 import re
 from collections.abc import Iterator
+from pathlib import Path
 
 from docutils import core
 from docutils.nodes import table, row
 
 
-def get_languages_and_repos(
-    devguide_dir: pathlib.Path,
-) -> Iterator[tuple[str, str | None]]:
+def get_languages_and_repos(devguide_dir: Path) -> Iterator[tuple[str, str | None]]:
     translating = devguide_dir.joinpath('documentation/translating.rst').read_text()
     doctree = core.publish_doctree(translating)
 
