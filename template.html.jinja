@@ -9,6 +9,7 @@
 <thead>
 <tr>
   <th>language</th>
+  <th>workflow</th>
   <th>build</th>
   <th><a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies" target="_blank">visitors</a></th>
   <th>translators</th>
@@ -16,7 +17,7 @@
 </tr>
 </thead>
 <tbody>
-{% for language, repo, completion, translators, visitors, build, in_switcher in completion_progress | sort(attribute='2,3') | reverse %}
+{% for language, repo, completion, translators, visitors, build, in_switcher, on_platform in completion_progress | sort(attribute='2,3') | reverse %}
 <tr>
   {% if repo %}
   <td data-label="language">
@@ -27,6 +28,11 @@
   {% else %}
   <td data-label="language">{{ language }}</td>
   {% endif %}
+  <td data-label="workflow">
+    {% if contrib_link %}<a href="https://explore.transifex.com/python-doc/python-newest/" target="_blank">{% endif %}
+    {% if on_platform %}platform{% else %}repository{% endif %}
+    {% if contrib_link %}</a>{% endif %}
+  </td>
   <td data-label="build">
     {% if build %}
       <a href="https://docs.python.org/{{ language }}/" target="_blank">✓{% if in_switcher %} in switcher{% endif %}</a>
