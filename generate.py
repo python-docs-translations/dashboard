@@ -49,34 +49,15 @@ def get_completion_progress() -> (
             ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True
         )
         languages_built = dict(build_status.get_languages())
-        for language, repo in repositories.get_languages_and_repos(devguide_dir):
-            built_on_docs_python_org = language in languages_built
-            in_switcher = languages_built.get(language)
+        for lang, repo in repositories.get_languages_and_repos(devguide_dir):
+            built = lang in languages_built
+            in_switcher = languages_built.get(lang)
             if not repo:
-                yield (
-                    language,
-                    cast(str, repo),
-                    0.0,
-                    0,
-                    0,
-                    built_on_docs_python_org,
-                    in_switcher,
-                )
+                yield lang, cast(str, repo), 0.0, 0, 0, built, in_switcher
                 continue
-            completion_number, translators_number = get_completion(clones_dir, repo)
-            if built_on_docs_python_org:
-                visitors_number = visitors.get_number_of_visitors(language)
-            else:
-                visitors_number = 0
-            yield (
-                language,
-                repo,
-                completion_number,
-                translators_number,
-                visitors_number,
-                built_on_docs_python_org,
-                in_switcher,
-            )
+            completion, translators = get_completion(clones_dir, repo)
+            visitors_num = visitors.get_number_of_visitors(lang) if built else 0
+            yield lang, repo, completion, translators, visitors_num, built, in_switcher
 
 
 if __name__ == '__main__':
