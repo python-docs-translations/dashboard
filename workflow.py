@@ -18,3 +18,8 @@ def get_contrib_link(language: str) -> str | Literal[False]:
         language in pulling_from_transifex
         and 'https://explore.transifex.com/python-doc/python-newest/'
     )
+
+
+if __name__ == '__main__':
+    for code in ('en', 'pl', 'ar', 'zh-cn', 'id'):
+        print(f'{code}: {get_contrib_link(code)}')
