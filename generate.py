@@ -80,7 +80,7 @@ def get_completion_progress() -> (
 
 
 if __name__ == '__main__':
-    template = Template(Path('template.html').read_text())
+    template = Template(Path('template.html.jinja').read_text())
 
     output = template.render(
         completion_progress=get_completion_progress(), generation_time=generation_time
