@@ -29,7 +29,7 @@
   <td data-label="language">{{ language }}</td>
   {% endif %}
   <td data-label="workflow">
-    {% if contrib_link %}<a href="https://explore.transifex.com/python-doc/python-newest/" target="_blank">{% endif %}
+    {% if contrib_link %}<a href="{{ contrib_link }}" target="_blank">{% endif %}
     {% if on_platform %}platform{% else %}repository{% endif %}
     {% if contrib_link %}</a>{% endif %}
   </td>
