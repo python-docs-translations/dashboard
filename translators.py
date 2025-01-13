@@ -1,4 +1,4 @@
-from collections.abc import Generator
+from collections.abc import Iterator
 from pathlib import Path
 
 from git import Repo
@@ -15,7 +15,7 @@ def get_number_from_git_history(path: Path) -> int:
     return len(Repo(path).git.shortlog('-s', 'HEAD').splitlines())
 
 
-def yield_from_headers(path: Path) -> Generator[str, None, None]:
+def yield_from_headers(path: Path) -> Iterator[str]:
     for file in path.rglob('*.po'):
         try:
             header = pofile(file).header.splitlines()  # type: ignore[call-overload]  # https://github.com/python/typeshed/pull/13396
