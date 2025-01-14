@@ -27,7 +27,7 @@ generation_time = datetime.now(timezone.utc)
 
 
 def get_completion_progress() -> (
-    Iterator[tuple[str, str, float, int, int, bool, bool | None]]
+    Iterator[tuple[str, str, str, float, int, int, bool, bool | None]]
 ):
     with TemporaryDirectory() as clones_dir:
         Repo.clone_from(
@@ -49,15 +49,24 @@ def get_completion_progress() -> (
             ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True
         )
         languages_built = dict(build_status.get_languages())
-        for lang, repo in repositories.get_languages_and_repos(devguide_dir):
+        for lang, lang_name, repo in repositories.get_languages_and_repos(devguide_dir):
             built = lang in languages_built
             in_switcher = languages_built.get(lang)
             if not repo:
-                yield lang, cast(str, repo), 0.0, 0, 0, built, in_switcher
+                yield lang, lang_name, cast(str, repo), 0.0, 0, 0, built, in_switcher
                 continue
             completion, translators = get_completion(clones_dir, repo)
             visitors_num = visitors.get_number_of_visitors(lang) if built else 0
-            yield lang, repo, completion, translators, visitors_num, built, in_switcher
+            yield (
+                lang,
+                lang_name,
+                repo,
+                completion,
+                translators,
+                visitors_num,
+                built,
+                in_switcher,
+            )
 
 
 if __name__ == '__main__':
