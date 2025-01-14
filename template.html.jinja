@@ -17,7 +17,7 @@
 </tr>
 </thead>
 <tbody>
-{% for language, language_name, repo, completion, translators, translators_link, visitors, build, in_switcher, on_platform, contrib_link in completion_progress | sort(attribute='2,3') | reverse %}
+{% for language, language_name, repo, completion, translators, translators_link, visitors, build, in_switcher, on_platform, contrib_link in completion_progress | sort(attribute='3,4') | reverse %}
 <tr>
   <td data-label="language">{{ language_name }} ({{ language }})</td>
   <td data-label="contribute">
