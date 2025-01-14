@@ -17,12 +17,12 @@
 </tr>
 </thead>
 <tbody>
-{% for language, repo, completion, translators, translators_link, visitors, build, in_switcher, on_platform, contrib_link in completion_progress | sort(attribute='2,3') | reverse %}
+{% for language, language_name, repo, completion, translators, translators_link, visitors, build, in_switcher, on_platform, contrib_link in completion_progress | sort(attribute='2,3') | reverse %}
 <tr>
   {% if repo %}
   <td data-label="language">
     <a href="https://github.com/{{ repo }}" target="_blank">
-      {{ language }}
+      {{ language_name }} ({{ language }})
     </a>
   </td>
   {% else %}

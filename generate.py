@@ -32,6 +32,7 @@ def get_completion_progress() -> (
         tuple[
             str,
             str,
+            str,
             float,
             int,
             str | Literal[False],
@@ -63,7 +64,7 @@ def get_completion_progress() -> (
             ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True
         )
         languages_built = dict(build_status.get_languages())
-        for lang, repo in repositories.get_languages_and_repos(devguide_dir):
+        for lang, lang_name, repo in repositories.get_languages_and_repos(devguide_dir):
             built = lang in languages_built
             in_switcher = languages_built.get(lang)
             tx = lang in contribute.pulling_from_transifex
@@ -71,6 +72,7 @@ def get_completion_progress() -> (
             if not repo:
                 yield (
                     lang,
+                    lang_name,
                     cast(str, repo),
                     0.0,
                     0,
@@ -86,6 +88,7 @@ def get_completion_progress() -> (
             visitors_num = visitors.get_number_of_visitors(lang) if built else 0
             yield (
                 lang,
+                lang_name,
                 repo,
                 completion,
                 translators,
