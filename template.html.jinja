@@ -16,7 +16,7 @@
 </tr>
 </thead>
 <tbody>
-{% for language, language_name, repo, completion, translators, visitors, build, in_switcher in completion_progress | sort(attribute='2,3') | reverse %}
+{% for language, language_name, repo, completion, translators, visitors, build, in_switcher in completion_progress | sort(attribute='3,4') | reverse %}
 <tr>
   {% if repo %}
   <td data-label="language">
