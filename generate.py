@@ -29,7 +29,18 @@ generation_time = datetime.now(timezone.utc)
 
 def get_completion_progress() -> (
     Iterator[
-        tuple[str, str, float, int, int, bool, bool | None, bool, str | Literal[False]]
+        tuple[
+            str,
+            str,
+            float,
+            int,
+            str | Literal[False],
+            int,
+            bool,
+            bool | None,
+            bool,
+            str | Literal[False],
+        ]
     ]
 ):
     with TemporaryDirectory() as clones_dir:
@@ -58,15 +69,27 @@ def get_completion_progress() -> (
             tx = lang in contribute.pulling_from_transifex
             contrib_link = contribute.get_contrib_link(lang)
             if not repo:
-                yield lang, cast(str, repo), 0.0, 0, 0, built, in_switcher, False, False
+                yield (
+                    lang,
+                    cast(str, repo),
+                    0.0,
+                    0,
+                    False,
+                    0,
+                    built,
+                    in_switcher,
+                    False,
+                    False,
+                )
                 continue
-            completion, translators = get_completion(clones_dir, repo)
+            completion, translators, translators_link = get_completion(clones_dir, repo)
             visitors_num = visitors.get_number_of_visitors(lang) if built else 0
             yield (
                 lang,
                 repo,
                 completion,
                 translators,
+                translators_link,
                 visitors_num,
                 built,
                 in_switcher,

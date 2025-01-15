@@ -17,7 +17,7 @@
 </tr>
 </thead>
 <tbody>
-{% for language, repo, completion, translators, visitors, build, in_switcher, on_platform, contrib_link in completion_progress | sort(attribute='2,3') | reverse %}
+{% for language, repo, completion, translators, translators_link, visitors, build, in_switcher, on_platform, contrib_link in completion_progress | sort(attribute='2,3') | reverse %}
 <tr>
   {% if repo %}
   <td data-label="language">
@@ -46,10 +46,14 @@
         {{ '{:,}'.format(visitors) }}
       </a>
     {% else %}
-      0
+      {{ '{:,}'.format(visitors) }}
     {% endif %}
   </td>
-  <td data-label="translators">{{ translators }}</td>
+  <td data-label="translators">
+    {% if translators_link %}<a href="{{ translators_link }}" target="_blank">{% endif %}
+    {{ translators }}
+    {% if translators_link %}</a>{% endif %}
+  </td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
   </td>

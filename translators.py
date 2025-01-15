@@ -1,5 +1,6 @@
 from collections.abc import Iterator
 from pathlib import Path
+from typing import Literal
 
 from git import Repo
 from polib import pofile
@@ -30,3 +31,10 @@ def yield_from_headers(path: Path) -> Iterator[str]:
                 yield translator_record
             else:
                 yield translator
+
+
+def get_link(clone_path: Path, repo: str, branch: str) -> str | Literal[False]:
+    return (
+        clone_path.joinpath('TRANSLATORS').exists()
+        and f'https://github.com/{repo}/blob/{branch}/TRANSLATORS'
+    )
