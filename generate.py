@@ -40,7 +40,7 @@ def get_completion_progress() -> (
             bool,
             bool | None,
             bool,
-            str | Literal[False],
+            str | None,
         ]
     ]
 ):
@@ -68,7 +68,7 @@ def get_completion_progress() -> (
             built = lang in languages_built
             in_switcher = languages_built.get(lang)
             tx = lang in contribute.pulling_from_transifex
-            contrib_link = contribute.get_contrib_link(lang)
+            contrib_link = contribute.get_contrib_link(lang, repo)
             if not repo:
                 yield (
                     lang,
@@ -81,7 +81,7 @@ def get_completion_progress() -> (
                     built,
                     in_switcher,
                     False,
-                    False,
+                    None,
                 )
                 continue
             completion, translators, translators_link = get_completion(clones_dir, repo)

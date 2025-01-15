@@ -19,16 +19,8 @@
 <tbody>
 {% for language, language_name, repo, completion, translators, translators_link, visitors, build, in_switcher, on_platform, contrib_link in completion_progress | sort(attribute='2,3') | reverse %}
 <tr>
-  {% if repo %}
-  <td data-label="language">
-    <a href="https://github.com/{{ repo }}" target="_blank">
-      {{ language_name }} ({{ language }})
-    </a>
-  </td>
-  {% else %}
-  <td data-label="language">{{ language }}</td>
-  {% endif %}
-      <td data-label="contribute">
+  <td data-label="language">{{ language_name }} ({{ language }})</td>
+  <td data-label="contribute">
     {% if contrib_link %}<a href="{{ contrib_link }}" target="_blank">{% endif %}
     {% if on_platform %}platform{% else %}repository{% endif %}
     {% if contrib_link %}</a>{% endif %}

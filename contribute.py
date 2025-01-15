@@ -1,5 +1,3 @@
-from typing import Literal
-
 pulling_from_transifex = ('zh-cn', 'pt-br', 'ja', 'uk', 'pl')
 
 custom_contributing_links = {
@@ -13,13 +11,23 @@ custom_contributing_links = {
 }
 
 
-def get_contrib_link(language: str) -> str | Literal[False]:
-    return custom_contributing_links.get(language) or (
-        language in pulling_from_transifex
-        and 'https://explore.transifex.com/python-doc/python-newest/'
+def get_contrib_link(language: str, repo: str | None) -> str | None:
+    return (
+        custom_contributing_links.get(language)
+        or (
+            language in pulling_from_transifex
+            and 'https://explore.transifex.com/python-doc/python-newest/'
+        )
+        or (repo and f'https://github.com/{repo}')
     )
 
 
 if __name__ == '__main__':
-    for code in ('en', 'pl', 'ar', 'zh-cn', 'id'):
-        print(f'{code}: {get_contrib_link(code)}')
+    for code, repo in (
+        ('en', None),
+        ('pl', None),
+        ('ar', 'python/python-docs-ar'),
+        ('zh-cn', None),
+        ('id', None),
+    ):
+        print(f'{code}: {get_contrib_link(code, repo)}')
