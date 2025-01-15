@@ -13,7 +13,7 @@ from collections.abc import Iterator
 from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import cast
+from typing import Literal, cast
 
 from git import Repo
 from jinja2 import Template
@@ -27,7 +27,7 @@ generation_time = datetime.now(timezone.utc)
 
 
 def get_completion_progress() -> (
-    Iterator[tuple[str, str, float, int, int, bool, bool | None]]
+    Iterator[tuple[str, str, float, int, str | Literal[False], int, bool, bool | None]]
 ):
     with TemporaryDirectory() as clones_dir:
         Repo.clone_from(
@@ -53,11 +53,20 @@ def get_completion_progress() -> (
             built = lang in languages_built
             in_switcher = languages_built.get(lang)
             if not repo:
-                yield lang, cast(str, repo), 0.0, 0, 0, built, in_switcher
+                yield lang, cast(str, repo), 0.0, 0, False, 0, built, in_switcher
                 continue
-            completion, translators = get_completion(clones_dir, repo)
+            completion, translators, translators_link = get_completion(clones_dir, repo)
             visitors_num = visitors.get_number_of_visitors(lang) if built else 0
-            yield lang, repo, completion, translators, visitors_num, built, in_switcher
+            yield (
+                lang,
+                repo,
+                completion,
+                translators,
+                translators_link,
+                visitors_num,
+                built,
+                in_switcher,
+            )
 
 
 if __name__ == '__main__':
