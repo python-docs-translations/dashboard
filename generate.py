@@ -18,7 +18,7 @@ from typing import cast, Literal
 from git import Repo
 from jinja2 import Template
 
-import workflow
+import contribute
 import repositories
 import build_status
 import visitors
@@ -55,8 +55,8 @@ def get_completion_progress() -> (
         for lang, repo in repositories.get_languages_and_repos(devguide_dir):
             built = lang in languages_built
             in_switcher = languages_built.get(lang)
-            tx = lang in workflow.pulling_from_transifex
-            contrib_link = workflow.get_contrib_link(lang)
+            tx = lang in contribute.pulling_from_transifex
+            contrib_link = contribute.get_contrib_link(lang)
             if not repo:
                 yield lang, cast(str, repo), 0.0, 0, 0, built, in_switcher, False, False
                 continue
