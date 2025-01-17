@@ -13,11 +13,12 @@ from collections.abc import Iterator
 from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import Literal, cast
+from typing import cast, Literal
 
 from git import Repo
 from jinja2 import Template
 
+import contribute
 import repositories
 import build_status
 import visitors
@@ -27,7 +28,21 @@ generation_time = datetime.now(timezone.utc)
 
 
 def get_completion_progress() -> (
-    Iterator[tuple[str, str, float, int, str | Literal[False], int, bool, bool | None]]
+    Iterator[
+        tuple[
+            str,
+            str,
+            str,
+            float,
+            int,
+            str | Literal[False],
+            int,
+            bool,
+            bool | None,
+            bool,
+            str | None,
+        ]
+    ]
 ):
     with TemporaryDirectory() as clones_dir:
         Repo.clone_from(
@@ -49,16 +64,31 @@ def get_completion_progress() -> (
             ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True
         )
         languages_built = dict(build_status.get_languages())
-        for lang, repo in repositories.get_languages_and_repos(devguide_dir):
+        for lang, lang_name, repo in repositories.get_languages_and_repos(devguide_dir):
             built = lang in languages_built
             in_switcher = languages_built.get(lang)
+            tx = lang in contribute.pulling_from_transifex
+            contrib_link = contribute.get_contrib_link(lang, repo)
             if not repo:
-                yield lang, cast(str, repo), 0.0, 0, False, 0, built, in_switcher
+                yield (
+                    lang,
+                    lang_name,
+                    cast(str, repo),
+                    0.0,
+                    0,
+                    False,
+                    0,
+                    built,
+                    in_switcher,
+                    False,
+                    None,
+                )
                 continue
             completion, translators, translators_link = get_completion(clones_dir, repo)
             visitors_num = visitors.get_number_of_visitors(lang) if built else 0
             yield (
                 lang,
+                lang_name,
                 repo,
                 completion,
                 translators,
@@ -66,6 +96,8 @@ def get_completion_progress() -> (
                 visitors_num,
                 built,
                 in_switcher,
+                tx,
+                contrib_link,
             )
 
 

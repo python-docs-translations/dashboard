@@ -9,6 +9,7 @@
 <thead>
 <tr>
   <th>language</th>
+  <th>contribute</th>
   <th>build</th>
   <th><a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies" target="_blank">visitors</a></th>
   <th>translators</th>
@@ -16,17 +17,14 @@
 </tr>
 </thead>
 <tbody>
-{% for language, repo, completion, translators, translators_link, visitors, build, in_switcher in completion_progress | sort(attribute='2,3') | reverse %}
+{% for language, language_name, repo, completion, translators, translators_link, visitors, build, in_switcher, on_platform, contrib_link in completion_progress | sort(attribute='3,4') | reverse %}
 <tr>
-  {% if repo %}
-  <td data-label="language">
-    <a href="https://github.com/{{ repo }}" target="_blank">
-      {{ language }}
-    </a>
+  <td data-label="language">{{ language_name }} ({{ language }})</td>
+  <td data-label="contribute">
+    {% if contrib_link %}<a href="{{ contrib_link }}" target="_blank">{% endif %}
+    {% if on_platform %}platform{% else %}repository{% endif %}
+    {% if contrib_link %}</a>{% endif %}
   </td>
-  {% else %}
-  <td data-label="language">{{ language }}</td>
-  {% endif %}
   <td data-label="build">
     {% if build %}
       <a href="https://docs.python.org/{{ language }}/" target="_blank">✓{% if in_switcher %} in switcher{% endif %}</a>
