@@ -15,6 +15,7 @@ th {
   background-color: #f4f4f4;
 }
 .progress-bar {
+  display: inline-block;
   background-color: #4caf50;
   color: white;
   height: 20px;
@@ -22,8 +23,12 @@ th {
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
-  min-width: 50px;
   box-sizing: border-box;
+}
+.progress-bar.appendix {
+  background-color: inherit;
+  color: inherit;
+  padding-left: .5em;
 }
 td[data-label="visitors"], td[data-label="translators"] {
   text-align: right;
