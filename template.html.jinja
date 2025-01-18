@@ -13,7 +13,7 @@
   <th>build</th>
   <th><a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies" target="_blank">visitors</a></th>
   <th>translators</th>
-  <th>completion</th>
+  <th colspan="2">completion</th>
 </tr>
 </thead>
 <tbody>
@@ -46,8 +46,11 @@
     {{ translators }}
     {% if translators_link %}</a>{% endif %}
   </td>
-  <td data-label="completion">
-    <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
+  <td data-label="completion-number">
+    {{ completion | round(2) }}%
+  </td>
+  <td data-label="completion-bar">
+    <progress value="{{ completion }}" max="100"></progress>
   </td>
 </tr>
 {% endfor %}

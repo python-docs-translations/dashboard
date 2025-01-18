@@ -14,18 +14,10 @@ th, td {
 th {
   background-color: #f4f4f4;
 }
-.progress-bar {
-  background-color: #4caf50;
-  color: white;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
-  min-width: 50px;
-  box-sizing: border-box;
+progress {
+  width: 100%;
 }
-td[data-label="visitors"], td[data-label="translators"] {
+td[data-label="visitors"], td[data-label="translators"], td[data-label="completion-number"] {
   text-align: right;
 }
 td[data-label="completion"] {
@@ -58,9 +50,5 @@ td[data-label="completion"] {
   }
   td[data-label="completion"] {
     width: inherit;
-  }
-  .progress-bar {
-    min-width: 0;
-    width: 100% !important;
   }
 }
