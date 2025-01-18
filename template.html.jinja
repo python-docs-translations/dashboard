@@ -47,8 +47,8 @@
     {% if translators_link %}</a>{% endif %}
   </td>
   <td data-label="completion">
-    <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{% if completion >= 0.05 %}{{ completion | round(2) }}%{% endif %}</div>
-    {% if completion < 0.05 %}<div class="progress-bar appendix">{{ completion | round(2) }}%</div>{% endif %}
+    <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{% if completion >= 5 %}{{ completion | round(2) }}%{% endif %}</div>
+    {% if completion < 5 %}<div class="progress-bar appendix">{{ completion | round(2) }}%</div>{% endif %}
   </td>
 </tr>
 {% endfor %}
