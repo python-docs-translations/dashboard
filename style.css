@@ -25,16 +25,26 @@ th {
   white-space: nowrap;
   box-sizing: border-box;
 }
-.progress-bar.appendix {
-  background-color: inherit;
-  color: inherit;
+.progress-bar-outer-label {
+  display: none;
   padding-left: .5em;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.progress-bar.low {
+  color: transparent;
+  user-select: none;
+}
+.progress-bar.low + .progress-bar-outer-label {
+  display: inline-block;
 }
 td[data-label="visitors"], td[data-label="translators"] {
   text-align: right;
 }
 td[data-label="completion"] {
   width: 100%;
+  line-height: 0;
 }
 @media screen and (max-width: 600px) {
   table, thead, tbody, th, td, tr {
