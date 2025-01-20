@@ -47,7 +47,8 @@
     {% if translators_link %}</a>{% endif %}
   </td>
   <td data-label="completion">
-    <div class="progress-bar" style="width: {{ completion | round(2) }}%;">{{ completion | round(2) }}%</div>
+    <div class="progress-bar" style="width: {{ completion }}%;">{{ completion | round(2) }}%</div>
+    <div class="progress-bar-outer-label">{{ completion | round(2) }}%</div>
   </td>
 </tr>
 {% endfor %}
@@ -55,4 +56,22 @@
 </table>
 <p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
 </body>
+<script>
+  function updateProgressBarVisibility() {
+    document.querySelectorAll('.progress-bar').forEach(progressBar => {
+      const textWidth = progressBar.scrollWidth;
+      const barWidth = progressBar.offsetWidth;
+
+      if (barWidth < textWidth) {
+        progressBar.classList.add('low');
+      } else {
+        progressBar.classList.remove('low');
+      }
+    });
+  }
+
+  updateProgressBarVisibility();
+
+  window.addEventListener('resize', updateProgressBarVisibility);
+</script>
 </html>
