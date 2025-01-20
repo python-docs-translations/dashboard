@@ -56,4 +56,22 @@
 </table>
 <p>Last updated at {{ generation_time.strftime('%A, %d %B %Y, %X %Z') }}.</p>
 </body>
+<script>
+  function updateProgressBarVisibility() {
+    document.querySelectorAll('.progress-bar').forEach(progressBar => {
+      const textWidth = progressBar.scrollWidth;
+      const barWidth = progressBar.offsetWidth;
+
+      if (barWidth < textWidth) {
+        progressBar.classList.add('low');
+      } else {
+        progressBar.classList.remove('low');
+      }
+    });
+  }
+
+  updateProgressBarVisibility();
+
+  window.addEventListener('resize', updateProgressBarVisibility);
+</script>
 </html>
