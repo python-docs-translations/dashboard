@@ -1,9 +1,10 @@
 import json
 from collections.abc import Iterator
+from dataclasses import dataclass
 from functools import cache
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import Literal, NamedTuple
+from typing import Literal
 
 import git
 from potodo import potodo
@@ -58,7 +59,8 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData'
     return completion, translators_data
 
 
-class TranslatorsData(NamedTuple):
+@dataclass(frozen=True)
+class TranslatorsData:
     number: int
     link: str | Literal[False]
 

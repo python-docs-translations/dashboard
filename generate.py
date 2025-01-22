@@ -10,21 +10,20 @@
 # ///
 import subprocess
 from collections.abc import Iterator
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from logging import info
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import cast, NamedTuple
 
 from git import Repo
 from jinja2 import Template
 
 import contribute
-import repositories
 import build_status
-import visitors
+from visitors import get_number_of_visitors
 from completion import latest_branch_from_devguide, get_completion, TranslatorsData
-from repositories import Language
+from repositories import get_languages_and_repos, Language
 
 generation_time = datetime.now(timezone.utc)
 
@@ -38,39 +37,22 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         )
         Repo.clone_from(
             'https://github.com/python/cpython.git',
-            Path(clones_dir, 'cpython'),
+            cpython_dir := Path(clones_dir, 'cpython'),
             depth=1,
             branch=latest_branch_from_devguide(devguide_dir),
         )
-        subprocess.run(
-            ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'venv'], check=True
-        )
-        subprocess.run(
-            ['make', '-C', Path(clones_dir, 'cpython/Doc'), 'gettext'], check=True
-        )
+        subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
+        subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
         languages_built = dict(build_status.get_languages())
-        for language, repo in repositories.get_languages_and_repos(devguide_dir):
+        for language, repo in get_languages_and_repos(devguide_dir):
             built = language.code in languages_built
-            in_switcher = languages_built.get(language.code)
-            tx = language.code in contribute.pulling_from_transifex
-            contrib_link = contribute.get_contrib_link(language.code, repo)
-            if not repo:
-                yield LanguageProjectData(
-                    language,
-                    cast(str, repo),
-                    0.0,
-                    TranslatorsData(0, False),
-                    0,
-                    built,
-                    in_switcher,
-                    False,
-                    None,
-                )
-                continue
-            completion, translators_data = get_completion(clones_dir, repo)
-            visitors_num = (
-                visitors.get_number_of_visitors(language.code) if built else 0
-            )
+            if repo:
+                completion, translators_data = get_completion(clones_dir, repo)
+                visitors_num = get_number_of_visitors(language.code) if built else 0
+            else:
+                completion = 0.0
+                translators_data = TranslatorsData(0, False)
+                visitors_num = 0
             yield LanguageProjectData(
                 language,
                 repo,
@@ -78,17 +60,18 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
                 translators_data,
                 visitors_num,
                 built,
-                in_switcher,
-                tx,
-                contrib_link,
+                in_switcher=languages_built.get(language.code),
+                uses_platform=language.code in contribute.pulling_from_transifex,
+                contribution_link=contribute.get_contrib_link(language.code, repo),
             )
 
 
-class LanguageProjectData(NamedTuple):
+@dataclass(frozen=True)
+class LanguageProjectData:
     language: Language
-    repository: str
+    repository: str | None
     completion: float
-    translators: 'TranslatorsData'
+    translators: TranslatorsData
     visitors: int
     built: bool
     in_switcher: bool | None

@@ -1,8 +1,8 @@
 import re
 from collections.abc import Iterator
+from dataclasses import dataclass
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import NamedTuple
 
 from docutils import core
 from docutils.nodes import table, row
@@ -33,7 +33,8 @@ def get_languages_and_repos(
             )
 
 
-class Language(NamedTuple):
+@dataclass(frozen=True)
+class Language:
     code: str
     name: str
 
