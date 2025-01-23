@@ -22,7 +22,7 @@ from jinja2 import Template
 import contribute
 import build_status
 from visitors import get_number_of_visitors
-from completion import latest_branch_from_devguide, get_completion, TranslatorsData
+from completion import branches_from_devguide, get_completion, TranslatorsData
 from repositories import get_languages_and_repos, Language
 
 generation_time = datetime.now(timezone.utc)
@@ -35,11 +35,12 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
             devguide_dir := Path(clones_dir, 'devguide'),
             depth=1,
         )
+        latest_branch = branches_from_devguide(devguide_dir)[0]
         Repo.clone_from(
             'https://github.com/python/cpython.git',
             cpython_dir := Path(clones_dir, 'cpython'),
             depth=1,
-            branch=latest_branch_from_devguide(devguide_dir),
+            branch=latest_branch,
         )
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)

@@ -1,5 +1,4 @@
 import json
-from collections.abc import Iterator
 from dataclasses import dataclass
 from functools import cache
 from pathlib import Path
@@ -13,28 +12,17 @@ import translators
 
 
 @cache
-def latest_branch_from_devguide(devguide_dir: Path) -> str:
+def branches_from_devguide(devguide_dir: Path) -> list[str]:
     p = devguide_dir.joinpath('include/release-cycle.json')
-    for branch in (data := json.loads(p.read_text())):
-        if data[branch]['status'] in ('bugfix', 'security'):
-            return branch
-    raise ValueError(f'Supported release not found in {p}')
-
-
-def iterate_branches(latest: str) -> Iterator[str]:
-    yield latest
-    major, minor = latest.split('.')
-    while int(minor) > 6:  # hu has 3.6 branch, hi has 3.7
-        minor = str(int(minor) - 1)
-        yield f'{major}.{minor}'
-    yield 'master'
+    data = json.loads(p.read_text())
+    return [
+        branch for branch in data if data[branch]['status'] in ('bugfix', 'security')
+    ]
 
 
 def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData']:
     clone_path = Path(clones_dir, repo)
-    for branch in iterate_branches(
-        latest_branch_from_devguide(Path(clones_dir, 'devguide'))
-    ):
+    for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + ['master']:
         try:
             git.Repo.clone_from(
                 f'https://github.com/{repo}.git', clone_path, branch=branch
@@ -63,8 +51,3 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData'
 class TranslatorsData:
     number: int
     link: str | Literal[False]
-
-
-if __name__ == '__main__':
-    for branch in iterate_branches('3.13'):
-        print(branch)
