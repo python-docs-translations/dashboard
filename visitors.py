@@ -7,10 +7,12 @@ import requests
 
 
 def get_number_of_visitors(language: str) -> int:
-    param = urllib.parse.urlencode(
-        {'filters': f'[["contains","event:page",["/{language}/"]]]'}
+    params = urllib.parse.urlencode(
+        {'filters': f'[["contains","event:page",["/{language}/"]]]', 'period': 'all'}
     )
-    r = requests.get(f'https://plausible.io/docs.python.org/export?{param}', timeout=20)
+    r = requests.get(
+        f'https://plausible.io/docs.python.org/export?{params}', timeout=20
+    )
     with (
         zipfile.ZipFile(io.BytesIO(r.content), 'r') as z,
         z.open('visitors.csv') as csv_file,
