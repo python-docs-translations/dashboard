@@ -1,4 +1,5 @@
 import json
+from dataclasses import dataclass
 from functools import cache
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -19,9 +20,7 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
     ]
 
 
-def get_completion(
-    clones_dir: str, repo: str
-) -> tuple[float, int, str | Literal[False]]:
+def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData']:
     clone_path = Path(clones_dir, repo)
     for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + ['master']:
         try:
@@ -30,12 +29,12 @@ def get_completion(
             )
         except git.GitCommandError:
             print(f'failed to clone {repo} {branch}')
-            translators_number = 0
-            translators_link: str | Literal[False] = False
+            translators_data = TranslatorsData(0, False)
             continue
         else:
             translators_number = translators.get_number(clone_path)
             translators_link = translators.get_link(clone_path, repo, branch)
+            translators_data = TranslatorsData(translators_number, translators_link)
             break
     with TemporaryDirectory() as tmpdir:
         completion = potodo.merge_and_scan_path(
@@ -45,4 +44,10 @@ def get_completion(
             hide_reserved=False,
             api_url='',
         ).completion
-    return completion, translators_number, translators_link
+    return completion, translators_data
+
+
+@dataclass(frozen=True)
+class TranslatorsData:
+    number: int
+    link: str | Literal[False]

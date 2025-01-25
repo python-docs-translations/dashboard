@@ -1,5 +1,6 @@
 import re
 from collections.abc import Iterator
+from dataclasses import dataclass
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -10,7 +11,7 @@ from git import Repo
 
 def get_languages_and_repos(
     devguide_dir: Path,
-) -> Iterator[tuple[str, str, str | None]]:
+) -> Iterator[tuple['Language', str | None]]:
     translating = devguide_dir.joinpath('documentation/translating.rst').read_text()
     doctree = core.publish_doctree(translating)
 
@@ -26,7 +27,16 @@ def get_languages_and_repos(
             language_name = language_match.group(1)
             language_code = language_match.group(2).lower().replace('_', '-')
             repo_match = re.match(':github:`GitHub <(.*)>`', repo)
-            yield language_code, language_name, repo_match and repo_match.group(1)
+            yield (
+                Language(language_code, language_name),
+                repo_match and repo_match.group(1),
+            )
+
+
+@dataclass(frozen=True)
+class Language:
+    code: str
+    name: str
 
 
 if __name__ == '__main__':
