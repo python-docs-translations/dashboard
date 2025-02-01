@@ -5,7 +5,12 @@ import sphinx.cmd.build
 
 
 def number(clones_dir: str, repo: str, language_code: str) -> int:
-    locale_dir = Path(clones_dir, f'cpython/Doc/locales/{language_code}/LC_MESSAGES')
+    language_part, *locale = language_code.split('-')
+    if locale:
+        lang_with_locale = f'{language_part}_{locale[0].upper()}'
+    else:
+        lang_with_locale = language_part
+    locale_dir = Path(clones_dir, f'cpython/Doc/locales/{lang_with_locale}/LC_MESSAGES')
     locale_dir.mkdir(parents=True)
     for po_file in Path(clones_dir, repo).rglob('*.po'):
         relative_path = po_file.relative_to(Path(clones_dir, repo))
