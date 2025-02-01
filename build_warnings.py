@@ -21,7 +21,6 @@ def number(clones_dir: str, repo: str, language_code: str) -> int:
         (
             '--builder',
             'html',
-            '--fresh-env',
             '--jobs',
             'auto',
             '--define',
