@@ -30,7 +30,7 @@ def number(clones_dir: str, repo: str, language_code: str) -> int:
             '--warning-file',
             warning_file := f'{clones_dir}/warnings-{language_code}.txt',
             f'{clones_dir}/cpython/Doc',  # sourcedir
-            './sphinxbuild',  # outputdir
+            f'./sphinxbuild/{language_code}',  # outputdir
         )
     )
     copyfile(warning_file, f'warnings-{language_code}.txt')
