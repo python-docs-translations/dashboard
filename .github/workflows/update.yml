@@ -37,6 +37,16 @@ jobs:
           clean: false
           git-config-name: github-actions[bot]
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Update PR description if pull request
+        if: github.event_name == 'pull_request'
+        uses: chabroA/action-append-pr-description@v1.2.1
+        with:
+          auth: ${{ secrets.GITHUB_TOKEN }}
+          repo: ${{ github.event.repository.name }}
+          owner: ${{ github.repository_owner }}
+          pr: ${{ github.event.number }}
+          url: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.ref_name }}"
+          message: "📊 Dashboard preview:"
       - name: Debug index.html if pull request
         if: github.event_name == 'pull_request'
         run: |
