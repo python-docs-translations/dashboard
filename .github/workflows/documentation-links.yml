@@ -1,11 +1,12 @@
-name: Read the Docs PR preview
+name: Dashboard PR preview
 # Automatically edits a pull request's descriptions with a link
-# to the documentation's preview on Read the Docs.
+# to the GitHub pages PR preview.
 
 on:
   pull_request_target:
     types:
       - opened
+      - reopened
 
 permissions:
   pull-requests: write
