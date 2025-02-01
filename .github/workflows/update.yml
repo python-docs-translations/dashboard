@@ -25,6 +25,15 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
+          clean: false
+          git-config-name: github-actions[bot]
+          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Deploy to subdirectory if pull request 🚀
+        if: github.event_name == 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          target-folder: ${{ github.ref_name }}
           clean: true
           git-config-name: github-actions[bot]
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
