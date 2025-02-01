@@ -12,8 +12,9 @@
   <th>language</th>
   <th>contribute</th>
   <th>build</th>
-  <th>visitors*</th>
+  <th>visitors¹</th>
   <th>translators</th>
+  <th>warnings²</th>
   <th>completion</th>
 </tr>
 </thead>
@@ -47,6 +48,7 @@
     {{ project.translators.number }}
     {% if project.translators.link %}</a>{% endif %}
   </td>
+    <td data-label="issues"><a href="warnings-{{ project.language.code }}.txt" target="_blank">{{ project.issues }}</a></td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ project.completion }}%;">{{ "{:.2f}".format(project.completion) }}%</div>
     <div class="progress-bar-outer-label">{{ "{:.2f}".format(project.completion) }}%</div>
@@ -55,7 +57,8 @@
 {% endfor %}
 </tbody>
 </table>
-<p>* sum of <a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies" target="_blank">daily unique visitors</a> since 8 June 2024</p>
+<p>¹ sum of <a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies" target="_blank">daily unique visitors</a> since 8 June 2024</p>
+<p>² number of Sphinx build process warnings</p>
 <p>For more information about translations, see the <a href="https://devguide.python.org/documentation/translating/" target="_blank">Python Developer’s Guide</a>.</p>
 <p>Last updated at {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).</p>
 </body>

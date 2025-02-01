@@ -6,6 +6,8 @@
 #     "jinja2",
 #     "requests",
 #     "docutils",
+#     "sphinx",
+#     "python-docs-theme",
 # ]
 # ///
 import subprocess
@@ -19,11 +21,12 @@ from tempfile import TemporaryDirectory
 from git import Repo
 from jinja2 import Template
 
-import contribute
+import build_warnings
 import build_status
+import contribute
 from visitors import get_number_of_visitors
 from completion import branches_from_devguide, get_completion, TranslatorsData
-from repositories import get_languages_and_repos, Language
+from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
 
@@ -50,16 +53,19 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
             if repo:
                 completion, translators_data = get_completion(clones_dir, repo)
                 visitors_num = get_number_of_visitors(language.code) if built else 0
+                issues = build_warnings.number(clones_dir, repo, language.code)
             else:
                 completion = 0.0
                 translators_data = TranslatorsData(0, False)
                 visitors_num = 0
+                issues = 0
             yield LanguageProjectData(
                 language,
                 repo,
                 completion,
                 translators_data,
                 visitors_num,
+                issues,
                 built,
                 in_switcher=languages_built.get(language.code),
                 uses_platform=language.code in contribute.pulling_from_transifex,
@@ -74,6 +80,7 @@ class LanguageProjectData:
     completion: float
     translators: TranslatorsData
     visitors: int
+    issues: int
     built: bool
     in_switcher: bool | None
     uses_platform: bool
