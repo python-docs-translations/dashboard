@@ -5,6 +5,8 @@
 #     "potodo",
 #     "jinja2",
 #     "docutils",
+#     "sphinx",
+#     "python-docs-theme",
 # ]
 # ///
 import json
@@ -22,10 +24,10 @@ from git import Repo
 from jinja2 import Template
 from urllib3 import PoolManager
 
-import contribute
+import build_warnings
 import build_status
 from completion import branches_from_devguide, get_completion, TranslatorsData
-from repositories import get_languages_and_repos, Language
+from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
 

@@ -13,6 +13,7 @@
   <th>language</th>
   <th>switcher</th>
   <th>translators</th>
+  <th>warnings²</th>
   <th>completion*</th>
 </tr>
 </thead>
@@ -34,6 +35,7 @@
     {{ project.translators.number }}
     {% if project.translators.link %}</a>{% endif %}
   </td>
+    <td data-label="issues"><a href="warnings-{{ project.language.code }}.txt" target="_blank">{{ project.issues }}</a></td>
   <td data-label="completion">
     <div class="progress-bar"
          style="width: {{ project.completion }}%;{% if project.change %}background: linear-gradient(to left, #94cf96 {{ project.change * 100 / project.completion }}%, #4caf50 {{ project.change * 100 / project.completion }}%);{% else %}background-color: #4caf50;{% endif %}"
