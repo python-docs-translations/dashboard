@@ -18,7 +18,11 @@ jobs:
   documentation-links:
     runs-on: ubuntu-latest
     steps:
-      - uses: readthedocs/actions/preview@v1
+      - uses: chabroA/action-append-pr-description@v1.2.1
         with:
-          project-slug: "pydocs-translation-dashboard"
-          single-version: "true"
+          auth: ${{ secrets.GITHUB_TOKEN }}
+          repo: ${{ github.event.repository.name }}
+          owner: ${{ github.repository_owner }}
+          pr: ${{ github.event.number }}
+          url: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.ref_name }}"
+          message: "📊 Dashboard preview:"
