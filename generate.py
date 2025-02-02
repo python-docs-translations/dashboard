@@ -66,7 +66,9 @@ def get_data(
     if repo:
         completion, translators_data = get_completion(clones_dir, repo)
         visitors_num = get_number_of_visitors(language.code) if built else 0
-        warnings = build_warnings.number(clones_dir, repo, language.code)
+        warnings = (
+            build_warnings.number(clones_dir, repo, language.code) if completion else 0
+        )
     else:
         completion = 0.0
         translators_data = TranslatorsData(0, False)
