@@ -12,8 +12,10 @@
 # ///
 import subprocess
 from collections.abc import Iterator
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from itertools import repeat
 from logging import info
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -48,29 +50,40 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
         languages_built = dict(build_status.get_languages())
-        for language, repo in get_languages_and_repos(devguide_dir):
-            built = language.code in languages_built
-            if repo:
-                completion, translators_data = get_completion(clones_dir, repo)
-                visitors_num = get_number_of_visitors(language.code) if built else 0
-                issues = build_warnings.number(clones_dir, repo, language.code)
-            else:
-                completion = 0.0
-                translators_data = TranslatorsData(0, False)
-                visitors_num = 0
-                issues = 0
-            yield LanguageProjectData(
-                language,
-                repo,
-                completion,
-                translators_data,
-                visitors_num,
-                issues,
-                built,
-                in_switcher=languages_built.get(language.code),
-                uses_platform=language.code in contribute.pulling_from_transifex,
-                contribution_link=contribute.get_contrib_link(language.code, repo),
+        with ThreadPoolExecutor() as executor:
+            return executor.map(
+                get_data,
+                *zip(*get_languages_and_repos(devguide_dir)),
+                repeat(languages_built),
+                repeat(clones_dir),
             )
+
+
+def get_data(
+    language: Language, repo: str, languages_built: dict[str, bool], clones_dir: str
+) -> 'LanguageProjectData':
+    built = language.code in languages_built
+    if repo:
+        completion, translators_data = get_completion(clones_dir, repo)
+        visitors_num = get_number_of_visitors(language.code) if built else 0
+        issues = build_warnings.number(clones_dir, repo, language.code)
+    else:
+        completion = 0.0
+        translators_data = TranslatorsData(0, False)
+        visitors_num = 0
+        issues = 0
+    return LanguageProjectData(
+        language,
+        repo,
+        completion,
+        translators_data,
+        visitors_num,
+        issues,
+        built,
+        in_switcher=languages_built.get(language.code),
+        uses_platform=language.code in contribute.pulling_from_transifex,
+        contribution_link=contribute.get_contrib_link(language.code, repo),
+    )
 
 
 @dataclass(frozen=True)
