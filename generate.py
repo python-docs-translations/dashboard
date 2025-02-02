@@ -66,19 +66,19 @@ def get_data(
     if repo:
         completion, translators_data = get_completion(clones_dir, repo)
         visitors_num = get_number_of_visitors(language.code) if built else 0
-        issues = build_warnings.number(clones_dir, repo, language.code)
+        warnings = build_warnings.number(clones_dir, repo, language.code)
     else:
         completion = 0.0
         translators_data = TranslatorsData(0, False)
         visitors_num = 0
-        issues = 0
+        warnings = 0
     return LanguageProjectData(
         language,
         repo,
         completion,
         translators_data,
         visitors_num,
-        issues,
+        warnings,
         built,
         in_switcher=languages_built.get(language.code),
         uses_platform=language.code in contribute.pulling_from_transifex,
@@ -93,7 +93,7 @@ class LanguageProjectData:
     completion: float
     translators: TranslatorsData
     visitors: int
-    issues: int
+    warnings: int
     built: bool
     in_switcher: bool | None
     uses_platform: bool

@@ -48,7 +48,7 @@
     {{ project.translators.number }}
     {% if project.translators.link %}</a>{% endif %}
   </td>
-    <td data-label="issues"><a href="warnings-{{ project.language.code }}.txt" target="_blank">{{ project.issues }}</a></td>
+    <td data-label="warnings"><a href="warnings-{{ project.language.code }}.txt" target="_blank">{{ project.warnings }}</a></td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ project.completion }}%;">{{ "{:.2f}".format(project.completion) }}%</div>
     <div class="progress-bar-outer-label">{{ "{:.2f}".format(project.completion) }}%</div>
