@@ -36,7 +36,9 @@
     {{ project.translators.number }}
     {% if project.translators.link %}</a>{% endif %}
   </td>
-  <td data-label="warnings"><a href="warnings-{{ project.language.code }}.txt">{{ project.warnings }}</a></td>
+  <td data-label="warnings">
+    {% if completion %}<a href="warnings-{{ project.language.code }}.txt">{{ project.warnings }}</a>{% else %}{{ project.warnings }}{% endif %}
+  </td>
   <td data-label="completion">
     <div class="progress-bar"
          style="width: {{ project.completion }}%;{% if project.change %}background: linear-gradient(to left, #94cf96 {{ project.change * 100 / project.completion }}%, #4caf50 {{ project.change * 100 / project.completion }}%);{% else %}background-color: #4caf50;{% endif %}"
