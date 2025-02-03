@@ -3,6 +3,7 @@
   <title>Python Docs Translation Dashboard</title>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
+  <base target="_blank">
 </head>
 <body>
 <h1>Python Docs Translation Dashboard</h1>
@@ -23,20 +24,20 @@
 <tr>
   <td data-label="language">{{ project.language.name }} ({{ project.language.code }})</td>
   <td data-label="contribute">
-    {% if project.contribution_link %}<a href="{{ project.contribution_link }}" target="_blank">{% endif %}
+    {% if project.contribution_link %}<a href="{{ project.contribution_link }}">{% endif %}
     {% if project.uses_platform %}platform{% else %}repository{% endif %}
     {% if project.contribution_link %}</a>{% endif %}
   </td>
   <td data-label="build">
     {% if project.built %}
-      <a href="https://docs.python.org/{{ project.language.code }}/" target="_blank">✓{% if project.in_switcher %} in switcher{% endif %}</a>
+      <a href="https://docs.python.org/{{ project.language.code }}/">✓{% if project.in_switcher %} in switcher{% endif %}</a>
     {% else %}
       ✗
     {% endif %}
   </td>
   <td data-label="visitors">
     {% if project.built %}
-      <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ project.language.code }}/)))" target="_blank">
+      <a href="https://plausible.io/docs.python.org?filters=((contains,page,(/{{ project.language.code }}/)))">
         {{ '{:,}'.format(project.visitors) }}
       </a>
     {% else %}
@@ -44,11 +45,11 @@
     {% endif %}
   </td>
   <td data-label="translators">
-    {% if project.translators.link %}<a href="{{ project.translators.link }}" target="_blank">{% endif %}
+    {% if project.translators.link %}<a href="{{ project.translators.link }}">{% endif %}
     {{ project.translators.number }}
     {% if project.translators.link %}</a>{% endif %}
   </td>
-    <td data-label="warnings"><a href="warnings-{{ project.language.code }}.txt" target="_blank">{{ project.warnings }}</a></td>
+  <td data-label="warnings"><a href="warnings-{{ project.language.code }}.txt">{{ project.warnings }}</a></td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ project.completion }}%;">{{ "{:.2f}".format(project.completion) }}%</div>
     <div class="progress-bar-outer-label">{{ "{:.2f}".format(project.completion) }}%</div>
@@ -57,9 +58,9 @@
 {% endfor %}
 </tbody>
 </table>
-<p>¹ sum of <a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies" target="_blank">daily unique visitors</a> since 8 June 2024</p>
+<p>¹ sum of <a href="https://plausible.io/data-policy#how-we-count-unique-users-without-cookies">daily unique visitors</a> since 8 June 2024</p>
 <p>² number of Sphinx build process warnings</p>
-<p>For more information about translations, see the <a href="https://devguide.python.org/documentation/translating/" target="_blank">Python Developer’s Guide</a>.</p>
+<p>For more information about translations, see the <a href="https://devguide.python.org/documentation/translating/">Python Developer’s Guide</a>.</p>
 <p>Last updated at {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).</p>
 </body>
 <script>
