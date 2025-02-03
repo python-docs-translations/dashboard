@@ -12,7 +12,7 @@
 # ///
 import subprocess
 from collections.abc import Iterator
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from itertools import repeat
@@ -50,7 +50,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
         languages_built = dict(build_status.get_languages())
-        with ThreadPoolExecutor() as executor:
+        with ProcessPoolExecutor() as executor:
             return executor.map(
                 get_data,
                 *zip(*get_languages_and_repos(devguide_dir)),
