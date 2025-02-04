@@ -7,6 +7,7 @@
 #     "requests",
 #     "docutils",
 # ]
+# potodo = { git = "https://git.afpy.org/AFPy/maciek/potodo", branch = "merge-with-polib" }
 # ///
 import subprocess
 from collections.abc import Iterator
