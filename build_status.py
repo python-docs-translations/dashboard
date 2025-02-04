@@ -8,10 +8,10 @@ whether it is in the language switcher.
 import tomllib
 from collections.abc import Iterator
 
-import requests
+from requests import Session
 
 
-def get_languages() -> Iterator[tuple[str, bool]]:
+def get_languages(requests: Session) -> Iterator[tuple[str, bool]]:
     data = requests.get(
         'https://raw.githubusercontent.com/'
         'python/docsbuild-scripts/refs/heads/main/config.toml',
@@ -25,7 +25,9 @@ def get_languages() -> Iterator[tuple[str, bool]]:
 
 
 def main() -> None:
-    languages = {language: in_switcher for language, in_switcher in get_languages()}
+    languages = {
+        language: in_switcher for language, in_switcher in get_languages(Session())
+    }
     print(languages)
     for code in ('en', 'pl', 'ar', 'zh-cn', 'id'):
         print(f'{code}: {code in languages} {languages.get(code)}')
