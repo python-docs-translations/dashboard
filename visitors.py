@@ -3,10 +3,10 @@ import io
 import urllib
 import zipfile
 
-import requests
+from requests import Session
 
 
-def get_number_of_visitors(language: str) -> int:
+def get_number_of_visitors(language: str, requests: Session) -> int:
     params = urllib.parse.urlencode(
         {'filters': f'[["contains","event:page",["/{language}/"]]]', 'period': 'all'}
     )
