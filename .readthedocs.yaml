@@ -8,15 +8,10 @@ build:
   os: ubuntu-24.04
   tools:
     python: "3"
-  jobs:
-    post_checkout: []
-    install:
-      - asdf plugin add uv
-      - asdf install uv latest
-    pre_build:
-      - asdf global uv latest
-    build:
-      html:
-        - uv run generate.py
-        - mkdir -p _readthedocs/html
-        - mv index.html style.css _readthedocs/html
+  commands:
+    - asdf plugin add uv
+    - asdf install uv latest
+    - asdf global uv latest
+    - uv run generate.py
+    - mkdir -p _readthedocs/html
+    - mv index.html style.css _readthedocs/html
