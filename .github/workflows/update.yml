@@ -47,7 +47,7 @@ jobs:
           owner: ${{ github.repository_owner }}
           pr: ${{ github.event.number }}
           url: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.ref_name }}"
-          message: "📊 Dashboard preview:"
+          message: "📊 Dashboard preview 📊:"
       - name: Debug index.html if pull request
         if: github.event_name == 'pull_request'
         run: |
