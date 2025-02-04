@@ -8,6 +8,8 @@
 #     "docutils",
 # ]
 # ///
+import concurrent.futures
+import itertools
 import subprocess
 from collections.abc import Iterator
 from dataclasses import dataclass
@@ -46,28 +48,42 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
         languages_built = dict(build_status.get_languages(session := Session()))
-        for language, repo in get_languages_and_repos(devguide_dir):
-            built = language.code in languages_built
-            if repo:
-                completion, translators_data = get_completion(clones_dir, repo)
-                visitors_num = (
-                    get_number_of_visitors(language.code, session) if built else 0
-                )
-            else:
-                completion = 0.0
-                translators_data = TranslatorsData(0, False)
-                visitors_num = 0
-            yield LanguageProjectData(
-                language,
-                repo,
-                completion,
-                translators_data,
-                visitors_num,
-                built,
-                in_switcher=languages_built.get(language.code),
-                uses_platform=language.code in contribute.pulling_from_transifex,
-                contribution_link=contribute.get_contrib_link(language.code, repo),
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            return executor.map(
+                get_project_data,
+                *zip(*get_languages_and_repos(devguide_dir)),
+                itertools.repeat(languages_built),
+                itertools.repeat(clones_dir),
+                itertools.repeat(session),
             )
+
+
+def get_project_data(
+    language: Language,
+    repo: str,
+    languages_built: dict[str, bool],
+    clones_dir: str,
+    session: Session,
+) -> 'LanguageProjectData':
+    built = language.code in languages_built
+    if repo:
+        completion, translators_data = get_completion(clones_dir, repo)
+        visitors_num = get_number_of_visitors(language.code, session) if built else 0
+    else:
+        completion = 0.0
+        translators_data = TranslatorsData(0, False)
+        visitors_num = 0
+    return LanguageProjectData(
+        language,
+        repo,
+        completion,
+        translators_data,
+        visitors_num,
+        built,
+        in_switcher=languages_built.get(language.code),
+        uses_platform=language.code in contribute.pulling_from_transifex,
+        contribution_link=contribute.get_contrib_link(language.code, repo),
+    )
 
 
 @dataclass(frozen=True)
