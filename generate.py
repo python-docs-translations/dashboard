@@ -16,9 +16,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-import urllib3
 from git import Repo
 from jinja2 import Template
+from urllib3 import PoolManager
 
 import contribute
 import build_status
@@ -45,8 +45,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         )
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
-        http = urllib3.PoolManager()
-        languages_built = dict(build_status.get_languages(http))
+        languages_built = dict(build_status.get_languages(http := PoolManager()))
         for language, repo in get_languages_and_repos(devguide_dir):
             built = language.code in languages_built
             if repo:
