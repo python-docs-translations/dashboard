@@ -10,6 +10,7 @@
 # ///
 import concurrent.futures
 import itertools
+import logging
 import subprocess
 from collections.abc import Iterator
 from dataclasses import dataclass
