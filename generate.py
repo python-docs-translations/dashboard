@@ -62,12 +62,16 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
 
 
 def get_data(
-    language: Language, repo: str, languages_built: dict[str, bool], clones_dir: str, session: Session
+    language: Language,
+    repo: str,
+    languages_built: dict[str, bool],
+    clones_dir: str,
+    session: Session,
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
         completion, translators_data = get_completion(clones_dir, repo)
-        visitors_num = get_number_of_visitors(language.code, session: Session) if built else 0
+        visitors_num = get_number_of_visitors(language.code, session) if built else 0
         warnings = (
             build_warnings.number(clones_dir, repo, language.code) if completion else 0
         )
