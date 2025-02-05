@@ -1,5 +1,6 @@
 import csv
 import io
+import logging
 import urllib
 import zipfile
 
@@ -13,6 +14,7 @@ def get_number_of_visitors(language: str, requests: Session) -> int:
     r = requests.get(
         f'https://plausible.io/docs.python.org/export?{params}', timeout=20
     )
+    logging.info(f'Plausible export responded with {r.status_code=}')
     with (
         zipfile.ZipFile(io.BytesIO(r.content), 'r') as z,
         z.open('visitors.csv') as csv_file,
