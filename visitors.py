@@ -1,7 +1,7 @@
 import csv
 import io
 import logging
-import urllib
+import urllib.parse
 import zipfile
 
 from requests import Session
