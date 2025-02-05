@@ -1,6 +1,5 @@
 import csv
 import io
-import logging
 import urllib.parse
 import zipfile
 
@@ -12,7 +11,6 @@ def get_number_of_visitors(language: str, http: PoolManager) -> int:
         {'filters': f'[["contains","event:page",["/{language}/"]]]', 'period': 'all'}
     )
     r = http.request('GET', f'https://plausible.io/docs.python.org/export?{params}')
-    logging.info(f'Plausible export responded with {r.status=}')
     with (
         zipfile.ZipFile(io.BytesIO(r.data), 'r') as z,
         z.open('visitors.csv') as csv_file,
