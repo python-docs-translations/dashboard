@@ -8,11 +8,11 @@
 #     "docutils",
 # ]
 # ///
+import logging
 import subprocess
 from collections.abc import Iterator
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from logging import info
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -84,7 +84,8 @@ class LanguageProjectData:
 
 
 if __name__ == '__main__':
-    info(f'starting at {generation_time}')
+    logging.basicConfig(level=logging.INFO)
+    logging.info(f'starting at {generation_time}')
     template = Template(Path('template.html.jinja').read_text())
 
     output = template.render(
