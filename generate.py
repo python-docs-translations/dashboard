@@ -8,11 +8,12 @@
 #     "docutils",
 # ]
 # ///
+import json
+import logging
 import subprocess
 from collections.abc import Iterator
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
-from logging import info
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -49,7 +50,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         for language, repo in get_languages_and_repos(devguide_dir):
             built = language.code in languages_built
             if repo:
-                completion, translators_data = get_completion(clones_dir, repo)
+                completion, translators_data, branch = get_completion(clones_dir, repo)
                 visitors_num = (
                     get_number_of_visitors(language.code, session) if built else 0
                 )
@@ -60,6 +61,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
             yield LanguageProjectData(
                 language,
                 repo,
+                branch,
                 completion,
                 translators_data,
                 visitors_num,
@@ -74,6 +76,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
 class LanguageProjectData:
     language: Language
     repository: str | None
+    branch: str
     completion: float
     translators: TranslatorsData
     visitors: int
@@ -84,13 +87,17 @@ class LanguageProjectData:
 
 
 if __name__ == '__main__':
-    info(f'starting at {generation_time}')
+    logging.basicConfig(level=logging.INFO)
+    logging.info(f'starting at {generation_time}')
     template = Template(Path('template.html.jinja').read_text())
 
     output = template.render(
-        completion_progress=list(get_completion_progress()),
+        completion_progress=(completion_progress := list(get_completion_progress())),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
 
     Path('index.html').write_text(output)
+    Path('index.json').write_text(
+        json.dumps(completion_progress, indent=2, default=asdict)
+    )
