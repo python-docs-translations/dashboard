@@ -10,19 +10,19 @@
 #     "python-docs-theme",
 # ]
 # ///
+import logging
 import subprocess
 from collections.abc import Iterator
 from concurrent.futures import ProcessPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from itertools import repeat
-from logging import info
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from requests import Session
 from git import Repo
 from jinja2 import Template
+from urllib3 import PoolManager
 
 import build_warnings
 import build_status
@@ -50,14 +50,14 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         )
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
-        languages_built = dict(build_status.get_languages(session := Session()))
+        languages_built = dict(build_status.get_languages(http := PoolManager()))
         with ProcessPoolExecutor() as executor:
             return executor.map(
                 get_data,
                 *zip(*get_languages_and_repos(devguide_dir)),
                 repeat(languages_built),
                 repeat(clones_dir),
-                repeat(session),
+                repeat(http),
             )
 
 
@@ -66,12 +66,12 @@ def get_data(
     repo: str,
     languages_built: dict[str, bool],
     clones_dir: str,
-    session: Session,
+    http: PoolManager,
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
         completion, translators_data = get_completion(clones_dir, repo)
-        visitors_num = get_number_of_visitors(language.code, session) if built else 0
+        visitors_num = get_number_of_visitors(language.code, http) if built else 0
         warnings = (
             build_warnings.number(clones_dir, repo, language.code) if completion else 0
         )
@@ -109,7 +109,8 @@ class LanguageProjectData:
 
 
 if __name__ == '__main__':
-    info(f'starting at {generation_time}')
+    logging.basicConfig(level=logging.INFO)
+    logging.info(f'starting at {generation_time}')
     template = Template(Path('template.html.jinja').read_text())
 
     output = template.render(
