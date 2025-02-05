@@ -8,17 +8,17 @@
 #     "docutils",
 # ]
 # ///
+import logging
 import subprocess
 from collections.abc import Iterator
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from logging import info
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from requests import Session
 from git import Repo
 from jinja2 import Template
+from urllib3 import PoolManager
 
 import contribute
 import build_status
@@ -45,13 +45,13 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         )
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
-        languages_built = dict(build_status.get_languages(session := Session()))
+        languages_built = dict(build_status.get_languages(http := PoolManager()))
         for language, repo in get_languages_and_repos(devguide_dir):
             built = language.code in languages_built
             if repo:
                 completion, translators_data = get_completion(clones_dir, repo)
                 visitors_num = (
-                    get_number_of_visitors(language.code, session) if built else 0
+                    get_number_of_visitors(language.code, http) if built else 0
                 )
             else:
                 completion = 0.0
@@ -84,7 +84,8 @@ class LanguageProjectData:
 
 
 if __name__ == '__main__':
-    info(f'starting at {generation_time}')
+    logging.basicConfig(level=logging.INFO)
+    logging.info(f'starting at {generation_time}')
     template = Template(Path('template.html.jinja').read_text())
 
     output = template.render(
