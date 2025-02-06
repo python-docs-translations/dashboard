@@ -62,7 +62,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
 
 def get_project_data(
     language: Language,
-    repo: str,
+    repo: str | None,
     languages_built: dict[str, bool],
     clones_dir: str,
     http: PoolManager,
@@ -75,6 +75,7 @@ def get_project_data(
         completion = 0.0
         translators_data = TranslatorsData(0, False)
         visitors_num = 0
+        branch = None
     return LanguageProjectData(
         language,
         repo,
@@ -93,7 +94,7 @@ def get_project_data(
 class LanguageProjectData:
     language: Language
     repository: str | None
-    branch: str
+    branch: str | None
     completion: float
     translators: TranslatorsData
     visitors: int
