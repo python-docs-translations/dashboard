@@ -1,0 +1,18 @@
+on:
+  pull_request:
+    types:
+      - closed
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - run: git config user.name "github-actions[bot]"
+      - run: git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - run: git rm ${{ github.ref_name }}
+      - run: git commit -m 'Cleaning up gh-pages after ${{ github.ref_name }}'
+      - uses: ad-m/github-push-action@master
