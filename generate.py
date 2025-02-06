@@ -8,12 +8,13 @@
 #     "docutils",
 # ]
 # ///
+import json
 import concurrent.futures
 import itertools
 import logging
 import subprocess
 from collections.abc import Iterator
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -48,6 +49,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
         languages_built = dict(build_status.get_languages(http := PoolManager()))
+
         with concurrent.futures.ThreadPoolExecutor() as executor:
             return executor.map(
                 get_project_data,
@@ -67,7 +69,7 @@ def get_project_data(
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
-        completion, translators_data = get_completion(clones_dir, repo)
+        completion, translators_data, branch = get_completion(clones_dir, repo)
         visitors_num = get_number_of_visitors(language.code, http) if built else 0
     else:
         completion = 0.0
@@ -76,6 +78,7 @@ def get_project_data(
     return LanguageProjectData(
         language,
         repo,
+        branch,
         completion,
         translators_data,
         visitors_num,
@@ -90,6 +93,7 @@ def get_project_data(
 class LanguageProjectData:
     language: Language
     repository: str | None
+    branch: str
     completion: float
     translators: TranslatorsData
     visitors: int
@@ -105,9 +109,12 @@ if __name__ == '__main__':
     template = Template(Path('template.html.jinja').read_text())
 
     output = template.render(
-        completion_progress=list(get_completion_progress()),
+        completion_progress=(completion_progress := list(get_completion_progress())),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
 
     Path('index.html').write_text(output)
+    Path('index.json').write_text(
+        json.dumps(completion_progress, indent=2, default=asdict)
+    )
