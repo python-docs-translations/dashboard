@@ -1,12 +1,11 @@
-name: Dashboard PR preview
+name: Read the Docs PR preview
 # Automatically edits a pull request's descriptions with a link
-# to the GitHub pages PR preview.
+# to the documentation's preview on Read the Docs.
 
 on:
   pull_request_target:
     types:
       - opened
-      - reopened
 
 permissions:
   pull-requests: write
@@ -19,11 +18,7 @@ jobs:
   documentation-links:
     runs-on: ubuntu-latest
     steps:
-      - uses: chabroA/action-append-pr-description@v1.2.1
+      - uses: readthedocs/actions/preview@v1
         with:
-          auth: ${{ secrets.GITHUB_TOKEN }}
-          repo: ${{ github.event.repository.name }}
-          owner: ${{ github.repository_owner }}
-          pr: ${{ github.event.number }}
-          url: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.ref_name }}"
-          message: "📊 Dashboard preview:"
+          project-slug: "pydocs-translation-dashboard"
+          single-version: "true"
