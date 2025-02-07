@@ -58,7 +58,6 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
                 *zip(*get_languages_and_repos(devguide_dir)),
                 itertools.repeat(languages_built),
                 itertools.repeat(clones_dir),
-                itertools.repeat(PoolManager()),
             )
 
 
@@ -67,12 +66,13 @@ def get_project_data(
     repo: str | None,
     languages_built: dict[str, bool],
     clones_dir: str,
-    http: PoolManager,
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
         completion, translators_data, branch = get_completion(clones_dir, repo)
-        visitors_num = get_number_of_visitors(language.code, http) if built else 0
+        visitors_num = (
+            get_number_of_visitors(language.code, PoolManager()) if built else 0
+        )
         warnings = (
             build_warnings.number(clones_dir, repo, language.code) if completion else 0
         )
