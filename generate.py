@@ -18,7 +18,6 @@ import subprocess
 from collections.abc import Iterator
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
-from itertools import repeat
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
