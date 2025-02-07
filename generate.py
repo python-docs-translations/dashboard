@@ -57,7 +57,6 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
                 *zip(*get_languages_and_repos(devguide_dir)),
                 itertools.repeat(languages_built),
                 itertools.repeat(clones_dir),
-                itertools.repeat(PoolManager()),
             )
 
 
@@ -66,7 +65,6 @@ def get_project_data(
     repo: str | None,
     languages_built: dict[str, bool],
     clones_dir: str,
-    http: PoolManager,
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
