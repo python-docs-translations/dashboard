@@ -49,7 +49,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         )
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
-        languages_built = dict(build_status.get_languages(http := PoolManager()))
+        languages_built = dict(build_status.get_languages(PoolManager()))
 
         with concurrent.futures.ThreadPoolExecutor() as executor:
             return executor.map(
@@ -57,7 +57,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
                 *zip(*get_languages_and_repos(devguide_dir)),
                 itertools.repeat(languages_built),
                 itertools.repeat(clones_dir),
-                itertools.repeat(http),
+                itertools.repeat(PoolManager()),
             )
 
 
