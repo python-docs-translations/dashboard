@@ -10,11 +10,13 @@
 #     "python-docs-theme",
 # ]
 # ///
+import json
+import concurrent.futures
+import itertools
 import logging
 import subprocess
 from collections.abc import Iterator
-from concurrent.futures import ProcessPoolExecutor
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from itertools import repeat
 from pathlib import Path
@@ -51,26 +53,26 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
         languages_built = dict(build_status.get_languages(http := PoolManager()))
-        with ProcessPoolExecutor() as executor:
+        with concurrent.futures.ProcessPoolExecutor() as executor:
             return executor.map(
-                get_data,
+                get_project_data,
                 *zip(*get_languages_and_repos(devguide_dir)),
-                repeat(languages_built),
-                repeat(clones_dir),
-                repeat(http),
+                itertools.repeat(languages_built),
+                itertools.repeat(clones_dir),
+                itertools.repeat(http),
             )
 
 
-def get_data(
+def get_project_data(
     language: Language,
-    repo: str,
+    repo: str | None,
     languages_built: dict[str, bool],
     clones_dir: str,
     http: PoolManager,
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
-        completion, translators_data = get_completion(clones_dir, repo)
+        completion, translators_data, branch = get_completion(clones_dir, repo)
         visitors_num = get_number_of_visitors(language.code, http) if built else 0
         warnings = (
             build_warnings.number(clones_dir, repo, language.code) if completion else 0
@@ -80,9 +82,11 @@ def get_data(
         translators_data = TranslatorsData(0, False)
         visitors_num = 0
         warnings = 0
+        branch = None
     return LanguageProjectData(
         language,
         repo,
+        branch,
         completion,
         translators_data,
         visitors_num,
@@ -98,6 +102,7 @@ def get_data(
 class LanguageProjectData:
     language: Language
     repository: str | None
+    branch: str | None
     completion: float
     translators: TranslatorsData
     visitors: int
@@ -114,9 +119,12 @@ if __name__ == '__main__':
     template = Template(Path('template.html.jinja').read_text())
 
     output = template.render(
-        completion_progress=list(get_completion_progress()),
+        completion_progress=(completion_progress := list(get_completion_progress())),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
 
     Path('index.html').write_text(output)
+    Path('index.json').write_text(
+        json.dumps(completion_progress, indent=2, default=asdict)
+    )

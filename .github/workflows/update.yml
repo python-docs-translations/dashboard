@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/setup-python@v5
         with:
@@ -19,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: sudo apt-get install -y gettext
       - run: uv run generate.py  # generates "index.html"
-      - run: mkdir -p build && cp index.html style.css warnings* build
+      - run: mkdir -p build && cp index.* style.css warnings* build
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
@@ -28,6 +29,25 @@ jobs:
           clean: false
           git-config-name: github-actions[bot]
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Deploy to subdirectory if pull request 🚀
+        if: github.event_name == 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          target-folder: ${{ github.ref_name }}
+          clean: false
+          git-config-name: github-actions[bot]
+          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Update PR description if pull request
+        if: github.event_name == 'pull_request'
+        uses: chabroA/action-append-pr-description@v1.2.1
+        with:
+          auth: ${{ secrets.GITHUB_TOKEN }}
+          repo: ${{ github.event.repository.name }}
+          owner: ${{ github.repository_owner }}
+          pr: ${{ github.event.number }}
+          url: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.ref_name }}/"
+          message: "📊 Dashboard preview 📊:"
       - name: Debug index.html if pull request
         if: github.event_name == 'pull_request'
         run: |
