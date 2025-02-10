@@ -1,4 +1,5 @@
 from pathlib import Path
+from re import findall
 from shutil import copyfile
 
 import sphinx.cmd.build
@@ -33,4 +34,4 @@ def number(clones_dir: str, repo: str, language_code: str) -> int:
         )
     )
     copyfile(warning_file, f'warnings-{language_code}.txt')
-    return len(Path(warning_file).read_text().splitlines())
+    return len(findall('ERROR|WARNING', Path(warning_file).read_text()))
