@@ -47,7 +47,7 @@
       "number": 241,
       "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
     },
-    "visitors": 721053,
+    "visitors": 721068,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -137,7 +137,7 @@
       "number": 3,
       "link": "https://github.com/python/python-docs-it/blob/3.13/TRANSLATORS"
     },
-    "visitors": 27744,
+    "visitors": 27747,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -155,7 +155,7 @@
       "number": 47,
       "link": false
     },
-    "visitors": 1385321,
+    "visitors": 1385379,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -173,7 +173,7 @@
       "number": 22,
       "link": false
     },
-    "visitors": 403636,
+    "visitors": 403660,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -245,7 +245,7 @@
       "number": 26,
       "link": false
     },
-    "visitors": 43025,
+    "visitors": 43030,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -317,7 +317,7 @@
       "number": 234,
       "link": false
     },
-    "visitors": 1539865,
+    "visitors": 1540047,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -335,7 +335,7 @@
       "number": 310,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
     },
-    "visitors": 976869,
+    "visitors": 976892,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -353,7 +353,7 @@
       "number": 116,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
     },
-    "visitors": 417540,
+    "visitors": 417581,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -371,7 +371,7 @@
       "number": 29,
       "link": "https://github.com/python/python-docs-tr/blob/3.12/TRANSLATORS"
     },
-    "visitors": 24394,
+    "visitors": 24396,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -389,7 +389,7 @@
       "number": 15,
       "link": false
     },
-    "visitors": 234933,
+    "visitors": 234956,
     "built": true,
     "in_switcher": false,
     "uses_platform": true,
