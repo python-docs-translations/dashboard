@@ -4,7 +4,7 @@ import urllib.parse
 import zipfile
 from logging import info
 
-from urllib3 import PoolManager
+from urllib3 import PoolManager, Retry
 
 
 def get_number_of_visitors(language: str, http: PoolManager) -> int:
@@ -12,7 +12,9 @@ def get_number_of_visitors(language: str, http: PoolManager) -> int:
         {'filters': f'[["contains","event:page",["/{language}/"]]]', 'period': 'all'}
     )
     response = http.request(
-        'GET', f'https://plausible.io/docs.python.org/export?{params}'
+        'GET',
+        f'https://plausible.io/docs.python.org/export?{params}',
+        retries=Retry(status_forcelist=(500,)),
     )
     info(f'visitors {response.status=} ({language=})')
     with (
