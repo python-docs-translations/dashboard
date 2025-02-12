@@ -6,7 +6,7 @@
     },
     "repository": "Abdur-rahmaanJ/python-docs-ar",
     "branch": "master",
-    "completion": 0.01457532794487876,
+    "completion": 0.014572817720546348,
     "translators": {
       "number": 3,
       "link": false
@@ -42,12 +42,12 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.13",
-    "completion": 36.15078839273884,
+    "completion": 36.14323755017686,
     "translators": {
       "number": 241,
       "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
     },
-    "visitors": 724751,
+    "visitors": 724926,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -60,7 +60,7 @@
     },
     "repository": "pygreece/python-docs-gr",
     "branch": "3.12",
-    "completion": 4.889360010600239,
+    "completion": 4.888517944437821,
     "translators": {
       "number": 12,
       "link": "https://github.com/pygreece/python-docs-gr/blob/3.12/TRANSLATORS"
@@ -78,7 +78,7 @@
     },
     "repository": "CuriousLearner/python-docs-hi-in",
     "branch": "master",
-    "completion": 0.005300119252683185,
+    "completion": 0.0052992064438350354,
     "translators": {
       "number": 1,
       "link": false
@@ -114,12 +114,12 @@
     },
     "repository": "python/python-docs-id",
     "branch": "3.9",
-    "completion": 8.111832516231615,
+    "completion": 8.109110660678564,
     "translators": {
       "number": 24,
       "link": "https://github.com/python/python-docs-id/blob/3.9/TRANSLATORS"
     },
-    "visitors": 8395,
+    "visitors": 8397,
     "built": true,
     "in_switcher": false,
     "uses_platform": false,
@@ -132,12 +132,12 @@
     },
     "repository": "python/python-docs-it",
     "branch": "3.13",
-    "completion": 3.6451570160328606,
+    "completion": 3.644529231747546,
     "translators": {
       "number": 3,
       "link": "https://github.com/python/python-docs-it/blob/3.13/TRANSLATORS"
     },
-    "visitors": 27966,
+    "visitors": 27979,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -150,12 +150,12 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.11",
-    "completion": 53.435802305551874,
+    "completion": 53.42527456513387,
     "translators": {
       "number": 47,
       "link": false
     },
-    "visitors": 1391268,
+    "visitors": 1391600,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -168,12 +168,12 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.9",
-    "completion": 43.35895057638797,
+    "completion": 43.35015831379251,
     "translators": {
       "number": 22,
       "link": false
     },
-    "visitors": 404901,
+    "visitors": 404971,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -240,12 +240,12 @@
     },
     "repository": "python/python-docs-pl",
     "branch": "3.13",
-    "completion": 11.046773552404929,
+    "completion": 11.044871030563174,
     "translators": {
       "number": 26,
       "link": false
     },
-    "visitors": 43353,
+    "visitors": 43370,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -276,12 +276,12 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.13",
-    "completion": 58.900225255068236,
+    "completion": 58.888756408727794,
     "translators": {
       "number": 155,
       "link": false
     },
-    "visitors": 467941,
+    "visitors": 467946,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -294,7 +294,7 @@
     },
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.12",
-    "completion": 2.14654829733669,
+    "completion": 2.144853808142231,
     "translators": {
       "number": 16,
       "link": false
@@ -312,12 +312,12 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.13",
-    "completion": 80.87451967669273,
+    "completion": 80.85926632486785,
     "translators": {
       "number": 234,
       "link": false
     },
-    "visitors": 1547773,
+    "visitors": 1548235,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -330,12 +330,12 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.13",
-    "completion": 63.31389956274016,
+    "completion": 63.30167057483142,
     "translators": {
       "number": 310,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
     },
-    "visitors": 981481,
+    "visitors": 981556,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -348,12 +348,12 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
-    "completion": 37.43739234132768,
+    "completion": 37.430944716028776,
     "translators": {
       "number": 116,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
     },
-    "visitors": 419338,
+    "visitors": 419434,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -366,12 +366,12 @@
     },
     "repository": "python/python-docs-tr",
     "branch": "3.12",
-    "completion": 5.1013647807075655,
+    "completion": 5.100486202191222,
     "translators": {
       "number": 29,
       "link": "https://github.com/python/python-docs-tr/blob/3.12/TRANSLATORS"
     },
-    "visitors": 24522,
+    "visitors": 24529,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -384,12 +384,12 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "completion": 48.477540744666754,
+    "completion": 48.46786693692619,
     "translators": {
       "number": 15,
       "link": false
     },
-    "visitors": 236205,
+    "visitors": 236257,
     "built": true,
     "in_switcher": false,
     "uses_platform": true,
