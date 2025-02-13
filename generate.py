@@ -25,7 +25,6 @@ from git import Repo
 from jinja2 import Template
 from urllib3 import PoolManager
 
-import build_warnings
 import build_status
 import contribute
 from visitors import get_number_of_visitors
@@ -73,14 +72,10 @@ def get_project_data(
         visitors_num = (
             get_number_of_visitors(language.code, PoolManager()) if built else 0
         )
-        warnings = (
-            build_warnings.number(clones_dir, repo, language.code) if completion else 0
-        )
     else:
         completion = 0.0
         translators_data = TranslatorsData(0, False)
         visitors_num = 0
-        warnings = 0
         branch = None
     return LanguageProjectData(
         language,
@@ -89,7 +84,6 @@ def get_project_data(
         completion,
         translators_data,
         visitors_num,
-        warnings,
         built,
         in_switcher=languages_built.get(language.code),
         uses_platform=language.code in contribute.pulling_from_transifex,
@@ -105,7 +99,6 @@ class LanguageProjectData:
     completion: float
     translators: TranslatorsData
     visitors: int
-    warnings: int
     built: bool
     in_switcher: bool | None
     uses_platform: bool
