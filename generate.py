@@ -25,7 +25,6 @@ from git import Repo
 from jinja2 import Template
 from urllib3 import PoolManager
 
-import build_warnings
 import build_status
 from completion import branches_from_devguide, get_completion, TranslatorsData
 from repositories import Language, get_languages_and_repos
