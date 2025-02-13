@@ -4,7 +4,6 @@
 #     "gitpython",
 #     "potodo",
 #     "jinja2",
-#     "requests",
 #     "docutils",
 #     "sphinx",
 #     "python-docs-theme",
@@ -19,11 +18,13 @@ from collections.abc import Iterator, Sequence
 from datetime import datetime, timezone
 from json import loads
 from pathlib import Path
+from sys import argv
 from tempfile import TemporaryDirectory
 
 import dacite
 from git import Repo
 from jinja2 import Template
+from urllib3 import request
 
 import build_warnings
 from completion import branches_from_devguide
@@ -77,10 +78,13 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logging.info(f'starting at {generation_time}')
     template = Template(Path('metadata.html.jinja').read_text())
+    if (index_path := Path('index.json')).exists():
+        index_json = loads(Path('index.json').read_text())
+    else:
+        index_json = request('GET', argv[1]).json()
 
     completion_progress = [
-        dacite.from_dict(LanguageProjectData, project)
-        for project in loads(Path('index.json').read_text())
+        dacite.from_dict(LanguageProjectData, project) for project in index_json
     ]
 
     output = template.render(
