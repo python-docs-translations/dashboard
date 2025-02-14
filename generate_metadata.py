@@ -22,6 +22,7 @@ from sys import argv
 from tempfile import TemporaryDirectory
 
 import dacite
+import git
 from git import Repo
 from jinja2 import Template
 from urllib3 import request
@@ -55,23 +56,32 @@ def get_projects_metadata(
         with concurrent.futures.ProcessPoolExecutor() as executor:
             return executor.map(
                 get_metadata,
-                *zip(*map(get_language_repo_and_completion, completion_progress)),
+                *zip(
+                    *map(get_language_repo_branch_and_completion, completion_progress)
+                ),
                 itertools.repeat(clones_dir),
             )
 
 
 def get_metadata(
-    language: Language, repo: str | None, completion: float, clones_dir: str
+    language: Language,
+    repo: str | None,
+    branch: str | None,
+    completion: float,
+    clones_dir: str,
 ) -> int:
+    if repo:
+        clone_path = Path(clones_dir, repo)
+        git.Repo.clone_from(f'https://github.com/{repo}.git', clone_path, branch=branch)
     return (
         repo and completion and build_warnings.number(clones_dir, repo, language.code)
     ) or 0
 
 
-def get_language_repo_and_completion(
+def get_language_repo_branch_and_completion(
     project: LanguageProjectData,
-) -> tuple[Language, str | None, float]:
-    return project.language, project.repository, project.completion
+) -> tuple[Language, str | None, str | None, float]:
+    return project.language, project.repository, project.branch, project.completion
 
 
 if __name__ == '__main__':
