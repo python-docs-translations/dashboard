@@ -6,8 +6,6 @@
 #     "jinja2",
 #     "requests",
 #     "docutils",
-#     "sphinx",
-#     "python-docs-theme",
 # ]
 # ///
 import json
@@ -50,13 +48,15 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         )
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
-        languages_built = dict(build_status.get_languages(PoolManager()))
-        with concurrent.futures.ProcessPoolExecutor() as executor:
+        languages_built = dict(build_status.get_languages(http := PoolManager()))
+
+        with concurrent.futures.ThreadPoolExecutor() as executor:
             return executor.map(
                 get_project_data,
                 *zip(*get_languages_and_repos(devguide_dir)),
                 itertools.repeat(languages_built),
                 itertools.repeat(clones_dir),
+                itertools.repeat(http),
             )
 
 
@@ -65,13 +65,12 @@ def get_project_data(
     repo: str | None,
     languages_built: dict[str, bool],
     clones_dir: str,
+    http: PoolManager,
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
         completion, translators_data, branch = get_completion(clones_dir, repo)
-        visitors_num = (
-            get_number_of_visitors(language.code, PoolManager()) if built else 0
-        )
+        visitors_num = get_number_of_visitors(language.code, http) if built else 0
     else:
         completion = 0.0
         translators_data = TranslatorsData(0, False)
