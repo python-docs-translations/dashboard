@@ -20,7 +20,9 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
     ]
 
 
-def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData', str]:
+def get_completion(
+    clones_dir: str, repo: str
+) -> tuple[float, 'TranslatorsData', str | None]:
     clone_path = Path(clones_dir, repo)
     for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + [
         'master',
@@ -33,6 +35,7 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData'
         except git.GitCommandError:
             print(f'failed to clone {repo} {branch}')
             translators_data = TranslatorsData(0, False)
+            branch = ''
             continue
         else:
             translators_number = translators.get_number(clone_path)
@@ -47,7 +50,7 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData'
             hide_reserved=False,
             api_url='',
         ).completion
-    return completion, translators_data, branch
+    return completion, translators_data, branch or None
 
 
 @dataclass(frozen=True)
