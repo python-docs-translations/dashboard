@@ -35,6 +35,7 @@ def get_completion(
         except git.GitCommandError:
             print(f'failed to clone {repo} {branch}')
             translators_data = TranslatorsData(0, False)
+            branch = ''
             continue
         else:
             translators_number = translators.get_number(clone_path)
@@ -69,7 +70,7 @@ def get_completion(
 
     change = completion - month_ago_completion
 
-    return completion, translators_data, branch, change
+    return completion, translators_data, branch or None, change
 
 
 @dataclass(frozen=True)
