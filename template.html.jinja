@@ -15,7 +15,6 @@
   <th>language</th>
   <th>switcher</th>
   <th>translators</th>
-  <th>warnings²</th>
   <th>completion*</th>
 </tr>
 </thead>
@@ -36,9 +35,6 @@
     {% if project.translators.link %}<a href="{{ project.translators.link }}">{% endif %}
     {{ project.translators.number }}
     {% if project.translators.link %}</a>{% endif %}
-  </td>
-  <td data-label="warnings">
-    {% if project.completion %}<a href="warnings-{{ project.language.code }}.txt">{{ project.warnings }}</a>{% else %}{{ project.warnings }}{% endif %}
   </td>
   <td data-label="completion">
     <div class="progress-bar"
