@@ -2,9 +2,7 @@
 # requires-python = ">=3.11"
 # dependencies = [
 #     "gitpython",
-#     "potodo",
 #     "jinja2",
-#     "docutils",
 #     "sphinx",
 #     "python-docs-theme",
 #     "dacite",
