@@ -12,6 +12,7 @@
 <thead>
 <tr>
   <th>language</th>
+  <th>branch</th>
   <th>build warnings*</th>
 </tr>
 </thead>
@@ -19,6 +20,7 @@
 {% for project, metadata in metadata | sort(attribute='0.completion,0.translators.number') | reverse %}
 <tr>
   <td data-label="language">{{ project.language.name }} ({{ project.language.code }})</td>
+  <td data-label="branch">{{ project.branch }}</td>
   <td data-label="warnings">
     {% if project.completion %}<a href="warnings-{{ project.language.code }}.txt">{{ metadata }}</a>{% else %}{{ metadata }}{% endif %}
   </td>
