@@ -24,7 +24,10 @@ def get_completion(
     clones_dir: str, repo: str
 ) -> tuple[float, 'TranslatorsData', str, float]:
     clone_path = Path(clones_dir, repo)
-    for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + ['master', 'main']:
+    for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + [
+        'master',
+        'main',
+    ]:
         try:
             clone_repo = git.Repo.clone_from(
                 f'https://github.com/{repo}.git', clone_path, branch=branch
