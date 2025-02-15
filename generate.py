@@ -60,12 +60,6 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
             )
 
 
-def get_month_ago_completion(clones_dir: str, repo: str) -> float:
-    repo_dir = Path(clones_dir, repo)
-    subprocess.run(['git', 'checkout', 'HEAD@{30 days ago}'], cwd=repo_dir, check=True)
-    return get_completion(clones_dir, repo)[0]
-
-
 def get_project_data(
     language: Language,
     repo: str | None,
@@ -75,9 +69,7 @@ def get_project_data(
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
-        completion, translators_data, branch = get_completion(clones_dir, repo)
-        month_ago_completion = get_month_ago_completion(clones_dir, repo)
-        change = completion - month_ago_completion
+        completion, translators_data, branch, change = get_completion(clones_dir, repo)
         visitors_num = get_number_of_visitors(language.code, http) if built else 0
     else:
         completion = 0.0
