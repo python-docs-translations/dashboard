@@ -1,3 +1,3 @@
-/tmp/tmpjdfgj2bp/cpython/Doc/tutorial/whatnow.rst:24: WARNING: inconsistent term references in translated message. original: [':ref:`installing-index`'], translated: [] [i18n.inconsistent_references]
-/tmp/tmpjdfgj2bp/cpython/Doc/tutorial/whatnow.rst:27: WARNING: inconsistent term references in translated message. original: [':ref:`reference-index`'], translated: [] [i18n.inconsistent_references]
-/tmp/tmpjdfgj2bp/cpython/Doc/tutorial/whatnow.rst:64: WARNING: inconsistent term references in translated message. original: [':ref:`Frequently Asked Questions <faq-index>`'], translated: [] [i18n.inconsistent_references]
+/tmp/tmpwknfjurp/cpython/Doc/tutorial/whatnow.rst:24: WARNING: inconsistent term references in translated message. original: [':ref:`installing-index`'], translated: [] [i18n.inconsistent_references]
+/tmp/tmpwknfjurp/cpython/Doc/tutorial/whatnow.rst:27: WARNING: inconsistent term references in translated message. original: [':ref:`reference-index`'], translated: [] [i18n.inconsistent_references]
+/tmp/tmpwknfjurp/cpython/Doc/tutorial/whatnow.rst:64: WARNING: inconsistent term references in translated message. original: [':ref:`Frequently Asked Questions <faq-index>`'], translated: [] [i18n.inconsistent_references]
