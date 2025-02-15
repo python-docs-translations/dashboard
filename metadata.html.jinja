@@ -25,7 +25,9 @@
   <td data-label="warnings">
     {% if project.completion %}<a href="warnings-{{ project.language.code }}.txt">{{ metadata[0] }}</a>{% else %}{{ metadata[0] }}{% endif %}
   </td>
-  <td data-label="lint">{{ metadata[1] }}</td>
+  <td data-label="lint">
+    {% if project.completion %}<a href="warnings-lint-{{ project.language.code }}.txt">{{ metadata[1] }}</a>{% else %}{{ metadata[1] }}{% endif %}
+  </td>
 </tr>
 {% endfor %}
 </tbody>

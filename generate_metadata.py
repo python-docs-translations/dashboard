@@ -79,7 +79,7 @@ def get_metadata(
         and completion
         and (
             build_warnings.number(clones_dir, repo, language.code),
-            sum(sphinx_lint.errors(clones_dir, repo)),
+            sphinx_lint.store_and_count_failures(clones_dir, repo, language.code),
         )
     ) or (0, 0)
 
