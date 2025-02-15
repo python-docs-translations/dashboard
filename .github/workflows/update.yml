@@ -21,6 +21,11 @@ jobs:
       - run: sudo apt-get install -y gettext
       - run: uv run generate.py  # generates "index.html"
       - run: mkdir -p build && cp index.* style.css build
+      - run: cd build && cat index.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
