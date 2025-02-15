@@ -28,7 +28,7 @@
     ({{ project.language.code }})
   </td>
   <td data-label="build">
-    {% elif project.in_switcher %}
+    {% if project.in_switcher %}
       <a href="https://docs.python.org/{{ project.language.code }}/" target="_blank">✓</a>
     {% elif project.built %}
       <a href="https://docs.python.org/{{ project.language.code }}/" target="_blank">□</a>
