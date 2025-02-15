@@ -21,7 +21,9 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
     ]
 
 
-def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData', str, float]:
+def get_completion(
+    clones_dir: str, repo: str
+) -> tuple[float, 'TranslatorsData', str, float]:
     clone_path = Path(clones_dir, repo)
     for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + ['master']:
         try:
@@ -46,18 +48,26 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData'
             api_url='',
         ).completion
 
-    subprocess.run(['git', 'checkout', 'HEAD@{30 days ago}'], cwd=clone_path, check=True)
-    with TemporaryDirectory() as tmpdir:
-        month_ago_completion = potodo.merge_and_scan_path(
-            clone_path,
-            pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
-            merge_path=Path(tmpdir),
-            hide_reserved=False,
-            api_url='',
-        ).completion
+    try:
+        subprocess.run(
+            ['git', 'checkout', 'HEAD@{30 days ago}'], cwd=clone_path, check=True
+        )
+        with TemporaryDirectory() as tmpdir:
+            month_ago_completion = potodo.merge_and_scan_path(
+                clone_path,
+                pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
+                merge_path=Path(tmpdir),
+                hide_reserved=False,
+                api_url='',
+            ).completion
+    except FileNotFoundError:
+        print(f'{repo} is empty')
+        month_ago_completion = 0.0
 
     change = completion - month_ago_completion
+
     return completion, translators_data, branch, change
+
 
 @dataclass(frozen=True)
 class TranslatorsData:
