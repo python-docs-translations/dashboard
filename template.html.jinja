@@ -51,11 +51,6 @@
     <div class="progress-bar" style="width: {{ project.completion }}%;">{{ "{:.2f}".format(project.completion) }}%</div>
     <div class="progress-bar-outer-label">{{ "{:.2f}".format(project.completion) }}%</div>
   </td>
-  <td data-label="difference">
-    {% set prev = previous_completion.get(project.language.code, project.completion) %}
-    {% set diff = prev - project.completion %}
-    {{ "{:+.2f}".format(diff) }}%
-  </td>
 </tr>
 {% endfor %}
 </tbody>
