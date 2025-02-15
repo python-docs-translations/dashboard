@@ -149,9 +149,9 @@ if __name__ == '__main__':
     save_index_json(cached_data, completion_progress)
 
     template = Template(Path('template.html.jinja').read_text())
-
     output = template.render(
         completion_progress=completion_progress,
+        previous_completion=cached_data.get('previous_completion', {}),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
