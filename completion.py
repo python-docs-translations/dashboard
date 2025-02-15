@@ -52,11 +52,11 @@ def get_completion(
         subprocess.run(
             ['git', 'checkout', 'HEAD@{30 days ago}'], cwd=clone_path, check=True
         )
-        with TemporaryDirectory() as tmpdir:
+        with TemporaryDirectory() as tmpdir2:
             month_ago_completion = potodo.merge_and_scan_path(
                 clone_path,
                 pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
-                merge_path=Path(tmpdir),
+                merge_path=Path(tmpdir2),
                 hide_reserved=False,
                 api_url='',
             ).completion
