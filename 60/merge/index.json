@@ -73,7 +73,7 @@
         "number": 241,
         "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
       },
-      "visitors": 734167,
+      "visitors": 734174,
       "built": true,
       "in_switcher": true,
       "uses_platform": false,
@@ -163,7 +163,7 @@
         "number": 3,
         "link": "https://github.com/python/python-docs-it/blob/3.13/TRANSLATORS"
       },
-      "visitors": 28521,
+      "visitors": 28524,
       "built": true,
       "in_switcher": true,
       "uses_platform": false,
@@ -181,7 +181,7 @@
         "number": 47,
         "link": false
       },
-      "visitors": 1407747,
+      "visitors": 1407761,
       "built": true,
       "in_switcher": true,
       "uses_platform": true,
@@ -199,7 +199,7 @@
         "number": 22,
         "link": false
       },
-      "visitors": 407658,
+      "visitors": 407661,
       "built": true,
       "in_switcher": true,
       "uses_platform": false,
@@ -271,7 +271,7 @@
         "number": 25,
         "link": false
       },
-      "visitors": 44179,
+      "visitors": 44180,
       "built": true,
       "in_switcher": true,
       "uses_platform": true,
@@ -307,7 +307,7 @@
         "number": 155,
         "link": false
       },
-      "visitors": 473998,
+      "visitors": 474002,
       "built": true,
       "in_switcher": true,
       "uses_platform": true,
@@ -343,7 +343,7 @@
         "number": 234,
         "link": false
       },
-      "visitors": 1567265,
+      "visitors": 1567300,
       "built": true,
       "in_switcher": true,
       "uses_platform": true,
@@ -361,7 +361,7 @@
         "number": 310,
         "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
       },
-      "visitors": 993977,
+      "visitors": 993982,
       "built": true,
       "in_switcher": true,
       "uses_platform": false,
@@ -379,7 +379,7 @@
         "number": 116,
         "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
       },
-      "visitors": 423664,
+      "visitors": 423665,
       "built": true,
       "in_switcher": true,
       "uses_platform": false,
@@ -415,7 +415,7 @@
         "number": 15,
         "link": false
       },
-      "visitors": 239621,
+      "visitors": 239625,
       "built": true,
       "in_switcher": false,
       "uses_platform": true,
