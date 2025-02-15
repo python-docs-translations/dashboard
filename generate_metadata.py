@@ -7,6 +7,7 @@
 #     "sphinx",
 #     "python-docs-theme",
 #     "dacite",
+#     "sphinx-lint",
 # ]
 # ///
 import concurrent.futures
@@ -27,6 +28,7 @@ from jinja2 import Template
 from urllib3 import request
 
 import build_warnings
+import sphinx_lint
 from completion import branches_from_devguide
 from generate import LanguageProjectData
 from repositories import Language
@@ -36,7 +38,7 @@ generation_time = datetime.now(timezone.utc)
 
 def get_projects_metadata(
     completion_progress: Sequence[LanguageProjectData],
-) -> Iterator[int]:
+) -> Iterator[tuple[int, int]]:
     with TemporaryDirectory() as clones_dir:
         Repo.clone_from(
             'https://github.com/python/devguide.git',
@@ -68,13 +70,18 @@ def get_metadata(
     branch: str | None,
     completion: float,
     clones_dir: str,
-) -> int:
+) -> tuple[int, int]:
     if repo:
         clone_path = Path(clones_dir, repo)
         git.Repo.clone_from(f'https://github.com/{repo}.git', clone_path, branch=branch)
     return (
-        repo and completion and build_warnings.number(clones_dir, repo, language.code)
-    ) or 0
+        repo
+        and completion
+        and (
+            build_warnings.number(clones_dir, repo, language.code),
+            sum(sphinx_lint.errors(clones_dir, repo)),
+        )
+    ) or (0, 0)
 
 
 def get_language_repo_branch_and_completion(

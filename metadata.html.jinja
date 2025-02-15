@@ -22,8 +22,9 @@
   <td data-label="language">{{ project.language.name }} ({{ project.language.code }})</td>
   <td data-label="branch">{{ project.branch }}</td>
   <td data-label="warnings">
-    {% if project.completion %}<a href="warnings-{{ project.language.code }}.txt">{{ metadata }}</a>{% else %}{{ metadata }}{% endif %}
+    {% if project.completion %}<a href="warnings-{{ project.language.code }}.txt">{{ metadata[0] }}</a>{% else %}{{ metadata[0] }}{% endif %}
   </td>
+  <td data-label="lint">{{ metadata[1] }}</td>
 </tr>
 {% endfor %}
 </tbody>
