@@ -47,7 +47,7 @@
       "number": 241,
       "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
     },
-    "visitors": 733817,
+    "visitors": 733819,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -150,12 +150,12 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.11",
-    "completion": 53.42244359956019,
+    "completion": 53.421118868149485,
     "translators": {
       "number": 47,
       "link": false
     },
-    "visitors": 1406482,
+    "visitors": 1406511,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -168,12 +168,12 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.9",
-    "completion": 43.347861221137414,
+    "completion": 43.34653648972671,
     "translators": {
       "number": 22,
       "link": false
     },
-    "visitors": 407455,
+    "visitors": 407469,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -281,7 +281,7 @@
       "number": 155,
       "link": false
     },
-    "visitors": 473887,
+    "visitors": 473893,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -312,12 +312,12 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.13",
-    "completion": 80.87485262363056,
+    "completion": 80.87352789221985,
     "translators": {
       "number": 234,
       "link": false
     },
-    "visitors": 1565374,
+    "visitors": 1565461,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -330,12 +330,12 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.13",
-    "completion": 63.29699153496629,
+    "completion": 63.29566680355558,
     "translators": {
       "number": 310,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
     },
-    "visitors": 993547,
+    "visitors": 993575,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -348,12 +348,12 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
-    "completion": 37.42763654669016,
+    "completion": 37.426311815279455,
     "translators": {
       "number": 116,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
     },
-    "visitors": 423347,
+    "visitors": 423362,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
