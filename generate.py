@@ -37,13 +37,15 @@ def get_cached_data() -> dict:
         with open('index.json') as f:
             return json.load(f)
     except FileNotFoundError:
-        return {"previous_completion": {}, "last_sunday": None}
+        return {'previous_completion': {}, 'last_sunday': None}
+
 
 def get_last_sunday() -> str:
     today = date.today()
     offset = today.weekday() + 1
     last_sunday = today - timedelta(days=offset)
     return last_sunday.isoformat()
+
 
 def update_previous_completion(cached_data: dict, completion_progress: list):
     current_sunday = get_last_sunday()
@@ -53,13 +55,14 @@ def update_previous_completion(cached_data: dict, completion_progress: list):
         }
         cached_data['last_sunday'] = current_sunday
 
+
 def save_index_json(cached_data: dict, completion_progress: list):
     with open('index.json', 'w') as f:
         json.dump(
             {
-                "last_sunday": cached_data['last_sunday'],
-                "previous_completion": cached_data['previous_completion'],
-                "languages": [asdict(item) for item in completion_progress],
+                'last_sunday': cached_data['last_sunday'],
+                'previous_completion': cached_data['previous_completion'],
+                'languages': [asdict(item) for item in completion_progress],
             },
             f,
             indent=2,
