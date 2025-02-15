@@ -32,16 +32,38 @@ from repositories import get_languages_and_repos, Language
 generation_time = datetime.now(timezone.utc)
 
 
-def get_previous_completion(language_code: str) -> float:
+def get_cached_data() -> dict:
     try:
         with open('index.json') as f:
-            previous_data = json.load(f)
-        for item in previous_data:
-            if item['language']['code'] == language_code:
-                return item.get('completion', 0.0)
+            return json.load(f)
     except FileNotFoundError:
-        pass
-    return 0.0
+        return {"previous_completion": {}, "last_sunday": None}
+
+def get_last_sunday() -> str:
+    today = datetime.date.today()
+    offset = today.weekday() + 1
+    last_sunday = today - datetime.timedelta(days=offset)
+    return last_sunday.isoformat()
+
+def update_previous_completion(cached_data: dict, completion_progress: list):
+    current_sunday = get_last_sunday()
+    if cached_data.get('last_sunday') != current_sunday:
+        cached_data['previous_completion'] = {
+            item['language']['code']: item['completion'] for item in completion_progress
+        }
+        cached_data['last_sunday'] = current_sunday
+
+def save_index_json(cached_data: dict, completion_progress: list):
+    with open('index.json', 'w') as f:
+        json.dump(
+            {
+                "last_sunday": cached_data['last_sunday'],
+                "previous_completion": cached_data['previous_completion'],
+                "languages": [asdict(item) for item in completion_progress],
+            },
+            f,
+            indent=2,
+        )
 
 
 def get_completion_progress() -> Iterator['LanguageProjectData']:
@@ -125,15 +147,19 @@ class LanguageProjectData:
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logging.info(f'starting at {generation_time}')
+
+    cached_data = get_cached_data()
+    completion_progress = list(get_completion_progress())
+
+    update_previous_completion(cached_data, completion_progress)
+    save_index_json(cached_data, completion_progress)
+
     template = Template(Path('template.html.jinja').read_text())
 
     output = template.render(
-        completion_progress=(completion_progress := list(get_completion_progress())),
+        completion_progress=completion_progress,
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
 
     Path('index.html').write_text(output)
-    Path('index.json').write_text(
-        json.dumps(completion_progress, indent=2, default=asdict)
-    )
