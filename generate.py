@@ -110,10 +110,6 @@ def get_project_data(
         translators_data = TranslatorsData(0, False)
         visitors_num = 0
         branch = None
-
-    previous_completion = get_previous_completion(language.code)
-    change = completion - previous_completion
-
     return LanguageProjectData(
         language,
         repo,
@@ -125,7 +121,6 @@ def get_project_data(
         in_switcher=languages_built.get(language.code),
         uses_platform=language.code in contribute.pulling_from_transifex,
         contribution_link=contribute.get_contrib_link(language.code, repo),
-        change=change,
     )
 
 
@@ -141,7 +136,6 @@ class LanguageProjectData:
     in_switcher: bool | None
     uses_platform: bool
     contribution_link: str | None
-    change: float
 
 
 if __name__ == '__main__':
