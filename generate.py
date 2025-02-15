@@ -32,6 +32,18 @@ from repositories import get_languages_and_repos, Language
 generation_time = datetime.now(timezone.utc)
 
 
+def get_previous_completion(language_code: str) -> float:
+    try:
+        with open('index.json') as f:
+            previous_data = json.load(f)
+        for item in previous_data:
+            if item['language']['code'] == language_code:
+                return item.get('completion', 0.0)
+    except FileNotFoundError:
+        pass
+    return 0.0
+
+
 def get_completion_progress() -> Iterator['LanguageProjectData']:
     with TemporaryDirectory() as clones_dir:
         Repo.clone_from(
@@ -76,6 +88,10 @@ def get_project_data(
         translators_data = TranslatorsData(0, False)
         visitors_num = 0
         branch = None
+
+    previous_completion = get_previous_completion(language.code)
+    change = completion - previous_completion
+
     return LanguageProjectData(
         language,
         repo,
@@ -87,6 +103,7 @@ def get_project_data(
         in_switcher=languages_built.get(language.code),
         uses_platform=language.code in contribute.pulling_from_transifex,
         contribution_link=contribute.get_contrib_link(language.code, repo),
+        change=change,
     )
 
 
@@ -102,6 +119,7 @@ class LanguageProjectData:
     in_switcher: bool | None
     uses_platform: bool
     contribution_link: str | None
+    change: float
 
 
 if __name__ == '__main__':
