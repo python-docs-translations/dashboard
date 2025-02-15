@@ -15,7 +15,7 @@ import logging
 import subprocess
 from collections.abc import Iterator
 from dataclasses import dataclass, asdict
-from datetime import datetime, timezone
+from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -40,9 +40,9 @@ def get_cached_data() -> dict:
         return {"previous_completion": {}, "last_sunday": None}
 
 def get_last_sunday() -> str:
-    today = datetime.date.today()
+    today = date.today()
     offset = today.weekday() + 1
-    last_sunday = today - datetime.timedelta(days=offset)
+    last_sunday = today - timedelta(days=offset)
     return last_sunday.isoformat()
 
 def update_previous_completion(cached_data: dict, completion_progress: list):
