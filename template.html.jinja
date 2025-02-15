@@ -3,9 +3,12 @@
   <title>Python Docs Translation Dashboard</title>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
+  <meta name="description" content="Python Docs Translation Dashboard">
 </head>
 <body>
-<h1>Python Docs Translation Dashboard</h1>
+<center>
+  <h1>Python Docs Translation Dashboard</h1>
+</center>
 <table>
 <thead>
 <tr>
@@ -20,15 +23,15 @@
 <tbody>
 {% for project in completion_progress | sort(attribute='completion,translators.number') | reverse %}
 <tr>
-  <td data-label="language">{{ project.language.name }} ({{ project.language.code }})</td>
-  <td data-label="contribute">
-    {% if project.contribution_link %}<a href="{{ project.contribution_link }}" target="_blank">{% endif %}
-    {% if project.uses_platform %}platform{% else %}repository{% endif %}
-    {% if project.contribution_link %}</a>{% endif %}
+  <td data-label="language">
+    <a href="{{ project.contribution_link }}" target="_blank">{{ project.language.name }}</a>
+    ({{ project.language.code }})
   </td>
   <td data-label="build">
-    {% if project.built %}
-      <a href="https://docs.python.org/{{ project.language.code }}/" target="_blank">✓{% if project.in_switcher %} in switcher{% endif %}</a>
+    {% elif project.in_switcher %}
+      <a href="https://docs.python.org/{{ project.language.code }}/" target="_blank">✓</a>
+    {% elif project.built %}
+      <a href="https://docs.python.org/{{ project.language.code }}/" target="_blank">□</a>
     {% else %}
       ✗
     {% endif %}
