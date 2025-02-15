@@ -49,7 +49,7 @@ def update_previous_completion(cached_data: dict, completion_progress: list):
     current_sunday = get_last_sunday()
     if cached_data.get('last_sunday') != current_sunday:
         cached_data['previous_completion'] = {
-            item['language']['code']: item['completion'] for item in completion_progress
+            item.language.code: item.completion for item in completion_progress
         }
         cached_data['last_sunday'] = current_sunday
 
