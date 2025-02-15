@@ -31,7 +31,7 @@ jobs:
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
       - name: Deploy to subdirectory if pull request 🚀
         # This does not work for PRs from forks
-        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'python-docs-translations/dashboard' }}
+        if: github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
@@ -40,7 +40,8 @@ jobs:
           git-config-name: github-actions[bot]
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
       - name: Update PR description if pull request
-        if: github.event_name == 'pull_request'
+        # This does not work for PRs from forks
+        if: github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork
         uses: chabroA/action-append-pr-description@v1.2.1
         with:
           auth: ${{ secrets.GITHUB_TOKEN }}
