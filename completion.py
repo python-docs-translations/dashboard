@@ -53,13 +53,9 @@ def get_completion(
         commit = subprocess.check_output(
             ['git', 'rev-list', '-n', '1', '--before="30 days ago"', 'HEAD'],
             cwd=clone_path,
-            text=True
+            text=True,
         ).strip()
-        subprocess.run(
-            ['git', 'checkout', commit],
-            cwd=clone_path,
-            check=True
-        )
+        subprocess.run(['git', 'checkout', commit], cwd=clone_path, check=True)
         with TemporaryDirectory() as tmpdir2:
             month_ago_completion = potodo.merge_and_scan_path(
                 clone_path,
@@ -68,7 +64,7 @@ def get_completion(
                 hide_reserved=False,
                 api_url='',
             ).completion
-    except FileNotFoundError:
+    except Exception:
         print(f'{repo} is empty')
         month_ago_completion = 0.0
 
