@@ -50,13 +50,10 @@ def get_completion(
 
     try:
         # Fetch commit from before 30 days ago and checkout
-        commit = subprocess.check_output(
-            ['git', 'rev-list', '-n', '1', '--before="30 days ago"', 'HEAD'],
-            cwd=clone_path,
-            text=True,
-        ).strip()
-        subprocess.run(['git', 'checkout', commit], cwd=clone_path, check=True)
-        with TemporaryDirectory() as tmpdir2:
+        repo = git.Repo(clone_path)
+        commit = next(repo.iter_commits('HEAD', max_count=1, before="30 days ago"))
+        repo.git.checkout(commit.hexsha)
+        with TemporaryDirectory() as tmpdir:
             month_ago_completion = potodo.merge_and_scan_path(
                 clone_path,
                 pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
