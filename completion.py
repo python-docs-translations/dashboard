@@ -50,7 +50,7 @@ def get_completion(
     if completion:
         # Fetch commit from before 30 days ago and checkout
         repo = git.Repo(clone_path)
-        commit = next(repo.iter_commits('HEAD', max_count=1, before="30 days ago"))
+        commit = next(repo.iter_commits('HEAD', max_count=1, before='30 days ago'))
         repo.git.checkout(commit.hexsha)
         with TemporaryDirectory() as tmpdir:
             month_ago_completion = potodo.merge_and_scan_path(
@@ -61,7 +61,6 @@ def get_completion(
                 api_url='',
             ).completion
     else:
-        print(f'{repo} is empty')
         month_ago_completion = 0.0
 
     change = completion - month_ago_completion
