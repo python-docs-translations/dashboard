@@ -26,7 +26,7 @@ def get_completion(
     clone_path = Path(clones_dir, repo)
     for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + ['master']:
         try:
-            git.Repo.clone_from(
+            clone_repo = git.Repo.clone_from(
                 f'https://github.com/{repo}.git', clone_path, branch=branch
             )
         except git.GitCommandError:
@@ -49,9 +49,10 @@ def get_completion(
 
     if completion:
         # Fetch commit from before 30 days ago and checkout
-        repo = git.Repo(clone_path)
-        commit = next(repo.iter_commits('HEAD', max_count=1, before='30 days ago'))
-        repo.git.checkout(commit.hexsha)
+        commit = next(
+            clone_repo.iter_commits('HEAD', max_count=1, before='30 days ago')
+        )
+        clone_repo.git.checkout(commit.hexsha)
         with TemporaryDirectory() as tmpdir:
             month_ago_completion = potodo.merge_and_scan_path(
                 clone_path,
