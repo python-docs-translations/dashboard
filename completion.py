@@ -1,5 +1,4 @@
 import json
-import subprocess
 from dataclasses import dataclass
 from functools import cache
 from pathlib import Path
@@ -48,7 +47,7 @@ def get_completion(
             api_url='',
         ).completion
 
-    try:
+    if completion:
         # Fetch commit from before 30 days ago and checkout
         repo = git.Repo(clone_path)
         commit = next(repo.iter_commits('HEAD', max_count=1, before="30 days ago"))
@@ -57,11 +56,11 @@ def get_completion(
             month_ago_completion = potodo.merge_and_scan_path(
                 clone_path,
                 pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
-                merge_path=Path(tmpdir2),
+                merge_path=Path(tmpdir),
                 hide_reserved=False,
                 api_url='',
             ).completion
-    except Exception:
+    else:
         print(f'{repo} is empty')
         month_ago_completion = 0.0
 
