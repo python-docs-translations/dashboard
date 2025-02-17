@@ -50,7 +50,7 @@
       "number": 241,
       "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
     },
-    "visitors": 738554,
+    "visitors": 738621,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -126,7 +126,7 @@
       "number": 24,
       "link": "https://github.com/python/python-docs-id/blob/3.9/TRANSLATORS"
     },
-    "visitors": 8694,
+    "visitors": 8695,
     "built": true,
     "in_switcher": false,
     "uses_platform": false,
@@ -145,7 +145,7 @@
       "number": 3,
       "link": "https://github.com/python/python-docs-it/blob/3.13/TRANSLATORS"
     },
-    "visitors": 28827,
+    "visitors": 28829,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -164,7 +164,7 @@
       "number": 47,
       "link": false
     },
-    "visitors": 1417361,
+    "visitors": 1417399,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -183,7 +183,7 @@
       "number": 22,
       "link": false
     },
-    "visitors": 409354,
+    "visitors": 409371,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -259,7 +259,7 @@
       "number": 25,
       "link": false
     },
-    "visitors": 44622,
+    "visitors": 44624,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -297,7 +297,7 @@
       "number": 155,
       "link": false
     },
-    "visitors": 476663,
+    "visitors": 476700,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -335,7 +335,7 @@
       "number": 234,
       "link": false
     },
-    "visitors": 1579704,
+    "visitors": 1579781,
     "built": true,
     "in_switcher": true,
     "uses_platform": true,
@@ -354,7 +354,7 @@
       "number": 310,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
     },
-    "visitors": 999816,
+    "visitors": 999882,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -373,7 +373,7 @@
       "number": 116,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
     },
-    "visitors": 426246,
+    "visitors": 426267,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -392,7 +392,7 @@
       "number": 29,
       "link": "https://github.com/python/python-docs-tr/blob/3.12/TRANSLATORS"
     },
-    "visitors": 25155,
+    "visitors": 25156,
     "built": true,
     "in_switcher": true,
     "uses_platform": false,
@@ -411,7 +411,7 @@
       "number": 15,
       "link": false
     },
-    "visitors": 241608,
+    "visitors": 241633,
     "built": true,
     "in_switcher": false,
     "uses_platform": true,
