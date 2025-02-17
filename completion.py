@@ -20,11 +20,13 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
     ]
 
 
-def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData', str]:
+def get_completion(
+    clones_dir: str, repo: str
+) -> tuple[float, 'TranslatorsData', str, float]:
     clone_path = Path(clones_dir, repo)
     for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + ['master']:
         try:
-            git.Repo.clone_from(
+            clone_repo = git.Repo.clone_from(
                 f'https://github.com/{repo}.git', clone_path, branch=branch
             )
         except git.GitCommandError:
@@ -44,7 +46,27 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, 'TranslatorsData'
             hide_reserved=False,
             api_url='',
         ).completion
-    return completion, translators_data, branch
+
+    if completion:
+        # Fetch commit from before 30 days ago and checkout
+        commit = next(
+            clone_repo.iter_commits('HEAD', max_count=1, before='30 days ago')
+        )
+        clone_repo.git.checkout(commit.hexsha)
+        with TemporaryDirectory() as tmpdir:
+            month_ago_completion = potodo.merge_and_scan_path(
+                clone_path,
+                pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
+                merge_path=Path(tmpdir),
+                hide_reserved=False,
+                api_url='',
+            ).completion
+    else:
+        month_ago_completion = 0.0
+
+    change = completion - month_ago_completion
+
+    return completion, translators_data, branch, change
 
 
 @dataclass(frozen=True)

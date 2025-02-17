@@ -69,11 +69,12 @@ def get_project_data(
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
-        completion, translators_data, branch = get_completion(clones_dir, repo)
+        completion, translators_data, branch, change = get_completion(clones_dir, repo)
         visitors_num = get_number_of_visitors(language.code, http) if built else 0
     else:
         completion = 0.0
         translators_data = TranslatorsData(0, False)
+        change = 0.0
         visitors_num = 0
         branch = None
     return LanguageProjectData(
@@ -81,6 +82,7 @@ def get_project_data(
         repo,
         branch,
         completion,
+        change,
         translators_data,
         visitors_num,
         built,
@@ -96,6 +98,7 @@ class LanguageProjectData:
     repository: str | None
     branch: str | None
     completion: float
+    change: float
     translators: TranslatorsData
     visitors: int
     built: bool
