@@ -14,7 +14,7 @@ def get_number_of_visitors(language: str, http: PoolManager) -> int:
     response = http.request(
         'GET',
         f'https://plausible.io/docs.python.org/export?{params}',
-        retries=Retry(status_forcelist=(500,502)),
+        retries=Retry(status_forcelist=(500, 502)),
     )
     info(f'visitors {response.status=} ({language=})')
     with (
