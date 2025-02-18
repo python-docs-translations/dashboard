@@ -1,0 +1,7 @@
+/tmp/tmpye5l6fsk/python/python-docs-es/sphinx.po:270: trailing whitespace (trailing-whitespace)
+/tmp/tmpye5l6fsk/python/python-docs-es/library/nntplib.po:672: Unnecessary parentheses in ':meth:`article()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-es/library/nntplib.po:682: Unnecessary parentheses in ':meth:`article()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-es/library/nntplib.po:717: Unnecessary parentheses in ':meth:`post()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-es/library/nntplib.po:792: Unnecessary parentheses in ':meth:`over()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-es/howto/enum.po:27: Unnecessary parentheses in ':func:`repr()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-es/howto/enum.po:409: Unnecessary parentheses in ':func:`auto()`' (unnecessary-parentheses)

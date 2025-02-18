@@ -1,0 +1,4 @@
+/tmp/tmpye5l6fsk/python/python-docs-fr/reference/import.po:530: Unnecessary parentheses in ':meth:`~importlib.abc.MetaPathFinder.find_spec()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-fr/reference/import.po:566: Unnecessary parentheses in ':meth:`~importlib.abc.MetaPathFinder.find_spec()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-fr/library/filecmp.po:74: Unnecessary parentheses in ':func:`os.stat()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-fr/library/html.entities.po:35: Unnecessary parentheses in ':func:`html.unescape()`' (unnecessary-parentheses)

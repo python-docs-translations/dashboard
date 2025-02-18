@@ -1,0 +1,6 @@
+/tmp/tmpye5l6fsk/python/python-docs-it/library/stdtypes.po:5285: Unnecessary parentheses in ':func:`str.swapcase()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-it/library/stdtypes.po:5735: Unnecessary parentheses in ':meth:`release()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-it/library/functions.po:525: Unnecessary parentheses in ':func:`pdb.set_trace()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-it/library/functions.po:2373: Unnecessary parentheses in ':func:`locale.getencoding()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-it/tutorial/floatingpoint.po:383: Unnecessary parentheses in ':func:`math.fsum()`' (unnecessary-parentheses)
+/tmp/tmpye5l6fsk/python/python-docs-it/whatsnew/3.12.po: cannot open: Syntax error in po file (line 4361)
