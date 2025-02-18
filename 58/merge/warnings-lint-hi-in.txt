@@ -1,1 +1,1 @@
-/tmp/tmpwknfjurp/CuriousLearner/python-docs-hi-in/about.po:64: missing underscore after closing backtick in hyperlink (missing-underscore-after-hyperlink)
+/tmp/tmpwtyxxhp2/CuriousLearner/python-docs-hi-in/about.po:64: missing underscore after closing backtick in hyperlink (missing-underscore-after-hyperlink)
