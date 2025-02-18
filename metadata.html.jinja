@@ -32,7 +32,7 @@
     {% if project.completion %}<a href="warnings-lint-{{ project.language.code }}.txt">{{ metadata[1] }}</a>{% else %}{{ metadata[1] }}{% endif %}
   </td>
   <td>
-    <td data-label="change">{{ "{:.2f}".format(project.completion) }}%</td>
+    <td data-label="change">{{ "{:.2f}".format(project.change) }}%</td>
   </td>
 </tr>
 {% endfor %}
