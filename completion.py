@@ -70,7 +70,7 @@ def get_completion(
 
     change = completion - month_ago_completion
 
-    return completion, translators_data, branch or None, change
+    return completion, translators_data, branch, change
 
 
 @dataclass(frozen=True)
