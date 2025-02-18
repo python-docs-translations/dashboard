@@ -45,6 +45,11 @@ td[data-label="completion"] {
   width: 100%;
   line-height: 0;
 }
+.switchpages{
+    position:absolute;
+    top:10px;
+    right: 10px;
+ }
 @media screen and (max-width: 600px) {
   table, thead, tbody, th, td, tr {
     display: block;
@@ -77,4 +82,7 @@ td[data-label="completion"] {
     min-width: 0;
     width: 100% !important;
   }
+  .switchpages{
+    all: unset;
+ }
 }
