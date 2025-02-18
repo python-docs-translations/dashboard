@@ -102,13 +102,11 @@ if __name__ == '__main__':
     completion_progress = [
         dacite.from_dict(LanguageProjectData, project) for project in index_json
     ]
-    changes = [project.change for project in completion_progress]
 
     output = template.render(
         metadata=zip(completion_progress, get_projects_metadata(completion_progress)),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
-        change=changes,
     )
 
     Path('metadata.html').write_text(output)
