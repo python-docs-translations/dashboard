@@ -3,7 +3,6 @@ body {
 }
 table {
   border-collapse: collapse;
-  width: 100%;
 }
 th, td {
   border: 1px solid #ddd;
@@ -39,7 +38,7 @@ th {
 .progress-bar.low + .progress-bar-outer-label {
   display: inline-block;
 }
-td[data-label="visitors"], td[data-label="translators"] {
+td[data-label="visitors"], td[data-label="translators"], td[data-label="warnings"], td[data-label="branch"], td[data-label="lint"] {
   text-align: right;
 }
 td[data-label="completion"] {

@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '17 * * * *'
   push:
     branches:
       - 'main'
@@ -53,9 +53,31 @@ jobs:
       - name: Debug index.html if pull request
         if: github.event_name == 'pull_request'
         run: |
-          curl -Lo index.html-public https://github.com/m-aciek/pydocs-translation-dashboard/raw/refs/heads/gh-pages/index.html
+          curl -Lo index.html-public https://github.com/python-docs-translations/dashboard/raw/refs/heads/gh-pages/index.html
           diff --color=always -u index.html-public index.html || :
           cat index.html
+      - if: github.event_name == 'pull_request'
+        run: uv run generate_metadata.py https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/index.json  # generates "metadata.html"
+      - if: github.event_name != 'pull_request'
+        run: uv run generate_metadata.py https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.ref_name }}/index.json  # generates "metadata.html"
+      - run: cp metadata.html warnings* build
+      - name: Deploy metadata view 🚀
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          clean: false
+          git-config-name: github-actions[bot]
+          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Deploy metadata view to subdirectory if pull request 🚀
+        if: github.event_name == 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          target-folder: ${{ github.ref_name }}
+          clean: false
+          git-config-name: github-actions[bot]
+          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
       - uses: actions/upload-artifact@v4
         with:
           name: build

@@ -24,7 +24,10 @@ def get_completion(
     clones_dir: str, repo: str
 ) -> tuple[float, 'TranslatorsData', str, float]:
     clone_path = Path(clones_dir, repo)
-    for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + ['master']:
+    for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + [
+        'master',
+        'main',
+    ]:
         try:
             clone_repo = git.Repo.clone_from(
                 f'https://github.com/{repo}.git', clone_path, branch=branch
@@ -32,6 +35,7 @@ def get_completion(
         except git.GitCommandError:
             print(f'failed to clone {repo} {branch}')
             translators_data = TranslatorsData(0, False)
+            branch = ''
             continue
         else:
             translators_number = translators.get_number(clone_path)
@@ -66,7 +70,7 @@ def get_completion(
 
     change = completion - month_ago_completion
 
-    return completion, translators_data, branch, change
+    return completion, translators_data, branch or None, change
 
 
 @dataclass(frozen=True)

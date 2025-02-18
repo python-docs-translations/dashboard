@@ -23,11 +23,11 @@ from git import Repo
 from jinja2 import Template
 from urllib3 import PoolManager
 
-import contribute
 import build_status
+import contribute
 from visitors import get_number_of_visitors
 from completion import branches_from_devguide, get_completion, TranslatorsData
-from repositories import get_languages_and_repos, Language
+from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
 
