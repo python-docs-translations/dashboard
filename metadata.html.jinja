@@ -17,7 +17,7 @@
   <th>branch</th>
   <th>build warnings*</th>
   <th>lint failures</th>
-  <th>change this month</th>
+  <th>30 days change</th>
 </tr>
 </thead>
 <tbody>
@@ -32,7 +32,7 @@
     {% if project.completion %}<a href="warnings-lint-{{ project.language.code }}.txt">{{ metadata[1] }}</a>{% else %}{{ metadata[1] }}{% endif %}
   </td>
   <td data-label="change">
-    {{ "{:.2f}".format(project.change) }}%
+    +{{ "{:.2f}".format(project.change) }}%
   </td>
 </tr>
 {% endfor %}
