@@ -4,7 +4,6 @@
 #     "gitpython",
 #     "potodo",
 #     "jinja2",
-#     "requests",
 #     "docutils",
 # ]
 # ///
@@ -25,7 +24,6 @@ from urllib3 import PoolManager
 
 import contribute
 import build_status
-from visitors import get_number_of_visitors
 from completion import branches_from_devguide, get_completion, TranslatorsData
 from repositories import get_languages_and_repos, Language
 
@@ -70,12 +68,10 @@ def get_project_data(
     built = language.code in languages_built
     if repo:
         completion, translators_data, branch, change = get_completion(clones_dir, repo)
-        visitors_num = get_number_of_visitors(language.code, http) if built else 0
     else:
         completion = 0.0
         translators_data = TranslatorsData(0, False)
         change = 0.0
-        visitors_num = 0
         branch = None
     return LanguageProjectData(
         language,
@@ -84,7 +80,6 @@ def get_project_data(
         completion,
         change,
         translators_data,
-        visitors_num,
         built,
         in_switcher=languages_built.get(language.code),
         uses_platform=language.code in contribute.pulling_from_transifex,
@@ -100,7 +95,6 @@ class LanguageProjectData:
     completion: float
     change: float
     translators: TranslatorsData
-    visitors: int
     built: bool
     in_switcher: bool | None
     uses_platform: bool
