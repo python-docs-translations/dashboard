@@ -1,7 +1,4 @@
-import csv
-import io
 import urllib.parse
-import zipfile
 from logging import info
 
 from urllib3 import PoolManager, Retry
@@ -13,16 +10,11 @@ def get_number_of_visitors(language: str, http: PoolManager) -> int:
     )
     response = http.request(
         'GET',
-        f'https://plausible.io/docs.python.org/export?{params}',
-        retries=Retry(status_forcelist=(404, 500, 502)),
+        f'https://plausible.io/api/stats/docs.python.org/top-stats/?{params}',
+        retries=Retry(status_forcelist=(500, 502), backoff_factor=1, backoff_jitter=1),
     )
     info(f'visitors {response.status=} ({language=})')
-    with (
-        zipfile.ZipFile(io.BytesIO(response.data), 'r') as z,
-        z.open('visitors.csv') as csv_file,
-    ):
-        csv_reader = csv.DictReader(io.TextIOWrapper(csv_file))
-        return sum(int(row['visitors']) for row in csv_reader)
+    return response.json()['top_stats'][0]['value']
 
 
 if __name__ == '__main__':
