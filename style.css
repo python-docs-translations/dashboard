@@ -50,6 +50,13 @@ td[data-label="completion"] {
     top:10px;
     right: 10px;
  }
+
+@media screen and (max-width: 675px) {
+  .switchpages{
+    all: unset;
+ }
+}
+
 @media screen and (max-width: 600px) {
   table, thead, tbody, th, td, tr {
     display: block;
@@ -82,7 +89,4 @@ td[data-label="completion"] {
     min-width: 0;
     width: 100% !important;
   }
-  .switchpages{
-    all: unset;
- }
 }
