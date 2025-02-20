@@ -7,7 +7,9 @@
 </head>
 <body>
 <h1>Python Docs Translation Dashboard</h1>
+<div class="switchpages">
 <nav><p><a href="index.html" target="_self">main</a> | meta</p></nav>
+</div>
 <table>
 <thead>
 <tr>
@@ -15,6 +17,7 @@
   <th>branch</th>
   <th>build warnings*</th>
   <th>lint failures</th>
+  <th>30 days change</th>
 </tr>
 </thead>
 <tbody>
@@ -27,6 +30,9 @@
   </td>
   <td data-label="lint">
     {% if project.completion %}<a href="warnings-lint-{{ project.language.code }}.txt">{{ metadata[1] }}</a>{% else %}{{ metadata[1] }}{% endif %}
+  </td>
+  <td data-label="change">
+    +{{ "{:.2f}".format(project.change) }}%
   </td>
 </tr>
 {% endfor %}
