@@ -4,7 +4,6 @@
 #     "gitpython",
 #     "potodo",
 #     "jinja2",
-#     "requests",
 #     "docutils",
 # ]
 # ///
