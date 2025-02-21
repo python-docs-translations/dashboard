@@ -36,7 +36,7 @@
   </td>
   <td data-label="completion">
     <div class="progress-bar"
-         style="width: {{ project.completion }}%;background: linear-gradient(to left, #4caf50 {{ project.change * 100 / project.completion }}%, lightgreen {{ project.change * 100 / project.completion }}%);"
+         style="width: {{ project.completion }}%;{% if project.change %}background: linear-gradient(to left, #4caf50 {{ project.change * 100 / project.completion }}%, lightgreen {{ project.change * 100 / project.completion }}%);{% else %}background-color: #4caf50;{% endif %}"
          title="{{ '{:.2f}'.format(project.completion) }}%, {{ '{:.2f}'.format(project.change) }} percentage points last month"
     >
         {{ "{:.2f}".format(project.completion) }}%
