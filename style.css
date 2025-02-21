@@ -16,7 +16,6 @@ th {
 }
 .progress-bar {
   display: inline-block;
-  background-color: #4caf50;
   color: white;
   height: 20px;
   line-height: 20px;
