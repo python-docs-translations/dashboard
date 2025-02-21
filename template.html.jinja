@@ -35,7 +35,12 @@
     {% if project.translators.link %}</a>{% endif %}
   </td>
   <td data-label="completion">
-    <div class="progress-bar" style="width: {{ project.completion }}%;">{{ "{:.2f}".format(project.completion) }}%</div>
+    <div class="progress-bar"
+         style="width: {{ project.completion }}%;background: linear-gradient(to left, #4caf50 {{ project.change * 100 / project.completion }}%, lightgreen {{ project.change * 100 / project.completion }}%);"
+         title="{{ '{:.2f}'.format(project.completion) }}%, {{ '{:.2f}'.format(project.change) }} percentage points last month"
+    >
+        {{ "{:.2f}".format(project.completion) }}%
+    </div>
     <div class="progress-bar-outer-label">{{ "{:.2f}".format(project.completion) }}%</div>
   </td>
 </tr>
