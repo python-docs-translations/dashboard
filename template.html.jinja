@@ -40,7 +40,9 @@
     >
         {{ '{:.2f}%'.format(project.completion) }} {% if project.change > 0 %}({{ '{:+.2f%}'.format(project.change) }}){% endif %}
     </div>
-    <div class="progress-bar-outer-label">{{ '{:.2f%}'.format(project.completion) }} {% if project.change > 0 %}({{ '{:+.2f%}'.format(project.change) }}){% endif %}</div>
+    <div class="progress-bar-outer-label">
+        {{ '{:.2f%}'.format(project.completion) }} {% if project.change > 0 %}({{ '{:+.2f%}'.format(project.change) }}){% endif %}
+    </div>
   </td>
 </tr>
 {% endfor %}
