@@ -38,9 +38,9 @@
     <div class="progress-bar"
          style="width: {{ project.completion }}%;{% if project.change %}background: linear-gradient(to left, lightgreen {{ project.change * 100 / project.completion }}%, #4caf50 {{ project.change * 100 / project.completion }}%);{% else %}background-color: #4caf50;{% endif %}"
     >
-        {{ "{:.2f}".format(project.completion) }}% {% if project.change > 0 %}({{ '{:+.2f%}'.format(project.change) }}){% endif %}
+        {{ '{:.2f}%'.format(project.completion) }} {% if project.change > 0 %}({{ '{:+.2f%}'.format(project.change) }}){% endif %}
     </div>
-    <div class="progress-bar-outer-label">{{ "{:.2f}".format(project.completion) }}% {% if project.change > 0 %}({{ '{:+.2f%}'.format(project.change) }}){% endif %}</div>
+    <div class="progress-bar-outer-label">{{ '{:.2f%}'.format(project.completion) }} {% if project.change > 0 %}({{ '{:+.2f%}'.format(project.change) }}){% endif %}</div>
   </td>
 </tr>
 {% endfor %}
