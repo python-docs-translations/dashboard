@@ -38,15 +38,15 @@
     <div class="progress-bar"
          style="width: {{ project.completion }}%;{% if project.change %}background: linear-gradient(to left, lightgreen {{ project.change * 100 / project.completion }}%, #4caf50 {{ project.change * 100 / project.completion }}%);{% else %}background-color: #4caf50;{% endif %}"
     >
-        {{ "{:.2f}".format(project.completion) }}% {% if project.change > 0 %}({{ '{:.2f}'.format(project.change) }}% recently){% endif %}
+        {{ "{:.2f}".format(project.completion) }}% {% if project.change > 0 %}({{ '{:+.2f%}'.format(project.change) }}){% endif %}
     </div>
-    <div class="progress-bar-outer-label">{{ "{:.2f}".format(project.completion) }}% {% if project.change > 0 %}({{ '{:.2f}'.format(project.change) }}% recently){% endif %}</div>
+    <div class="progress-bar-outer-label">{{ "{:.2f}".format(project.completion) }}% {% if project.change > 0 %}({{ '{:+.2f%}'.format(project.change) }}){% endif %}</div>
   </td>
 </tr>
 {% endfor %}
 </tbody>
 </table>
-<p>* total completion including recent progress, where <i>recently</i> means <i>in the last 30 days</i></p>
+<p>* the number in parentheses shows change in the last 30 days, included in the total progress</p>
 <p>For more information about translations, see the <a href="https://devguide.python.org/documentation/translating/" target="_blank">Python Developer’s Guide</a>.</p>
 <p>Last updated at {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).</p>
 </body>
