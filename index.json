@@ -276,8 +276,8 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.13",
-    "completion": 59.66386554621849,
-    "change": 1.4821676702176916,
+    "completion": 59.702243101965195,
+    "change": 1.51128167802554,
     "translators": {
       "number": 156,
       "link": false
