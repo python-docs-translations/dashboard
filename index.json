@@ -349,7 +349,7 @@
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
     "completion": 37.541189704228145,
-    "change": 0.7596109309865682,
+    "change": 0.35730827764176354,
     "translators": {
       "number": 117,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
