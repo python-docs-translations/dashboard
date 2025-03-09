@@ -57,8 +57,9 @@
     document.querySelectorAll('.progress-bar').forEach(progressBar => {
       const textWidth = progressBar.scrollWidth;
       const barWidth = progressBar.offsetWidth;
+      const padding = 6;
 
-      if (barWidth < textWidth) {
+      if (barWidth < textWidth + padding) {
         progressBar.classList.add('low');
       } else {
         progressBar.classList.remove('low');
