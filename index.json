@@ -289,6 +289,24 @@
   },
   {
     "language": {
+      "code": "ro",
+      "name": "Romanian"
+    },
+    "repository": "octaG-M/python-docs-ro",
+    "branch": "master",
+    "completion": 0.0,
+    "change": 0.0,
+    "translators": {
+      "number": 0,
+      "link": false
+    },
+    "built": false,
+    "in_switcher": null,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/octaG-M/python-docs-ro"
+  },
+  {
+    "language": {
       "code": "ru",
       "name": "Russian"
     },
