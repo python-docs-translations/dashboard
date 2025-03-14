@@ -150,8 +150,8 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.11",
-    "completion": 53.24926228315094,
-    "change": 0.0013232589220706359,
+    "completion": 53.39217424673486,
+    "change": 0.14423522250599063,
     "translators": {
       "number": 47,
       "link": false
@@ -225,7 +225,7 @@
     "completion": 0.0,
     "change": 0.0,
     "translators": {
-      "number": 5,
+      "number": 8,
       "link": false
     },
     "built": false,
