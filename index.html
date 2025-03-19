@@ -598,15 +598,15 @@
 </table>
 <p>* the number in parentheses shows change in the last 30 days, included in the total completion</p>
 <p>For more information about translations, see the <a href="https://devguide.python.org/documentation/translating/" target="_blank">Python Developer’s Guide</a>.</p>
-<p>Last updated at Wednesday, 19 March 2025, 20:42:54 UTC (in 6:31 minutes).</p>
+<p>Last updated at Wednesday, 19 March 2025, 21:05:15 UTC (in 6:40 minutes).</p>
 </body>
 <script>
   function updateProgressBarVisibility() {
     document.querySelectorAll('.progress-bar').forEach(progressBar => {
-      const textWidth = progressBar.scrollWidth;
-      const barWidth = progressBar.offsetWidth;
+      const barWithOverflowWidth = progressBar.scrollWidth;
+      const barWidth = progressBar.clientWidth;
 
-      if (barWidth < textWidth) {
+      if (barWidth < barWithOverflowWidth) {
         progressBar.classList.add('low');
       } else {
         progressBar.classList.remove('low');
