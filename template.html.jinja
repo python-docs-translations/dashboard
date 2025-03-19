@@ -4,9 +4,13 @@
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="description" content="Python Docs Translation Dashboard">
+  <base target="_blank">
 </head>
 <body>
 <h1>Python Docs Translation Dashboard</h1>
+<nav class="switchpages">
+main | <a href="metadata.html" target="_self">meta</a>
+</nav>
 <table>
 <thead>
 <tr>
@@ -20,17 +24,17 @@
 {% for project in completion_progress | sort(attribute='completion,translators.number') | reverse %}
 <tr>
   <td data-label="language">
-    <a href="{{ project.contribution_link }}" target="_blank">{{ project.language.name }} ({{ project.language.code }})</a>
+    <a href="{{ project.contribution_link }}">{{ project.language.name }} ({{ project.language.code }})</a>
   </td>
   <td data-label="build">
     {% if project.in_switcher %}
-      <a href="https://docs.python.org/{{ project.language.code }}/" target="_blank">✓</a>
+      <a href="https://docs.python.org/{{ project.language.code }}/">✓</a>
     {% elif project.built %}
-      <a href="https://docs.python.org/{{ project.language.code }}/" target="_blank">✗</a>
+      <a href="https://docs.python.org/{{ project.language.code }}/">✗</a>
     {% endif %}
   </td>
   <td data-label="translators">
-    {% if project.translators.link %}<a href="{{ project.translators.link }}" target="_blank">{% endif %}
+    {% if project.translators.link %}<a href="{{ project.translators.link }}">{% endif %}
     {{ project.translators.number }}
     {% if project.translators.link %}</a>{% endif %}
   </td>
@@ -49,7 +53,7 @@
 </tbody>
 </table>
 <p>* the number in parentheses shows change in the last 30 days, included in the total completion</p>
-<p>For more information about translations, see the <a href="https://devguide.python.org/documentation/translating/" target="_blank">Python Developer’s Guide</a>.</p>
+<p>For more information about translations, see the <a href="https://devguide.python.org/documentation/translating/">Python Developer’s Guide</a>.</p>
 <p>Last updated at {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).</p>
 </body>
 <script>

@@ -16,46 +16,44 @@ from collections.abc import Iterator
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from tempfile import TemporaryDirectory
 
 from git import Repo
 from jinja2 import Template
 from urllib3 import PoolManager
 
-import contribute
 import build_status
+import contribute
 from completion import branches_from_devguide, get_completion, TranslatorsData
-from repositories import get_languages_and_repos, Language
+from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
 
 
 def get_completion_progress() -> Iterator['LanguageProjectData']:
-    with TemporaryDirectory() as clones_dir:
-        Repo.clone_from(
-            'https://github.com/python/devguide.git',
-            devguide_dir := Path(clones_dir, 'devguide'),
-            depth=1,
-        )
-        latest_branch = branches_from_devguide(devguide_dir)[0]
-        Repo.clone_from(
-            'https://github.com/python/cpython.git',
-            cpython_dir := Path(clones_dir, 'cpython'),
-            depth=1,
-            branch=latest_branch,
-        )
-        subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
-        subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
-        languages_built = dict(build_status.get_languages(http := PoolManager()))
+    clones_dir = Path('clones')
+    Repo.clone_from(
+        'https://github.com/python/devguide.git',
+        devguide_dir := Path(clones_dir, 'devguide'),
+        depth=1,
+    )
+    latest_branch = branches_from_devguide(devguide_dir)[0]
+    Repo.clone_from(
+        'https://github.com/python/cpython.git',
+        cpython_dir := Path(clones_dir, 'cpython'),
+        depth=1,
+        branch=latest_branch,
+    )
+    subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
+    subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
+    languages_built = dict(build_status.get_languages(PoolManager()))
 
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            return executor.map(
-                get_project_data,
-                *zip(*get_languages_and_repos(devguide_dir)),
-                itertools.repeat(languages_built),
-                itertools.repeat(clones_dir),
-                itertools.repeat(http),
-            )
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        return executor.map(
+            get_project_data,
+            *zip(*get_languages_and_repos(devguide_dir)),
+            itertools.repeat(languages_built),
+            itertools.repeat(clones_dir),
+        )
 
 
 def get_project_data(
@@ -63,7 +61,6 @@ def get_project_data(
     repo: str | None,
     languages_built: dict[str, bool],
     clones_dir: str,
-    http: PoolManager,
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
@@ -72,7 +69,7 @@ def get_project_data(
         completion = 0.0
         translators_data = TranslatorsData(0, False)
         change = 0.0
-        branch = None
+        branch = ''
     return LanguageProjectData(
         language,
         repo,
@@ -91,7 +88,7 @@ def get_project_data(
 class LanguageProjectData:
     language: Language
     repository: str | None
-    branch: str | None
+    branch: str
     completion: float
     change: float
     translators: TranslatorsData
