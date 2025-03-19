@@ -42,14 +42,14 @@ def get_completion(
             translators_link = translators.get_link(clone_path, repo, branch)
             translators_data = TranslatorsData(translators_number, translators_link)
             break
-    with TemporaryDirectory() as tmpdir:
-        completion = potodo.merge_and_scan_path(
-            clone_path,
-            pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
-            merge_path=Path(tmpdir),
-            hide_reserved=False,
-            api_url='',
-        ).completion
+    path_for_merge = Path(clones_dir, 'rebased_translations', repo)
+    completion = potodo.merge_and_scan_path(
+        clone_path,
+        pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
+        merge_path=path_for_merge,
+        hide_reserved=False,
+        api_url='',
+    ).completion
 
     if completion:
         # Fetch commit from before 30 days ago and checkout
