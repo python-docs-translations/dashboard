@@ -1,1 +1,0 @@
-clones/translations/CuriousLearner/python-docs-hi-in/about.po:64: missing underscore after closing backtick in hyperlink (missing-underscore-after-hyperlink)

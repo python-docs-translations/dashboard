@@ -23,7 +23,7 @@
       "name": "Bengali"
     },
     "repository": "python/python-docs-bn-in",
-    "branch": "",
+    "branch": null,
     "completion": 0.0,
     "change": 0.0,
     "translators": {
@@ -203,7 +203,7 @@
       "name": "Lithuanian"
     },
     "repository": null,
-    "branch": "",
+    "branch": null,
     "completion": 0.0,
     "change": 0.0,
     "translators": {
@@ -257,7 +257,7 @@
       "name": "Portuguese"
     },
     "repository": null,
-    "branch": "",
+    "branch": null,
     "completion": 0.0,
     "change": 0.0,
     "translators": {
