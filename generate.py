@@ -13,7 +13,6 @@ import itertools
 import logging
 import subprocess
 from collections.abc import Iterator
-from concurrent.futures import ProcessPoolExecutor
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
