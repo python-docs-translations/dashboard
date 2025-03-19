@@ -46,8 +46,8 @@ def get_projects_metadata(
 def get_metadata(
     language: Language, repo: str | None, completion: float, clones_dir: str
 ) -> tuple[int, int]:
-    if repo:
-        Repo(Path(clones_dir, 'translations', repo)).git.checkout()
+    if repo and (repo_path := Path(clones_dir, 'translations', repo)).exists():
+        Repo(repo_path).git.checkout()
     return (
         repo
         and completion
