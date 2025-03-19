@@ -56,10 +56,7 @@ jobs:
           curl -Lo index.html-public https://github.com/python-docs-translations/dashboard/raw/refs/heads/gh-pages/index.html
           diff --color=always -u index.html-public index.html || :
           cat index.html
-      - if: github.event_name == 'pull_request'
-        run: uv run generate_metadata.py https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/index.json  # generates "metadata.html"
-      - if: github.event_name != 'pull_request'
-        run: uv run generate_metadata.py https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.ref_name }}/index.json  # generates "metadata.html"
+      - run: uv run generate_metadata.py  # generates "metadata.html"
       - run: cp metadata.html warnings* build
       - name: Deploy metadata view 🚀
         if: github.event_name != 'pull_request'
