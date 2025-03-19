@@ -23,7 +23,7 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
 def get_completion(
     clones_dir: str, repo: str
 ) -> tuple[float, 'TranslatorsData', str | None, float]:
-    clone_path = Path(clones_dir, repo)
+    clone_path = Path(clones_dir, 'translations', repo)
     for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + [
         'master',
         'main',
