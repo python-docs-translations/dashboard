@@ -55,10 +55,10 @@
 <script>
   function updateProgressBarVisibility() {
     document.querySelectorAll('.progress-bar').forEach(progressBar => {
-      const textWidth = progressBar.scrollWidth;
-      const barWidth = progressBar.offsetWidth;
+      const barWithOverflowWidth = progressBar.scrollWidth;
+      const barWidth = progressBar.clientWidth;
 
-      if (barWidth < textWidth) {
+      if (barWidth < barWithOverflowWidth) {
         progressBar.classList.add('low');
       } else {
         progressBar.classList.remove('low');
