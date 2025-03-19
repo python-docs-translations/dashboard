@@ -22,7 +22,7 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
 
 def get_completion(
     clones_dir: str, repo: str
-) -> tuple[float, 'TranslatorsData', str | None, float]:
+) -> tuple[float, 'TranslatorsData', str, float]:
     clone_path = Path(clones_dir, 'translations', repo)
     for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + [
         'master',
@@ -74,7 +74,7 @@ def get_completion(
 
     change = completion - month_ago_completion
 
-    return completion, translators_data, branch or None, change
+    return completion, translators_data, branch, change
 
 
 @dataclass(frozen=True)
