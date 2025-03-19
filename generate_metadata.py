@@ -20,6 +20,7 @@ from pathlib import Path
 from sys import argv
 
 import dacite
+from git import Repo
 from jinja2 import Template
 from urllib3 import request
 
@@ -45,6 +46,8 @@ def get_projects_metadata(
 def get_metadata(
     language: Language, repo: str | None, completion: float, clones_dir: str
 ) -> tuple[int, int]:
+    if repo:
+        Repo(Path(clones_dir, 'translations', repo)).git.checkout()
     return (
         repo
         and completion
