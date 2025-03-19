@@ -1,0 +1,1 @@
+/tmp/tmpv1z0kc8e/octaG-M/python-docs-ro/about.po:27: trailing whitespace (trailing-whitespace)
