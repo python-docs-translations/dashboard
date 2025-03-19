@@ -12,9 +12,9 @@ def number(clones_dir: str, repo: str, language_code: str) -> int:
     else:
         lang_with_locale = language_part
     locale_dir = Path(clones_dir, f'cpython/Doc/locales/{lang_with_locale}/LC_MESSAGES')
-    locale_dir.mkdir(parents=True)
-    for po_file in Path(clones_dir, repo).rglob('*.po'):
-        relative_path = po_file.relative_to(Path(clones_dir, repo))
+    locale_dir.mkdir(parents=True, exist_ok=True)
+    for po_file in (repo_dir := Path(clones_dir, 'translations', repo)).rglob('*.po'):
+        relative_path = po_file.relative_to(repo_dir)
         target_file = locale_dir / relative_path
         target_file.parent.mkdir(parents=True, exist_ok=True)
         copyfile(po_file, target_file)

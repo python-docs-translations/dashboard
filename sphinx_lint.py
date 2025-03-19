@@ -14,5 +14,5 @@ def store_and_count_failures(clones_dir: str, repo: str, language_code: str) -> 
 
 def yield_failures(clones_dir: str, repo: str) -> Iterator[str]:
     enabled_checkers = [c for c in checkers.all_checkers.values() if c.enabled]
-    for path in Path(clones_dir, repo).rglob('*.po'):
+    for path in Path(clones_dir, 'translations', repo).rglob('*.po'):
         yield check_file(path.as_posix(), enabled_checkers)
