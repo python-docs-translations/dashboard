@@ -6,13 +6,14 @@
     },
     "repository": "Abdur-rahmaanJ/python-docs-ar",
     "branch": "master",
-    "completion": 0.01455026455026455,
+    "completion": 0.014549302294821771,
     "change": 0.0,
     "translators": {
       "number": 3,
       "link": false
     },
     "built": false,
+    "latest_commit_date": "2024/05/24 14:10:55",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/Abdur-rahmaanJ/python-docs-ar"
@@ -31,6 +32,7 @@
       "link": false
     },
     "built": false,
+    "latest_commit_date": null,
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-bn-in"
@@ -42,13 +44,14 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.13",
-    "completion": 35.98412698412698,
+    "completion": 35.98174723893922,
     "change": 0.0,
     "translators": {
       "number": 241,
       "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
     },
     "built": true,
+    "latest_commit_date": "2024/11/15 23:05:57",
     "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.13/CONTRIBUTING.rst"
@@ -60,13 +63,14 @@
     },
     "repository": "pygreece/python-docs-gr",
     "branch": "3.12",
-    "completion": 6.455026455026455,
-    "change": 1.3505291005291005,
+    "completion": 6.454599563520931,
+    "change": 0.24601547516698652,
     "translators": {
       "number": 13,
       "link": "https://github.com/pygreece/python-docs-gr/blob/3.12/TRANSLATORS"
     },
     "built": false,
+    "latest_commit_date": "2025/03/06 22:14:23",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/pygreece/python-docs-gr/blob/3.12/CONTRIBUTING.md"
@@ -78,13 +82,14 @@
     },
     "repository": "CuriousLearner/python-docs-hi-in",
     "branch": "master",
-    "completion": 0.005291005291005291,
+    "completion": 0.005290655379935189,
     "change": 0.0,
     "translators": {
       "number": 1,
       "link": false
     },
     "built": false,
+    "latest_commit_date": "2019/05/07 01:31:24",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/CuriousLearner/python-docs-hi-in"
@@ -103,6 +108,7 @@
       "link": false
     },
     "built": false,
+    "latest_commit_date": null,
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-hu"
@@ -114,13 +120,14 @@
     },
     "repository": "python/python-docs-id",
     "branch": "3.9",
-    "completion": 8.091269841269842,
+    "completion": 8.090734739765889,
     "change": 0.0,
     "translators": {
       "number": 24,
       "link": "https://github.com/python/python-docs-id/blob/3.9/TRANSLATORS"
     },
     "built": true,
+    "latest_commit_date": "2021/05/30 22:15:38",
     "in_switcher": false,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-id/blob/master/README.md#berkontribusi-untuk-menerjemahkan"
@@ -132,13 +139,14 @@
     },
     "repository": "python/python-docs-it",
     "branch": "3.13",
-    "completion": 3.634920634920635,
+    "completion": 3.634680246015475,
     "change": 0.0,
     "translators": {
       "number": 3,
       "link": "https://github.com/python/python-docs-it/blob/3.13/TRANSLATORS"
     },
     "built": true,
+    "latest_commit_date": "2024/06/08 12:26:23",
     "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-it"
@@ -150,13 +158,14 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.11",
-    "completion": 53.347883597883595,
-    "change": 0.1441798941798922,
+    "completion": 53.35625950664639,
+    "change": 0.16268765293300902,
     "translators": {
       "number": 47,
       "link": false
     },
     "built": true,
+    "latest_commit_date": "2025/03/22 23:49:04",
     "in_switcher": true,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -168,13 +177,14 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.9",
-    "completion": 43.17063492063492,
+    "completion": 43.161166589511275,
     "change": 0.0,
     "translators": {
       "number": 22,
       "link": false
     },
     "built": true,
+    "latest_commit_date": "2023/09/23 14:35:35",
     "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
@@ -193,6 +203,7 @@
       "link": false
     },
     "built": false,
+    "latest_commit_date": null,
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/sanketgarade/python-doc-mr"
@@ -211,6 +222,7 @@
       "link": false
     },
     "built": false,
+    "latest_commit_date": null,
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": null
@@ -225,10 +237,11 @@
     "completion": 0.0,
     "change": 0.0,
     "translators": {
-      "number": 8,
+      "number": 7,
       "link": false
     },
     "built": false,
+    "latest_commit_date": null,
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/revisto/python-docs-fa"
@@ -240,13 +253,14 @@
     },
     "repository": "python/python-docs-pl",
     "branch": "3.13",
-    "completion": 11.203703703703704,
-    "change": 0.14550264550264558,
+    "completion": 11.202962767012764,
+    "change": 0.14549302294821764,
     "translators": {
       "number": 25,
       "link": false
     },
     "built": true,
+    "latest_commit_date": "2025/03/21 15:09:40",
     "in_switcher": true,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -265,6 +279,7 @@
       "link": false
     },
     "built": false,
+    "latest_commit_date": null,
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": null
@@ -276,13 +291,14 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.13",
-    "completion": 59.689153439153436,
-    "change": 0.8809523809523796,
+    "completion": 60.03438925996958,
+    "change": 1.1308775874611499,
     "translators": {
       "number": 156,
       "link": false
     },
     "built": true,
+    "latest_commit_date": "2025/03/22 23:08:44",
     "in_switcher": true,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -294,13 +310,14 @@
     },
     "repository": "octaG-M/python-docs-ro",
     "branch": "main",
-    "completion": 0.14153439153439154,
-    "change": 0.14153439153439154,
+    "completion": 0.2962767012763706,
+    "change": 0.2962767012763706,
     "translators": {
       "number": 1,
       "link": false
     },
     "built": false,
+    "latest_commit_date": "2025/03/23 18:26:51",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/octaG-M/python-docs-ro"
@@ -311,14 +328,15 @@
       "name": "Russian"
     },
     "repository": "MLGRussianXP/python-docs-ru",
-    "branch": "3.12",
-    "completion": 2.1375661375661377,
-    "change": 0.0,
+    "branch": "3.13",
+    "completion": 85.03802658554328,
+    "change": 85.03802658554328,
     "translators": {
-      "number": 16,
+      "number": 20,
       "link": false
     },
     "built": false,
+    "latest_commit_date": "2025/03/23 15:59:15",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/MLGRussianXP/python-docs-ru"
@@ -330,13 +348,14 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.13",
-    "completion": 80.83068783068784,
-    "change": 0.39947089947089864,
+    "completion": 80.96157661530322,
+    "change": 0.46690033727927016,
     "translators": {
       "number": 234,
       "link": false
     },
     "built": true,
+    "latest_commit_date": "2025/03/23 15:55:55",
     "in_switcher": true,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -348,13 +367,14 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.13",
-    "completion": 63.0462962962963,
-    "change": 0.013227513227512588,
+    "completion": 63.035513524237814,
+    "change": 0.013226638449836514,
     "translators": {
       "number": 310,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
     },
     "built": true,
+    "latest_commit_date": "2025/03/15 13:13:37",
     "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html"
@@ -366,13 +386,14 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
-    "completion": 37.55952380952381,
-    "change": 0.2605820105820129,
+    "completion": 37.554394550624956,
+    "change": 0.26056477746180207,
     "translators": {
       "number": 119,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
     },
     "built": true,
+    "latest_commit_date": "2025/03/15 20:43:11",
     "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF"
@@ -384,13 +405,14 @@
     },
     "repository": "python/python-docs-tr",
     "branch": "3.12",
-    "completion": 5.085978835978836,
+    "completion": 5.085642483962701,
     "change": 0.0,
     "translators": {
       "number": 29,
       "link": "https://github.com/python/python-docs-tr/blob/3.12/TRANSLATORS"
     },
     "built": true,
+    "latest_commit_date": "2024/12/15 06:56:02",
     "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak"
@@ -402,13 +424,14 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "completion": 48.285714285714285,
+    "completion": 48.281198333443555,
     "change": 0.0,
     "translators": {
       "number": 15,
       "link": false
     },
     "built": true,
+    "latest_commit_date": "2025/03/22 06:11:18",
     "in_switcher": false,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
