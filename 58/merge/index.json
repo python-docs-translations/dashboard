@@ -32,7 +32,7 @@
       "link": false
     },
     "built": false,
-    "latest_commit_date": null,
+    "latest_commit_date": "",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-bn-in"
@@ -108,7 +108,7 @@
       "link": false
     },
     "built": false,
-    "latest_commit_date": null,
+    "latest_commit_date": "",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-hu"
@@ -203,7 +203,7 @@
       "link": false
     },
     "built": false,
-    "latest_commit_date": null,
+    "latest_commit_date": "",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/sanketgarade/python-doc-mr"
@@ -222,7 +222,7 @@
       "link": false
     },
     "built": false,
-    "latest_commit_date": null,
+    "latest_commit_date": "",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": null
@@ -241,7 +241,7 @@
       "link": false
     },
     "built": false,
-    "latest_commit_date": null,
+    "latest_commit_date": "",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/revisto/python-docs-fa"
@@ -279,7 +279,7 @@
       "link": false
     },
     "built": false,
-    "latest_commit_date": null,
+    "latest_commit_date": "",
     "in_switcher": null,
     "uses_platform": false,
     "contribution_link": null
