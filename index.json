@@ -311,11 +311,11 @@
       "name": "Russian"
     },
     "repository": "MLGRussianXP/python-docs-ru",
-    "branch": "3.12",
-    "completion": 2.1374813168789597,
+    "branch": "3.13",
+    "completion": 0.0,
     "change": 0.0,
     "translators": {
-      "number": 16,
+      "number": 1,
       "link": false
     },
     "built": false,
