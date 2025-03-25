@@ -1,0 +1,80 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+th {
+  background-color: #f4f4f4;
+}
+.progress-bar {
+  display: inline-block;
+  color: white;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.progress-bar-outer-label {
+  display: none;
+  padding-left: .5em;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.progress-bar.low {
+  color: transparent;
+  user-select: none;
+}
+.progress-bar.low + .progress-bar-outer-label {
+  display: inline-block;
+}
+td[data-label="translators"] {
+  text-align: right;
+}
+td[data-label="completion"] {
+  width: 100%;
+  line-height: 0;
+}
+@media screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding-left: 50%;
+    position: relative;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    left: 10px;
+    position: absolute;
+  }
+  td[data-label="completion"] {
+    width: inherit;
+  }
+  .progress-bar {
+    min-width: 0;
+    width: 100% !important;
+  }
+}
