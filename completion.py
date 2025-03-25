@@ -49,18 +49,22 @@ def get_completion(
 
     if completion:
         # Fetch commit from before 30 days ago and checkout
-        commit = next(
-            clone_repo.iter_commits('HEAD', max_count=1, before='30 days ago')
-        )
-        clone_repo.git.checkout(commit.hexsha)
-        with TemporaryDirectory() as tmpdir:
-            month_ago_completion = potodo.merge_and_scan_path(
-                clone_path,
-                pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
-                merge_path=Path(tmpdir),
-                hide_reserved=False,
-                api_url='',
-            ).completion
+        try:
+            commit = next(
+                clone_repo.iter_commits('HEAD', max_count=1, before='30 days ago')
+            )
+        except StopIteration:
+            month_ago_completion = 0.0
+        else:
+            clone_repo.git.checkout(commit.hexsha)
+            with TemporaryDirectory() as tmpdir:
+                month_ago_completion = potodo.merge_and_scan_path(
+                    clone_path,
+                    pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
+                    merge_path=Path(tmpdir),
+                    hide_reserved=False,
+                    api_url='',
+                ).completion
     else:
         month_ago_completion = 0.0
 
