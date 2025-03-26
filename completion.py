@@ -23,8 +23,11 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
 def get_completion(
     clones_dir: str, repo: str
 ) -> tuple[float, 'TranslatorsData', str, float]:
-    clone_path = Path(clones_dir, repo)
-    for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + ['master']:
+    clone_path = Path(clones_dir, 'translations', repo)
+    for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + [
+        'master',
+        'main',
+    ]:
         try:
             clone_repo = git.Repo.clone_from(
                 f'https://github.com/{repo}.git', clone_path, branch=branch
@@ -32,23 +35,24 @@ def get_completion(
         except git.GitCommandError:
             print(f'failed to clone {repo} {branch}')
             translators_data = TranslatorsData(0, False)
+            branch = ''
             continue
         else:
             translators_number = translators.get_number(clone_path)
             translators_link = translators.get_link(clone_path, repo, branch)
             translators_data = TranslatorsData(translators_number, translators_link)
             break
-    with TemporaryDirectory() as tmpdir:
-        completion = potodo.merge_and_scan_path(
-            clone_path,
-            pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
-            merge_path=Path(tmpdir),
-            hide_reserved=False,
-            api_url='',
-        ).completion
+    path_for_merge = Path(clones_dir, 'rebased_translations', repo)
+    completion = potodo.merge_and_scan_path(
+        clone_path,
+        pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
+        merge_path=path_for_merge,
+        hide_reserved=False,
+        api_url='',
+    ).completion
 
     if completion:
-        # Fetch commit from before 30 days ago and checkout
+        # Get latest commit date and fetch commit from before 30 days ago and checkout
         try:
             commit = next(
                 clone_repo.iter_commits('HEAD', max_count=1, before='30 days ago')

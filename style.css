@@ -3,7 +3,6 @@ body {
 }
 table {
   border-collapse: collapse;
-  width: 100%;
 }
 th, td {
   border: 1px solid #ddd;
@@ -38,13 +37,25 @@ th {
 .progress-bar.low + .progress-bar-outer-label {
   display: inline-block;
 }
-td[data-label="translators"] {
+td[data-label="translators"], td[data-label="warnings"], td[data-label="lint"] {
   text-align: right;
 }
 td[data-label="completion"] {
   width: 100%;
   line-height: 0;
 }
+.switchpages{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+ }
+
+@media screen and (max-width: 675px) {
+  .switchpages{
+    all: unset;
+ }
+}
+
 @media screen and (max-width: 600px) {
   table, thead, tbody, th, td, tr {
     display: block;
