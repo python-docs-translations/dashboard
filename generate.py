@@ -64,9 +64,7 @@ def get_project_data(
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
-        completion, translators_data, branch, change, latest_commit_date = (
-            get_completion(clones_dir, repo)
-        )
+        completion, translators_data, branch, change, latest_commit_date = get_completion(clones_dir, repo)
     else:
         completion = 0.0
         translators_data = TranslatorsData(0, False)
