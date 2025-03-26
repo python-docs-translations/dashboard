@@ -52,7 +52,7 @@ def get_completion(
     ).completion
 
     if completion:
-        # Fetch commit from before 30 days ago and checkout
+        # Get latest commit date and fetch commit from before 30 days ago and checkout
         try:
             latest_commit = clone_repo.head.commit.committed_datetime.strftime(
                 '%Y/%m/%d %T'
