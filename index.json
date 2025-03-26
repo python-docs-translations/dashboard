@@ -61,7 +61,7 @@
     "repository": "pygreece/python-docs-gr",
     "branch": "3.12",
     "completion": 6.451954095933154,
-    "change": 0.24591464382040318,
+    "change": 0.16526521762123902,
     "translators": {
       "number": 13,
       "link": "https://github.com/pygreece/python-docs-gr/blob/3.12/TRANSLATORS"
