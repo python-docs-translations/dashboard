@@ -54,9 +54,6 @@ def get_completion(
     if completion:
         # Get latest commit date and fetch commit from before 30 days ago and checkout
         try:
-            latest_commit = clone_repo.head.commit.committed_datetime.strftime(
-                '%Y/%m/%d %T'
-            )
             commit = next(
                 clone_repo.iter_commits('HEAD', max_count=1, before='30 days ago')
             )
@@ -74,11 +71,10 @@ def get_completion(
                 ).completion
     else:
         month_ago_completion = 0.0
-        latest_commit = None
 
     change = completion - month_ago_completion
 
-    return completion, translators_data, branch, change, latest_commit
+    return completion, translators_data, branch, change
 
 
 @dataclass(frozen=True)

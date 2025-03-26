@@ -64,13 +64,12 @@ def get_project_data(
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
-        completion, translators_data, branch, change, latest_commit_date = get_completion(clones_dir, repo)
+        completion, translators_data, branch, change = get_completion(clones_dir, repo)
     else:
         completion = 0.0
         translators_data = TranslatorsData(0, False)
         change = 0.0
         branch = ''
-        latest_commit_date = None
     return LanguageProjectData(
         language,
         repo,
@@ -79,7 +78,6 @@ def get_project_data(
         change,
         translators_data,
         built,
-        latest_commit_date,
         in_switcher=languages_built.get(language.code),
         uses_platform=language.code in contribute.pulling_from_transifex,
         contribution_link=contribute.get_contrib_link(language.code, repo),
@@ -95,7 +93,6 @@ class LanguageProjectData:
     change: float
     translators: TranslatorsData
     built: bool
-    latest_commit_date: str | None
     in_switcher: bool | None
     uses_platform: bool
     contribution_link: str | None
