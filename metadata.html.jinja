@@ -25,7 +25,7 @@
 <tr>
   <td data-label="language">{{ project.language.name }} ({{ project.language.code }})</td>
   <td data-label="branch">{{ project.branch }}</td>
-  <td data-label="updated">{{ project.latest_commit_date }}</td>
+  <td data-label="updated">{{ project.last_commit_date }}</td>
   <td data-label="warnings">
     {% if project.completion %}<a href="warnings-{{ project.language.code }}.txt">{{ metadata[0] }}</a>{% else %}{{ metadata[0] }}{% endif %}
   </td>

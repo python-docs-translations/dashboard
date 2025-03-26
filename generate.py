@@ -72,7 +72,7 @@ def get_project_data(
         translators_data = TranslatorsData(0, False)
         change = 0.0
         branch = ''
-        latest_commit_date = ''
+        latest_commit_date = None
     return LanguageProjectData(
         language,
         repo,
@@ -97,7 +97,7 @@ class LanguageProjectData:
     change: float
     translators: TranslatorsData
     built: bool
-    latest_commit_date: str
+    latest_commit_date: str | None
     in_switcher: bool | None
     uses_platform: bool
     contribution_link: str | None
