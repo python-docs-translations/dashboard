@@ -34,7 +34,7 @@ generation_time = datetime.now(timezone.utc)
 
 def get_projects_metadata(
     completion_progress: Sequence[LanguageProjectData],
-) -> Iterator[tuple[int, int]]:
+) -> Iterator[tuple[int, int, datetime | None]]:
     with concurrent.futures.ProcessPoolExecutor() as executor:
         return executor.map(
             get_metadata,
@@ -45,17 +45,18 @@ def get_projects_metadata(
 
 def get_metadata(
     language: Language, repo: str | None, completion: float, clones_dir: str
-) -> tuple[int, int]:
-    if repo and (repo_path := Path(clones_dir, 'translations', repo)).exists():
-        Repo(repo_path).git.checkout()
+) -> tuple[int, int, datetime | None]:
+    if not repo or not (repo_path := Path(clones_dir, 'translations', repo)).exists():
+        return 0, 0, None
+    (clone_repo := Repo(repo_path)).git.checkout()
+    latest_commit = clone_repo.head.commit.committed_datetime
+    if not completion:
+        return 0, 0, latest_commit
     return (
-        repo
-        and completion
-        and (
-            build_warnings.number(clones_dir, repo, language.code),
-            sphinx_lint.store_and_count_failures(clones_dir, repo, language.code),
-        )
-    ) or (0, 0)
+        build_warnings.number(clones_dir, repo, language.code),
+        sphinx_lint.store_and_count_failures(clones_dir, repo, language.code),
+        latest_commit,
+    )
 
 
 def get_language_repo_and_completion(
