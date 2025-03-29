@@ -402,8 +402,8 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "completion": 48.19211803122645,
-    "change": 0.0,
+    "completion": 48.1934400655729,
+    "change": 0.001322034346451062,
     "translators": {
       "number": 15,
       "link": false
