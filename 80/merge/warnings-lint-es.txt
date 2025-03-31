@@ -1,0 +1,2 @@
+clones/rebased_translations/python/python-docs-es/howto/enum.po:27: Unnecessary parentheses in ':func:`repr()`' (unnecessary-parentheses)
+clones/rebased_translations/python/python-docs-es/howto/enum.po:391: Unnecessary parentheses in ':func:`auto()`' (unnecessary-parentheses)
