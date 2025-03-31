@@ -108,7 +108,7 @@ if __name__ == '__main__':
         completion_progress=(completion_progress := list(get_completion_progress())),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
-        word_count=get_word_count(Path('clones', 'cpython', 'build', 'gettext')),
+        word_count=get_word_count(Path('clones', 'cpython', 'Doc', 'build', 'gettext')),
     )
 
     Path('index.html').write_text(output)
