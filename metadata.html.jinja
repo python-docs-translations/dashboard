@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <title>Python Docs Translation Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <base target="_blank">
+</head>
+<body>
+<h1>Python Docs Translation Dashboard</h1>
+<nav class="switchpages">
+<a href="index.html" target="_self">main</a> | meta
+</nav>
+<table>
+<thead>
+<tr>
+  <th>language</th>
+  <th>branch</th>
+  <th>last updated</th>
+  <th>build warnings*</th>
+  <th>lint failures</th>
+</tr>
+</thead>
+<tbody>
+{% for project, metadata in metadata | sort(attribute='0.completion,0.translators.number') | reverse %}
+<tr>
+  <td data-label="language">{{ project.language.name }} ({{ project.language.code }})</td>
+  <td data-label="branch">{{ project.branch }}</td>
+  <td data-label="updated">{{ metadata[2].strftime('%Y/%m/%d %T') if metadata[2] else '' }}</td>
+  <td data-label="warnings">
+    {% if project.completion %}<a href="warnings-{{ project.language.code }}.txt">{{ metadata[0] }}</a>{% else %}{{ metadata[0] }}{% endif %}
+  </td>
+  <td data-label="lint">
+    {% if project.completion %}<a href="warnings-lint-{{ project.language.code }}.txt">{{ metadata[1] }}</a>{% else %}{{ metadata[1] }}{% endif %}
+  </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<p>* number of Sphinx build process warnings</p>
+<p>For more information about translations, see the <a href="https://devguide.python.org/documentation/translating/">Python Developer’s Guide</a>.</p>
+<p>Last updated at {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).</p>
+</body>
+</html>
