@@ -1,12 +1,14 @@
 import os
 from polib import pofile
 
+
 def _count_words(pot) -> int:
     pot = pofile(pot)
     word_count = 0
     for entry in pot:
         word_count += len(entry.msgid.split())
     return word_count
+
 
 def get_word_count(dir) -> int:
     total_word_count = 0
