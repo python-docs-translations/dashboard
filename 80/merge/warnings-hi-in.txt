@@ -1,5 +1,0 @@
-WARNING: Invalid Babel locale: 'hi-in'. [i18n.babel]
-WARNING: Invalid Babel locale: 'hi-in'. [i18n.babel]
-WARNING: Invalid Babel locale: 'hi-in'. [i18n.babel]
-WARNING: Invalid Babel locale: 'hi-in'. [i18n.babel]
-WARNING: Invalid Babel locale: 'hi-in'. [i18n.babel]
