@@ -349,7 +349,7 @@
     "repository": "python/python-docs-es",
     "branch": "3.13",
     "completion": 62.92962140439932,
-    "change": 0.01321912013536064,
+    "change": 0.0,
     "translators": {
       "number": 310,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
