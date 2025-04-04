@@ -315,7 +315,7 @@
     "completion": 0.20224451758734188,
     "change": 0.20224451758734188,
     "translators": {
-      "number": 21,
+      "number": 22,
       "link": false
     },
     "built": false,
@@ -330,8 +330,8 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.13",
-    "completion": 81.03395857292038,
-    "change": 0.5313875560137973,
+    "completion": 81.04585530924905,
+    "change": 0.543284292342463,
     "translators": {
       "number": 234,
       "link": false
