@@ -1,7 +1,4 @@
 clones/rebased_translations/python/python-docs-pt-br/c-api/arg.po:1142: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-pt-br/whatsnew/changelog.po:963: missing space before default role: ' \u200b\u200b``CC``'. (missing-space-before-default-role)
-clones/rebased_translations/python/python-docs-pt-br/whatsnew/changelog.po:963: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-clones/rebased_translations/python/python-docs-pt-br/whatsnew/changelog.po:963: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-pt-br/tutorial/stdlib2.po:80: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/reference/grammar.po:145: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/reference/grammar.po:706: trailing whitespace (trailing-whitespace)
