@@ -5,7 +5,7 @@ clones/rebased_translations/python/python-docs-pt-br/reference/grammar.po:706: t
 clones/rebased_translations/python/python-docs-pt-br/reference/grammar.po:1373: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/reference/grammar.po:1379: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/reference/grammar.po:1503: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-pt-br/library/typing.po:4664: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-pt-br/library/typing.po:4666: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/library/contextvars.po:368: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/library/datetime.po:3057: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/library/datetime.po:3059: trailing whitespace (trailing-whitespace)
