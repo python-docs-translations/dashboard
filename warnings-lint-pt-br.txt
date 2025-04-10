@@ -13,5 +13,5 @@ clones/rebased_translations/python/python-docs-pt-br/library/datetime.po:3069: t
 clones/rebased_translations/python/python-docs-pt-br/library/datetime.po:3084: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/library/sys.po:1916: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/library/statistics.po:2198: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-pt-br/library/re.po:3406: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-pt-br/library/re.po:3405: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pt-br/howto/instrumentation.po:738: trailing whitespace (trailing-whitespace)
