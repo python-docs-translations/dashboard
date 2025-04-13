@@ -111,7 +111,7 @@ clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.12.po:5332: foun
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.12.po:5680: missing space before role ( 在:gh:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.10.po:3485: missing space before role ( 和:data:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.8.po:4609: missing space before role ( 的规范更新了:rfc:`). (missing-space-before-role)
-clones/rebased_translations/python/python-docs-zh-cn/whatsnew/changelog.po:1038: missing backtick before hyperlink reference: '节 <https://www.rfc-editor.org/rfc/rfc3986#section-3.2.2>`_'. (hyperlink-reference-missing-backtick)
+clones/rebased_translations/python/python-docs-zh-cn/whatsnew/changelog.po:1044: missing backtick before hyperlink reference: '节 <https://www.rfc-editor.org/rfc/rfc3986#section-3.2.2>`_'. (hyperlink-reference-missing-backtick)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.1.po:1320: role missing (escaped) space after role: ':func:`sys._getframe`返' (missing-space-after-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.1.po:1454: inline literal missing (escaped) space after literal: '``D``中' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.1.po:1454: inline literal missing (escaped) space after literal: '``(key, value)``键' (missing-space-after-literal)
