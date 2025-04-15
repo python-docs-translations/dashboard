@@ -33,5 +33,5 @@ clones/rebased_translations/python/python-docs-uk/library/os.po:3556: found an u
 clones/rebased_translations/python/python-docs-uk/library/asyncio.po:33: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-uk/library/collections.po:943: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-uk/library/functions.po:2707: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-uk/library/stdtypes.po:1355: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-uk/library/stdtypes.po:863: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-uk/library/stdtypes.po:1355: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)

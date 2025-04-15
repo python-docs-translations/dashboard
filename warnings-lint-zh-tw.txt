@@ -1,6 +1,6 @@
-clones/rebased_translations/python/python-docs-zh-tw/whatsnew/3.13.po:2255: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-clones/rebased_translations/python/python-docs-zh-tw/whatsnew/3.13.po:2255: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-tw/whatsnew/3.13.po:2255: missing space before default role: '，在於``GET``'. (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-zh-tw/whatsnew/3.13.po:470: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-zh-tw/whatsnew/3.13.po:2255: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-zh-tw/whatsnew/3.13.po:2255: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-tw/extending/extending.po:764: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-tw/library/importlib.po:37: trailing whitespace (trailing-whitespace)
