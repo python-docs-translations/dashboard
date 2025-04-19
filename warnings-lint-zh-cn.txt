@@ -178,7 +178,7 @@ clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:774: foun
 clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:774: missing space before default role: '于使用``tuple[Any, ...]``'. (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:3023: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:3255: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:6217: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:6221: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:4117: role missing (escaped) space after role: ':class:`ParamSpec`的' (missing-space-after-role)
 clones/rebased_translations/python/python-docs-zh-cn/library/argparse.po:280: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/library/argparse.po:280: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
