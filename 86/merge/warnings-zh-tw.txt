@@ -1,5 +1,0 @@
-WARNING: Invalid Babel locale: 'zh-tw'. [i18n.babel]
-WARNING: Invalid Babel locale: 'zh-tw'. [i18n.babel]
-WARNING: Invalid Babel locale: 'zh-tw'. [i18n.babel]
-WARNING: Invalid Babel locale: 'zh-tw'. [i18n.babel]
-WARNING: Invalid Babel locale: 'zh-tw'. [i18n.babel]

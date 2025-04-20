@@ -1,1 +1,0 @@
-clones/rebased_translations/Abdur-rahmaanJ/python-docs-ar/tutorial/whatnow.po:145: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
