@@ -168,8 +168,8 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 42.940594712204124,
-    "change": 0.03692226544471566,
+    "completion": 42.95246258323993,
+    "change": 0.048790136480519664,
     "translators": {
       "number": 23,
       "link": false
