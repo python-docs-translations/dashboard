@@ -168,8 +168,8 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 42.927408188831016,
-    "change": 0.023735742071608,
+    "completion": 42.940594712204124,
+    "change": 0.03692226544471566,
     "translators": {
       "number": 23,
       "link": false
@@ -295,7 +295,7 @@
     "repository": "octaG-M/python-docs-ro",
     "branch": "main",
     "completion": 0.295378123557724,
-    "change": 0.15428232346541837,
+    "change": 0.0,
     "translators": {
       "number": 1,
       "link": false
