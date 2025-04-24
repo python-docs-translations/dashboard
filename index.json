@@ -313,7 +313,7 @@
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.13",
     "completion": 0.20174316644470522,
-    "change": 0.20174316644470522,
+    "change": 0.0,
     "translators": {
       "number": 22,
       "link": false
@@ -330,8 +330,8 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.13",
-    "completion": 81.20228378538746,
-    "change": 0.6606099763973674,
+    "completion": 81.20887669932357,
+    "change": 0.6672028903334706,
     "translators": {
       "number": 234,
       "link": false
