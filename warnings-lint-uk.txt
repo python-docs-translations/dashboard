@@ -29,7 +29,7 @@ clones/rebased_translations/python/python-docs-uk/library/turtle.po:1748: found 
 clones/rebased_translations/python/python-docs-uk/library/functions.po:2707: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-uk/reference/datamodel.po:459: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-uk/reference/datamodel.po:459: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-clones/rebased_translations/python/python-docs-uk/reference/datamodel.po:3835: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-uk/reference/datamodel.po:3834: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-uk/tutorial/inputoutput.po:199: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-uk/tutorial/whatnow.po:56: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-uk/tutorial/whatnow.po:95: trailing whitespace (trailing-whitespace)
