@@ -282,7 +282,7 @@ clones/rebased_translations/python/python-docs-ja/library/threading.po:1479: fou
 clones/rebased_translations/python/python-docs-ja/library/threading.po:566: missing space before default role: 't"は``target.__name__``'. (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-ja/library/ast.po:787: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/ast.po:956: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/ast.po:3301: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/library/ast.po:3343: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/json.po:338: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/json.po:644: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/marshal.po:122: trailing whitespace (trailing-whitespace)
