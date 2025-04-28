@@ -25,7 +25,7 @@ def number(clones_dir: str, repo: str, language_code: str) -> int:
             '--jobs',
             'auto',
             '--define',
-            f'language={language_code}',
+            f'language={lang_with_locale}',
             '--verbose',
             '--warning-file',
             warning_file := f'{clones_dir}/warnings-{language_code}.txt',
