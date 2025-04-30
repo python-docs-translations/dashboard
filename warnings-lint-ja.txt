@@ -118,7 +118,7 @@ clones/rebased_translations/python/python-docs-ja/library/signal.po:574: trailin
 clones/rebased_translations/python/python-docs-ja/library/ftplib.po:229: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/ftplib.po:273: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/sched.po:191: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/typing.po:1890: role missing opening tag colon ( ref:`). (missing-space-before-role)
+clones/rebased_translations/python/python-docs-ja/library/typing.po:1885: role missing opening tag colon ( ref:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-ja/library/sys.po:339: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/sys.po:359: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/sys.po:1334: trailing whitespace (trailing-whitespace)
