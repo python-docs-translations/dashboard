@@ -48,8 +48,7 @@ def get_metadata(
 ) -> tuple[int, int, datetime | None]:
     if not repo or not (repo_path := Path(clones_dir, 'translations', repo)).exists():
         return 0, 0, None
-    (clone_repo := Repo(repo_path)).git.checkout()
-    latest_commit = clone_repo.head.commit.committed_datetime
+    latest_commit = Repo(repo_path).head.commit.committed_datetime
     if not completion:
         return 0, 0, latest_commit
     return (
