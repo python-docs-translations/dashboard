@@ -1,5 +1,7 @@
 gitpython
+urllib3
 potodo
+polib
 jinja2
 docutils
 sphinx
