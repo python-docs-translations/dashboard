@@ -1,15 +1,3 @@
-# /// script
-# requires-python = ">=3.11"
-# dependencies = [
-#     "gitpython",
-#     "potodo",
-#     "jinja2",
-#     "sphinx",
-#     "python-docs-theme",
-#     "dacite",
-#     "sphinx-lint",
-# ]
-# ///
 import concurrent.futures
 import itertools
 import logging
