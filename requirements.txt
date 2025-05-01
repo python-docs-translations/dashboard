@@ -1,0 +1,8 @@
+gitpython
+potodo
+jinja2
+docutils
+sphinx
+python-docs-theme
+dacite
+sphinx-lint

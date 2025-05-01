@@ -1,12 +1,3 @@
-# /// script
-# requires-python = ">=3.11"
-# dependencies = [
-#     "gitpython",
-#     "potodo",
-#     "jinja2",
-#     "docutils",
-# ]
-# ///
 import json
 import concurrent.futures
 import itertools
