@@ -69,7 +69,7 @@ def get_completion(
                     hide_reserved=False,
                     api_url='',
                 ).completion
-            clone_repo.git.checkout(branch)  # restore the original branch
+            clone_repo.git.checkout(branch)  # restore the original state
     else:
         month_ago_completion = 0.0
 
