@@ -1,0 +1,5 @@
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:6848:<translated>:1: ERROR: Unknown interpreted text role "function". [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:6848:<translated>:1: ERROR: Unknown interpreted text role "functions". [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:6848:<translated>:1: ERROR: Unknown interpreted text role "function". [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:6848:<translated>:1: ERROR: Unknown interpreted text role "functions". [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/build/NEWS:6848: WARNING: inconsistent term references in translated message. original: [':func:`ctypes.pointer`', ':func:`ctypes.POINTER`'], translated: [] [i18n.inconsistent_references]
