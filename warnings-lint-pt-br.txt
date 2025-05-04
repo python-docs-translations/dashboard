@@ -1,1 +1,0 @@
-clones/rebased_translations/python/python-docs-pt-br/c-api/unicode.po:265: trailing whitespace (trailing-whitespace)

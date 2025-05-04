@@ -1,5 +1,2 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:6845:<translated>:1: ERROR: Unknown interpreted text role "function". [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:6845:<translated>:1: ERROR: Unknown interpreted text role "functions". [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:6845:<translated>:1: ERROR: Unknown interpreted text role "function". [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:6845:<translated>:1: ERROR: Unknown interpreted text role "functions". [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/build/NEWS:6845: WARNING: inconsistent term references in translated message. original: [':func:`ctypes.pointer`', ':func:`ctypes.POINTER`'], translated: [] [i18n.inconsistent_references]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/hashlib.rst:23: WARNING: inconsistent references in translated message. original: ['`the FIPS 180-4 standard`_', '`the FIPS\n202 standard`_', '`formerly part of FIPS`_'], translated: [] [i18n.inconsistent_references]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:13619:<translated>:1: WARNING: undefined label: 'wasm-disponibilidade' [ref.ref]
