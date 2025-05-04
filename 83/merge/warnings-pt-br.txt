@@ -1,5 +1,2 @@
-WARNING: Invalid Babel locale: 'pt-br'. [i18n.babel]
-WARNING: Invalid Babel locale: 'pt-br'. [i18n.babel]
-WARNING: Invalid Babel locale: 'pt-br'. [i18n.babel]
-WARNING: Invalid Babel locale: 'pt-br'. [i18n.babel]
-WARNING: Invalid Babel locale: 'pt-br'. [i18n.babel]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/hashlib.rst:23: WARNING: inconsistent references in translated message. original: ['`the FIPS 180-4 standard`_', '`the FIPS\n202 standard`_', '`formerly part of FIPS`_'], translated: [] [i18n.inconsistent_references]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:13619:<translated>:1: WARNING: undefined label: 'wasm-disponibilidade' [ref.ref]
