@@ -59,12 +59,12 @@
       "name": "Greek"
     },
     "repository": "pygreece/python-docs-gr",
-    "branch": "3.12",
-    "completion": 6.820099124749552,
-    "change": 0.15026890224612455,
+    "branch": "3.13",
+    "completion": 6.870188758831594,
+    "change": 0.20035853632816636,
     "translators": {
       "number": 15,
-      "link": "https://github.com/pygreece/python-docs-gr/blob/3.12/TRANSLATORS"
+      "link": "https://github.com/pygreece/python-docs-gr/blob/3.13/TRANSLATORS"
     },
     "built": false,
     "in_switcher": null,
