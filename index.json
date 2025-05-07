@@ -42,7 +42,7 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.13",
-    "completion": 35.75869336143309,
+    "completion": 35.7468387776607,
     "change": 0.0,
     "translators": {
       "number": 241,
@@ -150,8 +150,8 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.11",
-    "completion": 53.06111696522655,
-    "change": 0.04083245521601242,
+    "completion": 53.04926238145416,
+    "change": 0.040832455216019525,
     "translators": {
       "number": 47,
       "link": false
@@ -168,8 +168,8 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 45.437302423603796,
-    "change": 2.6106427818756615,
+    "completion": 45.42149631190727,
+    "change": 2.6066912539515243,
     "translators": {
       "number": 23,
       "link": false
@@ -240,7 +240,7 @@
     },
     "repository": "python/python-docs-pl",
     "branch": "3.13",
-    "completion": 11.174920969441517,
+    "completion": 11.173603793466807,
     "change": 0.02897787144362418,
     "translators": {
       "number": 25,
@@ -330,7 +330,7 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.13",
-    "completion": 81.54241306638566,
+    "completion": 81.52660695468914,
     "change": 0.8350895679662784,
     "translators": {
       "number": 234,
@@ -348,8 +348,8 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.13",
-    "completion": 62.71469968387777,
-    "change": 0.11591148577450383,
+    "completion": 62.70284510010537,
+    "change": 0.11591148577449673,
     "translators": {
       "number": 312,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
@@ -366,7 +366,7 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
-    "completion": 38.54188619599579,
+    "completion": 38.52608008429926,
     "change": 1.2315595363540552,
     "translators": {
       "number": 120,
@@ -402,8 +402,8 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "completion": 53.45495258166491,
-    "change": 53.45495258166491,
+    "completion": 53.443097997892515,
+    "change": 53.443097997892515,
     "translators": {
       "number": 13,
       "link": false
