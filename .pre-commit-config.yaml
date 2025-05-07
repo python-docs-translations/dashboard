@@ -40,5 +40,11 @@ repos:
       - id: mypy
         additional_dependencies: [types-docutils, types-polib>=1.2.0.20250114, types-requests]
 
+  - repo: https://github.com/francescorubbo/deptry-pre-commit
+    rev: v0.23.0
+    hooks:
+      - id: deptry
+        args: ["--per-rule-ignores", "DEP002=python-docs-theme", "--package-module-name-map", "gitpython=git,sphinx-lint=sphinxlint"]
+
 ci:
   autoupdate_schedule: quarterly
