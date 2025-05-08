@@ -1,3 +1,0 @@
-clones/rebased_translations/revisto/python-docs-fa/bugs.po:69: missing space before < in hyperlink (missing-space-in-hyperlink)
-clones/rebased_translations/revisto/python-docs-fa/bugs.po:236: missing space before < in hyperlink (missing-space-in-hyperlink)
-clones/rebased_translations/revisto/python-docs-fa/bugs.po:252: missing space before < in hyperlink (missing-space-in-hyperlink)
