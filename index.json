@@ -298,7 +298,7 @@
     "change": 0.0,
     "translators": {
       "number": 1,
-      "link": false
+      "link": "https://github.com/octaG-M/python-docs-ro/blob/main/TRANSLATORS"
     },
     "built": false,
     "in_switcher": null,
