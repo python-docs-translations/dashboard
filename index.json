@@ -60,8 +60,8 @@
     },
     "repository": "pygreece/python-docs-gr",
     "branch": "3.13",
-    "completion": 6.862034902864669,
-    "change": 0.08297662166611719,
+    "completion": 7.158379980243661,
+    "change": 0.3793216990451098,
     "translators": {
       "number": 15,
       "link": "https://github.com/pygreece/python-docs-gr/blob/3.13/TRANSLATORS"
@@ -168,8 +168,8 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 45.71353309186697,
-    "change": 2.904181758314124,
+    "completion": 45.746460322686865,
+    "change": 2.9371089891340176,
     "translators": {
       "number": 23,
       "link": false
