@@ -1,0 +1,1 @@
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/allocation.rst:38: WARNING: inconsistent term references in translated message. original: [':c:macro:`Py_TPFLAGS_HAVE_GC`', ':c:func:`PyObject_GC_New`'], translated: [':c:func:`PyObject_GC_New`'] [i18n.inconsistent_references]
