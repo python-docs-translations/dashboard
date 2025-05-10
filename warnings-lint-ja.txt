@@ -121,7 +121,7 @@ clones/rebased_translations/python/python-docs-ja/library/shutil.po:456: trailin
 clones/rebased_translations/python/python-docs-ja/library/shutil.po:538: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/shutil.po:626: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/shutil.po:697: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/shutil.po:1171: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/library/shutil.po:1178: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/signal.po:574: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/math.po:1037: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/json.po:339: trailing whitespace (trailing-whitespace)
