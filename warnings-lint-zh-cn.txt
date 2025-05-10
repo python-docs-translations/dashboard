@@ -76,7 +76,7 @@ clones/rebased_translations/python/python-docs-zh-cn/library/pathlib.po:1073: mi
 clones/rebased_translations/python/python-docs-zh-cn/library/pathlib.po:1073: missing space before default role: '则返回``False``'. (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-zh-cn/library/pathlib.po:1126: missing space before default role: '则返回``True``'. (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-zh-cn/library/pathlib.po:1126: missing space before default role: '则返回``False``'. (missing-space-before-default-role)
-clones/rebased_translations/python/python-docs-zh-cn/library/math.po:535: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-zh-cn/library/math.po:528: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:775: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:775: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/library/typing.po:775: missing space before default role: '于使用``tuple[Any, ...]``'. (missing-space-before-default-role)
