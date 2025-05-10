@@ -14,7 +14,7 @@ clones/rebased_translations/python/python-docs-ja/howto/regex.po:1316: trailing 
 clones/rebased_translations/python/python-docs-ja/howto/descriptor.po:993: missing space before role ( の中の:c:func:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-ja/howto/curses.po:425: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/reference/expressions.po:646: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/reference/lexical_analysis.po:691: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/reference/lexical_analysis.po:654: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/reference/datamodel.po:1047: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/installing/index.po:261: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/functions.po:1043: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
