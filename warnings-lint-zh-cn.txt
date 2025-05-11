@@ -256,7 +256,7 @@ clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.5.po:4753: found
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.5.po:4753: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.5.po:4753: missing space before default role: '移除了``.pyo``'. (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.8.po:4603: missing space before role ( 的规范更新了:rfc:`). (missing-space-before-role)
-clones/rebased_translations/python/python-docs-zh-cn/whatsnew/changelog.po:1391: missing backtick before hyperlink reference: '节 <https://www.rfc-editor.org/rfc/rfc3986#section-3.2.2>`_'. (hyperlink-reference-missing-backtick)
+clones/rebased_translations/python/python-docs-zh-cn/whatsnew/changelog.po:1397: missing backtick before hyperlink reference: '节 <https://www.rfc-editor.org/rfc/rfc3986#section-3.2.2>`_'. (hyperlink-reference-missing-backtick)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.0.po:603: inline literal missing (escaped) space after literal: '``*``来' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.0.po:603: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.0.po:603: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
