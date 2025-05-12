@@ -123,7 +123,7 @@ clones/rebased_translations/python/python-docs-ja/library/shutil.po:626: trailin
 clones/rebased_translations/python/python-docs-ja/library/shutil.po:697: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/shutil.po:1178: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/signal.po:574: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/math.po:1037: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/library/math.po:1033: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/json.po:339: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/json.po:645: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/token.po:36: role missing opening tag colon ( file:`). (missing-space-before-role)
