@@ -330,10 +330,10 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.13",
-    "completion": 80.2175372986924,
-    "change": -0.6439209386234097,
+    "completion": 80.22148773389868,
+    "change": -0.6399705034171319,
     "translators": {
-      "number": 232,
+      "number": 231,
       "link": false
     },
     "built": true,
@@ -351,7 +351,7 @@
     "completion": 62.698673970582426,
     "change": 0.11456262098207759,
     "translators": {
-      "number": 312,
+      "number": 313,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
     },
     "built": true,
