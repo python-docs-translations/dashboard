@@ -168,8 +168,8 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 47.43696095858845,
-    "change": 4.641516887221016,
+    "completion": 47.48041345710712,
+    "change": 4.684969385739684,
     "translators": {
       "number": 23,
       "link": "https://github.com/python/python-docs-ko/blob/3.13/TRANSLATORS"
@@ -276,8 +276,8 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.13",
-    "completion": 61.379946013562446,
-    "change": 1.412864573046285,
+    "completion": 61.447099874909476,
+    "change": 1.4787016920139564,
     "translators": {
       "number": 6,
       "link": false
