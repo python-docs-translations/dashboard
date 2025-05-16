@@ -20,9 +20,9 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
     ]
 
 
-def get_completion(
+def get_stats(
     clones_dir: str, repo: str
-) -> tuple[float, 'TranslatorsData', str, float]:
+) -> tuple[potodo.PoProjectStats, 'TranslatorsData', str, float]:
     clone_path = Path(clones_dir, 'translations', repo)
     for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + [
         'master',
@@ -43,15 +43,15 @@ def get_completion(
             translators_data = TranslatorsData(translators_number, translators_link)
             break
     path_for_merge = Path(clones_dir, 'rebased_translations', repo)
-    completion = potodo.merge_and_scan_path(
+    po_project = potodo.merge_and_scan_path(
         clone_path,
         pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
         merge_path=path_for_merge,
         hide_reserved=False,
         api_url='',
-    ).completion
+    )
 
-    if completion:
+    if po_project.completion:
         # Fetch commit from before 30 days ago and checkout
         try:
             commit = next(
@@ -73,9 +73,9 @@ def get_completion(
     else:
         month_ago_completion = 0.0
 
-    change = completion - month_ago_completion
+    change = po_project.completion - month_ago_completion
 
-    return completion, translators_data, branch, change
+    return po_project, translators_data, branch, change
 
 
 @dataclass(frozen=True)

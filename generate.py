@@ -7,6 +7,7 @@ from collections.abc import Iterator
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 
 from git import Repo
 from jinja2 import Template
@@ -14,7 +15,7 @@ from urllib3 import PoolManager
 
 import build_status
 import contribute
-from completion import branches_from_devguide, get_completion, TranslatorsData
+from completion import branches_from_devguide, get_stats, TranslatorsData
 from repositories import Language, get_languages_and_repos
 from word_count import get_word_count
 
@@ -56,9 +57,9 @@ def get_project_data(
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
-        completion, translators_data, branch, change = get_completion(clones_dir, repo)
+        stats, translators_data, branch, change = get_stats(clones_dir, repo)
     else:
-        completion = 0.0
+        stats = SimpleNamespace(completion=0.0)
         translators_data = TranslatorsData(0, False)
         change = 0.0
         branch = ''
@@ -66,7 +67,7 @@ def get_project_data(
         language,
         repo,
         branch,
-        completion,
+        stats.completion,
         change,
         translators_data,
         built,
