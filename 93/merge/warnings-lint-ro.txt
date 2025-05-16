@@ -1,0 +1,1 @@
+clones/rebased_translations/octaG-M/python-docs-ro/tutorial/introduction.po:525: trailing whitespace (trailing-whitespace)

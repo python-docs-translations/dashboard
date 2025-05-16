@@ -1,0 +1,1 @@
+clones/rebased_translations/python/python-docs-pt-br/whatsnew/changelog.po:1527: trailing whitespace (trailing-whitespace)
