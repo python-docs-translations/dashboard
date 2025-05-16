@@ -15,7 +15,7 @@
 <thead>
 <tr>
   <th>path</th>
-  <th>completion</th>
+  <th>completion*</th>
 </tr>
 </thead>
 <tbody>
@@ -24,10 +24,10 @@
   <td>▶ {{ directory.path.name }} ({{ directory.files_stats | length }})</td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ directory.completion }}%;background-color: #4caf50;">
-        {{ '{:.2f}%'.format(directory.completion) }}
+        {{ '{:.2f}%'.format(directory.completion) }} ({{ directory.translated }} / {{ directory.entries }})
     </div>
     <div class="progress-bar-outer-label">
-        {{ '{:.2f}%'.format(directory.completion) }}
+        {{ '{:.2f}%'.format(directory.completion) }} ({{ directory.translated }} / {{ directory.entries }})
     </div>
   </td>
 </tr>
@@ -36,10 +36,10 @@
   <td>{{ file.filename }}</td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ file.percent_translated }}%;background-color: #4caf50;">
-        {{ file.percent_translated }}%
+        {{ file.percent_translated }}% ({{ file.translated }} / {{ file.entries }})
     </div>
     <div class="progress-bar-outer-label">
-        {{ file.percent_translated }}%
+        {{ file.percent_translated }}% ({{ file.translated }} / {{ file.entries }})
     </div>
   </td>
 </tr>
@@ -47,6 +47,7 @@
 {% endfor %}
 </tbody>
 </table>
+<p>* in brackets: number of strings (entries) translated / total</p>
 </body>
 <script>
   function updateProgressBarVisibility() {
