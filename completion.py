@@ -16,7 +16,7 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
     p = devguide_dir.joinpath('include/release-cycle.json')
     data = json.loads(p.read_text())
     return [
-        branch for branch in data if data[branch]['status'] in ('bugfix', 'security')
+        branch for branch in data if data[branch]['status'] in ('bugfix', 'security', 'prerelease')
     ]
 
 
