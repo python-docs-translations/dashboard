@@ -18,9 +18,8 @@
   <th>completion*</th>
 </tr>
 </thead>
-<tbody>
 {% for directory in stats.stats_by_directory() %}
-<tr>
+<tr class="directory" data-toggle="directory-{{ loop.index }}">
   <td>▶ {{ directory.path.name }} ({{ directory.files_stats | length }})</td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ directory.completion }}%;background-color: #4caf50;">
@@ -31,6 +30,7 @@
     </div>
   </td>
 </tr>
+<tbody class="files" id="directory-{{ loop.index }}" style="display: none;">
 {% for file in directory.files_stats | sort(attribute='filename') %}
 <tr>
   <td>{{ file.filename }}</td>
@@ -44,8 +44,8 @@
   </td>
 </tr>
 {% endfor %}
-{% endfor %}
 </tbody>
+{% endfor %}
 </table>
 <p>* in brackets: number of strings (entries) translated / total</p>
 </body>
@@ -66,5 +66,23 @@
   updateProgressBarVisibility();
 
   window.addEventListener('resize', updateProgressBarVisibility);
+
+  document.querySelectorAll('.directory').forEach(directoryRow => {
+    directoryRow.addEventListener('click', () => {
+      const toggleId = directoryRow.getAttribute('data-toggle');
+      const filesTable = document.getElementById(toggleId);
+      const arrow = directoryRow.querySelector('td:first-child');
+
+      if (filesTable.style.display === 'none') {
+        filesTable.style.display = 'table-row-group';
+        arrow.textContent = arrow.textContent.replace('▶', '▼');
+      } else {
+        filesTable.style.display = 'none';
+        arrow.textContent = arrow.textContent.replace('▼', '▶');
+      }
+
+      updateProgressBarVisibility();
+    });
+  });
 </script>
 </html>
