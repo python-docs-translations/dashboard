@@ -39,7 +39,7 @@ main | <a href="metadata.html" target="_self">meta</a>
     {% if project.translators.link %}</a>{% endif %}
   </td>
   <td data-label="completion">
-    <a href="{{ project.language.code }}.html">
+    <a href="{{ project.language.code }}.html" target="_self">
     <div class="progress-bar"
          style="width: {{ project.completion }}%;{% if project.change %}background: linear-gradient(to left, #94cf96 {{ project.change * 100 / project.completion }}%, #4caf50 {{ project.change * 100 / project.completion }}%);{% else %}background-color: #4caf50;{% endif %}"
     >
