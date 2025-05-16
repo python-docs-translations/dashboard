@@ -21,7 +21,7 @@
 <tbody>
 {% for directory in stats.stats_by_directory() %}
 <tr>
-  <td>{{ directory.path.stem }}</td>
+  <td>▶ {{ directory.path.name }} ({{ directory.files_stats | length }})</td>
   <td data-label="completion">
     <div class="progress-bar" style="width: {{ directory.completion }}%;background-color: #4caf50;">
         {{ '{:.2f}%'.format(directory.completion) }}
@@ -31,6 +31,19 @@
     </div>
   </td>
 </tr>
+{% for file in directory.files_stats %}
+<tr>
+  <td>{{ file.filename }}</td>
+  <td data-label="completion">
+    <div class="progress-bar" style="width: {{ file.percent_translated }}%;background-color: #4caf50;">
+        {{ file.percent_translated }}%
+    </div>
+    <div class="progress-bar-outer-label">
+        {{ file.percent_translated }}%
+    </div>
+  </td>
+</tr>
+{% endfor %}
 {% endfor %}
 </tbody>
 </table>
