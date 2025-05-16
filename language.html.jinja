@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <title>Python Docs Translation Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Python Docs Translation Dashboard">
+  <base target="_blank">
+</head>
+<body>
+<h1>Python Docs Translation Dashboard: {{ language.name }}</h1>
+<nav class="switchpages">
+<a href="index.html" target="_self">main</a> | <a href="metadata.html" target="_self">meta</a>
+</nav>
+<table>
+<thead>
+<tr>
+  <th>path</th>
+  <th>completion</th>
+</tr>
+</thead>
+<tbody>
+{% for directory in stats.stats_by_directory() %}
+<tr>
+  <td>{{ directory.path.stem }}</td>
+  <td data-label="completion">
+    <div class="progress-bar" style="width: {{ directory.completion }}%;background-color: #4caf50;">
+        {{ '{:.2f}%'.format(directory.completion) }}
+    </div>
+    <div class="progress-bar-outer-label">
+        {{ '{:.2f}%'.format(directory.completion) }}
+    </div>
+  </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+<script>
+  function updateProgressBarVisibility() {
+    document.querySelectorAll('.progress-bar').forEach(progressBar => {
+      const barWithOverflowWidth = progressBar.scrollWidth;
+      const barWidth = progressBar.clientWidth;
+
+      if (barWidth < barWithOverflowWidth) {
+        progressBar.classList.add('low');
+      } else {
+        progressBar.classList.remove('low');
+      }
+    });
+  }
+
+  updateProgressBarVisibility();
+
+  window.addEventListener('resize', updateProgressBarVisibility);
+</script>
+</html>

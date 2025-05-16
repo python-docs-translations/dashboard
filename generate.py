@@ -58,6 +58,11 @@ def get_project_data(
     built = language.code in languages_built
     if repo:
         stats, translators_data, branch, change = get_stats(clones_dir, repo)
+
+        template = Template(Path('language.html.jinja').read_text())
+        Path(f'{language.code}.html').write_text(
+            template.render(stats=stats, language=language)
+        )
     else:
         stats = SimpleNamespace(completion=0.0)
         translators_data = TranslatorsData(0, False)
