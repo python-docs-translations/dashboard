@@ -31,7 +31,7 @@
     </div>
   </td>
 </tr>
-{% for file in directory.files_stats %}
+{% for file in directory.files_stats | sort(attribute='filename') %}
 <tr>
   <td>{{ file.filename }}</td>
   <td data-label="completion">
