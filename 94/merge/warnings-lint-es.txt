@@ -1,0 +1,4 @@
+clones/rebased_translations/python/python-docs-es/c-api/refcounting.po:40: role with no backticks: " :term:'immortal' " (role-without-backticks)
+clones/rebased_translations/python/python-docs-es/c-api/refcounting.po:40: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-es/c-api/refcounting.po:92: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-es/c-api/refcounting.po:269: trailing whitespace (trailing-whitespace)
