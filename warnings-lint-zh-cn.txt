@@ -238,7 +238,7 @@ clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.12.po:5497: miss
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.12.po:5327: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.12.po:5845: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.8.po:4609: missing space before role ( 的规范更新了:rfc:`). (missing-space-before-role)
-clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.10.po:3481: missing space before role ( 和:data:`). (missing-space-before-role)
+clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.10.po:3464: missing space before role ( 和:data:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.6.po:3986: missing space before role ( 直接解码:attr:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.6.po:2215: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.6.po:2215: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
