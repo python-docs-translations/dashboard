@@ -42,7 +42,7 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.13",
-    "completion": 33.68760508946721,
+    "completion": 33.68635028985871,
     "change": 0.0,
     "translators": {
       "number": 241,
@@ -150,7 +150,7 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.11",
-    "completion": 50.07277837729315,
+    "completion": 50.071523577684644,
     "change": 0.10540316711421127,
     "translators": {
       "number": 47,
@@ -168,7 +168,7 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 44.869124400833186,
+    "completion": 44.86786960122468,
     "change": 4.528571787085603,
     "translators": {
       "number": 23,
@@ -276,8 +276,8 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
-    "completion": 59.08474916555826,
-    "change": 59.08474916555826,
+    "completion": 59.08349436594976,
+    "change": 59.08349436594976,
     "translators": {
       "number": 156,
       "link": false
@@ -330,7 +330,7 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
-    "completion": 77.96571887469571,
+    "completion": 77.96446407508721,
     "change": 2.1921349160539023,
     "translators": {
       "number": 223,
@@ -348,7 +348,7 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.13",
-    "completion": 59.006951589831104,
+    "completion": 59.0056967902226,
     "change": 0.06023038120812174,
     "translators": {
       "number": 314,
@@ -366,7 +366,7 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
-    "completion": 36.09556553818355,
+    "completion": 36.09431073857505,
     "change": 1.2133912214219365,
     "translators": {
       "number": 120,
@@ -402,8 +402,8 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "completion": 50.37894948176776,
-    "change": 50.37894948176776,
+    "completion": 50.37769468215926,
+    "change": 50.37769468215926,
     "translators": {
       "number": 13,
       "link": false
