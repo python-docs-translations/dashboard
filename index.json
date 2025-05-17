@@ -42,7 +42,7 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.13",
-    "completion": 33.69224205004643,
+    "completion": 33.69098712446352,
     "change": 0.0,
     "translators": {
       "number": 241,
@@ -60,7 +60,7 @@
     },
     "repository": "pygreece/python-docs-gr",
     "branch": "3.14",
-    "completion": 7.011269231734558,
+    "completion": 7.010014306151645,
     "change": 0.5847953216374266,
     "translators": {
       "number": 15,
@@ -114,7 +114,7 @@
     },
     "repository": "python/python-docs-id",
     "branch": "3.9",
-    "completion": 7.584770223125768,
+    "completion": 7.5835152975428555,
     "change": 0.0,
     "translators": {
       "number": 24,
@@ -132,7 +132,7 @@
     },
     "repository": "python/python-docs-it",
     "branch": "3.13",
-    "completion": 3.420927139020656,
+    "completion": 3.4196722134377433,
     "change": 0.0,
     "translators": {
       "number": 3,
@@ -150,7 +150,7 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.11",
-    "completion": 50.08031523730643,
+    "completion": 50.07906031172352,
     "change": 0.10541374896468625,
     "translators": {
       "number": 47,
@@ -168,7 +168,7 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 44.87488391938358,
+    "completion": 44.873628993800665,
     "change": 4.52902642873277,
     "translators": {
       "number": 23,
@@ -240,7 +240,7 @@
     },
     "repository": "python/python-docs-pl",
     "branch": "3.14",
-    "completion": 10.645533719850413,
+    "completion": 10.6442787942675,
     "change": 0.13553196295459635,
     "translators": {
       "number": 25,
@@ -276,8 +276,8 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
-    "completion": 59.0919358482042,
-    "change": 59.0919358482042,
+    "completion": 59.09068092262129,
+    "change": 59.09068092262129,
     "translators": {
       "number": 156,
       "link": false
@@ -330,7 +330,7 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
-    "completion": 77.95848706171724,
+    "completion": 77.95723213613432,
     "change": 2.18106066310267,
     "translators": {
       "number": 223,
@@ -348,7 +348,7 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.13",
-    "completion": 59.01538538764651,
+    "completion": 59.0141304620636,
     "change": 0.060236427979816654,
     "translators": {
       "number": 314,
@@ -366,7 +366,7 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
-    "completion": 36.10044424365635,
+    "completion": 36.099189318073435,
     "change": 1.2135130386768012,
     "translators": {
       "number": 120,
@@ -384,7 +384,7 @@
     },
     "repository": "python/python-docs-tr",
     "branch": "3.12",
-    "completion": 4.80009035464197,
+    "completion": 4.798835429059057,
     "change": 0.0,
     "translators": {
       "number": 29,
@@ -402,8 +402,8 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "completion": 50.38526215395427,
-    "change": 50.38526215395427,
+    "completion": 50.38400722837136,
+    "change": 50.38400722837136,
     "translators": {
       "number": 13,
       "link": false
