@@ -1,4 +1,4 @@
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/refcounting.rst:18: WARNING: inconsistent term references in translated message. original: [':term:`immortal`'], translated: [] [i18n.inconsistent_references]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/refcounting.rst:204: WARNING: inconsistent references in translated message. original: [], translated: ['de_'] [i18n.inconsistent_references]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/refcounting.rst:204: ERROR: Unknown target name: "de". [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/refcounting.rst:37:<translated>:1: WARNING: undefined label: 'compilación de python con free threading <free-threading-build> `, si *refcnt* es mas mayor que ``uint32_max`' [ref.ref]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/refcounting.rst:213: WARNING: inconsistent references in translated message. original: [], translated: ['de_'] [i18n.inconsistent_references]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/refcounting.rst:213: ERROR: Unknown target name: "de". [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/refcounting.rst:46:<translated>:1: WARNING: undefined label: 'compilación de python con free threading <free-threading-build> `, si *refcnt* es mas mayor que ``uint32_max`' [ref.ref]
