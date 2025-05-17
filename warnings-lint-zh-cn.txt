@@ -1,4 +1,4 @@
-clones/rebased_translations/python/python-docs-zh-cn/reference/compound_stmts.po:2637: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-zh-cn/reference/compound_stmts.po:2647: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-zh-cn/reference/expressions.po:184: inline literal missing (escaped) space after literal: '``import __spam``中' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-zh-cn/reference/expressions.po:184: inline literal missing (escaped) space after literal: '``import __foo.bar``中' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-zh-cn/reference/expressions.po:184: inline literal missing (escaped) space after literal: '``__foo``不' (missing-space-after-literal)
