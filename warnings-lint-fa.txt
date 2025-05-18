@@ -1,0 +1,1 @@
+clones/rebased_translations/revisto/python-docs-fa/tutorial/errors.po:70: role missing (escaped) space after role: ':func:`print`ش' (missing-space-after-role)

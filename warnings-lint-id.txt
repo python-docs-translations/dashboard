@@ -11,7 +11,7 @@ clones/rebased_translations/python/python-docs-id/tutorial/controlflow.po:1444: 
 clones/rebased_translations/python/python-docs-id/tutorial/controlflow.po:1444: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-id/library/csv.po:514: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-id/library/binary.po:29: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-id/library/json.po:210: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-id/library/json.po:215: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-id/library/calendar.po:35: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-id/library/calendar.po:373: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-id/library/distribution.po:29: missing underscore after closing backtick in hyperlink (missing-underscore-after-hyperlink)
