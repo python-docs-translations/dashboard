@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+  <title>Python Docs Translation Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Python Docs Translation Dashboard">
+  <base target="_blank">
+</head>
+<body>
+<h1>Python Docs Translation Dashboard: {{ language.name }}</h1>
+<nav class="switchpages">
+<a href="index.html" target="_self">main</a> | <a href="metadata.html" target="_self">meta</a>
+</nav>
+<table>
+<thead>
+<tr>
+  <th>path</th>
+  <th>completion*</th>
+</tr>
+</thead>
+{% for directory in stats.stats_by_directory() %}
+<tr class="directory" data-toggle="directory-{{ loop.index }}">
+  <td>▶ {{ directory.path.name }} ({{ directory.files_stats | length }})</td>
+  <td data-label="completion">
+    <div class="progress-bar" style="width: {{ directory.completion }}%;background-color: #4caf50;">
+        {{ '{:.2f}%'.format(directory.completion) }} ({{ directory.translated }} / {{ directory.entries }})
+    </div>
+    <div class="progress-bar-outer-label">
+        {{ '{:.2f}%'.format(directory.completion) }} ({{ directory.translated }} / {{ directory.entries }})
+    </div>
+  </td>
+</tr>
+<tbody class="files" id="directory-{{ loop.index }}" style="display: none;">
+{% for file in directory.files_stats | sort(attribute='filename') %}
+<tr>
+  <td>{{ file.filename }}</td>
+  <td data-label="completion">
+    <div class="progress-bar" style="width: {{ file.percent_translated }}%;background-color: #4caf50;">
+        {{ file.percent_translated }}% ({{ file.translated }} / {{ file.entries }})
+    </div>
+    <div class="progress-bar-outer-label">
+        {{ file.percent_translated }}% ({{ file.translated }} / {{ file.entries }})
+    </div>
+  </td>
+</tr>
+{% endfor %}
+</tbody>
+{% endfor %}
+</table>
+<p>* in brackets: number of strings (entries) translated / total</p>
+</body>
+<script>
+  function updateProgressBarVisibility() {
+    document.querySelectorAll('.progress-bar').forEach(progressBar => {
+      const barWithOverflowWidth = progressBar.scrollWidth;
+      const barWidth = progressBar.clientWidth;
+
+      if (barWidth < barWithOverflowWidth) {
+        progressBar.classList.add('low');
+      } else {
+        progressBar.classList.remove('low');
+      }
+    });
+  }
+
+  updateProgressBarVisibility();
+
+  window.addEventListener('resize', updateProgressBarVisibility);
+
+  document.querySelectorAll('.directory').forEach(directoryRow => {
+    directoryRow.addEventListener('click', () => {
+      const toggleId = directoryRow.getAttribute('data-toggle');
+      const filesTable = document.getElementById(toggleId);
+      const arrow = directoryRow.querySelector('td:first-child');
+
+      if (filesTable.style.display === 'none') {
+        filesTable.style.display = 'table-row-group';
+        arrow.textContent = arrow.textContent.replace('▶', '▼');
+      } else {
+        filesTable.style.display = 'none';
+        arrow.textContent = arrow.textContent.replace('▼', '▶');
+      }
+
+      updateProgressBarVisibility();
+    });
+  });
+</script>
+</html>
