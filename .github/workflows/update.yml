@@ -21,7 +21,7 @@ jobs:
       - run: sudo apt-get install -y gettext
       - run: pip install -r requirements.txt
       - run: uv run generate.py  # generates index.html and index.json
-      - run: mkdir -p build && cp index.* style.css *.html build
+      - run: mkdir -p build && cp index.* style.css ./*.html build
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
