@@ -1,2 +1,0 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/tutorial/errors.rst:26:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/tutorial/errors.rst:26:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
