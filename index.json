@@ -294,8 +294,8 @@
     },
     "repository": "octaG-M/python-docs-ro",
     "branch": "main",
-    "completion": 0.2747838743271559,
-    "change": 0.0,
+    "completion": 0.27603859521449453,
+    "change": 0.001254720887338634,
     "translators": {
       "number": 1,
       "link": "https://github.com/octaG-M/python-docs-ro/blob/main/TRANSLATORS"
