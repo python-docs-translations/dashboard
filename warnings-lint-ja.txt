@@ -209,7 +209,7 @@ clones/rebased_translations/python/python-docs-ja/library/stdtypes.po:9572: trai
 clones/rebased_translations/python/python-docs-ja/library/collections.po:1828: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/re.po:63: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/re.po:1234: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/re.po:2514: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/library/re.po:2512: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/logging.po:1155: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/logging.po:2524: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/enum.po:507: Bad dedent in block (bad-dedent)
