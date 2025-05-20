@@ -1,5 +1,5 @@
-clones/rebased_translations/python/python-docs-ja/glossary.po:904: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/glossary.po:2282: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/glossary.po:917: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/glossary.po:2295: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/reference/datamodel.po:1064: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/reference/lexical_analysis.po:669: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/reference/expressions.po:645: trailing whitespace (trailing-whitespace)
