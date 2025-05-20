@@ -113,12 +113,12 @@
       "name": "Indonesian"
     },
     "repository": "python/python-docs-id",
-    "branch": "3.9",
-    "completion": 7.578057377974585,
+    "branch": "3.14",
+    "completion": 0.0,
     "change": 0.0,
     "translators": {
-      "number": 24,
-      "link": "https://github.com/python/python-docs-id/blob/3.9/TRANSLATORS"
+      "number": 25,
+      "link": "https://github.com/python/python-docs-id/blob/3.14/TRANSLATORS"
     },
     "built": true,
     "in_switcher": false,
@@ -366,8 +366,8 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
-    "completion": 36.06884353400153,
-    "change": 1.2130411330080193,
+    "completion": 36.13407428779307,
+    "change": 1.2782718867995584,
     "translators": {
       "number": 120,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
