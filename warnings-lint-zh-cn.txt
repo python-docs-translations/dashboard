@@ -95,7 +95,7 @@ clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.6.po:3986: missi
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.5.po:4756: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.5.po:4756: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.5.po:4756: missing space before default role: '移除了``.pyo``'. (missing-space-before-default-role)
-clones/rebased_translations/python/python-docs-zh-cn/whatsnew/changelog.po:3667: missing backtick before hyperlink reference: '节 <https://www.rfc-editor.org/rfc/rfc3986#section-3.2.2>`_'. (hyperlink-reference-missing-backtick)
+clones/rebased_translations/python/python-docs-zh-cn/whatsnew/changelog.po:3673: missing backtick before hyperlink reference: '节 <https://www.rfc-editor.org/rfc/rfc3986#section-3.2.2>`_'. (hyperlink-reference-missing-backtick)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.1.po:1320: role missing (escaped) space after role: ':func:`sys._getframe`返' (missing-space-after-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.7.po:350: missing space before role ( 开关现在会自动启用:option:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.7.po:600: trailing whitespace (trailing-whitespace)
