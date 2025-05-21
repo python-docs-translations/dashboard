@@ -49,7 +49,7 @@ clones/rebased_translations/python/python-docs-zh-cn/c-api/time.po:97: found an 
 clones/rebased_translations/python/python-docs-zh-cn/c-api/structures.po:710: inline literal missing (escaped) space after literal: '``Py_READONLY | Py_RELATIVE_OFFSET``来' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-zh-cn/c-api/structures.po:710: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/c-api/structures.po:710: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-clones/rebased_translations/python/python-docs-zh-cn/c-api/memory.po:1226: role missing (escaped) space after role: ':envvar:`PYTHONMALLOC`（' (missing-space-after-role)
+clones/rebased_translations/python/python-docs-zh-cn/c-api/memory.po:1232: role missing (escaped) space after role: ':envvar:`PYTHONMALLOC`（' (missing-space-after-role)
 clones/rebased_translations/python/python-docs-zh-cn/c-api/frame.po:226: missing space before role (除非使用:pep:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.13.po:3553: missing space before role (弃用:program:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.13.po:4372: missing space before role ( 在:gh:`). (missing-space-before-role)
