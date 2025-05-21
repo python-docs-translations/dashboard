@@ -19,7 +19,7 @@ clones/rebased_translations/python/python-docs-ja/library/sched.po:191: trailing
 clones/rebased_translations/python/python-docs-ja/library/pickle.po:875: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/pickle.po:1718: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/msvcrt.po:86: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/pdb.po:450: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/library/pdb.po:471: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/email.headerregistry.po:188: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-ja/library/email.headerregistry.po:188: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-ja/library/email.headerregistry.po:209: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
