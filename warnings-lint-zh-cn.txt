@@ -1,4 +1,4 @@
-clones/rebased_translations/python/python-docs-zh-cn/reference/compound_stmts.po:2647: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-zh-cn/reference/compound_stmts.po:2642: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-zh-cn/library/dis.po:882: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/library/dis.po:882: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/library/dis.po:882: missing space before default role: ''. (missing-space-before-default-role)
