@@ -30,7 +30,7 @@ clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.12.po:5845: trai
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.7.po:600: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.0.po:1875: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.0.po:1875: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.14.po:1276: missing space before < in hyperlink (missing-space-in-hyperlink)
+clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.14.po:1275: missing space before < in hyperlink (missing-space-in-hyperlink)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.4.po:1896: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/3.4.po:1896: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/whatsnew/2.3.po:1364: trailing whitespace (trailing-whitespace)
