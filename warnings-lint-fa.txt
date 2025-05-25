@@ -1,2 +1,0 @@
-clones/rebased_translations/revisto/python-docs-fa/library/functions.po:559: missing space before role ( تابع:func:`). (missing-space-before-role)
-clones/rebased_translations/revisto/python-docs-fa/library/functions.po:451: role missing (escaped) space after role: ':term:`asynchronous iterator`د' (missing-space-after-role)
