@@ -1,1 +1,0 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/functions.rst:146:<translated>:1: WARNING: undefined label: 'truth testing procedure <truth> تبدیل می شود. اگر آرگومان نادرست یا حذف شده باشد، ``false`' [ref.ref]
