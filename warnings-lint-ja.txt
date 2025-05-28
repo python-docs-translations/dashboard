@@ -86,7 +86,7 @@ clones/rebased_translations/python/python-docs-ja/library/smtplib.po:416: traili
 clones/rebased_translations/python/python-docs-ja/library/email.header.po:299: inline literal missing (escaped) space after literal: '``\\r\\n``を' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-ja/library/email.header.po:299: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-ja/library/email.header.po:299: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-clones/rebased_translations/python/python-docs-ja/library/math.po:1033: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/library/math.po:1032: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/threading.po:204: inline literal missing (escaped) space after literal: '``activeCount``は' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-ja/library/threading.po:216: inline literal missing (escaped) space after literal: '``currentThread``は' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-ja/library/threading.po:1785: inline literal missing (escaped) space after literal: '``notifyAll``は' (missing-space-after-literal)
