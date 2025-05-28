@@ -384,10 +384,10 @@
     },
     "repository": "python/python-docs-tr",
     "branch": "3.12",
-    "completion": 4.75233685681838,
-    "change": 0.0,
+    "completion": 4.754832832058306,
+    "change": 0.0024959752399258406,
     "translators": {
-      "number": 29,
+      "number": 30,
       "link": "https://github.com/python/python-docs-tr/blob/3.12/TRANSLATORS"
     },
     "built": true,
