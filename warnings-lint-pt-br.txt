@@ -1,1 +1,0 @@
-clones/rebased_translations/python/python-docs-pt-br/sphinx.po:522: trailing whitespace (trailing-whitespace)
