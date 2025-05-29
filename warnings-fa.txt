@@ -1,0 +1,1 @@
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/functions.rst:205: WARNING: inconsistent term references in translated message. original: [':ref:`buffer interface <bufferobjects>`'], translated: [] [i18n.inconsistent_references]
