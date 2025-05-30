@@ -42,7 +42,7 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.13",
-    "completion": 33.42068810602373,
+    "completion": 33.41944018069959,
     "change": 0.0,
     "translators": {
       "number": 241,
@@ -150,7 +150,7 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "completion": 50.36252230666517,
+    "completion": 50.36127438134102,
     "change": 0.7749616262962817,
     "translators": {
       "number": 47,
@@ -168,8 +168,8 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 45.5080927957271,
-    "change": 4.6073402967566395,
+    "completion": 45.50684487040296,
+    "change": 4.598604819487605,
     "translators": {
       "number": 23,
       "link": "https://github.com/python/python-docs-ko/blob/3.13/TRANSLATORS"
@@ -276,8 +276,8 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
-    "completion": 59.17037924450601,
-    "change": 59.17037924450601,
+    "completion": 59.16913131918186,
+    "change": 59.16913131918186,
     "translators": {
       "number": 155,
       "link": false
@@ -330,7 +330,7 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
-    "completion": 77.86679645090038,
+    "completion": 77.86554852557623,
     "change": 2.242521807495038,
     "translators": {
       "number": 223,
@@ -348,7 +348,7 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.13",
-    "completion": 58.58759811812861,
+    "completion": 58.58635019280446,
     "change": 0.09484232463529452,
     "translators": {
       "number": 314,
@@ -366,7 +366,7 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
-    "completion": 35.94024933547976,
+    "completion": 35.93900141015562,
     "change": 1.3228008435975198,
     "translators": {
       "number": 120,
@@ -402,8 +402,8 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "completion": 49.98190508279985,
-    "change": 49.98190508279985,
+    "completion": 49.9806571574757,
+    "change": 49.9806571574757,
     "translators": {
       "number": 13,
       "link": false
