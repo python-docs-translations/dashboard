@@ -42,7 +42,7 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.13",
-    "completion": 33.41402243489762,
+    "completion": 33.40029696916761,
     "change": 0.0,
     "translators": {
       "number": 241,
@@ -150,8 +150,8 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "completion": 50.35873376339793,
-    "change": 0.78110377699862,
+    "completion": 50.337521679997,
+    "change": 0.7811037769986129,
     "translators": {
       "number": 47,
       "link": false
@@ -168,8 +168,8 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 45.59474938547346,
-    "change": 4.494466141771582,
+    "completion": 45.573537302072545,
+    "change": 4.488227293712491,
     "translators": {
       "number": 23,
       "link": "https://github.com/python/python-docs-ko/blob/3.13/TRANSLATORS"
@@ -276,8 +276,8 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
-    "completion": 59.16798722283917,
-    "change": 59.16798722283917,
+    "completion": 59.165491683615535,
+    "change": 59.165491683615535,
     "translators": {
       "number": 155,
       "link": false
@@ -330,7 +330,7 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
-    "completion": 77.85208939021499,
+    "completion": 77.82339068914315,
     "change": 2.242241992438508,
     "translators": {
       "number": 223,
@@ -348,8 +348,8 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.13",
-    "completion": 58.57654442683703,
-    "change": 0.09483049049823933,
+    "completion": 58.555332343436106,
+    "change": 0.09483049049823222,
     "translators": {
       "number": 314,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
@@ -402,8 +402,8 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "completion": 49.97192518373407,
-    "change": 49.97192518373407,
+    "completion": 49.950713100333154,
+    "change": 49.950713100333154,
     "translators": {
       "number": 13,
       "link": false
