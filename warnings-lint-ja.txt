@@ -262,7 +262,7 @@ clones/rebased_translations/python/python-docs-ja/library/os.po:6353: trailing w
 clones/rebased_translations/python/python-docs-ja/library/os.po:6533: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/os.po:6651: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/os.po:6717: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/typing.po:1905: role missing opening tag colon ( ref:`). (missing-space-before-role)
+clones/rebased_translations/python/python-docs-ja/library/typing.po:1904: role missing opening tag colon ( ref:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-ja/library/xmlrpc.client.po:81: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/asyncio-policy.po:158: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/functions.po:1043: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
