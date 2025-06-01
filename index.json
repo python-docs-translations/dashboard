@@ -6,7 +6,7 @@
     },
     "repository": "Abdur-rahmaanJ/python-docs-ar",
     "branch": "master",
-    "completion": 0.01372495196266813,
+    "completion": 0.013724780715435387,
     "change": 0.0,
     "translators": {
       "number": 3,
@@ -24,8 +24,8 @@
     },
     "repository": "python/python-docs-bn-in",
     "branch": "3.14",
-    "completion": 0.10979961570134504,
-    "change": 0.10979961570134504,
+    "completion": 0.1097982457234831,
+    "change": 0.1097982457234831,
     "translators": {
       "number": 1,
       "link": false
@@ -42,7 +42,7 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.13",
-    "completion": 33.39904673970005,
+    "completion": 33.39863001734313,
     "change": 0.0,
     "translators": {
       "number": 241,
@@ -60,8 +60,8 @@
     },
     "repository": "pygreece/python-docs-gr",
     "branch": "3.14",
-    "completion": 7.174406707758341,
-    "change": 0.7760836473435981,
+    "completion": 7.174317192159407,
+    "change": 0.7760739640909824,
     "translators": {
       "number": 15,
       "link": "https://github.com/pygreece/python-docs-gr/blob/3.14/TRANSLATORS"
@@ -78,7 +78,7 @@
     },
     "repository": "CuriousLearner/python-docs-hi-in",
     "branch": "master",
-    "completion": 0.004990891622788411,
+    "completion": 0.004990829351067413,
     "change": 0.0,
     "translators": {
       "number": 1,
@@ -132,7 +132,7 @@
     },
     "repository": "python/python-docs-it",
     "branch": "3.13",
-    "completion": 3.3850722431562397,
+    "completion": 3.385030007361473,
     "change": 0.0,
     "translators": {
       "number": 3,
@@ -150,8 +150,8 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "completion": 50.34936241359519,
-    "change": 0.7972949367404496,
+    "completion": 50.34873420090584,
+    "change": 0.7972849888330202,
     "translators": {
       "number": 47,
       "link": false
@@ -168,8 +168,8 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.13",
-    "completion": 45.626731215531656,
-    "change": 4.458113942055746,
+    "completion": 45.6261619274583,
+    "change": 4.444333537125537,
     "translators": {
       "number": 23,
       "link": "https://github.com/python/python-docs-ko/blob/3.13/TRANSLATORS"
@@ -222,8 +222,8 @@
     },
     "repository": "revisto/python-docs-fa",
     "branch": "3.13",
-    "completion": 0.28323309959324233,
-    "change": 0.23581962917675242,
+    "completion": 0.2832295656730757,
+    "change": 0.2358166868379353,
     "translators": {
       "number": 14,
       "link": false
@@ -240,8 +240,8 @@
     },
     "repository": "python/python-docs-pl",
     "branch": "3.14",
-    "completion": 11.55516182966087,
-    "change": 1.1117211089761199,
+    "completion": 11.55501765505883,
+    "change": 1.1117072379502666,
     "translators": {
       "number": 25,
       "link": false
@@ -276,8 +276,8 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
-    "completion": 59.175754248496496,
-    "change": 59.175754248496496,
+    "completion": 59.175015908268556,
+    "change": 59.175015908268556,
     "translators": {
       "number": 155,
       "link": false
@@ -294,8 +294,8 @@
     },
     "repository": "octaG-M/python-docs-ro",
     "branch": "main",
-    "completion": 0.27325131634766553,
-    "change": 0.001247722905697135,
+    "completion": 0.2732479069709409,
+    "change": 0.0012477073377668568,
     "translators": {
       "number": 1,
       "link": "https://github.com/octaG-M/python-docs-ro/blob/main/TRANSLATORS"
@@ -312,8 +312,8 @@
     },
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.14",
-    "completion": 0.1884061587602625,
-    "change": 0.1884061587602625,
+    "completion": 0.18840380800279485,
+    "change": 0.18840380800279485,
     "translators": {
       "number": 23,
       "link": false
@@ -330,8 +330,8 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
-    "completion": 77.81299129089412,
-    "change": 2.2296808324807245,
+    "completion": 77.81202041249205,
+    "change": 2.2296530125893668,
     "translators": {
       "number": 223,
       "link": false
@@ -348,8 +348,8 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.13",
-    "completion": 58.556883687270734,
-    "change": 0.10231327826716807,
+    "completion": 58.556153068736194,
+    "change": 0.10231200169688037,
     "translators": {
       "number": 314,
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
@@ -366,8 +366,8 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
-    "completion": 35.93192423826517,
-    "change": 1.3225862800389336,
+    "completion": 35.93147591300984,
+    "change": 1.3225697780328645,
     "translators": {
       "number": 120,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
@@ -384,8 +384,8 @@
     },
     "repository": "python/python-docs-tr",
     "branch": "3.12",
-    "completion": 4.7538242707059615,
-    "change": 0.002495445811393715,
+    "completion": 4.753764956891711,
+    "change": 0.0024954146755336026,
     "translators": {
       "number": 30,
       "link": "https://github.com/python/python-docs-tr/blob/3.12/TRANSLATORS"
@@ -402,7 +402,7 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "completion": 49.94634791505502,
+    "completion": 49.94572473080714,
     "change": 0.0,
     "translators": {
       "number": 13,
