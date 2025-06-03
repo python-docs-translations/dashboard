@@ -1,0 +1,4 @@
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/reference/datamodel.rst:3593: WARNING: inconsistent term references in translated message. original: [':ref:`lazily evaluated <lazy-evaluation>`'], translated: [] [i18n.inconsistent_references]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/compression.zstd.rst:31:<translated>:1: ERROR: Unknown interpreted text role "function". [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/compression.zstd.rst:31:<translated>:1: ERROR: Unknown interpreted text role "function". [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/compression.zstd.rst:31: WARNING: inconsistent term references in translated message. original: [':func:`train_dict`', ':func:`finalize_dict`', ':class:`ZstdDict`'], translated: [':func:`train_dict`', ':class:`Zstd Dict`'] [i18n.inconsistent_references]

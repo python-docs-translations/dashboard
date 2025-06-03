@@ -1,0 +1,2 @@
+clones/rebased_translations/python/python-docs-pt-br/library/compression.zstd.po:39: missing backtick before hyperlink reference: 'zstd <https://facebook.github.io/zstd/doc/api_manual_latest.html>`_'. (hyperlink-reference-missing-backtick)
+clones/rebased_translations/python/python-docs-pt-br/c-api/lifecycle.po:71: trailing whitespace (trailing-whitespace)
