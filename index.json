@@ -60,8 +60,8 @@
     },
     "repository": "pygreece/python-docs-gr",
     "branch": "3.14",
-    "completion": 7.17394829069956,
-    "change": 0.7308646902555536,
+    "completion": 7.303658065079385,
+    "change": 0.8605744646353788,
     "translators": {
       "number": 15,
       "link": "https://github.com/pygreece/python-docs-gr/blob/3.14/TRANSLATORS"
