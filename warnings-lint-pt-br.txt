@@ -1,0 +1,3 @@
+clones/rebased_translations/python/python-docs-pt-br/library/array.po:516: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-pt-br/library/array.po:516: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-pt-br/library/array.po:516: missing space before default role: ' \u200b\u200b``inf``'. (missing-space-before-default-role)

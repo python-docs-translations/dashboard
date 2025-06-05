@@ -1,3 +1,1 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:265:<translated>:1: ERROR: Unknown interpreted text role "function". [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:265:<translated>:1: ERROR: Unknown interpreted text role "function". [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/build/NEWS:265: WARNING: inconsistent term references in translated message. original: [':func:`annotationlib.get_annotations`'], translated: [] [i18n.inconsistent_references]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/sequence.rst:112:<translated>:1: WARNING: term not in glossary: 'suavemente descontinuada' [ref.term]
