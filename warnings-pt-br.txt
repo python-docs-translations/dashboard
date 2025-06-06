@@ -1,1 +1,0 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/sequence.rst:112:<translated>:1: WARNING: term not in glossary: 'suavemente descontinuada' [ref.term]
