@@ -1,2 +1,0 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/howto/urllib2.rst:402:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/howto/urllib2.rst:402:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
