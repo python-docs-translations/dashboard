@@ -1,1 +1,1 @@
-clones/rebased_translations/python/python-docs-pt-br/whatsnew/changelog.po:397: role missing closing backtick: ':term:`threads livres <free threading>.\n' (missing-backtick-after-role)
+clones/rebased_translations/python/python-docs-pt-br/whatsnew/changelog.po:409: role missing closing backtick: ':term:`threads livres <free threading>.\n' (missing-backtick-after-role)
