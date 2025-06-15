@@ -333,7 +333,7 @@ clones/rebased_translations/python/python-docs-ja/c-api/contextvars.po:267: foun
 clones/rebased_translations/python/python-docs-ja/c-api/contextvars.po:267: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-ja/c-api/sequence.po:280: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/c-api/init_config.po:29: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/reference/expressions.po:645: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/reference/expressions.po:636: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/reference/lexical_analysis.po:702: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/reference/datamodel.po:1064: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/faq/programming.po:3409: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
