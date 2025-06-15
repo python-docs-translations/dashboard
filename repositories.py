@@ -12,7 +12,7 @@ from git import Repo
 def get_languages_and_repos(
     devguide_dir: Path,
 ) -> Iterator[tuple['Language', str | None]]:
-    translating = devguide_dir.joinpath('documentation/translating.rst').read_text()
+    translating = devguide_dir.joinpath('documentation/translations/translating.rst').read_text()
     doctree = core.publish_doctree(translating)
 
     for node in doctree.traverse(table):
