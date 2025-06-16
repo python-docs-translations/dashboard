@@ -300,8 +300,8 @@
       "number": 1,
       "link": "https://github.com/python/python-docs-ro/blob/main/TRANSLATORS"
     },
-    "built": false,
-    "in_switcher": null,
+    "built": true,
+    "in_switcher": false,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-ro"
   },
