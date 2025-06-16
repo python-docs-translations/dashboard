@@ -150,8 +150,8 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "completion": 50.25143767581966,
-    "change": 0.7667604371530246,
+    "completion": 50.252682416789064,
+    "change": 0.7655156961836198,
     "translators": {
       "number": 47,
       "link": false
@@ -292,18 +292,18 @@
       "code": "ro",
       "name": "Romanian"
     },
-    "repository": "octaG-M/python-docs-ro",
+    "repository": "python/python-docs-ro",
     "branch": "main",
     "completion": 0.2713535313301302,
     "change": 0.0012447409694042455,
     "translators": {
       "number": 1,
-      "link": "https://github.com/octaG-M/python-docs-ro/blob/main/TRANSLATORS"
+      "link": "https://github.com/python/python-docs-ro/blob/main/TRANSLATORS"
     },
     "built": false,
     "in_switcher": null,
     "uses_platform": false,
-    "contribution_link": "https://github.com/octaG-M/python-docs-ro"
+    "contribution_link": "https://github.com/python/python-docs-ro"
   },
   {
     "language": {
