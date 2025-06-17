@@ -1,1 +1,0 @@
-clones/rebased_translations/python/python-docs-pt-br/library/pickle.po:1905: trailing whitespace (trailing-whitespace)
