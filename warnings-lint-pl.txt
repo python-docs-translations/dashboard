@@ -1,0 +1,1 @@
+clones/rebased_translations/python/python-docs-pl/bugs.po:78: trailing whitespace (trailing-whitespace)
