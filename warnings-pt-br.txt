@@ -1,1 +1,0 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/allocation.rst:17: WARNING: inconsistent term references in translated message. original: [':meth:`~object.__init__`', ':c:member:`~PyTypeObject.tp_init`'], translated: [':meth:`~object.__init__`'] [i18n.inconsistent_references]
