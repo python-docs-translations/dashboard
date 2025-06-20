@@ -40,13 +40,13 @@
       "code": "fr",
       "name": "French"
     },
-    "repository": "python/python-docs-fr",
-    "branch": "3.13",
-    "completion": 33.24381115794447,
+    "repository": null,
+    "branch": "",
+    "completion": 0.0,
     "change": 0.0,
     "translators": {
-      "number": 241,
-      "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
+      "number": 0,
+      "link": false
     },
     "built": true,
     "in_switcher": true,
@@ -55,21 +55,21 @@
   },
   {
     "language": {
-      "code": "gr",
+      "code": "el",
       "name": "Greek"
     },
-    "repository": "pygreece/python-docs-gr",
+    "repository": "python/python-docs-el",
     "branch": "3.14",
     "completion": 7.380606015392841,
     "change": 0.45755778532085056,
     "translators": {
       "number": 15,
-      "link": "https://github.com/pygreece/python-docs-gr/blob/3.14/TRANSLATORS"
+      "link": "https://github.com/python/python-docs-el/blob/3.14/TRANSLATORS"
     },
-    "built": false,
-    "in_switcher": null,
+    "built": true,
+    "in_switcher": true,
     "uses_platform": false,
-    "contribution_link": "https://github.com/pygreece/python-docs-gr/blob/3.12/CONTRIBUTING.md"
+    "contribution_link": "https://github.com/python/python-docs-el"
   },
   {
     "language": {
