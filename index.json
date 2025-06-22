@@ -40,13 +40,13 @@
       "code": "fr",
       "name": "French"
     },
-    "repository": null,
-    "branch": "",
-    "completion": 0.0,
+    "repository": "python/python-docs-fr",
+    "branch": "3.13",
+    "completion": 33.24174457927193,
     "change": 0.0,
     "translators": {
-      "number": 0,
-      "link": false
+      "number": 241,
+      "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
     },
     "built": true,
     "in_switcher": true,
