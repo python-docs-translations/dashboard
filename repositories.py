@@ -28,7 +28,7 @@ def get_languages_and_repos(
                 )
             language_name = language_match.group(1)
             language_code = language_match.group(2).lower().replace('_', '-')
-            repo_match = re.match(':github:`GitHub <(.*)>`', repo)
+            repo_match = re.search(':github:`.* <(.*)>`', repo)
             yield (
                 Language(language_code, language_name),
                 repo_match and repo_match.group(1),
