@@ -1,0 +1,1 @@
+clones/rebased_translations/python/python-docs-pt-br/whatsnew/3.14.po:1956: missing backtick before hyperlink reference: 'compilador <https://github.com/llvm/llvm-project/issues/106846>`_'. (hyperlink-reference-missing-backtick)
