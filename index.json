@@ -385,7 +385,7 @@
     "repository": "python/python-docs-tr",
     "branch": "3.12",
     "completion": 4.730124405006028,
-    "change": 0.0024856145060461188,
+    "change": 0.0,
     "translators": {
       "number": 30,
       "link": "https://github.com/python/python-docs-tr/blob/3.12/TRANSLATORS"
