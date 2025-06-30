@@ -1,2 +1,1 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/long.rst:50:<translated>:1: ERROR: Unknown interpreted text role "c:exp". [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/long.rst:50:<translated>:1: ERROR: Unknown interpreted text role "c:exp". [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:2590:<translated>:1: WARNING: term not in glossary: 'imortais' [ref.term]
