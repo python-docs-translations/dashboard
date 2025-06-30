@@ -1,1 +1,1 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:2590:<translated>:1: WARNING: term not in glossary: 'imortais' [ref.term]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:2593:<translated>:1: WARNING: term not in glossary: 'imortais' [ref.term]

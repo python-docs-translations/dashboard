@@ -199,7 +199,7 @@ clones/rebased_translations/python/python-docs-ja/library/functions.po:1636: Unn
 clones/rebased_translations/python/python-docs-ja/library/functions.po:1893: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/functions.po:2885: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/functions.po:3539: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/codecs.po:1506: role missing opening tag colon ( term:`). (missing-space-before-role)
+clones/rebased_translations/python/python-docs-ja/library/codecs.po:1515: role missing opening tag colon ( term:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-ja/library/pathlib.po:2478: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-ja/library/pathlib.po:2478: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-ja/library/pathlib.po:2478: missing space before default role: '引数に``follow_symlinks=False``'. (missing-space-before-default-role)
