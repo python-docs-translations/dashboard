@@ -1,0 +1,2 @@
+clones/rebased_translations/python/python-docs-pt-br/howto/curses.po:458: missing space before role ( chama:meth:`). (missing-space-before-role)
+clones/rebased_translations/python/python-docs-pt-br/howto/curses.po:864: trailing whitespace (trailing-whitespace)
