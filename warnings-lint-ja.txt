@@ -269,7 +269,7 @@ clones/rebased_translations/python/python-docs-ja/library/shutil.po:467: trailin
 clones/rebased_translations/python/python-docs-ja/library/shutil.po:555: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/shutil.po:643: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/shutil.po:714: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/shutil.po:1208: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/library/shutil.po:1209: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/pty.po:144: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/xmlrpc.server.po:79: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/asyncio-protocol.po:858: trailing whitespace (trailing-whitespace)
