@@ -1,0 +1,4 @@
+clones/rebased_translations/python/python-docs-pt-br/library/pathlib.po:89: missing space before role ( instanciar:class:`). (missing-space-before-role)
+clones/rebased_translations/python/python-docs-pt-br/howto/enum.po:454: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-pt-br/howto/enum.po:454: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-pt-br/howto/enum.po:454: missing space before default role: 'ses``Enum``'. (missing-space-before-default-role)

@@ -1,0 +1,1 @@
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/pathlib.rst:37: WARNING: inconsistent term references in translated message. original: [':class:`WindowsPath`', ':class:`PureWindowsPath`'], translated: [':class:`PureWindowsPath`'] [i18n.inconsistent_references]
