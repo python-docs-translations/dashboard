@@ -1,1 +1,0 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/about.rst:6: WARNING: inconsistent references in translated message. original: ['`reStructuredText`_', '`Sphinx`_'], translated: ['`reStructuredText`_'] [i18n.inconsistent_references]
