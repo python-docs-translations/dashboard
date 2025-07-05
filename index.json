@@ -150,8 +150,8 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "completion": 50.12352422688731,
-    "change": 0.1328350982607276,
+    "completion": 50.1322143735025,
+    "change": 0.14152524487591478,
     "translators": {
       "number": 47,
       "link": false
@@ -223,7 +223,7 @@
     "repository": "revisto/python-docs-fa",
     "branch": "3.13",
     "completion": 0.3178110762125858,
-    "change": 0.03600203597720697,
+    "change": 0.006207247582277087,
     "translators": {
       "number": 15,
       "link": false
