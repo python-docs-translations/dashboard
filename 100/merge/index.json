@@ -1,0 +1,416 @@
+[
+  {
+    "language": {
+      "code": "ar",
+      "name": "Arabic"
+    },
+    "repository": "Abdur-rahmaanJ/python-docs-ar",
+    "branch": "master",
+    "completion": 0.013654927566816043,
+    "change": 0.0,
+    "translators": {
+      "number": 3,
+      "link": false
+    },
+    "built": false,
+    "in_switcher": null,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/Abdur-rahmaanJ/python-docs-ar"
+  },
+  {
+    "language": {
+      "code": "bn-in",
+      "name": "Bengali"
+    },
+    "repository": "python/python-docs-bn-in",
+    "branch": "3.14",
+    "completion": 0.10923942053452834,
+    "change": 0.0,
+    "translators": {
+      "number": 1,
+      "link": false
+    },
+    "built": true,
+    "in_switcher": false,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/python/python-docs-bn-in"
+  },
+  {
+    "language": {
+      "code": "fr",
+      "name": "French"
+    },
+    "repository": "python/python-docs-fr",
+    "branch": "3.13",
+    "completion": 33.110716635425845,
+    "change": 0.0,
+    "translators": {
+      "number": 241,
+      "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": false,
+    "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.13/CONTRIBUTING.rst"
+  },
+  {
+    "language": {
+      "code": "el",
+      "name": "Greek"
+    },
+    "repository": "python/python-docs-el",
+    "branch": "3.14",
+    "completion": 7.59213972714972,
+    "change": 0.35999354494333247,
+    "translators": {
+      "number": 15,
+      "link": "https://github.com/python/python-docs-el/blob/3.14/TRANSLATORS"
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/python/python-docs-el"
+  },
+  {
+    "language": {
+      "code": "hi-in",
+      "name": "Hindi"
+    },
+    "repository": "CuriousLearner/python-docs-hi-in",
+    "branch": "master",
+    "completion": 0.004965428206114925,
+    "change": 0.0,
+    "translators": {
+      "number": 1,
+      "link": false
+    },
+    "built": false,
+    "in_switcher": null,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/CuriousLearner/python-docs-hi-in"
+  },
+  {
+    "language": {
+      "code": "hu",
+      "name": "Hungarian"
+    },
+    "repository": "python/python-docs-hu",
+    "branch": "master",
+    "completion": 0.0,
+    "change": 0.0,
+    "translators": {
+      "number": 1,
+      "link": false
+    },
+    "built": false,
+    "in_switcher": null,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/python/python-docs-hu"
+  },
+  {
+    "language": {
+      "code": "id",
+      "name": "Indonesian"
+    },
+    "repository": "python/python-docs-id",
+    "branch": "3.14",
+    "completion": 0.0,
+    "change": 0.0,
+    "translators": {
+      "number": 25,
+      "link": "https://github.com/python/python-docs-id/blob/3.14/TRANSLATORS"
+    },
+    "built": true,
+    "in_switcher": false,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/python/python-docs-id/blob/master/README.md#berkontribusi-untuk-menerjemahkan"
+  },
+  {
+    "language": {
+      "code": "it",
+      "name": "Italian"
+    },
+    "repository": "python/python-docs-it",
+    "branch": "3.13",
+    "completion": 3.362836252591333,
+    "change": 0.0,
+    "translators": {
+      "number": 3,
+      "link": "https://github.com/python/python-docs-it/blob/3.13/TRANSLATORS"
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/python/python-docs-it"
+  },
+  {
+    "language": {
+      "code": "ja",
+      "name": "Japanese"
+    },
+    "repository": "python/python-docs-ja",
+    "branch": "3.14",
+    "completion": 50.08503295802972,
+    "change": 0.15516963144109752,
+    "translators": {
+      "number": 47,
+      "link": false
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": true,
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+  },
+  {
+    "language": {
+      "code": "ko",
+      "name": "Korean"
+    },
+    "repository": "python/python-docs-ko",
+    "branch": "3.13",
+    "completion": 46.24427424059982,
+    "change": 0.8950184341522132,
+    "translators": {
+      "number": 23,
+      "link": "https://github.com/python/python-docs-ko/blob/3.13/TRANSLATORS"
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": false,
+    "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
+  },
+  {
+    "language": {
+      "code": "mr",
+      "name": "Marathi"
+    },
+    "repository": "sanketgarade/python-doc-mr",
+    "branch": "3.9",
+    "completion": 0.0,
+    "change": 0.0,
+    "translators": {
+      "number": 1,
+      "link": false
+    },
+    "built": false,
+    "in_switcher": null,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/sanketgarade/python-doc-mr"
+  },
+  {
+    "language": {
+      "code": "lt",
+      "name": "Lithuanian"
+    },
+    "repository": null,
+    "branch": "",
+    "completion": 0.0,
+    "change": 0.0,
+    "translators": {
+      "number": 0,
+      "link": false
+    },
+    "built": false,
+    "in_switcher": null,
+    "uses_platform": false,
+    "contribution_link": null
+  },
+  {
+    "language": {
+      "code": "fa",
+      "name": "Persian"
+    },
+    "repository": "revisto/python-docs-fa",
+    "branch": "3.13",
+    "completion": 0.3177874051913552,
+    "change": 0.0,
+    "translators": {
+      "number": 15,
+      "link": false
+    },
+    "built": false,
+    "in_switcher": null,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/revisto/python-docs-fa"
+  },
+  {
+    "language": {
+      "code": "pl",
+      "name": "Polish"
+    },
+    "repository": "python/python-docs-pl",
+    "branch": "3.14",
+    "completion": 12.733840634581725,
+    "change": 1.2537706220440192,
+    "translators": {
+      "number": 25,
+      "link": false
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": true,
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+  },
+  {
+    "language": {
+      "code": "pt",
+      "name": "Portuguese"
+    },
+    "repository": null,
+    "branch": "",
+    "completion": 0.0,
+    "change": 0.0,
+    "translators": {
+      "number": 0,
+      "link": false
+    },
+    "built": false,
+    "in_switcher": null,
+    "uses_platform": false,
+    "contribution_link": null
+  },
+  {
+    "language": {
+      "code": "pt-br",
+      "name": "Brazilian Portuguese"
+    },
+    "repository": "python/python-docs-pt-br",
+    "branch": "3.14",
+    "completion": 62.14605807068287,
+    "change": 2.8389835768462106,
+    "translators": {
+      "number": 156,
+      "link": false
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": true,
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+  },
+  {
+    "language": {
+      "code": "ro",
+      "name": "Romanian"
+    },
+    "repository": "python/python-docs-ro",
+    "branch": "main",
+    "completion": 1.0774979207269386,
+    "change": 0.8068820834936752,
+    "translators": {
+      "number": 1,
+      "link": "https://github.com/python/python-docs-ro/blob/main/TRANSLATORS"
+    },
+    "built": true,
+    "in_switcher": false,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/python/python-docs-ro"
+  },
+  {
+    "language": {
+      "code": "ru",
+      "name": "Russian"
+    },
+    "repository": "MLGRussianXP/python-docs-ru",
+    "branch": "3.14",
+    "completion": 0.1874449147808384,
+    "change": 0.0,
+    "translators": {
+      "number": 23,
+      "link": false
+    },
+    "built": false,
+    "in_switcher": null,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/MLGRussianXP/python-docs-ru"
+  },
+  {
+    "language": {
+      "code": "zh-cn",
+      "name": "Simplified Chinese"
+    },
+    "repository": "python/python-docs-zh-cn",
+    "branch": "3.14",
+    "completion": 77.10068647044949,
+    "change": 0.0,
+    "translators": {
+      "number": 223,
+      "link": false
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": true,
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+  },
+  {
+    "language": {
+      "code": "es",
+      "name": "Spanish"
+    },
+    "repository": "python/python-docs-es",
+    "branch": "3.13",
+    "completion": 58.069441513462515,
+    "change": 0.0,
+    "translators": {
+      "number": 314,
+      "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": false,
+    "contribution_link": "https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html"
+  },
+  {
+    "language": {
+      "code": "zh-tw",
+      "name": "Traditional Chinese"
+    },
+    "repository": "python/python-docs-zh-tw",
+    "branch": "3.13",
+    "completion": 36.81616743423911,
+    "change": 1.2065990540859275,
+    "translators": {
+      "number": 121,
+      "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF"
+  },
+  {
+    "language": {
+      "code": "tr",
+      "name": "Turkish"
+    },
+    "repository": "python/python-docs-tr",
+    "branch": "3.12",
+    "completion": 4.719639509912236,
+    "change": 0.0,
+    "translators": {
+      "number": 30,
+      "link": "https://github.com/python/python-docs-tr/blob/3.12/TRANSLATORS"
+    },
+    "built": true,
+    "in_switcher": true,
+    "uses_platform": false,
+    "contribution_link": "https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak"
+  },
+  {
+    "language": {
+      "code": "uk",
+      "name": "Ukrainian"
+    },
+    "repository": "python/python-docs-uk",
+    "branch": "3.13",
+    "completion": 49.53387042715096,
+    "change": 0.0,
+    "translators": {
+      "number": 13,
+      "link": false
+    },
+    "built": true,
+    "in_switcher": false,
+    "uses_platform": true,
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+  }
+]
