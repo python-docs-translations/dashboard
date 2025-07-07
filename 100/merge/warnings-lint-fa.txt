@@ -1,0 +1,1 @@
+clones/rebased_translations/revisto/python-docs-fa/tutorial/appendix.po:108: trailing whitespace (trailing-whitespace)
