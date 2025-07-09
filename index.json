@@ -294,8 +294,8 @@
     },
     "repository": "python/python-docs-ro",
     "branch": "main",
-    "completion": 1.0794044665012408,
-    "change": 0.8089330024813897,
+    "completion": 1.196029776674938,
+    "change": 0.9255583126550868,
     "translators": {
       "number": 1,
       "link": "https://github.com/python/python-docs-ro/blob/main/TRANSLATORS"
