@@ -1,1 +1,4 @@
+clones/rebased_translations/python/python-docs-zh-tw/library/xml.sax.utils.po:110: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-zh-tw/library/xml.sax.utils.po:110: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-zh-tw/library/xml.sax.utils.po:110: missing space before default role: "預設為``'iso-8859-1'``". (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-zh-tw/library/asyncio.po:193: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
