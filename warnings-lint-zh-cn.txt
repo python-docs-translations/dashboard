@@ -395,7 +395,7 @@ clones/rebased_translations/python/python-docs-zh-cn/library/pdb.po:681: found a
 clones/rebased_translations/python/python-docs-zh-cn/library/pdb.po:912: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/library/pdb.po:912: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/library/pdb.po:681: missing space before default role: '捷变量``$_asynctask``'. (missing-space-before-default-role)
-clones/rebased_translations/python/python-docs-zh-cn/library/functools.po:1542: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-zh-cn/library/functools.po:1528: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-zh-cn/howto/annotations.po:394: inline literal missing (escaped) space after literal: '``__annotations__``成' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-zh-cn/howto/annotations.po:394: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-zh-cn/howto/annotations.po:394: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)

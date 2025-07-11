@@ -309,7 +309,6 @@ clones/rebased_translations/python/python-docs-ja/library/multiprocessing.po:855
 clones/rebased_translations/python/python-docs-ja/library/multiprocessing.po:855: missing space before default role: 'ルトは``()``'. (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-ja/library/multiprocessing.po:370: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/pdb.po:471: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/functools.po:881: Bad dedent in block (bad-dedent)
 clones/rebased_translations/python/python-docs-ja/library/smtplib.po:416: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/email.headerregistry.po:188: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-ja/library/email.headerregistry.po:188: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
