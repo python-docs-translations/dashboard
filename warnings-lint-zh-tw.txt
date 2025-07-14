@@ -1,0 +1,2 @@
+clones/rebased_translations/python/python-docs-zh-tw/tutorial/floatingpoint.po:493: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-zh-tw/tutorial/floatingpoint.po:495: trailing whitespace (trailing-whitespace)
