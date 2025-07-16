@@ -5,10 +5,12 @@ from polib import pofile
 
 def _count(pot) -> tuple[int, int]:
     pot = pofile(pot)
+    string_count = 0
     word_count = 0
     for entry in pot:
+        string_count += 1
         word_count += len(entry.msgid.split())
-    return len(pot), word_count
+    return string_count, word_count
 
 
 def get_counts(dir: Path) -> tuple[int, int]:
