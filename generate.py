@@ -15,8 +15,8 @@ from urllib3 import PoolManager
 import build_status
 import contribute
 from completion import branches_from_devguide, get_completion, TranslatorsData
+from counts import get_counts
 from repositories import Language, get_languages_and_repos
-from word_count import get_word_count
 
 generation_time = datetime.now(timezone.utc)
 
@@ -99,7 +99,7 @@ if __name__ == '__main__':
         completion_progress=(completion_progress := list(get_completion_progress())),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
-        word_count=get_word_count(Path('clones', 'cpython', 'Doc', 'build', 'gettext')),
+        counts=get_counts(Path('clones', 'cpython', 'Doc', 'build', 'gettext')),
     )
 
     Path('index.html').write_text(output)
