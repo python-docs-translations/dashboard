@@ -17,7 +17,7 @@ def get_counts(dir: Path) -> tuple[int, int]:
     for root, dirs, files in dir.walk():
         for file in files:
             if file.endswith('.pot'):
-                pot = root.joinpath(root, file)
+                pot = root.joinpath(file)
                 strings, words = _count(pot.read_text())
                 total_string_count += strings
                 total_word_count += words
