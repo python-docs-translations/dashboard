@@ -4,4 +4,5 @@ clones/rebased_translations/python/python-docs-pl/faq/general.po:234: found an u
 clones/rebased_translations/python/python-docs-pl/faq/general.po:234: missing space before default role: 'kas``Misc/HISTORY``'. (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-pl/library/calendar.po:35: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-pl/library/calendar.po:373: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-pl/library/http.server.po:943: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-pl/using/editors.po:31: trailing whitespace (trailing-whitespace)
