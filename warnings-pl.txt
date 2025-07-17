@@ -1,1 +1,7 @@
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/html.entities.rst:13: WARNING: inconsistent term references in translated message. original: [':data:`html5`', ':data:`name2codepoint`', ':data:`codepoint2name`', ':data:`entitydefs`'], translated: [':data:`html5`', ':data:`name2codepoint`', ':data:`codepoint2name`'] [i18n.inconsistent_references]
