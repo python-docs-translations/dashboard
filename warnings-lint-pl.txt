@@ -1,1 +1,2 @@
-clones/rebased_translations/python/python-docs-pl/library/os.po:2525: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-pl/library/os.po:2537: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-pl/library/xmlrpc.client.po:710: trailing whitespace (trailing-whitespace)
