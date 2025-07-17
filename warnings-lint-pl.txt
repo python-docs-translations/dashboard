@@ -1,1 +1,1 @@
-clones/rebased_translations/python/python-docs-pl/c-api/cell.po:104: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-pl/using/editors.po:31: trailing whitespace (trailing-whitespace)
