@@ -60,8 +60,8 @@
     },
     "repository": "python/python-docs-el",
     "branch": "3.14",
-    "completion": 7.666600407493912,
-    "change": 0.42488694528648807,
+    "completion": 7.595785916612831,
+    "change": 0.354072454405407,
     "translators": {
       "number": 15,
       "link": "https://github.com/python/python-docs-el/blob/3.14/TRANSLATORS"
