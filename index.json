@@ -312,10 +312,10 @@
     },
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.14",
-    "completion": 0.1875962828604085,
+    "completion": 0.0,
     "change": 0.0,
     "translators": {
-      "number": 23,
+      "number": 3,
       "link": false
     },
     "built": false,
