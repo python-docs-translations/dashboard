@@ -150,10 +150,10 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "completion": 53.41027679769418,
-    "change": 3.524573870695221,
+    "completion": 2.574168861501764,
+    "change": -47.3115340654972,
     "translators": {
-      "number": 47,
+      "number": 13,
       "link": false
     },
     "built": true,
@@ -222,10 +222,10 @@
     },
     "repository": "revisto/python-docs-fa",
     "branch": "3.13",
-    "completion": 0.3180440292202952,
+    "completion": 0.0,
     "change": 0.0,
     "translators": {
-      "number": 16,
+      "number": 9,
       "link": false
     },
     "built": false,
