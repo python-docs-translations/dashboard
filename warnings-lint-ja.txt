@@ -113,7 +113,7 @@ clones/rebased_translations/python/python-docs-ja/library/re.po:2505: trailing w
 clones/rebased_translations/python/python-docs-ja/library/gc.po:155: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/gc.po:295: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/gc.po:323: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/library/argparse.po:1070: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/library/argparse.po:1053: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/library/email.header.po:298: inline literal missing (escaped) space after literal: '``\\r\\n``を' (missing-space-after-literal)
 clones/rebased_translations/python/python-docs-ja/library/email.header.po:298: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-ja/library/email.header.po:298: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
