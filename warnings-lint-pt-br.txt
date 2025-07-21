@@ -1,0 +1,1 @@
+clones/rebased_translations/python/python-docs-pt-br/library/exceptions.po:975: trailing whitespace (trailing-whitespace)
