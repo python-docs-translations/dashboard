@@ -295,7 +295,7 @@
     "repository": "python/python-docs-ro",
     "branch": "main",
     "completion": 1.192926762729099,
-    "change": 0.6485454229805808,
+    "change": 0.4935393467423922,
     "translators": {
       "number": 1,
       "link": "https://github.com/python/python-docs-ro/blob/main/TRANSLATORS"
