@@ -24,7 +24,7 @@ main | <a href="metadata.html" target="_self">meta</a>
 {% for project in completion_progress | sort(attribute='completion,translators.number') | reverse %}
 <tr>
   <td data-label="language">
-    {% if project.contribution_link is not none %}
+    {% if project.contribution_link %}
       <a href="{{ project.contribution_link }}">{{ project.language.name }} ({{ project.language.code }})</a>
     {% else %}
       {{ project.language.name }} ({{ project.language.code }})
