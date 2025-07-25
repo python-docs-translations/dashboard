@@ -222,10 +222,10 @@
     },
     "repository": "revisto/python-docs-fa",
     "branch": "3.13",
-    "completion": 0.0,
+    "completion": 0.3172164258630517,
     "change": 0.0,
     "translators": {
-      "number": 9,
+      "number": 16,
       "link": false
     },
     "built": false,
