@@ -55,7 +55,7 @@ def get_language_repo_and_completion(
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logging.info(f'starting at {generation_time}')
-    template = Template(Path('metadata.html.jinja').read_text())
+    template = Template(Path('templates/metadata.html.jinja').read_text())
     if (index_path := Path('index.json')).exists():
         index_json = loads(Path('index.json').read_text())
     else:
