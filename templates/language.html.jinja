@@ -1,5 +1,9 @@
 {% extends "base.html.jinja" %}
 
 {% block main %}
-  <h1>{{ language.name }}</h1>
+  {% if project.built %}
+    <h1><a href="https://docs.python.org/{{ project.language.code }}/3">{{ project.language.name }}</a></h1>
+  {% else %}
+    <h1>{{ project.language.name }}</h1>
+  {% endif %}
 {% endblock %}

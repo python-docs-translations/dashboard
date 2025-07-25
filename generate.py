@@ -15,7 +15,6 @@ from urllib3 import PoolManager
 import build_status
 import contribute
 from completion import branches_from_devguide, get_completion, TranslatorsData
-from counts import get_counts
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -114,12 +113,9 @@ if __name__ == '__main__':
     )
 
     lang_template = env.get_template('language.html.jinja')
-    for language_data in completion_progress:
-        language = language_data.language
-        code = language.code
-
-        html = lang_template.render(language=language_data)
-
+    for project in completion_progress:
+        code = project.language.code
+        html = lang_template.render(project=project)
         Path(f'build/{code}.html').write_text(html)
 
     Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())
