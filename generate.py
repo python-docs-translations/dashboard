@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from git import Repo
-from jinja2 import Environment, FileSystemLoader, Template
+from jinja2 import Environment, FileSystemLoader
 from urllib3 import PoolManager
 
 import build_status
@@ -98,7 +98,7 @@ if __name__ == '__main__':
     completion_progress = list(get_completion_progress())
     counts = get_counts(Path('clones', 'cpython', 'Doc', 'build', 'gettext'))
 
-    env = Environment(loader=FileSystemLoader("templates"))
+    env = Environment(loader=FileSystemLoader('templates'))
     index = env.get_template('index.html.jinja').render(
         completion_progress=completion_progress,
         generation_time=generation_time,
@@ -118,9 +118,7 @@ if __name__ == '__main__':
         language = language_data.language
         code = language.code
 
-        html = lang_template.render(
-            language=language_data,
-        )
+        html = lang_template.render(language=language_data)
 
         Path(f'build/{code}.html').write_text(html)
 
