@@ -1,0 +1,174 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 4.5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+  background-color: rgb(245, 245, 245);
+  overflow-x: hidden; /* Risky, this need testing but I find scroll bar annoying */
+}
+
+a {
+  color: #0d0d0d;
+}
+
+a:hover {
+  color: #fe6615;
+}
+
+/* NAVAR
+ * ----------------------------------------*/
+
+.navbar {
+  background-color: rgb(245, 245, 245);
+  border-bottom: 0.25px solid #999;
+}
+
+.navbar li {
+  transition: 0.3s background-color;
+  text-align: center;
+  background-color: transparent;
+  padding: 0rem 1rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+}
+
+.navbar li:hover {
+  background-color: #d0cccd;
+}
+
+.navbar li .nav-link {
+  color: #0d0d0d;
+}
+
+/* Cards and card columns
+----------------------------- */
+
+.row > [class^="col-"] {
+  display: flex;
+}
+
+.card {
+  flex: 1;
+}
+
+.card:hover {
+  background: linear-gradient(90deg, #cc9add 8.06%, #ebad98 106.93%);
+  text-decoration: none;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card-title,
+.card:hover .card-subtitle,
+.card:hover .card-text {
+  color: white;
+}
+
+.card:hover .card-link {
+  color: rgb(231, 231, 231);
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-basis: calc(33.33% - 30px);
+  }
+}
+
+/* -------------------------- OLD STUFF ------------------------------------ */
+
+table {
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+th {
+  background-color: #f4f4f4;
+}
+hr {
+  color: #f4f4f4;
+}
+.progress-bar {
+  display: inline-block;
+  color: white;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.progress-bar-outer-label {
+  display: none;
+  padding-left: .5em;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.progress-bar.low {
+  color: transparent;
+  user-select: none;
+}
+.progress-bar.low + .progress-bar-outer-label {
+  display: inline-block;
+}
+td[data-label="translators"], td[data-label="warnings"], td[data-label="lint"] {
+  text-align: right;
+}
+td[data-label="completion"] {
+  width: 100%;
+  line-height: 0;
+}
+.switchpages{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+ }
+
+@media screen and (max-width: 675px) {
+  .switchpages{
+    all: unset;
+ }
+}
+
+@media screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding-left: 50%;
+    position: relative;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    left: 10px;
+    position: absolute;
+  }
+  td[data-label="completion"] {
+    width: inherit;
+  }
+  .progress-bar {
+    min-width: 0;
+    width: 100% !important;
+  }
+}
