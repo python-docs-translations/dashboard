@@ -56,8 +56,8 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logging.info(f'starting at {generation_time}')
     template = Template(Path('templates/metadata.html.jinja').read_text())
-    if (index_path := Path('index.json')).exists():
-        index_json = loads(Path('index.json').read_text())
+    if (index_path := Path('build/index.json')).exists():
+        index_json = loads(Path('build/index.json').read_text())
     else:
         index_json = request('GET', argv[1]).json()
 
