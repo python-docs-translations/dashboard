@@ -17,7 +17,7 @@ a {
 }
 
 a:hover {
-  color: #fe6615;
+  color: #1595fe;
 }
 
 /* NAVAR
@@ -91,7 +91,7 @@ th, td {
   white-space: nowrap;
 }
 th {
-  background-color: #f4f4f4;
+  background-color: #d6d6d6;
 }
 hr {
   color: #f4f4f4;

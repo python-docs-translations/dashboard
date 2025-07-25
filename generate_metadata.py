@@ -9,7 +9,7 @@ from sys import argv
 
 import dacite
 from git import Repo
-from jinja2 import Template
+from jinja2 import Environment, FileSystemLoader
 from urllib3 import request
 
 import build_warnings
@@ -55,7 +55,7 @@ def get_language_repo_and_completion(
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logging.info(f'starting at {generation_time}')
-    template = Template(Path('templates/metadata.html.jinja').read_text())
+    env = Environment(loader=FileSystemLoader('templates'))
     if (index_path := Path('build/index.json')).exists():
         index_json = loads(Path('build/index.json').read_text())
     else:
@@ -65,7 +65,7 @@ if __name__ == '__main__':
         dacite.from_dict(LanguageProjectData, project) for project in index_json
     ]
 
-    output = template.render(
+    output = env.get_template('metadata.html.jinja').render(
         metadata=zip(completion_progress, get_projects_metadata(completion_progress)),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
