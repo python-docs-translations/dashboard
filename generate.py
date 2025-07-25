@@ -15,6 +15,7 @@ from urllib3 import PoolManager
 import build_status
 import contribute
 from completion import branches_from_devguide, get_completion, TranslatorsData
+from counts import get_counts
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
