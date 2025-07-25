@@ -1,15 +1,6 @@
-<html lang="en">
-<head>
-  <title>Python Docs Translation Dashboard</title>
-  <link rel="stylesheet" href="../src/style.css">
-  <meta charset="UTF-8">
-  <base target="_blank">
-</head>
-<body>
-<h1>Python Docs Translation Dashboard</h1>
-<nav class="switchpages">
-<a href="../index.html" target="_self">main</a> | meta
-</nav>
+{% extends "base.html.jinja" %}
+
+{% block main %}
 <table>
 <thead>
 <tr>
@@ -38,5 +29,4 @@
 </table>
 <p>* number of Sphinx build process warnings</p>
   <p>Last updated at {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).</p>
-</body>
-</html>
+{% endblock %}
