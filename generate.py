@@ -93,16 +93,17 @@ class LanguageProjectData:
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logging.info(f'starting at {generation_time}')
-    template = Template(Path('template.html.jinja').read_text())
-
+    Path('build').mkdir(parents=True, exist_ok=True)
+    template = Template(Path('index.html.jinja').read_text())
     output = template.render(
         completion_progress=(completion_progress := list(get_completion_progress())),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
         counts=get_counts(Path('clones', 'cpython', 'Doc', 'build', 'gettext')),
     )
-
-    Path('index.html').write_text(output)
-    Path('index.json').write_text(
+    Path('build/style.css').write_bytes(Path('style.css').read_bytes())
+    Path('build/logo.png').write_bytes(Path('logo.png').read_bytes())
+    Path('build/index.html').write_text(output)
+    Path('build/index.json').write_text(
         json.dumps(completion_progress, indent=2, default=asdict)
     )

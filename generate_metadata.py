@@ -71,4 +71,4 @@ if __name__ == '__main__':
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
 
-    Path('metadata.html').write_text(output)
+    Path('build/metadata.html').write_text(output)

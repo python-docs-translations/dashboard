@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Python Docs Translation Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top">
+            <div class="navbar-brand">
+                <img src="/logo.png" style="height: 2rem;" alt="Translation dashboard">
+                <span style="font-size: 1.25rem; font-weight: bold;">Docs Translation Dashboard</span>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://devguide.python.org/">Translating</a>
+                        <a class="nav-link" href="/metadata.html">Meta</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="row">
+            <div class="card-container">
+                <div class="card-columns">
+                  {% for project in completion_progress | sort(attribute='completion,translators.number') | reverse %}
+                    <a href="/{{ project.language.code }}" class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.language.name }} ({{ project.language.code }})</h5>
+
+                            <h6 class="card-subtitle mb-2 text-muted">Completion: {{ '{:.2f}%'.format(project.completion) }}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Translators: {{ project.translators.number }}</h6>
+                        </div>
+                    </a>
+                  {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="container">
+        </footer>
+    </main>
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
