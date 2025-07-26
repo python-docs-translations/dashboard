@@ -1,6 +1,4 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+/* ------------------------ GLOBAL STYLES -------------------------- */
 
 body {
   padding-top: 4.5rem;
@@ -9,7 +7,6 @@ body {
   padding-bottom: 3rem;
   color: #5a5a5a;
   background-color: rgb(245, 245, 245);
-  overflow-x: hidden; /* Risky, this need testing but I find scroll bar annoying */
 }
 
 a {
@@ -20,12 +17,13 @@ a:hover {
   color: #1595fe;
 }
 
-/* NAVAR
- * ----------------------------------------*/
+/* --------------------------- NAVBAR ------------------------------ */
 
 .navbar {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245, 0.6);
+  backdrop-filter: blur(10px);
   border-bottom: 0.25px solid #999;
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar li {
@@ -45,8 +43,7 @@ a:hover {
   color: #0d0d0d;
 }
 
-/* Cards and card columns
------------------------------ */
+/* ----------------------- Cards and card columns --------------------------- */
 
 .row > [class^="col-"] {
   display: flex;
@@ -79,7 +76,26 @@ a:hover {
   }
 }
 
-/* -------------------------- OLD STUFF ------------------------------------ */
+/* ------------------------------ Index ------------------------------------- */
+
+.progress-bar-container {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-index {
+  display: inline-block;
+  color: white;
+  height: 100%;
+  line-height: 20px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* ------------------------------ Tables ------------------------------------ */
 
 table {
   border-collapse: collapse;
