@@ -7,9 +7,19 @@
           <div class="col-12 col-sm-6 col-md-4 d-flex">
             <a href="{{ project.language.code }}.html" class="card mb-3 w-100">
               <div class="card-body">
-                <h5 class="card-title">{{ project.language.name }} ({{ project.language.code }})</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Completion: {{ '{:.2f}%'.format(project.completion) }}</h6>
+                <h4 class="card-title">{{ project.language.name }} ({{ project.language.code }})</h4>
+                <h5 class="card-subtitle mb-2">Completion: <strong>{{ '{:.2f}%'.format(project.completion) }}</strong></h5>
+                <h6 class="card-subtitle mb-2 text-muted">30 Days Progress: {{ '{:.2f}%'.format(project.change) }}</h6>
                 <h6 class="card-subtitle mb-2 text-muted">Translators: {{ project.translators.number }}</h6>
+                <div class="progress-bar-container">
+                  <div class="progress-bar-index" style="width: {{ project.completion }}%;
+                    {% if project.change %}
+                      background: linear-gradient(to left, #94cf96 {{ project.change * 100 / project.completion }}%, #4caf50 {{ project.change * 100 / project.completion }}%);
+                    {% else %}
+                      background-color: #4caf50;
+                    {% endif %}">
+                  </div>
+                </div>
               </div>
             </a>
           </div>
