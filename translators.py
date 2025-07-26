@@ -1,6 +1,6 @@
 from collections.abc import Iterator
 from pathlib import Path
-from re import fullmatch
+from re import fullmatch, sub
 from tempfile import TemporaryDirectory
 from typing import Literal
 
@@ -8,15 +8,22 @@ from git import Repo
 from polib import pofile
 
 
-def get_number(path: Path) -> int:
-    from_headers = len(set(yield_from_headers(path)))
-    from_git_history = get_number_from_git_history(path)
-    from_translators_file = len(get_from_translators_file(path))
-    return max(from_headers, from_git_history, from_translators_file)
+def _format_translator(translator: str) -> str:
+    translator = translator.strip()
+    return sub(r'<.*?>', '', translator).strip()
 
 
-def get_number_from_git_history(path: Path) -> int:
-    return len(Repo(path).git.shortlog('-s', 'HEAD').splitlines())
+def get_number(path: Path) -> tuple[set, int]:
+    from_po_headers = set(yield_from_headers(path))
+    from_git_history = set(get_from_git_history(path))
+    from_translators_file = set(get_from_translators_file(path))
+    largest_set = max(from_po_headers, from_git_history, from_translators_file)
+    return largest_set, len(largest_set)
+
+
+def get_from_git_history(path: Path) -> list[str]:
+    raw_lines = Repo(path).git.shortlog('-s', 'HEAD').splitlines()
+    return [_format_translator(line.split('\t', 1)[-1]) for line in raw_lines]
 
 
 def yield_from_headers(path: Path) -> Iterator[str]:
@@ -31,16 +38,17 @@ def yield_from_headers(path: Path) -> Iterator[str]:
             try:
                 translator, _year = translator_record.split(', ')
             except ValueError:
-                yield translator_record
-            else:
-                yield translator
+                translator = translator_record
+            if translator.strip() == 'Transifex Bot <>':
+                continue
+            yield _format_translator(translator)
 
 
 def get_from_translators_file(path: Path) -> list[str]:
     if not (file := path.joinpath('TRANSLATORS')).exists():
         return []
     return list(
-        line
+        _format_translator(line)
         for line in file.read_text().splitlines()
         if line != 'Translators'
         and not fullmatch(r'-*', line)
@@ -72,7 +80,7 @@ if __name__ == '__main__':
                 branch=branch,
             )
             from_headers = len(set(yield_from_headers(path := Path(directory))))
-            from_git_history = get_number_from_git_history(path)
+            from_git_history = get_from_git_history(path)
             from_translators_file = len(get_from_translators_file(path))
             print(
                 f'{lang}: {from_headers=}, {from_git_history=}, {from_translators_file=}'

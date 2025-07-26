@@ -11,7 +11,7 @@ from collections.abc import Iterator
 from urllib3 import PoolManager
 
 
-def get_languages(http: PoolManager) -> Iterator[tuple[str, bool]]:
+def get_languages(http: PoolManager) -> Iterator[tuple[str, str, bool]]:
     data = http.request(
         'GET',
         'https://raw.githubusercontent.com/python/docsbuild-scripts/refs/heads/main/config.toml',
@@ -20,12 +20,14 @@ def get_languages(http: PoolManager) -> Iterator[tuple[str, bool]]:
     for code, language in config['languages'].items():
         language_code = code.lower().replace('_', '-')
         in_switcher = language.get('in_prod', config['defaults']['in_prod'])
-        yield language_code, in_switcher
+        translated_name = language.get('translated_name')
+        yield language_code, translated_name, in_switcher
 
 
 def main() -> None:
     languages = {
-        language: in_switcher for language, in_switcher in get_languages(PoolManager())
+        language: in_switcher
+        for language, translated_name, in_switcher in get_languages(PoolManager())
     }
     print(languages)
     for code in ('en', 'pl', 'ar', 'zh-cn', 'id'):

@@ -36,13 +36,15 @@ def get_completion(
             )
         except git.GitCommandError:
             print(f'failed to clone {repo} {branch}')
-            translators_data = TranslatorsData(0, False)
+            translators_data = TranslatorsData(0, set(), False)
             branch = ''
             continue
         else:
-            translators_number = translators.get_number(clone_path)
+            translators_list, translators_number = translators.get_number(clone_path)
             translators_link = translators.get_link(clone_path, repo, branch)
-            translators_data = TranslatorsData(translators_number, translators_link)
+            translators_data = TranslatorsData(
+                translators_number, translators_list, translators_link
+            )
             break
     path_for_merge = Path(clones_dir, 'rebased_translations', repo)
     completion = potodo.merge_and_scan_path(
@@ -83,4 +85,5 @@ def get_completion(
 @dataclass(frozen=True)
 class TranslatorsData:
     number: int
+    list: set
     link: str | Literal[False]
