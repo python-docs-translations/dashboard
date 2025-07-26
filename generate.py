@@ -66,7 +66,7 @@ def get_project_data(
         completion, translators_data, branch, change = get_completion(clones_dir, repo)
     else:
         completion = 0.0
-        translators_data = TranslatorsData(0, set(), False)
+        translators_data = TranslatorsData(0, [], False)
         change = 0.0
         branch = ''
 
@@ -137,6 +137,7 @@ if __name__ == '__main__':
     Path('build/logo.png').write_bytes(Path('src/logo.png').read_bytes())
     Path('build/index.html').write_text(index)
     Path('build/chart.html').write_text(chart)
+
     Path('build/index.json').write_text(
-        json.dumps(completion_progress, indent=2, default=asdict)
+        json.dumps([asdict(project) for project in completion_progress], indent=2)
     )

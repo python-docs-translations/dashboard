@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from functools import cache
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import Literal
+from typing import Literal, List
 
 import git
 from potodo import potodo
@@ -36,7 +36,7 @@ def get_completion(
             )
         except git.GitCommandError:
             print(f'failed to clone {repo} {branch}')
-            translators_data = TranslatorsData(0, set(), False)
+            translators_data = TranslatorsData(0, [], False)
             branch = ''
             continue
         else:
@@ -85,5 +85,5 @@ def get_completion(
 @dataclass(frozen=True)
 class TranslatorsData:
     number: int
-    list: set
+    list: List
     link: str | Literal[False]

@@ -26,4 +26,6 @@
         {% endfor %}
       </div>
     </div>
+
+  <p style="text-align: center;">Last updated at {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).</p>
 {% endblock %}

@@ -13,12 +13,12 @@ def _format_translator(translator: str) -> str:
     return sub(r'<.*?>', '', translator).strip()
 
 
-def get_number(path: Path) -> tuple[set, int]:
+def get_number(path: Path) -> tuple[list, int]:
     from_po_headers = set(yield_from_headers(path))
     from_git_history = set(get_from_git_history(path))
     from_translators_file = set(get_from_translators_file(path))
     largest_set = max(from_po_headers, from_git_history, from_translators_file)
-    return largest_set, len(largest_set)
+    return list(largest_set), len(largest_set)
 
 
 def get_from_git_history(path: Path) -> list[str]:
