@@ -66,7 +66,7 @@ def get_project_data(
         completion, translators_data, branch, change = get_completion(clones_dir, repo)
     else:
         completion = 0.0
-        translators_data = TranslatorsData(0, [], False)
+        translators_data = TranslatorsData(0, False)
         change = 0.0
         branch = ''
 
@@ -126,12 +126,6 @@ if __name__ == '__main__':
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
         counts=counts,
     )
-
-    lang_template = env.get_template('language.html.jinja')
-    for project in completion_progress:
-        code = project.language.code
-        html = lang_template.render(project=project)
-        Path(f'build/{code}.html').write_text(html)
 
     Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())
     Path('build/logo.png').write_bytes(Path('src/logo.png').read_bytes())

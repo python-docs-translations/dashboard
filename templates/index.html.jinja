@@ -5,12 +5,30 @@
       <div class="row">
         {% for project in completion_progress | sort(attribute='completion,translators.number') | reverse %}
           <div class="col-12 col-sm-6 col-md-4 d-flex">
-            <a href="{{ project.language.code }}.html" class="card mb-3 w-100">
+            <div class="card mb-3 w-100">
               <div class="card-body">
+                <h5 class="card-subtitle text-muted">{{ project.translated_name }}</h5>
                 <h4 class="card-title">{{ project.language.name }} ({{ project.language.code }})</h4>
                 <h5 class="card-subtitle mb-2">Completion: <strong>{{ '{:.2f}%'.format(project.completion) }}</strong></h5>
                 <h6 class="card-subtitle mb-2 text-muted">30 Days Progress: {{ '{:.2f}%'.format(project.change) }}</h6>
                 <h6 class="card-subtitle mb-2 text-muted">Translators: {{ project.translators.number }}</h6>
+                <h6 style="text-align: center;">
+                  {% if project.built %}
+                    <a href="https://docs.python.org/{{ project.language.code }}/3/" style="color: #1595fe;">View</a>
+                    •
+                  {% endif %}
+                  {% if project.translators.link %}
+                    <a href="{{ project.translators.link }}" style="color: #1595fe;">Contribute</a>
+                  {% elif project.uses_platform %}
+                    <a href="https://app.transifex.com/join/?o=python-doc&p=python-newest&t=opensource" style="color: #1595fe;">Contribute</a>
+                  {% else %}
+                    <a href="https://devguide.python.org/documentation/translations/translating/" style="color: #1595fe;">Contribute</a>
+                  {% endif %}
+                  {% if project.repository %}
+                  •
+                  <a href="https://github.com/{{ project.repository }}" style="color: #1595fe;">Repository</a>
+                  {% endif %}
+                </h6>
                 <div class="progress-bar-container">
                   <div class="progress-bar-index" style="width: {{ project.completion }}%;
                     {% if project.change %}
@@ -21,7 +39,7 @@
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         {% endfor %}
       </div>
