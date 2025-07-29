@@ -5,7 +5,7 @@
       <div class="row">
         {% for project in completion_progress | sort(attribute='completion,translators.number') | reverse %}
           <div class="col-12 col-sm-6 col-md-4 d-flex">
-            <div class="card mb-3 w-100">
+            <div class="card shadow mb-3 w-100">
               <div class="card-body">
                 <h5 class="card-subtitle text-muted">{{ project.translated_name }}</h5>
                 <h4 class="card-title">{{ project.language.name }} ({{ project.language.code }})</h4>
