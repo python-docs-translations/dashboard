@@ -8,7 +8,7 @@
             <div class="card shadow mb-3 w-100">
               <div class="card-body">
                 <h5 class="card-subtitle text-muted">{{ project.translated_name }}</h5>
-                <h4 class="card-title">{{ project.language.name }} ({{ project.language.code }})</h4>
+                <h4 class="card-title">{{ project.language.name }}</h4>
                 <h5 class="card-subtitle mb-2">Completion: <strong>{{ '{:.2f}%'.format(project.completion) }}</strong></h5>
                 <h6 class="card-subtitle mb-2 text-muted">30 Days Progress: {{ '{:.2f}%'.format(project.change) }}</h6>
                 <h6 class="card-subtitle mb-2 text-muted">Translators: {{ project.translators.number }}</h6>
@@ -45,5 +45,9 @@
       </div>
     </div>
 
-  <p style="text-align: center;">Last updated on {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).</p>
+  <p style="text-align: center;">
+    Last updated on {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).<br/>
+    You can find the scripts used to generate this website <a href="https://github.com/python-docs-translations/dashboard/">on GitHub</a>.<br/>
+    You can download the data on this page in <a href="https://github.com/python-docs-translations/dashboard/blob/gh-pages/index.json">JSON format</a>.
+  </p>
 {% endblock %}

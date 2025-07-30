@@ -120,17 +120,9 @@ if __name__ == '__main__':
         counts=counts,
     )
 
-    chart = env.get_template('chart.html.jinja').render(
-        completion_progress=completion_progress,
-        generation_time=generation_time,
-        duration=(datetime.now(timezone.utc) - generation_time).seconds,
-        counts=counts,
-    )
-
     Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())
     Path('build/logo.png').write_bytes(Path('src/logo.png').read_bytes())
     Path('build/index.html').write_text(index)
-    Path('build/chart.html').write_text(chart)
 
     Path('build/index.json').write_text(
         json.dumps([asdict(project) for project in completion_progress], indent=2)
