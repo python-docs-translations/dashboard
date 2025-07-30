@@ -1,4 +1,4 @@
-/* ------------------------ GLOBAL STYLES -------------------------- */
+/* ---------------------------- Global Styles ------------------------------- */
 
 body {
   padding-top: 4.5rem;
@@ -17,7 +17,7 @@ a:hover {
   color: #1595fe;
 }
 
-/* --------------------------- NAVBAR ------------------------------ */
+/* -------------------------------- navbar ---------------------------------- */
 
 .navbar {
   background-color: rgb(245, 245, 245, 0.6);
@@ -54,20 +54,9 @@ a:hover {
 }
 
 .card:hover {
-  background: linear-gradient(90deg, #cc9add 8.06%, #ebad98 106.93%);
   text-decoration: none;
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
-}
-
-.card:hover .card-title,
-.card:hover .card-subtitle,
-.card:hover .card-text {
-  color: white;
-}
-
-.card:hover .card-link {
-  color: rgb(231, 231, 231);
 }
 
 @media (min-width: 768px) {
@@ -95,7 +84,7 @@ a:hover {
   border-bottom-left-radius: 3px;
 }
 
-/* ------------------------------ Tables ------------------------------------ */
+/* ------------------------------ Metadata ---------------------------------- */
 
 table {
   border-collapse: collapse;
@@ -112,47 +101,8 @@ th {
 hr {
   color: #f4f4f4;
 }
-.progress-bar {
-  display: inline-block;
-  color: white;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-}
-.progress-bar-outer-label {
-  display: none;
-  padding-left: .5em;
-  height: 20px;
-  line-height: 20px;
-  overflow: hidden;
-}
-.progress-bar.low {
-  color: transparent;
-  user-select: none;
-}
-.progress-bar.low + .progress-bar-outer-label {
-  display: inline-block;
-}
-td[data-label="translators"], td[data-label="warnings"], td[data-label="lint"] {
+td[data-label="warnings"], td[data-label="lint"] {
   text-align: right;
-}
-td[data-label="completion"] {
-  width: 100%;
-  line-height: 0;
-}
-.switchpages{
-    position: absolute;
-    top: 10px;
-    right: 10px;
- }
-
-@media screen and (max-width: 675px) {
-  .switchpages{
-    all: unset;
- }
 }
 
 @media screen and (max-width: 600px) {
@@ -179,12 +129,5 @@ td[data-label="completion"] {
     font-weight: bold;
     left: 10px;
     position: absolute;
-  }
-  td[data-label="completion"] {
-    width: inherit;
-  }
-  .progress-bar {
-    min-width: 0;
-    width: 100% !important;
   }
 }
