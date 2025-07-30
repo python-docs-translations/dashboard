@@ -294,8 +294,8 @@
     },
     "repository": "python/python-docs-ro",
     "branch": "main",
-    "completion": 1.4049085075015177,
-    "change": 0.46830283583383936,
+    "completion": 1.4272086425412243,
+    "change": 0.4906029708735459,
     "translators": {
       "number": 1,
       "link": "https://github.com/python/python-docs-ro/blob/main/TRANSLATORS"
@@ -367,7 +367,7 @@
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
     "completion": 37.22759765600803,
-    "change": 1.3949973363727608,
+    "change": 1.3739360977241475,
     "translators": {
       "number": 124,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
