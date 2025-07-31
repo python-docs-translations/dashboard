@@ -1,7 +1,6 @@
 from collections.abc import Iterator
 from pathlib import Path
 from re import fullmatch
-from tempfile import TemporaryDirectory
 from typing import Literal
 
 from git import Repo
@@ -36,10 +35,10 @@ def yield_from_headers(path: Path) -> Iterator[str]:
                 yield translator
 
 
-def get_from_translators_file(path: Path) -> list[str]:
+def get_from_translators_file(path: Path) -> set[str]:
     if not (file := path.joinpath('TRANSLATORS')).exists():
-        return []
-    return list(
+        return set()
+    return set(
         line
         for line in file.read_text().splitlines()
         if line != 'Translators'
@@ -53,27 +52,3 @@ def get_link(clone_path: Path, repo: str, branch: str) -> str | Literal[False]:
         clone_path.joinpath('TRANSLATORS').exists()
         and f'https://github.com/{repo}/blob/{branch}/TRANSLATORS'
     )
-
-
-if __name__ == '__main__':
-    for lang, branch in (
-        ('es', '3.13'),
-        ('hu', '3.6'),
-        ('pl', '3.13'),
-        ('zh-tw', '3.13'),
-        ('id', '3.9'),
-        ('fr', '3.13'),
-        ('hu', '3.6'),
-    ):
-        with TemporaryDirectory() as directory:
-            Repo.clone_from(
-                f'https://github.com/python/python-docs-{lang}',
-                directory,
-                branch=branch,
-            )
-            from_headers = len(set(yield_from_headers(path := Path(directory))))
-            from_git_history = get_number_from_git_history(path)
-            from_translators_file = len(get_from_translators_file(path))
-            print(
-                f'{lang}: {from_headers=}, {from_git_history=}, {from_translators_file=}'
-            )
