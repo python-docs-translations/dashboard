@@ -1,1 +1,1 @@
-clones/rebased_translations/python/python-docs-pt-br/library/typing.po:106: missing space before < in hyperlink (missing-space-in-hyperlink)
+clones/rebased_translations/python/python-docs-pt-br/howto/remote_debugging.po:526: trailing whitespace (trailing-whitespace)
