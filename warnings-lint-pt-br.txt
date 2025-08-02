@@ -1,1 +1,4 @@
-clones/rebased_translations/python/python-docs-pt-br/howto/remote_debugging.po:526: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-pt-br/howto/logging.po:307: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-pt-br/howto/logging.po:307: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+clones/rebased_translations/python/python-docs-pt-br/howto/logging.po:307: missing space before default role: 'ulo``logging``'. (missing-space-before-default-role)
+clones/rebased_translations/python/python-docs-pt-br/howto/logging.po:307: role missing (escaped) space after role: ':func:`~logging.basicConfig`i' (missing-space-after-role)
