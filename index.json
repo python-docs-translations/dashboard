@@ -221,11 +221,11 @@
       "name": "Persian"
     },
     "repository": "revisto/python-docs-fa",
-    "branch": "",
-    "completion": 0.0,
-    "change": 0.0,
+    "branch": "3.13",
+    "completion": 0.315902924889434,
+    "change": -0.001238834999566396,
     "translators": {
-      "number": 0,
+      "number": 16,
       "link": false
     },
     "built": false,
