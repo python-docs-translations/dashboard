@@ -51,12 +51,12 @@ a:hover {
 
 .card {
   flex: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
   text-decoration: none;
   transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
