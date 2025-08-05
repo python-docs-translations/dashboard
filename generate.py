@@ -6,7 +6,6 @@ import subprocess
 from collections.abc import Iterator
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
-from typing import Any, Dict
 from pathlib import Path
 
 from git import Repo
@@ -39,11 +38,9 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
     subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
     subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
 
-    languages_built: Dict[str, Dict[str, Any]] = {
-        code: {'in_switcher': in_switcher, 'translated_name': translated_name}
-        for code, translated_name, in_switcher in build_status.get_languages(
-            PoolManager()
-        )
+    languages_built: dict[str, str] = {
+        language: translated_name
+        for language, translated_name in build_status.get_languages(PoolManager())
     }
 
     with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -58,7 +55,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
 def get_project_data(
     language: Language,
     repo: str | None,
-    languages_built: Dict[str, Dict[str, Any]],
+    languages_built: dict[str, str],
     clones_dir: str,
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
@@ -70,10 +67,6 @@ def get_project_data(
         change = 0.0
         branch = ''
 
-    language_data = languages_built.get(language.code, {})
-    translated_name = language_data.get('translated_name', '')
-    in_switcher = language_data.get('in_switcher', False)
-
     return LanguageProjectData(
         language,
         repo,
@@ -82,8 +75,7 @@ def get_project_data(
         change,
         translators_data,
         built,
-        translated_name=translated_name,
-        in_switcher=in_switcher,
+        translated_name=languages_built.get(language.code, ''),
         uses_platform=language.code in contribute.pulling_from_transifex,
         contribution_link=contribute.get_contrib_link(language.code, repo),
     )
@@ -99,7 +91,6 @@ class LanguageProjectData:
     translators: TranslatorsData
     built: bool
     translated_name: str
-    in_switcher: bool | None
     uses_platform: bool
     contribution_link: str | None
 
@@ -117,7 +108,6 @@ if __name__ == '__main__':
         completion_progress=completion_progress,
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
-        counts=counts,
     )
 
     Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())
