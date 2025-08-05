@@ -1,3 +1,0 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/typing.rst:51: WARNING: inconsistent references in translated message. original: [], translated: ['`documentação do mypy<https://mypy.readthedocs.io/en/stable/index.html>`_'] [i18n.inconsistent_references]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/typing.rst:51: ERROR: Unknown target name: "documentação do mypy<https://mypy.readthedocs.io/en/stable/index.html>". [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/string.templatelib.rst:227: WARNING: inconsistent term references in translated message. original: [''], translated: [] [i18n.inconsistent_references]
