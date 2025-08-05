@@ -51,18 +51,6 @@ a:hover {
 
 .card {
   flex: 1;
-  transition: all 0.3s ease-in-out;
-}
-
-.card:hover {
-  text-decoration: none;
-  transform: scale(1.05);
-}
-
-@media (min-width: 768px) {
-  .card {
-    flex-basis: calc(33.33% - 30px);
-  }
 }
 
 /* ------------------------------ Index ------------------------------------- */

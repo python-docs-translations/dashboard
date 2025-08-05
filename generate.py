@@ -100,8 +100,10 @@ if __name__ == '__main__':
     logging.info(f'starting at {generation_time}')
     Path('build').mkdir(parents=True, exist_ok=True)
 
-    completion_progress = list(get_completion_progress())
-    counts = get_counts(Path('clones', 'cpython', 'Doc', 'build', 'gettext'))
+   # completion_progress = list(get_completion_progress())
+    #counts = get_counts(Path('clones', 'cpython', 'Doc', 'build', 'gettext'))
+    from data import completion_progress
+    counts = 1,1
 
     env = Environment(loader=FileSystemLoader('templates'))
     index = env.get_template('index.html.jinja').render(
