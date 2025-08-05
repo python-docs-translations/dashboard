@@ -15,6 +15,7 @@ from urllib3 import PoolManager
 import build_status
 import contribute
 from completion import branches_from_devguide, get_completion, TranslatorsData
+from counts import get_counts
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -99,11 +100,8 @@ if __name__ == '__main__':
     logging.info(f'starting at {generation_time}')
     Path('build').mkdir(parents=True, exist_ok=True)
 
-    # completion_progress = list(get_completion_progress())
-    # counts = get_counts(Path('clones', 'cpython', 'Doc', 'build', 'gettext'))
-    from data import completion_progress
-
-    counts = 1, 1
+    completion_progress = list(get_completion_progress())
+    counts = get_counts(Path('clones', 'cpython', 'Doc', 'build', 'gettext'))
 
     env = Environment(loader=FileSystemLoader('templates'))
     index = env.get_template('index.html.jinja').render(
