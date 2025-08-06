@@ -53,15 +53,6 @@ a:hover {
   flex: 1;
 }
 
-.card-body p {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.card-title {
-  margin-bottom: 0.4rem;
-}
-
 /* ------------------------------ Index ------------------------------------- */
 
 .progress-bar-container {
