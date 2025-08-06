@@ -1,15 +1,49 @@
+<!doctype html>
 <html lang="en">
+
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Python Documentation Translation Dashboard">
+
   <title>Python Docs Translation Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <base target="_blank">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-<h1>Python Docs Translation Dashboard</h1>
-<nav class="switchpages">
-<a href="index.html" target="_self">main</a> | meta
-</nav>
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top">
+
+      <div class="navbar-brand">
+        <a href="./" style="all: unset; cursor: pointer;">
+          <img src="logo.png" style="height: 2rem;" alt="">
+          <span style="font-size: 1.25rem; font-weight: bold;">Translation Dashboard</span>
+        </a>
+      </div>
+
+      <div class="navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="metadata.html">Metadata</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://devguide.python.org/documentation/translations/translating/">🔗 Translating</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    
 <table>
 <thead>
 <tr>
@@ -301,6 +335,27 @@
 </tbody>
 </table>
 <p>* number of Sphinx build process warnings</p>
-  <p>Last updated at Wednesday, 6 August 2025, 17:45:48 UTC (in 51:07 minutes).</p>
+  <p>Last updated at Wednesday, 6 August 2025, 18:08:36 UTC (in 53:41 minutes).</p>
+
+  </main>
+
 </body>
+
+<script>
+  function padnavbar() {
+    const navbar = document.querySelector('.navbar.fixed-top');
+    if (navbar) {
+      document.body.style.paddingTop = (navbar.offsetHeight + 10) + 'px';
+    }
+  }
+  window.addEventListener('load', padnavbar);
+  window.addEventListener('resize', padnavbar);
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </html>
