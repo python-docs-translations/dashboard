@@ -7,10 +7,10 @@
           <div class="col-12 col-sm-6 col-md-4 d-flex">
             <div class="card shadow mb-3 w-100">
               <div class="card-body">
-                <h4 class="card-title">{{ project.language.name }}</h4>
-                <h5 class="card-subtitle text-muted">{{ project.translated_name }}</h5>
-                <p class="card-subtitle mb-2">Completion: <strong>{{ '{:.2f}%'.format(project.completion) }}</strong></p>
-                <p class="card-subtitle mb-2 text-muted">30 days progress: {{ '{:.2f}%'.format(project.change) }}</p>
+                <h3 class="card-title">{{ project.language.name }}</h3>
+                <h5 class="card-subtitle mb-2 text-muted">{{ project.translated_name }}</h5>
+                <p class="text-muted">Completion: <strong>{{ '{:.2f}%'.format(project.completion) }}</strong></p>
+                <p class="text-muted">30-day progress: {{ '{:.2f}%'.format(project.change) }}</p>
                 <p style="text-align: center;">
                   {% if project.built %}
                     <a href="https://docs.python.org/{{ project.language.code }}/3/" style="color: #1595fe;">View</a>
