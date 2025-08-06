@@ -18,6 +18,7 @@ clones/rebased_translations/python/python-docs-ja/faq/programming.po:3404: found
 clones/rebased_translations/python/python-docs-ja/faq/programming.po:3404: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 clones/rebased_translations/python/python-docs-ja/faq/programming.po:3404: missing space before default role: 'または``False``'. (missing-space-before-default-role)
 clones/rebased_translations/python/python-docs-ja/faq/programming.po:854: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/faq/general.po:658: missing space before < in hyperlink (missing-space-in-hyperlink)
 clones/rebased_translations/python/python-docs-ja/tutorial/datastructures.po:904: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/tutorial/datastructures.po:1412: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/tutorial/interpreter.po:165: trailing whitespace (trailing-whitespace)
