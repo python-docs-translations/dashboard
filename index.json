@@ -13,7 +13,7 @@
       "link": false
     },
     "built": false,
-    "translated_name": "",
+    "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/Abdur-rahmaanJ/python-docs-ar"
   },
@@ -31,7 +31,7 @@
       "link": false
     },
     "built": true,
-    "translated_name": "\u09ac\u09be\u0982\u09b2\u09be",
+    "in_switcher": false,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-bn-in"
   },
@@ -49,7 +49,7 @@
       "link": "https://github.com/python/python-docs-fr/blob/3.13/TRANSLATORS"
     },
     "built": true,
-    "translated_name": "fran\u00e7ais",
+    "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.13/CONTRIBUTING.rst"
   },
@@ -67,7 +67,7 @@
       "link": "https://github.com/python/python-docs-el/blob/3.14/TRANSLATORS"
     },
     "built": true,
-    "translated_name": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac",
+    "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-el"
   },
@@ -85,7 +85,7 @@
       "link": false
     },
     "built": false,
-    "translated_name": "",
+    "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/CuriousLearner/python-docs-hi-in"
   },
@@ -103,7 +103,7 @@
       "link": false
     },
     "built": false,
-    "translated_name": "",
+    "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-hu"
   },
@@ -121,7 +121,7 @@
       "link": "https://github.com/python/python-docs-id/blob/3.14/TRANSLATORS"
     },
     "built": true,
-    "translated_name": "Indonesia",
+    "in_switcher": false,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-id/blob/master/README.md#berkontribusi-untuk-menerjemahkan"
   },
@@ -139,7 +139,7 @@
       "link": "https://github.com/python/python-docs-it/blob/3.13/TRANSLATORS"
     },
     "built": true,
-    "translated_name": "italiano",
+    "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-it"
   },
@@ -157,7 +157,7 @@
       "link": false
     },
     "built": true,
-    "translated_name": "\u65e5\u672c\u8a9e",
+    "in_switcher": true,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   },
@@ -175,7 +175,7 @@
       "link": "https://github.com/python/python-docs-ko/blob/3.13/TRANSLATORS"
     },
     "built": true,
-    "translated_name": "\ud55c\uad6d\uc5b4",
+    "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
   },
@@ -193,7 +193,7 @@
       "link": false
     },
     "built": false,
-    "translated_name": "",
+    "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/sanketgarade/python-doc-mr"
   },
@@ -211,7 +211,7 @@
       "link": false
     },
     "built": false,
-    "translated_name": "",
+    "in_switcher": null,
     "uses_platform": false,
     "contribution_link": null
   },
@@ -229,7 +229,7 @@
       "link": false
     },
     "built": false,
-    "translated_name": "",
+    "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/revisto/python-docs-fa"
   },
@@ -247,7 +247,7 @@
       "link": false
     },
     "built": true,
-    "translated_name": "polski",
+    "in_switcher": true,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   },
@@ -265,7 +265,7 @@
       "link": false
     },
     "built": false,
-    "translated_name": "",
+    "in_switcher": null,
     "uses_platform": false,
     "contribution_link": null
   },
@@ -283,7 +283,7 @@
       "link": false
     },
     "built": true,
-    "translated_name": "Portugu\u00eas brasileiro",
+    "in_switcher": true,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   },
@@ -301,7 +301,7 @@
       "link": "https://github.com/python/python-docs-ro/blob/3.13/TRANSLATORS"
     },
     "built": true,
-    "translated_name": "Rom\u00e2ne\u0219te",
+    "in_switcher": false,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-ro"
   },
@@ -319,7 +319,7 @@
       "link": false
     },
     "built": false,
-    "translated_name": "",
+    "in_switcher": null,
     "uses_platform": false,
     "contribution_link": "https://github.com/MLGRussianXP/python-docs-ru"
   },
@@ -337,7 +337,7 @@
       "link": false
     },
     "built": true,
-    "translated_name": "\u7b80\u4f53\u4e2d\u6587",
+    "in_switcher": true,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   },
@@ -355,7 +355,7 @@
       "link": "https://github.com/python/python-docs-es/blob/3.13/TRANSLATORS"
     },
     "built": true,
-    "translated_name": "espa\u00f1ol",
+    "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html"
   },
@@ -367,13 +367,13 @@
     "repository": "python/python-docs-zh-tw",
     "branch": "3.13",
     "completion": 37.56983413232252,
-    "change": 1.082661315297237,
+    "change": 1.2275942373679172,
     "translators": {
       "number": 125,
       "link": "https://github.com/python/python-docs-zh-tw/blob/3.13/TRANSLATORS"
     },
     "built": true,
-    "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
+    "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF"
   },
@@ -391,7 +391,7 @@
       "link": "https://github.com/python/python-docs-tr/blob/3.12/TRANSLATORS"
     },
     "built": true,
-    "translated_name": "T\u00fcrk\u00e7e",
+    "in_switcher": true,
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak"
   },
@@ -409,7 +409,7 @@
       "link": false
     },
     "built": true,
-    "translated_name": "\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430",
+    "in_switcher": false,
     "uses_platform": true,
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   }
