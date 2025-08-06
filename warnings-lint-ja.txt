@@ -1,6 +1,6 @@
-clones/rebased_translations/python/python-docs-ja/glossary.po:1098: role missing opening tag colon (term:`). (missing-space-before-role)
+clones/rebased_translations/python/python-docs-ja/glossary.po:1109: role missing opening tag colon (term:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-ja/glossary.po:907: trailing whitespace (trailing-whitespace)
-clones/rebased_translations/python/python-docs-ja/glossary.po:2287: trailing whitespace (trailing-whitespace)
+clones/rebased_translations/python/python-docs-ja/glossary.po:2298: trailing whitespace (trailing-whitespace)
 clones/rebased_translations/python/python-docs-ja/howto/descriptor.po:988: missing space before role ( の中の:c:func:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-ja/howto/enum.po:1782: missing space before role ( や:class:`). (missing-space-before-role)
 clones/rebased_translations/python/python-docs-ja/howto/enum.po:405: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
