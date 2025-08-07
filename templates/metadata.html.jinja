@@ -1,6 +1,7 @@
 {% extends "base.html.jinja" %}
 
 {% block main %}
+<div class="metadata-table">
 <table>
 <thead>
 <tr>
@@ -29,4 +30,5 @@
 </table>
 <p>* number of Sphinx build process warnings</p>
   <p>Last updated at {{ generation_time.strftime('%A, %-d %B %Y, %-H:%M:%S %Z') }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).</p>
+</div>
 {% endblock %}
