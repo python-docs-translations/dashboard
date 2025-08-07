@@ -25,7 +25,7 @@ def get_projects_build_details(
 ) -> Iterator[tuple[int, int, datetime | None]]:
     with concurrent.futures.ProcessPoolExecutor() as executor:
         return executor.map(
-            get_metadata,
+            get_build_details,
             *zip(*map(get_language_repo_and_completion, completion_progress)),
             itertools.repeat(Path('clones')),
         )
