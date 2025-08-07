@@ -20,18 +20,18 @@ from repositories import Language
 generation_time = datetime.now(timezone.utc)
 
 
-def get_projects_metadata(
+def get_projects_build_details(
     completion_progress: Sequence[LanguageProjectData],
 ) -> Iterator[tuple[int, int, datetime | None]]:
     with concurrent.futures.ProcessPoolExecutor() as executor:
         return executor.map(
-            get_metadata,
+            get_build_details,
             *zip(*map(get_language_repo_and_completion, completion_progress)),
             itertools.repeat(Path('clones')),
         )
 
 
-def get_metadata(
+def get_build_details(
     language: Language, repo: str | None, completion: float, clones_dir: str
 ) -> tuple[int, int, datetime | None]:
     if not repo or not (repo_path := Path(clones_dir, 'translations', repo)).exists():
@@ -65,10 +65,12 @@ if __name__ == '__main__':
         dacite.from_dict(LanguageProjectData, project) for project in index_json
     ]
 
-    output = env.get_template('metadata.html.jinja').render(
-        metadata=zip(completion_progress, get_projects_metadata(completion_progress)),
+    output = env.get_template('build-details.html.jinja').render(
+        build_details=zip(
+            completion_progress, get_projects_build_details(completion_progress)
+        ),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
 
-    Path('build/metadata.html').write_text(output)
+    Path('build/build-details.html').write_text(output)
