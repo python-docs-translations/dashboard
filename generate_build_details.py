@@ -66,7 +66,9 @@ if __name__ == '__main__':
     ]
 
     output = env.get_template('build-details.html.jinja').render(
-        build_details=zip(completion_progress, get_projects_build_details(completion_progress)),
+        build_details=zip(
+            completion_progress, get_projects_build_details(completion_progress)
+        ),
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
