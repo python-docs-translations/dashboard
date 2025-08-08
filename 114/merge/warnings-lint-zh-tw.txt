@@ -1,0 +1,6 @@
+library/contextvars.po:326: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/contextvars.po:326: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/contextvars.po:422: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/contextvars.po:422: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/contextvars.po:326: missing space before default role: '，執行``callable(*args, **kwargs)``'. (missing-space-before-default-role)
+library/contextvars.po:422: missing space before default role: '則回傳``None``'. (missing-space-before-default-role)
