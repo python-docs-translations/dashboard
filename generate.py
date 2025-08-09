@@ -9,13 +9,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from git import Repo
-from jinja2 import Template
+from jinja2 import Environment, FileSystemLoader
 from urllib3 import PoolManager
 
 import build_status
 import contribute
-from completion import branches_from_devguide, get_completion, TranslatorsData
-from counts import get_counts
+from completion import branches_from_devguide, get_completion
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -37,7 +36,11 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
     )
     subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
     subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
-    languages_built = dict(build_status.get_languages(PoolManager()))
+
+    languages_built: dict[str, str] = {
+        language: translated_name
+        for language, translated_name in build_status.get_languages(PoolManager())
+    }
 
     with concurrent.futures.ThreadPoolExecutor() as executor:
         return executor.map(
@@ -51,26 +54,25 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
 def get_project_data(
     language: Language,
     repo: str | None,
-    languages_built: dict[str, bool],
+    languages_built: dict[str, str],
     clones_dir: str,
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
-        completion, translators_data, branch, change = get_completion(clones_dir, repo)
+        completion, branch, change = get_completion(clones_dir, repo)
     else:
         completion = 0.0
-        translators_data = TranslatorsData(0, False)
         change = 0.0
         branch = ''
+
     return LanguageProjectData(
         language,
         repo,
         branch,
         completion,
         change,
-        translators_data,
         built,
-        in_switcher=languages_built.get(language.code),
+        translated_name=languages_built.get(language.code, ''),
         uses_platform=language.code in contribute.pulling_from_transifex,
         contribution_link=contribute.get_contrib_link(language.code, repo),
     )
@@ -83,9 +85,8 @@ class LanguageProjectData:
     branch: str
     completion: float
     change: float
-    translators: TranslatorsData
     built: bool
-    in_switcher: bool | None
+    translated_name: str
     uses_platform: bool
     contribution_link: str | None
 
@@ -93,16 +94,21 @@ class LanguageProjectData:
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logging.info(f'starting at {generation_time}')
-    template = Template(Path('template.html.jinja').read_text())
+    Path('build').mkdir(parents=True, exist_ok=True)
 
-    output = template.render(
-        completion_progress=(completion_progress := list(get_completion_progress())),
+    completion_progress = list(get_completion_progress())
+
+    env = Environment(loader=FileSystemLoader('templates'))
+    index = env.get_template('index.html.jinja').render(
+        completion_progress=completion_progress,
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
-        counts=get_counts(Path('clones', 'cpython', 'Doc', 'build', 'gettext')),
     )
 
-    Path('index.html').write_text(output)
-    Path('index.json').write_text(
-        json.dumps(completion_progress, indent=2, default=asdict)
+    Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())
+    Path('build/logo.png').write_bytes(Path('src/logo.png').read_bytes())
+    Path('build/index.html').write_text(index)
+
+    Path('build/index.json').write_text(
+        json.dumps([asdict(project) for project in completion_progress], indent=2)
     )
