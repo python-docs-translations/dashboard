@@ -14,7 +14,7 @@ from urllib3 import PoolManager
 
 import build_status
 import contribute
-from completion import branches_from_devguide, get_completion, TranslatorsData
+from completion import branches_from_devguide, get_completion
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -59,10 +59,9 @@ def get_project_data(
 ) -> 'LanguageProjectData':
     built = language.code in languages_built
     if repo:
-        completion, translators_data, branch, change = get_completion(clones_dir, repo)
+        completion, branch, change = get_completion(clones_dir, repo)
     else:
         completion = 0.0
-        translators_data = TranslatorsData(0, False)
         change = 0.0
         branch = ''
 
@@ -72,7 +71,6 @@ def get_project_data(
         branch,
         completion,
         change,
-        translators_data,
         built,
         translated_name=languages_built.get(language.code, ''),
         uses_platform=language.code in contribute.pulling_from_transifex,
@@ -87,7 +85,6 @@ class LanguageProjectData:
     branch: str
     completion: float
     change: float
-    translators: TranslatorsData
     built: bool
     translated_name: str
     uses_platform: bool

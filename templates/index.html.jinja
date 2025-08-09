@@ -3,7 +3,7 @@
 {% block main %}
     <div>
       <div class="row">
-        {% for project in completion_progress | sort(attribute='completion,translators.number') | reverse %}
+        {% for project in completion_progress | sort(attribute='completion') | reverse %}
           <div class="col-12 col-sm-6 col-md-4 d-flex">
             <div class="card shadow mb-3 w-100">
               <div class="card-body">
