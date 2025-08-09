@@ -83,9 +83,6 @@ a:hover {
 
 /* ------------------------------ Metadata ---------------------------------- */
 
-.metadata-table {
-  overflow-x: auto;
-}
 table {
   border-collapse: collapse;
 }
@@ -103,4 +100,32 @@ hr {
 }
 td[data-label="warnings"], td[data-label="lint"] {
   text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    overflow-x: auto;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding-left: 50%;
+    position: relative;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    left: 10px;
+    position: absolute;
+  }
 }
