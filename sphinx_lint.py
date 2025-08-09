@@ -7,9 +7,8 @@ from sphinxlint import check_file, checkers
 
 def store_and_count_failures(clones_dir: str, repo: str, language_code: str) -> int:
     failed_checks = list(chain.from_iterable(yield_failures(clones_dir, repo)))
-    log = '\n'.join([str(c) for c in failed_checks]).replace(
-        str(Path(clones_dir, 'rebased_translations', repo)) + '/', ''
-    )
+    prefix = f'{Path(clones_dir, 'rebased_translations', repo)}/'
+    log = '\n'.join(map(lambda check: check.removeprefix(prefix), map(str, failed_checks)))
     filepath = Path(f'build/warnings-lint-{language_code}.txt')
     filepath.write_text(log)
     return len(failed_checks)
