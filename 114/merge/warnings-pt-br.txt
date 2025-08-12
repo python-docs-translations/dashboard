@@ -1,2 +1,0 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/tarfile.rst:619: WARNING: inconsistent term references in translated message. original: [':meth:`TarFile.extract`', ':meth:`TarFile.extractall`', ':exc:`OSError`', ':exc:`FilterError`', ':exc:`TarError`'], translated: [':meth:`TarFile.extract`', ':meth:`TarFile.extractall`', ':exc:`OSError`', ':exc:`TarError`'] [i18n.inconsistent_references]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/library/tarfile.rst:641:<translated>:1: WARNING: undefined label: '<tarfile-extraction-filter>' [ref.ref]
