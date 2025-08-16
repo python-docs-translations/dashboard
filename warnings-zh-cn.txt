@@ -250,6 +250,8 @@
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:47618:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:51615:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/init.rst:979: WARNING: Lexing literal_block '将线程状态保存到一个局部变量中。\n... 执行某些阻塞式的 I/O 操作 ...\n从局部变量中恢复线程状态。' as "c" resulted in an error at token: '。'. Retrying in relaxed mode. [misc.highlighting_failure]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:49:<translated>:1: WARNING: term not in glossary: '解释器关闭' [ref.term]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:73:<translated>:1: WARNING: term not in glossary: '自由线程' [ref.term]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:213:<translated>:1: WARNING: term not in glossary: '自由线程' [ref.term]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:331:<translated>:1: WARNING: term not in glossary: '自由线程' [ref.term]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/whatsnew/changelog.rst:419:<translated>:1: WARNING: term not in glossary: '自由线程' [ref.term]
