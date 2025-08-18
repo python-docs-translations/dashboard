@@ -2,7 +2,7 @@ pulling_from_transifex = ('zh-cn', 'pt-br', 'ja', 'uk', 'pl', 'ru', 'fa', 'id')
 
 custom_contributing_links = {
     'es': 'https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html',
-    'ko': 'https://www.flowdas.com/pages/python-docs-ko.html',  # TODO: Find the new link
+    'ko': 'https://www.flowdas.com/pages/python-docs-ko.html',
     'zh-tw': 'https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF',
     'fr': 'https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.13/CONTRIBUTING.rst',
     'id': 'https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan',
