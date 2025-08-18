@@ -7,7 +7,7 @@ custom_contributing_links = {
     'fr': 'https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.13/CONTRIBUTING.rst',
     'id': 'https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan',
     'tr': 'https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak',
-    'gr': 'https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md',
+    'el': 'https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md',
     'pt-br': 'https://python.org.br/traducao/',
 }
 
