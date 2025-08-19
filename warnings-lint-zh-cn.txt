@@ -270,7 +270,7 @@ library/argparse.po:1208: found an unbalanced inline literal markup. (unbalanced
 library/argparse.po:1239: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/argparse.po:1239: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/argparse.po:1239: missing space before default role: '时使用``suggest_on_error``'. (missing-space-before-default-role)
-library/asyncio-eventloop.po:2033: trailing whitespace (trailing-whitespace)
+library/asyncio-eventloop.po:2047: trailing whitespace (trailing-whitespace)
 library/os.po:3126: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/os.po:3126: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/os.po:3126: missing space before default role: '认值为``False``'. (missing-space-before-default-role)
