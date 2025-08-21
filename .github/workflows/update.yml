@@ -56,8 +56,8 @@ jobs:
           curl -Lo index.html-public https://github.com/python-docs-translations/dashboard/raw/refs/heads/gh-pages/index.html
           diff --color=always -u index.html-public build/index.html || :
           cat build/index.html
-      - run: uv run generate_metadata.py  # generates metadata.html
-      - name: Deploy metadata view 🚀
+      - run: uv run generate_build_details.py  # generates build-details.html
+      - name: Deploy build details view 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
