@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    {% for project, metadata in metadata | sort(attribute='0.completion') | reverse %}
+    {% for project, metadata in build_details | sort(attribute='0.completion') | reverse %}
       {% if project.repository %}
         <tr>
           <td data-label="language">{{ project.language.name }} ({{ project.language.code }})</td>
