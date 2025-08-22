@@ -12,6 +12,7 @@ c-api/allocation.po:134: missing space before role ( objek:c:member:`). (missing
 c-api/abstract.po:41: role missing opening tag colon ( func:`). (missing-space-before-role)
 c-api/abstract.po:41: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/abstract.po:41: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+c-api/arg.po:1458: role missing opening tag colon ( c:expr:`). (missing-space-before-role)
 c-api/apiabiversion.po:256: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/apiabiversion.po:256: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/apiabiversion.po:256: missing space before default role: 'men``Py_PACK_FULL_VERSION``'. (missing-space-before-default-role)
