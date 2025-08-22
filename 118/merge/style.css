@@ -114,6 +114,7 @@ td[data-label="warnings"], td[data-label="lint"] {
   tr {
     border: 1px solid #ccc;
     margin-bottom: 5px;
+    overflow-x: auto;
   }
   td {
     border: none;
