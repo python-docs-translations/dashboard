@@ -1,2 +1,0 @@
-howto/logging.po:1576: trailing whitespace (trailing-whitespace)
-howto/logging.po:1768: trailing whitespace (trailing-whitespace)
