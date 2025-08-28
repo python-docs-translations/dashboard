@@ -1,6 +1,3 @@
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/faq/general.rst:: ERROR: Anonymous hyperlink mismatch: 1 references but 0 targets.
-See "backrefs" attribute for IDs. [docutils]
-/home/runner/work/dashboard/dashboard/clones/cpython/Doc/faq/windows.rst:276: WARNING: inconsistent term references in translated message. original: [':mod:`msvcrt`'], translated: [] [i18n.inconsistent_references]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/about.rst:6: WARNING: inconsistent references in translated message. original: ['`reStructuredText`_', '`Sphinx`_'], translated: [] [i18n.inconsistent_references]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/bugs.rst:11:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/bugs.rst:11:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -21,6 +18,9 @@ See "backrefs" attribute for IDs. [docutils]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/faq/general.rst:: ERROR: Anonymous hyperlink mismatch: 1 references but 0 targets.
+See "backrefs" attribute for IDs. [docutils]
+/home/runner/work/dashboard/dashboard/clones/cpython/Doc/faq/windows.rst:276: WARNING: inconsistent term references in translated message. original: [':mod:`msvcrt`'], translated: [] [i18n.inconsistent_references]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/tutorial/appendix.rst:50: WARNING: inconsistent term references in translated message. original: [':exc:`KeyboardInterrupt`', ':keyword:`try`'], translated: [':exc:`KeyboardInterrupt`'] [i18n.inconsistent_references]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/tutorial/datastructures.rst:407: WARNING: inconsistent term references in translated message. original: [':term:`immutable`', ':func:`namedtuples <collections.namedtuple>`', ':term:`mutable`'], translated: [':term:`immutable`', ':func:`namedtuples <collections.namedtuple> `). Daftar adalah :term:`mutable`'] [i18n.inconsistent_references]
 /home/runner/work/dashboard/dashboard/clones/cpython/Doc/tutorial/datastructures.rst:693: WARNING: inconsistent term references in translated message. original: [':ref:`walrus operator <why-can-t-i-use-an-assignment-in-an-expression>`'], translated: [] [i18n.inconsistent_references]
