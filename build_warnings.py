@@ -33,5 +33,11 @@ def number(clones_dir: str, repo: str, language_code: str) -> int:
             f'./sphinxbuild/{language_code}',  # outputdir
         )
     )
+    prefix = f'{Path(clones_dir).resolve()}/cpython/Doc/'
+    log = '\n'.join(
+        line.removeprefix(prefix)
+        for line in Path(warning_file).read_text().splitlines()
+    )
+    Path(warning_file).write_text(log)
     copyfile(warning_file, f'build/warnings-{language_code}.txt')
     return len(findall('ERROR|WARNING', Path(warning_file).read_text()))
