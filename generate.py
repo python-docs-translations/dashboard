@@ -96,7 +96,7 @@ if __name__ == '__main__':
     logging.info(f'starting at {generation_time}')
     Path('build').mkdir(parents=True, exist_ok=True)
 
-    completion_progress = list(get_completion_progress())
+    from data import completion_progress
 
     env = Environment(loader=FileSystemLoader('templates'))
     index = env.get_template('index.html.jinja').render(
