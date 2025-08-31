@@ -281,6 +281,20 @@
   },
   {
     "language": {
+      "code": "sv",
+      "name": "Swedish"
+    },
+    "repository": "python/python-docs-sv",
+    "branch": "3.14",
+    "completion": 99.99134359735362,
+    "change": 99.99134359735362,
+    "built": false,
+    "translated_name": "",
+    "uses_platform": false,
+    "contribution_link": "https://github.com/python/python-docs-sv"
+  },
+  {
+    "language": {
       "code": "zh-tw",
       "name": "Traditional Chinese"
     },
