@@ -11,7 +11,9 @@ class testBuildStatus(unittest.TestCase):
     def test_get_languages(self):
         result = {
             language: translated_name
-            for language, translated_name in translated_names.get_languages(PoolManager())
+            for language, translated_name in translated_names.get_languages(
+                PoolManager()
+            )
         }
 
         self.assertIn('en', result)
