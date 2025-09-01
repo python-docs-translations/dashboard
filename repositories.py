@@ -2,11 +2,9 @@ import re
 from collections.abc import Iterator
 from dataclasses import dataclass
 from pathlib import Path
-from tempfile import TemporaryDirectory
 
 from docutils import core
 from docutils.nodes import table, row
-from git import Repo
 
 
 def get_languages_and_repos(
@@ -15,10 +13,14 @@ def get_languages_and_repos(
     translating = devguide_dir.joinpath(
         'documentation/translations/translating.rst'
     ).read_text()
-    doctree = core.publish_doctree(translating)
+    doctree = core.publish_doctree(
+        translating,
+        settings_overrides={'report_level': 5},
+        # docutils errors on Sphinx directives, but this does not matter for us
+    )
 
-    for node in doctree.traverse(table):
-        for row_node in node.traverse(row)[1:]:
+    for node in doctree.findall(table):
+        for row_node in list(node.findall(row))[1:]:
             language = row_node[0].astext()
             repo = row_node[2].astext()
             language_match = re.match(r'(.*) \((.*)\)', language)
@@ -39,10 +41,3 @@ def get_languages_and_repos(
 class Language:
     code: str
     name: str
-
-
-if __name__ == '__main__':
-    with TemporaryDirectory() as directory:
-        Repo.clone_from('https://github.com/python/devguide.git', directory, depth=1)
-        for item in get_languages_and_repos(Path(directory)):
-            print(item)
