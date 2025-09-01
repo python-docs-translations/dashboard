@@ -61,7 +61,7 @@
       "name": "Hindi"
     },
     "repository": "CuriousLearner/python-docs-hi-in",
-    "branch": "master",
+    "branch": "3.13",
     "completion": 0.00494651579793483,
     "change": 0.0,
     "built": false,
@@ -133,7 +133,7 @@
     "repository": "python/python-docs-ko",
     "branch": "3.13",
     "completion": 50.41736227045075,
-    "change": 4.136523836023002,
+    "change": 4.080875533296236,
     "built": true,
     "translated_name": "\ud55c\uad6d\uc5b4",
     "uses_platform": false,
