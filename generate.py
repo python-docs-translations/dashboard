@@ -12,7 +12,7 @@ from git import Repo
 from jinja2 import Environment, FileSystemLoader
 from urllib3 import PoolManager
 
-import build_status
+import translated_names
 import contribute
 from completion import branches_from_devguide, get_completion
 from repositories import Language, get_languages_and_repos
@@ -39,7 +39,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
 
     languages_built: dict[str, str] = {
         language: translated_name
-        for language, translated_name in build_status.get_languages(PoolManager())
+        for language, translated_name in translated_names.get_languages(PoolManager())
     }
 
     with concurrent.futures.ThreadPoolExecutor() as executor:
