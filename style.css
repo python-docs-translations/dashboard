@@ -1,20 +1,26 @@
 /* ---------------------------- Global Styles ------------------------------- */
 
-:root {
-  --bg-color: rgb(245, 245, 245);
-  --text-color: #15141A;
+body {
+  padding-top: 4.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+  background-color: rgb(245, 245, 245);
 }
 
-body {
-  padding: 4.5rem 1rem 3rem;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+a {
+  color: #0d0d0d;
+}
+
+a:hover {
+  color: #1595fe;
 }
 
 /* -------------------------------- navbar ---------------------------------- */
 
 .navbar {
-  background-color: rgb(var(--bg-color), 0.6);
+  background-color: rgb(245, 245, 245, 0.6);
   backdrop-filter: blur(10px);
   border-bottom: 0.25px solid #999;
   -webkit-backdrop-filter: blur(10px);
@@ -24,23 +30,18 @@ body {
   transition: 0.3s background-color;
   text-align: center;
   background-color: transparent;
-  padding: 0 1rem;
+  padding: 0rem 1rem;
   text-decoration: none;
   border-radius: 0.3rem;
 }
 
 .navbar li:hover {
-  background-color: #eacb4d;
+  background-color: #d0cccd;
 }
 
 .navbar li .nav-link {
   color: #0d0d0d;
 }
-
-.nav-link svg {
-    vertical-align: middle;
-}
-
 
 /* ----------------------- Cards and card columns --------------------------- */
 
@@ -126,8 +127,5 @@ td[data-label="warnings"], td[data-label="lint"] {
     font-weight: bold;
     left: 10px;
     position: absolute;
-  }
-  td[data-label="warnings"], td[data-label="lint"] {
-    text-align: left;
   }
 }
