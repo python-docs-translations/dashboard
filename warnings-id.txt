@@ -1,5 +1,3 @@
-faq/general.rst:: ERROR: Anonymous hyperlink mismatch: 1 references but 0 targets.
-See "backrefs" attribute for IDs. [docutils]
 faq/windows.rst:276: WARNING: inconsistent term references in translated message. original: [':mod:`msvcrt`'], translated: [] [i18n.inconsistent_references]
 about.rst:6: WARNING: inconsistent references in translated message. original: ['`reStructuredText`_', '`Sphinx`_'], translated: [] [i18n.inconsistent_references]
 bugs.rst:11:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
