@@ -1,1 +1,0 @@
-build/NEWS:8486: WARNING: inconsistent term references in translated message. original: [':func:`functools.partial`s of :func:`repr`', ':term:`module`'], translated: [':func:`functools.partial`', ':func:`repr`', ':term:`module`'] [i18n.inconsistent_references]
