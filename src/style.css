@@ -38,7 +38,8 @@ body {
 }
 
 .nav-link svg {
-    vertical-align: middle;
+  vertical-align: middle;
+  margin-top: -4.5px;
 }
 
 
