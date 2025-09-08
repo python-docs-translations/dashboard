@@ -1,4 +1,3 @@
-faq/windows.rst:276: WARNING: inconsistent term references in translated message. original: [':mod:`msvcrt`'], translated: [] [i18n.inconsistent_references]
 about.rst:6: WARNING: inconsistent references in translated message. original: ['`reStructuredText`_', '`Sphinx`_'], translated: [] [i18n.inconsistent_references]
 bugs.rst:11:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 bugs.rst:11:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -15,6 +14,7 @@ c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without 
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+faq/windows.rst:276: WARNING: inconsistent term references in translated message. original: [':mod:`msvcrt`'], translated: [] [i18n.inconsistent_references]
 tutorial/appendix.rst:50: WARNING: inconsistent term references in translated message. original: [':exc:`KeyboardInterrupt`', ':keyword:`try`'], translated: [':exc:`KeyboardInterrupt`'] [i18n.inconsistent_references]
 tutorial/datastructures.rst:407: WARNING: inconsistent term references in translated message. original: [':term:`immutable`', ':func:`namedtuples <collections.namedtuple>`', ':term:`mutable`'], translated: [':term:`immutable`', ':func:`namedtuples <collections.namedtuple> `). Daftar adalah :term:`mutable`'] [i18n.inconsistent_references]
 tutorial/datastructures.rst:693: WARNING: inconsistent term references in translated message. original: [':ref:`walrus operator <why-can-t-i-use-an-assignment-in-an-expression>`'], translated: [] [i18n.inconsistent_references]
