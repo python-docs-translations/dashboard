@@ -249,6 +249,7 @@ whatsnew/changelog.rst:47491:<translated>:1: WARNING: Inline literal start-strin
 whatsnew/changelog.rst:47685:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:51682:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init.rst:979: WARNING: Lexing literal_block '将线程状态保存到一个局部变量中。\n... 执行某些阻塞式的 I/O 操作 ...\n从局部变量中恢复线程状态。' as "c" resulted in an error at token: '。'. Retrying in relaxed mode. [misc.highlighting_failure]
+whatsnew/changelog.rst:138:<translated>:1: WARNING: term not in glossary: '自由线程' [ref.term]
 whatsnew/changelog.rst:278:<translated>:1: WARNING: term not in glossary: '自由线程' [ref.term]
 whatsnew/changelog.rst:396:<translated>:1: WARNING: term not in glossary: '自由线程' [ref.term]
 whatsnew/changelog.rst:484:<translated>:1: WARNING: term not in glossary: '自由线程' [ref.term]
