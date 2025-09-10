@@ -299,9 +299,9 @@
       "name": "Traditional Chinese"
     },
     "repository": "python/python-docs-zh-tw",
-    "branch": "3.13",
-    "completion": 37.69348696899263,
-    "change": 0.29795756886404945,
+    "branch": "3.14",
+    "completion": 40.11671035062559,
+    "change": 2.7211809504970077,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "uses_platform": false,
