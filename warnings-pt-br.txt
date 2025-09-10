@@ -1,0 +1,1 @@
+reference/datamodel.rst:1680:<translated>:1: WARNING: term not in glossary: 'generador' [ref.term]
