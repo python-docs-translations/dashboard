@@ -1,4 +1,0 @@
-tutorial/datastructures.rst:342: WARNING: inconsistent term references in translated message. original: [':keyword:`del`', ':meth:`~list.pop`'], translated: [':keyword:`del`'] [i18n.inconsistent_references]
-reference/compound_stmts.rst:418:<translated>:1: ERROR: Unknown interpreted text role "keywords". [docutils]
-reference/compound_stmts.rst:418:<translated>:1: ERROR: Unknown interpreted text role "keywords". [docutils]
-reference/compound_stmts.rst:418: WARNING: inconsistent term references in translated message. original: [':keyword:`try`', ':keyword:`except`', ':keyword:`else <except_else>`', ':keyword:`return`', ':keyword:`break`', ':keyword:`continue`'], translated: [':keyword:`try`', ':keyword:`except`', ':keyword:`return`', ':keyword:`break`', ':keyword:`continue`'] [i18n.inconsistent_references]
