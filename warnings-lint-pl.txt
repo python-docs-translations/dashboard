@@ -1,0 +1,1 @@
+sphinx.po:52: trailing whitespace (trailing-whitespace)
