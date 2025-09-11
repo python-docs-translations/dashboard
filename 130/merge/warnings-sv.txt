@@ -1,5 +1,0 @@
-whatsnew/3.13.rst:: ERROR: Anonymous hyperlink mismatch: 1 references but 2 targets.
-See "backrefs" attribute for IDs. [docutils]
-whatsnew/changelog.rst:36479:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
-build/NEWS:8482: WARNING: inconsistent term references in translated message. original: [':func:`functools.partial`s of :func:`repr`', ':term:`module`'], translated: [':func:`functools.partial`', ':func:`repr`', ':term:`module`'] [i18n.inconsistent_references]
-whatsnew/changelog.rst:36479:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
