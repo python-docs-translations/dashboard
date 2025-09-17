@@ -308,5 +308,5 @@ whatsnew/3.4.rst:1630: WARNING: inconsistent term references in translated messa
 whatsnew/3.4.rst:2151: WARNING: inconsistent term references in translated message. original: [], translated: [':mod:`site`'] [i18n.inconsistent_references]
 whatsnew/3.4.rst:2330: WARNING: inconsistent term references in translated message. original: [':func:`inspect.getfullargspec`', ':func:`inspect.signature`', ':func:`inspect.getfullargspec`'], translated: [':func:`inspect.getfullargspec`', ':func:`inspect.signature`', ':func:`open`', ':func:`inspect.getfullargspec`'] [i18n.inconsistent_references]
 whatsnew/3.7.rst:84: WARNING: inconsistent references in translated message. original: ['`has been declared`_'], translated: [] [i18n.inconsistent_references]
-library/inspect.rst:807:<translated>:1: WARNING: term not in glossary: 'ハッシュ可能' [ref.term]
+library/inspect.rst:810:<translated>:1: WARNING: term not in glossary: 'ハッシュ可能' [ref.term]
 whatsnew/3.12.rst:187:<translated>:1: WARNING: undefined label: 'generuc-classes' [ref.ref]
