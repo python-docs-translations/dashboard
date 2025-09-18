@@ -1,7 +1,7 @@
 c-api/abstract.po:41: role missing opening tag colon ( func:`). (missing-space-before-role)
 c-api/abstract.po:41: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/abstract.po:41: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-c-api/iterator.po:25: trailing whitespace (trailing-whitespace)
+c-api/arg.po:1355: role missing opening tag colon ( c:expr:`). (missing-space-before-role)
 c-api/cell.po:29: trailing whitespace (trailing-whitespace)
 c-api/cell.po:102: trailing whitespace (trailing-whitespace)
 whatsnew/3.7.po:257: role missing opening tag colon ( func:`). (missing-space-before-role)
