@@ -1,1 +1,1 @@
-library/venv.po:35: missing space before role ( Consulte:ref:`). (missing-space-before-role)
+c-api/exceptions.po:31: role missing (escaped) space after role: ':c:data:`errno`A' (missing-space-after-role)
