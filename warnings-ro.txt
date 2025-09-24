@@ -1,0 +1,1 @@
+tutorial/introduction.rst:422: WARNING: inconsistent term references in translated message. original: [':meth:`list.append`'], translated: [] [i18n.inconsistent_references]
