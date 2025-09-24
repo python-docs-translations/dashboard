@@ -37,11 +37,6 @@ body {
   color: #0d0d0d;
 }
 
-.navbar-brand a {
-  text-decoration: none;
-  outline-offset: 8px;
-}
-
 .nav-link svg {
   vertical-align: middle;
   margin-top: -4.5px;
