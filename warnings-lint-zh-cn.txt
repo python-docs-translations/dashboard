@@ -253,7 +253,7 @@ library/turtle.po:3747: found an unbalanced inline literal markup. (unbalanced-i
 library/turtle.po:3747: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/turtle.po:3747: missing space before default role: '如果为``False``并且已经存在具有给定文件名的文件，则该函数将引发``FileExistsError``'. (missing-space-before-default-role)
 library/turtle.po:3747: missing space before default role: '如果为``True``'. (missing-space-before-default-role)
-library/unicodedata.po:93: trailing whitespace (trailing-whitespace)
+library/unicodedata.po:94: trailing whitespace (trailing-whitespace)
 library/math.po:527: trailing whitespace (trailing-whitespace)
 library/curses.po:164: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/curses.po:164: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
