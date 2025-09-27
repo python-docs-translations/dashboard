@@ -1,5 +1,7 @@
 gitpython
 urllib3
+# change this back to native "potodo" after the upstream PR is merged
+# ref: https://git.afpy.org/AFPy/potodo/pulls/20
 git+https://git.afpy.org/maciek/potodo.git@word-counts
 jinja2
 docutils
