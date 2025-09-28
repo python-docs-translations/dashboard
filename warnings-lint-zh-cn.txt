@@ -197,7 +197,7 @@ library/dis.po:900: missing space before default role: ''. (missing-space-before
 library/dis.po:2460: trailing whitespace (trailing-whitespace)
 library/dis.po:2476: trailing whitespace (trailing-whitespace)
 library/asyncio-eventloop.po:2052: trailing whitespace (trailing-whitespace)
-library/gc.po:415: trailing whitespace (trailing-whitespace)
+library/gc.po:413: trailing whitespace (trailing-whitespace)
 library/heapq.po:107: inline literal missing (escaped) space after literal: '``_max``后' (missing-space-after-literal)
 library/heapq.po:107: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/heapq.po:107: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
