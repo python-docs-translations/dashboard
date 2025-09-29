@@ -289,7 +289,7 @@ tutorial/introduction.po:423: missing space before default role: '数個の``\\`
 tutorial/introduction.po:29: trailing whitespace (trailing-whitespace)
 tutorial/introduction.po:423: trailing whitespace (trailing-whitespace)
 whatsnew/2.4.po:37: trailing whitespace (trailing-whitespace)
-whatsnew/3.7.po:3780: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+whatsnew/3.7.po:3781: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/3.11.po:4354: trailing whitespace (trailing-whitespace)
 whatsnew/2.3.po:1526: trailing whitespace (trailing-whitespace)
 whatsnew/2.7.po:4713: trailing whitespace (trailing-whitespace)
