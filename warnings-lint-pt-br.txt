@@ -1,6 +1,0 @@
-using/ios.po:621: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-using/ios.po:621: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-using/ios.po:621: missing space before default role: ' de``install_python``'. (missing-space-before-default-role)
-whatsnew/3.14.po:6891: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-whatsnew/3.14.po:6891: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-whatsnew/3.14.po:6891: missing space before default role: ' \u200b\u200b``TO_BOOL``'. (missing-space-before-default-role)
