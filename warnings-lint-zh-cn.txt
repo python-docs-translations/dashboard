@@ -1412,7 +1412,7 @@ whatsnew/3.3.po:2530: found an unbalanced inline literal markup. (unbalanced-inl
 whatsnew/3.3.po:2530: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/3.3.po:2530: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/3.3.po:2530: missing space before default role: '受一个``name``和``value``'. (missing-space-before-default-role)
-whatsnew/3.3.po:4586: trailing whitespace (trailing-whitespace)
+whatsnew/3.3.po:4612: trailing whitespace (trailing-whitespace)
 whatsnew/2.5.po:175: inline literal missing (escaped) space after literal: '``c ? x : y``那' (missing-space-after-literal)
 whatsnew/2.5.po:1565: inline literal missing (escaped) space after literal: '``nested(mgr1, mgr2, ...)``函' (missing-space-after-literal)
 whatsnew/2.5.po:142: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
