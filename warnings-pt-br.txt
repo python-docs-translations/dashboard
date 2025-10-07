@@ -1,5 +1,0 @@
-reference/lexical_analysis.rst:56:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-reference/lexical_analysis.rst:38: WARNING: inconsistent term references in translated message. original: [':data:`~token.NEWLINE`', ':ref:`explicit <explicit-joining>`', ':ref:`implicit <implicit-joining>`'], translated: [':data:`~token.NEWLINE`', ':ref:`implícitas <implicit-joining>`'] [i18n.inconsistent_references]
-reference/lexical_analysis.rst:56:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-reference/lexical_analysis.rst:: ERROR: Anonymous hyperlink mismatch: 0 references but 1 targets.
-See "backrefs" attribute for IDs. [docutils]
