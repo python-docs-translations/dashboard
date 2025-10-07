@@ -310,7 +310,7 @@ whatsnew/3.10.po:735: missing space before default role: 'ラルを``|``'. (miss
 whatsnew/2.6.po:285: trailing whitespace (trailing-whitespace)
 whatsnew/3.6.po:3616: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/3.6.po:3552: trailing whitespace (trailing-whitespace)
-whatsnew/3.13.po:265: missing space before role ( と:data:`). (missing-space-before-role)
+whatsnew/3.13.po:258: missing space before role ( と:data:`). (missing-space-before-role)
 whatsnew/3.9.po:559: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/3.4.po:1900: trailing whitespace (trailing-whitespace)
 whatsnew/3.5.po:1044: trailing whitespace (trailing-whitespace)
