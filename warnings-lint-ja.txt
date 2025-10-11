@@ -51,7 +51,7 @@ library/email.headerregistry.po:207: missing space before default role: '  の``
 library/logging.po:1032: trailing whitespace (trailing-whitespace)
 library/logging.po:2281: trailing whitespace (trailing-whitespace)
 library/argparse.po:1016: trailing whitespace (trailing-whitespace)
-library/signal.po:533: trailing whitespace (trailing-whitespace)
+library/signal.po:515: trailing whitespace (trailing-whitespace)
 library/msvcrt.po:78: trailing whitespace (trailing-whitespace)
 library/stdtypes.po:7978: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/stdtypes.po:7978: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
