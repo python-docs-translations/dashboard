@@ -131,7 +131,7 @@
       "name": "Korean"
     },
     "repository": "python/python-docs-ko",
-    "branch": "3.13",
+    "branch": "3.14",
     "completion": 49.387966332610084,
     "change": 0.22645122622108005,
     "built": true,
