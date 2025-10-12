@@ -1,4 +1,0 @@
-whatsnew/3.14.rst:1012:<translated>:1: ERROR: invalid PEP number whatsnew314-deferred-annotations [docutils]
-whatsnew/3.14.rst:1012:<translated>:1: ERROR: invalid PEP number whatsnew314-deferred-annotations [docutils]
-whatsnew/3.14.rst:1012: WARNING: inconsistent term references in translated message. original: [':mod:`annotationlib`', ':term:`annotations <annotation>`', ':ref:`PEP 749 <whatsnew314-deferred-annotations>`'], translated: [':mod:`annotationlib`', ':term:`anotações <annotation>`'] [i18n.inconsistent_references]
-whatsnew/3.14.rst:1167: WARNING: inconsistent term references in translated message. original: [':meth:`Executor.map\n<concurrent.futures.Executor.map>`'], translated: [] [i18n.inconsistent_references]
