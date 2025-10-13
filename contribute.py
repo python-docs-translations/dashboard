@@ -1,6 +1,6 @@
-pulling_from_transifex = ('zh-cn', 'pt-br', 'ja', 'uk', 'pl', 'ru', 'fa', 'id')
+pulling_from_transifex: tuple[str, ...] = ('zh-cn', 'pt-br', 'ja', 'uk', 'pl', 'ru', 'fa', 'id')
 
-custom_contributing_links = {
+custom_contributing_links: dict[str, str] = {
     'es': 'https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html',
     'ko': 'https://www.flowdas.com/pages/python-docs-ko.html',
     'zh-tw': 'https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF',
@@ -21,14 +21,3 @@ def get_contrib_link(language: str, repo: str | None) -> str | None:
         )
         or (repo and f'https://github.com/{repo}')
     )
-
-
-if __name__ == '__main__':
-    for code, repo in (
-        ('en', None),
-        ('pl', None),
-        ('ar', 'python/python-docs-ar'),
-        ('zh-cn', None),
-        ('id', None),
-    ):
-        print(f'{code}: {get_contrib_link(code, repo)}')
