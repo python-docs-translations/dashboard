@@ -1,4 +1,13 @@
-pulling_from_transifex: tuple[str, ...] = ('zh-cn', 'pt-br', 'ja', 'uk', 'pl', 'ru', 'fa', 'id')
+pulling_from_transifex: tuple[str, ...] = (
+    'zh-cn',
+    'pt-br',
+    'ja',
+    'uk',
+    'pl',
+    'ru',
+    'fa',
+    'id',
+)
 
 custom_contributing_links: dict[str, str] = {
     'es': 'https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html',
