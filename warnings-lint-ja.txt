@@ -185,7 +185,7 @@ library/os.po:6665: found an unbalanced inline literal markup. (unbalanced-inlin
 library/os.po:6665: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/types.po:239: trailing whitespace (trailing-whitespace)
 library/types.po:278: trailing whitespace (trailing-whitespace)
-library/turtle.po:3763: trailing whitespace (trailing-whitespace)
+library/turtle.po:3729: trailing whitespace (trailing-whitespace)
 library/xml.dom.pulldom.po:202: trailing whitespace (trailing-whitespace)
 library/token.po:32: role missing opening tag colon ( file:`). (missing-space-before-role)
 library/inspect.po:1272: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
