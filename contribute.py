@@ -1,12 +1,5 @@
-pulling_from_transifex: tuple[str, ...] = (
-    'zh-cn',
-    'pt-br',
-    'ja',
-    'uk',
-    'pl',
-    'ru',
-    'fa',
-    'id',
+pulling_from_transifex: frozenset[str] = frozenset(
+    {'zh-cn', 'pt-br', 'ja', 'uk', 'pl', 'ru', 'fa', 'id'}
 )
 
 custom_contributing_links: dict[str, str] = {
