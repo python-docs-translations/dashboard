@@ -38,7 +38,7 @@ library/resource.po:111: found an unbalanced inline literal markup. (unbalanced-
 library/resource.po:149: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/resource.po:111: trailing whitespace (trailing-whitespace)
 library/resource.po:149: trailing whitespace (trailing-whitespace)
-library/smtplib.po:373: trailing whitespace (trailing-whitespace)
+library/smtplib.po:323: trailing whitespace (trailing-whitespace)
 library/email.headerregistry.po:171: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/email.headerregistry.po:171: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/email.headerregistry.po:189: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
