@@ -59,7 +59,7 @@ library/stdtypes.po:7978: missing space before default role: 'の数は``Generic
 library/stdtypes.po:3483: trailing whitespace (trailing-whitespace)
 library/stdtypes.po:7562: trailing whitespace (trailing-whitespace)
 library/stdtypes.po:8419: trailing whitespace (trailing-whitespace)
-library/stdtypes.po:8995: trailing whitespace (trailing-whitespace)
+library/stdtypes.po:8987: trailing whitespace (trailing-whitespace)
 library/re.po:51: trailing whitespace (trailing-whitespace)
 library/re.po:1130: trailing whitespace (trailing-whitespace)
 library/re.po:2329: trailing whitespace (trailing-whitespace)
