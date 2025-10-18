@@ -1,6 +1,4 @@
-library/xmlrpc.client.po:622: trailing whitespace (trailing-whitespace)
-tutorial/stdlib2.po:301: missing space before role ( modul:mod:`). (missing-space-before-role)
-tutorial/whatnow.po:156: role missing (escaped) space after role: ':ref:`Pertanyaan yang Sering Diajukan <faq-index>`(' (missing-space-after-role)
+library/xmlrpc.client.po:623: trailing whitespace (trailing-whitespace)
 tutorial/classes.po:1141: inline literal missing (escaped) space after literal: '``issubclass(bool, int)``a' (missing-space-after-literal)
 tutorial/classes.po:1141: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 tutorial/classes.po:1141: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
