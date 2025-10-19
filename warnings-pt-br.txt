@@ -1,0 +1,1 @@
+whatsnew/3.14.rst:3302:<translated>:1: WARNING: undefined label: 'whatsnew314-deferred-anotação' [ref.ref]
