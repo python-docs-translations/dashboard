@@ -53,7 +53,7 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, str, float]:
         else:
             clone_repo.git.checkout(commit.hexsha)
             with TemporaryDirectory() as tmpdir:
-                month_ago_completion = potodo.merge_and_scan_path(
+                month_ago_completion = potodo.merge_and_scan_paths(
                     [clone_path],
                     pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
                     merge_path=Path(tmpdir),
