@@ -35,7 +35,7 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, str, float]:
         else:
             break
     path_for_merge = Path(clones_dir, 'rebased_translations', repo)
-    completion = potodo.merge_and_scan_path(
+    completion = potodo.merge_and_scan_paths(
         clone_path,
         pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
         merge_path=path_for_merge,
