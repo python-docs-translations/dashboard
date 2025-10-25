@@ -39,7 +39,6 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, str, float]:
         clone_path,
         pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
         merge_path=path_for_merge,
-        hide_reserved=False,
         api_url='',
     ).completion
 
