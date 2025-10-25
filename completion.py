@@ -36,7 +36,7 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, str, float]:
             break
     path_for_merge = Path(clones_dir, 'rebased_translations', repo)
     completion = potodo.merge_and_scan_paths(
-        clone_path,
+        [clone_path],
         pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
         merge_path=path_for_merge,
         api_url='',
@@ -54,10 +54,9 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, str, float]:
             clone_repo.git.checkout(commit.hexsha)
             with TemporaryDirectory() as tmpdir:
                 month_ago_completion = potodo.merge_and_scan_path(
-                    clone_path,
+                    [clone_path],
                     pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
                     merge_path=Path(tmpdir),
-                    hide_reserved=False,
                     api_url='',
                 ).completion
             clone_repo.git.checkout(branch)  # restore the original state
