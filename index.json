@@ -197,20 +197,6 @@
   },
   {
     "language": {
-      "code": "pt",
-      "name": "Portuguese"
-    },
-    "repository": null,
-    "branch": "",
-    "completion": 0.0,
-    "change": 0.0,
-    "built": false,
-    "translated_name": "",
-    "uses_platform": false,
-    "contribution_link": null
-  },
-  {
-    "language": {
       "code": "pt-br",
       "name": "Brazilian Portuguese"
     },
@@ -259,7 +245,7 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
     "completion": 99.01252208394946,
-    "change": 0.9092648898587044,
+    "change": 0.9070495720436753,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "uses_platform": true,
