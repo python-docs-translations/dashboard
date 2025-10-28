@@ -1,0 +1,1 @@
+whatsnew/2.6.po:3966: trailing whitespace (trailing-whitespace)
