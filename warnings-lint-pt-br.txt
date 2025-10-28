@@ -1,1 +1,0 @@
-using/windows.po:1166: missing backtick before hyperlink reference: 'independentemente <https://www.python.org/ftp/python/3.13.1/win32/launcher.msi>`_'. (hyperlink-reference-missing-backtick)
