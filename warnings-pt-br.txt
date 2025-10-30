@@ -1,2 +1,5 @@
+c-api/exceptions.rst:63: WARNING: inconsistent term references in translated message. original: [':data:`sys.last_exc`', ':data:`sys.last_type`', ':data:`sys.last_value`', ':data:`sys.last_traceback`'], translated: [':data:`sys.last_exc`'] [i18n.inconsistent_references]
 using/windows.rst:753:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 using/windows.rst:753:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
+whatsnew/3.14.rst:1502: WARNING: inconsistent term references in translated message. original: [':class:`~logging.handlers.QueueListener`', ':term:`context manager`'], translated: [':class:`~logging.handlers.QueueListener`agora oferecem suporte ao protocolo de :term:`gerenciador de contexto`'] [i18n.inconsistent_references]
+whatsnew/3.14.rst:1521: WARNING: inconsistent term references in translated message. original: [':ref:`command-line <mimetypes-cli>`'], translated: [] [i18n.inconsistent_references]
