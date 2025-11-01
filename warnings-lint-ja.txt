@@ -51,7 +51,7 @@ library/email.headerregistry.po:171: missing space before default role: '  と``
 library/email.headerregistry.po:189: missing space before default role: 'ような``init``'. (missing-space-before-default-role)
 library/email.headerregistry.po:207: missing space before default role: '  の``init``'. (missing-space-before-default-role)
 library/logging.po:1032: trailing whitespace (trailing-whitespace)
-library/logging.po:2262: trailing whitespace (trailing-whitespace)
+library/logging.po:2281: trailing whitespace (trailing-whitespace)
 library/argparse.po:1016: trailing whitespace (trailing-whitespace)
 library/signal.po:547: trailing whitespace (trailing-whitespace)
 library/msvcrt.po:78: trailing whitespace (trailing-whitespace)
