@@ -1,4 +1,0 @@
-using/mac.po:748: role missing opening tag colon ( command:`). (missing-space-before-role)
-library/dis.po:1312: Extra backtick in role: ':attr:`~frame.f_lasti``' (role-with-extra-backtick)
-whatsnew/changelog.po:2175: Extra backtick in role: ':class:`str``' (role-with-extra-backtick)
-whatsnew/changelog.po:7559: Extra backtick in role: ':func:`open``' (role-with-extra-backtick)
