@@ -13,7 +13,6 @@ whatsnew/changelog.rst:10820:<translated>:1: WARNING: Inline strong start-string
 whatsnew/changelog.rst:10820:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
 whatsnew/changelog.rst:11158:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:11339:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-whatsnew/changelog.rst:11505:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:11640:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/changelog.rst:11645:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/changelog.rst:11657:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -88,7 +87,6 @@ build/NEWS:1828: WARNING: inconsistent term references in translated message. or
 build/NEWS:2153: WARNING: inconsistent term references in translated message. original: [], translated: ['`python -m asyncio ps PID`', '`python -m asyncio pstree PID`'] [i18n.inconsistent_references]
 build/NEWS:2176: WARNING: inconsistent term references in translated message. original: [], translated: ['`sym_new_type`', '`sym_new_not_null`'] [i18n.inconsistent_references]
 build/NEWS:2191: WARNING: inconsistent term references in translated message. original: [], translated: ['`_CALL_LEN`'] [i18n.inconsistent_references]
-build/NEWS:2291: WARNING: inconsistent term references in translated message. original: [':keyword:`async with`', ':keyword:`with`', ':keyword:`with`', ':keyword:`async with`'], translated: [':keyword:`async with`（或 :keyword:`with`', ':keyword:`with`', ':keyword:`async with`'] [i18n.inconsistent_references]
 build/NEWS:2539: WARNING: inconsistent term references in translated message. original: [':class:`ctypes.py_object`', ':term:`generic type`'], translated: [':class:`ctypes.py_object`'] [i18n.inconsistent_references]
 build/NEWS:2983: WARNING: inconsistent term references in translated message. original: [':mod:`pdb`', ':exc:`bdb.BdbQuit`', ':mod:`pdb`', ':func:`breakpoint`', ':func:`pdb.set_trace`'], translated: [':func:`breakpoint`', ':func:`pdb.set_trace`', ':mod:`pdb`', ':exc:`bdb.BdbQuit`'] [i18n.inconsistent_references]
 build/NEWS:3037: WARNING: inconsistent term references in translated message. original: [':func:`super`', ':term:`closure variable`', ':class:`typing.NamedTuple`'], translated: [':class:`typing.NamedTuple`', ':func:`super`'] [i18n.inconsistent_references]
@@ -145,7 +143,7 @@ whatsnew/changelog.rst:10820:<translated>:1: WARNING: Inline strong start-string
 whatsnew/changelog.rst:10820:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
 whatsnew/changelog.rst:11158:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:11339:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-whatsnew/changelog.rst:11505:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
+build/NEWS:11505: WARNING: inconsistent term references in translated message. original: [':c:func:`Py_DECREF()`'], translated: [':c:func:`Py_DECREF()`', '`0xDD`'] [i18n.inconsistent_references]
 whatsnew/changelog.rst:11640:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 build/NEWS:11640: WARNING: inconsistent term references in translated message. original: [], translated: ['`RAISE`'] [i18n.inconsistent_references]
 whatsnew/changelog.rst:11645:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -248,9 +246,3 @@ whatsnew/changelog.rst:48106:<translated>:1: WARNING: Inline literal start-strin
 whatsnew/changelog.rst:48300:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:52297:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init.rst:979: WARNING: Lexing literal_block '将线程状态保存到一个局部变量中。\n... 执行某些阻塞式的 I/O 操作 ...\n从局部变量中恢复线程状态。' as "c" resulted in an error at token: '。'. Retrying in relaxed mode. [misc.highlighting_failure]
-whatsnew/changelog.rst:2291:<translated>:1: WARNING: unknown keyword: 'async with`（或 :keyword:`with' [ref.keyword]
-whatsnew/changelog.rst:4481:<translated>:1: WARNING: term not in glossary: '文件系统编码和错误处理程序' [ref.term]
-whatsnew/changelog.rst:11505:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_DECREF()`现在如果对象是指向已释放内存的悬挂指针（内存由内存分配器的调试钩子填充为`0xDD'
-Invalid C declaration: Expected end of definition. [error at 11]
-  Py_DECREF()`现在如果对象是指向已释放内存的悬挂指针（内存由内存分配器的调试钩子填充为`0xDD
-  -----------^
