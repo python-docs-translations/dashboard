@@ -1,4 +1,1 @@
-library/ctypes.po:1062: trailing whitespace (trailing-whitespace)
-library/ctypes.po:1158: trailing whitespace (trailing-whitespace)
-whatsnew/changelog.po:92771: trailing whitespace (trailing-whitespace)
-whatsnew/changelog.po:92776: trailing whitespace (trailing-whitespace)
+library/html.parser.po:69: superfluous backtick in front of role (backtick-before-role)

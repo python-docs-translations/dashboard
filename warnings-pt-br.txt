@@ -1,0 +1,1 @@
+library/html.parser.rst:30: WARNING: inconsistent term references in translated message. original: [':class:`.HTMLParser`', ':class:`.HTMLParser`'], translated: [] [i18n.inconsistent_references]
