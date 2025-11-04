@@ -2,7 +2,7 @@ reference/simple_stmts.po:1073: Extra backtick in role: ':keyword:`!as``' (role-
 reference/lexical_analysis.po:437: Extra backtick in role: ':mod:`gettext``' (role-with-extra-backtick)
 reference/import.po:286: Extra backtick in role: ':data:`sys.path``' (role-with-extra-backtick)
 reference/import.po:1522: Extra backtick in role: ':meth:`importlib.abc.PathEntryFinder.find_spec``' (role-with-extra-backtick)
-library/http.server.po:516: Extra backtick in role: ':func:`time.time``' (role-with-extra-backtick)
+library/http.server.po:502: Extra backtick in role: ':func:`time.time``' (role-with-extra-backtick)
 library/sys_path_init.po:162: Extra backtick in role: ':data:`sys.path``' (role-with-extra-backtick)
 library/doctest.po:911: Extra backtick in role: ':const:`DONT_ACCEPT_TRUE_FOR_1``' (role-with-extra-backtick)
 library/re.po:260: Extra backtick in role: ':const:`MULTILINE``' (role-with-extra-backtick)
