@@ -189,7 +189,7 @@
     "repository": "python/python-docs-pl",
     "branch": "3.14",
     "completion": 5.563650269031388,
-    "change": 0.03246082568536579,
+    "change": 0.018320693284543665,
     "built": true,
     "translated_name": "polski",
     "uses_platform": true,
