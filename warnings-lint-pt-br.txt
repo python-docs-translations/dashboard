@@ -1,3 +1,0 @@
-reference/simple_stmts.po:761: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-reference/simple_stmts.po:761: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-reference/simple_stmts.po:761: missing space before default role: 'lor``None``'. (missing-space-before-default-role)
