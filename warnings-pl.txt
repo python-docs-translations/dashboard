@@ -1,0 +1,1 @@
+tutorial/errors.rst:419:<translated>:1: WARNING: unknown keyword: 'zwracać' [ref.keyword]
