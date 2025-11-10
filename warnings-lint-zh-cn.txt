@@ -393,7 +393,7 @@ whatsnew/2.7.po:1334: missing space before default role: '用则为``legacy``'. 
 whatsnew/2.7.po:3105: missing space before default role: '起来像``<?xml-stylesheet href="#style1"?>``'. (missing-space-before-default-role)
 whatsnew/2.7.po:3105: missing space before default role: '起来像``<!-- comment -->``'. (missing-space-before-default-role)
 whatsnew/2.7.po:3916: missing backtick before hyperlink reference: '7可以使用Python进行`脚本化 <https://web.archive.org/web/20110715084810/http://sourceware.org/gdb/current/onlinedocs/gdb/Python.html>`_'. (hyperlink-reference-missing-backtick)
-whatsnew/2.7.po:4596: trailing whitespace (trailing-whitespace)
+whatsnew/2.7.po:4579: trailing whitespace (trailing-whitespace)
 whatsnew/2.0.po:1762: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/2.0.po:1762: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/2.6.po:795: inline literal missing (escaped) space after literal: '``nested(mgr1, mgr2, ...)``函' (missing-space-after-literal)
