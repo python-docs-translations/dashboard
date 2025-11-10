@@ -73,7 +73,6 @@ library/functions.po:965: missing space before default role: "  と``')'``". (mi
 library/functions.po:1509: Unnecessary parentheses in ':meth:`~object.__float__()`' (unnecessary-parentheses)
 library/functions.po:1741: trailing whitespace (trailing-whitespace)
 library/functions.po:2636: trailing whitespace (trailing-whitespace)
-library/functions.po:3235: trailing whitespace (trailing-whitespace)
 library/sqlite3.po:485: trailing whitespace (trailing-whitespace)
 library/sqlite3.po:492: trailing whitespace (trailing-whitespace)
 library/sqlite3.po:1477: trailing whitespace (trailing-whitespace)
