@@ -33,12 +33,14 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, str, float]:
         else:
             break
     path_for_merge = Path(clones_dir, 'rebased_translations', repo)
-    completion = potodo.merge_and_scan_paths(
+    project = potodo.merge_and_scan_paths(
         [clone_path],
         pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
         merge_path=path_for_merge,
         api_url='',
-    ).completion
+    )
+    completion = project.completion
+    project.filter(lambda file: file.path in (Path('bugs.po'), Path('tutorial')))
 
     if completion:
         # Fetch commit from before 30 days ago and checkout
