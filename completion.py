@@ -2,16 +2,16 @@ import json
 from functools import cache
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from urllib.request import urlopen
 
 import git
+import urllib3
 from potodo import potodo
 
 
 @cache
 def branches_from_peps() -> list[str]:
-    with urlopen('https://peps.python.org/api/release-cycle.json') as in_file:
-        data = json.loads(in_file.read().decode('utf-8'))
+    resp = urllib3.request('GET', 'https://peps.python.org/api/release-cycle.json')
+    data = json.loads(resp.data.decode('utf-8'))
     return [
         branch for branch in data if data[branch]['status'] in ('bugfix', 'security')
     ]
