@@ -11,7 +11,7 @@ from potodo import potodo
 @cache
 def branches_from_peps() -> list[str]:
     resp = urllib3.request('GET', 'https://peps.python.org/api/release-cycle.json')
-    data = json.loads(resp.data.decode('utf-8'))
+    data = json.loads(resp.data)
     return [
         branch for branch in data if data[branch]['status'] in ('bugfix', 'security')
     ]
