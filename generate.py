@@ -14,7 +14,7 @@ from urllib3 import PoolManager
 
 import translated_names
 import contribute
-from completion import branches_from_devguide, get_completion
+from completion import branches_from_peps, get_completion
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -27,7 +27,7 @@ def get_completion_progress() -> Iterator['LanguageProjectData']:
         devguide_dir := Path(clones_dir, 'devguide'),
         depth=1,
     )
-    latest_branch = branches_from_devguide(devguide_dir)[0]
+    latest_branch = branches_from_peps()[0]
     Repo.clone_from(
         'https://github.com/python/cpython.git',
         cpython_dir := Path(clones_dir, 'cpython'),

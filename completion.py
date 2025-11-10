@@ -4,13 +4,14 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 import git
+import urllib3
 from potodo import potodo
 
 
 @cache
-def branches_from_devguide(devguide_dir: Path) -> list[str]:
-    p = devguide_dir.joinpath('include/release-cycle.json')
-    data = json.loads(p.read_text())
+def branches_from_peps() -> list[str]:
+    resp = urllib3.request('GET', 'https://peps.python.org/api/release-cycle.json')
+    data = json.loads(resp.data)
     return [
         branch for branch in data if data[branch]['status'] in ('bugfix', 'security')
     ]
@@ -18,10 +19,7 @@ def branches_from_devguide(devguide_dir: Path) -> list[str]:
 
 def get_completion(clones_dir: str, repo: str) -> tuple[float, str, float]:
     clone_path = Path(clones_dir, 'translations', repo)
-    for branch in branches_from_devguide(Path(clones_dir, 'devguide')) + [
-        'master',
-        'main',
-    ]:
+    for branch in branches_from_peps() + ['master', 'main']:
         try:
             clone_repo = git.Repo.clone_from(
                 f'https://github.com/{repo}.git', clone_path, branch=branch
