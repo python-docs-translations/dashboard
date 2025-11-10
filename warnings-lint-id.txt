@@ -1,2 +1,1 @@
-library/xmlrpc.client.po:623: trailing whitespace (trailing-whitespace)
 c-api/arg.po:1357: role missing opening tag colon ( c:expr:`). (missing-space-before-role)
