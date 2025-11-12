@@ -1,2 +1,0 @@
-library/ctypes.po:2000: trailing whitespace (trailing-whitespace)
-library/ctypes.po:2083: trailing whitespace (trailing-whitespace)
