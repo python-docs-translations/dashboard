@@ -1,1 +1,4 @@
 bugs.rst:103:<translated>:2: WARNING: Block quote ends without a blank line; unexpected unindent. [docutils]
+tutorial/interpreter.rst:26: WARNING: inconsistent term references in translated message. original: [':ref:`Microsoft Store\n<windows-store>`', ':ref:`py.exe launcher <launcher>`', ':ref:`setting-envvars`'], translated: [':ref:`Microsoft Store <windows-store>`', ':ref:`setting-envvars`'] [i18n.inconsistent_references]
+tutorial/interpreter.rst:73: WARNING: inconsistent term references in translated message. original: [':option:`-c`', ':option:`-m`', ':option:`-c`', ':option:`-m`'], translated: [':option:`-c`', ':option:`-c`*command* или :option:`'] [i18n.inconsistent_references]
+tutorial/interpreter.rst:73:<translated>:1: WARNING: unknown option: '-c`*command* или :option:' [ref.option]
