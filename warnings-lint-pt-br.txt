@@ -1,0 +1,1 @@
+howto/a-conceptual-overview-of-asyncio.po:1087: role missing (escaped) space after role: ':meth:`future.set_result() <asyncio.Future.set_result>`(' (missing-space-after-role)
