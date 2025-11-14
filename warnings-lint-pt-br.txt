@@ -1,2 +1,1 @@
-extending/newtypes_tutorial.po:48: role with no backticks: ' :term:CPython ' (role-without-backticks)
-extending/newtypes_tutorial.po:381: trailing whitespace (trailing-whitespace)
+whatsnew/changelog.po:328: superfluous backtick in front of role (backtick-before-role)

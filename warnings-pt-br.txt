@@ -1,5 +1,0 @@
-extending/newtypes_tutorial.rst:26: WARNING: inconsistent term references in translated message. original: [':term:`CPython`', '', ':c:type:`PyObject`', ':term:`reference count`'], translated: ['', ':c:type:`PyObject`em si contém apenas a :term:`contagem de referências`'] [i18n.inconsistent_references]
-extending/newtypes_tutorial.rst:26:<translated>:1: WARNING: Unparseable C cross-reference: 'PyObject`em si contém apenas a :term:`contagem de referências'
-Invalid C declaration: Expected end of definition. [error at 8]
-  PyObject`em si contém apenas a :term:`contagem de referências
-  --------^
