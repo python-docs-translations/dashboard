@@ -5,6 +5,8 @@ on:
 jobs:
   cleanup:
     runs-on: ubuntu-latest
+    # PRs from forks don't create previews
+    if: github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork
     permissions:
       contents: write
     steps:
