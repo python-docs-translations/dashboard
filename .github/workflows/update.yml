@@ -13,11 +13,11 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.x"
-      - uses: astral-sh/setup-uv@v5
-      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v7
+      - uses: actions/checkout@v5
       - run: sudo apt-get install -y gettext
       - run: pip install -r requirements.txt
       - run: uv run generate.py  # generates index.html and index.json
@@ -74,7 +74,7 @@ jobs:
           clean: false
           git-config-name: github-actions[bot]
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: build
           path: build
