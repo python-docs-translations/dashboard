@@ -1,1 +1,0 @@
-tutorial/datastructures.po:1050: trailing whitespace (trailing-whitespace)

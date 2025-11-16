@@ -1,1 +1,0 @@
-c-api/init_config.rst:622:<translated>:1: WARNING: undefined label: 'evento de auditoria <auditing>```cpython.pyconfig_set`' [ref.ref]
