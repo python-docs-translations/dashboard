@@ -7,22 +7,22 @@
       <div class="col-12 col-sm-6 col-md-4 d-flex">
         <div id="{{ project.language.code }}" class="card shadow mb-3 w-100">
           <div class="card-body">
-            <h3 class="card-title"><a href="#{{ project.language.code }}">{{ project.language.name }}</a></h3>
+            <h3 class="card-title"><a href="#{{ project.language.code }}">{{ project.language.name }} #</a></h3>
             <h5 class="card-subtitle mb-2 text-muted">{{ project.translated_name }}</h5>
             <p class="text-muted">Completion: <strong>{{ '{:.2f}%'.format(project.completion) }}</strong></p>
             <p class="text-muted">30-day progress: {{ '{:.2f}%'.format(project.change) }}</p>
 
             <p style="text-align: center;">
               {% if project.built %}
-                <a href="https://docs.python.org/{{ project.language.code }}/3/" style="color: #1595fe;">View {{ project.language.code }}</a>
+                <a href="https://docs.python.org/{{ project.language.code }}/3/" style="color: #1595fe;">View {{ project.language.name }}</a>
                 •
               {% endif %}
               {% if project.contribution_link %}
-                <a href="{{ project.contribution_link }}" style="color: #1595fe;">Contribute to {{ project.language.code }}</a>
+                <a href="{{ project.contribution_link }}" style="color: #1595fe;">Contribute to {{ project.language.name }}</a>
               {% elif project.uses_platform %}
-                <a href="https://app.transifex.com/join/?o=python-doc&p=python-newest&t=opensource" style="color: #1595fe;">Contribute to {{ project.language.code }}</a>
+                <a href="https://app.transifex.com/join/?o=python-doc&p=python-newest&t=opensource" style="color: #1595fe;">Contribute to {{ project.language.name }}</a>
               {% else %}
-                <a href="https://devguide.python.org/documentation/translations/translating/" style="color: #1595fe;">Contribute to {{ project.language.code }}</a>
+                <a href="https://devguide.python.org/documentation/translations/translating/" style="color: #1595fe;">Contribute to {{ project.language.name }}</a>
               {% endif %}
             </p>
             <div class="progress-bar-container">
