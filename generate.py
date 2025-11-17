@@ -65,7 +65,7 @@ def get_project_data(
     repo: str | None,
     languages_built: dict[str, str],
     clones_dir: str,
-) -> 'LanguageProjectData':
+) -> LanguageProjectData:
     built = language.code in languages_built
     if repo:
         completion, branch, change = get_completion(clones_dir, repo)
