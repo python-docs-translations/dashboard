@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 import concurrent.futures
 import itertools
@@ -20,22 +22,29 @@ from repositories import Language, get_languages_and_repos
 generation_time = datetime.now(timezone.utc)
 
 
-def get_completion_progress() -> Iterator['LanguageProjectData']:
+def get_completion_progress() -> Iterator[LanguageProjectData]:
     clones_dir = Path('clones')
-    Repo.clone_from(
-        'https://github.com/python/devguide.git',
-        devguide_dir := Path(clones_dir, 'devguide'),
-        depth=1,
-    )
+    if not (devguide_dir := Path(clones_dir, 'devguide')).exists():
+        Repo.clone_from('https://github.com/python/devguide.git', devguide_dir, depth=1)
+    else:
+        Repo(devguide_dir).git.pull()
     latest_branch = branches_from_peps()[0]
-    Repo.clone_from(
-        'https://github.com/python/cpython.git',
-        cpython_dir := Path(clones_dir, 'cpython'),
-        depth=1,
-        branch=latest_branch,
-    )
+    if not (cpython_dir := Path(clones_dir, 'cpython')).exists():
+        Repo.clone_from(
+            'https://github.com/python/cpython.git',
+            cpython_dir,
+            depth=1,
+            branch=latest_branch,
+        )
+    else:
+        Repo(cpython_dir).git.pull()
     subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
-    subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
+    try:
+        subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
+    except subprocess.CalledProcessError as e:
+        e.add_note(
+            'Try pruning clones/cpython/Doc/venv and/or clones/cpython/Doc/build/doctrees-gettext.'
+        )
 
     languages_built: dict[str, str] = {
         language: translated_name
