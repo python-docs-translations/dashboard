@@ -59,6 +59,7 @@ body {
 }
 
 .card:target {
+  scroll-margin-top: 4.5rem;
   border-color: #1595fe;
 }
 
