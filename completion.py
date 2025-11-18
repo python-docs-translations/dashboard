@@ -32,11 +32,11 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, str, float]:
                 clone_repo.git.switch(branch)
                 clone_repo.git.pull()
         except git.GitCommandError:
-            print(f'failed to clone or switch to {repo} {branch}')
+            print(f'{repo} {branch}: failed to clone or switch to')
             branch = ''
             continue
         else:
-            print(f'successfully cloned or switched to {repo} {branch}')
+            print(f'{repo} {branch}: successfully cloned or switched to')
             break
     path_for_merge = Path(clones_dir, 'rebased_translations', repo)
     completion = potodo.merge_and_scan_paths(
