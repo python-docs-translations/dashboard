@@ -37,7 +37,9 @@ def get_completion_progress() -> Iterator[LanguageProjectData]:
             branch=latest_branch,
         )
     else:
-        Repo(cpython_dir).git.pull()
+        (cpython_repo := Repo(cpython_dir)).git.fetch()
+        cpython_repo.git.switch(latest_branch)
+        cpython_repo.git.pull()
     subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
     try:
         subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
