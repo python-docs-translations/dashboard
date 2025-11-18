@@ -1,2 +1,0 @@
-c-api/sys.rst:134: WARNING: inconsistent term references in translated message. original: [':c:func:`PyErr_CheckSignals`'], translated: [] [i18n.inconsistent_references]
-using/windows.rst:868: WARNING: inconsistent references in translated message. original: ['`legacy launcher`_'], translated: [] [i18n.inconsistent_references]
