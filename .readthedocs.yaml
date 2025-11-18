@@ -11,6 +11,5 @@ build:
   commands:
     - pip install -r requirements.txt
     - python generate.py
-    - python generate_build_details.py
     - mkdir -p _readthedocs/html
     - mv build/* _readthedocs/html
