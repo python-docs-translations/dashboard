@@ -1,0 +1,1 @@
+c-api/frame.rst:129: WARNING: inconsistent term references in translated message. original: [':attr:`~frame.f_locals`', ':term:`optimized scope`', ':func:`exec`', ':func:`eval`', ':func:`locals`'], translated: [':attr:`~frame.f_locals`', ':func:`exec`', ':func:`eval`', ':func:`locals`'] [i18n.inconsistent_references]
