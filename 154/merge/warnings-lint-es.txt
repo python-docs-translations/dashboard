@@ -24,7 +24,7 @@ library/winsound.po:53: Extra backtick in role: ':exc:`RuntimeError``' (role-wit
 library/heapq.po:174: Extra backtick in role: ':func:`max``' (role-with-extra-backtick)
 library/queue.po:466: Extra backtick in role: ':meth:`Queue.put_nowait``' (role-with-extra-backtick)
 library/importlib.metadata.po:312: Extra backtick in role: ':py:class:`pathlib.Path``' (role-with-extra-backtick)
-library/decimal.po:2784: Extra backtick in role: ':const:`False``' (role-with-extra-backtick)
+library/decimal.po:2774: Extra backtick in role: ':const:`False``' (role-with-extra-backtick)
 howto/logging.po:1374: Extra backtick in role: ':func:`fileConfig``' (role-with-extra-backtick)
 howto/urllib2.po:221: Extra backtick in role: ':mod:`urllib.parse``' (role-with-extra-backtick)
 howto/urllib2.po:876: Extra backtick in role: ':func:`~urllib.request.getproxies``' (role-with-extra-backtick)
