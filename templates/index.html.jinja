@@ -1,10 +1,25 @@
 {% extends "base.html.jinja" %}
 
 {% block main %}
-<div>
+<div class="container-fluid">
+  <div class="row justify-content-center" style="margin-bottom: 10px;">
+    <div class="col-auto">
+      <div class="form-group mb-0" style="text-align: center;">
+        <label for="sortDropdown" style="margin-right: 8px; font-weight: 500;">Sort by:</label>
+        <select id="sortDropdown" class="form-control d-inline-block" style="width: auto;"
+                aria-label="Sort languages by completion or name">
+          <option value="completion">Completion</option>
+          <option value="name">Name</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="languageContainer">
   <div class="row">
     {% for project in completion_progress | sort(attribute='completion') | reverse %}
-      <div class="col-12 col-sm-6 col-md-4 d-flex">
+      <div class="col-12 col-sm-6 col-md-4 d-flex" data-completion="{{ project.completion }}" data-name="{{ project.language.name }}">
         <div class="card shadow mb-3 w-100">
           <div class="card-body">
             <h3 class="card-title">{{ project.language.name }}</h3>
@@ -46,4 +61,36 @@
   You can find the scripts used to generate this website <a href="https://github.com/python-docs-translations/dashboard/">on GitHub</a>.<br/>
   You can download the data on this page in <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
 </p>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sortDropdown = document.getElementById('sortDropdown');
+  const languageContainer = document.getElementById('languageContainer');
+
+  if (sortDropdown && languageContainer) {
+    sortDropdown.addEventListener('change', function() {
+      sortLanguages(this.value);
+    });
+  }
+
+  function sortLanguages(sortBy) {
+    const row = languageContainer.querySelector('.row');
+    const cards = Array.from(row.children);
+
+    cards.sort((a, b) => {
+      if (sortBy === 'name') {
+        return a.dataset.name.localeCompare(b.dataset.name);
+      } else if (sortBy === 'completion') {
+        return parseFloat(b.dataset.completion) - parseFloat(a.dataset.completion);
+      }
+      return 0;
+    });
+
+    row.innerHTML = '';
+    cards.forEach(card => row.appendChild(card));
+  }
+});
+</script>
 {% endblock %}
