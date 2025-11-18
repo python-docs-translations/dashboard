@@ -14,4 +14,4 @@ build:
     - asdf global uv latest
     - uv run generate.py
     - mkdir -p _readthedocs/html
-    - mv index.html style.css _readthedocs/html
+    - mv build/* _readthedocs/html
