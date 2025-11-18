@@ -86,7 +86,7 @@ body {
   color: #7ec3ff;
 }
 
-.card-title a:hover {
+.card-title a:focus, .card-title a:hover {
   background-color: #f5e9a8;
 }
 
