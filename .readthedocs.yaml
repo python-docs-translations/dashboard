@@ -14,5 +14,6 @@ build:
     - asdf global uv latest
     - uv pip install -r requirements.txt
     - uv run generate.py
+    - uv run generate_build_details.py
     - mkdir -p _readthedocs/html
     - mv build/* _readthedocs/html
