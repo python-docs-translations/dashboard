@@ -40,13 +40,10 @@ def get_completion_progress() -> Iterator[LanguageProjectData]:
         (cpython_repo := Repo(cpython_dir)).git.fetch()
         cpython_repo.git.switch(latest_branch)
         cpython_repo.git.pull()
+
+    subprocess.run(['make', '-C', cpython_dir / 'Doc', 'clean'], check=True)
     subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
-    try:
-        subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
-    except subprocess.CalledProcessError as e:
-        e.add_note(
-            'Try pruning clones/cpython/Doc/venv and/or clones/cpython/Doc/build/doctrees-gettext.'
-        )
+    subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
 
     languages_built: dict[str, str] = {
         language: translated_name
