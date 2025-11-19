@@ -37,12 +37,15 @@ body {
   color: #0d0d0d;
 }
 
-.navbar-brand a {
-  text-decoration: none;
-  outline-offset: 8px;
+.navbar-brand {
   font-size: 1.25rem;
   font-weight: 700;
   color: #4a4a4a;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  outline-offset: 8px;
 }
 
 .nav-link svg {
