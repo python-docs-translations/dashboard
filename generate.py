@@ -106,8 +106,8 @@ if __name__ == '__main__':
     )
     related = env.get_template('related.html.jinja').render()
 
-    Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())
-    Path('build/logo.png').write_bytes(Path('src/logo.png').read_bytes())
+    Path('src/style.css').copy(Path('build/style.css'))
+    Path('src/logo.png').copy(Path('build/logo.png'))
     Path('build/index.html').write_text(index)
     Path('build/related.html').write_text(related)
 
