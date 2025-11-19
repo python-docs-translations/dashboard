@@ -274,8 +274,8 @@
     "branch": "3.14",
     "completion": 0.20096066308435995,
     "change": 0.007479316929924318,
-    "built": false,
-    "translated_name": "",
+    "built": true,
+    "translated_name": "Svenska",
     "uses_platform": false,
     "contribution_link": "https://github.com/python/python-docs-sv"
   },
