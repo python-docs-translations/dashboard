@@ -32,7 +32,7 @@ def get_completion(clones_dir: str, repo: str) -> tuple[float, str, float]:
                 clone_repo.git.switch(branch)
                 clone_repo.git.pull()
         except git.GitCommandError:
-            print(f'failure: {branch} {repo}: clone or switch')
+            print(f'failure: {branch} {repo}: clone or switch, continuing')
             branch = ''
             continue
         else:
