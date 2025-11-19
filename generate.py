@@ -104,10 +104,12 @@ if __name__ == '__main__':
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
+    related = env.get_template('related.html.jinja').render()
 
     Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())
     Path('build/logo.png').write_bytes(Path('src/logo.png').read_bytes())
     Path('build/index.html').write_text(index)
+    Path('build/related.html').write_text(related)
 
     Path('build/index.json').write_text(
         json.dumps([asdict(project) for project in completion_progress], indent=2)
