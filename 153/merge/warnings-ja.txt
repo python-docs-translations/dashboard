@@ -216,7 +216,6 @@ library/decimal.rst:101: WARNING: inconsistent term references in translated mes
 library/decimal.rst:127: WARNING: inconsistent term references in translated message. original: [':func:`getcontext`'], translated: [':mod:`decimal`', ':func:`getcontext`'] [i18n.inconsistent_references]
 library/decimal.rst:139: WARNING: inconsistent term references in translated message. original: [], translated: [':class:`Decimal`', ':class:`Decimal`'] [i18n.inconsistent_references]
 library/decimal.rst:182: WARNING: inconsistent term references in translated message. original: [], translated: [':class:`Decimal`'] [i18n.inconsistent_references]
-library/decimal.rst:266: WARNING: inconsistent term references in translated message. original: [':func:`setcontext`'], translated: [':func:`Context`', ':func:`setcontext`'] [i18n.inconsistent_references]
 library/decimal.rst:331: WARNING: inconsistent term references in translated message. original: [':class:`Decimal`'], translated: [':class:`Decimal`', ':class:`Decimal`', ':class:`Decimal`'] [i18n.inconsistent_references]
 library/decimal.rst:389: WARNING: inconsistent term references in translated message. original: [':const:`InvalidOperation`'], translated: [':const:`InvalidOperation`', ':class:`Decimal`'] [i18n.inconsistent_references]
 library/decimal.rst:1042: WARNING: inconsistent term references in translated message. original: [':class:`Context`'], translated: [':class:`Context`', ':mod:`decimal`'] [i18n.inconsistent_references]
