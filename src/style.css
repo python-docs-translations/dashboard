@@ -37,6 +37,12 @@ body {
   color: #0d0d0d;
 }
 
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
 .navbar-brand a {
   text-decoration: none;
   outline-offset: 8px;
