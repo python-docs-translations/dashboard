@@ -1,2 +1,4 @@
-library/dbm.rst:273: WARNING: inconsistent term references in translated message. original: [':term:`mappings <mapping>`', ':keyword:`with`'], translated: [':keyword:`with`'] [i18n.inconsistent_references]
-library/dbm.rst:386: WARNING: inconsistent term references in translated message. original: [':term:`mappings <mapping>`', ':keyword:`with`'], translated: [':keyword:`with`'] [i18n.inconsistent_references]
+extending/newtypes_tutorial.rst:267:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_XDECREF`lida corretamente com o caso em que seu argumento é ``NULL`'
+Invalid C declaration: Expected end of definition. [error at 10]
+  Py_XDECREF`lida corretamente com o caso em que seu argumento é ``NULL`
+  ----------^
