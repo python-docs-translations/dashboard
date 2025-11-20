@@ -14,15 +14,15 @@
 
             <p style="text-align: center;">
               {% if project.built %}
-                <a href="https://docs.python.org/{{ project.language.code }}/3/" style="color: #1595fe;">View</a>
+                <a href="https://docs.python.org/{{ project.language.code }}/3/" style="color: #1178cc;">View</a>
                 •
               {% endif %}
               {% if project.contribution_link %}
-                <a href="{{ project.contribution_link }}" style="color: #1595fe;">Contribute</a>
+                <a href="{{ project.contribution_link }}" style="color: #1178cc;">Contribute</a>
               {% elif project.uses_platform %}
-                <a href="https://app.transifex.com/join/?o=python-doc&p=python-newest&t=opensource" style="color: #1595fe;">Contribute</a>
+                <a href="https://app.transifex.com/join/?o=python-doc&p=python-newest&t=opensource" style="color: #1178cc;">Contribute</a>
               {% else %}
-                <a href="https://devguide.python.org/documentation/translations/translating/" style="color: #1595fe;">Contribute</a>
+                <a href="https://devguide.python.org/documentation/translations/translating/" style="color: #1178cc;">Contribute</a>
               {% endif %}
             </p>
             <div class="progress-bar-container">
