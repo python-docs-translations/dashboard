@@ -1,4 +1,23 @@
+extending/newtypes_tutorial.rst:635:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+extending/newtypes_tutorial.rst:855:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+extending/newtypes_tutorial.rst:527: WARNING: inconsistent term references in translated message. original: [':c:macro:`Py_TPFLAGS_BASETYPE`'], translated: [] [i18n.inconsistent_references]
+extending/newtypes_tutorial.rst:635:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+extending/newtypes_tutorial.rst:635: WARNING: inconsistent term references in translated message. original: [':c:member:`~PyTypeObject.tp_init`'], translated: [] [i18n.inconsistent_references]
+extending/newtypes_tutorial.rst:665: WARNING: inconsistent term references in translated message. original: [':c:func:`Py_XDECREF`', ':c:func:`Py_DECREF`'], translated: [] [i18n.inconsistent_references]
+extending/newtypes_tutorial.rst:791: WARNING: inconsistent term references in translated message. original: [':c:func:`PyObject_GC_UnTrack`', ':c:func:`PyObject_GC_UnTrack`'], translated: [':c:func:`PyObject_GC_UnTrack`antes de limpar os membros. A seguir está nossa versão reimplementada do desalocador usando :c:func:`PyObject_GC_UnTrack`'] [i18n.inconsistent_references]
+extending/newtypes_tutorial.rst:823: WARNING: inconsistent term references in translated message. original: [':class:`list`'], translated: [] [i18n.inconsistent_references]
+extending/newtypes_tutorial.rst:855:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+extending/newtypes_tutorial.rst:871: WARNING: inconsistent term references in translated message. original: [':c:member:`~PyTypeObject.tp_new`', ':c:member:`~PyTypeObject.tp_dealloc`', ':c:member:`~PyTypeObject.tp_new`', ':c:member:`~PyTypeObject.tp_alloc`', ':c:member:`~PyTypeObject.tp_new`'], translated: [':c:member:`~PyTypeObject.tp_new`', ':c:member:`~PyTypeObject.tp_dealloc`', ':c:member:`~PyTypeObject.tp_new`não deve realmente criar a memória do objeto usando o seu próprio :c:member:`~PyTypeObject.tp_alloc`', ':c:member:`~PyTypeObject.tp_new`'] [i18n.inconsistent_references]
+extending/newtypes_tutorial.rst:877: WARNING: inconsistent term references in translated message. original: [':c:type:`PyTypeObject`', ':c:member:`~PyTypeObject.tp_base`', ':c:type:`PyList_Type`', ':c:data:`Py_mod_exec`'], translated: [':c:type:`PyTypeObject`', ':c:data:`Py_mod_exec`'] [i18n.inconsistent_references]
 extending/newtypes_tutorial.rst:267:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_XDECREF`lida corretamente com o caso em que seu argumento é ``NULL`'
 Invalid C declaration: Expected end of definition. [error at 10]
   Py_XDECREF`lida corretamente com o caso em que seu argumento é ``NULL`
   ----------^
+extending/newtypes_tutorial.rst:791:<translated>:1: WARNING: Unparseable C cross-reference: 'PyObject_GC_UnTrack`antes de limpar os membros. A seguir está nossa versão reimplementada do desalocador usando :c:func:`PyObject_GC_UnTrack'
+Invalid C declaration: Expected end of definition. [error at 19]
+  PyObject_GC_UnTrack`antes de limpar os membros. A seguir está nossa versão reimplementada do desalocador usando :c:func:`PyObject_GC_UnTrack
+  -------------------^
+extending/newtypes_tutorial.rst:871:<translated>:1: WARNING: Unparseable C cross-reference: 'PyTypeObject.tp_new`não deve realmente criar a memória do objeto usando o seu próprio :c:member:`~PyTypeObject.tp_alloc'
+Invalid C declaration: Expected end of definition. [error at 19]
+  PyTypeObject.tp_new`não deve realmente criar a memória do objeto usando o seu próprio :c:member:`~PyTypeObject.tp_alloc
+  -------------------^
