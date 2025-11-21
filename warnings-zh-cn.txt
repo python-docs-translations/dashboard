@@ -245,4 +245,3 @@ whatsnew/changelog.rst:46847:<translated>:1: WARNING: Inline literal start-strin
 whatsnew/changelog.rst:48256:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:48450:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:52447:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-c-api/init.rst:979: WARNING: Lexing literal_block '将线程状态保存到一个局部变量中。\n... 执行某些阻塞式的 I/O 操作 ...\n从局部变量中恢复线程状态。' as "c" resulted in an error at token: '。'. Retrying in relaxed mode. [misc.highlighting_failure]
