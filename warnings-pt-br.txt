@@ -1,2 +1,0 @@
-c-api/gen.rst:62: WARNING: inconsistent term references in translated message. original: [':class:`types.AsyncGeneratorType`'], translated: [] [i18n.inconsistent_references]
-extending/newtypes_tutorial.rst:913: WARNING: inconsistent term references in translated message. original: [':c:member:`~PyTypeObject.tp_dealloc`'], translated: [] [i18n.inconsistent_references]
