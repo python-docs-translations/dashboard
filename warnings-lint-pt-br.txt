@@ -1,1 +1,0 @@
-extending/newtypes_tutorial.po:2092: trailing whitespace (trailing-whitespace)
