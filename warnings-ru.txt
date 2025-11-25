@@ -13,3 +13,4 @@ tutorial/interpreter.rst:73:<translated>:1: WARNING: unknown option: '-c`*comman
 tutorial/introduction.rst:71:<translated>:1: WARNING: term not in glossary: 'деление с округлением вниз' [ref.term]
 tutorial/modules.rst:52:<translated>:1: WARNING: term not in glossary: 'пространство имён' [ref.term]
 tutorial/modules.rst:441:<translated>:1: WARNING: term not in glossary: 'пакет пространства имён' [ref.term]
+tutorial/modules.rst:590:<translated>:1: WARNING: term not in glossary: 'последовательность' [ref.term]
