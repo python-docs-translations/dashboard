@@ -1,4 +1,0 @@
-library/bdb.po:410: role with no backticks: ' :attr:quitting ' (role-without-backticks)
-library/bdb.po:425: role with no backticks: ' :attr:quitting ' (role-without-backticks)
-library/bdb.po:564: trailing whitespace (trailing-whitespace)
-library/bdb.po:650: trailing whitespace (trailing-whitespace)
