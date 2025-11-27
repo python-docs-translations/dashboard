@@ -1,0 +1,2 @@
+library/bdb.po:375: role with no backticks: ' :attr:quitting ' (role-without-backticks)
+library/bdb.po:389: role with no backticks: ' :attr:quitting ' (role-without-backticks)
