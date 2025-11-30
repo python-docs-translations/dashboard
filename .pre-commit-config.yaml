@@ -46,5 +46,11 @@ repos:
       - id: deptry
         args: ["--per-rule-ignores", "DEP002=python-docs-theme", "--package-module-name-map", "gitpython=git,sphinx-lint=sphinxlint"]
 
+  - repo: https://github.com/oxipng/oxipng
+    rev: v9.1.5
+    hooks:
+      - id: oxipng
+        args: [ --strip=safe, --alpha ]
+
 ci:
   autoupdate_schedule: quarterly
