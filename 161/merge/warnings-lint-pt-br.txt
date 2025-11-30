@@ -1,4 +1,0 @@
-extending/newtypes_tutorial.po:1019: inline literal missing (escaped) space after literal: '``tp_dealloc``e' (missing-space-after-literal)
-extending/newtypes_tutorial.po:1019: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-extending/newtypes_tutorial.po:1019: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-extending/newtypes_tutorial.po:1075: trailing whitespace (trailing-whitespace)
