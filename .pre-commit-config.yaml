@@ -46,7 +46,7 @@ repos:
       - id: deptry
         args: ["--per-rule-ignores", "DEP002=python-docs-theme", "--package-module-name-map", "gitpython=git,sphinx-lint=sphinxlint"]
 
-  - repo: https://github.com/oxipng/oxipng
+  - repo: https://github.com/oxipng/oxipng  # PNG optimizer
     rev: v9.1.5
     hooks:
       - id: oxipng

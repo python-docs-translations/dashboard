@@ -24,7 +24,7 @@ url = "https://microbit.org/translate/"
 
 [[projects]]
 name = "Django"
-description = "Localizing Django documentation"
+description = "Localizing Django"
 logo = "images/django_logo.svg"
 url = "https://docs.djangoproject.com/en/dev/internals/contributing/localizing/"
 
