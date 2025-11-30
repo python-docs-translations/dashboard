@@ -7,6 +7,7 @@ from collections.abc import Iterator
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
+from shutil import copyfile
 
 from git import Repo
 from jinja2 import Environment, FileSystemLoader
@@ -106,8 +107,8 @@ if __name__ == '__main__':
     )
     related = env.get_template('related.html.jinja').render()
 
-    Path('src/style.css').copy(Path('build/style.css'))
-    Path('src/logo.png').copy(Path('build/logo.png'))
+    copyfile('src/style.css', 'build/style.css')
+    copyfile('src/logo.png', 'build/logo.png')
     Path('build/index.html').write_text(index)
     Path('build/related.html').write_text(related)
 
