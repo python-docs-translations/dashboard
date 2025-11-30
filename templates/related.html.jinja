@@ -1,12 +1,20 @@
 {% extends "base.html.jinja" %}
 
 {% block main %}
-<p>Related projects:</p>
-<ul>
-  <li><a href="https://hosted.weblate.org/projects/pypa/packaging-python-org/#information" target="_blank">packaging.python.org translation</a></li>
-  <li><a href="https://hosted.weblate.org/projects/pypa/warehouse/#information" target="_blank">PyPI (Warehouse) translation</a></li>
-  <li><a href="https://scientific-python-translations.github.io/status/" target="_blank">Scientific Python Translations</a></li>
-  <li><a href="https://microbit.org/translate/" target="_blank">micro:bit translation programme</a></li>
-  <li><a href="https://docs.djangoproject.com/en/dev/internals/contributing/localizing/" target="_blank">Localizing Django</a></li>
-</ul>
+<div>
+  <div class="row">
+    {% for project in projects %}
+      <div class="col-12 col-sm-6 col-md-4 d-flex">
+        <div class="card shadow mb-3 w-100 related-card">
+          <div class="card-body text-center">
+            <img src="{{ project.logo }}" alt="{{ project.name }} logo" class="related-logo mb-3">
+            <h4 class="card-title">{{ project.name }}</h4>
+            <p class="text-muted mb-3">{{ project.description }}</p>
+            <a href="{{ project.url }}" target="_blank" class="btn btn-primary btn-translate">Translate</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}

@@ -1,0 +1,35 @@
+[[projects]]
+name = "packaging.python.org"
+description = "Python Packaging User Guide translation"
+logo = "images/pypa_logo.png"
+url = "https://hosted.weblate.org/projects/pypa/packaging-python-org/#information"
+
+[[projects]]
+name = "PyPI (Warehouse)"
+description = "Python Package Index translation"
+logo = "images/pypi_logo.svg"
+url = "https://hosted.weblate.org/projects/pypa/warehouse/#information"
+
+[[projects]]
+name = "Scientific Python"
+description = "Scientific Python ecosystem translations"
+logo = "images/scientific-python_logo.svg"
+url = "https://scientific-python-translations.github.io/status/"
+
+[[projects]]
+name = "micro:bit"
+description = "micro:bit translation programme"
+logo = "images/microbit_logo.svg"
+url = "https://microbit.org/translate/"
+
+[[projects]]
+name = "Django"
+description = "Localizing Django documentation"
+logo = "images/django_logo.svg"
+url = "https://docs.djangoproject.com/en/dev/internals/contributing/localizing/"
+
+[[projects]]
+name = "Sphinx"
+description = "Sphinx documentation generator translation"
+logo = "images/sphinx_logo.png"
+url = "https://hosted.weblate.org/projects/sphinx/"
