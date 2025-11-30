@@ -1,0 +1,197 @@
+/* ---------------------------- Global Styles ------------------------------- */
+
+:root {
+  --bg-color: rgb(245, 245, 245);
+  --text-color: #15141A;
+}
+
+body {
+  padding: 4.5rem 1rem 3rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* -------------------------------- navbar ---------------------------------- */
+
+.navbar {
+  background-color: rgb(var(--bg-color), 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 0.25px solid #999;
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar li {
+  transition: 0.3s background-color;
+  text-align: center;
+  background-color: transparent;
+  padding: 0 1rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+}
+
+.navbar li:hover {
+  background-color: #eacb4d;
+}
+
+.navbar li .nav-link {
+  color: #0d0d0d;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  outline-offset: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.nav-link svg {
+  vertical-align: middle;
+  margin-top: -4.5px;
+}
+
+
+/* ----------------------- Cards and card columns --------------------------- */
+
+.row > [class^="col-"] {
+  display: flex;
+}
+
+.card {
+  flex: 1;
+}
+
+.card:target {
+  scroll-margin-top: 4.5rem;
+  border-color: #1178cc;
+}
+
+.card-body p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.card-title {
+  margin-bottom: 0.4rem;
+}
+
+.card-title a {
+  color: inherit;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 0 4px;
+  margin: 0 -4px;
+}
+
+.card-title a::after {
+  content: " #";
+  font-size: 0.8em;
+  color: #7ec3ff;
+}
+
+.card-title a:focus, .card-title a:hover {
+  background-color: #f5e9a8;
+}
+
+/* ------------------------------ Index ------------------------------------- */
+
+.progress-bar-container {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  display: inline-block;
+  color: white;
+  height: 100%;
+  line-height: 20px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* ------------------------------ Metadata ---------------------------------- */
+
+table {
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+th {
+  background-color: #d6d6d6;
+}
+hr {
+  color: #f4f4f4;
+}
+td[data-label="warnings"], td[data-label="lint"] {
+  text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    overflow-x: auto;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding-left: 50%;
+    position: relative;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    left: 10px;
+    position: absolute;
+  }
+  td[data-label="warnings"], td[data-label="lint"] {
+    text-align: left;
+  }
+}
+
+/* -------------------------- Related Projects ------------------------------- */
+
+.related-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.related-logo {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.btn-translate {
+  background-color: #1595fe;
+  border-color: #1595fe;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+}
+
+.btn-translate:hover {
+  background-color: #0d7ad4;
+  border-color: #0d7ad4;
+}
