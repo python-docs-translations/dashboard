@@ -324,4 +324,5 @@ whatsnew/3.7.rst:84: WARNING: inconsistent references in translated message. ori
 c-api/arg.rst:700:<translated>:1: WARNING: term not in glossary: '強参照' [ref.term]
 c-api/arg.rst:713:<translated>:1: WARNING: term not in glossary: '強参照' [ref.term]
 library/inspect.rst:810:<translated>:1: WARNING: term not in glossary: 'ハッシュ可能' [ref.term]
+tutorial/appendix.rst:17:<translated>:1: WARNING: term not in glossary: '>>' [ref.term]
 whatsnew/3.12.rst:187:<translated>:1: WARNING: undefined label: 'generuc-classes' [ref.ref]

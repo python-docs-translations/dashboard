@@ -281,7 +281,7 @@ howto/enum.po:941: missing space before default role: 'はなく``1``'. (missing
 howto/descriptor.po:921: missing space before role ( の中の:c:func:`). (missing-space-before-role)
 howto/curses.po:409: trailing whitespace (trailing-whitespace)
 tutorial/interpreter.po:151: trailing whitespace (trailing-whitespace)
-tutorial/controlflow.po:1366: trailing whitespace (trailing-whitespace)
+tutorial/controlflow.po:1370: trailing whitespace (trailing-whitespace)
 tutorial/datastructures.po:846: trailing whitespace (trailing-whitespace)
 tutorial/datastructures.po:1339: trailing whitespace (trailing-whitespace)
 tutorial/floatingpoint.po:247: trailing whitespace (trailing-whitespace)
