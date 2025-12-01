@@ -1,0 +1,1 @@
+tutorial/datastructures.po:561: missing space before role ( ветви:keyword:`). (missing-space-before-role)
