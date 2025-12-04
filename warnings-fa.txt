@@ -1,2 +1,1 @@
 bugs.rst:37: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`اشکالات مستندات`_'] [i18n.inconsistent_references]
-library/functions.rst:89: WARNING: inconsistent term references in translated message. original: [':term:`asynchronous\niterator`'], translated: [':term:`asynchronous iterator`'] [i18n.inconsistent_references]
