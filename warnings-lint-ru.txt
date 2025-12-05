@@ -1,1 +1,2 @@
 tutorial/datastructures.po:561: missing space before role ( ветви:keyword:`). (missing-space-before-role)
+tutorial/errors.po:166: trailing whitespace (trailing-whitespace)
