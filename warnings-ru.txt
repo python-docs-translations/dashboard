@@ -9,6 +9,7 @@ tutorial/controlflow.rst:51: WARNING: inconsistent term references in translated
 tutorial/controlflow.rst:267: WARNING: inconsistent term references in translated message. original: [], translated: [':keyword:`pass`'] [i18n.inconsistent_references]
 tutorial/datastructures.rst:304: WARNING: inconsistent term references in translated message. original: [':keyword:`for`'], translated: [] [i18n.inconsistent_references]
 tutorial/errors.rst:5:<translated>:2: WARNING: Block quote ends without a blank line; unexpected unindent. [docutils]
+tutorial/errors.rst:129: WARNING: inconsistent term references in translated message. original: [':keyword:`except`'], translated: [] [i18n.inconsistent_references]
 tutorial/inputoutput.rst:313: WARNING: inconsistent term references in translated message. original: [':func:`open`', ':term:`file object`'], translated: [':func:`open`', ':term:`файловый объект`'] [i18n.inconsistent_references]
 tutorial/inputoutput.rst:523: WARNING: inconsistent term references in translated message. original: [':func:`~json.dumps`', ':func:`~json.dump`', ':term:`text file`', ':term:`text file`'], translated: [':func:`~json.dumps`', ':func:`~json.dump`', ':term:`текстовый файл`', ':term:`текстового файла`'] [i18n.inconsistent_references]
 tutorial/inputoutput.rst:529: WARNING: inconsistent term references in translated message. original: [':term:`binary file`', ':term:`text file`'], translated: [':term:`бинарного файла`', ':term:`текстового файла`'] [i18n.inconsistent_references]
