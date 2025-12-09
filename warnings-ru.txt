@@ -24,6 +24,7 @@ tutorial/introduction.rst:193: WARNING: inconsistent term references in translat
 tutorial/modules.rst:52: WARNING: inconsistent term references in translated message. original: [':term:`namespace`', ':ref:`tut-scopes`'], translated: [':term:`пространство имён`', ':ref:`tut-scopes`'] [i18n.inconsistent_references]
 tutorial/modules.rst:441: WARNING: inconsistent term references in translated message. original: [':term:`namespace package`'], translated: [':term:`пакет пространства имён`'] [i18n.inconsistent_references]
 tutorial/modules.rst:590: WARNING: inconsistent term references in translated message. original: [':attr:`~module.__path__`', ':term:`sequence`'], translated: [':attr:`~module.__path__`', ':term:`последовательность`'] [i18n.inconsistent_references]
+tutorial/stdlib.rst:29: WARNING: inconsistent term references in translated message. original: [':func:`dir`', ':func:`help`', ':mod:`os`'], translated: [':func:`dir`', ':func:`help`'] [i18n.inconsistent_references]
 tutorial/classes.rst:422:<translated>:1: WARNING: term not in glossary: 'изменяемыми' [ref.term]
 tutorial/controlflow.rst:51:<translated>:1: WARNING: unknown keyword: 'for`немного отличается от :keyword:`for' [ref.keyword]
 tutorial/inputoutput.rst:313:<translated>:1: WARNING: term not in glossary: 'файловый объект' [ref.term]
