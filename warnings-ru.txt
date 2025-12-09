@@ -26,6 +26,7 @@ tutorial/modules.rst:441: WARNING: inconsistent term references in translated me
 tutorial/modules.rst:590: WARNING: inconsistent term references in translated message. original: [':attr:`~module.__path__`', ':term:`sequence`'], translated: [':attr:`~module.__path__`', ':term:`последовательность`'] [i18n.inconsistent_references]
 tutorial/stdlib.rst:29: WARNING: inconsistent term references in translated message. original: [':func:`dir`', ':func:`help`', ':mod:`os`'], translated: [':func:`dir`', ':func:`help`'] [i18n.inconsistent_references]
 tutorial/stdlib2.rst:251: WARNING: inconsistent term references in translated message. original: [':term:`garbage collection`'], translated: [':term:`сбор мусора`'] [i18n.inconsistent_references]
+tutorial/venv.rst:23: WARNING: inconsistent term references in translated message. original: [':term:`virtual environment`'], translated: [':term:`виртуального окружения`'] [i18n.inconsistent_references]
 tutorial/classes.rst:422:<translated>:1: WARNING: term not in glossary: 'изменяемыми' [ref.term]
 tutorial/controlflow.rst:51:<translated>:1: WARNING: unknown keyword: 'for`немного отличается от :keyword:`for' [ref.keyword]
 tutorial/inputoutput.rst:313:<translated>:1: WARNING: term not in glossary: 'файловый объект' [ref.term]
@@ -40,3 +41,4 @@ tutorial/modules.rst:52:<translated>:1: WARNING: term not in glossary: 'прос
 tutorial/modules.rst:441:<translated>:1: WARNING: term not in glossary: 'пакет пространства имён' [ref.term]
 tutorial/modules.rst:590:<translated>:1: WARNING: term not in glossary: 'последовательность' [ref.term]
 tutorial/stdlib2.rst:251:<translated>:1: WARNING: term not in glossary: 'сбор мусора' [ref.term]
+tutorial/venv.rst:23:<translated>:1: WARNING: term not in glossary: 'виртуального окружения' [ref.term]
