@@ -1,3 +1,4 @@
+about.rst:6: WARNING: inconsistent references in translated message. original: ['`reStructuredText`_', '`Sphinx`_'], translated: ['`reStructuredText`_с помощью`Sphinx`_'] [i18n.inconsistent_references]
 bugs.rst:24: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`репозиторий перевода <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 bugs.rst:37: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Ошибки в документации`_'] [i18n.inconsistent_references]
 bugs.rst:103:<translated>:2: WARNING: Block quote ends without a blank line; unexpected unindent. [docutils]
