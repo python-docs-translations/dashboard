@@ -1,0 +1,3 @@
+reference/lexical_analysis.po:2124: inline literal missing (escaped) space after literal: '``#``d' (missing-space-after-literal)
+reference/lexical_analysis.po:2124: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+reference/lexical_analysis.po:2124: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
