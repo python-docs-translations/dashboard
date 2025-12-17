@@ -1,5 +1,5 @@
 glossary.po:848: trailing whitespace (trailing-whitespace)
-glossary.po:2152: trailing whitespace (trailing-whitespace)
+glossary.po:2114: trailing whitespace (trailing-whitespace)
 glossary.po:1041: role missing opening tag colon (term:`). (missing-space-before-role)
 installing/index.po:241: trailing whitespace (trailing-whitespace)
 faq/library.po:1239: inline literal missing (escaped) space after literal: '``uniform(a, b)``は' (missing-space-after-literal)
