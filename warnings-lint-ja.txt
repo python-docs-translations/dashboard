@@ -25,7 +25,7 @@ library/mailbox.po:1188: role missing opening tag colon ( meth:`). (missing-spac
 library/tempfile.po:126: trailing whitespace (trailing-whitespace)
 library/tempfile.po:321: trailing whitespace (trailing-whitespace)
 library/asyncio-protocol.po:774: trailing whitespace (trailing-whitespace)
-library/random.po:646: trailing whitespace (trailing-whitespace)
+library/random.po:642: trailing whitespace (trailing-whitespace)
 library/pkgutil.po:115: trailing whitespace (trailing-whitespace)
 library/asyncio.po:180: trailing whitespace (trailing-whitespace)
 library/email.header.po:273: inline literal missing (escaped) space after literal: '``\\r\\n``を' (missing-space-after-literal)
