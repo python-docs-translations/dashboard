@@ -67,17 +67,21 @@ def get_project_data(
 ) -> LanguageProjectData:
     built = language.code in languages_built
     if repo:
-        completion, branch, change = get_completion(clones_dir, repo)
+        core_complation, completion, branch, core_change, change = get_completion(
+            clones_dir, repo
+        )
     else:
-        completion = 0.0
-        change = 0.0
+        core_complation = completion = 0.0
+        core_change = change = 0.0
         branch = ''
 
     return LanguageProjectData(
         language,
         repo,
         branch,
+        core_complation,
         completion,
+        core_change,
         change,
         built,
         translated_name=languages_built.get(language.code, ''),
@@ -91,7 +95,9 @@ class LanguageProjectData:
     language: Language
     repository: str | None
     branch: str
+    core_completion: float
     completion: float
+    core_change: float
     change: float
     built: bool
     translated_name: str
