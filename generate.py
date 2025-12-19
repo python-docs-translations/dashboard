@@ -9,6 +9,7 @@ from collections.abc import Iterator
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
+from shutil import copyfile
 
 from git import Repo
 from jinja2 import Environment, FileSystemLoader
@@ -112,9 +113,8 @@ if __name__ == '__main__':
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
-
-    Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())
-    Path('build/logo.png').write_bytes(Path('src/logo.png').read_bytes())
+    copyfile('src/style.css', 'build/style.css')
+    copyfile('src/logo.png', 'build/logo.png')
     Path('build/index.html').write_text(index)
 
     Path('build/index.json').write_text(
