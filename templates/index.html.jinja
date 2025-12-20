@@ -13,17 +13,19 @@
             <p class="text-muted">30-day progress: {{ '{:.2f}%'.format(project.change) }}</p>
 
             <p style="text-align: center;">
+            <ul class="links-row">
               {% if project.built %}
-                <a href="https://docs.python.org/{{ project.language.code }}/3/" style="color: #1178cc;">View {{ project.language.name }}</a>
-                •
+              <li>
+                <a href="https://docs.python.org/{{ project.language.code }}/3/" aria-label="View {{ project.language.name }} documentation"
+                   style="color: #1178cc;">View</a>
+              </li>
               {% endif %}
-              {% if project.contribution_link %}
-                <a href="{{ project.contribution_link }}" style="color: #1178cc;">Contribute</a>
-              {% elif project.uses_platform %}
-                <a href="https://app.transifex.com/join/?o=python-doc&p=python-newest&t=opensource" style="color: #1178cc;">Contribute to {{ project.language.name }}</a>
-              {% else %}
-                <a href="https://devguide.python.org/documentation/translations/translating/" style="color: #1178cc;">Contribute to {{ project.language.name }}</a>
-              {% endif %}
+              <li>
+                <a href="{{ project.contribution_link }}" style="color: #1178cc;" aria-label="Contribute to {{ project.language.name }} translation">
+                  Contribute
+                </a>
+              </li>
+            </ul>
             </p>
             <div class="progress-bar-container">
               <div class="progress-bar" style="width: {{ project.completion }}%;
