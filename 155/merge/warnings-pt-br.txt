@@ -887,6 +887,7 @@ library/asyncio-eventloop.rst:92: WARNING: inconsistent references in translated
 library/asyncio-eventloop.rst:96: WARNING: inconsistent references in translated message. original: ['`Server Objects`_'], translated: ['`Objetos Server`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:99: WARNING: inconsistent references in translated message. original: ['`Event Loop Implementations`_'], translated: ['`Implementações do Laço de Eventos`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:102: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`Exemplos`_'] [i18n.inconsistent_references]
+library/asyncio-future.rst:88: WARNING: inconsistent term references in translated message. original: [':term:`awaitable`'], translated: [':term:`aguardável`'] [i18n.inconsistent_references]
 library/asyncio-queue.rst:21: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`Exemplos`_'] [i18n.inconsistent_references]
 library/asyncio-stream.rst:42: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`Exemplos`_'] [i18n.inconsistent_references]
 library/asyncio-subprocess.rst:58: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`Exemplos`_'] [i18n.inconsistent_references]
