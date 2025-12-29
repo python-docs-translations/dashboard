@@ -273,7 +273,7 @@
     "repository": "python/python-docs-sv",
     "branch": "3.14",
     "completion": 0.19901555106783023,
-    "change": 0.000183255571885671,
+    "change": 0.000122170381257114,
     "built": true,
     "translated_name": "Svenska",
     "uses_platform": false,
