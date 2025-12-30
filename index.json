@@ -245,7 +245,7 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
     "completion": 98.86755686954822,
-    "change": 0.04220929948445473,
+    "change": 0.019424829574617775,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "uses_platform": true,
