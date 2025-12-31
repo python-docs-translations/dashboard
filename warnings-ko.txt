@@ -49,7 +49,6 @@ library/ftplib.rst:292: WARNING: inconsistent term references in translated mess
 library/hashlib.rst:70: WARNING: inconsistent references in translated message. original: ['`Attacks on cryptographic hash algorithms`_', '`hashlib-seealso`_'], translated: ['`Attacks on cryptographic hash algorithms`_', '`더 보기 <hashlib-seealso_>`_'] [i18n.inconsistent_references]
 library/hashlib.rst:448: WARNING: inconsistent references in translated message. original: ['`constants`_'], translated: ['`상수 <constants_>`_'] [i18n.inconsistent_references]
 library/exceptions.rst:367: WARNING: inconsistent references in translated message. original: ['`OS exceptions`_'], translated: ['`OS 예외 <OS exceptions_>`_'] [i18n.inconsistent_references]
-library/argparse.rst:379: WARNING: inconsistent references in translated message. original: ['type_', 'dest_'], translated: ['dest_', 'type_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:89: WARNING: inconsistent references in translated message. original: ['`Event Loop Methods`_'], translated: ['`이벤트 루프 메서드 <Event Loop Methods_>`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:92: WARNING: inconsistent references in translated message. original: ['`Callback Handles`_'], translated: ['`콜백 핸들 <Callback Handles_>`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:96: WARNING: inconsistent references in translated message. original: ['`Server Objects`_'], translated: ['`서버 객체 <Server Objects_>`_'] [i18n.inconsistent_references]
