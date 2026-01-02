@@ -22,4 +22,5 @@ def get_contrib_link(language: str, repo: str | None) -> str | None:
             and 'https://explore.transifex.com/python-doc/python-newest/'
         )
         or (repo and f'https://github.com/{repo}')
+        or 'https://devguide.python.org/documentation/translations/translating/'
     )
