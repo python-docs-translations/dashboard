@@ -1,0 +1,1 @@
+tutorial/appendix.po:87: trailing whitespace (trailing-whitespace)
