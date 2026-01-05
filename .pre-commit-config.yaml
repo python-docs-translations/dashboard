@@ -44,7 +44,7 @@ repos:
     rev: v0.24.0.1
     hooks:
       - id: deptry
-        args: ["--per-rule-ignores", "DEP002=python-docs-theme", "--package-module-name-map", "gitpython=git,sphinx-lint=sphinxlint"]
+        args: [".", "--per-rule-ignores", "DEP002=python-docs-theme", "--package-module-name-map", "gitpython=git,sphinx-lint=sphinxlint"]
 
 ci:
   autoupdate_schedule: quarterly
