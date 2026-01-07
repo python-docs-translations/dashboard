@@ -9,9 +9,10 @@ with support.import_scripts():
 class testContributeLink(unittest.TestCase):
     def test_get_contrib_link(self):
         PULL_FROM_TX = 'https://explore.transifex.com/python-doc/python-newest/'
+        DEVGUIDE = 'https://devguide.python.org/documentation/translations/translating/'
 
         for code, repo, expected in (
-            ('en', None, None),
+            ('en', None, DEVGUIDE),
             ('pl', None, PULL_FROM_TX),
             ('ar', 'python/python-docs-ar', 'https://github.com/python/python-docs-ar'),
             (

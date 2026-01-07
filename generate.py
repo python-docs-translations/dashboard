@@ -81,7 +81,6 @@ def get_project_data(
         change,
         built,
         translated_name=languages_built.get(language.code, ''),
-        uses_platform=language.code in contribute.pulling_from_transifex,
         contribution_link=contribute.get_contrib_link(language.code, repo),
     )
 
@@ -95,7 +94,6 @@ class LanguageProjectData:
     change: float
     built: bool
     translated_name: str
-    uses_platform: bool
     contribution_link: str | None
 
 

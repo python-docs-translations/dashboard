@@ -90,6 +90,19 @@ body {
   background-color: #f5e9a8;
 }
 
+ul.links-row {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+ul.links-row li:not(:first-child) {
+  padding-left: 1ch;
+}
+ul.links-row li:not(:first-child)::before {
+  content: '•';
+  margin-right: 0.5ch;
+}
+
 /* ------------------------------ Index ------------------------------------- */
 
 .progress-bar-container {
