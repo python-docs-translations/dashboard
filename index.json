@@ -189,7 +189,7 @@
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
     "completion": 62.22808467823175,
-    "change": 0.5417243109850389,
+    "change": 0.5184020201255493,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
@@ -215,7 +215,7 @@
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.14",
     "completion": 3.531739684160013,
-    "change": 1.1678850833802428,
+    "change": 1.1493859887979743,
     "built": false,
     "translated_name": "",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
