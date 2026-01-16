@@ -406,4 +406,3 @@ c-api/arg.rst:700:<translated>:1: WARNING: term not in glossary: '強参照' [re
 c-api/arg.rst:713:<translated>:1: WARNING: term not in glossary: '強参照' [ref.term]
 library/inspect.rst:828:<translated>:1: WARNING: term not in glossary: 'ハッシュ可能' [ref.term]
 whatsnew/3.12.rst:187:<translated>:1: WARNING: undefined label: 'generuc-classes' [ref.ref]
-tutorial/controlflow.rst:1047: WARNING: Lexing literal_block '>>> def my_function():...     """なにもしないがドキュメントは書く。......     本当になにもしない。......         >>> my_function()...         >>>...     """...     pass...>>> print(my_function.__doc__)なにもしないがドキュメントは書く。No, really, it doesn\'t do anything:    >>> my_function()    >>>' as "python3" resulted in an error at token: '。'. Retrying in relaxed mode. [misc.highlighting_failure]
