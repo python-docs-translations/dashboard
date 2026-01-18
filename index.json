@@ -110,8 +110,8 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "completion": 44.50392302504077,
-    "change": 0.1430657041137806,
+    "completion": 44.59679986534992,
+    "change": 0.20331673380875515,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -215,7 +215,7 @@
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.14",
     "completion": 3.721415826018444,
-    "change": 0.64458844521852,
+    "change": 0.6381242659192612,
     "built": false,
     "translated_name": "",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
