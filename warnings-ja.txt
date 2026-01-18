@@ -409,5 +409,7 @@ whatsnew/3.7.rst:84: WARNING: inconsistent references in translated message. ori
 c-api/arg.rst:63:<translated>:1: WARNING: term not in glossary: 'bytes-like オブジェクト' [ref.term]
 c-api/arg.rst:700:<translated>:1: WARNING: term not in glossary: '強参照' [ref.term]
 c-api/arg.rst:713:<translated>:1: WARNING: term not in glossary: '強参照' [ref.term]
+library/functions.rst:2057:<translated>:1: WARNING: term not in glossary: 'pickle' [ref.term]
+library/functions.rst:2057:<translated>:1: WARNING: term not in glossary: 'copy' [ref.term]
 library/inspect.rst:828:<translated>:1: WARNING: term not in glossary: 'ハッシュ可能' [ref.term]
 whatsnew/3.12.rst:187:<translated>:1: WARNING: undefined label: 'generuc-classes' [ref.ref]
