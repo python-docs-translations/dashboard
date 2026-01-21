@@ -13,7 +13,7 @@ using/configure.po:2123: found an unbalanced inline literal markup. (unbalanced-
 using/configure.po:2123: missing space before default role: ''. (missing-space-before-default-role)
 using/windows.po:158: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 using/windows.po:158: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-using/windows.po:480: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+using/windows.po:450: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 using/windows.po:158: missing space before default role: '(例如``python3.14.exe``'. (missing-space-before-default-role)
 reference/compound_stmts.po:276: inline literal missing (escaped) space after literal: '``as``子' (missing-space-after-literal)
 reference/compound_stmts.po:276: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
