@@ -110,8 +110,8 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "completion": 44.698149330708254,
-    "change": 0.3281350159706591,
+    "completion": 44.781097959280764,
+    "change": 0.4110836445431687,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
