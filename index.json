@@ -266,8 +266,8 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.14",
-    "completion": 30.831178336179555,
-    "change": 0.5305562332276139,
+    "completion": 31.33166626006343,
+    "change": 1.031044157111488,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF"
