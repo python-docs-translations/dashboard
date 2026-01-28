@@ -338,6 +338,11 @@ library/base64.rst:157:<translated>:1: WARNING: Inline interpreted text or phras
 library/base64.rst:157: WARNING: inconsistent term references in translated message. original: [':func:`b32decode`'], translated: [] [i18n.inconsistent_references]
 library/bdb.rst:28: WARNING: inconsistent term references in translated message. original: [':attr:`bpbynumber`', ':attr:`bplist`', ':class:`Breakpoint`'], translated: [':attr:`bpbynumber`', ':attr:`bplist`', ':attr:`bpbynumber`', ':class:`Breakpoint`', ':attr:`bplist`'] [i18n.inconsistent_references]
 library/bisect.rst:155: WARNING: inconsistent references in translated message. original: ['`bisect functions`_'], translated: ['`bisect 関数`_'] [i18n.inconsistent_references]
+library/cgi.rst:18: WARNING: inconsistent references in translated message. original: [], translated: ['`Python 3.12<https://docs.python.org/3.12/library/cgi.html>`_'] [i18n.inconsistent_references]
+library/cgi.rst:18: ERROR: Unknown target name: "python 3.12<https://docs.python.org/3.12/library/cgi.html>".
+
+Did you want to embed a URI or alias?
+The embedded reference must be preceded by whitespace. [docutils]
 whatsnew/2.4.rst:71: WARNING: inconsistent term references in translated message. original: [':func:`frozenset`', ':func:`set`'], translated: [':func:`frozenset`', ':func:`set`', ':term:`immutable`'] [i18n.inconsistent_references]
 whatsnew/2.4.rst:75: WARNING: inconsistent term references in translated message. original: [':mod:`sets`', ':class:`Set`', ':class:`ImmutableSet`'], translated: [':mod:`sets`', ':class:`Set`', ':class:`ImmutableSet`', ':mod:`sets`'] [i18n.inconsistent_references]
 whatsnew/2.4.rst:545: WARNING: inconsistent term references in translated message. original: [':class:`Decimal`', ':class:`Decimal`'], translated: [':class:`Decimal`', ':term:`immutable`', ':class:`Decimal`'] [i18n.inconsistent_references]
