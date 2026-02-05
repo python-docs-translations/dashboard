@@ -1,4 +1,4 @@
-reference/simple_stmts.po:1073: Extra backtick in role: ':keyword:`!as``' (role-with-extra-backtick)
+reference/simple_stmts.po:975: Extra backtick in role: ':keyword:`!as``' (role-with-extra-backtick)
 reference/lexical_analysis.po:437: Extra backtick in role: ':mod:`gettext``' (role-with-extra-backtick)
 reference/import.po:286: Extra backtick in role: ':data:`sys.path``' (role-with-extra-backtick)
 reference/import.po:1522: Extra backtick in role: ':meth:`importlib.abc.PathEntryFinder.find_spec``' (role-with-extra-backtick)
