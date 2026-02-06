@@ -1347,7 +1347,7 @@ c-api/module.po:609: found an unbalanced inline literal markup. (unbalanced-inli
 c-api/module.po:609: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/module.po:609: missing space before default role: '定义为``3``'. (missing-space-before-default-role)
 c-api/reflection.po:98: trailing whitespace (trailing-whitespace)
-c-api/intro.po:461: missing space before default role: '扩展为`__attribute__（（可见性（“默认”）））`'. (missing-space-before-default-role)
+c-api/intro.po:532: missing space before default role: '扩展为`__attribute__（（可见性（“默认”）））`'. (missing-space-before-default-role)
 c-api/init.po:745: trailing whitespace (trailing-whitespace)
 c-api/init.po:746: trailing whitespace (trailing-whitespace)
 c-api/init.po:751: trailing whitespace (trailing-whitespace)
