@@ -175,8 +175,8 @@
     },
     "repository": "python/python-docs-pl",
     "branch": "3.14",
-    "completion": 5.5711199344244315,
-    "change": 0.010726115348401066,
+    "completion": 5.571424653610466,
+    "change": 0.011030834534435208,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -214,8 +214,8 @@
     },
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.14",
-    "completion": 3.7962525634501527,
-    "change": 0.36779605754317135,
+    "completion": 3.7963135072873593,
+    "change": 0.3579231559156657,
     "built": false,
     "translated_name": "",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -227,8 +227,8 @@
     },
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
-    "completion": 98.05089419845142,
-    "change": 0.6934189797392207,
+    "completion": 98.07289492368308,
+    "change": 0.7154197049708841,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
