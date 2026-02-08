@@ -84,8 +84,8 @@
     },
     "repository": "python/python-docs-id",
     "branch": "3.14",
-    "completion": 3.2919134662206346,
-    "change": -0.00018283329443047336,
+    "completion": 3.2922181883780186,
+    "change": 0.00012188886295350088,
     "built": true,
     "translated_name": "Indonesia",
     "contribution_link": "https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan"
@@ -110,8 +110,8 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "completion": 43.95574459163879,
-    "change": 0.6628316367419345,
+    "completion": 43.95592742493322,
+    "change": 0.6630144700363658,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -228,7 +228,7 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
     "completion": 98.06623318924038,
-    "change": 0.715426681106436,
+    "change": 0.7115871819233917,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
