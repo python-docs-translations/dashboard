@@ -18,7 +18,7 @@ library/ctypes.po:780: Extra backtick in role: ':func:`GetLastError``' (role-wit
 library/ctypes.po:1321: Extra backtick in role: ':func:`CFUNCTYPE``' (role-with-extra-backtick)
 library/concurrent.futures.po:680: Extra backtick in role: ':meth:`Future.running``' (role-with-extra-backtick)
 library/gettext.po:1012: Extra backtick in role: ':func:`!N_``' (role-with-extra-backtick)
-library/secrets.po:143: Extra backtick in role: ':func:`hmac.compare_digest``' (role-with-extra-backtick)
+library/secrets.po:94: Extra backtick in role: ':func:`hmac.compare_digest``' (role-with-extra-backtick)
 library/winsound.po:43: Extra backtick in role: ':exc:`RuntimeError``' (role-with-extra-backtick)
 library/heapq.po:174: Extra backtick in role: ':func:`max``' (role-with-extra-backtick)
 library/queue.po:449: Extra backtick in role: ':meth:`Queue.put_nowait``' (role-with-extra-backtick)
