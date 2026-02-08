@@ -228,7 +228,7 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
     "completion": 98.06623318924038,
-    "change": 0.7071991828570532,
+    "change": 0.7115871819233917,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
