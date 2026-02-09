@@ -109,9 +109,9 @@
       "name": "Japanese"
     },
     "repository": "python/python-docs-ja",
-    "branch": "3.14",
-    "completion": 43.95343876649298,
-    "change": 0.6630100252917757,
+    "branch": "3.13",
+    "completion": 43.26818417283725,
+    "change": 0.5317365999329624,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -122,9 +122,9 @@
       "name": "Korean"
     },
     "repository": "python/python-docs-ko",
-    "branch": "3.14",
-    "completion": 47.815817954478874,
-    "change": 0.7373079914417175,
+    "branch": "master",
+    "completion": 0.0,
+    "change": 0.0,
     "built": true,
     "translated_name": "\ud55c\uad6d\uc5b4",
     "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
@@ -174,9 +174,9 @@
       "name": "Polish"
     },
     "repository": "python/python-docs-pl",
-    "branch": "3.14",
-    "completion": 5.571441630862053,
-    "change": 0.01103086814760701,
+    "branch": "3.12",
+    "completion": 4.865527013438157,
+    "change": 0.0,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -187,9 +187,9 @@
       "name": "Brazilian Portuguese"
     },
     "repository": "python/python-docs-pt-br",
-    "branch": "3.14",
-    "completion": 60.91799981716793,
-    "change": 0.09708382850352137,
+    "branch": "3.13",
+    "completion": 55.229301886217506,
+    "change": 0.04918182649236513,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
@@ -213,9 +213,9 @@
       "name": "Russian"
     },
     "repository": "MLGRussianXP/python-docs-ru",
-    "branch": "3.14",
-    "completion": 3.7963250754182285,
-    "change": 0.2860712435627879,
+    "branch": "3.12",
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
