@@ -45,7 +45,7 @@ def get_completion(
     project = potodo.merge_and_scan_paths(
         [clone_path],
         pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
-        merge_path=path_for_merge.resolve(),
+        merge_path=path_for_merge.absolute(),
         api_url='',
     )
     completion = project.completion
