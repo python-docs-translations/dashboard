@@ -37,7 +37,7 @@ def get_completion(
             break
     path_for_merge = Path(clones_dir, 'rebased_translations', repo)
     project = potodo.merge_and_scan_paths(
-        [clone_path],
+        [clone_path.resolve()],
         pot_path=Path(clones_dir, 'cpython/Doc/build/gettext'),
         merge_path=path_for_merge,
         api_url='',
