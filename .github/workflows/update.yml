@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: "3.x"
       - uses: astral-sh/setup-uv@v7
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - run: sudo apt-get install -y gettext
       - run: pip install -r requirements.txt
       - run: uv run generate.py  # generates index.html and index.json
@@ -75,7 +75,7 @@ jobs:
           clean: false
           git-config-name: github-actions[bot]
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: always()
         with:
           name: build

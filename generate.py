@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 import concurrent.futures
 import itertools
@@ -20,20 +22,26 @@ from repositories import Language, get_languages_and_repos
 generation_time = datetime.now(timezone.utc)
 
 
-def get_completion_progress() -> Iterator['LanguageProjectData']:
+def get_completion_progress() -> Iterator[LanguageProjectData]:
     clones_dir = Path('clones')
-    Repo.clone_from(
-        'https://github.com/python/devguide.git',
-        devguide_dir := Path(clones_dir, 'devguide'),
-        depth=1,
-    )
+    if not (devguide_dir := Path(clones_dir, 'devguide')).exists():
+        Repo.clone_from('https://github.com/python/devguide.git', devguide_dir, depth=1)
+    else:
+        Repo(devguide_dir).git.pull()
     latest_branch = branches_from_peps()[0]
-    Repo.clone_from(
-        'https://github.com/python/cpython.git',
-        cpython_dir := Path(clones_dir, 'cpython'),
-        depth=1,
-        branch=latest_branch,
-    )
+    if not (cpython_dir := Path(clones_dir, 'cpython')).exists():
+        Repo.clone_from(
+            'https://github.com/python/cpython.git',
+            cpython_dir,
+            depth=1,
+            branch=latest_branch,
+        )
+    else:
+        (cpython_repo := Repo(cpython_dir)).git.fetch()
+        cpython_repo.git.switch(latest_branch)
+        cpython_repo.git.pull()
+
+    subprocess.run(['make', '-C', cpython_dir / 'Doc', 'clean'], check=True)
     subprocess.run(['make', '-C', cpython_dir / 'Doc', 'venv'], check=True)
     subprocess.run(['make', '-C', cpython_dir / 'Doc', 'gettext'], check=True)
 
@@ -56,7 +64,7 @@ def get_project_data(
     repo: str | None,
     languages_built: dict[str, str],
     clones_dir: str,
-) -> 'LanguageProjectData':
+) -> LanguageProjectData:
     built = language.code in languages_built
     if repo:
         core_complation, completion, branch, core_change, change = get_completion(
@@ -77,7 +85,6 @@ def get_project_data(
         change,
         built,
         translated_name=languages_built.get(language.code, ''),
-        uses_platform=language.code in contribute.pulling_from_transifex,
         contribution_link=contribute.get_contrib_link(language.code, repo),
     )
 
@@ -93,7 +100,6 @@ class LanguageProjectData:
     change: float
     built: bool
     translated_name: str
-    uses_platform: bool
     contribution_link: str | None
 
 

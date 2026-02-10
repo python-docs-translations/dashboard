@@ -26,14 +26,20 @@ def get_completion(
     clone_path = Path(clones_dir, 'translations', repo)
     for branch in branches_from_peps() + ['master', 'main']:
         try:
-            clone_repo = git.Repo.clone_from(
-                f'https://github.com/{repo}.git', clone_path, branch=branch
-            )
+            if not clone_path.exists():
+                clone_repo = git.Repo.clone_from(
+                    f'https://github.com/{repo}.git', clone_path, branch=branch
+                )
+            else:
+                (clone_repo := git.Repo(clone_path)).git.fetch()
+                clone_repo.git.switch(branch)
+                clone_repo.git.pull()
         except git.GitCommandError:
-            print(f'failed to clone {repo} {branch}')
+            print(f'failure: {branch} {repo}: clone or switch, continuing')
             branch = ''
             continue
         else:
+            print(f'success: {branch} {repo}: clone or switch')
             break
     path_for_merge = Path(clones_dir, 'rebased_translations', repo)
     project = potodo.merge_and_scan_paths(
