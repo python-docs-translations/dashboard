@@ -73,7 +73,7 @@ library/asyncio-eventloop.rst:92: WARNING: inconsistent references in translated
 library/asyncio-eventloop.rst:96: WARNING: inconsistent references in translated message. original: ['`Server Objects`_'], translated: ['`서버 객체 <Server Objects_>`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:99: WARNING: inconsistent references in translated message. original: ['`Event Loop Implementations`_'], translated: ['`이벤트 루프 구현 <Event Loop Implementations_>`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:102: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`예제 <Examples_>`_'] [i18n.inconsistent_references]
-library/asyncio-eventloop.rst:479: WARNING: inconsistent term references in translated message. original: [':meth:`~BaseProtocol.connection_made`'], translated: [':meth:`connection_made`'] [i18n.inconsistent_references]
+library/asyncio-eventloop.rst:480: WARNING: inconsistent term references in translated message. original: [':meth:`~BaseProtocol.connection_made`'], translated: [':meth:`connection_made`'] [i18n.inconsistent_references]
 library/asyncio-protocol.rst:22: WARNING: inconsistent references in translated message. original: ['`Transports`_', '`Protocols`_'], translated: ['`트랜스포트 <Transports_>`_', '`프로토콜 <Protocols_>`_'] [i18n.inconsistent_references]
 library/asyncio-protocol.rst:54: WARNING: inconsistent references in translated message. original: ['`Transports`_'], translated: ['`트랜스포트 <Transports_>`_'] [i18n.inconsistent_references]
 library/asyncio-protocol.rst:59: WARNING: inconsistent references in translated message. original: ['`Protocols`_'], translated: ['`프로토콜 <Protocols_>`_'] [i18n.inconsistent_references]
