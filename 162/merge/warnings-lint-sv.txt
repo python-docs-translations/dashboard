@@ -1,0 +1,2 @@
+whatsnew/2.6.po:3966: trailing whitespace (trailing-whitespace)
+whatsnew/3.13.po:2207: Extra backtick in role: ':mod:`!aifc``' (role-with-extra-backtick)
