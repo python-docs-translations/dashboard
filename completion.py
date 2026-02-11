@@ -49,9 +49,9 @@ def get_completion(
         api_url='',
     )
     completion = project.completion
+    core_excludes = ['**/*', '!bugs.po', '!tutorial/*', '!library/functions.po']
     project.filter(
-        filters=Filters(False, True, 0, 100, False, False),
-        exclude=['**/*', '!bugs.po', '!tutorial/', '!library/functions.po'],
+        filters=Filters(False, True, 0, 100, False, False), exclude=core_excludes
     )
     core_completion = project.completion
 
@@ -75,7 +75,7 @@ def get_completion(
                 month_ago_completion = project.completion
                 project.filter(
                     filters=Filters(False, True, 0, 100, False, False),
-                    exclude=['**/*', '!bugs.po', '!tutorial/', '!library/functions.po'],
+                    exclude=core_excludes,
                 )
                 month_ago_core_completion = project.completion
             clone_repo.git.checkout(branch)  # restore the original state
