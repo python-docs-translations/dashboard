@@ -9,8 +9,6 @@
           <div class="card-body">
             <h3 class="card-title"><a href="#{{ project.language.code }}">{{ project.language.name }}</a></h3>
             <h5 class="card-subtitle mb-2 text-muted">{{ project.translated_name }}</h5>
-            <p class="text-muted">Completion: <strong>{{ '{:.2f}%'.format(project.completion) }}</strong></p>
-            <p class="text-muted">30-day progress: {{ '{:.2f}%'.format(project.change) }}</p>
 
             <ul class="links-row">
               {% if project.built %}
@@ -26,10 +24,10 @@
               </li>
             </ul>
             {# core progress bar #}
-            {% set width, change = project.core_completion, project.core_change %}
+            {% set width, change, kind = project.core_completion, project.core_change, 'core' %}
             {% include 'progress_bar.html.jinja' %}
             {# overall progress bar #}
-            {% set width, change = project.completion, project.change %}
+            {% set width, change, kind = project.completion, project.change, 'overall' %}
             {% set extra_container_class = 'mt-1' %}
             {% include 'progress_bar.html.jinja' %}
           </div>
