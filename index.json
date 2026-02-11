@@ -188,8 +188,8 @@
     },
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
-    "completion": 60.91799778051202,
-    "change": 0.10341765803187286,
+    "completion": 60.91129421988532,
+    "change": 0.09707974616662796,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
