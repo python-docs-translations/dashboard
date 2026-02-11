@@ -103,6 +103,13 @@ ul.links-row li:not(:first-child)::before {
   margin-right: 0.5ch;
 }
 
+/* ------------------------------ Index ------------------------------------- */
+
+.progress {
+  font-size: 1rem;
+  height: 20px;
+}
+
 /* ------------------------------ Metadata ---------------------------------- */
 
 table {
