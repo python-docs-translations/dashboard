@@ -24,12 +24,13 @@
               </li>
             </ul>
             {# core progress bar #}
-            {% set width, change, kind = project.core_completion, project.core_change, 'core' %}
+            {% with width=project.core_completion, change=project.core_change, kind='core' %}
             {% include 'progress_bar.html.jinja' %}
+            {% endwith %}
             {# overall progress bar #}
-            {% set width, change, kind = project.completion, project.change, 'overall' %}
-            {% set extra_container_class = 'mt-1' %}
+            {% with width=project.completion, change=project.change, kind='overall', extra_container_class='mt-1' %}
             {% include 'progress_bar.html.jinja' %}
+            {% endwith %}
           </div>
         </div>
       </div>
