@@ -25,24 +25,13 @@
                 </a>
               </li>
             </ul>
-            <div class="progress-bar-container">
-              <div class="progress-bar" style="width: {{ project.core_completion }}%;
-                {% if project.core_change %}
-                  background: linear-gradient(to left, #94cf96 {{ project.core_change * 100 / project.core_completion }}%, #4caf50 {{ project.core_change * 100 / project.core_completion }}%);
-                {% else %}
-                  background-color: #4caf50;
-                {% endif %}">
-              </div>
-            </div>
-            <div class="progress-bar-container mt-1">
-              <div class="progress-bar" style="width: {{ project.completion }}%;
-                {% if project.change %}
-                  background: linear-gradient(to left, #94cf96 {{ project.change * 100 / project.completion }}%, #4caf50 {{ project.change * 100 / project.completion }}%);
-                {% else %}
-                  background-color: #4caf50;
-                {% endif %}">
-              </div>
-            </div>
+            {# core progress bar #}
+            {% set width, change = project.core_completion, project.core_change %}
+            {% include 'progress_bar.html.jinja' %}
+            {# overall progress bar #}
+            {% set width, change = project.completion, project.change %}
+            {% set extra_container_class = 'mt-1' %}
+            {% include 'progress_bar.html.jinja' %}
           </div>
         </div>
       </div>
