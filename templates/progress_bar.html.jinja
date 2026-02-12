@@ -14,4 +14,7 @@
     {% endif %}">
     {{ kind }}: {{ '{:.2f}%'.format(width) }} {% if change >= 0.01 %}({{ '{:+.2f}%'.format(change) }}){% endif %}
   </div>
+  <div class="progress-bar outer-label">
+    {{ kind }}: {{ '{:.2f}%'.format(width) }} {% if change >= 0.01 %}({{ '{:+.2f}%'.format(change) }}){% endif %}
+  </div>
 </div>
