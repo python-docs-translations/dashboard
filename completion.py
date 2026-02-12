@@ -63,6 +63,7 @@ def get_completion(
             )
         except StopIteration:
             month_ago_completion = 0.0
+            month_ago_core_completion = 0.0
         else:
             clone_repo.git.checkout(commit.hexsha)
             with TemporaryDirectory() as tmpdir:
