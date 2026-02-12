@@ -110,6 +110,22 @@ ul.links-row li:not(:first-child)::before {
   height: 20px;
 }
 
+.outer-label {
+  display: none;
+  padding-left: .5em;
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+.progress-bar.low {
+  color: transparent;
+  user-select: none;
+}
+
+.progress-bar.low + .outer-label {
+  display: flex;
+}
+
 /* ------------------------------ Metadata ---------------------------------- */
 
 table {
