@@ -4,7 +4,7 @@
    - change: numeric change value (same units as width) or falsy
 #}
 <div class="progress {{ extra_container_class }}">
-  <div class="progress-bar" style="width: {{ width }}%;
+  <div class="progress-bar main-bar" style="width: {{ width }}%;
     {% if change and width %}
       {# compute the relative change percentage safely #}
       {% set rel = (change * 100 / width) %}
