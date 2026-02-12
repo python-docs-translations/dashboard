@@ -12,6 +12,6 @@
     {% else %}
       background-color: #4caf50;
     {% endif %}">
-    {{ kind }}: {{ '{:.2f}%'.format(project.completion) }} {% if project.change >= 0.01 %}({{ '{:+.2f}%'.format(project.change) }}){% endif %}
+    {{ kind }}: {{ '{:.2f}%'.format(width) }} {% if change >= 0.01 %}({{ '{:+.2f}%'.format(change) }}){% endif %}
   </div>
 </div>
