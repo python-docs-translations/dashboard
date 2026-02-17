@@ -1,4 +1,4 @@
-bugs.po:233: trailing whitespace (trailing-whitespace)
+bugs.po:222: trailing whitespace (trailing-whitespace)
 tutorial/datastructures.po:676: Unnecessary parentheses in ':func:`set()`' (unnecessary-parentheses)
 tutorial/datastructures.po:676: Unnecessary parentheses in ':func:`set()`' (unnecessary-parentheses)
 tutorial/datastructures.po:1118: trailing whitespace (trailing-whitespace)
