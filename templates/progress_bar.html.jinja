@@ -1,0 +1,20 @@
+{# Reusable progress bar partial
+   Expects variables in the include call:
+   - width: numeric width percentage (0-100)
+   - change: numeric change value (same units as width) or falsy
+#}
+<div class="progress {{ extra_container_class }}">
+  <div class="progress-bar main-bar" style="width: {{ width }}%;
+    {% if change and width %}
+      {# compute the relative change percentage safely #}
+      {% set rel = (change * 100 / width) %}
+      background: linear-gradient(to left, #94cf96 {{ rel }}%, #4caf50 {{ rel }}%);
+    {% else %}
+      background-color: #4caf50;
+    {% endif %}">
+    {{ kind }}: {{ '{:.2f}%'.format(width) }} {% if change >= 0.01 %}({{ '{:+.2f}%'.format(change) }}){% endif %}
+  </div>
+  <div class="progress-bar outer-label">
+    {{ kind }}: {{ '{:.2f}%'.format(width) }} {% if change >= 0.01 %}({{ '{:+.2f}%'.format(change) }}){% endif %}
+  </div>
+</div>
