@@ -105,25 +105,21 @@ ul.links-row li:not(:first-child)::before {
 
 /* ------------------------------ Index ------------------------------------- */
 
-.progress {
-  font-size: 1rem;
+.progress-bar-container {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   height: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
-.outer-label {
-  display: none;
-  padding-left: .5em;
-  color: var(--text-color);
-  background-color: transparent;
-}
-
-.progress-bar.low {
-  color: transparent;
-  user-select: none;
-}
-
-.progress-bar.low + .outer-label {
-  display: flex;
+.progress-bar {
+  display: inline-block;
+  color: white;
+  height: 100%;
+  line-height: 20px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 /* ------------------------------ Metadata ---------------------------------- */
