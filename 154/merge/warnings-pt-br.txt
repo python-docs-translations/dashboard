@@ -1,2 +1,0 @@
-library/dbm.rst:273: WARNING: inconsistent term references in translated message. original: [':term:`mappings <mapping>`', ':keyword:`with`'], translated: [':keyword:`with`'] [i18n.inconsistent_references]
-library/dbm.rst:386: WARNING: inconsistent term references in translated message. original: [':term:`mappings <mapping>`', ':keyword:`with`'], translated: [':keyword:`with`'] [i18n.inconsistent_references]

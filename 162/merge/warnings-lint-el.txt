@@ -1,2 +1,0 @@
-using/android.po:142: missing space before role ( αρχείο:source:`). (missing-space-before-role)
-library/unittest.mock-examples.po:654: trailing whitespace (trailing-whitespace)

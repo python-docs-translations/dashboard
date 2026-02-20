@@ -1,4 +1,0 @@
-extending/newtypes_tutorial.rst:267:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_XDECREF`lida corretamente com o caso em que seu argumento é ``NULL`'
-Invalid C declaration: Expected end of definition. [error at 10]
-  Py_XDECREF`lida corretamente com o caso em que seu argumento é ``NULL`
-  ----------^

@@ -1,3 +1,0 @@
-reference/import.po:1663: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-reference/import.po:1663: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-reference/import.po:1663: missing space before default role: '入加上``__package__``'. (missing-space-before-default-role)
