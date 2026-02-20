@@ -282,6 +282,8 @@ howto/sorting.rst:109: WARNING: inconsistent term references in translated messa
 howto/urllib2.rst:190: WARNING: inconsistent references in translated message. original: ['`info and geturl`_'], translated: ['`info e geturl`_'] [i18n.inconsistent_references]
 howto/urllib2.rst:479: WARNING: inconsistent references in translated message. original: ['`Basic Authentication`_'], translated: ['`autenticação básica`_'] [i18n.inconsistent_references]
 howto/urllib2.rst:541: WARNING: inconsistent references in translated message. original: ['`Quick Reference to HTTP Headers`_'], translated: ['`Referência rápida para cabeçalhos HTTP`_'] [i18n.inconsistent_references]
+improve-page.rst:50: WARNING: inconsistent references in translated message. original: ["`translation's repository <TRANSLATION_REPO_>`_"], translated: ['`repositório da tradução <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
+improve-page-nojs.rst:17: WARNING: inconsistent references in translated message. original: ["`translation's repository <TRANSLATION_REPO_>`_"], translated: ['`repositório da tradução <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 installing/index.rst:20: WARNING: inconsistent references in translated message. original: ['`Python packaging user guide`_'], translated: ['`Guia de Usuário para Empacotamento de Python`_'] [i18n.inconsistent_references]
 installing/index.rst:88: WARNING: inconsistent term references in translated message. original: [':term:`virtual environment`'], translated: [':term:`ambiente virtual`'] [i18n.inconsistent_references]
 library/__main__.rst:276: WARNING: inconsistent term references in translated message. original: [':term:`namespace`'], translated: [':term:`espaço de nomes`'] [i18n.inconsistent_references]
