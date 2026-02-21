@@ -142,9 +142,9 @@
     "repository": "python/python-docs-ko",
     "branch": "3.14",
     "core_completion": 96.41005185480654,
-    "completion": 47.508780639458095,
+    "completion": 47.51395198436672,
     "core_change": 0.0,
-    "change": 0.0035286824082447765,
+    "change": 0.008700027316869807,
     "built": true,
     "translated_name": "\ud55c\uad6d\uc5b4",
     "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
@@ -249,7 +249,7 @@
     "core_completion": 99.0026527380781,
     "completion": 3.7794867174315905,
     "core_change": 0.0,
-    "change": 0.05351259341874259,
+    "change": 0.04291965683755805,
     "built": false,
     "translated_name": "",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
