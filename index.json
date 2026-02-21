@@ -262,9 +262,9 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
     "core_completion": 100.0,
-    "completion": 98.15504759400089,
+    "completion": 98.1596742812198,
     "core_change": 0.5408295461555923,
-    "change": 1.1009689257075763,
+    "change": 1.1055956129264786,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -308,8 +308,8 @@
     "branch": "3.14",
     "core_completion": 92.15283061547636,
     "completion": 31.18028008503364,
-    "core_change": 0.19124390795616364,
-    "change": 1.3031429816807538,
+    "core_change": 0.0,
+    "change": 1.1821794618919235,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF"
