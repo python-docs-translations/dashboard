@@ -65,7 +65,6 @@ library/ftplib.rst:292: WARNING: inconsistent term references in translated mess
 library/hashlib.rst:70: WARNING: inconsistent references in translated message. original: ['`Attacks on cryptographic hash algorithms`_', '`hashlib-seealso`_'], translated: ['`Attacks on cryptographic hash algorithms`_', '`더 보기 <hashlib-seealso_>`_'] [i18n.inconsistent_references]
 library/hashlib.rst:448: WARNING: inconsistent references in translated message. original: ['`constants`_'], translated: ['`상수 <constants_>`_'] [i18n.inconsistent_references]
 library/logging.handlers.rst:183: WARNING: inconsistent term references in translated message. original: [':class:`WatchedFileHandler`', ':meth:`emit`'], translated: [':class:`FileHandler`', ':meth:`emit`'] [i18n.inconsistent_references]
-library/exceptions.rst:367: WARNING: inconsistent references in translated message. original: ['`OS exceptions`_'], translated: ['`OS 예외 <OS exceptions_>`_'] [i18n.inconsistent_references]
 library/configparser.rst:1479: WARNING: inconsistent references in translated message. original: ['`Customizing Parser Behaviour`_'], translated: ['`구문 분석기 동작 사용자 정의 <Customizing Parser Behaviour_>`_'] [i18n.inconsistent_references]
 library/contextlib.rst:149: WARNING: inconsistent term references in translated message. original: [':func:`asynccontextmanager`'], translated: [':func:`contextmanager`'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:89: WARNING: inconsistent references in translated message. original: ['`Event Loop Methods`_'], translated: ['`이벤트 루프 메서드 <Event Loop Methods_>`_'] [i18n.inconsistent_references]
@@ -82,3 +81,4 @@ library/asyncio-protocol.rst:598: WARNING: inconsistent references in translated
 library/asyncio-queue.rst:21: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`예제 <Examples_>`_'] [i18n.inconsistent_references]
 library/asyncio-stream.rst:42: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`예제 <Examples_>`_'] [i18n.inconsistent_references]
 library/asyncio-subprocess.rst:58: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`예제 <Examples_>`_'] [i18n.inconsistent_references]
+library/exceptions.rst:367: WARNING: inconsistent references in translated message. original: ['`OS exceptions`_'], translated: ['`OS 예외 <OS exceptions_>`_'] [i18n.inconsistent_references]
