@@ -334,7 +334,7 @@ library/pprint.po:99: found an unbalanced inline literal markup. (unbalanced-inl
 library/pprint.po:99: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/pprint.po:123: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/pprint.po:123: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-library/stdtypes.po:3618: trailing whitespace (trailing-whitespace)
+library/stdtypes.po:3619: trailing whitespace (trailing-whitespace)
 library/stdtypes.po:7857: trailing whitespace (trailing-whitespace)
 library/stdtypes.po:8716: trailing whitespace (trailing-whitespace)
 library/stdtypes.po:9292: trailing whitespace (trailing-whitespace)

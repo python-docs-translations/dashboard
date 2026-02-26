@@ -1240,7 +1240,7 @@ library/decimal.po:1774: found an unbalanced inline literal markup. (unbalanced-
 library/decimal.po:1774: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/wsgiref.po:1322: trailing whitespace (trailing-whitespace)
 library/typing.po:3220: trailing whitespace (trailing-whitespace)
-library/typing.po:6244: trailing whitespace (trailing-whitespace)
+library/typing.po:6238: trailing whitespace (trailing-whitespace)
 library/typing.po:2453: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/typing.po:2453: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/typing.po:4282: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
