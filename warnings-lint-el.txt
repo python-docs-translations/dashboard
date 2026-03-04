@@ -1,2 +1,3 @@
 using/android.po:142: missing space before role ( αρχείο:source:`). (missing-space-before-role)
+library/pyexpat.po:879: missing underscore after closing backtick in hyperlink (missing-underscore-after-hyperlink)
 library/unittest.mock-examples.po:654: trailing whitespace (trailing-whitespace)
