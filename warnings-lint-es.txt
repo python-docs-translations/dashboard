@@ -1,4 +1,4 @@
-howto/logging.po:1402: Extra backtick in role: ':func:`fileConfig``' (role-with-extra-backtick)
+howto/logging.po:1392: Extra backtick in role: ':func:`fileConfig``' (role-with-extra-backtick)
 howto/urllib2.po:213: Extra backtick in role: ':mod:`urllib.parse``' (role-with-extra-backtick)
 howto/urllib2.po:946: Extra backtick in role: ':func:`~urllib.request.getproxies``' (role-with-extra-backtick)
 whatsnew/3.4.po:3343: Extra backtick in role: ':class:`~urllib.request.Request``' (role-with-extra-backtick)
