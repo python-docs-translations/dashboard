@@ -262,9 +262,9 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
     "core_completion": 100.0,
-    "completion": 97.38208396604757,
+    "completion": 97.38573424054822,
     "core_change": 0.5408295461555923,
-    "change": 0.9954906942335384,
+    "change": 0.9991409687341815,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
