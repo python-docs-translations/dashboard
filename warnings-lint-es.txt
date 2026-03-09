@@ -14,7 +14,7 @@ library/gettext.po:1012: Extra backtick in role: ':func:`!N_``' (role-with-extra
 library/queue.po:449: Extra backtick in role: ':meth:`Queue.put_nowait``' (role-with-extra-backtick)
 library/doctest.po:973: Extra backtick in role: ':const:`DONT_ACCEPT_TRUE_FOR_1``' (role-with-extra-backtick)
 library/gzip.po:360: Extra backtick in role: ':attr:`~GzipFile.name``' (role-with-extra-backtick)
-library/concurrent.futures.po:933: Extra backtick in role: ':meth:`Future.running``' (role-with-extra-backtick)
+library/concurrent.futures.po:921: Extra backtick in role: ':meth:`Future.running``' (role-with-extra-backtick)
 library/importlib.metadata.po:849: Extra backtick in role: ':py:class:`pathlib.Path``' (role-with-extra-backtick)
 library/decimal.po:2852: Extra backtick in role: ':const:`False``' (role-with-extra-backtick)
 library/http.server.po:560: Extra backtick in role: ':func:`time.time``' (role-with-extra-backtick)
