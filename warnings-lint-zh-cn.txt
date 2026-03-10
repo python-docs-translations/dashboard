@@ -1272,7 +1272,7 @@ library/sys.po:2027: found an unbalanced inline literal markup. (unbalanced-inli
 library/sys.po:2027: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/sys.po:2367: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/sys.po:2367: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-library/functools.po:1468: trailing whitespace (trailing-whitespace)
+library/functools.po:1471: trailing whitespace (trailing-whitespace)
 library/configparser.po:1513: trailing whitespace (trailing-whitespace)
 library/asyncio-eventloop.po:1269: inline literal missing (escaped) space after literal: '``True``（' (missing-space-after-literal)
 library/asyncio-eventloop.po:1260: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
