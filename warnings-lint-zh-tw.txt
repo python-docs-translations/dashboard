@@ -1,3 +1,0 @@
-faq/programming.po:848: inline literal missing (escaped) space after literal: '``x``（' (missing-space-after-literal)
-faq/programming.po:848: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-faq/programming.po:848: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
