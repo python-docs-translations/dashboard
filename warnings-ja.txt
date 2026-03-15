@@ -276,7 +276,7 @@ library/abc.rst:20:<translated>:1: WARNING: Inline interpreted text or phrase re
 library/abc.rst:20:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 library/abc.rst:20:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 library/abc.rst:20: WARNING: inconsistent term references in translated message. original: [':mod:`collections`', ':mod:`collections.abc`', ':term:`hashable`', ':term:`mapping`'], translated: [':mod:`collections`', ':mod:`collections.抽象基底クラス`'] [i18n.inconsistent_references]
-library/argparse.rst:1075: WARNING: inconsistent references in translated message. original: ['type_', 'default_'], translated: ['type_', 'default_', 'default_'] [i18n.inconsistent_references]
+library/argparse.rst:1077: WARNING: inconsistent references in translated message. original: ['type_', 'default_'], translated: ['type_', 'default_', 'default_'] [i18n.inconsistent_references]
 library/array.rst:132: WARNING: inconsistent term references in translated message. original: [':ref:`bufferobjects`'], translated: [':meth:`buffer_info`', ':ref:`bufferobjects`'] [i18n.inconsistent_references]
 library/asyncio-dev.rst:85: WARNING: inconsistent term references in translated message. original: [':func:`run_coroutine_threadsafe`', ':class:`concurrent.futures.Future`'], translated: [':func:`run_coroutine_threadsafe`', ':func:`run_coroutine_threadsafe`', ':class:`concurrent.futures.Future`'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:89: WARNING: inconsistent references in translated message. original: ['`Event Loop Methods`_'], translated: ['`イベントループのメソッド`_'] [i18n.inconsistent_references]
