@@ -1,0 +1,20 @@
+{% extends "base.html.jinja" %}
+
+{% block main %}
+<div>
+  <div class="row">
+    {% for project in projects %}
+      <div class="col-12 col-sm-6 col-md-4 d-flex">
+        <div class="card shadow mb-3 w-100 related-card">
+          <div class="card-body text-center">
+            <img src="{{ project.logo }}" alt="{{ project.name }} logo" class="related-logo mb-3">
+            <h4 class="card-title">{{ project.name }}</h4>
+            <p class="text-muted mb-3">{{ project.description }}</p>
+            <a href="{{ project.url }}" target="_blank" class="btn btn-primary btn-translate">Translate</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
