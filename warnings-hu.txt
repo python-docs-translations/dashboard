@@ -4,7 +4,7 @@ tutorial/controlflow.rst:929: WARNING: inconsistent term references in translate
 tutorial/controlflow.rst:957: WARNING: inconsistent term references in translated message. original: [':func:`range`'], translated: [':func:`range`', ':keyword:`break`'] [i18n.inconsistent_references]
 tutorial/datastructures.rst:371: WARNING: inconsistent term references in translated message. original: [':ref:`typesseq`'], translated: [] [i18n.inconsistent_references]
 tutorial/datastructures.rst:453: WARNING: inconsistent term references in translated message. original: [':func:`set`'], translated: [':func:`set()`', ':func:`set()`'] [i18n.inconsistent_references]
-tutorial/datastructures.rst:482: WARNING: inconsistent term references in translated message. original: [':ref:`list comprehensions <tut-listcomps>`'], translated: [] [i18n.inconsistent_references]
+tutorial/datastructures.rst:485: WARNING: inconsistent term references in translated message. original: [':ref:`list comprehensions <tut-listcomps>`'], translated: [] [i18n.inconsistent_references]
 tutorial/errors.rst:81: WARNING: inconsistent term references in translated message. original: [':ref:`bltin-exceptions`'], translated: [] [i18n.inconsistent_references]
 tutorial/errors.rst:368: WARNING: inconsistent term references in translated message. original: [':ref:`tut-classes`', ':exc:`Exception`'], translated: [] [i18n.inconsistent_references]
 tutorial/index.rst:33: WARNING: inconsistent term references in translated message. original: [':ref:`library-index`', ':ref:`reference-index`', ':ref:`extending-index`', ':ref:`c-api-index`'], translated: [] [i18n.inconsistent_references]
