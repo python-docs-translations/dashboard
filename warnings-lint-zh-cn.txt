@@ -1359,7 +1359,7 @@ library/email.message.po:576: found an unbalanced inline literal markup. (unbala
 library/email.message.po:576: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/stdtypes.po:947: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/stdtypes.po:947: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-library/stdtypes.po:10138: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/stdtypes.po:10150: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 faq/programming.po:838: inline literal missing (escaped) space after literal: '``x``（' (missing-space-after-literal)
 faq/programming.po:838: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 faq/programming.po:838: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
