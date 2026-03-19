@@ -18,3 +18,5 @@ jobs:
       - run: git rm -rf ${{ github.event.number }}
       - run: git commit -m 'Cleaning up gh-pages after ${{ github.event.number }}'
       - uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
