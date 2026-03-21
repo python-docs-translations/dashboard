@@ -142,9 +142,9 @@
     "repository": "python/python-docs-ko",
     "branch": "3.14",
     "core_completion": 96.41005185480654,
-    "completion": 47.06422758751674,
+    "completion": 47.051727579931786,
     "core_change": 0.0,
-    "change": 0.01802185559578362,
+    "change": 0.005521848010829444,
     "built": true,
     "translated_name": "\ud55c\uad6d\uc5b4",
     "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
@@ -217,9 +217,9 @@
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
     "core_completion": 99.40805294637535,
-    "completion": 60.2637027681808,
+    "completion": 60.26121328775358,
     "core_change": 0.5138429284936166,
-    "change": 0.44258104473171755,
+    "change": 0.446284905855137,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
