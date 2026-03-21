@@ -8,7 +8,7 @@ reference/import.po:286: Extra backtick in role: ':data:`sys.path``' (role-with-
 reference/import.po:1632: Extra backtick in role: ':meth:`importlib.abc.PathEntryFinder.find_spec``' (role-with-extra-backtick)
 reference/simple_stmts.po:1089: Extra backtick in role: ':keyword:`!as``' (role-with-extra-backtick)
 library/sys_path_init.po:230: Extra backtick in role: ':data:`sys.path``' (role-with-extra-backtick)
-library/zoneinfo.po:533: Extra backtick in role: ':func:`repr``' (role-with-extra-backtick)
+library/zoneinfo.po:473: Extra backtick in role: ':func:`repr``' (role-with-extra-backtick)
 library/winsound.po:43: Extra backtick in role: ':exc:`RuntimeError``' (role-with-extra-backtick)
 library/gettext.po:1012: Extra backtick in role: ':func:`!N_``' (role-with-extra-backtick)
 library/queue.po:449: Extra backtick in role: ':meth:`Queue.put_nowait``' (role-with-extra-backtick)

@@ -7,7 +7,7 @@ c-api/call.rst:355: WARNING: inconsistent references in translated message. orig
 c-api/call.rst:372: WARNING: inconsistent references in translated message. original: ['vectorcall_'], translated: ['`벡터콜 <vectorcall_>`_'] [i18n.inconsistent_references]
 glossary.rst:1182: WARNING: inconsistent term references in translated message. original: [':term:`positionally <argument>`', ':term:`keyword argument\n<argument>`'], translated: [':term:`위치 인자 <positional argument>`', ':term:`키워드 인자 <keyword argument>`'] [i18n.inconsistent_references]
 howto/urllib2.rst:190: WARNING: inconsistent references in translated message. original: ['`info and geturl`_'], translated: ['`info와 geturl <info and geturl_>`_'] [i18n.inconsistent_references]
-library/zoneinfo.rst:207: WARNING: inconsistent references in translated message. original: ['`pickling`_'], translated: ['`피클 직렬화 <pickling_>`_'] [i18n.inconsistent_references]
+library/zoneinfo.rst:206: WARNING: inconsistent references in translated message. original: ['`pickling`_'], translated: ['`피클 직렬화 <pickling_>`_'] [i18n.inconsistent_references]
 library/unittest.rst:223: WARNING: inconsistent references in translated message. original: ['`Signal Handling`_'], translated: ['`시그널 처리하기 <Signal Handling_>`_'] [i18n.inconsistent_references]
 library/unittest.rst:341: WARNING: inconsistent references in translated message. original: ['`load_tests protocol`_'], translated: ['`load_tests 프로토콜 <load_tests protocol_>`_'] [i18n.inconsistent_references]
 library/unittest.rst:777: WARNING: inconsistent references in translated message. original: ['`Class and Module Fixtures`_'], translated: ['`클래스와 모듈 픽스쳐 <Class and Module Fixtures_>`_'] [i18n.inconsistent_references]
