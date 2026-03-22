@@ -1,0 +1,7 @@
+glossary.po:922: role use a single backtick, double backtick found. (role-with-double-backticks)
+glossary.po:476: role missing closing backtick: ':term:`strong-referensen till objektet och på så sätt förstöra det.\n' (missing-backtick-after-role)
+glossary.po:2275: Extra backtick in role: ':pep:`302``' (role-with-extra-backtick)
+whatsnew/2.6.po:3966: trailing whitespace (trailing-whitespace)
+whatsnew/3.13.po:2207: Extra backtick in role: ':mod:`!aifc``' (role-with-extra-backtick)
+tutorial/controlflow.po:186: role missing closing backtick: ':func:`range\n' (missing-backtick-after-role)
+tutorial/controlflow.po:581: role missing opening tag colon ( Nyckelordet:`). (missing-space-before-role)
