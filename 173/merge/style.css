@@ -42,10 +42,6 @@ body {
   outline-offset: 8px;
 }
 
-.navbar-brand a img {
-  height: 2rem;
-}
-
 .navbar-brand a span {
   font-size: 1.25rem;
   font-weight: 700;

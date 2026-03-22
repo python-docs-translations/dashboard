@@ -11,7 +11,7 @@
     "core_change": 0.0,
     "change": 0.0,
     "built": false,
-    "translated_name": "",
+    "translated_name": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
     "contribution_link": "https://github.com/Abdur-rahmaanJ/python-docs-ar"
   },
   {
@@ -71,7 +71,7 @@
     "core_change": 0.0,
     "change": 0.0,
     "built": false,
-    "translated_name": "",
+    "translated_name": "\u0939\u093f\u0928\u094d\u0926\u0940 (\u092d\u093e\u0930\u0924)",
     "contribution_link": "https://github.com/CuriousLearner/python-docs-hi-in"
   },
   {
@@ -86,7 +86,7 @@
     "core_change": 0.0,
     "change": 0.0,
     "built": false,
-    "translated_name": "",
+    "translated_name": "magyar",
     "contribution_link": "https://github.com/python/python-docs-hu"
   },
   {
@@ -161,7 +161,7 @@
     "core_change": 0.0,
     "change": 0.0,
     "built": false,
-    "translated_name": "",
+    "translated_name": "\u092e\u0930\u093e\u0920\u0940",
     "contribution_link": "https://github.com/sanketgarade/python-doc-mr"
   },
   {
@@ -176,7 +176,7 @@
     "core_change": 0.0,
     "change": 0.0,
     "built": false,
-    "translated_name": "",
+    "translated_name": "lietuvi\u0173",
     "contribution_link": "https://devguide.python.org/documentation/translations/translating/"
   },
   {
@@ -191,7 +191,7 @@
     "core_change": 0.0,
     "change": 0.0,
     "built": false,
-    "translated_name": "",
+    "translated_name": "\u0641\u0627\u0631\u0633\u06cc",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   },
   {
@@ -217,9 +217,9 @@
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
     "core_completion": 99.19222231357395,
-    "completion": 60.19574727870866,
+    "completion": 60.208491242166254,
     "core_change": 0.5138534900928988,
-    "change": 0.4312314491889069,
+    "change": 0.44397541264650187,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
@@ -251,7 +251,7 @@
     "core_change": 0.057551590890398074,
     "change": 0.0016991951276792427,
     "built": false,
-    "translated_name": "",
+    "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   },
   {
