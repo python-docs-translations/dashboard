@@ -14,25 +14,23 @@
                                 {% if project.built %}
                                     <li>
                                         <a href="https://docs.python.org/{{ project.language.code }}/3/"
-                                           aria-label="View {{ project.language.name }} documentation"
-                                           style="color: #1178cc">View</a>
+                                           aria-label="View {{ project.language.name }} documentation">View</a>
                                     </li>
                                 {% endif %}
                                 <li>
                                     <a href="{{ project.contribution_link }}"
-                                       style="color: #1178cc"
                                        aria-label="Contribute to {{ project.language.name }} translation">
                                         Contribute
                                     </a>
                                 </li>
                             </ul>
                             {# core progress bar #}
-                            {% with width=project.core_completion, change=project.core_change, kind='core' %}
-                                {% include 'progress_bar.html.jinja' %}
+                            {% with width=project.core_completion, change=project.core_change, kind="core" %}
+                                {% include "progress_bar.html.jinja" %}
                             {% endwith %}
                             {# overall progress bar #}
-                            {% with width=project.completion, change=project.change, kind='overall', extra_container_class='mt-1' %}
-                                {% include 'progress_bar.html.jinja' %}
+                            {% with width=project.completion, change=project.change, kind="overall", extra_container_class="mt-1" %}
+                                {% include "progress_bar.html.jinja" %}
                             {% endwith %}
                         </div>
                     </div>
@@ -40,14 +38,14 @@
             {% endfor %}
         </div>
     </div>
-    <p style="text-align: center;">
+    <p class="text-center">
         Last updated {{ generation_time.strftime("on %A %-d %B %Y at %-H:%M:%S %Z") }} (in {{ duration // 60 }} minutes and {{ duration % 60 }} seconds).
         <br />
         You can find the scripts used to generate this website <a href="https://github.com/python-docs-translations/dashboard/">on GitHub</a>.
         <br />
         You can download the data on this page in <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
     </p>
-{% endblock %}
+{% endblock main %}
 {% block extrascript %}
     <script>
   function updateProgressBarVisibility() {
@@ -67,4 +65,4 @@
 
   window.addEventListener('resize', updateProgressBarVisibility);
     </script>
-{% endblock %}
+{% endblock extrascript %}
