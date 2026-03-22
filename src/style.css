@@ -42,6 +42,16 @@ body {
   outline-offset: 8px;
 }
 
+.navbar-brand a img {
+  height: 2rem;
+}
+
+.navbar-brand a span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
 .nav-link svg {
   vertical-align: middle;
   margin-top: -4.5px;

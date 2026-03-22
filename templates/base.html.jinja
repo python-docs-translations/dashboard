@@ -6,6 +6,7 @@
               content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description"
               content="Python Documentation Translation Dashboard">
+        <meta name="keywords" content="python,docs,translations,progress,status">
         <title>Python Docs Translation Dashboard</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
               rel="stylesheet"
@@ -19,8 +20,8 @@
                 <div class="container-fluid">
                     <div class="navbar-brand">
                         <a href="./">
-                            <img src="logo.png" style="height: 2rem;" alt="Python logo">
-                            <span style="font-size: 1.25rem; font-weight: 700; color: #4a4a4a">Translation Dashboard</span>
+                            <img src="logo.png" alt="Python logo" height="269" width="277">
+                            <span>Translation Dashboard</span>
                         </a>
                     </div>
                     <div class="navbar-light bg-light">
@@ -76,7 +77,8 @@
             </nav>
         </header>
         <main role="main">
-            {% block main %}{% endblock %}
+            {% block main %}
+            {% endblock main %}
         </main>
     </body>
     <script>
@@ -98,5 +100,6 @@
             data-domain="translations.python.org"
             src="https://analytics.python.org/js/script.outbound-links.js"></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
-    {% block extrascript %}{% endblock %}
+    {% block extrascript %}
+    {% endblock extrascript %}
 </html>
