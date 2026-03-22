@@ -7,7 +7,18 @@ Yield a tuple of language code and a string with the translated name.
 import tomllib
 from collections.abc import Iterator
 
+from babel import Locale
+from babel.core import UnknownLocaleError
 from urllib3 import PoolManager
+
+
+def _babel_autonym(code: str) -> str | None:
+    """Get the translated name for a language code with Babel"""
+    try:
+        locale = Locale.parse(code.replace('-', '_'))
+        return locale.get_display_name(locale)
+    except (UnknownLocaleError, ValueError):
+        return None
 
 
 def get_languages(http: PoolManager) -> Iterator[tuple[str, str]]:
