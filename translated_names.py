@@ -1,9 +1,3 @@
-"""
-Fetch translated names of languages.
-
-Yield a tuple of language code and a string with the translated name.
-"""
-
 import tomllib
 from collections.abc import Iterator
 
@@ -12,7 +6,7 @@ from babel.core import UnknownLocaleError
 from urllib3 import PoolManager
 
 
-def _babel_autonym(code: str) -> str | None:
+def babel_autonym(code: str) -> str | None:
     """Get the translated name for a language code with Babel"""
     try:
         locale = Locale.parse(code.replace('-', '_'))
@@ -22,6 +16,10 @@ def _babel_autonym(code: str) -> str | None:
 
 
 def get_languages(http: PoolManager) -> Iterator[tuple[str, str]]:
+    """
+    Fetch languages built through docsbuild-scripts.
+    Yields language codes and translated language names.
+    """
     data = http.request(
         'GET',
         'https://raw.githubusercontent.com/python/docsbuild-scripts/refs/heads/main/config.toml',

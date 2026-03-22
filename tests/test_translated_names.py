@@ -23,7 +23,7 @@ class testBuildStatus(unittest.TestCase):
         self.assertEqual(result.get('pl'), 'polski')
         self.assertEqual(result.get('zh-cn'), '简体中文')
 
-    def test__babel_autonym(self):
+    def test_babel_autonym(self):
         self.assertEqual(translated_names._babel_autonym('en'), 'English')
         self.assertEqual(translated_names._babel_autonym('ga'), 'Gaeilge')
 

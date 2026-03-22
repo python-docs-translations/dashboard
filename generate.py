@@ -85,7 +85,7 @@ def get_project_data(
         change,
         built,
         translated_name=languages_built.get(language.code)
-        or translated_names._babel_autonym(language.code)
+        or translated_names.babel_autonym(language.code)
         or '',
         contribution_link=contribute.get_contrib_link(language.code, repo),
     )
