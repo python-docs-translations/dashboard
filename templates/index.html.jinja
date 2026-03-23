@@ -13,12 +13,11 @@
             <ul class="links-row">
               {% if project.built %}
               <li>
-                <a href="https://docs.python.org/{{ project.language.code }}/3/" aria-label="View {{ project.language.name }} documentation"
-                   style="color: #1178cc;">View</a>
+                <a href="https://docs.python.org/{{ project.language.code }}/3/" aria-label="View {{ project.language.name }} documentation">View</a>
               </li>
               {% endif %}
               <li>
-                <a href="{{ project.contribution_link }}" style="color: #1178cc;" aria-label="Contribute to {{ project.language.name }} translation">
+                <a href="{{ project.contribution_link }}" aria-label="Contribute to {{ project.language.name }} translation">
                   Contribute
                 </a>
               </li>
