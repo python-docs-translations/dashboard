@@ -38,6 +38,10 @@ class testContributeLink(unittest.TestCase):
                     self.assertTrue(
                         200 <= r.status < 400, f'{link} returned {r.status}'
                     )
+                except urllib3.exceptions.MaxRetryError as e:
+                    if isinstance(e.reason, urllib3.exceptions.ReadTimeoutError):
+                        self.skipTest(f'{link}: read timeout, skipping slow server')
+                    self.fail(f'{link}: {e}')
                 except Exception as e:
                     self.fail(f'{link}: {e}')
 
