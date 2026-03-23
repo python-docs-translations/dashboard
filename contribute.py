@@ -5,8 +5,8 @@ pulling_from_transifex: frozenset[str] = frozenset(
 custom_contributing_links: dict[str, str] = {
     'es': 'https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html',
     'ko': 'https://www.flowdas.com/pages/python-docs-ko.html',
-    'zh-tw': 'https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF',
-    'fr': 'https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.13/CONTRIBUTING.rst',
+    'zh-tw': 'https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2',
+    'fr': 'https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst',
     'id': 'https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan',
     'tr': 'https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak',
     'el': 'https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md',

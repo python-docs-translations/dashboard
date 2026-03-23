@@ -18,7 +18,7 @@ class testContributeLink(unittest.TestCase):
             (
                 'zh-tw',
                 None,
-                'https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF',
+                'https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2',
             ),
             (
                 'id',
