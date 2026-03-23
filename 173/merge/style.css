@@ -108,6 +108,9 @@ ul.links-row li:not(:first-child)::before {
   content: '•';
   margin-right: 0.5ch;
 }
+ul.links-row a {
+  color: #1178cc;
+}
 
 /* ------------------------------ Index ------------------------------------- */
 
