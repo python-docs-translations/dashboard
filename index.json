@@ -65,11 +65,11 @@
       "name": "Hindi"
     },
     "repository": "CuriousLearner/python-docs-hi-in",
-    "branch": "3.13",
+    "branch": "3.14",
     "core_completion": 0.0,
-    "completion": 0.005764178361881185,
+    "completion": 0.016503752783491393,
     "core_change": 0.0,
-    "change": 0.0,
+    "change": 0.010739574421610209,
     "built": false,
     "translated_name": "\u0939\u093f\u0928\u094d\u0926\u0940 (\u092d\u093e\u0930\u0924)",
     "contribution_link": "https://github.com/CuriousLearner/python-docs-hi-in"
