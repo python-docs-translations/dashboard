@@ -42,6 +42,12 @@ body {
   outline-offset: 8px;
 }
 
+.navbar-brand a span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
 .nav-link svg {
   vertical-align: middle;
   margin-top: -4.5px;
@@ -101,6 +107,9 @@ ul.links-row li:not(:first-child) {
 ul.links-row li:not(:first-child)::before {
   content: '•';
   margin-right: 0.5ch;
+}
+ul.links-row a {
+  color: #1178cc;
 }
 
 /* ------------------------------ Index ------------------------------------- */
