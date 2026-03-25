@@ -15,24 +15,17 @@
 </head>
 
 <body>
-  <script>
-    function applyTheme(t) {
-      document.documentElement.setAttribute('data-bs-theme', t);
-      document.documentElement.classList.toggle('dark', t === 'dark');
-    }
-    applyTheme(localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-  </script>
   <header>
     <nav class="navbar navbar-expand-md fixed-top">
       <div class="container-fluid">
       <div class="navbar-brand">
         <a href="./">
           <img src="logo.png" style="height: 2rem;" alt="Python logo">
-          <span class="navbar-title-text">Translation Dashboard</span>
+          <span style="font-size: 1.25rem; font-weight: 700; color: #4a4a4a">Translation Dashboard</span>
         </a>
       </div>
 
-      <div>
+      <div class="navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,14 +52,6 @@
             </a>
           </li>
         </ul>
-        <button id="theme-toggle" class="btn btn-sm theme-toggle-btn ms-auto" type="button" aria-label="Toggle dark mode">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high theme-icon-light" viewBox="0 0 16 16">
-            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill theme-icon-dark" viewBox="0 0 16 16">
-            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
-          </svg>
-        </button>
       </div>
       </div>
     </nav>
@@ -86,11 +71,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/zh-cn/3/" aria-label="View Simplified Chinese documentation">View</a>
+                <a href="https://docs.python.org/zh-cn/3/" aria-label="View Simplified Chinese documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://explore.transifex.com/python-doc/python-newest/" aria-label="Contribute to Simplified Chinese translation">
+                <a href="https://explore.transifex.com/python-doc/python-newest/" style="color: #1178cc;" aria-label="Contribute to Simplified Chinese translation">
                   Contribute
                 </a>
               </li>
@@ -142,11 +128,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/pt-br/3/" aria-label="View Brazilian Portuguese documentation">View</a>
+                <a href="https://docs.python.org/pt-br/3/" aria-label="View Brazilian Portuguese documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://python.org.br/traducao/" aria-label="Contribute to Brazilian Portuguese translation">
+                <a href="https://python.org.br/traducao/" style="color: #1178cc;" aria-label="Contribute to Brazilian Portuguese translation">
                   Contribute
                 </a>
               </li>
@@ -198,11 +185,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/pl/3/" aria-label="View Polish documentation">View</a>
+                <a href="https://docs.python.org/pl/3/" aria-label="View Polish documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://explore.transifex.com/python-doc/python-newest/" aria-label="Contribute to Polish translation">
+                <a href="https://explore.transifex.com/python-doc/python-newest/" style="color: #1178cc;" aria-label="Contribute to Polish translation">
                   Contribute
                 </a>
               </li>
@@ -254,7 +242,7 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://explore.transifex.com/python-doc/python-newest/" aria-label="Contribute to Russian translation">
+                <a href="https://explore.transifex.com/python-doc/python-newest/" style="color: #1178cc;" aria-label="Contribute to Russian translation">
                   Contribute
                 </a>
               </li>
@@ -306,11 +294,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/el/3/" aria-label="View Greek documentation">View</a>
+                <a href="https://docs.python.org/el/3/" aria-label="View Greek documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md" aria-label="Contribute to Greek translation">
+                <a href="https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md" style="color: #1178cc;" aria-label="Contribute to Greek translation">
                   Contribute
                 </a>
               </li>
@@ -360,11 +349,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/ko/3/" aria-label="View Korean documentation">View</a>
+                <a href="https://docs.python.org/ko/3/" aria-label="View Korean documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://www.flowdas.com/pages/python-docs-ko.html" aria-label="Contribute to Korean translation">
+                <a href="https://www.flowdas.com/pages/python-docs-ko.html" style="color: #1178cc;" aria-label="Contribute to Korean translation">
                   Contribute
                 </a>
               </li>
@@ -414,11 +404,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/ro/3/" aria-label="View Romanian documentation">View</a>
+                <a href="https://docs.python.org/ro/3/" aria-label="View Romanian documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://github.com/python/python-docs-ro" aria-label="Contribute to Romanian translation">
+                <a href="https://github.com/python/python-docs-ro" style="color: #1178cc;" aria-label="Contribute to Romanian translation">
                   Contribute
                 </a>
               </li>
@@ -466,11 +457,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/ja/3/" aria-label="View Japanese documentation">View</a>
+                <a href="https://docs.python.org/ja/3/" aria-label="View Japanese documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://explore.transifex.com/python-doc/python-newest/" aria-label="Contribute to Japanese translation">
+                <a href="https://explore.transifex.com/python-doc/python-newest/" style="color: #1178cc;" aria-label="Contribute to Japanese translation">
                   Contribute
                 </a>
               </li>
@@ -522,11 +514,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/zh-tw/3/" aria-label="View Traditional Chinese documentation">View</a>
+                <a href="https://docs.python.org/zh-tw/3/" aria-label="View Traditional Chinese documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2" aria-label="Contribute to Traditional Chinese translation">
+                <a href="https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2" style="color: #1178cc;" aria-label="Contribute to Traditional Chinese translation">
                   Contribute
                 </a>
               </li>
@@ -578,11 +571,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/fr/3/" aria-label="View French documentation">View</a>
+                <a href="https://docs.python.org/fr/3/" aria-label="View French documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst" aria-label="Contribute to French translation">
+                <a href="https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst" style="color: #1178cc;" aria-label="Contribute to French translation">
                   Contribute
                 </a>
               </li>
@@ -630,11 +624,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/es/3/" aria-label="View Spanish documentation">View</a>
+                <a href="https://docs.python.org/es/3/" aria-label="View Spanish documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html" aria-label="Contribute to Spanish translation">
+                <a href="https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html" style="color: #1178cc;" aria-label="Contribute to Spanish translation">
                   Contribute
                 </a>
               </li>
@@ -686,11 +681,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/tr/3/" aria-label="View Turkish documentation">View</a>
+                <a href="https://docs.python.org/tr/3/" aria-label="View Turkish documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak" aria-label="Contribute to Turkish translation">
+                <a href="https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak" style="color: #1178cc;" aria-label="Contribute to Turkish translation">
                   Contribute
                 </a>
               </li>
@@ -738,11 +734,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/it/3/" aria-label="View Italian documentation">View</a>
+                <a href="https://docs.python.org/it/3/" aria-label="View Italian documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://github.com/python/python-docs-it" aria-label="Contribute to Italian translation">
+                <a href="https://github.com/python/python-docs-it" style="color: #1178cc;" aria-label="Contribute to Italian translation">
                   Contribute
                 </a>
               </li>
@@ -790,11 +787,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/uk/3/" aria-label="View Ukrainian documentation">View</a>
+                <a href="https://docs.python.org/uk/3/" aria-label="View Ukrainian documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://explore.transifex.com/python-doc/python-newest/" aria-label="Contribute to Ukrainian translation">
+                <a href="https://explore.transifex.com/python-doc/python-newest/" style="color: #1178cc;" aria-label="Contribute to Ukrainian translation">
                   Contribute
                 </a>
               </li>
@@ -842,11 +840,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/id/3/" aria-label="View Indonesian documentation">View</a>
+                <a href="https://docs.python.org/id/3/" aria-label="View Indonesian documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan" aria-label="Contribute to Indonesian translation">
+                <a href="https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan" style="color: #1178cc;" aria-label="Contribute to Indonesian translation">
                   Contribute
                 </a>
               </li>
@@ -896,11 +895,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/sv/3/" aria-label="View Swedish documentation">View</a>
+                <a href="https://docs.python.org/sv/3/" aria-label="View Swedish documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://github.com/python/python-docs-sv" aria-label="Contribute to Swedish translation">
+                <a href="https://github.com/python/python-docs-sv" style="color: #1178cc;" aria-label="Contribute to Swedish translation">
                   Contribute
                 </a>
               </li>
@@ -952,7 +952,7 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://github.com/python/python-docs-hu" aria-label="Contribute to Hungarian translation">
+                <a href="https://github.com/python/python-docs-hu" style="color: #1178cc;" aria-label="Contribute to Hungarian translation">
                   Contribute
                 </a>
               </li>
@@ -1000,7 +1000,7 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://explore.transifex.com/python-doc/python-newest/" aria-label="Contribute to Persian translation">
+                <a href="https://explore.transifex.com/python-doc/python-newest/" style="color: #1178cc;" aria-label="Contribute to Persian translation">
                   Contribute
                 </a>
               </li>
@@ -1048,7 +1048,7 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://github.com/Abdur-rahmaanJ/python-docs-ar" aria-label="Contribute to Arabic translation">
+                <a href="https://github.com/Abdur-rahmaanJ/python-docs-ar" style="color: #1178cc;" aria-label="Contribute to Arabic translation">
                   Contribute
                 </a>
               </li>
@@ -1096,7 +1096,7 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://github.com/sanketgarade/python-doc-mr" aria-label="Contribute to Marathi translation">
+                <a href="https://github.com/sanketgarade/python-doc-mr" style="color: #1178cc;" aria-label="Contribute to Marathi translation">
                   Contribute
                 </a>
               </li>
@@ -1144,7 +1144,7 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://github.com/CuriousLearner/python-docs-hi-in" aria-label="Contribute to Hindi translation">
+                <a href="https://github.com/CuriousLearner/python-docs-hi-in" style="color: #1178cc;" aria-label="Contribute to Hindi translation">
                   Contribute
                 </a>
               </li>
@@ -1194,11 +1194,12 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://docs.python.org/bn-in/3/" aria-label="View Bengali documentation">View</a>
+                <a href="https://docs.python.org/bn-in/3/" aria-label="View Bengali documentation"
+                   style="color: #1178cc;">View</a>
               </li>
               
               <li>
-                <a href="https://github.com/python/python-docs-bn-in" aria-label="Contribute to Bengali translation">
+                <a href="https://github.com/python/python-docs-bn-in" style="color: #1178cc;" aria-label="Contribute to Bengali translation">
                   Contribute
                 </a>
               </li>
@@ -1246,7 +1247,7 @@
             <ul class="links-row">
               
               <li>
-                <a href="https://devguide.python.org/documentation/translations/translating/" aria-label="Contribute to Lithuanian translation">
+                <a href="https://devguide.python.org/documentation/translations/translating/" style="color: #1178cc;" aria-label="Contribute to Lithuanian translation">
                   Contribute
                 </a>
               </li>
@@ -1289,7 +1290,7 @@
 </div>
 
 <p style="text-align: center;">
-  Last updated on Wednesday 25 March 2026 at 7:28:36 UTC (in 9 minutes and 0 seconds).<br/>
+  Last updated on Wednesday 25 March 2026 at 7:17:44 UTC (in 9 minutes and 10 seconds).<br/>
   You can find the scripts used to generate this website <a href="https://github.com/python-docs-translations/dashboard/">on GitHub</a>.<br/>
   You can download the data on this page in <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
 </p>
@@ -1307,12 +1308,6 @@
   }
   window.addEventListener('load', padnavbar);
   window.addEventListener('resize', padnavbar);
-
-  document.getElementById('theme-toggle').addEventListener('click', function() {
-    var next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', next);
-    applyTheme(next);
-  });
 </script>
 
 <script src="https://code.jquery.com/jquery-4.0.0.slim.min.js"

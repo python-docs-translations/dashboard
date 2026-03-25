@@ -1,65 +1,22 @@
 /* ---------------------------- Global Styles ------------------------------- */
 
 :root {
-  /* general */
-  --bg-color: 245, 245, 245;
+  --bg-color: rgb(245, 245, 245);
   --text-color: #15141A;
-
-  /* navbar */
-  --navbar-hover-bg: #eacb4d;
-  --navbar-link-color: #0d0d0d;
-  --navbar-border: #999;
-  --navbar-title-color: #4a4a4a;
-
-  /* cards */
-  --card-link-color: #1178cc;
-  --card-title-hover-bg: #f5e9a8;
-  --card-hash-color: #7ec3ff;
-
-  /* build details table */
-  --table-border: #ddd;
-  --table-header-bg: #d6d6d6;
-  --table-mobile-row-border: #ccc;
-  --table-mobile-cell-border: #eee;
 }
-
-html.dark {
-  /* general */
-  --bg-color: 26, 26, 26;
-  --text-color: #e0e0e0;
-
-  /* navbar */
-  --navbar-hover-bg: #5c4d0a;
-  --navbar-link-color: #e0e0e0;
-  --navbar-border: #444;
-  --navbar-title-color: #d0d0d0;
-
-  /* cards */
-  --card-link-color: #6cb4ee;
-  --card-title-hover-bg: #3a3520;
-  --card-hash-color: #6cb4ee;
-
-  /* build details table */
-  --table-border: #444;
-  --table-header-bg: #2a2a2a;
-  --table-mobile-row-border: #444;
-  --table-mobile-cell-border: #333;
-}
-
-/* --------------------------------- body ----------------------------------- */
 
 body {
   padding: 4.5rem 1rem 3rem;
   color: var(--text-color);
-  background-color: rgb(var(--bg-color));
+  background-color: var(--bg-color);
 }
 
 /* -------------------------------- navbar ---------------------------------- */
 
 .navbar {
-  background-color: rgba(var(--bg-color), 0.6);
+  background-color: rgb(var(--bg-color), 0.6);
   backdrop-filter: blur(10px);
-  border-bottom: 0.25px solid var(--navbar-border);
+  border-bottom: 0.25px solid #999;
   -webkit-backdrop-filter: blur(10px);
 }
 
@@ -73,11 +30,11 @@ body {
 }
 
 .navbar li:hover {
-  background-color: var(--navbar-hover-bg);
+  background-color: #eacb4d;
 }
 
 .navbar li .nav-link {
-  color: var(--navbar-link-color);
+  color: #0d0d0d;
 }
 
 .navbar-brand a {
@@ -85,38 +42,9 @@ body {
   outline-offset: 8px;
 }
 
-.navbar-title-text {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--navbar-title-color);
-}
-
 .nav-link svg {
   vertical-align: middle;
   margin-top: -4.5px;
-}
-
-.theme-toggle-btn {
-  border: none;
-  color: var(--navbar-link-color);
-  padding: 0.25rem 0.5rem;
-  line-height: 1;
-}
-
-.theme-toggle-btn:hover {
-  background-color: var(--navbar-hover-bg);
-}
-
-.theme-icon-dark {
-  display: none;
-}
-
-html.dark .theme-icon-light {
-  display: none;
-}
-
-html.dark .theme-icon-dark {
-  display: inline-block;
 }
 
 
@@ -155,21 +83,17 @@ html.dark .theme-icon-dark {
 .card-title a::after {
   content: " #";
   font-size: 0.8em;
-  color: var(--card-hash-color);
+  color: #7ec3ff;
 }
 
 .card-title a:focus, .card-title a:hover {
-  background-color: var(--card-title-hover-bg);
+  background-color: #f5e9a8;
 }
 
 ul.links-row {
   display: flex;
   padding-left: 0;
   list-style: none;
-}
-
-ul.links-row a {
-  color: var(--card-link-color);
 }
 ul.links-row li:not(:first-child) {
   padding-left: 1ch;
@@ -202,19 +126,22 @@ ul.links-row li:not(:first-child)::before {
   display: flex;
 }
 
-/* ----------------------------- Build Details ------------------------------ */
+/* ------------------------------ Metadata ---------------------------------- */
 
 table {
   border-collapse: collapse;
 }
 th, td {
-  border: 1px solid var(--table-border);
+  border: 1px solid #ddd;
   padding: 8px 12px;
   text-align: left;
   white-space: nowrap;
 }
 th {
-  background-color: var(--table-header-bg);
+  background-color: #d6d6d6;
+}
+hr {
+  color: #f4f4f4;
 }
 td[data-label="warnings"], td[data-label="lint"] {
   text-align: right;
@@ -230,13 +157,13 @@ td[data-label="warnings"], td[data-label="lint"] {
     left: -9999px;
   }
   tr {
-    border: 1px solid var(--table-mobile-row-border);
+    border: 1px solid #ccc;
     margin-bottom: 5px;
     overflow-x: auto;
   }
   td {
     border: none;
-    border-bottom: 1px solid var(--table-mobile-cell-border);
+    border-bottom: 1px solid #eee;
     padding-left: 50%;
     position: relative;
   }
