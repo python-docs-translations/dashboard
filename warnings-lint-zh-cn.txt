@@ -1151,7 +1151,7 @@ reference/datamodel.po:4739: found an unbalanced inline literal markup. (unbalan
 reference/lexical_analysis.po:495: trailing whitespace (trailing-whitespace)
 reference/lexical_analysis.po:496: trailing whitespace (trailing-whitespace)
 reference/introduction.po:299: trailing whitespace (trailing-whitespace)
-library/collections.po:1457: trailing whitespace (trailing-whitespace)
+library/collections.po:1480: trailing whitespace (trailing-whitespace)
 library/email.message.po:576: inline literal missing (escaped) space after literal: '``False``（' (missing-space-after-literal)
 library/email.message.po:576: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/email.message.po:576: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
