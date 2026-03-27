@@ -2,7 +2,6 @@ c-api/allocation.rst:17: WARNING: inconsistent term references in translated mes
 c-api/arg.rst:126: WARNING: inconsistent term references in translated message. original: [':ref:`borrowed <c-arg-borrowed-buffer>`', ':exc:`ValueError`'], translated: [':exc:`ValueError`'] [i18n.inconsistent_references]
 c-api/arg.rst:451: WARNING: inconsistent term references in translated message. original: [':ref:`positional-only parameters <positional-only_parameter>`'], translated: [] [i18n.inconsistent_references]
 c-api/arg.rst:514: WARNING: inconsistent term references in translated message. original: [':c:macro:`METH_VARARGS`', '', ':term:`borrowed references <borrowed reference>`'], translated: [':c:macro:`METH_VARARGS`', ''] [i18n.inconsistent_references]
-c-api/arg.rst:700: WARNING: inconsistent term references in translated message. original: [':term:`strong reference`', ':c:func:`Py_BuildValue`', ':exc:`SystemError`'], translated: [':term:`referensi kuat`', ':c:func:`Py_BuildValue`', ':exc:`SystemError`'] [i18n.inconsistent_references]
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
