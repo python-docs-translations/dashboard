@@ -1,5 +1,5 @@
-tutorial/errors.po:166: trailing whitespace (trailing-whitespace)
 tutorial/errors.po:291: missing space before role ( ветке:keyword:`). (missing-space-before-role)
+tutorial/errors.po:166: trailing whitespace (trailing-whitespace)
 tutorial/stdlib.po:67: missing space before role ( вроде:mod:`). (missing-space-before-role)
 tutorial/floatingpoint.po:747: missing space before role ( и:mod:`). (missing-space-before-role)
 tutorial/appendix.po:286: missing space before role ( и:index:`). (missing-space-before-role)
