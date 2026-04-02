@@ -113,7 +113,7 @@ library/threading.po:773: found an unbalanced inline literal markup. (unbalanced
 library/threading.po:1662: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/threading.po:1662: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/threading.po:773: missing space before default role: 't"は``target.__name__``'. (missing-space-before-default-role)
-library/enum.po:497: Bad dedent in block (bad-dedent)
+library/enum.po:498: Bad dedent in block (bad-dedent)
 library/shutil.po:177: missing space before default role: 'erm`path-like object <path-like object>`'. (missing-space-before-default-role)
 library/shutil.po:177: role missing colon before first backtick ( :term`). (missing-colon-in-role)
 library/shutil.po:130: trailing whitespace (trailing-whitespace)
