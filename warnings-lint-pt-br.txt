@@ -1,0 +1,1 @@
+library/string.po:1276: trailing whitespace (trailing-whitespace)
