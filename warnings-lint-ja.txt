@@ -60,7 +60,7 @@ howto/enum.po:941: found an unbalanced inline literal markup. (unbalanced-inline
 howto/enum.po:387: missing space before default role: '  と``B``'. (missing-space-before-default-role)
 howto/enum.po:516: missing space before default role: '  と``Weekday.WEEKEND``'. (missing-space-before-default-role)
 howto/enum.po:941: missing space before default role: 'はなく``1``'. (missing-space-before-default-role)
-howto/regex.po:1117: trailing whitespace (trailing-whitespace)
+howto/regex.po:1189: trailing whitespace (trailing-whitespace)
 howto/descriptor.po:922: missing space before role ( の中の:c:func:`). (missing-space-before-role)
 faq/programming.po:3077: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 faq/programming.po:3077: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
