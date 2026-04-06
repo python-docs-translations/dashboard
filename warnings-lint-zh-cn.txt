@@ -1223,7 +1223,7 @@ library/email.compat32-message.po:885: found an unbalanced inline literal markup
 library/time.po:1251: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/time.po:1251: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/time.po:1251: missing space before default role: '而不是``GetSystemTimeAsFileTime()``'. (missing-space-before-default-role)
-library/ast.po:1832: trailing whitespace (trailing-whitespace)
+library/ast.po:1841: trailing whitespace (trailing-whitespace)
 library/os.po:2930: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/os.po:2930: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/os.po:2930: missing space before default role: '认值为``False``'. (missing-space-before-default-role)
