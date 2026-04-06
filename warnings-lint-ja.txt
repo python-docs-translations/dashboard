@@ -72,7 +72,7 @@ faq/library.po:1318: found an unbalanced inline literal markup. (unbalanced-inli
 reference/datamodel.po:994: trailing whitespace (trailing-whitespace)
 reference/lexical_analysis.po:757: trailing whitespace (trailing-whitespace)
 reference/expressions.po:769: trailing whitespace (trailing-whitespace)
-installing/index.po:233: trailing whitespace (trailing-whitespace)
+installing/index.po:139: trailing whitespace (trailing-whitespace)
 library/syslog.po:125: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/syslog.po:77: trailing whitespace (trailing-whitespace)
 library/syslog.po:125: trailing whitespace (trailing-whitespace)
