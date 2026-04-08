@@ -12,6 +12,7 @@ whatsnew/3.13.rst:2467: WARNING: inconsistent references in translated message. 
 whatsnew/3.13.rst:2538: WARNING: inconsistent references in translated message. original: ['`pythoncapi-compat project`_'], translated: ['`pythoncapi-compat 專案`_'] [i18n.inconsistent_references]
 whatsnew/3.13.rst:2810: WARNING: inconsistent references in translated message. original: ['`pythoncapi-compat project`_'], translated: ['`pythoncapi-compat 專案`_'] [i18n.inconsistent_references]
 library/re.rst:290: WARNING: inconsistent references in translated message. original: ['`Unicode Technical\nStandard #18`_'], translated: ['`Unicode Technical Standard #18`_'] [i18n.inconsistent_references]
+library/struct.rst:327: WARNING: inconsistent references in translated message. original: ['`IEEE 754 standard <ieee 754 standard_>`_', '`half-precision floating-point\nformat <half precision format_>`_'], translated: ['`IEEE 754 標準 <ieee 754 standard_>`_', '`半精度浮點數格式 <half precision format_>`_'] [i18n.inconsistent_references]
 library/enum.rst:77: WARNING: inconsistent references in translated message. original: ['`Notes`_'], translated: ['`備註 <Notes_>`_'] [i18n.inconsistent_references]
 library/enum.rst:82: WARNING: inconsistent references in translated message. original: ['`Notes`_'], translated: ['`備註 <Notes_>`_'] [i18n.inconsistent_references]
 library/enum.rst:92: WARNING: inconsistent references in translated message. original: ['`Notes`_'], translated: ['`備註 <Notes_>`_'] [i18n.inconsistent_references]
