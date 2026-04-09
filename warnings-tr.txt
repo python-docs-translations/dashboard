@@ -15,4 +15,4 @@ whatsnew/3.9.rst:545: WARNING: inconsistent term references in translated messag
 library/exceptions.rst:367: WARNING: inconsistent references in translated message. original: ['`OS exceptions`_'], translated: ['`OS istisnaları`_'] [i18n.inconsistent_references]
 library/functions.rst:1418: WARNING: inconsistent term references in translated message. original: [':func:`locale.getencoding`', ':term:`text encoding`', ':mod:`codecs`'], translated: [':func:`locale.getpreferredencoding`', ':term:`text encoding`', ':mod:`codecs`'] [i18n.inconsistent_references]
 library/functions.rst:2048: WARNING: inconsistent term references in translated message. original: [':func:`super`'], translated: [':func:`süper`'] [i18n.inconsistent_references]
-library/glob.rst:99: WARNING: inconsistent term references in translated message. original: [':term:`iterator`', ':func:`glob`'], translated: [':func:`glob`', ':term:`yineleyici`'] [i18n.inconsistent_references]
+library/glob.rst:104: WARNING: inconsistent term references in translated message. original: [':term:`iterator`', ':func:`glob`'], translated: [':func:`glob`', ':term:`yineleyici`'] [i18n.inconsistent_references]
