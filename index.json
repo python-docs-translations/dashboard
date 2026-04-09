@@ -129,7 +129,7 @@
     "core_completion": 92.96695166063795,
     "completion": 43.453630781562545,
     "core_change": 0.0,
-    "change": 0.06129973630805807,
+    "change": 0.031043981196567927,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -217,9 +217,9 @@
     "repository": "python/python-docs-pt-br",
     "branch": "3.14",
     "core_completion": 99.06280828674778,
-    "completion": 60.08702015979162,
-    "core_change": 0.6926175600131614,
-    "change": 0.12848085186625013,
+    "completion": 60.08865724473753,
+    "core_change": 0.6453469253535076,
+    "change": 0.1287233829693477,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
