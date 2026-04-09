@@ -63,7 +63,7 @@ library/threading.po:1238: found an unbalanced inline literal markup. (unbalance
 library/threading.po:1238: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/stdtypes.po:947: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/stdtypes.po:947: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-library/stdtypes.po:10156: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/stdtypes.po:10148: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/functools.po:1471: trailing whitespace (trailing-whitespace)
 library/turtle.po:3158: inline literal missing (escaped) space after literal: '``no_animation``块' (missing-space-after-literal)
 library/turtle.po:3685: inline literal missing (escaped) space after literal: '``False``并' (missing-space-after-literal)
