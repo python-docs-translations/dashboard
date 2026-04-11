@@ -307,9 +307,9 @@
     "repository": "python/python-docs-zh-tw",
     "branch": "3.14",
     "core_completion": 100.0,
-    "completion": 32.6136419439852,
+    "completion": 32.81970975902979,
     "core_change": 8.586813548174945,
-    "change": 1.1889973488244898,
+    "change": 1.3950651638690807,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
