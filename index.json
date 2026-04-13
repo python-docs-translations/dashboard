@@ -264,7 +264,7 @@
     "core_completion": 99.67938178230845,
     "completion": 96.76253128161117,
     "core_change": 0.6802860901019443,
-    "change": 0.3745005094152418,
+    "change": 0.360621141126515,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -298,6 +298,21 @@
     "built": true,
     "translated_name": "Svenska",
     "contribution_link": "https://github.com/python/python-docs-sv"
+  },
+  {
+    "language": {
+      "code": "ta",
+      "name": "Tamil"
+    },
+    "repository": "Terminal-Joint/python-docs-ta",
+    "branch": "3.14",
+    "core_completion": 1.5126603091088457,
+    "completion": 0.055759907535527245,
+    "core_change": 1.5126603091088457,
+    "change": 0.055759907535527245,
+    "built": false,
+    "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
+    "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
   },
   {
     "language": {
