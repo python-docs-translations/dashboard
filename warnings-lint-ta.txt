@@ -1,0 +1,5 @@
+bugs.po:106: missing backtick before hyperlink reference: 'கண்காணிப்பு <https://devguide.python.org/tracker/>`_'. (hyperlink-reference-missing-backtick)
+bugs.po:116: missing backtick before hyperlink reference: 'உதவுதல் <https://devguide.python.org/docquality/#helping-with-documentation>`_'. (hyperlink-reference-missing-backtick)
+bugs.po:132: missing backtick before hyperlink reference: 'மொழிபெயர்ப்புகள் <https://devguide.python.org/documentation/translating/>`_'. (hyperlink-reference-missing-backtick)
+bugs.po:244: missing backtick before hyperlink reference: 'புகாரளிப்பது <https://www.chiark.greenend.org.uk/~sgtatham/bugs.html>`_'. (hyperlink-reference-missing-backtick)
+bugs.po:261: missing backtick before hyperlink reference: 'வழிகாட்டுதல்கள் <https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html>`_'. (hyperlink-reference-missing-backtick)
