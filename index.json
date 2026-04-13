@@ -263,8 +263,8 @@
     "branch": "3.14",
     "core_completion": 99.67938178230845,
     "completion": 96.76253128161117,
-    "core_change": 0.7131700098651805,
-    "change": 0.3754702469376099,
+    "core_change": 0.6802860901019443,
+    "change": 0.3745005094152418,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
