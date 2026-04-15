@@ -16,7 +16,7 @@ library/re.po:2697: found an unbalanced inline literal markup. (unbalanced-inlin
 library/re.po:2683: missing space before default role: ', o``None``'. (missing-space-before-default-role)
 library/re.po:2697: missing space before default role: ', o``None``'. (missing-space-before-default-role)
 library/sys_path_init.po:230: Extra backtick in role: ':data:`sys.path``' (role-with-extra-backtick)
-library/http.server.po:560: Extra backtick in role: ':func:`time.time``' (role-with-extra-backtick)
+library/http.server.po:531: Extra backtick in role: ':func:`time.time``' (role-with-extra-backtick)
 library/winsound.po:43: Extra backtick in role: ':exc:`RuntimeError``' (role-with-extra-backtick)
 library/zoneinfo.po:473: Extra backtick in role: ':func:`repr``' (role-with-extra-backtick)
 library/importlib.metadata.po:849: Extra backtick in role: ':py:class:`pathlib.Path``' (role-with-extra-backtick)

@@ -122,7 +122,6 @@ library/pdb.po:857: found an unbalanced inline literal markup. (unbalanced-inlin
 library/pdb.po:857: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/pdb.po:644: missing space before default role: '捷变量``$_asynctask``'. (missing-space-before-default-role)
 library/http.server.po:135: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-library/http.server.po:891: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/os.po:2930: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/os.po:2930: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/os.po:2930: missing space before default role: '认值为``False``'. (missing-space-before-default-role)
