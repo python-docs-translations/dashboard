@@ -6,4 +6,4 @@ reference/lexical_analysis.po:1008: found an unbalanced inline literal markup. (
 reference/lexical_analysis.po:1008: missing space before default role: 'ολο``xid_start``'. (missing-space-before-default-role)
 library/pyexpat.po:879: missing underscore after closing backtick in hyperlink (missing-underscore-after-hyperlink)
 library/unittest.mock-examples.po:626: trailing whitespace (trailing-whitespace)
-using/android.po:142: missing space before role ( αρχείο:source:`). (missing-space-before-role)
+using/android.po:137: missing space before role ( αρχείο:source:`). (missing-space-before-role)
