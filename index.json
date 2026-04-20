@@ -358,5 +358,20 @@
     "built": true,
     "translated_name": "\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+  },
+  {
+    "language": {
+      "code": "vi",
+      "name": "Vietnamese"
+    },
+    "repository": "tamnd/python-docs-vi",
+    "branch": "3.14",
+    "core_completion": 9.172935421548074,
+    "completion": 0.29272518545218834,
+    "core_change": 9.172935421548074,
+    "change": 0.29272518545218834,
+    "built": false,
+    "translated_name": "Ti\u1ebfng Vi\u1ec7t",
+    "contribution_link": "https://github.com/tamnd/python-docs-vi"
   }
 ]
