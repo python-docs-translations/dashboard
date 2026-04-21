@@ -1,3 +1,2 @@
-howto/urllib2.rst:531:<translated>:2: WARNING: Block quote ends without a blank line; unexpected unindent. [docutils]
 bugs.rst:24: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`repository của bản dịch <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 bugs.rst:37: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Lỗi tài liệu`_'] [i18n.inconsistent_references]
