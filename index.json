@@ -204,7 +204,7 @@
     "core_completion": 100.0,
     "completion": 5.524239349376789,
     "core_change": 1.1962017511407055,
-    "change": 0.04270850686819472,
+    "change": 0.04143633857850393,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -264,7 +264,7 @@
     "core_completion": 100.0,
     "completion": 96.98665737781884,
     "core_change": 0.8714596949891131,
-    "change": 0.5787759923669995,
+    "change": 0.5768980296536483,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -366,10 +366,10 @@
     },
     "repository": "tamnd/python-docs-vi",
     "branch": "3.14",
-    "core_completion": 18.608953015168332,
-    "completion": 0.5744142725166215,
-    "core_change": 18.608953015168332,
-    "change": 0.5744142725166215,
+    "core_completion": 21.59329140461216,
+    "completion": 0.6628602583713217,
+    "core_change": 21.59329140461216,
+    "change": 0.6628602583713217,
     "built": false,
     "translated_name": "Ti\u1ebfng Vi\u1ec7t",
     "contribution_link": "https://github.com/tamnd/python-docs-vi"
