@@ -60,5 +60,22 @@
   updateProgressBarVisibility();
 
   window.addEventListener('resize', updateProgressBarVisibility);
+
+  (function () {
+    const userLangs = Array.from(navigator.languages || []).map(l => l.toLowerCase());
+    const row = document.querySelector('.row');
+    if (!row || !userLangs.length) return;
+
+    for (const lang of [...userLangs].reverse()) {
+      const langBase = lang.split('-')[0];
+      const card = row.querySelector('[id="' + lang + '"]') || row.querySelector('[id="' + langBase + '"]');
+      if (card) {
+        const col = card.closest('.col-12');
+        if (col && col.parentElement === row) {
+          row.prepend(col);
+        }
+      }
+    }
+  })();
 </script>
 {% endblock %}
