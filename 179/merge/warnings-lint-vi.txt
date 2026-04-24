@@ -1,0 +1,7 @@
+bugs.po:245: missing space before < in hyperlink (missing-space-in-hyperlink)
+library/functions.po:1630: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/functions.po:1630: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/functions.po:2041: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/functions.po:2041: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/functions.po:2041: missing space before default role: 'dấu``+``'. (missing-space-before-default-role)
+library/functions.po:1630: inline literal missing (escaped) space after literal: "``'+'``k" (missing-space-after-literal)
