@@ -89,7 +89,9 @@
     for (const lang of userLangs) {
       const col = userLangToCol.get(lang);
       if (col && !seenCols.has(col)) {
-        uniqueUserCols.push({ cardId: col.querySelector('[id]').id, col });
+        const cardEl = col.querySelector('[id]');
+        if (!cardEl) continue;
+        uniqueUserCols.push({ cardId: cardEl.id, col });
         seenCols.add(col);
       }
     }
