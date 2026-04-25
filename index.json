@@ -129,7 +129,7 @@
     "core_completion": 92.93994327290665,
     "completion": 43.39284708396351,
     "core_change": 0.0,
-    "change": 0.02216850364417411,
+    "change": 0.019382298268126874,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -219,7 +219,7 @@
     "core_completion": 99.78419040572204,
     "completion": 60.00274986356679,
     "core_change": 0.805689151971066,
-    "change": 0.07322874564428616,
+    "change": 0.07177507327417487,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
