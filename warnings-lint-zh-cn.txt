@@ -219,7 +219,7 @@ library/dis.po:1877: found an unbalanced inline literal markup. (unbalanced-inli
 library/dis.po:840: missing space before default role: ''. (missing-space-before-default-role)
 library/dis.po:2316: trailing whitespace (trailing-whitespace)
 library/dis.po:2332: trailing whitespace (trailing-whitespace)
-library/gc.po:390: trailing whitespace (trailing-whitespace)
+library/gc.po:311: trailing whitespace (trailing-whitespace)
 library/ctypes.po:5549: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/ctypes.po:5549: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/ctypes.po:5549: missing space before default role: '5元组``(descr, source, helpfile, helpcontext, progid)``'. (missing-space-before-default-role)
