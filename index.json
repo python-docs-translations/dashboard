@@ -99,7 +99,7 @@
     "core_completion": 48.93533933489538,
     "completion": 3.243889202501254,
     "core_change": 0.0,
-    "change": 0.0011508093217980075,
+    "change": 6.056891167371958e-05,
     "built": true,
     "translated_name": "Indonesia",
     "contribution_link": "https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan"
@@ -262,9 +262,9 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
     "core_completion": 100.0,
-    "completion": 96.93000414291356,
+    "completion": 96.94042199572141,
     "core_change": 0.6515394417725133,
-    "change": 0.5525701811979644,
+    "change": 0.5629880340058122,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
