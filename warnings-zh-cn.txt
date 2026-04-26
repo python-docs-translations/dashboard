@@ -124,6 +124,7 @@ whatsnew/changelog.rst:48752:<translated>:1: WARNING: Inline literal start-strin
 whatsnew/changelog.rst:50161:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:50355:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:54352:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
+build/NEWS:91: WARNING: inconsistent term references in translated message. original: [':mod:`csv`', ':func:`next`'], translated: [':mod:`csv`'] [i18n.inconsistent_references]
 build/NEWS:942: WARNING: inconsistent term references in translated message. original: [':mod:`argparse`', ':mod:`argparse`'], translated: [':mod:`argparse`'] [i18n.inconsistent_references]
 build/NEWS:2106: WARNING: inconsistent term references in translated message. original: [], translated: ['`os.environ`'] [i18n.inconsistent_references]
 whatsnew/changelog.rst:2140:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
