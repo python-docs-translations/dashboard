@@ -2,74 +2,64 @@
 
 {% block main %}
 <div>
-  <h2 id="cpython-docs">CPython documentation</h2>
   <div class="row">
-    {% for project in completion_progress | sort(attribute='core_completion,completion') | reverse %}
+    {% for card in combined_progress %}
       <div class="col-12 col-sm-6 col-md-4 d-flex">
-        <div id="{{ project.language.code }}" class="card shadow mb-3 w-100">
+        <div id="{{ card.language.code }}" class="card shadow mb-3 w-100">
           <div class="card-body">
-            <h3 class="card-title"><a href="#{{ project.language.code }}">{{ project.language.name }}</a></h3>
-            <h5 class="card-subtitle mb-2 text-muted">{{ project.translated_name }}</h5>
+            <h3 class="card-title"><a href="#{{ card.language.code }}">{{ card.language.name }}</a></h3>
+            <h5 class="card-subtitle mb-2 text-muted">{{ card.translated_name }}</h5>
 
             <ul class="links-row">
-              {% if project.built %}
-              <li>
-                <a href="https://docs.python.org/{{ project.language.code }}/3/" aria-label="View {{ project.language.name }} documentation">View</a>
-              </li>
-              <li>
-                <a href="https://analytics.python.org/docs.python.org?f=contains,page,/{{ project.language.code }}/" aria-label="View {{ project.language.name }} documentation analytics">Analytics</a>
-              </li>
+              {% if card.cpython %}
+                {% if card.cpython.built %}
+                <li>
+                  <a href="https://docs.python.org/{{ card.language.code }}/3/" aria-label="View {{ card.language.name }} CPython documentation">CPython docs</a>
+                </li>
+                <li>
+                  <a href="https://analytics.python.org/docs.python.org?f=contains,page,/{{ card.language.code }}/" aria-label="View {{ card.language.name }} CPython documentation analytics">CPython analytics</a>
+                </li>
+                {% endif %}
+                <li>
+                  <a href="{{ card.cpython.contribution_link }}" aria-label="Contribute to {{ card.language.name }} CPython translation">
+                    Contribute (CPython)
+                  </a>
+                </li>
               {% endif %}
-              <li>
-                <a href="{{ project.contribution_link }}" aria-label="Contribute to {{ project.language.name }} translation">
-                  Contribute
-                </a>
-              </li>
-            </ul>
-            {# core progress bar #}
-            {% with width=project.core_completion, change=project.core_change, kind='core' %}
-            {% include 'progress_bar.html.jinja' %}
-            {% endwith %}
-            {# overall progress bar #}
-            {% with width=project.completion, change=project.change, kind='overall', extra_container_class='mt-1' %}
-            {% include 'progress_bar.html.jinja' %}
-            {% endwith %}
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
-
-<div>
-  <h2 id="packaging-python-org">packaging.python.org</h2>
-  <div class="row">
-    {% for project in packaging_progress | sort(attribute='completion') | reverse %}
-      <div class="col-12 col-sm-6 col-md-4 d-flex">
-        <div id="packaging-{{ project.language.code }}" class="card shadow mb-3 w-100">
-          <div class="card-body">
-            <h3 class="card-title"><a href="#packaging-{{ project.language.code }}">{{ project.language.name }}</a></h3>
-            <h5 class="card-subtitle mb-2 text-muted">{{ project.translated_name }}</h5>
-
-            <ul class="links-row">
-              {% if project.built %}
-              <li>
-                <a href="https://packaging.python.org/{{ project.language.code }}/latest/" aria-label="View {{ project.language.name }} packaging documentation">View</a>
-              </li>
-              <li>
-                <a href="https://analytics.python.org/packaging.python.org?f=contains,page,/{{ project.language.code }}/" aria-label="View {{ project.language.name }} packaging documentation analytics">Analytics</a>
-              </li>
+              {% if card.packaging %}
+                {% if card.packaging.built %}
+                <li>
+                  <a href="https://packaging.python.org/{{ card.language.code }}/latest/" aria-label="View {{ card.language.name }} packaging documentation">Packaging docs</a>
+                </li>
+                <li>
+                  <a href="https://analytics.python.org/packaging.python.org?f=contains,page,/{{ card.language.code }}/" aria-label="View {{ card.language.name }} packaging documentation analytics">Packaging analytics</a>
+                </li>
+                {% endif %}
+                <li>
+                  <a href="https://hosted.weblate.org/engage/pypa/" aria-label="Contribute to {{ card.language.name }} packaging translation">
+                    Contribute (packaging)
+                  </a>
+                </li>
               {% endif %}
-              <li>
-                <a href="https://hosted.weblate.org/engage/pypa/" aria-label="Contribute to {{ project.language.name }} packaging translation">
-                  Contribute
-                </a>
-              </li>
             </ul>
-            {# overall progress bar #}
-            {% with width=project.completion, change=project.change, kind='overall' %}
-            {% include 'progress_bar.html.jinja' %}
-            {% endwith %}
+
+            {% if card.cpython %}
+              {# CPython core progress bar #}
+              {% with width=card.cpython.core_completion, change=card.cpython.core_change, kind='CPython core' %}
+              {% include 'progress_bar.html.jinja' %}
+              {% endwith %}
+              {# CPython overall progress bar #}
+              {% with width=card.cpython.completion, change=card.cpython.change, kind='CPython overall', extra_container_class='mt-1' %}
+              {% include 'progress_bar.html.jinja' %}
+              {% endwith %}
+            {% endif %}
+
+            {% if card.packaging %}
+              {# packaging.python.org progress bar #}
+              {% with width=card.packaging.completion, change=card.packaging.change, kind='packaging', extra_container_class='mt-1' %}
+              {% include 'progress_bar.html.jinja' %}
+              {% endwith %}
+            {% endif %}
           </div>
         </div>
       </div>

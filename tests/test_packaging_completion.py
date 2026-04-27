@@ -51,6 +51,58 @@ class TestPoCompletion(unittest.TestCase):
         finally:
             tmp_path.unlink(missing_ok=True)
 
+    def test_fuzzy_entries_excluded(self):
+        """Fuzzy entries must not appear in either numerator or denominator."""
+        from pathlib import Path
+
+        po_content = (
+            'msgid ""\n'
+            'msgstr ""\n'
+            '"Content-Type: text/plain; charset=UTF-8\\n"\n'
+            '\n'
+            '# translated\n'
+            'msgid "hello"\n'
+            'msgstr "hola"\n'
+            '\n'
+            '#, fuzzy\n'
+            'msgid "world"\n'
+            'msgstr "mundo"\n'
+            '\n'
+            '# untranslated\n'
+            'msgid "foo"\n'
+            'msgstr ""\n'
+        )
+        with tempfile.NamedTemporaryFile(suffix='.po', mode='w', delete=False) as f:
+            f.write(po_content)
+            tmp_path = Path(f.name)
+        try:
+            result = packaging_completion._po_completion(tmp_path)
+            # 1 translated + 1 untranslated (fuzzy excluded) → 50 %
+            self.assertAlmostEqual(result, 50.0)
+        finally:
+            tmp_path.unlink(missing_ok=True)
+
+    def test_returns_percentage_scale(self):
+        """Completion is reported on a 0–100 scale, not 0–1."""
+        from pathlib import Path
+
+        po_content = (
+            'msgid ""\n'
+            'msgstr ""\n'
+            '"Content-Type: text/plain; charset=UTF-8\\n"\n'
+            '\n'
+            'msgid "hello"\n'
+            'msgstr "hola"\n'
+        )
+        with tempfile.NamedTemporaryFile(suffix='.po', mode='w', delete=False) as f:
+            f.write(po_content)
+            tmp_path = Path(f.name)
+        try:
+            result = packaging_completion._po_completion(tmp_path)
+            self.assertAlmostEqual(result, 100.0)
+        finally:
+            tmp_path.unlink(missing_ok=True)
+
 
 if __name__ == '__main__':
     unittest.main()

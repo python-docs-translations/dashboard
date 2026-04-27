@@ -70,7 +70,14 @@ def _po_completion(po_path: Path) -> float:
         return 0.0
     try:
         po = polib.pofile(str(po_path))
-        return po.percent_translated() / 100.0
+        # Both translated_entries() and untranslated_entries() exclude fuzzy
+        # entries, so fuzzy strings are omitted from both numerator and
+        # denominator and don't inflate the reported completion.
+        translated = len(po.translated_entries())
+        total = translated + len(po.untranslated_entries())
+        if total == 0:
+            return 0.0
+        return translated * 100.0 / total
     except Exception:
         logging.exception('Failed to parse %s', po_path)
         return 0.0

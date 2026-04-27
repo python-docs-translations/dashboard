@@ -17,7 +17,7 @@ from urllib3 import PoolManager
 import translated_names
 import contribute
 from completion import branches_from_peps, get_completion
-from packaging_completion import get_packaging_progress
+from packaging_completion import get_packaging_progress, PackagingProjectData
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -106,6 +106,67 @@ class LanguageProjectData:
     contribution_link: str | None
 
 
+@dataclass(frozen=True)
+class CombinedLanguageCard:
+    """One card per language combining CPython-docs and packaging.python.org data."""
+
+    language: Language
+    translated_name: str
+    cpython: LanguageProjectData | None
+    packaging: PackagingProjectData | None
+
+
+def _card_sort_key(
+    c: CombinedLanguageCard,
+) -> tuple[float, float, float]:
+    """Sort key: prefer high CPython core → overall → packaging completion."""
+    return (
+        c.cpython.core_completion if c.cpython else 0.0,
+        c.cpython.completion if c.cpython else 0.0,
+        c.packaging.completion if c.packaging else 0.0,
+    )
+
+
+def merge_progress(
+    completion_progress: list[LanguageProjectData],
+    packaging_progress: list[PackagingProjectData],
+) -> list[CombinedLanguageCard]:
+    """Merge CPython and packaging progress into one card per language code."""
+    cards: dict[str, dict] = {}
+    for proj in completion_progress:
+        code = proj.language.code
+        cards[code] = {
+            'language': proj.language,
+            'translated_name': proj.translated_name,
+            'cpython': proj,
+            'packaging': None,
+        }
+    for proj in packaging_progress:
+        code = proj.language.code
+        if code in cards:
+            cards[code]['packaging'] = proj
+        else:
+            cards[code] = {
+                'language': proj.language,
+                'translated_name': proj.translated_name,
+                'cpython': None,
+                'packaging': proj,
+            }
+    return sorted(
+        [
+            CombinedLanguageCard(
+                language=entry['language'],
+                translated_name=entry['translated_name'],
+                cpython=entry['cpython'],
+                packaging=entry['packaging'],
+            )
+            for entry in cards.values()
+        ],
+        key=_card_sort_key,
+        reverse=True,
+    )
+
+
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logging.info(f'starting at {generation_time}')
@@ -113,11 +174,11 @@ if __name__ == '__main__':
 
     completion_progress = list(get_completion_progress())
     packaging_progress = get_packaging_progress(Path('clones'))
+    combined_progress = merge_progress(completion_progress, packaging_progress)
 
     env = Environment(loader=FileSystemLoader('templates'))
     index = env.get_template('index.html.jinja').render(
-        completion_progress=completion_progress,
-        packaging_progress=packaging_progress,
+        combined_progress=combined_progress,
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )

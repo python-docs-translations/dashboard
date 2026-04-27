@@ -32,11 +32,41 @@ class testIndex(unittest.TestCase):
             built=True,
             translated_name='日本語',
         )
+        combined = generate.merge_progress(
+            [language_project_data], [packaging_project_data]
+        )
         env.get_template('index.html.jinja').render(
-            completion_progress=[language_project_data],
-            packaging_progress=[packaging_project_data],
-            generation_time=datetime.now(),
-            duration=100,
+            combined_progress=combined, generation_time=datetime.now(), duration=100
+        )
+
+    def test_renders_combined_card(self):
+        """A language present in both CPython and packaging data shares one card."""
+        env = Environment(loader=FileSystemLoader('templates'))
+        cpython_data = generate.LanguageProjectData(
+            language=repositories.Language('ja', 'Japanese'),
+            repository='python-docs-ja',
+            branch='3.14',
+            core_completion=90,
+            completion=80,
+            core_change=0,
+            change=1,
+            built=True,
+            translated_name='日本語',
+            contribution_link='https://example.com',
+        )
+        packaging_data = packaging_completion.PackagingProjectData(
+            language=repositories.Language('ja', 'Japanese'),
+            completion=75.0,
+            change=2.0,
+            built=True,
+            translated_name='日本語',
+        )
+        combined = generate.merge_progress([cpython_data], [packaging_data])
+        self.assertEqual(len(combined), 1)
+        self.assertIsNotNone(combined[0].cpython)
+        self.assertIsNotNone(combined[0].packaging)
+        env.get_template('index.html.jinja').render(
+            combined_progress=combined, generation_time=datetime.now(), duration=100
         )
 
 
