@@ -1,5 +1,6 @@
 babel
 gitpython
+pycountry-convert
 urllib3
 potodo
 jinja2

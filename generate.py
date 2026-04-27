@@ -17,6 +17,7 @@ from urllib3 import PoolManager
 import translated_names
 import contribute
 from completion import branches_from_peps, get_completion
+from continents import get_language_continents
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -88,6 +89,7 @@ def get_project_data(
         or translated_names.babel_autonym(language.code)
         or '',
         contribution_link=contribute.get_contrib_link(language.code, repo),
+        continents=get_language_continents(language.code),
     )
 
 
@@ -103,6 +105,7 @@ class LanguageProjectData:
     built: bool
     translated_name: str
     contribution_link: str | None
+    continents: list[str]
 
 
 if __name__ == '__main__':
@@ -113,10 +116,12 @@ if __name__ == '__main__':
     completion_progress = list(get_completion_progress())
 
     env = Environment(loader=FileSystemLoader('templates'))
+    all_continents = sorted({c for p in completion_progress for c in p.continents})
     index = env.get_template('index.html.jinja').render(
         completion_progress=completion_progress,
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
+        all_continents=all_continents,
     )
 
     Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())

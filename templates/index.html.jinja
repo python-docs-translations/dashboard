@@ -2,9 +2,15 @@
 
 {% block main %}
 <div>
+  <div class="continent-filter mb-3 d-flex flex-wrap gap-2 justify-content-center">
+    <button class="btn btn-sm btn-primary active" data-continent="all">All</button>
+    {% for continent in all_continents %}
+    <button class="btn btn-sm btn-outline-primary" data-continent="{{ continent }}">{{ continent }}</button>
+    {% endfor %}
+  </div>
   <div class="row">
     {% for project in completion_progress | sort(attribute='core_completion,completion') | reverse %}
-      <div class="col-12 col-sm-6 col-md-4 d-flex">
+      <div class="col-12 col-sm-6 col-md-4 d-flex language-entry" data-continents="{{ project.continents | join(',') }}">
         <div id="{{ project.language.code }}" class="card shadow mb-3 w-100">
           <div class="card-body">
             <h3 class="card-title"><a href="#{{ project.language.code }}">{{ project.language.name }}</a></h3>
@@ -60,5 +66,22 @@
   updateProgressBarVisibility();
 
   window.addEventListener('resize', updateProgressBarVisibility);
+
+  const continentButtons = document.querySelectorAll('[data-continent]');
+  continentButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      continentButtons.forEach(b => {
+        b.classList.toggle('active', b === this);
+        b.classList.toggle('btn-primary', b === this);
+        b.classList.toggle('btn-outline-primary', b !== this);
+      });
+
+      const selected = this.dataset.continent;
+      document.querySelectorAll('.language-entry').forEach(entry => {
+        const continents = entry.dataset.continents ? entry.dataset.continents.split(',') : [];
+        entry.classList.toggle('d-none', selected !== 'all' && !continents.includes(selected));
+      });
+    });
+  });
 </script>
 {% endblock %}
