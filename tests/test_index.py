@@ -69,6 +69,32 @@ class testIndex(unittest.TestCase):
             combined_progress=combined, generation_time=datetime.now(), duration=100
         )
 
+    def test_hindi_normalisation(self):
+        """hi-in packaging entry is merged onto the same card as hi CPython entry."""
+        cpython_data = generate.LanguageProjectData(
+            language=repositories.Language('hi', 'Hindi'),
+            repository='python-docs-hi',
+            branch='3.14',
+            core_completion=20,
+            completion=15,
+            core_change=0,
+            change=0,
+            built=False,
+            translated_name='हिन्दी',
+            contribution_link='https://example.com',
+        )
+        packaging_data = packaging_completion.PackagingProjectData(
+            language=repositories.Language('hi-in', 'Hindi (India)'),
+            completion=10.0,
+            change=0.0,
+            built=False,
+            translated_name='हिन्दी',
+        )
+        combined = generate.merge_progress([cpython_data], [packaging_data])
+        self.assertEqual(len(combined), 1)
+        self.assertIsNotNone(combined[0].cpython)
+        self.assertIsNotNone(combined[0].packaging)
+
 
 if __name__ == '__main__':
     unittest.main()

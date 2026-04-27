@@ -1,3 +1,4 @@
+import json
 import unittest
 import tempfile
 import support
@@ -32,6 +33,14 @@ class TestLocaleToRtdCodeOverrides(unittest.TestCase):
         )
 
 
+class TestLocaleCodeNormalisation(unittest.TestCase):
+    def test_hi_in_normalises_to_hi(self):
+        self.assertEqual(packaging_completion.LOCALE_CODE_NORMALISATION['hi_IN'], 'hi')
+
+    def test_hi_in_rtd_normalises_to_hi(self):
+        self.assertEqual(packaging_completion.LOCALE_CODE_NORMALISATION['hi-in'], 'hi')
+
+
 class TestPoCompletion(unittest.TestCase):
     def test_missing_file_returns_zero(self):
         from pathlib import Path
@@ -48,37 +57,6 @@ class TestPoCompletion(unittest.TestCase):
         try:
             result = packaging_completion._po_completion(tmp_path)
             self.assertEqual(result, 0.0)
-        finally:
-            tmp_path.unlink(missing_ok=True)
-
-    def test_fuzzy_entries_excluded(self):
-        """Fuzzy entries must not appear in either numerator or denominator."""
-        from pathlib import Path
-
-        po_content = (
-            'msgid ""\n'
-            'msgstr ""\n'
-            '"Content-Type: text/plain; charset=UTF-8\\n"\n'
-            '\n'
-            '# translated\n'
-            'msgid "hello"\n'
-            'msgstr "hola"\n'
-            '\n'
-            '#, fuzzy\n'
-            'msgid "world"\n'
-            'msgstr "mundo"\n'
-            '\n'
-            '# untranslated\n'
-            'msgid "foo"\n'
-            'msgstr ""\n'
-        )
-        with tempfile.NamedTemporaryFile(suffix='.po', mode='w', delete=False) as f:
-            f.write(po_content)
-            tmp_path = Path(f.name)
-        try:
-            result = packaging_completion._po_completion(tmp_path)
-            # 1 translated + 1 untranslated (fuzzy excluded) → 50 %
-            self.assertAlmostEqual(result, 50.0)
         finally:
             tmp_path.unlink(missing_ok=True)
 
@@ -102,6 +80,99 @@ class TestPoCompletion(unittest.TestCase):
             self.assertAlmostEqual(result, 100.0)
         finally:
             tmp_path.unlink(missing_ok=True)
+
+    def test_fuzzy_entries_included(self):
+        """percent_translated counts fuzzy as untranslated (not excluded from total)."""
+        from pathlib import Path
+
+        po_content = (
+            'msgid ""\n'
+            'msgstr ""\n'
+            '"Content-Type: text/plain; charset=UTF-8\\n"\n'
+            '\n'
+            'msgid "hello"\n'
+            'msgstr "hola"\n'
+            '\n'
+            '#, fuzzy\n'
+            'msgid "world"\n'
+            'msgstr "mundo"\n'
+            '\n'
+            'msgid "foo"\n'
+            'msgstr ""\n'
+        )
+        with tempfile.NamedTemporaryFile(suffix='.po', mode='w', delete=False) as f:
+            f.write(po_content)
+            tmp_path = Path(f.name)
+        try:
+            result = packaging_completion._po_completion(tmp_path)
+            # polib percent_translated: 1 translated out of 3 total → 33 (int, rounded)
+            self.assertEqual(result, 33)
+        finally:
+            tmp_path.unlink(missing_ok=True)
+
+
+class TestGetWeblateLanguageNames(unittest.TestCase):
+    def test_parses_response(self):
+        """get_weblate_language_names correctly parses a mocked API response."""
+        import unittest.mock as mock
+
+        fake_response = {
+            'count': 2,
+            'next': None,
+            'previous': None,
+            'results': [
+                {'language': {'code': 'hi', 'name': 'Hindi'}},
+                {'language': {'code': 'bn', 'name': 'Bengali'}},
+            ],
+        }
+
+        class FakeResp:
+            status = 200
+            data = json.dumps(fake_response).encode()
+
+        with mock.patch(
+            'packaging_completion.urllib3.request', return_value=FakeResp()
+        ):
+            names = packaging_completion.get_weblate_language_names()
+
+        self.assertEqual(names['hi'], 'Hindi')
+        self.assertEqual(names['bn'], 'Bengali')
+
+    def test_normalises_hi_in_to_hi(self):
+        """hi_IN code from Weblate is normalised to hi before being stored."""
+        import unittest.mock as mock
+
+        fake_response = {
+            'count': 1,
+            'next': None,
+            'previous': None,
+            'results': [{'language': {'code': 'hi_IN', 'name': 'Hindi (India)'}}],
+        }
+
+        class FakeResp:
+            status = 200
+            data = json.dumps(fake_response).encode()
+
+        with mock.patch(
+            'packaging_completion.urllib3.request', return_value=FakeResp()
+        ):
+            names = packaging_completion.get_weblate_language_names()
+
+        # hi_IN should be normalised to hi
+        self.assertIn('hi', names)
+        self.assertNotIn('hi_IN', names)
+
+    def test_returns_empty_on_error(self):
+        """get_weblate_language_names returns empty dict on network failure."""
+        import unittest.mock as mock
+
+        with mock.patch(
+            'packaging_completion.urllib3.request',
+            side_effect=Exception('network error'),
+        ):
+            names = packaging_completion.get_weblate_language_names()
+
+        self.assertEqual(names, {})
 
 
 if __name__ == '__main__':

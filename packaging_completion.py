@@ -15,6 +15,9 @@ RTD_TRANSLATIONS_URL = (
     'https://app.readthedocs.org/api/v3/projects/'
     'python-packaging-user-guide/translations/'
 )
+WEBLATE_PROJECT_LANGUAGES_URL = (
+    'https://hosted.weblate.org/api/projects/pypa/languages/'
+)
 PACKAGING_REPO_URL = 'https://github.com/pypa/packaging.python.org.git'
 PACKAGING_REPO_BRANCH = 'translation/source'
 CHANGE_PERIOD = '30 days ago'
@@ -24,6 +27,14 @@ CHANGE_PERIOD = '30 days ago'
 RTD_CODE_TO_LOCALE_OVERRIDES: dict[str, str] = {'zh-cn': 'zh_Hans', 'zh-tw': 'zh_Hant'}
 LOCALE_TO_RTD_CODE_OVERRIDES: dict[str, str] = {
     v: k for k, v in RTD_CODE_TO_LOCALE_OVERRIDES.items()
+}
+
+# Normalise locale/RTD codes that are aliases for the same language so they
+# map to the canonical language code used elsewhere (e.g. in CPython devguide).
+LOCALE_CODE_NORMALISATION: dict[str, str] = {
+    # Hindi: packaging.python.org uses hi_IN / hi-in, CPython uses hi
+    'hi_IN': 'hi',
+    'hi-in': 'hi',
 }
 
 
@@ -44,6 +55,34 @@ def _rtd_code_to_locale(code: str) -> str:
     if len(parts) == 2:
         return f'{parts[0]}_{parts[1].upper()}'
     return code
+
+
+def get_weblate_language_names() -> dict[str, str]:
+    """Return a mapping of normalised language code → English name from Weblate.
+
+    Falls back gracefully to an empty dict on any network / API error.
+    """
+    names: dict[str, str] = {}
+    url: str | None = WEBLATE_PROJECT_LANGUAGES_URL
+    while url:
+        try:
+            resp = urllib3.request('GET', url)
+        except Exception:
+            logging.exception('Failed to fetch Weblate language list from %s', url)
+            break
+        if resp.status != 200:
+            logging.error('Weblate API returned status %d for %s', resp.status, url)
+            break
+        data = json.loads(resp.data)
+        for result in data.get('results', []):
+            lang = result.get('language', {})
+            code = lang.get('code', '')
+            name = lang.get('name', '')
+            if code and name:
+                normalised = LOCALE_CODE_NORMALISATION.get(code, code)
+                names[normalised] = name
+        url = data.get('next')
+    return names
 
 
 def get_built_languages() -> dict[str, Language]:
@@ -70,14 +109,7 @@ def _po_completion(po_path: Path) -> float:
         return 0.0
     try:
         po = polib.pofile(str(po_path))
-        # Both translated_entries() and untranslated_entries() exclude fuzzy
-        # entries, so fuzzy strings are omitted from both numerator and
-        # denominator and don't inflate the reported completion.
-        translated = len(po.translated_entries())
-        total = translated + len(po.untranslated_entries())
-        if total == 0:
-            return 0.0
-        return translated * 100.0 / total
+        return po.percent_translated()
     except Exception:
         logging.exception('Failed to parse %s', po_path)
         return 0.0
@@ -105,51 +137,75 @@ def get_packaging_progress(clones_dir: Path) -> list[PackagingProjectData]:
         clone_repo.git.pull()
 
     built_languages = get_built_languages()
+    weblate_names = get_weblate_language_names()
+
+    locales = _get_locale_dirs(repo_path)
+    po_paths = {
+        locale: repo_path / 'locales' / locale / 'LC_MESSAGES' / 'messages.po'
+        for locale in locales
+    }
+
+    # Calculate current completions for all locales
+    current_completions = {
+        locale: _po_completion(po_paths[locale]) for locale in locales
+    }
+
+    # Find the 30-days-ago commit once and gather historical completions in a
+    # single checkout round-trip (avoids N checkouts, one per locale).
+    month_ago_completions: dict[str, float] = {}
+    if any(current_completions.values()):
+        try:
+            old_commit = next(
+                clone_repo.iter_commits('HEAD', max_count=1, before=CHANGE_PERIOD)
+            )
+        except StopIteration:
+            pass
+        else:
+            clone_repo.git.checkout(old_commit.hexsha)
+            for locale in locales:
+                month_ago_completions[locale] = _po_completion(po_paths[locale])
+            clone_repo.git.checkout(PACKAGING_REPO_BRANCH)
 
     results = []
-    for locale in _get_locale_dirs(repo_path):
-        po_path = repo_path / 'locales' / locale / 'LC_MESSAGES' / 'messages.po'
-        completion = _po_completion(po_path)
+    for locale in locales:
+        completion = current_completions[locale]
+        change = completion - month_ago_completions.get(locale, 0.0)
 
-        # Determine language code and name
-        if locale in built_languages:
+        # Determine language code and name.
+        # Normalise known aliases (e.g. hi_IN → hi) before lookup.
+        normalised_locale = LOCALE_CODE_NORMALISATION.get(locale, locale)
+        if normalised_locale in built_languages:
+            language = built_languages[normalised_locale]
+        elif locale in built_languages:
             language = built_languages[locale]
         else:
-            # Convert locale dir back to RTD-style code.
-            # Check explicit overrides first (e.g. zh_Hans → zh-cn).
-            if locale in LOCALE_TO_RTD_CODE_OVERRIDES:
+            # Convert locale dir to RTD-style code, respecting explicit overrides.
+            if normalised_locale in LOCALE_TO_RTD_CODE_OVERRIDES:
+                rtd_code = LOCALE_TO_RTD_CODE_OVERRIDES[normalised_locale]
+            elif locale in LOCALE_TO_RTD_CODE_OVERRIDES:
                 rtd_code = LOCALE_TO_RTD_CODE_OVERRIDES[locale]
             else:
-                parts = locale.split('_')
+                parts = normalised_locale.split('_')
                 if len(parts) == 2:
                     rtd_code = f'{parts[0]}-{parts[1].lower()}'
                 else:
-                    rtd_code = locale.lower()
-            language = Language(code=rtd_code, name=rtd_code)
+                    rtd_code = normalised_locale.lower()
+            # Use Weblate name if available, else babel, else the code itself.
+            lang_name = weblate_names.get(rtd_code) or rtd_code
+            language = Language(code=rtd_code, name=lang_name)
 
-        translated_name = translated_names.babel_autonym(language.code) or ''
-
-        # Calculate change over last 30 days
-        change = 0.0
-        if completion:
-            try:
-                commit = next(
-                    clone_repo.iter_commits('HEAD', max_count=1, before=CHANGE_PERIOD)
-                )
-            except StopIteration:
-                pass
-            else:
-                clone_repo.git.checkout(commit.hexsha)
-                month_ago_completion = _po_completion(po_path)
-                clone_repo.git.checkout(PACKAGING_REPO_BRANCH)
-                change = completion - month_ago_completion
+        translated_name = (
+            translated_names.babel_autonym(language.code)
+            or weblate_names.get(language.code)
+            or ''
+        )
 
         results.append(
             PackagingProjectData(
                 language=language,
                 completion=completion,
                 change=change,
-                built=locale in built_languages,
+                built=normalised_locale in built_languages or locale in built_languages,
                 translated_name=translated_name,
             )
         )

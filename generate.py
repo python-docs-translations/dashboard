@@ -17,7 +17,11 @@ from urllib3 import PoolManager
 import translated_names
 import contribute
 from completion import branches_from_peps, get_completion
-from packaging_completion import get_packaging_progress, PackagingProjectData
+from packaging_completion import (
+    get_packaging_progress,
+    PackagingProjectData,
+    LOCALE_CODE_NORMALISATION,
+)
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -116,9 +120,7 @@ class CombinedLanguageCard:
     packaging: PackagingProjectData | None
 
 
-def _card_sort_key(
-    c: CombinedLanguageCard,
-) -> tuple[float, float, float]:
+def _card_sort_key(c: CombinedLanguageCard) -> tuple[float, float, float]:
     """Sort key: prefer high CPython core → overall → packaging completion."""
     return (
         c.cpython.core_completion if c.cpython else 0.0,
@@ -142,10 +144,14 @@ def merge_progress(
             'packaging': None,
         }
     for proj in packaging_progress:
-        code = proj.language.code
+        # Normalise packaging language codes so aliases (e.g. hi-in → hi)
+        # are merged onto the same card as the CPython entry.
+        code = LOCALE_CODE_NORMALISATION.get(proj.language.code, proj.language.code)
         if code in cards:
             cards[code]['packaging'] = proj
         else:
+            # Use normalised code and prefer the CPython language object if
+            # available; otherwise keep the packaging one.
             cards[code] = {
                 'language': proj.language,
                 'translated_name': proj.translated_name,
