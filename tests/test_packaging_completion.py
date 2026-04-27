@@ -13,8 +13,23 @@ class TestRtdCodeToLocale(unittest.TestCase):
     def test_hyphenated_code(self):
         self.assertEqual(packaging_completion._rtd_code_to_locale('pt-br'), 'pt_BR')
 
-    def test_zh_hans(self):
-        self.assertEqual(packaging_completion._rtd_code_to_locale('zh-hans'), 'zh_HANS')
+    def test_zh_cn_maps_to_zh_hans(self):
+        self.assertEqual(packaging_completion._rtd_code_to_locale('zh-cn'), 'zh_Hans')
+
+    def test_zh_tw_maps_to_zh_hant(self):
+        self.assertEqual(packaging_completion._rtd_code_to_locale('zh-tw'), 'zh_Hant')
+
+
+class TestLocaleToRtdCodeOverrides(unittest.TestCase):
+    def test_zh_hans_maps_to_zh_cn(self):
+        self.assertEqual(
+            packaging_completion.LOCALE_TO_RTD_CODE_OVERRIDES['zh_Hans'], 'zh-cn'
+        )
+
+    def test_zh_hant_maps_to_zh_tw(self):
+        self.assertEqual(
+            packaging_completion.LOCALE_TO_RTD_CODE_OVERRIDES['zh_Hant'], 'zh-tw'
+        )
 
 
 class TestPoCompletion(unittest.TestCase):

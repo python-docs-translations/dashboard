@@ -19,6 +19,16 @@ PACKAGING_REPO_URL = 'https://github.com/pypa/packaging.python.org.git'
 PACKAGING_REPO_BRANCH = 'translation/source'
 CHANGE_PERIOD = '30 days ago'
 
+# Some locale directory names use script subtags instead of region codes.
+# These explicit overrides take priority over the generic conversion.
+RTD_CODE_TO_LOCALE_OVERRIDES: dict[str, str] = {
+    'zh-cn': 'zh_Hans',
+    'zh-tw': 'zh_Hant',
+}
+LOCALE_TO_RTD_CODE_OVERRIDES: dict[str, str] = {
+    v: k for k, v in RTD_CODE_TO_LOCALE_OVERRIDES.items()
+}
+
 
 @dataclass(frozen=True)
 class PackagingProjectData:
@@ -31,6 +41,8 @@ class PackagingProjectData:
 
 def _rtd_code_to_locale(code: str) -> str:
     """Convert RTD language code (e.g. 'pt-br') to locale dir format ('pt_BR')."""
+    if code in RTD_CODE_TO_LOCALE_OVERRIDES:
+        return RTD_CODE_TO_LOCALE_OVERRIDES[code]
     parts = code.split('-')
     if len(parts) == 2:
         return f'{parts[0]}_{parts[1].upper()}'
@@ -101,12 +113,16 @@ def get_packaging_progress(clones_dir: Path) -> list[PackagingProjectData]:
         if locale in built_languages:
             language = built_languages[locale]
         else:
-            # Convert locale (pt_BR) back to RTD-style code (pt-br)
-            parts = locale.split('_')
-            if len(parts) == 2:
-                rtd_code = f'{parts[0]}-{parts[1].lower()}'
+            # Convert locale dir back to RTD-style code.
+            # Check explicit overrides first (e.g. zh_Hans → zh-cn).
+            if locale in LOCALE_TO_RTD_CODE_OVERRIDES:
+                rtd_code = LOCALE_TO_RTD_CODE_OVERRIDES[locale]
             else:
-                rtd_code = locale.lower()
+                parts = locale.split('_')
+                if len(parts) == 2:
+                    rtd_code = f'{parts[0]}-{parts[1].lower()}'
+                else:
+                    rtd_code = locale.lower()
             language = Language(code=rtd_code, name=rtd_code)
 
         translated_name = (
