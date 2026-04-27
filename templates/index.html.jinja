@@ -2,6 +2,7 @@
 
 {% block main %}
 <div>
+  <h2 id="cpython-docs">CPython documentation</h2>
   <div class="row">
     {% for project in completion_progress | sort(attribute='core_completion,completion') | reverse %}
       <div class="col-12 col-sm-6 col-md-4 d-flex">
@@ -31,6 +32,42 @@
             {% endwith %}
             {# overall progress bar #}
             {% with width=project.completion, change=project.change, kind='overall', extra_container_class='mt-1' %}
+            {% include 'progress_bar.html.jinja' %}
+            {% endwith %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div>
+  <h2 id="packaging-python-org">packaging.python.org</h2>
+  <div class="row">
+    {% for project in packaging_progress | sort(attribute='completion') | reverse %}
+      <div class="col-12 col-sm-6 col-md-4 d-flex">
+        <div id="packaging-{{ project.language.code }}" class="card shadow mb-3 w-100">
+          <div class="card-body">
+            <h3 class="card-title"><a href="#packaging-{{ project.language.code }}">{{ project.language.name }}</a></h3>
+            <h5 class="card-subtitle mb-2 text-muted">{{ project.translated_name }}</h5>
+
+            <ul class="links-row">
+              {% if project.built %}
+              <li>
+                <a href="https://packaging.python.org/{{ project.language.code }}/latest/" aria-label="View {{ project.language.name }} packaging documentation">View</a>
+              </li>
+              <li>
+                <a href="https://analytics.python.org/packaging.python.org?f=contains,page,/{{ project.language.code }}/" aria-label="View {{ project.language.name }} packaging documentation analytics">Analytics</a>
+              </li>
+              {% endif %}
+              <li>
+                <a href="https://hosted.weblate.org/engage/pypa/" aria-label="Contribute to {{ project.language.name }} packaging translation">
+                  Contribute
+                </a>
+              </li>
+            </ul>
+            {# overall progress bar #}
+            {% with width=project.completion, change=project.change, kind='overall' %}
             {% include 'progress_bar.html.jinja' %}
             {% endwith %}
           </div>

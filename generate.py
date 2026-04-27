@@ -17,6 +17,7 @@ from urllib3 import PoolManager
 import translated_names
 import contribute
 from completion import branches_from_peps, get_completion
+from packaging_completion import get_packaging_progress
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -111,10 +112,12 @@ if __name__ == '__main__':
     Path('build').mkdir(parents=True, exist_ok=True)
 
     completion_progress = list(get_completion_progress())
+    packaging_progress = get_packaging_progress(Path('clones'))
 
     env = Environment(loader=FileSystemLoader('templates'))
     index = env.get_template('index.html.jinja').render(
         completion_progress=completion_progress,
+        packaging_progress=packaging_progress,
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )
@@ -125,4 +128,8 @@ if __name__ == '__main__':
 
     Path('build/index.json').write_text(
         json.dumps([asdict(project) for project in completion_progress], indent=2)
+    )
+
+    Path('build/packaging.json').write_text(
+        json.dumps([asdict(project) for project in packaging_progress], indent=2)
     )
