@@ -63,5 +63,105 @@
   updateProgressBarVisibility();
 
   window.addEventListener('resize', updateProgressBarVisibility);
+
+  (function () {
+    const userLangs = Array.from(navigator.languages || []).map(lang => lang.toLowerCase());
+    const row = document.querySelector('.row');
+    if (!row || !userLangs.length) return;
+
+    // Capture the original column order (completion-based sort from server) before any changes.
+    const originalCols = Array.from(row.children);
+
+    // Find the first matching card column for each user language preference.
+    const userLangToCol = new Map();
+    for (const lang of userLangs) {
+      const langBase = lang.split('-')[0];
+      const card = row.querySelector(`[id="${lang}"]`) || row.querySelector(`[id="${langBase}"]`);
+      if (card) {
+        const col = card.closest('.col-12');
+        if (col && col.parentElement === row) {
+          userLangToCol.set(lang, col);
+        }
+      }
+    }
+    if (!userLangToCol.size) return;
+
+    // Deduplicate: keep one entry per unique column in navigator.languages priority order.
+    const uniqueUserCols = [];
+    const seenCols = new Set();
+    for (const lang of userLangs) {
+      const col = userLangToCol.get(lang);
+      if (col && !seenCols.has(col)) {
+        const cardEl = col.querySelector('[id]');
+        if (!cardEl) continue;
+        uniqueUserCols.push({ cardId: cardEl.id, col });
+        seenCols.add(col);
+      }
+    }
+
+    // localStorage helpers – store the set of explicitly unpinned card IDs.
+    const LS_KEY = 'dashboard-unpinned';
+    function getUnpinned() {
+      try { return new Set(JSON.parse(localStorage.getItem(LS_KEY) || '[]')); }
+      catch { return new Set(); }
+    }
+    function saveUnpinned(set) {
+      try { localStorage.setItem(LS_KEY, JSON.stringify([...set])); }
+      catch {}
+    }
+
+    // SVG icons: filled = pinned, outline = unpinned.
+    const PIN_FILL = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375l-.334.334a.5.5 0 0 1-.707 0l-2.19-2.189-2.51 2.51a.5.5 0 0 1-.707-.707l2.51-2.51-2.19-2.189a.5.5 0 0 1 0-.707l.334-.334c.68-.681 1.666-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146"/></svg>`;
+    const PIN_OUTLINE = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375l-.334.334a.5.5 0 0 1-.707 0l-2.19-2.189-2.51 2.51a.5.5 0 0 1-.707-.707l2.51-2.51-2.19-2.189a.5.5 0 0 1 0-.707l.334-.334c.68-.681 1.666-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146"/><path d="M9.243 3c-.1.2-.24.643-.24 1.22 0 .956.248 2.01 1.196 2.58L6.847 9.027l-.255-.043c-.567-.094-1.366-.283-2.069.057L9.24 13.75c.34-.703.15-1.502.057-2.07l-.043-.254L12.574 8.08c.572.946 1.624 1.195 2.579 1.195.577 0 1.02-.14 1.22-.24L9.243 3z"/></svg>`;
+
+    // Inject pin button into each matching card.
+    for (const { cardId, col } of uniqueUserCols) {
+      const card = col.querySelector('.card');
+      const btn = document.createElement('button');
+      btn.className = 'pin-btn';
+      btn.dataset.cardId = cardId;
+      btn.innerHTML = `<span class="pin-icon-pinned">${PIN_FILL}</span><span class="pin-icon-unpinned">${PIN_OUTLINE}</span>`;
+      card.appendChild(btn);
+
+      btn.addEventListener('click', function () {
+        const unpinned = getUnpinned();
+        if (unpinned.has(cardId)) {
+          unpinned.delete(cardId);
+        } else {
+          unpinned.add(cardId);
+        }
+        saveUnpinned(unpinned);
+        reorder();
+      });
+    }
+
+    function reorder() {
+      const unpinned = getUnpinned();
+
+      // Pinned user-language columns in navigator.languages priority order.
+      const pinnedCols = uniqueUserCols
+        .filter(({ cardId }) => !unpinned.has(cardId))
+        .map(({ col }) => col);
+
+      // Remaining columns in original server-side sort order.
+      const pinnedSet = new Set(pinnedCols);
+      const restCols = originalCols.filter(col => !pinnedSet.has(col));
+
+      [...pinnedCols, ...restCols].forEach(col => row.appendChild(col));
+
+      // Sync button appearance and accessible label.
+      for (const { cardId, col } of uniqueUserCols) {
+        const btn = col.querySelector('.pin-btn');
+        if (btn) {
+          const isPinned = !unpinned.has(cardId);
+          btn.classList.toggle('unpinned', !isPinned);
+          btn.title = isPinned ? 'Unpin' : 'Pin';
+          btn.setAttribute('aria-label', isPinned ? 'Unpin this language card' : 'Pin this language card');
+        }
+      }
+    }
+
+    reorder();
+  })();
 </script>
 {% endblock %}
