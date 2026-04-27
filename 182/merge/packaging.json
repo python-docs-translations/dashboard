@@ -4,8 +4,8 @@
       "code": "si",
       "name": "si"
     },
-    "completion": 0.0224517287831163,
-    "change": 0.0224517287831163,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u0dc3\u0dd2\u0d82\u0dc4\u0dbd"
   },
@@ -14,8 +14,8 @@
       "code": "pl",
       "name": "pl"
     },
-    "completion": 0.5163897620116749,
-    "change": 0.5163897620116749,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "polski"
   },
@@ -24,8 +24,8 @@
       "code": "vi",
       "name": "vi"
     },
-    "completion": 3.055493147607279,
-    "change": 3.055493147607279,
+    "completion": 0.03,
+    "change": 0.03,
     "built": false,
     "translated_name": "Ti\u1ebfng Vi\u1ec7t"
   },
@@ -34,8 +34,8 @@
       "code": "fa",
       "name": "fa"
     },
-    "completion": 0.33982782057091077,
-    "change": 0.33982782057091077,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u0641\u0627\u0631\u0633\u06cc"
   },
@@ -44,8 +44,8 @@
       "code": "mr",
       "name": "mr"
     },
-    "completion": 0.0224517287831163,
-    "change": 0.0224517287831163,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u092e\u0930\u093e\u0920\u0940"
   },
@@ -64,8 +64,8 @@
       "code": "fr",
       "name": "fr"
     },
-    "completion": 12.048479087452472,
-    "change": 12.048479087452472,
+    "completion": 0.11,
+    "change": 0.11,
     "built": false,
     "translated_name": "fran\u00e7ais"
   },
@@ -84,8 +84,8 @@
       "code": "ar",
       "name": "ar"
     },
-    "completion": 0.0898069151324652,
-    "change": 0.0898069151324652,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629"
   },
@@ -94,8 +94,8 @@
       "code": "ru",
       "name": "ru"
     },
-    "completion": 87.01143946615825,
-    "change": 87.01143946615825,
+    "completion": 0.81,
+    "change": 0.81,
     "built": false,
     "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439"
   },
@@ -104,8 +104,8 @@
       "code": "kab",
       "name": "kab"
     },
-    "completion": 1.6629213483146068,
-    "change": 1.6629213483146068,
+    "completion": 0.01,
+    "change": 0.01,
     "built": false,
     "translated_name": "Taqbaylit"
   },
@@ -114,8 +114,8 @@
       "code": "zh-tw",
       "name": "zh-tw"
     },
-    "completion": 4.399907855332873,
-    "change": 4.399907855332873,
+    "completion": 0.04,
+    "change": 0.04,
     "built": false,
     "translated_name": "\u4e2d\u6587 (\u7e41\u9ad4, \u53f0\u7063)"
   },
@@ -124,8 +124,8 @@
       "code": "zh-cn",
       "name": "zh-cn"
     },
-    "completion": 26.882445493369296,
-    "change": 26.882445493369296,
+    "completion": 0.26,
+    "change": 0.26,
     "built": false,
     "translated_name": "\u4e2d\u6587 (\u7b80\u4f53, \u4e2d\u56fd)"
   },
@@ -134,8 +134,8 @@
       "code": "id",
       "name": "id"
     },
-    "completion": 0.6352087114337568,
-    "change": 0.6352087114337568,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "Indonesia"
   },
@@ -144,8 +144,8 @@
       "code": "ja",
       "name": "Japanese"
     },
-    "completion": 98.98967220475977,
-    "change": 98.98967220475977,
+    "completion": 0.98,
+    "change": 0.98,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e"
   },
@@ -154,8 +154,8 @@
       "code": "ro",
       "name": "ro"
     },
-    "completion": 0.0673854447439353,
-    "change": 0.0673854447439353,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "rom\u00e2n\u0103"
   },
@@ -164,8 +164,8 @@
       "code": "de",
       "name": "de"
     },
-    "completion": 3.421708588261953,
-    "change": 3.421708588261953,
+    "completion": 0.03,
+    "change": 0.03,
     "built": false,
     "translated_name": "Deutsch"
   },
@@ -194,8 +194,8 @@
       "code": "ko",
       "name": "ko"
     },
-    "completion": 2.697142857142857,
-    "change": 2.697142857142857,
+    "completion": 0.02,
+    "change": 0.02,
     "built": false,
     "translated_name": "\ud55c\uad6d\uc5b4"
   },
@@ -204,8 +204,8 @@
       "code": "tr",
       "name": "tr"
     },
-    "completion": 0.4041311180960934,
-    "change": 0.4041311180960934,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "T\u00fcrk\u00e7e"
   },
@@ -214,8 +214,8 @@
       "code": "pt-br",
       "name": "Brazilian Portuguese"
     },
-    "completion": 64.49925261584454,
-    "change": 64.49925261584454,
+    "completion": 0.58,
+    "change": 0.58,
     "built": true,
     "translated_name": "portugu\u00eas (Brasil)"
   },
@@ -224,8 +224,8 @@
       "code": "da",
       "name": "da"
     },
-    "completion": 0.1122586439155815,
-    "change": 0.1122586439155815,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "dansk"
   },
@@ -234,8 +234,8 @@
       "code": "uk",
       "name": "uk"
     },
-    "completion": 10.216346153846153,
-    "change": 10.216346153846153,
+    "completion": 0.09,
+    "change": 0.09,
     "built": false,
     "translated_name": "\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430"
   },
@@ -244,8 +244,8 @@
       "code": "cs",
       "name": "cs"
     },
-    "completion": 0.17965416573096787,
-    "change": 0.17965416573096787,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u010de\u0161tina"
   },
@@ -254,8 +254,8 @@
       "code": "mk",
       "name": "mk"
     },
-    "completion": 0.1573387278040009,
-    "change": 0.1573387278040009,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438"
   },
@@ -264,8 +264,8 @@
       "code": "hi",
       "name": "hi"
     },
-    "completion": 0.2949852507374631,
-    "change": 0.2949852507374631,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u0939\u093f\u0928\u094d\u0926\u0940"
   },
@@ -294,8 +294,8 @@
       "code": "sk",
       "name": "sk"
     },
-    "completion": 1.659468060922937,
-    "change": 1.659468060922937,
+    "completion": 0.01,
+    "change": 0.01,
     "built": false,
     "translated_name": "sloven\u010dina"
   },
@@ -304,8 +304,8 @@
       "code": "eo",
       "name": "eo"
     },
-    "completion": 88.65526802218115,
-    "change": 88.65526802218115,
+    "completion": 0.86,
+    "change": 0.86,
     "built": false,
     "translated_name": "Esperanto"
   },
@@ -314,8 +314,8 @@
       "code": "es",
       "name": "es"
     },
-    "completion": 6.735508096690918,
-    "change": 6.735508096690918,
+    "completion": 0.06,
+    "change": 0.06,
     "built": false,
     "translated_name": "espa\u00f1ol"
   },
@@ -324,8 +324,8 @@
       "code": "ta",
       "name": "ta"
     },
-    "completion": 84.94445757504135,
-    "change": 84.94445757504135,
+    "completion": 0.8,
+    "change": 0.8,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd"
   },
@@ -344,8 +344,8 @@
       "code": "lzh",
       "name": "lzh"
     },
-    "completion": 0.11230907457322552,
-    "change": 0.11230907457322552,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": ""
   }
