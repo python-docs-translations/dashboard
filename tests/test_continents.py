@@ -18,17 +18,14 @@ class TestGetLanguageContinents(unittest.TestCase):
         self.assertIn('South America', continents)
 
     def test_region_variant_matches_base(self):
-        # zh-cn and zh-tw both resolve to the same base ('zh') → Asia
+        # zh-cn → country CN → Asia; zh-tw → country TW → Asia
         self.assertEqual(get_language_continents('zh-cn'), ['Asia'])
         self.assertEqual(get_language_continents('zh-tw'), ['Asia'])
 
     def test_pt_br_variant(self):
-        # pt-br resolves to 'pt' which is official across Africa, Asia, Europe,
-        # and South America
-        continents = get_language_continents('pt-br')
-        self.assertIn('Europe', continents)
-        self.assertIn('South America', continents)
-        self.assertIn('Africa', continents)
+        # pt-br has region subtag 'br' (Brazil) → South America only, NOT
+        # Africa/Asia/Europe where Portuguese is also spoken
+        self.assertEqual(get_language_continents('pt-br'), ['South America'])
 
     def test_unknown_language_returns_empty(self):
         self.assertEqual(get_language_continents('xx-unknown'), [])

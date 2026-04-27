@@ -78,12 +78,8 @@
 
       const selected = this.dataset.continent;
       document.querySelectorAll('.language-entry').forEach(entry => {
-        if (selected === 'all') {
-          entry.style.display = '';
-        } else {
-          const continents = entry.dataset.continents ? entry.dataset.continents.split(',') : [];
-          entry.style.display = continents.includes(selected) ? '' : 'none';
-        }
+        const continents = entry.dataset.continents ? entry.dataset.continents.split(',') : [];
+        entry.classList.toggle('d-none', selected !== 'all' && !continents.includes(selected));
       });
     });
   });
