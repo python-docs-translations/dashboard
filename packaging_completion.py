@@ -21,10 +21,7 @@ CHANGE_PERIOD = '30 days ago'
 
 # Some locale directory names use script subtags instead of region codes.
 # These explicit overrides take priority over the generic conversion.
-RTD_CODE_TO_LOCALE_OVERRIDES: dict[str, str] = {
-    'zh-cn': 'zh_Hans',
-    'zh-tw': 'zh_Hant',
-}
+RTD_CODE_TO_LOCALE_OVERRIDES: dict[str, str] = {'zh-cn': 'zh_Hans', 'zh-tw': 'zh_Hant'}
 LOCALE_TO_RTD_CODE_OVERRIDES: dict[str, str] = {
     v: k for k, v in RTD_CODE_TO_LOCALE_OVERRIDES.items()
 }
@@ -56,9 +53,7 @@ def get_built_languages() -> dict[str, Language]:
     while url:
         resp = urllib3.request('GET', url)
         if resp.status != 200:
-            logging.error(
-                'ReadTheDocs API returned status %d for %s', resp.status, url
-            )
+            logging.error('ReadTheDocs API returned status %d for %s', resp.status, url)
             break
         data = json.loads(resp.data)
         for result in data['results']:
@@ -125,18 +120,14 @@ def get_packaging_progress(clones_dir: Path) -> list[PackagingProjectData]:
                     rtd_code = locale.lower()
             language = Language(code=rtd_code, name=rtd_code)
 
-        translated_name = (
-            translated_names.babel_autonym(language.code) or ''
-        )
+        translated_name = translated_names.babel_autonym(language.code) or ''
 
         # Calculate change over last 30 days
         change = 0.0
         if completion:
             try:
                 commit = next(
-                    clone_repo.iter_commits(
-                        'HEAD', max_count=1, before=CHANGE_PERIOD
-                    )
+                    clone_repo.iter_commits('HEAD', max_count=1, before=CHANGE_PERIOD)
                 )
             except StopIteration:
                 pass
