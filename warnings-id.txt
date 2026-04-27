@@ -1,4 +1,3 @@
-distributing/index.rst:14: WARNING: inconsistent references in translated message. original: ['`Python Packaging User Guide`_', '`packaging Python projects`_'], translated: ['`Panduan Pengguna Pengemasan Python`_', '`pengemasan proyek Python`_'] [i18n.inconsistent_references]
 bugs.rst:37: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Dokumentasi *bugs*`_'] [i18n.inconsistent_references]
 c-api/allocation.rst:17: WARNING: inconsistent term references in translated message. original: [':meth:`~object.__init__`', ':c:member:`~PyTypeObject.tp_init`'], translated: [':meth:`~object.__init__`'] [i18n.inconsistent_references]
 c-api/arg.rst:126: WARNING: inconsistent term references in translated message. original: [':ref:`borrowed <c-arg-borrowed-buffer>`', ':exc:`ValueError`'], translated: [':exc:`ValueError`'] [i18n.inconsistent_references]
@@ -11,6 +10,7 @@ c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without 
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+distributing/index.rst:14: WARNING: inconsistent references in translated message. original: ['`Python Packaging User Guide`_', '`packaging Python projects`_'], translated: ['`Panduan Pengguna Pengemasan Python`_', '`pengemasan proyek Python`_'] [i18n.inconsistent_references]
 tutorial/datastructures.rst:406: WARNING: inconsistent term references in translated message. original: [':term:`immutable`', ':func:`namedtuples <collections.namedtuple>`', ':term:`mutable`'], translated: [':term:`immutable`', ':term:`mutable`'] [i18n.inconsistent_references]
 tutorial/datastructures.rst:706: WARNING: inconsistent term references in translated message. original: [':ref:`walrus operator <why-can-t-i-use-an-assignment-in-an-expression>`'], translated: [] [i18n.inconsistent_references]
 tutorial/inputoutput.rst:523: WARNING: inconsistent term references in translated message. original: [':func:`~json.dumps`', ':func:`~json.dump`', ':term:`text file`', ':term:`text file`'], translated: [':func:`~json.dumps`', ':func:`~json.dump`', ':term:`text file`'] [i18n.inconsistent_references]
