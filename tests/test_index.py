@@ -23,11 +23,13 @@ class testIndex(unittest.TestCase):
             built=True,
             translated_name='Polish',
             contribution_link='https://example.com',
+            continents=['Europe'],
         )
         env.get_template('index.html.jinja').render(
             completion_progress=[language_project_data],
             generation_time=datetime.now(),
             duration=100,
+            all_continents=['Europe'],
         )
 
 
