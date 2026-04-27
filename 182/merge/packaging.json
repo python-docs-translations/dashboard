@@ -1,0 +1,352 @@
+[
+  {
+    "language": {
+      "code": "si",
+      "name": "si"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "\u0dc3\u0dd2\u0d82\u0dc4\u0dbd"
+  },
+  {
+    "language": {
+      "code": "pl",
+      "name": "pl"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "polski"
+  },
+  {
+    "language": {
+      "code": "vi",
+      "name": "vi"
+    },
+    "completion": 0.03,
+    "change": 0.03,
+    "built": false,
+    "translated_name": "Ti\u1ebfng Vi\u1ec7t"
+  },
+  {
+    "language": {
+      "code": "fa",
+      "name": "fa"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "\u0641\u0627\u0631\u0633\u06cc"
+  },
+  {
+    "language": {
+      "code": "mr",
+      "name": "mr"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "\u092e\u0930\u093e\u0920\u0940"
+  },
+  {
+    "language": {
+      "code": "th",
+      "name": "th"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "\u0e44\u0e17\u0e22"
+  },
+  {
+    "language": {
+      "code": "fr",
+      "name": "fr"
+    },
+    "completion": 0.11,
+    "change": 0.11,
+    "built": false,
+    "translated_name": "fran\u00e7ais"
+  },
+  {
+    "language": {
+      "code": "gl",
+      "name": "gl"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "galego"
+  },
+  {
+    "language": {
+      "code": "ar",
+      "name": "ar"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629"
+  },
+  {
+    "language": {
+      "code": "ru",
+      "name": "ru"
+    },
+    "completion": 0.81,
+    "change": 0.81,
+    "built": false,
+    "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439"
+  },
+  {
+    "language": {
+      "code": "kab",
+      "name": "kab"
+    },
+    "completion": 0.01,
+    "change": 0.01,
+    "built": false,
+    "translated_name": "Taqbaylit"
+  },
+  {
+    "language": {
+      "code": "zh-tw",
+      "name": "zh-tw"
+    },
+    "completion": 0.04,
+    "change": 0.04,
+    "built": false,
+    "translated_name": "\u4e2d\u6587 (\u7e41\u9ad4, \u53f0\u7063)"
+  },
+  {
+    "language": {
+      "code": "zh-cn",
+      "name": "zh-cn"
+    },
+    "completion": 0.26,
+    "change": 0.26,
+    "built": false,
+    "translated_name": "\u4e2d\u6587 (\u7b80\u4f53, \u4e2d\u56fd)"
+  },
+  {
+    "language": {
+      "code": "id",
+      "name": "id"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "Indonesia"
+  },
+  {
+    "language": {
+      "code": "ja",
+      "name": "Japanese"
+    },
+    "completion": 0.98,
+    "change": 0.98,
+    "built": true,
+    "translated_name": "\u65e5\u672c\u8a9e"
+  },
+  {
+    "language": {
+      "code": "ro",
+      "name": "ro"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "rom\u00e2n\u0103"
+  },
+  {
+    "language": {
+      "code": "de",
+      "name": "de"
+    },
+    "completion": 0.03,
+    "change": 0.03,
+    "built": false,
+    "translated_name": "Deutsch"
+  },
+  {
+    "language": {
+      "code": "sai",
+      "name": "sai"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": ""
+  },
+  {
+    "language": {
+      "code": "ars",
+      "name": "ars"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": ""
+  },
+  {
+    "language": {
+      "code": "ko",
+      "name": "ko"
+    },
+    "completion": 0.02,
+    "change": 0.02,
+    "built": false,
+    "translated_name": "\ud55c\uad6d\uc5b4"
+  },
+  {
+    "language": {
+      "code": "tr",
+      "name": "tr"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "T\u00fcrk\u00e7e"
+  },
+  {
+    "language": {
+      "code": "pt-br",
+      "name": "Brazilian Portuguese"
+    },
+    "completion": 0.58,
+    "change": 0.58,
+    "built": true,
+    "translated_name": "portugu\u00eas (Brasil)"
+  },
+  {
+    "language": {
+      "code": "da",
+      "name": "da"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "dansk"
+  },
+  {
+    "language": {
+      "code": "uk",
+      "name": "uk"
+    },
+    "completion": 0.09,
+    "change": 0.09,
+    "built": false,
+    "translated_name": "\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430"
+  },
+  {
+    "language": {
+      "code": "cs",
+      "name": "cs"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "\u010de\u0161tina"
+  },
+  {
+    "language": {
+      "code": "mk",
+      "name": "mk"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "\u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438"
+  },
+  {
+    "language": {
+      "code": "hi",
+      "name": "hi"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "\u0939\u093f\u0928\u094d\u0926\u0940"
+  },
+  {
+    "language": {
+      "code": "gmh",
+      "name": "gmh"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": ""
+  },
+  {
+    "language": {
+      "code": "frc",
+      "name": "frc"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": ""
+  },
+  {
+    "language": {
+      "code": "sk",
+      "name": "sk"
+    },
+    "completion": 0.01,
+    "change": 0.01,
+    "built": false,
+    "translated_name": "sloven\u010dina"
+  },
+  {
+    "language": {
+      "code": "eo",
+      "name": "eo"
+    },
+    "completion": 0.86,
+    "change": 0.86,
+    "built": false,
+    "translated_name": "Esperanto"
+  },
+  {
+    "language": {
+      "code": "es",
+      "name": "es"
+    },
+    "completion": 0.06,
+    "change": 0.06,
+    "built": false,
+    "translated_name": "espa\u00f1ol"
+  },
+  {
+    "language": {
+      "code": "ta",
+      "name": "ta"
+    },
+    "completion": 0.8,
+    "change": 0.8,
+    "built": false,
+    "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd"
+  },
+  {
+    "language": {
+      "code": "fil",
+      "name": "fil"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": "Filipino"
+  },
+  {
+    "language": {
+      "code": "lzh",
+      "name": "lzh"
+    },
+    "completion": 0.0,
+    "change": 0.0,
+    "built": false,
+    "translated_name": ""
+  }
+]
