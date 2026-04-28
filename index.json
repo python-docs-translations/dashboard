@@ -264,7 +264,7 @@
     "core_completion": 99.823241665639,
     "completion": 97.05402151558681,
     "core_change": 0.3473506803140509,
-    "change": 0.6565863324426999,
+    "change": 0.6544061896675828,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
