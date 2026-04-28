@@ -3,36 +3,62 @@
 {% block main %}
 <div>
   <div class="row">
-    {% for project in completion_progress | sort(attribute='core_completion,completion') | reverse %}
+    {% for card in combined_progress %}
       <div class="col-12 col-sm-6 col-md-4 d-flex">
-        <div id="{{ project.language.code }}" class="card shadow mb-3 w-100">
+        <div id="{{ card.language.code }}" class="card shadow mb-3 w-100">
           <div class="card-body">
-            <h3 class="card-title"><a href="#{{ project.language.code }}">{{ project.language.name }}</a></h3>
-            <h5 class="card-subtitle mb-2 text-muted">{{ project.translated_name }}</h5>
+            <h3 class="card-title"><a href="#{{ card.language.code }}">{{ card.language.name }}</a></h3>
+            <h5 class="card-subtitle mb-2 text-muted">{{ card.translated_name }}</h5>
 
+            {% if card.cpython %}
+            <h6 class="mt-2">CPython docs</h6>
             <ul class="links-row">
-              {% if project.built %}
+              {% if card.cpython.built %}
               <li>
-                <a href="https://docs.python.org/{{ project.language.code }}/3/" aria-label="View {{ project.language.name }} documentation">View</a>
+                <a href="https://docs.python.org/{{ card.language.code }}/3/" aria-label="View {{ card.language.name }} documentation">View</a>
               </li>
               <li>
-                <a href="https://analytics.python.org/docs.python.org?f=contains,page,/{{ project.language.code }}/" aria-label="View {{ project.language.name }} documentation analytics">Analytics</a>
+                <a href="https://analytics.python.org/docs.python.org?f=contains,page,/{{ card.language.code }}/" aria-label="View {{ card.language.name }} documentation analytics">Analytics</a>
               </li>
               {% endif %}
               <li>
-                <a href="{{ project.contribution_link }}" aria-label="Contribute to {{ project.language.name }} translation">
+                <a href="{{ card.cpython.contribution_link }}" aria-label="Contribute to {{ card.language.name }} translation">
                   Contribute
                 </a>
               </li>
             </ul>
-            {# core progress bar #}
-            {% with width=project.core_completion, change=project.core_change, kind='core' %}
+            {# CPython core progress bar #}
+            {% with width=card.cpython.core_completion, change=card.cpython.core_change, kind='core' %}
             {% include 'progress_bar.html.jinja' %}
             {% endwith %}
-            {# overall progress bar #}
-            {% with width=project.completion, change=project.change, kind='overall', extra_container_class='mt-1' %}
+            {# CPython overall progress bar #}
+            {% with width=card.cpython.completion, change=card.cpython.change, kind='overall', extra_container_class='mt-1' %}
             {% include 'progress_bar.html.jinja' %}
             {% endwith %}
+            {% endif %}
+
+            {% if card.packaging %}
+            <h6 class="mt-2">packaging.python.org</h6>
+            <ul class="links-row">
+              {% if card.packaging.built %}
+              <li>
+                <a href="https://packaging.python.org/{{ card.language.code }}/latest/" aria-label="View {{ card.language.name }} packaging documentation">View</a>
+              </li>
+              <li>
+                <a href="https://analytics.python.org/packaging.python.org?f=contains,page,/{{ card.language.code }}/" aria-label="View {{ card.language.name }} packaging documentation analytics">Analytics</a>
+              </li>
+              {% endif %}
+              <li>
+                <a href="https://hosted.weblate.org/engage/pypa/" aria-label="Contribute to {{ card.language.name }} packaging translation">
+                  Contribute
+                </a>
+              </li>
+            </ul>
+            {# packaging.python.org progress bar #}
+            {% with width=card.packaging.completion, change=card.packaging.change, kind='overall', extra_container_class='mt-1' %}
+            {% include 'progress_bar.html.jinja' %}
+            {% endwith %}
+            {% endif %}
           </div>
         </div>
       </div>
