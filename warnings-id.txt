@@ -17,4 +17,4 @@ tutorial/inputoutput.rst:523: WARNING: inconsistent term references in translate
 library/functions.rst:1049: WARNING: inconsistent term references in translated message. original: [':class:`int`', ':meth:`base.__index__ <object.__index__>`', ':meth:`base.__int__ <object.__int__>`', ':meth:`base.__index__\n<object.__index__>`'], translated: [':class:`int`', ':meth:`base.__index__ <object.__index__>`'] [i18n.inconsistent_references]
 whatsnew/3.7.rst:84: WARNING: inconsistent references in translated message. original: ['`has been declared`_'], translated: ['`telah dideklarasikan`_'] [i18n.inconsistent_references]
 c-api/arg.rst:700:<translated>:1: WARNING: term not in glossary: 'referensi kuat' [ref.term]
-tutorial/stdlib2.rst:251:<translated>:1: WARNING: unknown keyword: 'garbage collection' [ref.keyword]
+tutorial/stdlib2.rst:250:<translated>:1: WARNING: unknown keyword: 'garbage collection' [ref.keyword]
