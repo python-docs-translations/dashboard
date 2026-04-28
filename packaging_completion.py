@@ -15,9 +15,6 @@ RTD_TRANSLATIONS_URL = (
     'https://app.readthedocs.org/api/v3/projects/'
     'python-packaging-user-guide/translations/'
 )
-WEBLATE_PROJECT_LANGUAGES_URL = (
-    'https://hosted.weblate.org/api/projects/pypa/languages/'
-)
 PACKAGING_REPO_URL = 'https://github.com/pypa/packaging.python.org.git'
 PACKAGING_REPO_BRANCH = 'translation/source'
 CHANGE_PERIOD = '30 days ago'
@@ -55,34 +52,6 @@ def _rtd_code_to_locale(code: str) -> str:
     if len(parts) == 2:
         return f'{parts[0]}_{parts[1].upper()}'
     return code
-
-
-def get_weblate_language_names() -> dict[str, str]:
-    """Return a mapping of normalised language code → English name from Weblate.
-
-    Falls back gracefully to an empty dict on any network / API error.
-    """
-    names: dict[str, str] = {}
-    url: str | None = WEBLATE_PROJECT_LANGUAGES_URL
-    while url:
-        try:
-            resp = urllib3.request('GET', url)
-        except Exception:
-            logging.exception('Failed to fetch Weblate language list from %s', url)
-            break
-        if resp.status != 200:
-            logging.error('Weblate API returned status %d for %s', resp.status, url)
-            break
-        data = json.loads(resp.data)
-        for result in data.get('results', []):
-            lang = result.get('language', {})
-            code = lang.get('code', '')
-            name = lang.get('name', '')
-            if code and name:
-                normalised = LOCALE_CODE_NORMALISATION.get(code, code)
-                names[normalised] = name
-        url = data.get('next')
-    return names
 
 
 def get_built_languages() -> dict[str, Language]:
@@ -137,7 +106,6 @@ def get_packaging_progress(clones_dir: Path) -> list[PackagingProjectData]:
         clone_repo.git.pull()
 
     built_languages = get_built_languages()
-    weblate_names = get_weblate_language_names()
 
     locales = _get_locale_dirs(repo_path)
     po_paths = {
@@ -190,15 +158,11 @@ def get_packaging_progress(clones_dir: Path) -> list[PackagingProjectData]:
                     rtd_code = f'{parts[0]}-{parts[1].lower()}'
                 else:
                     rtd_code = normalised_locale.lower()
-            # Use Weblate name if available, else babel, else the code itself.
-            lang_name = weblate_names.get(rtd_code) or rtd_code
+            # Use babel for name; fall back to the code string itself.
+            lang_name = translated_names.babel_autonym(rtd_code) or rtd_code
             language = Language(code=rtd_code, name=lang_name)
 
-        translated_name = (
-            translated_names.babel_autonym(language.code)
-            or weblate_names.get(language.code)
-            or ''
-        )
+        translated_name = translated_names.babel_autonym(language.code) or ''
 
         results.append(
             PackagingProjectData(

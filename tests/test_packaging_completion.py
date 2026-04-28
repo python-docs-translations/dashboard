@@ -1,4 +1,3 @@
-import json
 import unittest
 import tempfile
 import support
@@ -109,70 +108,6 @@ class TestPoCompletion(unittest.TestCase):
             self.assertEqual(result, 33)
         finally:
             tmp_path.unlink(missing_ok=True)
-
-
-class TestGetWeblateLanguageNames(unittest.TestCase):
-    def test_parses_response(self):
-        """get_weblate_language_names correctly parses a mocked API response."""
-        import unittest.mock as mock
-
-        fake_response = {
-            'count': 2,
-            'next': None,
-            'previous': None,
-            'results': [
-                {'language': {'code': 'hi', 'name': 'Hindi'}},
-                {'language': {'code': 'bn', 'name': 'Bengali'}},
-            ],
-        }
-
-        class FakeResp:
-            status = 200
-            data = json.dumps(fake_response).encode()
-
-        with mock.patch(
-            'packaging_completion.urllib3.request', return_value=FakeResp()
-        ):
-            names = packaging_completion.get_weblate_language_names()
-
-        self.assertEqual(names['hi'], 'Hindi')
-        self.assertEqual(names['bn'], 'Bengali')
-
-    def test_normalises_hi_in_to_hi(self):
-        """hi_IN code from Weblate is normalised to hi before being stored."""
-        import unittest.mock as mock
-
-        fake_response = {
-            'count': 1,
-            'next': None,
-            'previous': None,
-            'results': [{'language': {'code': 'hi_IN', 'name': 'Hindi (India)'}}],
-        }
-
-        class FakeResp:
-            status = 200
-            data = json.dumps(fake_response).encode()
-
-        with mock.patch(
-            'packaging_completion.urllib3.request', return_value=FakeResp()
-        ):
-            names = packaging_completion.get_weblate_language_names()
-
-        # hi_IN should be normalised to hi
-        self.assertIn('hi', names)
-        self.assertNotIn('hi_IN', names)
-
-    def test_returns_empty_on_error(self):
-        """get_weblate_language_names returns empty dict on network failure."""
-        import unittest.mock as mock
-
-        with mock.patch(
-            'packaging_completion.urllib3.request',
-            side_effect=Exception('network error'),
-        ):
-            names = packaging_completion.get_weblate_language_names()
-
-        self.assertEqual(names, {})
 
 
 if __name__ == '__main__':
