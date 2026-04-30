@@ -16,6 +16,10 @@
                     <a href="https://docs.python.org/{{ project.language.code }}/3/"
                        aria-label="View {{ project.language.name }} documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/{{ project.language.code }}/"
+                       aria-label="View {{ project.language.name }} documentation analytics">Analytics</a>
+                  </li>
                 {% endif %}
                 <li>
                   <a href="{{ project.contribution_link }}"
@@ -37,11 +41,11 @@
     </div>
   </div>
   <p class="text-center">
-    Last updated {{ generation_time.strftime("on %A %-d %B %Y at %-H:%M:%S %Z") }} (in {{ duration // 60 }} minutes and {{ duration % 60 }} seconds).
+    Last updated {{ generation_time.strftime("on %A %-d %B %Y at %-H:%M:%S %Z") }} (in {{ duration // 60 }} minutes and
+    {{ duration % 60 }} seconds).
     <br />
-    You can find the scripts used to generate this website <a href="https://github.com/python-docs-translations/dashboard/">on GitHub</a>.
-    <br />
-    You can download the data on this page in <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
+    You can download the data on this page in
+    <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
   </p>
 {% endblock main %}
 {% block extrascript %}
