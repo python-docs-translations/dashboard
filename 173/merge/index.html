@@ -12,19 +12,26 @@
           rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
           crossorigin="anonymous">
-    <link href="style.css?version=2" rel="stylesheet">
+    <link href="style.css?version=3" rel="stylesheet">
   </head>
   <body>
+    <script>
+      function applyTheme(t) {
+        document.documentElement.setAttribute('data-bs-theme', t);
+        document.documentElement.classList.toggle('dark', t === 'dark');
+      }
+      applyTheme(localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    </script>
     <header>
       <nav class="navbar navbar-expand-md fixed-top">
         <div class="container-fluid">
           <div class="navbar-brand">
             <a href="./">
               <img src="logo.png" alt="Python logo" width="31.07" height="32">
-              <span>Translation Dashboard</span>
+              <span class="navbar-title-text">Translation Dashboard</span>
             </a>
           </div>
-          <div class="navbar-light bg-light">
+          <div>
             <button class="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
@@ -72,6 +79,43 @@
                 </a>
               </li>
             </ul>
+            <div class="d-flex justify-content-center justify-content-md-end ms-md-auto">
+              <a href="https://github.com/python-docs-translations/dashboard"
+                 class="btn btn-sm theme-toggle-btn"
+                 aria-label="GitHub repository"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="22"
+                     height="22"
+                     fill="currentColor"
+                     class="bi bi-github"
+                     viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                </svg>
+              </a>
+              <button id="theme-toggle"
+                      class="btn btn-sm theme-toggle-btn"
+                      type="button"
+                      aria-label="Toggle dark mode">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="22"
+                     height="22"
+                     fill="currentColor"
+                     class="bi bi-brightness-high theme-icon-light"
+                     viewBox="0 0 16 16">
+                  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="22"
+                     height="22"
+                     fill="currentColor"
+                     class="bi bi-moon-fill theme-icon-dark"
+                     viewBox="0 0 16 16">
+                  <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -94,6 +138,10 @@
                     <a href="https://docs.python.org/zh-cn/3/"
                        aria-label="View Simplified Chinese documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/zh-cn/"
+                       aria-label="View Simplified Chinese documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://explore.transifex.com/python-doc/python-newest/"
@@ -105,16 +153,16 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 99.2662775402828%;background: linear-gradient(to left, #94cf96 0.3602559059193715%, #4caf50 0.3602559059193715%);">
-    core: 99.27%
+       style="width: 100.0%;background: linear-gradient(to left, #94cf96 0.524109014675048%, #4caf50 0.524109014675048%);">
+    core: 100.00%
     
-      (+0.36%)
+      (+0.52%)
     
   </div>
   <div class="progress-bar outer-label">
-    core: 99.27%
+    core: 100.00%
     
-      (+0.36%)
+      (+0.52%)
     
   </div>
 </div>
@@ -124,77 +172,16 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 96.82847967128946%;background: linear-gradient(to left, #94cf96 0.36450428795399176%, #4caf50 0.36450428795399176%);">
-    overall: 96.83%
-    
-      (+0.35%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 96.83%
-    
-      (+0.35%)
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 d-flex">
-          <div id="pt-br" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h3 class="card-title">
-                <a href="#pt-br">Brazilian Portuguese</a>
-              </h3>
-              <h5 class="card-subtitle mb-2 text-muted">Português brasileiro</h5>
-              <ul class="links-row">
-                
-                  <li>
-                    <a href="https://docs.python.org/pt-br/3/"
-                       aria-label="View Brazilian Portuguese documentation">View</a>
-                  </li>
-                
-                <li>
-                  <a href="https://python.org.br/traducao/"
-                     aria-label="Contribute to Brazilian Portuguese translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 99.11624465636304%;background: linear-gradient(to left, #94cf96 0.6407332144486376%, #4caf50 0.6407332144486376%);">
-    core: 99.12%
+       style="width: 97.07935004623408%;background: linear-gradient(to left, #94cf96 0.6629456544249127%, #4caf50 0.6629456544249127%);">
+    overall: 97.08%
     
       (+0.64%)
     
   </div>
   <div class="progress-bar outer-label">
-    core: 99.12%
+    overall: 97.08%
     
       (+0.64%)
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 60.184559900056854%;background: linear-gradient(to left, #94cf96 0.7437061710372963%, #4caf50 0.7437061710372963%);">
-    overall: 60.18%
-    
-      (+0.45%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 60.18%
-    
-      (+0.45%)
     
   </div>
 </div>
@@ -216,6 +203,10 @@
                     <a href="https://docs.python.org/pl/3/"
                        aria-label="View Polish documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/pl/"
+                       aria-label="View Polish documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://explore.transifex.com/python-doc/python-newest/"
@@ -227,16 +218,16 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 98.94154883262085%;background: linear-gradient(to left, #94cf96 0.03323570345443639%, #4caf50 0.03323570345443639%);">
-    core: 98.94%
+       style="width: 100.0%;background: linear-gradient(to left, #94cf96 1.3729600855017026%, #4caf50 1.3729600855017026%);">
+    core: 100.00%
     
-      (+0.03%)
+      (+1.37%)
     
   </div>
   <div class="progress-bar outer-label">
-    core: 98.94%
+    core: 100.00%
     
-      (+0.03%)
+      (+1.37%)
     
   </div>
 </div>
@@ -246,12 +237,146 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 5.516774394361634%;background: linear-gradient(to left, #94cf96 0.11548106110598784%, #4caf50 0.11548106110598784%);">
-    overall: 5.52%
+       style="width: 5.527380449914889%;background: linear-gradient(to left, #94cf96 0.9279344420342267%, #4caf50 0.9279344420342267%);">
+    overall: 5.53%
+    
+      (+0.05%)
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 5.52%
+    overall: 5.53%
+    
+      (+0.05%)
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div id="zh-tw" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="#zh-tw">Traditional Chinese</a>
+              </h3>
+              <h5 class="card-subtitle mb-2 text-muted">繁體中文</h5>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/zh-tw/3/"
+                       aria-label="View Traditional Chinese documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/zh-tw/"
+                       aria-label="View Traditional Chinese documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
+                     aria-label="Contribute to Traditional Chinese translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 99.823241665639%;background: linear-gradient(to left, #94cf96 8.147339812222038%, #4caf50 8.147339812222038%);">
+    core: 99.82%
+    
+      (+8.13%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 99.82%
+    
+      (+8.13%)
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 33.94369190839898%;background: linear-gradient(to left, #94cf96 5.300255646797103%, #4caf50 5.300255646797103%);">
+    overall: 33.94%
+    
+      (+1.80%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 33.94%
+    
+      (+1.80%)
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div id="pt-br" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="#pt-br">Brazilian Portuguese</a>
+              </h3>
+              <h5 class="card-subtitle mb-2 text-muted">Português brasileiro</h5>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/pt-br/3/"
+                       aria-label="View Brazilian Portuguese documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/pt-br/"
+                       aria-label="View Brazilian Portuguese documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://python.org.br/traducao/"
+                     aria-label="Contribute to Brazilian Portuguese translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 99.60743207136105%;background: linear-gradient(to left, #94cf96 0.8088644945628675%, #4caf50 0.8088644945628675%);">
+    core: 99.61%
+    
+      (+0.81%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 99.61%
+    
+      (+0.81%)
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 59.97581415289888%;background: linear-gradient(to left, #94cf96 0.12398680166553412%, #4caf50 0.12398680166553412%);">
+    overall: 59.98%
+    
+      (+0.07%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 59.98%
+    
+      (+0.07%)
     
   </div>
 </div>
@@ -279,16 +404,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 98.28798092732654%;background: linear-gradient(to left, #94cf96 0.05854923363236068%, #4caf50 0.05854923363236068%);">
-    core: 98.29%
-    
-      (+0.06%)
+       style="width: 97.97344514325647%;background-color: #4caf50;">
+    core: 97.97%
     
   </div>
   <div class="progress-bar outer-label">
-    core: 98.29%
-    
-      (+0.06%)
+    core: 97.97%
     
   </div>
 </div>
@@ -298,12 +419,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 3.7473219762677497%;background: linear-gradient(to left, #94cf96 0.04533605349654675%, #4caf50 0.04533605349654675%);">
-    overall: 3.75%
+       style="width: 3.7281568919067034%;background-color: #4caf50;">
+    overall: 3.73%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 3.75%
+    overall: 3.73%
     
   </div>
 </div>
@@ -325,6 +446,10 @@
                     <a href="https://docs.python.org/el/3/"
                        aria-label="View Greek documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/el/"
+                       aria-label="View Greek documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md"
@@ -336,12 +461,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 97.84815850049326%;background-color: #4caf50;">
-    core: 97.85%
+       style="width: 97.53360463682328%;background-color: #4caf50;">
+    core: 97.53%
     
   </div>
   <div class="progress-bar outer-label">
-    core: 97.85%
+    core: 97.53%
     
   </div>
 </div>
@@ -351,16 +476,16 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 12.568008606080683%;background: linear-gradient(to left, #94cf96 6.796917996697843%, #4caf50 6.796917996697843%);">
-    overall: 12.57%
+       style="width: 12.615214314824156%;background: linear-gradient(to left, #94cf96 0.8405136205448266%, #4caf50 0.8405136205448266%);">
+    overall: 12.62%
     
-      (+0.85%)
+      (+0.11%)
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 12.57%
+    overall: 12.62%
     
-      (+0.85%)
+      (+0.11%)
     
   </div>
 </div>
@@ -381,6 +506,10 @@
                   <li>
                     <a href="https://docs.python.org/ko/3/"
                        aria-label="View Korean documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/ko/"
+                       aria-label="View Korean documentation analytics">Analytics</a>
                   </li>
                 
                 <li>
@@ -408,16 +537,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 46.94404458872936%;background: linear-gradient(to left, #94cf96 0.027382963663312783%, #4caf50 0.027382963663312783%);">
-    overall: 46.94%
-    
-      (+0.01%)
+       style="width: 46.679229845659286%;background: linear-gradient(to left, #94cf96 0.006093213197641195%, #4caf50 0.006093213197641195%);">
+    overall: 46.68%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 46.94%
-    
-      (+0.01%)
+    overall: 46.68%
     
   </div>
 </div>
@@ -439,6 +564,10 @@
                     <a href="https://docs.python.org/ro/3/"
                        aria-label="View Romanian documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/ro/"
+                       aria-label="View Romanian documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://github.com/python/python-docs-ro"
@@ -450,12 +579,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 94.73240710292667%;background-color: #4caf50;">
-    core: 94.73%
+       style="width: 94.41772516134337%;background-color: #4caf50;">
+    core: 94.42%
     
   </div>
   <div class="progress-bar outer-label">
-    core: 94.73%
+    core: 94.42%
     
   </div>
 </div>
@@ -465,12 +594,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 2.85625527489523%;background-color: #4caf50;">
-    overall: 2.86%
+       style="width: 2.8412617575977412%;background-color: #4caf50;">
+    overall: 2.84%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 2.86%
+    overall: 2.84%
     
   </div>
 </div>
@@ -492,6 +621,10 @@
                     <a href="https://docs.python.org/ja/3/"
                        aria-label="View Japanese documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/ja/"
+                       aria-label="View Japanese documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://explore.transifex.com/python-doc/python-newest/"
@@ -503,16 +636,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 93.07793488983887%;background: linear-gradient(to left, #94cf96 0.7220455749867482%, #4caf50 0.7220455749867482%);">
-    core: 93.08%
-    
-      (+0.67%)
+       style="width: 92.88444937723517%;background-color: #4caf50;">
+    core: 92.88%
     
   </div>
   <div class="progress-bar outer-label">
-    core: 93.08%
-    
-      (+0.67%)
+    core: 92.88%
     
   </div>
 </div>
@@ -522,77 +651,16 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 43.5846655951538%;background: linear-gradient(to left, #94cf96 1.0709487913021083%, #4caf50 1.0709487913021083%);">
-    overall: 43.58%
+       style="width: 43.370358954546475%;background: linear-gradient(to left, #94cf96 0.028204057754094798%, #4caf50 0.028204057754094798%);">
+    overall: 43.37%
     
-      (+0.47%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 43.58%
-    
-      (+0.47%)
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 d-flex">
-          <div id="zh-tw" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h3 class="card-title">
-                <a href="#zh-tw">Traditional Chinese</a>
-              </h3>
-              <h5 class="card-subtitle mb-2 text-muted">繁體中文</h5>
-              <ul class="links-row">
-                
-                  <li>
-                    <a href="https://docs.python.org/zh-tw/3/"
-                       aria-label="View Traditional Chinese documentation">View</a>
-                  </li>
-                
-                <li>
-                  <a href="https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
-                     aria-label="Contribute to Traditional Chinese translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 92.00509700756331%;background: linear-gradient(to left, #94cf96 0.9873564758968959%, #4caf50 0.9873564758968959%);">
-    core: 92.01%
-    
-      (+0.91%)
+      (+0.01%)
     
   </div>
   <div class="progress-bar outer-label">
-    core: 92.01%
+    overall: 43.37%
     
-      (+0.91%)
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 32.42715866460131%;background: linear-gradient(to left, #94cf96 4.922311785706278%, #4caf50 4.922311785706278%);">
-    overall: 32.43%
-    
-      (+1.60%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 32.43%
-    
-      (+1.60%)
+      (+0.01%)
     
   </div>
 </div>
@@ -613,6 +681,10 @@
                   <li>
                     <a href="https://docs.python.org/fr/3/"
                        aria-label="View French documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/fr/"
+                       aria-label="View French documentation analytics">Analytics</a>
                   </li>
                 
                 <li>
@@ -640,12 +712,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 27.22061333493514%;background-color: #4caf50;">
-    overall: 27.22%
+       style="width: 27.050119930070565%;background-color: #4caf50;">
+    overall: 27.05%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 27.22%
+    overall: 27.05%
     
   </div>
 </div>
@@ -667,6 +739,10 @@
                     <a href="https://docs.python.org/es/3/"
                        aria-label="View Spanish documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/es/"
+                       aria-label="View Spanish documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html"
@@ -678,16 +754,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 85.97242035187827%;background: linear-gradient(to left, #94cf96 21.883060924380818%, #4caf50 21.883060924380818%);">
+       style="width: 85.97242035187827%;background-color: #4caf50;">
     core: 85.97%
-    
-      (+18.81%)
     
   </div>
   <div class="progress-bar outer-label">
     core: 85.97%
-    
-      (+18.81%)
     
   </div>
 </div>
@@ -697,12 +769,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 55.25487262284628%;background: linear-gradient(to left, #94cf96 -0.01218874769951716%, #4caf50 -0.01218874769951716%);">
-    overall: 55.25%
+       style="width: 55.15263304183958%;background-color: #4caf50;">
+    overall: 55.15%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 55.25%
+    overall: 55.15%
     
   </div>
 </div>
@@ -723,6 +795,10 @@
                   <li>
                     <a href="https://docs.python.org/tr/3/"
                        aria-label="View Turkish documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/tr/"
+                       aria-label="View Turkish documentation analytics">Analytics</a>
                   </li>
                 
                 <li>
@@ -750,12 +826,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 4.391139814226609%;background-color: #4caf50;">
-    overall: 4.39%
+       style="width: 4.33401417845328%;background-color: #4caf50;">
+    overall: 4.33%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 4.39%
+    overall: 4.33%
     
   </div>
 </div>
@@ -777,6 +853,10 @@
                     <a href="https://docs.python.org/it/3/"
                        aria-label="View Italian documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/it/"
+                       aria-label="View Italian documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://github.com/python/python-docs-it"
@@ -788,12 +868,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 69.1240545873068%;background-color: #4caf50;">
-    core: 69.12%
+       style="width: 68.97891231964483%;background-color: #4caf50;">
+    core: 68.98%
     
   </div>
   <div class="progress-bar outer-label">
-    core: 69.12%
+    core: 68.98%
     
   </div>
 </div>
@@ -803,12 +883,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 3.108722151131854%;background-color: #4caf50;">
-    overall: 3.11%
+       style="width: 3.0966846496170777%;background-color: #4caf50;">
+    overall: 3.10%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 3.11%
+    overall: 3.10%
     
   </div>
 </div>
@@ -830,6 +910,10 @@
                     <a href="https://docs.python.org/uk/3/"
                        aria-label="View Ukrainian documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/uk/"
+                       aria-label="View Ukrainian documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://explore.transifex.com/python-doc/python-newest/"
@@ -841,12 +925,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 55.2388194672805%;background-color: #4caf50;">
-    core: 55.24%
+       style="width: 55.09310642495992%;background-color: #4caf50;">
+    core: 55.09%
     
   </div>
   <div class="progress-bar outer-label">
-    core: 55.24%
+    core: 55.09%
     
   </div>
 </div>
@@ -856,12 +940,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 43.41878132703774%;background-color: #4caf50;">
-    overall: 43.42%
+       style="width: 43.182576501215046%;background-color: #4caf50;">
+    overall: 43.18%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 43.42%
+    overall: 43.18%
     
   </div>
 </div>
@@ -883,6 +967,10 @@
                     <a href="https://docs.python.org/id/3/"
                        aria-label="View Indonesian documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/id/"
+                       aria-label="View Indonesian documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan"
@@ -894,12 +982,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 49.031979611969746%;background-color: #4caf50;">
-    core: 49.03%
+       style="width: 48.88601142763185%;background-color: #4caf50;">
+    core: 48.89%
     
   </div>
   <div class="progress-bar outer-label">
-    core: 49.03%
+    core: 48.89%
     
   </div>
 </div>
@@ -909,16 +997,68 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 3.261500712622798%;background: linear-gradient(to left, #94cf96 0.35718272128586104%, #4caf50 0.35718272128586104%);">
-    overall: 3.26%
-    
-      (+0.01%)
+       style="width: 3.241593843690637%;background: linear-gradient(to left, #94cf96 0.003736152883376447%, #4caf50 0.003736152883376447%);">
+    overall: 3.24%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 3.26%
+    overall: 3.24%
     
-      (+0.01%)
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div id="vi" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="#vi">Vietnamese</a>
+              </h3>
+              <h5 class="card-subtitle mb-2 text-muted">Tiếng Việt</h5>
+              <ul class="links-row">
+                
+                <li>
+                  <a href="https://github.com/tamnd/python-docs-vi"
+                     aria-label="Contribute to Vietnamese translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 45.977720228552634%;background: linear-gradient(to left, #94cf96 100.0%, #4caf50 100.0%);">
+    core: 45.98%
+    
+      (+45.98%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 45.98%
+    
+      (+45.98%)
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 1.4205703233479414%;background: linear-gradient(to left, #94cf96 100.0%, #4caf50 100.0%);">
+    overall: 1.42%
+    
+      (+1.42%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 1.42%
+    
+      (+1.42%)
     
   </div>
 </div>
@@ -940,6 +1080,10 @@
                     <a href="https://docs.python.org/sv/3/"
                        aria-label="View Swedish documentation">View</a>
                   </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/sv/"
+                       aria-label="View Swedish documentation analytics">Analytics</a>
+                  </li>
                 
                 <li>
                   <a href="https://github.com/python/python-docs-sv"
@@ -951,16 +1095,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 45.79907925024663%;background: linear-gradient(to left, #94cf96 99.91024950637228%, #4caf50 99.91024950637228%);">
-    core: 45.80%
-    
-      (+45.76%)
+       style="width: 45.733136021704276%;background-color: #4caf50;">
+    core: 45.73%
     
   </div>
   <div class="progress-bar outer-label">
-    core: 45.80%
-    
-      (+45.76%)
+    core: 45.73%
     
   </div>
 </div>
@@ -970,16 +1110,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 2.747223076722384%;background: linear-gradient(to left, #94cf96 92.80003533724987%, #4caf50 92.80003533724987%);">
-    overall: 2.75%
-    
-      (+2.55%)
+       style="width: 2.736864160195812%;background-color: #4caf50;">
+    overall: 2.74%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 2.75%
-    
-      (+2.55%)
+    overall: 2.74%
     
   </div>
 </div>
@@ -1007,12 +1143,12 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 27.108681354817495%;background-color: #4caf50;">
-    core: 27.11%
+       style="width: 27.060467792987215%;background-color: #4caf50;">
+    core: 27.06%
     
   </div>
   <div class="progress-bar outer-label">
-    core: 27.11%
+    core: 27.06%
     
   </div>
 </div>
@@ -1022,7 +1158,7 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 0.8342753059970136%;background-color: #4caf50;">
+       style="width: 0.8308813421994588%;background-color: #4caf50;">
     overall: 0.83%
     
   </div>
@@ -1055,7 +1191,7 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 8.025731667214732%;background-color: #4caf50;">
+       style="width: 8.0260615776709%;background-color: #4caf50;">
     core: 8.03%
     
   </div>
@@ -1070,12 +1206,68 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 0.2564713977054092%;background-color: #4caf50;">
+       style="width: 0.25566511382305335%;background-color: #4caf50;">
     overall: 0.26%
     
   </div>
   <div class="progress-bar outer-label">
     overall: 0.26%
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div id="ta" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="#ta">Tamil</a>
+              </h3>
+              <h5 class="card-subtitle mb-2 text-muted">தமிழ்</h5>
+              <ul class="links-row">
+                
+                <li>
+                  <a href="https://github.com/Terminal-Joint/python-docs-ta"
+                     aria-label="Contribute to Tamil translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 1.5045011715377976%;background: linear-gradient(to left, #94cf96 90.7103825136612%, #4caf50 90.7103825136612%);">
+    core: 1.50%
+    
+      (+1.36%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 1.50%
+    
+      (+1.36%)
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 0.05546879305114089%;background: linear-gradient(to left, #94cf96 75.65502183406113%, #4caf50 75.65502183406113%);">
+    overall: 0.06%
+    
+      (+0.04%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 0.06%
+    
+      (+0.04%)
     
   </div>
 </div>
@@ -1103,7 +1295,7 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 0.5466951660637948%;background-color: #4caf50;">
+       style="width: 0.5467176388375057%;background-color: #4caf50;">
     core: 0.55%
     
   </div>
@@ -1118,7 +1310,7 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 0.016139435010560407%;background-color: #4caf50;">
+       style="width: 0.016107749947165368%;background-color: #4caf50;">
     overall: 0.02%
     
   </div>
@@ -1151,7 +1343,7 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 0.051381124630055904%;background-color: #4caf50;">
+       style="width: 0.051383236732848274%;background-color: #4caf50;">
     core: 0.05%
     
   </div>
@@ -1166,7 +1358,7 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 0.001516864192721843%;background-color: #4caf50;">
+       style="width: 0.001513886273229828%;background-color: #4caf50;">
     overall: 0.00%
     
   </div>
@@ -1214,16 +1406,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 0.01650348241681365%;background: linear-gradient(to left, #94cf96 65.0735294117647%, #4caf50 65.0735294117647%);">
+       style="width: 0.016471082652740526%;background-color: #4caf50;">
     overall: 0.02%
-    
-      (+0.01%)
     
   </div>
   <div class="progress-bar outer-label">
     overall: 0.02%
-    
-      (+0.01%)
     
   </div>
 </div>
@@ -1244,6 +1432,10 @@
                   <li>
                     <a href="https://docs.python.org/bn-in/3/"
                        aria-label="View Bengali documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/bn-in/"
+                       aria-label="View Bengali documentation analytics">Analytics</a>
                   </li>
                 
                 <li>
@@ -1271,7 +1463,7 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 0.014440547114711945%;background-color: #4caf50;">
+       style="width: 0.014412197321147962%;background-color: #4caf50;">
     overall: 0.01%
     
   </div>
@@ -1336,24 +1528,29 @@
     </div>
   </div>
   <p class="text-center">
-    Last updated on Tuesday 24 March 2026 at 7:32:55 UTC (in 9 minutes and 26 seconds).
+    Last updated on Thursday 30 April 2026 at 8:10:13 UTC (in 10 minutes and
+    26 seconds).
     <br />
-    You can find the scripts used to generate this website <a href="https://github.com/python-docs-translations/dashboard/">on GitHub</a>.
-    <br />
-    You can download the data on this page in <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
+    You can download the data on this page in
+    <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
   </p>
 
     </main>
   </body>
   <script>
-  function padnavbar() {
-    const navbar = document.querySelector('.navbar.fixed-top');
-    if (navbar) {
-      document.body.style.paddingTop = (navbar.offsetHeight + 10) + 'px';
+    function padnavbar() {
+      const navbar = document.querySelector('.navbar.fixed-top');
+      if (navbar) {
+        document.body.style.paddingTop = (navbar.offsetHeight + 10) + 'px';
+      }
     }
-  }
-  window.addEventListener('load', padnavbar);
-  window.addEventListener('resize', padnavbar);
+    window.addEventListener('load', padnavbar);
+    window.addEventListener('resize', padnavbar);
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      var next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
   </script>
   <script src="https://code.jquery.com/jquery-4.0.0.slim.min.js" integrity="sha256-8DGpv13HIm+5iDNWw1XqxgFB4mj+yOKFNb+tHBZOowc=" crossorigin="anonymous">
   </script>
