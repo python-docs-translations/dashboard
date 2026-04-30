@@ -19,7 +19,7 @@ library/sys_path_init.po:230: Extra backtick in role: ':data:`sys.path``' (role-
 library/http.server.po:531: Extra backtick in role: ':func:`time.time``' (role-with-extra-backtick)
 library/winsound.po:43: Extra backtick in role: ':exc:`RuntimeError``' (role-with-extra-backtick)
 library/zoneinfo.po:473: Extra backtick in role: ':func:`repr``' (role-with-extra-backtick)
-library/importlib.metadata.po:849: Extra backtick in role: ':py:class:`pathlib.Path``' (role-with-extra-backtick)
+library/importlib.metadata.po:826: Extra backtick in role: ':py:class:`pathlib.Path``' (role-with-extra-backtick)
 library/secrets.po:112: Extra backtick in role: ':func:`hmac.compare_digest``' (role-with-extra-backtick)
 library/concurrent.futures.po:921: Extra backtick in role: ':meth:`Future.running``' (role-with-extra-backtick)
 library/ctypes.po:1016: Extra backtick in role: ':func:`GetLastError``' (role-with-extra-backtick)
