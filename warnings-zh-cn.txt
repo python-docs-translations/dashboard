@@ -165,7 +165,6 @@ build/NEWS:10052: WARNING: inconsistent term references in translated message. o
 whatsnew/changelog.rst:10082:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 build/NEWS:10200: WARNING: inconsistent term references in translated message. original: [':meth:`asyncio.asyncio.run_coroutine_threadsafe`', ':class:`CancelledError`', ':class:`TimeoutError`', ':class:`InvalidStateError`'], translated: [':meth:`asyncio.asyncio.run_coroutine_threadsafe`', ':class:`TimeoutError`', ':class:`InvalidStateError`'] [i18n.inconsistent_references]
 build/NEWS:10225: WARNING: inconsistent term references in translated message. original: [':mod:`ssl`'], translated: [] [i18n.inconsistent_references]
-build/NEWS:11145: WARNING: inconsistent term references in translated message. original: [':func:`format`', ':class:`~decimal.Decimal`'], translated: [':class:`~decimal.Decimal`', ':func:`format`', '`INF`'] [i18n.inconsistent_references]
 build/NEWS:11152: WARNING: inconsistent term references in translated message. original: [':class:`fractions.Fraction`', ':class:`complex`'], translated: [':class:`complex`'] [i18n.inconsistent_references]
 whatsnew/changelog.rst:11676:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/changelog.rst:12485:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
