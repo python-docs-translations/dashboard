@@ -262,7 +262,7 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.14",
     "core_completion": 100.0,
-    "completion": 97.09248924842836,
+    "completion": 97.08637403662709,
     "core_change": 0.524109014675048,
     "change": 0.6663158997323251,
     "built": true,
