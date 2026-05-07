@@ -1,2 +1,1 @@
-glossary.po:69: trailing whitespace (trailing-whitespace)
-glossary.po:61: role missing opening tag colon ( Ref:`). (missing-space-before-role)
+glossary.po:58: trailing whitespace (trailing-whitespace)
