@@ -200,7 +200,7 @@
       "name": "Polish"
     },
     "repository": "python/python-docs-pl",
-    "branch": "3.14",
+    "branch": "3.15",
     "core_completion": 97.36404220779221,
     "completion": 5.222814045623205,
     "core_change": 1.355519480519476,
