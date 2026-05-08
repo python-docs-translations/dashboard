@@ -321,7 +321,7 @@ whatsnew/3.10.po:487: missing space before role (多くの:exc:`). (missing-spac
 whatsnew/2.1.po:919: missing backtick before hyperlink reference: 'Machine <https://web.archive.org/web/20090130140102/http://www.vex.net/parnassus/>`_'. (hyperlink-reference-missing-backtick)
 whatsnew/2.1.po:270: trailing whitespace (trailing-whitespace)
 whatsnew/2.4.po:36: trailing whitespace (trailing-whitespace)
-whatsnew/3.14.po:254: trailing whitespace (trailing-whitespace)
+whatsnew/3.14.po:255: trailing whitespace (trailing-whitespace)
 whatsnew/3.11.po:4366: trailing whitespace (trailing-whitespace)
 whatsnew/3.7.po:3757: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/2.6.po:257: trailing whitespace (trailing-whitespace)
