@@ -52,9 +52,9 @@
     "repository": "python/python-docs-el",
     "branch": "3.14",
     "core_completion": 94.92897727272727,
-    "completion": 12.046046248665098,
+    "completion": 12.504798665447515,
     "core_change": 0.0,
-    "change": 0.514242439048223,
+    "change": 0.97299485583064,
     "built": true,
     "translated_name": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac",
     "contribution_link": "https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md"
@@ -264,7 +264,7 @@
     "core_completion": 98.97118506493507,
     "completion": 91.82743650056887,
     "core_change": 2.1245941558441643,
-    "change": 1.091710930720069,
+    "change": 1.0788563238849065,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -323,8 +323,8 @@
     "branch": "3.14",
     "core_completion": 97.18952922077922,
     "completion": 31.229423904217473,
-    "core_change": 4.161931818181813,
-    "change": 1.4364005239560989,
+    "core_change": 0.02637987012987253,
+    "change": 1.203388962953138,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
