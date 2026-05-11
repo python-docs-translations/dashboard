@@ -1,3 +1,4 @@
+faq/programming.rst:22: WARNING: inconsistent term references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [] [i18n.inconsistent_references]
 bugs.rst:24: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`tutaj <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 bugs.rst:37: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Błędy w dokumentacji`_'] [i18n.inconsistent_references]
 bugs.rst:105: WARNING: inconsistent references in translated message. original: ["`Python Developer's Guide`_", '`core-mentorship mailing list`_'], translated: ["`Python Developer's Guide`_", '`lista mailingowa core-mentorship`_'] [i18n.inconsistent_references]

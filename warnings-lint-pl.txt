@@ -1,3 +1,4 @@
+faq/programming.po:56: role with no backticks: ' :mod:dokumentowany ' (role-without-backticks)
 c-api/init_config.po:33: role missing (escaped) space after role: ':c:func:`Py_InitializeFromInitConfig`P' (missing-space-after-role)
 c-api/init_config.po:166: inline literal missing (escaped) space after literal: '``NULL``w' (missing-space-after-literal)
 c-api/init_config.po:154: missing space before role ( przez:c:func:`). (missing-space-before-role)
