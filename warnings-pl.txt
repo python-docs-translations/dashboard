@@ -1,7 +1,36 @@
-faq/programming.rst:22: WARNING: inconsistent term references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [] [i18n.inconsistent_references]
 bugs.rst:24: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`tutaj <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 bugs.rst:37: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Błędy w dokumentacji`_'] [i18n.inconsistent_references]
 bugs.rst:105: WARNING: inconsistent references in translated message. original: ["`Python Developer's Guide`_", '`core-mentorship mailing list`_'], translated: ["`Python Developer's Guide`_", '`lista mailingowa core-mentorship`_'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:4: WARNING: inconsistent term references in translated message. original: [':c:func:`PyImport_ImportModule`'], translated: [] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:12: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Decode`', ':class:`str`', ':class:`bytes`'], translated: [':c:func:`PyCodec_Decode`', ':class:`bytes`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:17: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Encode`', ':class:`bytes`', ':class:`str`'], translated: [':c:func:`PyCodec_Encode`', ':class:`str`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:22: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get>`', ':data:`sys.path`'], translated: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:25: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`PyConfig_Get("prefix")\n<PyConfig_Get>`', ':data:`sys.prefix`', ':ref:`virtual environments\n<venv-def>`'], translated: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`Py Config Pobierz("prefix") <PyConfig_Get> ` (:data:`sys.prefix`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:30: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get>`', ':data:`sys.exec_prefix`', ':ref:`virtual environments <venv-def>`'], translated: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix`'] [i18n.inconsistent_references]
+deprecations/index.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/index.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/index.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+deprecations/index.rst:6:<translated>:3: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/index.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/index.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:4: WARNING: inconsistent term references in translated message. original: [':c:func:`PyImport_ImportModule`'], translated: [] [i18n.inconsistent_references]
+deprecations/index.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/index.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+deprecations/index.rst:6:<translated>:3: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:12: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Decode`', ':class:`str`', ':class:`bytes`'], translated: [':c:func:`PyCodec_Decode`', ':class:`bytes`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:17: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Encode`', ':class:`bytes`', ':class:`str`'], translated: [':c:func:`PyCodec_Encode`', ':class:`str`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:22: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get>`', ':data:`sys.path`'], translated: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path`'] [i18n.inconsistent_references]
+deprecations/index.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:25: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`PyConfig_Get("prefix")\n<PyConfig_Get>`', ':data:`sys.prefix`', ':ref:`virtual environments\n<venv-def>`'], translated: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:30: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get>`', ':data:`sys.exec_prefix`', ':ref:`virtual environments <venv-def>`'], translated: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix`'] [i18n.inconsistent_references]
+faq/programming.rst:22: WARNING: inconsistent term references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [] [i18n.inconsistent_references]
+howto/a-conceptual-overview-of-asyncio.rst:7: WARNING: inconsistent term references in translated message. original: [':ref:`HOWTO <how-tos>`', ':mod:`asyncio`'], translated: [] [i18n.inconsistent_references]
 c-api/init_config.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 c-api/init_config.rst:92:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init_config.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -14,10 +43,118 @@ c-api/init_config.rst:83: WARNING: inconsistent term references in translated me
 c-api/init_config.rst:92:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init_config.rst:650: WARNING: inconsistent term references in translated message. original: [':c:func:`Py_RunMain`'], translated: [] [i18n.inconsistent_references]
 c-api/init_config.rst:653: WARNING: inconsistent term references in translated message. original: [':ref:`Initialization, Finalization, and Threads <initialization>`'], translated: [] [i18n.inconsistent_references]
+whatsnew/3.12.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.12.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.12.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+whatsnew/3.12.rst:6:<translated>:3: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.12.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.12.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:4: WARNING: inconsistent term references in translated message. original: [':c:func:`PyImport_ImportModule`'], translated: [] [i18n.inconsistent_references]
+whatsnew/3.12.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.12.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+whatsnew/3.12.rst:6:<translated>:3: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:12: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Decode`', ':class:`str`', ':class:`bytes`'], translated: [':c:func:`PyCodec_Decode`', ':class:`bytes`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:17: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Encode`', ':class:`bytes`', ':class:`str`'], translated: [':c:func:`PyCodec_Encode`', ':class:`str`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:22: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get>`', ':data:`sys.path`'], translated: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path`'] [i18n.inconsistent_references]
+whatsnew/3.12.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:25: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`PyConfig_Get("prefix")\n<PyConfig_Get>`', ':data:`sys.prefix`', ':ref:`virtual environments\n<venv-def>`'], translated: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:30: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get>`', ':data:`sys.exec_prefix`', ':ref:`virtual environments <venv-def>`'], translated: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix`'] [i18n.inconsistent_references]
+whatsnew/3.13.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.13.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.13.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+whatsnew/3.13.rst:6:<translated>:3: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.13.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/3.13.rst:77: WARNING: inconsistent references in translated message. original: ['`been removed\n<whatsnew313-pep594_>`_'], translated: ['`zostało usuniętych <whatsnew313-pep594_>`_'] [i18n.inconsistent_references]
+whatsnew/3.13.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:4: WARNING: inconsistent term references in translated message. original: [':c:func:`PyImport_ImportModule`'], translated: [] [i18n.inconsistent_references]
+whatsnew/3.13.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.13.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+whatsnew/3.13.rst:6:<translated>:3: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:12: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Decode`', ':class:`str`', ':class:`bytes`'], translated: [':c:func:`PyCodec_Decode`', ':class:`bytes`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:17: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Encode`', ':class:`bytes`', ':class:`str`'], translated: [':c:func:`PyCodec_Encode`', ':class:`str`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:22: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get>`', ':data:`sys.path`'], translated: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path`'] [i18n.inconsistent_references]
+whatsnew/3.13.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:25: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`PyConfig_Get("prefix")\n<PyConfig_Get>`', ':data:`sys.prefix`', ':ref:`virtual environments\n<venv-def>`'], translated: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:30: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get>`', ':data:`sys.exec_prefix`', ':ref:`virtual environments <venv-def>`'], translated: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix`'] [i18n.inconsistent_references]
+whatsnew/3.14.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.14.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.14.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+whatsnew/3.14.rst:6:<translated>:3: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.14.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.14.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:4: WARNING: inconsistent term references in translated message. original: [':c:func:`PyImport_ImportModule`'], translated: [] [i18n.inconsistent_references]
+whatsnew/3.14.rst:6:<translated>:2: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+whatsnew/3.14.rst:6:<translated>:3: WARNING: Definition list ends without a blank line; unexpected unindent. [docutils]
+whatsnew/3.14.rst:6:<translated>:3: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:12: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Decode`', ':class:`str`', ':class:`bytes`'], translated: [':c:func:`PyCodec_Decode`', ':class:`bytes`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:17: WARNING: inconsistent term references in translated message. original: [':c:func:`PyCodec_Encode`', ':class:`bytes`', ':class:`str`'], translated: [':c:func:`PyCodec_Encode`', ':class:`str`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:22: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get>`', ':data:`sys.path`'], translated: [':c:func:`PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path`'] [i18n.inconsistent_references]
+whatsnew/3.14.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+deprecations/c-api-pending-removal-in-3.15.rst:25: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`PyConfig_Get("prefix")\n<PyConfig_Get>`', ':data:`sys.prefix`', ':ref:`virtual environments\n<venv-def>`'], translated: [':c:func:`PyConfig_Get("base_prefix") <PyConfig_Get>`', ':data:`sys.base_prefix`', ':c:func:`PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix`'] [i18n.inconsistent_references]
+deprecations/c-api-pending-removal-in-3.15.rst:30: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get>`', ':data:`sys.exec_prefix`', ':ref:`virtual environments <venv-def>`'], translated: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix`'] [i18n.inconsistent_references]
 library/functions.rst:1095: WARNING: inconsistent term references in translated message. original: [':term:`virtual <abstract base\nclass>`', ':ref:`types-union`', ':exc:`TypeError`', ':exc:`TypeError`'], translated: [':term:`wirtualną <abstrakcyjna klasa bazowa>`', ':ref:`types-union`', ':exc:`TypeError`', ':exc:`TypeError`'] [i18n.inconsistent_references]
 library/functions.rst:1435: WARNING: inconsistent term references in translated message. original: [':func:`locale.getencoding`', ':term:`text encoding`', ':mod:`codecs`'], translated: [':func:`locale.getencoding`', ':term:`kodowanie tekstu`', ':mod:`codecs`'] [i18n.inconsistent_references]
 library/functions.rst:1664: WARNING: inconsistent term references in translated message. original: [':func:`property`', ':term:`decorator`'], translated: [':func:`property`', ':term:`dekorator`'] [i18n.inconsistent_references]
 library/functions.rst:1955: WARNING: inconsistent term references in translated message. original: [':term:`decorator`', ':ref:`function`'], translated: [':term:`dekorator`', ':ref:`function`'] [i18n.inconsistent_references]
 c-api/init_config.rst:31:<translated>:1: WARNING: undefined label: 'tryb deweloperski python' [ref.ref]
 c-api/init_config.rst:80:<translated>:1: WARNING: undefined label: 'izolowana konfiguracja' [ref.ref]
+deprecations/c-api-pending-removal-in-3.15.rst:22:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path
+  ------------^
+deprecations/c-api-pending-removal-in-3.15.rst:25:<translated>:1: WARNING: Unparseable C cross-reference: 'Py Config Pobierz("prefix") <PyConfig_Get> ` (:data:`sys.prefix'
+Invalid C declaration: Expected end of definition. [error at 3]
+  Py Config Pobierz("prefix") <PyConfig_Get> ` (:data:`sys.prefix
+  ---^
+deprecations/c-api-pending-removal-in-3.15.rst:30:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix
+  ------------^
+deprecations/index.rst:22:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path
+  ------------^
+deprecations/index.rst:25:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix
+  ------------^
+deprecations/index.rst:30:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix
+  ------------^
+whatsnew/3.12.rst:22:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path
+  ------------^
+whatsnew/3.12.rst:25:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix
+  ------------^
+whatsnew/3.12.rst:30:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix
+  ------------^
+whatsnew/3.13.rst:22:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path
+  ------------^
+whatsnew/3.13.rst:25:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix
+  ------------^
+whatsnew/3.13.rst:30:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix
+  ------------^
+whatsnew/3.14.rst:22:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path
+  ------------^
+whatsnew/3.14.rst:25:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix
+  ------------^
+whatsnew/3.14.rst:30:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix'
+Invalid C declaration: Expected end of definition. [error at 12]
+  PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix
+  ------------^
