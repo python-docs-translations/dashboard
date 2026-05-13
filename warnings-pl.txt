@@ -1,8 +1,10 @@
 faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-faq/programming.rst:22: WARNING: inconsistent term references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [] [i18n.inconsistent_references]
+faq/programming.rst:291:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+faq/programming.rst:22: WARNING: inconsistent term references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [':mod:`pdb`', ':mod:`udokumentowany w Podręczniku Referencyjnym Biblioteki`', ':mod:`pdb`'] [i18n.inconsistent_references]
 faq/programming.rst:27: WARNING: inconsistent term references in translated message. original: [':mod:`idlelib`'], translated: [] [i18n.inconsistent_references]
 faq/programming.rst:43: WARNING: inconsistent references in translated message. original: [], translated: ['`Visual Studio Code<https://code.visualstudio.com/>`_'] [i18n.inconsistent_references]
 faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
+faq/programming.rst:291:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 faq/programming.rst:43: ERROR: Unknown target name: "visual studio code<https://code.visualstudio.com/>".
 
 Did you want to embed a URI or alias?
