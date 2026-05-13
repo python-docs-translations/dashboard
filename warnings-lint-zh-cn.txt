@@ -15,7 +15,6 @@ using/windows.po:1524: found an unbalanced inline literal markup. (unbalanced-in
 using/windows.po:1524: missing space before default role: '， 和``required_publisher_subject``'. (missing-space-before-default-role)
 using/configure.po:2046: trailing whitespace (trailing-whitespace)
 using/configure.po:2046: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-deprecations/pending-removal-in-3.15.po:206: missing space before role (The:class:`). (missing-space-before-role)
 deprecations/index.po:217: missing space before role (The:class:`). (missing-space-before-role)
 whatsnew/3.3.po:4411: trailing whitespace (trailing-whitespace)
 whatsnew/3.13.po:6791: trailing whitespace (trailing-whitespace)

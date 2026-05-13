@@ -1,5 +1,1 @@
-whatsnew/3.15.po:406: superfluous backtick in front of role (backtick-before-role)
-whatsnew/3.15.po:590: Extra backtick in role: ':mod:`profile``' (role-with-extra-backtick)
-whatsnew/3.15.po:523: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-whatsnew/3.15.po:523: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-whatsnew/3.15.po:523: missing space before default role: 'ndo``isinstance(arg, dict)``'. (missing-space-before-default-role)
+whatsnew/3.15.po:595: Extra backtick in role: ':mod:`profile``' (role-with-extra-backtick)
