@@ -192,6 +192,7 @@ c-api/init_config.po:166: found an unbalanced inline literal markup. (unbalanced
 c-api/init_config.po:166: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/typeobj.po:484: missing space before role (1:c:member:`). (missing-space-before-role)
 c-api/typeobj.po:1472: missing space before default role: "es>`' pole to powinno zostać zainicjowane zerem. W przypadku obiektów typu '<static-types> , pole to ma specjalne '<heap-types>`". (missing-space-before-default-role)
+c-api/conversion.po:188: role missing (escaped) space after role: ':func:`float`p' (missing-space-after-role)
 c-api/conversion.po:64: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/conversion.po:64: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/conversion.po:64: missing space before default role: "owy``'\\0'``". (missing-space-before-default-role)
