@@ -1,3 +1,16 @@
+faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
+faq/programming.rst:22: WARNING: inconsistent term references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [':mod:`pdb`', ':mod:`udokumentowany w Podręczniku Referencyjnym Biblioteki`', ':mod:`pdb`'] [i18n.inconsistent_references]
+faq/programming.rst:27: WARNING: inconsistent term references in translated message. original: [':mod:`idlelib`'], translated: [] [i18n.inconsistent_references]
+faq/programming.rst:43: WARNING: inconsistent references in translated message. original: [], translated: ['`Visual Studio Code<https://code.visualstudio.com/>`_'] [i18n.inconsistent_references]
+faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
+faq/programming.rst:302: WARNING: inconsistent term references in translated message. original: [':mod:`sys`', ':mod:`os`', ':mod:`argparse`', ':mod:`re`'], translated: [] [i18n.inconsistent_references]
+faq/programming.rst:456: WARNING: inconsistent term references in translated message. original: [':term:`mutable`'], translated: [':term:`mutowalny`'] [i18n.inconsistent_references]
+faq/programming.rst:498: WARNING: inconsistent term references in translated message. original: [':class:`list`', ':class:`dict`', ':class:`set`'], translated: [':class:`set`'] [i18n.inconsistent_references]
+faq/programming.rst:43: ERROR: Unknown target name: "visual studio code<https://code.visualstudio.com/>".
+
+Did you want to embed a URI or alias?
+The embedded reference must be preceded by whitespace. [docutils]
+howto/a-conceptual-overview-of-asyncio.rst:7: WARNING: inconsistent term references in translated message. original: [':ref:`HOWTO <how-tos>`', ':mod:`asyncio`'], translated: [] [i18n.inconsistent_references]
 bugs.rst:24: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`tutaj <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 bugs.rst:37: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Błędy w dokumentacji`_'] [i18n.inconsistent_references]
 bugs.rst:105: WARNING: inconsistent references in translated message. original: ["`Python Developer's Guide`_", '`core-mentorship mailing list`_'], translated: ["`Python Developer's Guide`_", '`lista mailingowa core-mentorship`_'] [i18n.inconsistent_references]
@@ -15,19 +28,6 @@ c-api/init_config.rst:83: WARNING: inconsistent term references in translated me
 c-api/init_config.rst:92:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init_config.rst:650: WARNING: inconsistent term references in translated message. original: [':c:func:`Py_RunMain`'], translated: [] [i18n.inconsistent_references]
 c-api/init_config.rst:653: WARNING: inconsistent term references in translated message. original: [':ref:`Initialization, Finalization, and Threads <initialization>`'], translated: [] [i18n.inconsistent_references]
-faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-faq/programming.rst:22: WARNING: inconsistent term references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [':mod:`pdb`', ':mod:`udokumentowany w Podręczniku Referencyjnym Biblioteki`', ':mod:`pdb`'] [i18n.inconsistent_references]
-faq/programming.rst:27: WARNING: inconsistent term references in translated message. original: [':mod:`idlelib`'], translated: [] [i18n.inconsistent_references]
-faq/programming.rst:43: WARNING: inconsistent references in translated message. original: [], translated: ['`Visual Studio Code<https://code.visualstudio.com/>`_'] [i18n.inconsistent_references]
-faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-faq/programming.rst:302: WARNING: inconsistent term references in translated message. original: [':mod:`sys`', ':mod:`os`', ':mod:`argparse`', ':mod:`re`'], translated: [] [i18n.inconsistent_references]
-faq/programming.rst:456: WARNING: inconsistent term references in translated message. original: [':term:`mutable`'], translated: [':term:`mutowalny`'] [i18n.inconsistent_references]
-faq/programming.rst:498: WARNING: inconsistent term references in translated message. original: [':class:`list`', ':class:`dict`', ':class:`set`'], translated: [':class:`set`'] [i18n.inconsistent_references]
-faq/programming.rst:43: ERROR: Unknown target name: "visual studio code<https://code.visualstudio.com/>".
-
-Did you want to embed a URI or alias?
-The embedded reference must be preceded by whitespace. [docutils]
-howto/a-conceptual-overview-of-asyncio.rst:7: WARNING: inconsistent term references in translated message. original: [':ref:`HOWTO <how-tos>`', ':mod:`asyncio`'], translated: [] [i18n.inconsistent_references]
 c-api/typeobj.rst:162:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
 c-api/typeobj.rst:122: WARNING: inconsistent term references in translated message. original: [':c:member:`~PyTypeObject.tp_init`'], translated: [] [i18n.inconsistent_references]
 c-api/typeobj.rst:162:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
