@@ -206,6 +206,7 @@ c-api/conversion.po:227: role missing (escaped) space after role: ':c:macro:`!IN
 c-api/conversion.po:64: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/conversion.po:64: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/typeobj.po:484: missing space before role (1:c:member:`). (missing-space-before-role)
+c-api/typeobj.po:1626: missing space before role ( cel:c:member:`). (missing-space-before-role)
 c-api/typeobj.po:1472: missing space before default role: "es>`' pole to powinno zostać zainicjowane zerem. W przypadku obiektów typu '<static-types> , pole to ma specjalne '<heap-types>`". (missing-space-before-default-role)
 c-api/init_config.po:154: missing space before role ( przez:c:func:`). (missing-space-before-role)
 c-api/init_config.po:33: role missing (escaped) space after role: ':c:func:`Py_InitializeFromInitConfig`P' (missing-space-after-role)
