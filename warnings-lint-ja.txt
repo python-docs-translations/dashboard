@@ -244,7 +244,6 @@ library/abc.po:45: role missing (escaped) space after role: ':term:`hashable`で
 library/abc.po:45: role missing (escaped) space after role: ':term:`mapping`で' (missing-space-after-role)
 library/imaplib.po:595: trailing whitespace (trailing-whitespace)
 library/imaplib.po:683: trailing whitespace (trailing-whitespace)
-library/select.po:481: trailing whitespace (trailing-whitespace)
 library/sched.po:172: trailing whitespace (trailing-whitespace)
 library/gc.po:127: trailing whitespace (trailing-whitespace)
 library/gc.po:257: trailing whitespace (trailing-whitespace)
