@@ -1,3 +1,16 @@
+faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
+faq/programming.rst:22: WARNING: inconsistent term references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [':mod:`pdb`', ':mod:`udokumentowany <pdb>`', ':mod:`pdb`'] [i18n.inconsistent_references]
+faq/programming.rst:27: WARNING: inconsistent term references in translated message. original: [':mod:`idlelib`'], translated: [] [i18n.inconsistent_references]
+faq/programming.rst:43: WARNING: inconsistent references in translated message. original: [], translated: ['`Visual Studio Code<https://code.visualstudio.com/>`_'] [i18n.inconsistent_references]
+faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
+faq/programming.rst:302: WARNING: inconsistent term references in translated message. original: [':mod:`sys`', ':mod:`os`', ':mod:`argparse`', ':mod:`re`'], translated: [] [i18n.inconsistent_references]
+faq/programming.rst:456: WARNING: inconsistent term references in translated message. original: [':term:`mutable`'], translated: [':term:`mutowalny`'] [i18n.inconsistent_references]
+faq/programming.rst:498: WARNING: inconsistent term references in translated message. original: [':class:`list`', ':class:`dict`', ':class:`set`'], translated: [':class:`set`'] [i18n.inconsistent_references]
+faq/programming.rst:43: ERROR: Unknown target name: "visual studio code<https://code.visualstudio.com/>".
+
+Did you want to embed a URI or alias?
+The embedded reference must be preceded by whitespace. [docutils]
+howto/a-conceptual-overview-of-asyncio.rst:7: WARNING: inconsistent term references in translated message. original: [':ref:`HOWTO <how-tos>`', ':mod:`asyncio`'], translated: [] [i18n.inconsistent_references]
 c-api/init_config.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 c-api/init_config.rst:92:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init_config.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -20,19 +33,6 @@ c-api/extension-modules.rst:14: WARNING: inconsistent term references in transla
 c-api/extension-modules.rst:43:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/extension-modules.rst:64: WARNING: inconsistent term references in translated message. original: [':c:macro:`Py_mod_create`', ':c:macro:`Py_mod_exec`'], translated: [':c:macro:`Py_mod_create`z :c:macro:`Py_mod_exec`'] [i18n.inconsistent_references]
 c-api/extension-modules.rst:129: WARNING: inconsistent term references in translated message. original: [':c:data:`Py_mod_abi`', ':c:data:`Py_mod_gil`', ':c:data:`Py_mod_multiple_interpreters`'], translated: [':c:data:`Py_mod_abi`', ':c:data:`Py_mod_gil`i :c:data:`Py_mod_multiple_interpreters`'] [i18n.inconsistent_references]
-faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-faq/programming.rst:22: WARNING: inconsistent term references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [':mod:`pdb`', ':mod:`udokumentowany w Podręczniku Referencyjnym Biblioteki`', ':mod:`pdb`'] [i18n.inconsistent_references]
-faq/programming.rst:27: WARNING: inconsistent term references in translated message. original: [':mod:`idlelib`'], translated: [] [i18n.inconsistent_references]
-faq/programming.rst:43: WARNING: inconsistent references in translated message. original: [], translated: ['`Visual Studio Code<https://code.visualstudio.com/>`_'] [i18n.inconsistent_references]
-faq/programming.rst:245:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
-faq/programming.rst:302: WARNING: inconsistent term references in translated message. original: [':mod:`sys`', ':mod:`os`', ':mod:`argparse`', ':mod:`re`'], translated: [] [i18n.inconsistent_references]
-faq/programming.rst:456: WARNING: inconsistent term references in translated message. original: [':term:`mutable`'], translated: [':term:`mutowalny`'] [i18n.inconsistent_references]
-faq/programming.rst:498: WARNING: inconsistent term references in translated message. original: [':class:`list`', ':class:`dict`', ':class:`set`'], translated: [':class:`set`'] [i18n.inconsistent_references]
-faq/programming.rst:43: ERROR: Unknown target name: "visual studio code<https://code.visualstudio.com/>".
-
-Did you want to embed a URI or alias?
-The embedded reference must be preceded by whitespace. [docutils]
-howto/a-conceptual-overview-of-asyncio.rst:7: WARNING: inconsistent term references in translated message. original: [':ref:`HOWTO <how-tos>`', ':mod:`asyncio`'], translated: [] [i18n.inconsistent_references]
 c-api/typeobj.rst:162:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
 c-api/typeobj.rst:122: WARNING: inconsistent term references in translated message. original: [':c:member:`~PyTypeObject.tp_init`'], translated: [] [i18n.inconsistent_references]
 c-api/typeobj.rst:162:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
@@ -369,7 +369,6 @@ whatsnew/3.14.rst:95:<translated>:1: WARNING: Inline interpreted text or phrase 
 whatsnew/3.14.rst:98:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/3.14.rst:98:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/3.14.rst:101:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
-whatsnew/3.14.rst:104:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/3.14.rst:107:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/3.14.rst:111:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/3.14.rst:114:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -418,8 +417,6 @@ whatsnew/3.14.rst:98:<translated>:1: WARNING: Inline interpreted text or phrase 
 whatsnew/3.14.rst:98:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/3.14.rst:101:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 deprecations/c-api-pending-removal-in-3.15.rst:101: WARNING: inconsistent term references in translated message. original: [':c:var:`Py_NoUserSiteDirectory`', ':c:member:`PyConfig.user_site_directory`', ':c:func:`PyConfig_Get("user_site_directory") <PyConfig_Get>`'], translated: [':c:var:`Py_NoUserSiteDirectory`', ':c:member:`PyConfig.user_site_directory`'] [i18n.inconsistent_references]
-whatsnew/3.14.rst:104:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
-deprecations/c-api-pending-removal-in-3.15.rst:104: WARNING: inconsistent term references in translated message. original: [':c:var:`Py_UnbufferedStdioFlag`', ':c:member:`PyConfig.buffered_stdio`', ':c:func:`PyConfig_Get("buffered_stdio") <PyConfig_Get>`'], translated: [':c:var:`Py_UnbufferedStdioFlag`', ':c:member:`PyConfig.buffered_stdio`'] [i18n.inconsistent_references]
 whatsnew/3.14.rst:107:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 deprecations/c-api-pending-removal-in-3.15.rst:107: WARNING: inconsistent term references in translated message. original: [':c:var:`Py_HashRandomizationFlag`', ':c:member:`PyConfig.use_hash_seed`', ':c:member:`PyConfig.hash_seed`', ':c:func:`PyConfig_Get("hash_seed") <PyConfig_Get>`'], translated: [':c:var:`Py_HashRandomizationFlag`', ':c:member:`PyConfig.use_hash_seed`', ':c:member:`PyConfig.hash_seed`'] [i18n.inconsistent_references]
 whatsnew/3.14.rst:111:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -427,7 +424,6 @@ deprecations/c-api-pending-removal-in-3.15.rst:111: WARNING: inconsistent term r
 whatsnew/3.14.rst:114:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 whatsnew/3.14.rst:114:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 deprecations/c-api-pending-removal-in-3.15.rst:114: WARNING: inconsistent term references in translated message. original: [':c:var:`Py_LegacyWindowsFSEncodingFlag`', ':c:member:`PyPreConfig.legacy_windows_fs_encoding`', ':c:func:`PyConfig_Get("legacy_windows_fs_encoding") <PyConfig_Get>`'], translated: [':c:var:`Py_LegacyWindowsFSEncodingFlag`', ':c:member:`PyPreConfig.legacy_windows_fs_encoding`'] [i18n.inconsistent_references]
-deprecations/c-api-pending-removal-in-3.15.rst:117: WARNING: inconsistent term references in translated message. original: [':c:var:`Py_LegacyWindowsStdioFlag`', ':c:member:`PyConfig.legacy_windows_stdio`', ':c:func:`PyConfig_Get("legacy_windows_stdio") <PyConfig_Get>`'], translated: [':c:var:`Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio`', ':c:func:`PyConfig_Get("legacy_windows_stdio")<PyConfig_Get>`'] [i18n.inconsistent_references]
 whatsnew/3.14.rst:120:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 deprecations/c-api-pending-removal-in-3.15.rst:120: WARNING: inconsistent term references in translated message. original: [':c:member:`PyConfig.filesystem_encoding`', ':c:func:`PyConfig_Get("filesystem_encoding") <PyConfig_Get>`'], translated: [':c:member:`PyConfig.filesystem_encoding`'] [i18n.inconsistent_references]
 whatsnew/3.14.rst:123:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -613,7 +609,3 @@ whatsnew/3.14.rst:77:<translated>:1: WARNING: Unparseable C cross-reference: 'Py
 Invalid C declaration: Expected end of definition. [error at 12]
   PyConfig_Get("interactive")
   ------------^
-whatsnew/3.14.rst:117:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio'
-Invalid C declaration: Expected end of definition. [error at 25]
-  Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio
-  -------------------------^
