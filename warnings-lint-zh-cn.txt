@@ -1,5 +1,5 @@
-whatsnew/3.12.po:5400: trailing whitespace (trailing-whitespace)
-whatsnew/3.12.po:5900: trailing whitespace (trailing-whitespace)
+whatsnew/3.12.po:5405: trailing whitespace (trailing-whitespace)
+whatsnew/3.12.po:5905: trailing whitespace (trailing-whitespace)
 whatsnew/changelog.po:1165: missing space before role ( 修正:mod:`). (missing-space-before-role)
 whatsnew/changelog.po:1592: missing space before role ( 尝试修改:mod:`). (missing-space-before-role)
 whatsnew/changelog.po:26323: role missing opening tag colon (gh:`). (missing-space-before-role)
