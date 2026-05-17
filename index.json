@@ -323,8 +323,8 @@
     "branch": "3.14",
     "core_completion": 97.18952922077922,
     "completion": 31.230453536093382,
-    "core_change": 0.02637987012987253,
-    "change": 0.044876937207167344,
+    "core_change": 0.0,
+    "change": 0.04173787683257402,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
