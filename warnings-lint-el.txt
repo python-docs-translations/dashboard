@@ -6,4 +6,7 @@ reference/lexical_analysis.po:1008: found an unbalanced inline literal markup. (
 reference/lexical_analysis.po:1008: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 using/android.po:137: missing space before role ( αρχείο:source:`). (missing-space-before-role)
 library/unittest.mock-examples.po:626: trailing whitespace (trailing-whitespace)
+library/datetime.po:492: inline literal missing (escaped) space after literal: '``timedelta.max``ε' (missing-space-after-literal)
+library/datetime.po:492: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/datetime.po:492: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/pyexpat.po:843: missing underscore after closing backtick in hyperlink (missing-underscore-after-hyperlink)
