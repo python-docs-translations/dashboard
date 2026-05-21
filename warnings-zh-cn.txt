@@ -89,5 +89,4 @@ build/NEWS:28435: WARNING: inconsistent term references in translated message. o
 build/NEWS:29451: WARNING: inconsistent term references in translated message. original: [':meth:`int.to_bytes`', ':meth:`int.from_bytes`'], translated: [] [i18n.inconsistent_references]
 build/NEWS:31500: WARNING: inconsistent term references in translated message. original: [], translated: ['`__init_subclass__`'] [i18n.inconsistent_references]
 build/NEWS:31502: WARNING: inconsistent term references in translated message. original: [], translated: ['`_json`'] [i18n.inconsistent_references]
-build/NEWS:31513: WARNING: inconsistent term references in translated message. original: [], translated: ['`bdist_wininst`', '`bdist_wheel`'] [i18n.inconsistent_references]
 whatsnew/changelog.rst:41370:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
