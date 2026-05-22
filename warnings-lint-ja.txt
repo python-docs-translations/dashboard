@@ -164,7 +164,7 @@ library/curses.po:221: found an unbalanced inline literal markup. (unbalanced-in
 library/curses.po:221: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/curses.po:761: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/curses.po:761: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-library/typing.po:1905: role missing opening tag colon ( ref:`). (missing-space-before-role)
+library/typing.po:1867: role missing opening tag colon ( ref:`). (missing-space-before-role)
 library/io.po:1564: missing space before default role: "る前に``'\\n'``". (missing-space-before-default-role)
 library/io.po:363: trailing whitespace (trailing-whitespace)
 library/io.po:1564: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)

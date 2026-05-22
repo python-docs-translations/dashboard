@@ -8,7 +8,7 @@ library/doctest.po:973: Extra backtick in role: ':const:`DONT_ACCEPT_TRUE_FOR_1`
 library/concurrent.futures.po:921: Extra backtick in role: ':meth:`Future.running``' (role-with-extra-backtick)
 library/winsound.po:43: Extra backtick in role: ':exc:`RuntimeError``' (role-with-extra-backtick)
 library/secrets.po:112: Extra backtick in role: ':func:`hmac.compare_digest``' (role-with-extra-backtick)
-library/gzip.po:360: Extra backtick in role: ':attr:`~GzipFile.name``' (role-with-extra-backtick)
+library/gzip.po:352: Extra backtick in role: ':attr:`~GzipFile.name``' (role-with-extra-backtick)
 library/queue.po:449: Extra backtick in role: ':meth:`Queue.put_nowait``' (role-with-extra-backtick)
 library/decimal.po:2844: Extra backtick in role: ':const:`False``' (role-with-extra-backtick)
 library/sys_path_init.po:198: Extra backtick in role: ':data:`sys.path``' (role-with-extra-backtick)
