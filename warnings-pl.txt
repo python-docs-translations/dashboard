@@ -432,7 +432,7 @@ deprecations/c-api-pending-removal-in-3.15.rst:131: WARNING: inconsistent term r
 library/functions.rst:1095: WARNING: inconsistent term references in translated message. original: [':term:`virtual <abstract base\nclass>`', ':ref:`types-union`', ':exc:`TypeError`', ':exc:`TypeError`'], translated: [':term:`wirtualną <abstrakcyjna klasa bazowa>`', ':ref:`types-union`', ':exc:`TypeError`', ':exc:`TypeError`'] [i18n.inconsistent_references]
 library/functions.rst:1435: WARNING: inconsistent term references in translated message. original: [':func:`locale.getencoding`', ':term:`text encoding`', ':mod:`codecs`'], translated: [':func:`locale.getencoding`', ':term:`kodowanie tekstu`', ':mod:`codecs`'] [i18n.inconsistent_references]
 library/functions.rst:1664: WARNING: inconsistent term references in translated message. original: [':func:`property`', ':term:`decorator`'], translated: [':func:`property`', ':term:`dekorator`'] [i18n.inconsistent_references]
-library/functions.rst:1955: WARNING: inconsistent term references in translated message. original: [':term:`decorator`', ':ref:`function`'], translated: [':term:`dekorator`', ':ref:`function`'] [i18n.inconsistent_references]
+library/functions.rst:1961: WARNING: inconsistent term references in translated message. original: [':term:`decorator`', ':ref:`function`'], translated: [':term:`dekorator`', ':ref:`function`'] [i18n.inconsistent_references]
 c-api/extension-modules.rst:64:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_mod_create`z :c:macro:`Py_mod_exec'
 Invalid C declaration: Expected end of definition. [error at 13]
   Py_mod_create`z :c:macro:`Py_mod_exec
