@@ -27,8 +27,6 @@ improve-page-nojs.rst:17: WARNING: inconsistent references in translated message
 library/asyncio-eventloop.rst:92: WARNING: inconsistent references in translated message. original: ['`Callback Handles`_'], translated: ['`回调处理`_'] [i18n.inconsistent_references]
 whatsnew/3.7.rst:84: WARNING: inconsistent references in translated message. original: ['`has been declared`_'], translated: ['`正式宣布`_'] [i18n.inconsistent_references]
 whatsnew/3.7.rst:2349: WARNING: inconsistent references in translated message. original: ['`Unicode Technical Standard #18`_'], translated: ['`Unicode 技术标准 #18`_'] [i18n.inconsistent_references]
-WARNING: unknown role name: 修复:func
-whatsnew/changelog.rst:72:<translated>:1: ERROR: Unknown interpreted text role "修复:func". [docutils]
 whatsnew/changelog.rst:13542:<translated>:1: ERROR: Unknown interpreted text role "c:meth". [docutils]
 whatsnew/changelog.rst:15979:<translated>:1: ERROR: Unknown interpreted text role "suspension". [docutils]
 whatsnew/changelog.rst:16018:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
@@ -42,9 +40,6 @@ whatsnew/changelog.rst:22415:<translated>:1: ERROR: Unknown interpreted text rol
 whatsnew/changelog.rst:22415:<translated>:1: ERROR: Unknown interpreted text role "susp". [docutils]
 whatsnew/changelog.rst:27296:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 whatsnew/changelog.rst:41404:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
-WARNING: unknown role name: 修复:func
-whatsnew/changelog.rst:72:<translated>:1: ERROR: Unknown interpreted text role "修复:func". [docutils]
-build/NEWS:72: WARNING: inconsistent term references in translated message. original: [':func:`site.addsitedir`', ':func:`site.main`'], translated: ['`site.main`'] [i18n.inconsistent_references]
 build/NEWS:823: WARNING: inconsistent term references in translated message. original: [':mod:`csv`', ':func:`next`'], translated: [':mod:`csv`'] [i18n.inconsistent_references]
 build/NEWS:3216: WARNING: inconsistent term references in translated message. original: [':mod:`argparse`', ':mod:`argparse`'], translated: [':mod:`argparse`'] [i18n.inconsistent_references]
 build/NEWS:4747: WARNING: inconsistent term references in translated message. original: [], translated: ['`os.environ`'] [i18n.inconsistent_references]
