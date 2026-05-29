@@ -6,6 +6,11 @@ on:
     branches:
       - main
 
+env:
+  FORCE_COLOR: 1
+
+permissions: {}
+
 jobs:
   test:
     runs-on: ubuntu-latest
