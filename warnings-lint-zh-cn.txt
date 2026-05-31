@@ -1,0 +1,6 @@
+library/stdtypes.po:8828: missing space before role (这些方法只:class:`). (missing-space-before-role)
+library/stdtypes.po:8872: missing space before default role: 'ict`的子类，而直接继承自``object``'. (missing-space-before-default-role)
+library/stdtypes.po:8828: role missing (escaped) space after role: ':class:`!dict`中' (missing-space-after-role)
+library/stdtypes.po:8872: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/stdtypes.po:8872: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+whatsnew/3.15.po:466: missing space before role (完整规范说明及考量见:pep:`). (missing-space-before-role)
