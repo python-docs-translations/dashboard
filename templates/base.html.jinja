@@ -16,26 +16,26 @@
   </head>
   <body>
     <script>
-      var colorSchemeMediaQuery = matchMedia('(prefers-color-scheme: dark)');
+      var colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       function getPreferredTheme() {
         return colorSchemeMediaQuery.matches ? 'dark' : 'light';
       }
       function getStoredTheme() {
         return localStorage.getItem('theme');
       }
-      function getTheme() {
-        var preferred = getPreferredTheme();
-        var stored = getStoredTheme();
-        if (stored === preferred) {
+      function normalizeStoredTheme() {
+        if (getStoredTheme() === getPreferredTheme()) {
           localStorage.removeItem('theme');
-          return preferred;
         }
-        return stored || preferred;
+      }
+      function getTheme() {
+        return getStoredTheme() || getPreferredTheme();
       }
       function applyTheme(t) {
         document.documentElement.setAttribute('data-bs-theme', t);
         document.documentElement.classList.toggle('dark', t === 'dark');
       }
+      normalizeStoredTheme();
       applyTheme(getTheme());
     </script>
     <header>
@@ -157,6 +157,7 @@
       } else {
         localStorage.setItem('theme', next);
       }
+      normalizeStoredTheme();
       applyTheme(getTheme());
     });
     colorSchemeMediaQuery.addEventListener('change', function() {
