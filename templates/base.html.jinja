@@ -23,11 +23,6 @@
       function getStoredTheme() {
         return localStorage.getItem('theme');
       }
-      function normalizeStoredTheme() {
-        if (getStoredTheme() === getPreferredTheme()) {
-          localStorage.removeItem('theme');
-        }
-      }
       function getTheme() {
         return getStoredTheme() || getPreferredTheme();
       }
@@ -35,7 +30,9 @@
         document.documentElement.setAttribute('data-bs-theme', t);
         document.documentElement.classList.toggle('dark', t === 'dark');
       }
-      normalizeStoredTheme();
+      if (getStoredTheme() === getPreferredTheme()) {
+        localStorage.removeItem('theme');
+      }
       applyTheme(getTheme());
     </script>
     <header>
