@@ -30,9 +30,6 @@
         document.documentElement.setAttribute('data-bs-theme', t);
         document.documentElement.classList.toggle('dark', t === 'dark');
       }
-      if (getStoredTheme() === getPreferredTheme()) {
-        localStorage.removeItem('theme');
-      }
       applyTheme(getTheme());
     </script>
     <header>
