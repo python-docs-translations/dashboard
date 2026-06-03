@@ -17,14 +17,14 @@
   <body>
     <script>
       var colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      function getPreferredTheme() {
+      function getSystemTheme() {
         return colorSchemeMediaQuery.matches ? 'dark' : 'light';
       }
       function getStoredTheme() {
         return localStorage.getItem('theme');
       }
       function getTheme() {
-        return getStoredTheme() || getPreferredTheme();
+        return getStoredTheme() || getSystemTheme();
       }
       function applyTheme(t) {
         document.documentElement.setAttribute('data-bs-theme', t);
@@ -146,7 +146,7 @@
     window.addEventListener('resize', padnavbar);
     document.getElementById('theme-toggle').addEventListener('click', function() {
       var next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
-      if (next === getPreferredTheme()) {
+      if (next === getSystemTheme()) {
         localStorage.removeItem('theme');
       } else {
         localStorage.setItem('theme', next);
