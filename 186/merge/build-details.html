@@ -17,25 +17,19 @@
   <body>
     <script>
       var colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      function getPreferredTheme() {
+      function getSystemTheme() {
         return colorSchemeMediaQuery.matches ? 'dark' : 'light';
       }
       function getStoredTheme() {
         return localStorage.getItem('theme');
       }
-      function normalizeStoredTheme() {
-        if (getStoredTheme() === getPreferredTheme()) {
-          localStorage.removeItem('theme');
-        }
-      }
       function getTheme() {
-        return getStoredTheme() || getPreferredTheme();
+        return getStoredTheme() || getSystemTheme();
       }
       function applyTheme(t) {
         document.documentElement.setAttribute('data-bs-theme', t);
         document.documentElement.classList.toggle('dark', t === 'dark');
       }
-      normalizeStoredTheme();
       applyTheme(getTheme());
     </script>
     <header>
@@ -172,7 +166,7 @@
           <tr>
             <td data-label="language">Brazilian Portuguese (pt-br)</td>
             <td data-label="branch">3.15</td>
-            <td data-label="updated">2026/06/02 23:43:05</td>
+            <td data-label="updated">2026/06/03 23:43:47</td>
             <td data-label="warnings">
               
                 <a href="warnings-pt-br.txt">992</a>
@@ -588,7 +582,7 @@
   </table>
   <p>* number of Sphinx build process warnings</p>
   <p>
-    Last updated at Wednesday, 3 June 2026, 23:30:45 UTC (in 64:58 minutes).
+    Last updated at Wednesday, 3 June 2026, 23:58:06 UTC (in 65:03 minutes).
   </p>
 
     </main>
@@ -604,7 +598,7 @@
     window.addEventListener('resize', padnavbar);
     document.getElementById('theme-toggle').addEventListener('click', function() {
       var next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
-      if (next === getPreferredTheme()) {
+      if (next === getSystemTheme()) {
         localStorage.removeItem('theme');
       } else {
         localStorage.setItem('theme', next);
