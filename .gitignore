@@ -2,3 +2,4 @@ build
 clones
 venv
 __pycache__
+*.pyc

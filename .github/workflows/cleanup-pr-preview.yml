@@ -10,13 +10,15 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: gh-pages
+          persist-credentials: false
       - run: git config user.name "github-actions[bot]"
       - run: git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - run: git rm -rf ${{ github.event.number }}
       - run: git commit -m 'Cleaning up gh-pages after ${{ github.event.number }}'
-      - uses: ad-m/github-push-action@master
+      - uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c # v1.3.0
         with:
+          github_token: ${{ github.token }}
           branch: gh-pages
