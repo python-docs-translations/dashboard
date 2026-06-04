@@ -1,1 +1,3 @@
+bugs.po:132: missing backtick before hyperlink reference: 'மொழிபெயர்ப்புகள் <https://devguide.python.org/documentation/translations/translating/#translation-coordinators>`_'. (hyperlink-reference-missing-backtick)
+bugs.po:263: missing backtick before hyperlink reference: 'வழிகாட்டுதல்கள் <https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html>`_'. (hyperlink-reference-missing-backtick)
 bugs.po:116: missing space before < in hyperlink (missing-space-in-hyperlink)
