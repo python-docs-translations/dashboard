@@ -186,6 +186,3 @@ c-api/init_config.po:166: found an unbalanced inline literal markup. (unbalanced
 c-api/typeobj.po:484: missing space before role (1:c:member:`). (missing-space-before-role)
 c-api/typeobj.po:1626: missing space before role ( cel:c:member:`). (missing-space-before-role)
 c-api/typeobj.po:1472: missing space before default role: "es>`' pole to powinno zostać zainicjowane zerem. W przypadku obiektów typu '<static-types> , pole to ma specjalne '<heap-types>`". (missing-space-before-default-role)
-howto/a-conceptual-overview-of-asyncio.po:24: missing space before role ( przegląd:mod:`). (missing-space-before-role)
-howto/a-conceptual-overview-of-asyncio.po:28: missing space before role ( mentalny:mod:`). (missing-space-before-role)
-howto/a-conceptual-overview-of-asyncio.po:38: missing space before role ( kluczowe:mod:`). (missing-space-before-role)
