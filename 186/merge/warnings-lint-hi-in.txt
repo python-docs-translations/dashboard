@@ -1,0 +1,1 @@
+glossary.po:58: trailing whitespace (trailing-whitespace)

@@ -17,19 +17,25 @@
   <body>
     <script>
       var colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      function getSystemTheme() {
+      function getPreferredTheme() {
         return colorSchemeMediaQuery.matches ? 'dark' : 'light';
       }
       function getStoredTheme() {
         return localStorage.getItem('theme');
       }
+      function normalizeStoredTheme() {
+        if (getStoredTheme() === getPreferredTheme()) {
+          localStorage.removeItem('theme');
+        }
+      }
       function getTheme() {
-        return getStoredTheme() || getSystemTheme();
+        return getStoredTheme() || getPreferredTheme();
       }
       function applyTheme(t) {
         document.documentElement.setAttribute('data-bs-theme', t);
         document.documentElement.classList.toggle('dark', t === 'dark');
       }
+      normalizeStoredTheme();
       applyTheme(getTheme());
     </script>
     <header>
@@ -312,7 +318,7 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 56.37716825803898%;background: linear-gradient(to left, #94cf96 0.7851831324188261%, #4caf50 0.7851831324188261%);">
+       style="width: 56.37664747684404%;background: linear-gradient(to left, #94cf96 0.7842666321798771%, #4caf50 0.7842666321798771%);">
     overall: 56.38%
     
       (+0.44%)
@@ -1534,8 +1540,8 @@
     </div>
   </div>
   <p class="text-center">
-    Last updated on Wednesday 3 June 2026 at 23:47:05 UTC (in 10 minutes and
-    55 seconds).
+    Last updated on Wednesday 3 June 2026 at 23:19:53 UTC (in 10 minutes and
+    47 seconds).
     <br />
     You can download the data on this page in
     <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
@@ -1554,7 +1560,7 @@
     window.addEventListener('resize', padnavbar);
     document.getElementById('theme-toggle').addEventListener('click', function() {
       var next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
-      if (next === getSystemTheme()) {
+      if (next === getPreferredTheme()) {
         localStorage.removeItem('theme');
       } else {
         localStorage.setItem('theme', next);
