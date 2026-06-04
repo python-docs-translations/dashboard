@@ -56,7 +56,6 @@ deprecations/index.po:615: found an unbalanced inline literal markup. (unbalance
 deprecations/index.po:615: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 deprecations/index.po:725: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 deprecations/index.po:725: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-faq/programming.po:142: missing backtick before hyperlink reference: '`Pylint <https://pylint.readthedocs.io/>`_'. (hyperlink-reference-missing-backtick)
 faq/programming.po:111: missing space before < in hyperlink (missing-space-in-hyperlink)
 faq/programming.po:473: inline literal missing (escaped) space after literal: '``2``w' (missing-space-after-literal)
 faq/programming.po:473: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
