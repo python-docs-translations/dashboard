@@ -1,1 +1,1 @@
-tutorial/appendix.po:99: trailing whitespace (trailing-whitespace)
+tutorial/appendix.po:87: trailing whitespace (trailing-whitespace)
