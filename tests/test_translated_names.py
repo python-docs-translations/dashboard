@@ -20,9 +20,12 @@ class testBuildStatus(unittest.TestCase):
         self.assertIn('pl', result)
         self.assertIn('zh-cn', result)
 
-        self.assertEqual(result.get('en'), None)
         self.assertEqual(result.get('pl'), 'polski')
         self.assertEqual(result.get('zh-cn'), '简体中文')
+
+    def test_babel_autonym(self):
+        self.assertEqual(translated_names.babel_autonym('en'), 'English')
+        self.assertEqual(translated_names.babel_autonym('ga'), 'Gaeilge')
 
 
 if __name__ == '__main__':
