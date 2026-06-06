@@ -264,7 +264,7 @@
     "core_completion": 100.0,
     "completion": 93.1636118378545,
     "core_change": 2.7281756085696287,
-    "change": 2.3063489960914865,
+    "change": 2.3039773992606456,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -305,7 +305,7 @@
       "name": "Tamil"
     },
     "repository": "Terminal-Joint/python-docs-ta",
-    "branch": "3.14",
+    "branch": "3.15",
     "core_completion": 1.4917810162758174,
     "completion": 0.053216319131324574,
     "core_change": 0.03851065123538122,
