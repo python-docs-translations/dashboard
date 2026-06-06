@@ -1,4 +1,4 @@
-whatsnew/changelog.rst:18897:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
-whatsnew/changelog.rst:27472:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
-whatsnew/changelog.rst:18897:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
-whatsnew/changelog.rst:27472:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+whatsnew/changelog.rst:18900:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+whatsnew/changelog.rst:27475:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+whatsnew/changelog.rst:18900:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+whatsnew/changelog.rst:27475:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
