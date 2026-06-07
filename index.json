@@ -84,7 +84,7 @@
     "core_completion": 26.665585665930234,
     "completion": 0.7915240699086089,
     "core_change": 0.0,
-    "change": 0.00023135522686401622,
+    "change": 0.0,
     "built": false,
     "translated_name": "magyar",
     "contribution_link": "https://github.com/python/python-docs-hu"
@@ -203,8 +203,8 @@
     "branch": "3.15",
     "core_completion": 100.0,
     "completion": 5.824136481075431,
-    "core_change": 2.7281756085696287,
-    "change": 0.6408539784134,
+    "core_change": 2.7829012708514966,
+    "change": 0.6398128798925118,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -248,8 +248,8 @@
     "branch": "3.15",
     "core_completion": 95.21859861767031,
     "completion": 3.5154426721991414,
-    "core_change": -0.054725662281853715,
-    "change": -0.0015038089746162164,
+    "core_change": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -263,8 +263,8 @@
     "branch": "3.15",
     "core_completion": 100.0,
     "completion": 93.19052160771061,
-    "core_change": 2.7281756085696287,
-    "change": 2.3086359700695738,
+    "core_change": 2.774793765328255,
+    "change": 2.3097349073971856,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
