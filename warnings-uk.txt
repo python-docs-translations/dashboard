@@ -103,7 +103,7 @@ howto/urllib2.rst:190: WARNING: inconsistent references in translated message. o
 howto/urllib2.rst:541: WARNING: inconsistent references in translated message. original: ['`Quick Reference to HTTP Headers`_'], translated: ['`Короткий довідник із заголовками HTTP`_'] [i18n.inconsistent_references]
 library/argparse.rst:91: WARNING: inconsistent references in translated message. original: ['parents_'], translated: ['Parents_'] [i18n.inconsistent_references]
 library/argparse.rst:105: WARNING: inconsistent references in translated message. original: ['conflict_handler_'], translated: ['конфлікт_обробник_'] [i18n.inconsistent_references]
-library/argparse.rst:518: WARNING: inconsistent references in translated message. original: ['parents_'], translated: ['батьків_'] [i18n.inconsistent_references]
+library/argparse.rst:517: WARNING: inconsistent references in translated message. original: ['parents_'], translated: ['батьків_'] [i18n.inconsistent_references]
 library/asyncio-api-index.rst:38: WARNING: inconsistent term references in translated message. original: [':func:`current_task`'], translated: [':func:`поточне_завдання`'] [i18n.inconsistent_references]
 library/asyncio-api-index.rst:41: WARNING: inconsistent term references in translated message. original: [':func:`all_tasks`'], translated: [':func:`усі_завдання`'] [i18n.inconsistent_references]
 library/asyncio-api-index.rst:62: WARNING: inconsistent term references in translated message. original: [':func:`to_thread`'], translated: [':func:`до_потоку`'] [i18n.inconsistent_references]
