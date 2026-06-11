@@ -41,7 +41,7 @@ library/exceptions.rst:373: WARNING: inconsistent references in translated messa
 library/hashlib.rst:67: WARNING: inconsistent references in translated message. original: ['`Attacks on cryptographic hash algorithms`_', '`hashlib-seealso`_'], translated: ['`Attacks on cryptographic hash algorithms`_', '`더 보기 <hashlib-seealso_>`_'] [i18n.inconsistent_references]
 library/hashlib.rst:450: WARNING: inconsistent references in translated message. original: ['`constants`_'], translated: ['`상수 <constants_>`_'] [i18n.inconsistent_references]
 library/configparser.rst:1477: WARNING: inconsistent references in translated message. original: ['`Customizing Parser Behaviour`_'], translated: ['`구문 분석기 동작 사용자 정의 <Customizing Parser Behaviour_>`_'] [i18n.inconsistent_references]
-howto/urllib2.rst:190: WARNING: inconsistent references in translated message. original: ['`info and geturl`_'], translated: ['`info와 geturl <info and geturl_>`_'] [i18n.inconsistent_references]
+howto/urllib2.rst:187: WARNING: inconsistent references in translated message. original: ['`info and geturl`_'], translated: ['`info와 geturl <info and geturl_>`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:89: WARNING: inconsistent references in translated message. original: ['`Event Loop Methods`_'], translated: ['`이벤트 루프 메서드 <Event Loop Methods_>`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:92: WARNING: inconsistent references in translated message. original: ['`Callback Handles`_'], translated: ['`콜백 핸들 <Callback Handles_>`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:96: WARNING: inconsistent references in translated message. original: ['`Server Objects`_'], translated: ['`서버 객체 <Server Objects_>`_'] [i18n.inconsistent_references]
