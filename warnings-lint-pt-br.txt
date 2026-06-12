@@ -1,2 +1,2 @@
 c-api/exceptions.po:651: missing space before role ( para:class:`). (missing-space-before-role)
-library/functions.po:1194: missing space before role ( embutidas:class:`). (missing-space-before-role)
+library/functions.po:1184: missing space before role ( embutidas:class:`). (missing-space-before-role)
