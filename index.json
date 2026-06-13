@@ -204,7 +204,7 @@
     "core_completion": 99.82385454839951,
     "completion": 5.826620126905607,
     "core_change": 2.6158611892854964,
-    "change": 0.23133112192415783,
+    "change": 0.20966008252331836,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -324,7 +324,7 @@
     "core_completion": 97.02374926606062,
     "completion": 31.415089978155592,
     "core_change": 0.17412079123727153,
-    "change": 0.44908172582378825,
+    "change": 0.40758890905098255,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
