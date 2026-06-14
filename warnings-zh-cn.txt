@@ -1,4 +1,7 @@
+library/urllib.parse.rst:479: WARNING: inconsistent references in translated message. original: ['`WHATWG\nspec`_'], translated: ['`WHATWG spec`_'] [i18n.inconsistent_references]
 library/ipaddress.rst:241: WARNING: inconsistent references in translated message. original: ['`allocated <iana-ipv6-address-space_>`__'], translated: ['`分配 <iana-ipv6-address-space_>`__'] [i18n.inconsistent_references]
+library/re.rst:287: WARNING: inconsistent references in translated message. original: ['`Unicode Technical\nStandard #18`_'], translated: ['`Unicode Technical Standard #18`_'] [i18n.inconsistent_references]
+library/sqlite3.rst:188: WARNING: inconsistent references in translated message. original: ['`SQL injection attacks`_'], translated: ['`SQL 注入攻击`_'] [i18n.inconsistent_references]
 library/hashlib.rst:20: WARNING: inconsistent references in translated message. original: ['`the FIPS 180-4 standard`_', '`the FIPS\n202 standard`_', '`formerly part of FIPS`_'], translated: ['`the FIPS 180-4 standard`_', '`the FIPS 202 standard`_', '`formerly part of FIPS`_'] [i18n.inconsistent_references]
 whatsnew/changelog.rst:19054:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 whatsnew/changelog.rst:27629:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
