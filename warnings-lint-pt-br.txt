@@ -1,1 +1,0 @@
-c-api/exceptions.po:651: missing space before role ( para:class:`). (missing-space-before-role)
