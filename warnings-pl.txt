@@ -378,7 +378,6 @@ whatsnew/3.14.rst:48: WARNING: inconsistent term references in translated messag
 whatsnew/3.14.rst:4:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/3.14.rst:11:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 deprecations/pending-removal-in-3.20.rst:24: WARNING: inconsistent term references in translated message. original: [':mod:`logging`'], translated: [':mod:`logging`(``__date__``'] [i18n.inconsistent_references]
-deprecations/c-api-pending-removal-in-3.15.rst:30: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get>`', ':data:`sys.exec_prefix`', ':ref:`virtual environments <venv-def>`'], translated: [':c:func:`PyConfig_Get("base_exec_prefix") <PyConfig_Get>`', ':data:`sys.base_exec_prefix`', ':c:func:`PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix`'] [i18n.inconsistent_references]
 deprecations/c-api-pending-removal-in-3.15.rst:36: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("executable") <PyConfig_Get>`', ':data:`sys.executable`'], translated: [':c:func:`PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable`'] [i18n.inconsistent_references]
 deprecations/c-api-pending-removal-in-3.15.rst:39: WARNING: inconsistent term references in translated message. original: [':c:func:`PyConfig_Get("executable") <PyConfig_Get>`', ':data:`sys.executable`'], translated: [':c:func:`PyConfig Get("executable") <PyConfig_Get> ` (:data:`sys.executable`'] [i18n.inconsistent_references]
 deprecations/c-api-pending-removal-in-3.15.rst:68: WARNING: inconsistent term references in translated message. original: [':c:var:`Py_DebugFlag`', ':c:member:`PyConfig.parser_debug`', ':c:func:`PyConfig_Get("parser_debug") <PyConfig_Get>`'], translated: [':c:var:`Py_DebugFlag`', ':c:member:`PyConfig.parser_debug`', ':c:func:`PyConfig_Get("parser_debug") <PyConfig_Get> Zamiast.`'] [i18n.inconsistent_references]
@@ -559,10 +558,6 @@ whatsnew/3.13.rst:117:<translated>:1: WARNING: Unparseable C cross-reference: 'P
 Invalid C declaration: Expected end of definition. [error at 25]
   Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio
   -------------------------^
-whatsnew/3.14.rst:30:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix
-  ------------^
 whatsnew/3.14.rst:36:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable'
 Invalid C declaration: Expected end of definition. [error at 12]
   PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable
