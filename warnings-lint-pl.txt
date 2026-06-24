@@ -6,7 +6,7 @@ c-api/init_config.po:166: inline literal missing (escaped) space after literal: 
 c-api/extension-modules.po:91: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/extension-modules.po:91: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/extension-modules.po:43: missing space before role ( w:py:attr:`). (missing-space-before-role)
-c-api/extension-modules.po:242: missing backtick before hyperlink reference: 'biblioteka”. <https://peps.python.org/pep-0489/#multiple-modules-in-one-library>`_'. (hyperlink-reference-missing-backtick)
+c-api/extension-modules.po:230: missing backtick before hyperlink reference: 'biblioteka”. <https://peps.python.org/pep-0489/#multiple-modules-in-one-library>`_'. (hyperlink-reference-missing-backtick)
 c-api/extension-modules.po:102: role missing (escaped) space after role: ':samp:`PyModExportU_{<name>}`(' (missing-space-after-role)
 c-api/extension-modules.po:28: role missing closing backtick: ':ref:` <extension-pyinit>).\n' (missing-backtick-after-role)
 c-api/extension-modules.po:91: inline literal missing (escaped) space after literal: '``<name>``n' (missing-space-after-literal)
