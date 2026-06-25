@@ -1,3 +1,6 @@
+using/mac.po:313: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+using/mac.po:313: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+using/mac.po:313: missing space before default role: 'al|``myscript.py``'. (missing-space-before-default-role)
 tutorial/inputoutput.po:718: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 tutorial/inputoutput.po:718: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 tutorial/inputoutput.po:718: missing space before default role: "'ਤੇ``\\n``". (missing-space-before-default-role)
