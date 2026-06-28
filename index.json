@@ -54,7 +54,7 @@
     "core_completion": 94.59415683019174,
     "completion": 13.231760681040656,
     "core_change": 0.0,
-    "change": 0.648989009240422,
+    "change": 0.6463180387120246,
     "built": true,
     "translated_name": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac",
     "contribution_link": "https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md"
@@ -279,7 +279,7 @@
     "core_completion": 100.0,
     "completion": 91.71993453280747,
     "core_change": 0.3684881861067737,
-    "change": 0.8412420581248625,
+    "change": 0.8392530375186027,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
