@@ -12,6 +12,7 @@ tutorial/inputoutput.rst:523: WARNING: inconsistent term references in translate
 tutorial/inputoutput.rst:546: WARNING: inconsistent term references in translated message. original: [':ref:`JSON <tut-json>`'], translated: [] [i18n.inconsistent_references]
 using/mac.rst:153:<translated>:1: WARNING: Inline substitution_reference start-string without end-string. [docutils]
 using/mac.rst:153:<translated>:1: WARNING: Inline substitution_reference start-string without end-string. [docutils]
+using/windows.rst:2016: WARNING: inconsistent term references in translated message. original: [':envvar:`PATH`', ':envvar:`PATH`', ':envvar:`PATH`'], translated: [':envvar:`PATH`', ':envvar:`PYLAUNCHER_NO_SEARCH_PATH`', ':envvar:`PATH`'] [i18n.inconsistent_references]
 library/stdtypes.rst:1029:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 library/stdtypes.rst:1242:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 library/stdtypes.rst:1029:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
