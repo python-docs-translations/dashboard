@@ -1,5 +1,5 @@
 bugs.po:131: missing backtick before hyperlink reference: 'மொழிபெயர்ப்புகள் <https://devguide.python.org/documentation/translations/translating/#translation-coordinators>`_'. (hyperlink-reference-missing-backtick)
 bugs.po:262: missing backtick before hyperlink reference: 'வழிகாட்டுதல்கள் <https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html>`_'. (hyperlink-reference-missing-backtick)
-tutorial/introduction.po:586: role missing opening tag colon (ref:`). (missing-space-before-role)
-tutorial/introduction.po:596: role missing closing backtick: ':ref:`string-methods\n' (missing-backtick-after-role)
+tutorial/introduction.po:719: role missing opening tag colon (ref:`). (missing-space-before-role)
+tutorial/introduction.po:729: role missing closing backtick: ':ref:`string-methods\n' (missing-backtick-after-role)
 library/functions.po:411: Extra backtick in role: ':meth:`~object.__abs__``' (role-with-extra-backtick)
