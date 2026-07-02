@@ -16,7 +16,7 @@ c-api/contextvars.po:257: inline literal missing (escaped) space after literal: 
 c-api/call.po:459: trailing whitespace (trailing-whitespace)
 c-api/call.po:480: trailing whitespace (trailing-whitespace)
 c-api/call.po:490: trailing whitespace (trailing-whitespace)
-c-api/sequence.po:260: trailing whitespace (trailing-whitespace)
+c-api/sequence.po:247: trailing whitespace (trailing-whitespace)
 c-api/init_config.po:26: trailing whitespace (trailing-whitespace)
 c-api/arg.po:124: trailing whitespace (trailing-whitespace)
 c-api/file.po:155: trailing whitespace (trailing-whitespace)
