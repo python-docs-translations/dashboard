@@ -203,8 +203,8 @@
     "branch": "3.15",
     "core_completion": 100.0,
     "completion": 5.718255925698661,
-    "core_change": 0.3684881861067737,
-    "change": 0.11392463263988972,
+    "core_change": 0.29357575266749336,
+    "change": 0.11171085054075824,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
