@@ -1,3 +1,0 @@
-bugs.rst:27: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`translation repository <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
-bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`ஆவணப்படுத்தல் பிழைகள்`_'] [i18n.inconsistent_references]
-library/functions.rst:61: WARNING: inconsistent term references in translated message. original: [':meth:`~object.__abs__`'], translated: [':meth:`~object.__abs__``'] [i18n.inconsistent_references]
