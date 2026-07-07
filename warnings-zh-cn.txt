@@ -1,4 +1,4 @@
-library/urllib.parse.rst:479: WARNING: inconsistent references in translated message. original: ['`WHATWG\nspec`_'], translated: ['`WHATWG spec`_'] [i18n.inconsistent_references]
+library/urllib.parse.rst:484: WARNING: inconsistent references in translated message. original: ['`WHATWG\nspec`_'], translated: ['`WHATWG spec`_'] [i18n.inconsistent_references]
 library/ipaddress.rst:241: WARNING: inconsistent references in translated message. original: ['`allocated <iana-ipv6-address-space_>`__'], translated: ['`分配 <iana-ipv6-address-space_>`__'] [i18n.inconsistent_references]
 library/re.rst:287: WARNING: inconsistent references in translated message. original: ['`Unicode Technical\nStandard #18`_'], translated: ['`Unicode Technical Standard #18`_'] [i18n.inconsistent_references]
 library/shutil.rst:852: WARNING: inconsistent references in translated message. original: ['`one above <shutil-archiving-example_>`_'], translated: ['`上面的例子 <shutil-archiving-example_>`_'] [i18n.inconsistent_references]
