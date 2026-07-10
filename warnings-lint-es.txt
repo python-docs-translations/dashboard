@@ -1,5 +1,5 @@
 whatsnew/3.4.po:3343: Extra backtick in role: ':class:`~urllib.request.Request``' (role-with-extra-backtick)
-whatsnew/2.5.po:1727: Extra backtick in role: ':keyword:`!with``' (role-with-extra-backtick)
+whatsnew/2.5.po:1401: Extra backtick in role: ':keyword:`!with``' (role-with-extra-backtick)
 reference/import.po:286: Extra backtick in role: ':data:`sys.path``' (role-with-extra-backtick)
 reference/import.po:1580: Extra backtick in role: ':meth:`importlib.abc.PathEntryFinder.find_spec``' (role-with-extra-backtick)
 reference/lexical_analysis.po:735: Extra backtick in role: ':mod:`gettext``' (role-with-extra-backtick)
