@@ -37,9 +37,9 @@
     "repository": "python/python-docs-fr",
     "branch": "3.14",
     "core_completion": 86.05828599654235,
-    "completion": 24.671507852233667,
+    "completion": 24.676780280890053,
     "core_change": 0.0,
-    "change": 0.0,
+    "change": 0.005272428656386552,
     "built": true,
     "translated_name": "fran\u00e7ais",
     "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst"
