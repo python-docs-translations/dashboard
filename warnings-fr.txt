@@ -129,6 +129,6 @@ library/asyncio-policy.rst:131: WARNING: inconsistent term references in transla
 library/asyncio-protocol.rst:22: WARNING: inconsistent references in translated message. original: ['`Transports`_', '`Protocols`_'], translated: ['`Transports`_', '`Protocoles`_'] [i18n.inconsistent_references]
 library/asyncio-protocol.rst:598: WARNING: inconsistent references in translated message. original: ['`Streaming Protocols`_'], translated: ['`protocoles connectés`_'] [i18n.inconsistent_references]
 library/asyncio-queue.rst:21: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`Exemples`_'] [i18n.inconsistent_references]
-library/asyncio-queue.rst:144: WARNING: inconsistent term references in translated message. original: [':meth:`join`', ':meth:`task_done`', ':meth:`~Queue.put`'], translated: [':meth:`join`', ':meth:`task_done`', ':meth:`put`'] [i18n.inconsistent_references]
+library/asyncio-queue.rst:148: WARNING: inconsistent term references in translated message. original: [':meth:`join`', ':meth:`task_done`', ':meth:`~Queue.put`'], translated: [':meth:`join`', ':meth:`task_done`', ':meth:`put`'] [i18n.inconsistent_references]
 library/asyncio-stream.rst:42: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`Exemples`_'] [i18n.inconsistent_references]
 library/asyncio-subprocess.rst:58: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`Exemples`_'] [i18n.inconsistent_references]
