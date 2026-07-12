@@ -339,7 +339,7 @@
     "core_completion": 97.02374926606062,
     "completion": 30.60344461078778,
     "core_change": 0.0,
-    "change": 0.1400156114572475,
+    "change": 0.0,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
