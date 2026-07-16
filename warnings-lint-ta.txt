@@ -1,6 +1,6 @@
 bugs.po:131: missing backtick before hyperlink reference: 'மொழிபெயர்ப்புகள் <https://devguide.python.org/documentation/translations/translating/#translation-coordinators>`_'. (hyperlink-reference-missing-backtick)
 bugs.po:262: trailing whitespace (trailing-whitespace)
-using/windows.po:2314: trailing whitespace (trailing-whitespace)
 using/android.po:24: trailing whitespace (trailing-whitespace)
 using/mac.po:50: trailing whitespace (trailing-whitespace)
+using/windows.po:2314: trailing whitespace (trailing-whitespace)
 library/functions.po:411: Extra backtick in role: ':meth:`~object.__abs__``' (role-with-extra-backtick)
