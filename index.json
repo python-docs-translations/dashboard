@@ -218,8 +218,8 @@
     "branch": "3.15",
     "core_completion": 100.0,
     "completion": 54.765215282593815,
-    "core_change": 0.0,
-    "change": 0.11156211896635426,
+    "core_change": 2.0489562875827545,
+    "change": 0.17649365189446087,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
