@@ -234,7 +234,7 @@
     "core_completion": 100.0,
     "completion": 7.655607031586843,
     "core_change": 15.0148812536697,
-    "change": 5.2774294946139015,
+    "change": 3.8872367078430847,
     "built": false,
     "translated_name": "\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40",
     "contribution_link": "https://github.com/BHUVANSH855/python-docs-pa"
@@ -323,8 +323,8 @@
     "branch": "3.15",
     "core_completion": 4.529165232532243,
     "completion": 0.1433422077079581,
-    "core_change": 1.9396246279686586,
-    "change": 0.06033970403516814,
+    "core_change": 0.8503573525541093,
+    "change": 0.029858238522566777,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
     "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
