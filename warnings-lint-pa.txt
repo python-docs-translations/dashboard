@@ -1,0 +1,1 @@
+library/stdtypes.po:4002: missing backtick before hyperlink reference: 'ਸਟੈਂਡਰਡ <https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-4/#G91002>`_'. (hyperlink-reference-missing-backtick)
