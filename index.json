@@ -383,8 +383,8 @@
     "branch": "3.15",
     "core_completion": 45.35957240038873,
     "completion": 1.3363389635105851,
-    "core_change": 0.4454162617427926,
-    "change": 0.014042884023331537,
+    "core_change": 0.04859086491739362,
+    "change": 0.001358988776451353,
     "built": false,
     "translated_name": "Ti\u1ebfng Vi\u1ec7t",
     "contribution_link": "https://github.com/tamnd/python-docs-vi"
