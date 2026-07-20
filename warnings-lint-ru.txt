@@ -6,5 +6,5 @@ tutorial/appendix.po:286: missing space before role ( и:index:`). (missing-spac
 tutorial/appendix.po:286: missing space before role ( модуля:mod:`). (missing-space-before-role)
 tutorial/stdlib.po:61: missing space before role ( вроде:mod:`). (missing-space-before-role)
 tutorial/datastructures.po:557: missing space before role ( ветви:keyword:`). (missing-space-before-role)
-tutorial/errors.po:291: missing space before role ( ветке:keyword:`). (missing-space-before-role)
 tutorial/errors.po:166: trailing whitespace (trailing-whitespace)
+tutorial/errors.po:291: missing space before role ( ветке:keyword:`). (missing-space-before-role)
