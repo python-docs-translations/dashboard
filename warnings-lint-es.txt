@@ -8,7 +8,6 @@ library/http.server.po:462: Extra backtick in role: ':func:`time.time``' (role-w
 library/winsound.po:43: Extra backtick in role: ':exc:`RuntimeError``' (role-with-extra-backtick)
 library/queue.po:449: Extra backtick in role: ':meth:`Queue.put_nowait``' (role-with-extra-backtick)
 library/zoneinfo.po:473: Extra backtick in role: ':func:`repr``' (role-with-extra-backtick)
-library/secrets.po:112: Extra backtick in role: ':func:`hmac.compare_digest``' (role-with-extra-backtick)
 library/ctypes.po:1016: Extra backtick in role: ':func:`GetLastError``' (role-with-extra-backtick)
 library/ctypes.po:1687: Extra backtick in role: ':func:`CFUNCTYPE``' (role-with-extra-backtick)
 library/heapq.po:354: Extra backtick in role: ':func:`max``' (role-with-extra-backtick)
