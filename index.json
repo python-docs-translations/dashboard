@@ -279,7 +279,7 @@
     "core_completion": 100.0,
     "completion": 91.27316878507688,
     "core_change": 0.3178652413346299,
-    "change": 0.7376652487327675,
+    "change": 0.7181934220320301,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -323,8 +323,8 @@
     "branch": "3.15",
     "core_completion": 3.565354713313897,
     "completion": 0.11660454361491067,
-    "core_change": -0.6397797214123742,
-    "change": -0.015396328088959063,
+    "core_change": -0.3279883381924198,
+    "change": -0.006679289391533713,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
     "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
