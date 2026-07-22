@@ -217,9 +217,9 @@
     "repository": "python/python-docs-pt-br",
     "branch": "3.15",
     "core_completion": 99.68213475866537,
-    "completion": 54.719285882076576,
+    "completion": 54.705191449377494,
     "core_change": 0.0,
-    "change": 0.07086839252711741,
+    "change": 0.05677395982803546,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
