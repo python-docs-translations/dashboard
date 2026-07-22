@@ -69,7 +69,7 @@ library/unittest.mock.po:837: missing space before role ( もしくは:term:`). 
 library/xml.dom.pulldom.po:198: trailing whitespace (trailing-whitespace)
 library/ast.po:844: trailing whitespace (trailing-whitespace)
 library/ast.po:1006: trailing whitespace (trailing-whitespace)
-library/ast.po:3336: trailing whitespace (trailing-whitespace)
+library/ast.po:3343: trailing whitespace (trailing-whitespace)
 library/asyncio-dev.po:152: trailing whitespace (trailing-whitespace)
 library/asyncio-dev.po:227: trailing whitespace (trailing-whitespace)
 library/socket.po:1390: trailing whitespace (trailing-whitespace)
