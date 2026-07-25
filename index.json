@@ -186,10 +186,10 @@
     },
     "repository": "revisto/python-docs-fa",
     "branch": "3.14",
-    "core_completion": 4.641756548536209,
-    "completion": 0.23653742252847812,
-    "core_change": -3.2340128068249827,
-    "change": 0.00028287182794603516,
+    "core_completion": 6.647811447811447,
+    "completion": 0.24089364867884713,
+    "core_change": -1.2279579075497447,
+    "change": 0.004639097978315049,
     "built": false,
     "translated_name": "\u0641\u0627\u0631\u0633\u06cc",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -279,7 +279,7 @@
     "core_completion": 100.0,
     "completion": 91.26367331698334,
     "core_change": 0.3178652413346299,
-    "change": 0.7431608663798386,
+    "change": 0.7392572351541844,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
