@@ -279,7 +279,7 @@
     "core_completion": 100.0,
     "completion": 91.2732049274549,
     "core_change": 0.3178652413346299,
-    "change": 0.7140804467655641,
+    "change": 0.6850601449996816,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
