@@ -8,4 +8,4 @@ whatsnew/changelog.po:256: found an unbalanced inline literal markup. (unbalance
 whatsnew/changelog.po:256: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/changelog.po:256: inline literal missing (escaped) space after literal: '``::1``的' (missing-space-after-literal)
 whatsnew/changelog.po:1087: missing space before role ( 修复在:attr:`). (missing-space-before-role)
-whatsnew/3.15.po:2606: trailing whitespace (trailing-whitespace)
+whatsnew/3.15.po:2616: trailing whitespace (trailing-whitespace)
