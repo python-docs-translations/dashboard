@@ -1,0 +1,1 @@
+bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`ਦਸਤਾਵੇਜ਼ੀਕਰਨ ਬੱਗ`_'] [i18n.inconsistent_references]
