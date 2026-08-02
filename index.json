@@ -46,6 +46,21 @@
   },
   {
     "language": {
+      "code": "de",
+      "name": "German"
+    },
+    "repository": "sba72/python-docs-de",
+    "branch": "3.14",
+    "core_completion": 14.484014569000404,
+    "completion": 0.7044800954982003,
+    "core_change": 9.797652772157022,
+    "change": 0.34783139503337007,
+    "built": false,
+    "translated_name": "Deutsch",
+    "contribution_link": "https://github.com/sba72/python-docs-de"
+  },
+  {
+    "language": {
       "code": "el",
       "name": "Greek"
     },
