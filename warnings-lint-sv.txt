@@ -4,4 +4,4 @@ glossary.po:2267: Extra backtick in role: ':pep:`302``' (role-with-extra-backtic
 tutorial/controlflow.po:186: role missing closing backtick: ':func:`range\n' (missing-backtick-after-role)
 tutorial/controlflow.po:581: role missing opening tag colon ( Nyckelordet:`). (missing-space-before-role)
 whatsnew/3.13.po:2207: Extra backtick in role: ':mod:`!aifc``' (role-with-extra-backtick)
-whatsnew/2.6.po:3200: trailing whitespace (trailing-whitespace)
+whatsnew/2.6.po:3992: trailing whitespace (trailing-whitespace)
