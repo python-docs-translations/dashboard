@@ -179,6 +179,12 @@ library/functions.rst:1456: WARNING: inconsistent term references in translated 
 library/functions.rst:1685: WARNING: inconsistent term references in translated message. original: [':deco:`property`', ':term:`decorator`'], translated: [':deco:`property`', ':term:`dekoratora <dekorator>`'] [i18n.inconsistent_references]
 library/functions.rst:1982: WARNING: inconsistent term references in translated message. original: [':term:`decorator`', ':ref:`function`'], translated: [':term:`dekorator`', ':ref:`function`'] [i18n.inconsistent_references]
 improve-page.rst:50: WARNING: inconsistent references in translated message. original: ["`translation's repository <TRANSLATION_REPO_>`_"], translated: ['`repozytorium tłumaczenia <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
+improve-page.rst:60: WARNING: inconsistent references in translated message. original: [], translated: ['`Docs: problem with page "PAGETITLE" `<https://github.com/python/cpython/issues/new?template=documentation.yml&title=Docs%3A+problem+with+page+%22PAGETITLE%22&description=The+page+at+PAGEURL+has+a+problem%3A>`_'] [i18n.inconsistent_references]
+improve-page.rst:60: ERROR: Unknown target name: "docs: problem with page "pagetitle" `<https://github.com/python/cpython/issues/new?template=documentation.yml&title=docs%3a+problem+with+page+%22pagetitle%22&description=the+page+at+pageurl+has+a+problem%3a>".
+
+Did you want to embed a URI or alias?
+The embedded reference must be preceded by whitespace. [docutils]
+improve-page-nojs.rst:17: WARNING: inconsistent references in translated message. original: ["`translation's repository <TRANSLATION_REPO_>`_"], translated: ['`repozytorium tłumaczenia <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 whatsnew/3.12.rst:4:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/3.12.rst:11:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/3.12.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
