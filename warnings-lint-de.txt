@@ -1,5 +1,6 @@
 bugs.po:201: trailing whitespace (trailing-whitespace)
 bugs.po:218: trailing whitespace (trailing-whitespace)
+library/string.po:516: superfluous backtick in front of role (backtick-before-role)
 tutorial/errors.po:747: role missing (escaped) space after role: ':keyword:`!return`A' (missing-space-after-role)
 tutorial/controlflow.po:27: role with no backticks: ' :keyword:while-Anweisung ' (role-without-backticks)
 tutorial/index.po:105: role with no backticks: ' :ref:glossary ' (role-without-backticks)
