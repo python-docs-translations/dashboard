@@ -7,4 +7,4 @@ library/profiling.sampling.po:313: missing space before default role: '等同于
 whatsnew/changelog.po:285: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/changelog.po:285: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/changelog.po:285: inline literal missing (escaped) space after literal: '``::1``的' (missing-space-after-literal)
-whatsnew/changelog.po:1142: missing space before role ( 修复在:attr:`). (missing-space-before-role)
+whatsnew/changelog.po:1135: missing space before role ( 修复在:attr:`). (missing-space-before-role)

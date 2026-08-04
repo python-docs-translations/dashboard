@@ -185,6 +185,7 @@ improve-page.rst:60: ERROR: Unknown target name: "docs: problem with page "paget
 Did you want to embed a URI or alias?
 The embedded reference must be preceded by whitespace. [docutils]
 improve-page-nojs.rst:17: WARNING: inconsistent references in translated message. original: ["`translation's repository <TRANSLATION_REPO_>`_"], translated: ['`repozytorium tłumaczenia <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
+using/windows.rst:26: WARNING: inconsistent references in translated message. original: ['`python.org/downloads`_', '`Microsoft Store app`_'], translated: ['`python.org/downloads`_', '`Microsoft Store`_'] [i18n.inconsistent_references]
 whatsnew/3.12.rst:4:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/3.12.rst:11:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 whatsnew/3.12.rst:4:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
