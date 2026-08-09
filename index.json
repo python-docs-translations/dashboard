@@ -39,7 +39,7 @@
     "core_completion": 86.05828599654235,
     "completion": 24.469126203937353,
     "core_change": 0.0,
-    "change": 0.0052547776098990084,
+    "change": 0.0,
     "built": true,
     "translated_name": "fran\u00e7ais",
     "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst"
