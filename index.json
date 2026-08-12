@@ -69,7 +69,7 @@
     "core_completion": 94.41319303925536,
     "completion": 13.159940695740218,
     "core_change": 0.0,
-    "change": 0.09187188110219147,
+    "change": 0.07006219715050221,
     "built": true,
     "translated_name": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac",
     "contribution_link": "https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md"
@@ -276,10 +276,10 @@
     },
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.15",
-    "core_completion": 98.24362606232295,
-    "completion": 3.551644879583424,
-    "core_change": 3.4520437070012093,
-    "change": 0.12577294423953145,
+    "core_completion": 98.27600161877783,
+    "completion": 3.552548907933753,
+    "core_change": 3.4844192634560898,
+    "change": 0.12667697258986044,
     "built": false,
     "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
