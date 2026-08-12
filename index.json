@@ -395,11 +395,11 @@
       "name": "Vietnamese"
     },
     "repository": "tamnd/python-docs-vi",
-    "branch": "3.15",
-    "core_completion": 45.58680696074464,
-    "completion": 1.3404656092547833,
-    "core_change": 0.37838931606636805,
-    "change": 0.01062157694259036,
+    "branch": "3.14",
+    "core_completion": 44.008498583569406,
+    "completion": 1.289109154782365,
+    "core_change": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "Ti\u1ebfng Vi\u1ec7t",
     "contribution_link": "https://github.com/tamnd/python-docs-vi"
