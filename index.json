@@ -276,10 +276,10 @@
     },
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.15",
-    "core_completion": 98.27600161877783,
-    "completion": 3.552548907933753,
-    "core_change": 3.4844192634560898,
-    "change": 0.12667697258986044,
+    "core_completion": 98.5936867664913,
+    "completion": 3.561419686121357,
+    "core_change": 3.802104411169566,
+    "change": 0.1355477507774645,
     "built": false,
     "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -339,7 +339,7 @@
     "core_completion": 3.5633346823148524,
     "completion": 0.1294455594127432,
     "core_change": -0.963172804532578,
-    "change": -0.011356856151008898,
+    "change": -0.011582863238591146,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
     "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
