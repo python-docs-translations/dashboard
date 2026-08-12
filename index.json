@@ -277,9 +277,9 @@
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 3.6004320947896646,
+    "completion": 3.602070529530809,
     "core_change": 5.2084176446782635,
-    "change": 0.17480403755518426,
+    "change": 0.17644247229632848,
     "built": false,
     "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
