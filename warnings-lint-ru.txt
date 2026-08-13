@@ -1,1 +1,0 @@
-tutorial/errors.po:167: trailing whitespace (trailing-whitespace)
