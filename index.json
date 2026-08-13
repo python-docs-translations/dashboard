@@ -69,7 +69,7 @@
     "core_completion": 94.41319303925536,
     "completion": 13.159003876875584,
     "core_change": 0.0,
-    "change": 0.032203717325938186,
+    "change": 0.07005720962134099,
     "built": true,
     "translated_name": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac",
     "contribution_link": "https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md"
@@ -339,7 +339,7 @@
     "core_completion": 3.5633346823148524,
     "completion": 0.12943634455039657,
     "core_change": -0.963172804532578,
-    "change": -0.013220473428543322,
+    "change": -0.01293798468007018,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
     "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
