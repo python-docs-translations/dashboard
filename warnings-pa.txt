@@ -1,2 +1,4 @@
+about.rst:: ERROR: Anonymous hyperlink mismatch: 1 references but 0 targets.
+See "backrefs" attribute for IDs. [docutils]
 bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`ਦਸਤਾਵੇਜ਼ੀਕਰਨ ਬੱਗ`_'] [i18n.inconsistent_references]
 tutorial/appendix.rst:13: WARNING: inconsistent term references in translated message. original: [':term:`REPL`'], translated: [] [i18n.inconsistent_references]
