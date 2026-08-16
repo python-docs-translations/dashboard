@@ -11,7 +11,6 @@ custom_contributing_links: dict[str, str] = {
     'tr': 'https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak',
     'el': 'https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md',
     'pt-br': 'https://python.org.br/traducao/',
-    'fa': 'https://github.com/Revisto/python-docs-fa',
 }
 
 
