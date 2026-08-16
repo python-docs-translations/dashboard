@@ -1,4 +1,6 @@
 installing/index.po:231: missing backtick before hyperlink reference: 'Erweiterungen <https://packaging.python.org/extensions/>`_'. (hyperlink-reference-missing-backtick)
+library/functions.po:3502: Extra backtick in role: ':ref:``function`' (role-with-extra-backtick)
+library/functions.po:3815: superfluous backtick in front of role (backtick-before-role)
 library/string.po:1542: missing underscore after closing backtick in hyperlink (missing-underscore-after-hyperlink)
 library/string.po:1518: role missing (escaped) space after role: ':ref:`formatierte Zeichenkettenliterale ` und :ref:`V' (missing-space-after-role)
 library/string.po:1458: OMG TABS!!!1 (horizontal-tab)
