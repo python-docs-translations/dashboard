@@ -1,5 +1,5 @@
 pulling_from_transifex: frozenset[str] = frozenset(
-    {'zh-cn', 'pt-br', 'ja', 'uk', 'pl', 'ru', 'fa', 'id'}
+    {'zh-cn', 'pt-br', 'ja', 'uk', 'pl', 'ru', 'id'}
 )
 
 custom_contributing_links: dict[str, str] = {
