@@ -338,8 +338,8 @@
     "branch": "3.15",
     "core_completion": 3.5633346823148524,
     "completion": 0.12942391387858218,
-    "core_change": -0.963172804532578,
-    "change": -0.013501665393706314,
+    "core_change": -1.0744637798462162,
+    "change": -0.01660874320397343,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
     "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
