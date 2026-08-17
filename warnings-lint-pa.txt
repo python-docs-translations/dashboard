@@ -1,5 +1,3 @@
-about.po:83: missing space before < in hyperlink (missing-space-in-hyperlink)
-glossary.po:1694: Extra backtick in role: ':pep:`443``' (role-with-extra-backtick)
 library/fileinput.po:57: inline literal missing (escaped) space after literal: '``sys.argv[1:]``ਵ' (missing-space-after-literal)
 library/fileinput.po:57: inline literal missing (escaped) space after literal: '``ਹੈ, ਤਾਂ ਇਸਨੂੰ ਵੀ``s' (missing-space-after-literal)
 library/fileinput.po:200: inline literal missing (escaped) space after literal: '``None``ਵ' (missing-space-after-literal)

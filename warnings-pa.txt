@@ -1,8 +1,4 @@
-about.rst:: ERROR: Anonymous hyperlink mismatch: 1 references but 0 targets.
-See "backrefs" attribute for IDs. [docutils]
 bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`ਦਸਤਾਵੇਜ਼ੀਕਰਨ ਬੱਗ`_'] [i18n.inconsistent_references]
-glossary.rst:691:<translated>:1: ERROR: invalid PEP number 443` [docutils]
-glossary.rst:691:<translated>:1: ERROR: invalid PEP number 443` [docutils]
 tutorial/inputoutput.rst:523: WARNING: inconsistent term references in translated message. original: [':func:`~json.dumps`', ':func:`~json.dump`', ':term:`text file`', ':term:`text file`'], translated: [':func:`~json.dumps`', ':func:`~json.dump`', ':term:`ਟੈਕਸਟ ਫਾਈਲ`', ':term:`ਟੈਕਸਟ ਫਾਈਲ`'] [i18n.inconsistent_references]
 using/configure.rst:1272:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 using/configure.rst:1272:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
