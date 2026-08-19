@@ -132,7 +132,6 @@ glossary.rst:287:<translated>:1: WARNING: term not in glossary: 'свободн�
 glossary.rst:305:<translated>:1: WARNING: term not in glossary: 'параллелизм' [ref.term]
 glossary.rst:324:<translated>:1: WARNING: term not in glossary: 'менеджером контекста' [ref.term]
 glossary.rst:326:<translated>:1: WARNING: term not in glossary: 'контекстная переменная' [ref.term]
-glossary.rst:330:<translated>:1: WARNING: term not in glossary: 'текущий контекст' [ref.term]
 glossary.rst:343:<translated>:1: WARNING: term not in glossary: 'текущим контекстом' [ref.term]
 glossary.rst:368:<translated>:1: WARNING: term not in glossary: 'сопрограмму' [ref.term]
 glossary.rst:804:<translated>:1: WARNING: term not in glossary: 'последовательности' [ref.term]
