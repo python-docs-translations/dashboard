@@ -144,7 +144,7 @@
     "core_completion": 90.89842169162283,
     "completion": 38.72507232352129,
     "core_change": 0.3561311210036422,
-    "change": 0.01028149257896871,
+    "change": 0.010168509144030224,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -247,9 +247,9 @@
     "repository": "BHUVANSH855/python-docs-pa",
     "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 4.6119838139931115,
+    "completion": 4.617802460892197,
     "core_change": 0.49979765277215904,
-    "change": -2.901979526271756,
+    "change": -2.8961608793726707,
     "built": false,
     "translated_name": "\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40",
     "contribution_link": "https://github.com/BHUVANSH855/python-docs-pa"
@@ -277,9 +277,9 @@
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 3.7071559753266774,
+    "completion": 3.7090202020030834,
     "core_change": 5.2084176446782635,
-    "change": 0.28189367015954936,
+    "change": 0.2837578968359553,
     "built": false,
     "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
