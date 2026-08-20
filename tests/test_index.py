@@ -1,4 +1,5 @@
 import unittest
+from dataclasses import replace
 from datetime import datetime
 import support
 
@@ -29,6 +30,35 @@ class testIndex(unittest.TestCase):
             generation_time=datetime.now(),
             duration=100,
         )
+
+    def test_orders_by_completion_score(self):
+        env = Environment(loader=FileSystemLoader('templates'))
+        language_project_data = generate.LanguageProjectData(
+            language=repositories.Language('pl', 'Polish'),
+            repository='python-docs-pl',
+            branch='3.14',
+            core_completion=100,
+            completion=0,
+            core_change=1,
+            change=2,
+            built=True,
+            translated_name='Polish',
+            contribution_link='https://example.com',
+        )
+        higher_completion_score = replace(
+            language_project_data,
+            language=repositories.Language('de', 'German'),
+            core_completion=60,
+            completion=60,
+        )
+
+        index = env.get_template('index.html.jinja').render(
+            completion_progress=[language_project_data, higher_completion_score],
+            generation_time=datetime.now(),
+            duration=100,
+        )
+
+        self.assertLess(index.index('German'), index.index('Polish'))
 
 
 if __name__ == '__main__':
