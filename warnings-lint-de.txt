@@ -1,5 +1,3 @@
-bugs.po:210: trailing whitespace (trailing-whitespace)
-bugs.po:227: trailing whitespace (trailing-whitespace)
 glossary.po:904: Extra backtick in role: ':keyword:`await``' (role-with-extra-backtick)
 glossary.po:2182: Extra backtick in role: ':class:`list``' (role-with-extra-backtick)
 glossary.po:2704: Extra backtick in role: ':func:`os.stat``' (role-with-extra-backtick)
