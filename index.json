@@ -169,7 +169,7 @@
       "code": "mr",
       "name": "Marathi"
     },
-    "repository": "sanketgarade/python-doc-mr",
+    "repository": "satvikmudgal/python-docs-mr",
     "branch": "3.14",
     "core_completion": 0.05058987797721432,
     "completion": 0.0014120241196312019,
@@ -177,7 +177,7 @@
     "change": 0.0,
     "built": false,
     "translated_name": "\u092e\u0930\u093e\u0920\u0940",
-    "contribution_link": "https://github.com/sanketgarade/python-doc-mr"
+    "contribution_link": "https://github.com/satvikmudgal/python-docs-mr"
   },
   {
     "language": {
