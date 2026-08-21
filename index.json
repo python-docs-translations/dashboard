@@ -169,7 +169,7 @@
       "code": "mr",
       "name": "Marathi"
     },
-    "repository": "satvikmudgal/python-docs-mr",
+    "repository": "sanketgarade/python-doc-mr",
     "branch": "3.14",
     "core_completion": 0.05058987797721432,
     "completion": 0.0014120241196312019,
@@ -177,7 +177,7 @@
     "change": 0.0,
     "built": false,
     "translated_name": "\u092e\u0930\u093e\u0920\u0940",
-    "contribution_link": "https://github.com/satvikmudgal/python-docs-mr"
+    "contribution_link": "https://github.com/sanketgarade/python-doc-mr"
   },
   {
     "language": {
@@ -280,8 +280,8 @@
     "completion": 3.7632137217115087,
     "core_change": 5.208733836533995,
     "change": 0.3431783420351673,
-    "built": true,
-    "translated_name": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+    "built": false,
+    "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   },
   {
