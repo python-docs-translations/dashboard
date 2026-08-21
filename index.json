@@ -280,8 +280,8 @@
     "completion": 3.7632137217115087,
     "core_change": 5.208733836533995,
     "change": 0.3431783420351673,
-    "built": false,
-    "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439",
+    "built": true,
+    "translated_name": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   },
   {
