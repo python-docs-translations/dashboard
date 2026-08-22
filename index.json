@@ -157,9 +157,9 @@
     "repository": "python/python-docs-ko",
     "branch": "3.14",
     "core_completion": 90.41806200712973,
-    "completion": 45.35693339888698,
+    "completion": 45.364102153053466,
     "core_change": 0.0,
-    "change": 0.0,
+    "change": 0.007168754166485769,
     "built": true,
     "translated_name": "\ud55c\uad6d\uc5b4",
     "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
