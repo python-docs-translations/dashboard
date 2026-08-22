@@ -276,10 +276,10 @@
     },
     "repository": "MLGRussianXP/python-docs-ru",
     "branch": "3.15",
-    "core_completion": 99.8421595807111,
-    "completion": 3.7632137217115087,
-    "core_change": 5.208733836533995,
-    "change": 0.3431783420351673,
+    "core_completion": 100.0,
+    "completion": 3.8183956243066963,
+    "core_change": 5.366574255822897,
+    "change": 0.3983602446303549,
     "built": true,
     "translated_name": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -294,7 +294,7 @@
     "core_completion": 99.8421595807111,
     "completion": 90.81438773504553,
     "core_change": 0.18212356071798297,
-    "change": 0.38847607579292287,
+    "change": 0.3755984158218979,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
