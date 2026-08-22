@@ -120,12 +120,10 @@ class CombinedLanguageCard:
     packaging: PackagingProjectData | None
 
 
-def _card_sort_key(c: CombinedLanguageCard) -> tuple[float, float, float]:
-    """Sort key: prefer high CPython core → overall → packaging completion."""
-    return (
-        c.cpython.core_completion if c.cpython else 0.0,
-        c.cpython.completion if c.cpython else 0.0,
-        c.packaging.completion if c.packaging else 0.0,
+def _card_sort_key(c: CombinedLanguageCard) -> float:
+    """Return docs completion + docs core completion + packaging completion."""
+    return (c.cpython.completion + c.cpython.core_completion if c.cpython else 0.0) + (
+        c.packaging.completion if c.packaging else 0.0
     )
 
 

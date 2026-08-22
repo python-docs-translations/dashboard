@@ -1,4 +1,5 @@
 import unittest
+from dataclasses import replace
 from datetime import datetime
 import support
 
@@ -79,6 +80,41 @@ class testIndex(unittest.TestCase):
         )
 
         self.assertEqual(generate.merge_progress([], [packaging_data]), [])
+
+    def test_orders_by_combined_completion_score(self):
+        polish_docs = generate.LanguageProjectData(
+            language=repositories.Language('pl', 'Polish'),
+            repository='python-docs-pl',
+            branch='3.14',
+            core_completion=100,
+            completion=0,
+            core_change=0,
+            change=0,
+            built=True,
+            translated_name='Polski',
+            contribution_link='https://example.com',
+        )
+        german_docs = replace(
+            polish_docs,
+            language=repositories.Language('de', 'German'),
+            repository='python-docs-de',
+            core_completion=45,
+            completion=45,
+            translated_name='Deutsch',
+        )
+        german_packaging = packaging_completion.PackagingProjectData(
+            language=repositories.Language('de', 'German'),
+            completion=20,
+            change=0,
+            built=True,
+            translated_name='Deutsch',
+        )
+
+        combined = generate.merge_progress(
+            [polish_docs, german_docs], [german_packaging]
+        )
+
+        self.assertEqual([card.language.code for card in combined], ['de', 'pl'])
 
     def test_hindi_normalisation(self):
         """hi-in packaging entry is merged onto the same card as hi CPython entry."""
