@@ -106,7 +106,7 @@ class LanguageProjectData:
 
     @property
     def completion_score(self) -> float:
-        return self.completion + self.core_completion
+        return self.completion + self.core_completion / 2
 
 
 if __name__ == '__main__':
