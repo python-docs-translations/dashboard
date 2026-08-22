@@ -1,1 +1,1 @@
-bugs.rst:37: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Erori de documentație`_'] [i18n.inconsistent_references]
+bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Erori de documentație`_'] [i18n.inconsistent_references]

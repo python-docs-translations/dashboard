@@ -1,1 +1,0 @@
-bugs.po:245: missing backtick before hyperlink reference: 'lỗi <https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html>`_'. (hyperlink-reference-missing-backtick)
