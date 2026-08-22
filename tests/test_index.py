@@ -69,6 +69,17 @@ class testIndex(unittest.TestCase):
             combined_progress=combined, generation_time=datetime.now(), duration=100
         )
 
+    def test_ignores_packaging_language_without_cpython_docs(self):
+        packaging_data = packaging_completion.PackagingProjectData(
+            language=repositories.Language('es', 'Spanish'),
+            completion=75.0,
+            change=2.0,
+            built=True,
+            translated_name='Español',
+        )
+
+        self.assertEqual(generate.merge_progress([], [packaging_data]), [])
+
     def test_hindi_normalisation(self):
         """hi-in packaging entry is merged onto the same card as hi CPython entry."""
         cpython_data = generate.LanguageProjectData(

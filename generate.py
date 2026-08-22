@@ -133,7 +133,7 @@ def merge_progress(
     completion_progress: list[LanguageProjectData],
     packaging_progress: list[PackagingProjectData],
 ) -> list[CombinedLanguageCard]:
-    """Merge CPython and packaging progress into one card per language code."""
+    """Add packaging progress to cards for CPython documentation languages."""
     cards: dict[str, dict] = {}
     for proj in completion_progress:
         code = proj.language.code
@@ -143,21 +143,12 @@ def merge_progress(
             'cpython': proj,
             'packaging': None,
         }
-    for proj in packaging_progress:
+    for proj in packaging_progress:  # type: ignore[assignment]
         # Normalise packaging language codes so aliases (e.g. hi-in → hi)
         # are merged onto the same card as the CPython entry.
         code = LOCALE_CODE_NORMALISATION.get(proj.language.code, proj.language.code)
         if code in cards:
             cards[code]['packaging'] = proj
-        else:
-            # Use normalised code and prefer the CPython language object if
-            # available; otherwise keep the packaging one.
-            cards[code] = {
-                'language': proj.language,
-                'translated_name': proj.translated_name,
-                'cpython': None,
-                'packaging': proj,
-            }
     return sorted(
         [
             CombinedLanguageCard(
