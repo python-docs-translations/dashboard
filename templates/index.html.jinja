@@ -10,25 +10,26 @@
                 <a href="#{{ card.language.code }}">{{ card.language.name }}</a>
               </h2>
               <h3 class="card-subtitle text-muted h5 mb-2">{{ card.translated_name }}</h3>
-
               {% if card.cpython %}
-                <h6 class="mt-2">CPython docs</h6>
-                <ul class="links-row">
-                  {% if card.cpython.built %}
+                <div class="d-flex align-items-baseline gap-3 mt-2">
+                  <h6 class="mt-2">Docs:</h6>
+                  <ul class="links-row">
+                    {% if card.cpython.built %}
+                      <li>
+                        <a href="https://docs.python.org/{{ card.language.code }}/3/"
+                           aria-label="View {{ card.language.name }} documentation">View</a>
+                      </li>
+                      <li>
+                        <a href="https://analytics.python.org/docs.python.org?f=contains,page,/{{ card.language.code }}/"
+                           aria-label="View {{ card.language.name }} documentation analytics">Analytics</a>
+                      </li>
+                    {% endif %}
                     <li>
-                      <a href="https://docs.python.org/{{ card.language.code }}/3/"
-                         aria-label="View {{ card.language.name }} documentation">View</a>
+                      <a href="{{ card.cpython.contribution_link }}"
+                         aria-label="Contribute to {{ card.language.name }} translation">Contribute</a>
                     </li>
-                    <li>
-                      <a href="https://analytics.python.org/docs.python.org?f=contains,page,/{{ card.language.code }}/"
-                         aria-label="View {{ card.language.name }} documentation analytics">Analytics</a>
-                    </li>
-                  {% endif %}
-                  <li>
-                    <a href="{{ card.cpython.contribution_link }}"
-                       aria-label="Contribute to {{ card.language.name }} translation">Contribute</a>
-                  </li>
-                </ul>
+                  </ul>
+                </div>
                 {# CPython core progress bar #}
                 {% with width=card.cpython.core_completion, change=card.cpython.core_change, kind="core" %}
                   {% include "progress_bar.html.jinja" %}
@@ -38,25 +39,26 @@
                   {% include "progress_bar.html.jinja" %}
                 {% endwith %}
               {% endif %}
-
               {% if card.packaging %}
-                <h6 class="mt-2">packaging.python.org</h6>
-                <ul class="links-row">
-                  {% if card.packaging.built %}
+                <div class="d-flex align-items-baseline gap-3 mt-2">
+                  <h6 class="mt-2">Packaging:</h6>
+                  <ul class="links-row">
+                    {% if card.packaging.built %}
+                      <li>
+                        <a href="https://packaging.python.org/{{ card.language.code }}/latest/"
+                           aria-label="View {{ card.language.name }} packaging documentation">View</a>
+                      </li>
+                      <li>
+                        <a href="https://analytics.python.org/packaging.python.org?f=contains,page,/{{ card.language.code }}/"
+                           aria-label="View {{ card.language.name }} packaging documentation analytics">Analytics</a>
+                      </li>
+                    {% endif %}
                     <li>
-                      <a href="https://packaging.python.org/{{ card.language.code }}/latest/"
-                         aria-label="View {{ card.language.name }} packaging documentation">View</a>
+                      <a href="https://hosted.weblate.org/engage/pypa/"
+                         aria-label="Contribute to {{ card.language.name }} packaging translation">Contribute</a>
                     </li>
-                    <li>
-                      <a href="https://analytics.python.org/packaging.python.org?f=contains,page,/{{ card.language.code }}/"
-                         aria-label="View {{ card.language.name }} packaging documentation analytics">Analytics</a>
-                    </li>
-                  {% endif %}
-                  <li>
-                    <a href="https://hosted.weblate.org/engage/pypa/"
-                       aria-label="Contribute to {{ card.language.name }} packaging translation">Contribute</a>
-                  </li>
-                </ul>
+                  </ul>
+                </div>
                 {# packaging.python.org progress bar #}
                 {% with width=card.packaging.completion, change=card.packaging.change, kind="overall", extra_container_class="mt-1" %}
                   {% include "progress_bar.html.jinja" %}
