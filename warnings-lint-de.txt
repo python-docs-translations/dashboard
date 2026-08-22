@@ -5,7 +5,7 @@ glossary.po:2742: Extra backtick in role: ':data:`sys.float_info``' (role-with-e
 glossary.po:2768: Extra backtick in role: ':class:`typing.NamedTuple``' (role-with-extra-backtick)
 glossary.po:2768: Extra backtick in role: ':func:`collections.namedtuple``' (role-with-extra-backtick)
 glossary.po:478: missing backtick before hyperlink reference: 'Rossum <https://gvanrossum.github.io/>`_'. (hyperlink-reference-missing-backtick)
-installing/index.po:466: missing backtick before hyperlink reference: 'Erweiterungen <https://packaging.python.org/extensions/>`_'. (hyperlink-reference-missing-backtick)
+installing/index.po:443: missing backtick before hyperlink reference: 'Erweiterungen <https://packaging.python.org/extensions/>`_'. (hyperlink-reference-missing-backtick)
 library/string.po:1634: missing underscore after closing backtick in hyperlink (missing-underscore-after-hyperlink)
 library/string.po:1610: role missing (escaped) space after role: ':ref:`formatierte Zeichenkettenliterale ` und :ref:`V' (missing-space-after-role)
 library/string.po:1550: OMG TABS!!!1 (horizontal-tab)

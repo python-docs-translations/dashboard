@@ -52,9 +52,9 @@
     "repository": "sba72/python-docs-de",
     "branch": "3.15",
     "core_completion": 68.64237003460347,
-    "completion": 4.569742926192024,
+    "completion": 4.597869286974163,
     "core_change": 63.95572373879434,
-    "change": 4.21336273234605,
+    "change": 4.241489093128188,
     "built": false,
     "translated_name": "Deutsch",
     "contribution_link": "https://github.com/sba72/python-docs-de"
@@ -249,7 +249,7 @@
     "core_completion": 99.8421595807111,
     "completion": 4.6121583819096665,
     "core_change": 0.18212356071798297,
-    "change": -2.904413861890532,
+    "change": -2.9836533883510556,
     "built": false,
     "translated_name": "\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40",
     "contribution_link": "https://github.com/BHUVANSH855/python-docs-pa"
