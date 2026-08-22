@@ -81,7 +81,7 @@ class TestPoCompletion(unittest.TestCase):
             tmp_path.unlink(missing_ok=True)
 
     def test_fuzzy_entries_included(self):
-        """percent_translated counts fuzzy as untranslated (not excluded from total)."""
+        """Fuzzy entries count toward total words but not translated words."""
         from pathlib import Path
 
         po_content = (
@@ -104,8 +104,30 @@ class TestPoCompletion(unittest.TestCase):
             tmp_path = Path(f.name)
         try:
             result = packaging_completion._po_completion(tmp_path)
-            # polib percent_translated: 1 translated out of 3 total → 33 (int, rounded)
-            self.assertEqual(result, 33)
+            self.assertAlmostEqual(result, 100 / 3)
+        finally:
+            tmp_path.unlink(missing_ok=True)
+
+    def test_weights_completion_by_source_word_count(self):
+        from pathlib import Path
+
+        po_content = (
+            'msgid ""\n'
+            'msgstr ""\n'
+            '"Content-Type: text/plain; charset=UTF-8\\n"\n'
+            '\n'
+            'msgid "one two three four"\n'
+            'msgstr "uno dos tres cuatro"\n'
+            '\n'
+            'msgid "five"\n'
+            'msgstr ""\n'
+        )
+        with tempfile.NamedTemporaryFile(suffix='.po', mode='w', delete=False) as f:
+            f.write(po_content)
+            tmp_path = Path(f.name)
+        try:
+            result = packaging_completion._po_completion(tmp_path)
+            self.assertEqual(result, 80.0)
         finally:
             tmp_path.unlink(missing_ok=True)
 

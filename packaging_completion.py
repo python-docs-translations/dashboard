@@ -6,8 +6,8 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import git
-import polib
 import urllib3
+from potodo.po_file import PoFileStats
 
 from repositories import Language
 
@@ -77,8 +77,10 @@ def _po_completion(po_path: Path) -> float:
     if not po_path.exists():
         return 0.0
     try:
-        po = polib.pofile(str(po_path))
-        return po.percent_translated()
+        stats = PoFileStats(po_path)
+        return 100 * stats.translated_words / stats.words
+    except ZeroDivisionError:
+        return 0.0
     except Exception:
         logging.exception('Failed to parse %s', po_path)
         return 0.0
