@@ -9,11 +9,11 @@
               <h2 class="card-title h3">
                 <a href="#{{ card.language.code }}">{{ card.language.name }}</a>
               </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">{{ card.translated_name }}</h3>
+              <h3 class="card-subtitle text-muted h5 mb-0">{{ card.translated_name }}</h3>
               {% if card.cpython %}
-                <div class="d-flex align-items-baseline gap-3 mt-2">
-                  <h6 class="mt-2">Docs:</h6>
-                  <ul class="links-row">
+                <div class="d-flex align-items-baseline gap-2 mt-3 mb-2">
+                  <span class="fw-bold mb-0">Docs:</span>
+                  <ul class="links-row mb-0">
                     {% if card.cpython.built %}
                       <li>
                         <a href="https://docs.python.org/{{ card.language.code }}/3/"
@@ -40,9 +40,9 @@
                 {% endwith %}
               {% endif %}
               {% if card.packaging %}
-                <div class="d-flex align-items-baseline gap-3 mt-2">
-                  <h6 class="mt-2">Packaging:</h6>
-                  <ul class="links-row">
+                <div class="d-flex align-items-baseline gap-2 mt-3 mb-2">
+                  <span class="fw-bold mb-0">Packaging:</span>
+                  <ul class="links-row mb-0">
                     {% if card.packaging.built %}
                       <li>
                         <a href="https://packaging.python.org/{{ card.language.code }}/latest/"
