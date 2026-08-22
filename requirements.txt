@@ -8,3 +8,4 @@ sphinx
 python-docs-theme
 dacite
 sphinx-lint
+polib
