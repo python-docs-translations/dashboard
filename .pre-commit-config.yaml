@@ -57,5 +57,11 @@ repos:
     hooks:
       - id: zizmor
 
+  - repo: https://github.com/oxipng/oxipng  # PNG optimizer
+    rev: v9.1.5
+    hooks:
+      - id: oxipng
+        args: [ --strip=safe, --alpha ]
+
 ci:
   autoupdate_schedule: quarterly
