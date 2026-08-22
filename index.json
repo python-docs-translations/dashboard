@@ -50,11 +50,11 @@
       "name": "German"
     },
     "repository": "sba72/python-docs-de",
-    "branch": "3.14",
-    "core_completion": 94.50391565655544,
-    "completion": 5.263131141698685,
-    "core_change": 89.8172693607463,
-    "change": 4.906750947852711,
+    "branch": "3.15",
+    "core_completion": 89.00813434794017,
+    "completion": 5.1242501755073615,
+    "core_change": 84.32148805213103,
+    "change": 4.767869981661387,
     "built": false,
     "translated_name": "Deutsch",
     "contribution_link": "https://github.com/sba72/python-docs-de"
