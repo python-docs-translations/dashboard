@@ -9,15 +9,16 @@ with support.import_scripts():
 class testContributeLink(unittest.TestCase):
     def test_get_contrib_link(self):
         PULL_FROM_TX = 'https://explore.transifex.com/python-doc/python-newest/'
+        DEVGUIDE = 'https://devguide.python.org/documentation/translations/translating/'
 
         for code, repo, expected in (
-            ('en', None, None),
+            ('en', None, DEVGUIDE),
             ('pl', None, PULL_FROM_TX),
             ('ar', 'python/python-docs-ar', 'https://github.com/python/python-docs-ar'),
             (
                 'zh-tw',
                 None,
-                'https://github.com/python/python-docs-zh-tw/blob/3.13/README.rst#%E5%8F%83%E8%88%87%E7%BF%BB%E8%AD%AF',
+                'https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2',
             ),
             (
                 'id',
@@ -37,6 +38,10 @@ class testContributeLink(unittest.TestCase):
                     self.assertTrue(
                         200 <= r.status < 400, f'{link} returned {r.status}'
                     )
+                except urllib3.exceptions.MaxRetryError as e:
+                    if isinstance(e.reason, urllib3.exceptions.ReadTimeoutError):
+                        self.skipTest(f'{link}: read timeout, skipping slow server')
+                    self.fail(f'{link}: {e}')
                 except Exception as e:
                     self.fail(f'{link}: {e}')
 

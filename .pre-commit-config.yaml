@@ -1,13 +1,13 @@
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.13.3
+    rev: c59bba8fb259db0fec2bbb77ad8ba51ea7341b56  # frozen: v0.15.20
     hooks:
       - id: ruff-check
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -20,12 +20,12 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.34.0
+    rev: 1a4bb160cab6417b3045e1b37b6b72449243e658  # frozen: 0.37.4
     hooks:
       - id: check-github-workflows
 
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.7
+    rev: 914e7df21a07ef503a81201c76d2b11c789d3fca  # frozen: v1.7.12
     hooks:
       - id: actionlint
 
@@ -35,16 +35,27 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.18.2
+    rev: d2823d321df3af8f878f7ee3414dc94d037145b9  # frozen: v2.1.0
     hooks:
       - id: mypy
         additional_dependencies: [types-docutils, types-polib>=1.2.0.20250114, types-requests]
 
   - repo: https://github.com/francescorubbo/deptry-pre-commit
-    rev: v0.23.0
+    rev: 14b9099e8ca0e47a3ee8685e951ee66254a9846f  # frozen: v0.25.1
     hooks:
       - id: deptry
-        args: ["--per-rule-ignores", "DEP002=python-docs-theme", "--package-module-name-map", "gitpython=git,sphinx-lint=sphinxlint"]
+        args: [".", "--per-rule-ignores", "DEP002=python-docs-theme", "--package-module-name-map", "gitpython=git,sphinx-lint=sphinxlint"]
+
+  - repo: https://github.com/djlint/djLint
+    rev: 9112cb64851c95a7802358af285d21ad8b7f6437  # frozen: v1.36.4
+    hooks:
+      - id: djlint-reformat-jinja
+      - id: djlint-jinja
+
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: e3eebf65325ccc992422292cb7a4baee967cf815  # frozen: v1.26.1
+    hooks:
+      - id: zizmor
 
   - repo: https://github.com/oxipng/oxipng  # PNG optimizer
     rev: v9.1.5

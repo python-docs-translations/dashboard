@@ -13,18 +13,20 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.x"
-      - uses: astral-sh/setup-uv@v7
-      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - run: sudo apt-get install -y gettext
       - run: pip install -r requirements.txt
       - run: uv run generate.py  # generates index.html and index.json
       - run: uv run generate_related_projects.py  # generates related.html
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
         with:
           folder: build
           clean: false
@@ -33,7 +35,7 @@ jobs:
       - name: Deploy to subdirectory if pull request 🚀
         # This does not work for PRs from forks
         if: github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
         with:
           folder: build
           target-folder: ${{ github.ref_name }}
@@ -43,7 +45,7 @@ jobs:
       - name: Update PR description if pull request
         # This does not work for PRs from forks
         if: github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork
-        uses: chabroA/action-append-pr-description@v1.2.1
+        uses: chabroA/action-append-pr-description@9e3784d5a06b65d9294b9dcee4633ab81a362e8f # v1.2.1
         with:
           auth: ${{ secrets.GITHUB_TOKEN }}
           repo: ${{ github.event.repository.name }}
@@ -60,7 +62,7 @@ jobs:
       - run: uv run generate_build_details.py  # generates build-details.html
       - name: Deploy build details view 🚀
         if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
         with:
           folder: build
           clean: false
@@ -69,14 +71,14 @@ jobs:
       - name: Deploy metadata view to subdirectory if pull request 🚀
         # This does not work for PRs from forks
         if: github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
         with:
           folder: build
           target-folder: ${{ github.ref_name }}
           clean: false
           git-config-name: github-actions[bot]
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: always()
         with:
           name: build
