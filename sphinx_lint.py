@@ -5,12 +5,19 @@ from pathlib import Path
 from sphinxlint import check_file, checkers
 
 
+WARNING_NOTICE = (
+    '# WARNING! There might be false positives below! '
+    'See https://github.com/sphinx-doc/sphinx/issues/14162'
+)
+
+
 def store_and_count_failures(clones_dir: str, repo: str, language_code: str) -> int:
     failed_checks = list(chain.from_iterable(yield_failures(clones_dir, repo)))
     prefix = f'{Path(clones_dir, "rebased_translations", repo)}/'
-    log = '\n'.join(
+    warnings = '\n'.join(
         map(lambda check: check.removeprefix(prefix), map(str, failed_checks))
     )
+    log = f'{WARNING_NOTICE}\n{warnings}'
     filepath = Path(f'build/warnings-lint-{language_code}.txt')
     filepath.write_text(log)
     return len(failed_checks)
