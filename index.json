@@ -219,7 +219,7 @@
     "core_completion": 100.0,
     "completion": 5.750428814044655,
     "core_change": 0.6576684137037887,
-    "change": 0.08104684281600161,
+    "change": 0.07788403919391396,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
