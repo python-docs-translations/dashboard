@@ -12,7 +12,8 @@
     "change": 0.0,
     "built": false,
     "translated_name": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
-    "contribution_link": "https://github.com/Abdur-rahmaanJ/python-docs-ar"
+    "contribution_link": "https://github.com/Abdur-rahmaanJ/python-docs-ar",
+    "audience": 0
   },
   {
     "language": {
@@ -27,7 +28,8 @@
     "change": 0.0,
     "built": true,
     "translated_name": "\u09ac\u09be\u0982\u09b2\u09be",
-    "contribution_link": "https://github.com/python/python-docs-bn-in"
+    "contribution_link": "https://github.com/python/python-docs-bn-in",
+    "audience": 0
   },
   {
     "language": {
@@ -42,7 +44,8 @@
     "change": 0.0,
     "built": true,
     "translated_name": "fran\u00e7ais",
-    "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst"
+    "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst",
+    "audience": 38037
   },
   {
     "language": {
@@ -57,7 +60,8 @@
     "change": 5.145429664048129,
     "built": false,
     "translated_name": "Deutsch",
-    "contribution_link": "https://github.com/sba72/python-docs-de"
+    "contribution_link": "https://github.com/sba72/python-docs-de",
+    "audience": 0
   },
   {
     "language": {
@@ -72,7 +76,8 @@
     "change": 0.0,
     "built": true,
     "translated_name": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac",
-    "contribution_link": "https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md"
+    "contribution_link": "https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md",
+    "audience": 0
   },
   {
     "language": {
@@ -87,7 +92,8 @@
     "change": 0.0,
     "built": false,
     "translated_name": "\u0939\u093f\u0928\u094d\u0926\u0940 (\u092d\u093e\u0930\u0924)",
-    "contribution_link": "https://github.com/CuriousLearner/python-docs-hi-in"
+    "contribution_link": "https://github.com/CuriousLearner/python-docs-hi-in",
+    "audience": 0
   },
   {
     "language": {
@@ -102,7 +108,8 @@
     "change": 0.0,
     "built": false,
     "translated_name": "magyar",
-    "contribution_link": "https://github.com/python/python-docs-hu"
+    "contribution_link": "https://github.com/python/python-docs-hu",
+    "audience": 0
   },
   {
     "language": {
@@ -117,7 +124,8 @@
     "change": 0.00022591454443521286,
     "built": true,
     "translated_name": "Indonesia",
-    "contribution_link": "https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan"
+    "contribution_link": "https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan",
+    "audience": 0
   },
   {
     "language": {
@@ -132,7 +140,8 @@
     "change": 0.0,
     "built": true,
     "translated_name": "italiano",
-    "contribution_link": "https://github.com/python/python-docs-it"
+    "contribution_link": "https://github.com/python/python-docs-it",
+    "audience": 9159
   },
   {
     "language": {
@@ -147,7 +156,8 @@
     "change": 0.0002259145444298838,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e",
-    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/",
+    "audience": 62665
   },
   {
     "language": {
@@ -162,7 +172,8 @@
     "change": 0.007168458781364961,
     "built": true,
     "translated_name": "\ud55c\uad6d\uc5b4",
-    "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
+    "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html",
+    "audience": 20832
   },
   {
     "language": {
@@ -177,7 +188,8 @@
     "change": 0.0,
     "built": false,
     "translated_name": "\u092e\u0930\u093e\u0920\u0940",
-    "contribution_link": "https://github.com/satvikmudgal/python-docs-mr"
+    "contribution_link": "https://github.com/satvikmudgal/python-docs-mr",
+    "audience": 0
   },
   {
     "language": {
@@ -192,7 +204,8 @@
     "change": 0.0,
     "built": false,
     "translated_name": "lietuvi\u0173",
-    "contribution_link": "https://devguide.python.org/documentation/translations/translating/"
+    "contribution_link": "https://devguide.python.org/documentation/translations/translating/",
+    "audience": 0
   },
   {
     "language": {
@@ -207,7 +220,8 @@
     "change": 2.614113672291751,
     "built": false,
     "translated_name": "\u0641\u0627\u0631\u0633\u06cc",
-    "contribution_link": "https://github.com/revisto/python-docs-fa"
+    "contribution_link": "https://github.com/revisto/python-docs-fa",
+    "audience": 0
   },
   {
     "language": {
@@ -222,7 +236,8 @@
     "change": 0.08121627872432846,
     "built": true,
     "translated_name": "polski",
-    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/",
+    "audience": 7436
   },
   {
     "language": {
@@ -237,7 +252,8 @@
     "change": 0.44194532755066973,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
-    "contribution_link": "https://python.org.br/traducao/"
+    "contribution_link": "https://python.org.br/traducao/",
+    "audience": 42992
   },
   {
     "language": {
@@ -252,7 +268,8 @@
     "change": -2.9836533883510556,
     "built": false,
     "translated_name": "\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40",
-    "contribution_link": "https://github.com/BHUVANSH855/python-docs-pa"
+    "contribution_link": "https://github.com/BHUVANSH855/python-docs-pa",
+    "audience": 0
   },
   {
     "language": {
@@ -267,7 +284,8 @@
     "change": 0.0,
     "built": true,
     "translated_name": "Rom\u00e2ne\u0219te",
-    "contribution_link": "https://github.com/python/python-docs-ro"
+    "contribution_link": "https://github.com/python/python-docs-ro",
+    "audience": 0
   },
   {
     "language": {
@@ -282,7 +300,8 @@
     "change": 0.5245170935416112,
     "built": true,
     "translated_name": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
-    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/",
+    "audience": 0
   },
   {
     "language": {
@@ -297,7 +316,8 @@
     "change": 0.3711775965064561,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
-    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/",
+    "audience": 188937
   },
   {
     "language": {
@@ -312,7 +332,8 @@
     "change": 0.0,
     "built": true,
     "translated_name": "espa\u00f1ol",
-    "contribution_link": "https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html"
+    "contribution_link": "https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html",
+    "audience": 63799
   },
   {
     "language": {
@@ -327,7 +348,8 @@
     "change": 0.0,
     "built": true,
     "translated_name": "Svenska",
-    "contribution_link": "https://github.com/python/python-docs-sv"
+    "contribution_link": "https://github.com/python/python-docs-sv",
+    "audience": 0
   },
   {
     "language": {
@@ -342,7 +364,8 @@
     "change": 0.01304656494111256,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
-    "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
+    "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta",
+    "audience": 0
   },
   {
     "language": {
@@ -357,7 +380,8 @@
     "change": 0.024342292162856438,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
-    "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
+    "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2",
+    "audience": 26177
   },
   {
     "language": {
@@ -372,7 +396,8 @@
     "change": 0.0,
     "built": true,
     "translated_name": "T\u00fcrk\u00e7e",
-    "contribution_link": "https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak"
+    "contribution_link": "https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak",
+    "audience": 5621
   },
   {
     "language": {
@@ -387,7 +412,8 @@
     "change": 0.0,
     "built": true,
     "translated_name": "\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430",
-    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/",
+    "audience": 0
   },
   {
     "language": {
@@ -402,6 +428,7 @@
     "change": 0.014006701754960549,
     "built": false,
     "translated_name": "Ti\u1ebfng Vi\u1ec7t",
-    "contribution_link": "https://github.com/tamnd/python-docs-vi"
+    "contribution_link": "https://github.com/tamnd/python-docs-vi",
+    "audience": 0
   }
 ]
