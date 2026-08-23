@@ -1,8 +1,3 @@
 bugs.rst:27: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`translation repository <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
-bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: [] [i18n.inconsistent_references]
-bugs.rst:46: WARNING: inconsistent references in translated message. original: [], translated: ['`ஆவணப்படுத்தலுக்கு உதவுதல்<https://devguide.python.org/docquality/#helping-with-documentation>`_'] [i18n.inconsistent_references]
-bugs.rst:108: WARNING: inconsistent references in translated message. original: ["`Python Developer's Guide`_", '`core-mentorship mailing list`_'], translated: [] [i18n.inconsistent_references]
-bugs.rst:46: ERROR: Unknown target name: "ஆவணப்படுத்தலுக்கு உதவுதல்<https://devguide.python.org/docquality/#helping-with-documentation>".
-
-Did you want to embed a URI or alias?
-The embedded reference must be preceded by whitespace. [docutils]
+bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`ஆவணப்படுத்தல் பிழைகள்`_'] [i18n.inconsistent_references]
+library/functions.rst:61: WARNING: inconsistent term references in translated message. original: [':meth:`~object.__abs__`'], translated: [':meth:`~object.__abs__``'] [i18n.inconsistent_references]

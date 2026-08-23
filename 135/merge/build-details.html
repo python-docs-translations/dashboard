@@ -12,15 +12,25 @@
           rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
           crossorigin="anonymous">
-    <link href="style.css?version=3" rel="stylesheet">
+    <link href="style.css?version=4" rel="stylesheet">
   </head>
   <body>
     <script>
+      var colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      function getSystemTheme() {
+        return colorSchemeMediaQuery.matches ? 'dark' : 'light';
+      }
+      function getStoredTheme() {
+        return localStorage.getItem('theme');
+      }
+      function getTheme() {
+        return getStoredTheme() || getSystemTheme();
+      }
       function applyTheme(t) {
         document.documentElement.setAttribute('data-bs-theme', t);
         document.documentElement.classList.toggle('dark', t === 'dark');
       }
-      applyTheme(localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+      applyTheme(getTheme());
     </script>
     <header>
       <nav class="navbar navbar-expand-md fixed-top">
@@ -138,15 +148,15 @@
           <tr>
             <td data-label="language">Simplified Chinese (zh-cn)</td>
             <td data-label="branch">3.15</td>
-            <td data-label="updated">2026/06/05 17:07:01</td>
+            <td data-label="updated">2026/08/22 06:25:14</td>
             <td data-label="warnings">
               
-                <a href="warnings-zh-cn.txt">4</a>
+                <a href="warnings-zh-cn.txt">17</a>
               
             </td>
             <td data-label="lint">
               
-                <a href="warnings-lint-zh-cn.txt">0</a>
+                <a href="warnings-lint-zh-cn.txt">10</a>
               
             </td>
           </tr>
@@ -156,10 +166,10 @@
           <tr>
             <td data-label="language">Brazilian Portuguese (pt-br)</td>
             <td data-label="branch">3.15</td>
-            <td data-label="updated">2026/06/04 23:35:33</td>
+            <td data-label="updated">2026/08/21 23:12:04</td>
             <td data-label="warnings">
               
-                <a href="warnings-pt-br.txt">992</a>
+                <a href="warnings-pt-br.txt">1003</a>
               
             </td>
             <td data-label="lint">
@@ -174,15 +184,15 @@
           <tr>
             <td data-label="language">Spanish (es)</td>
             <td data-label="branch">3.14</td>
-            <td data-label="updated">2026/05/06 19:25:49</td>
+            <td data-label="updated">2026/08/03 07:06:01</td>
             <td data-label="warnings">
               
-                <a href="warnings-es.txt">253</a>
+                <a href="warnings-es.txt">244</a>
               
             </td>
             <td data-label="lint">
               
-                <a href="warnings-lint-es.txt">31</a>
+                <a href="warnings-lint-es.txt">30</a>
               
             </td>
           </tr>
@@ -192,7 +202,7 @@
           <tr>
             <td data-label="language">Korean (ko)</td>
             <td data-label="branch">3.14</td>
-            <td data-label="updated">2026/06/02 03:15:01</td>
+            <td data-label="updated">2026/08/22 14:40:31</td>
             <td data-label="warnings">
               
                 <a href="warnings-ko.txt">57</a>
@@ -210,15 +220,15 @@
           <tr>
             <td data-label="language">Japanese (ja)</td>
             <td data-label="branch">3.14</td>
-            <td data-label="updated">2026/06/04 00:21:26</td>
+            <td data-label="updated">2026/08/22 23:51:58</td>
             <td data-label="warnings">
               
-                <a href="warnings-ja.txt">395</a>
+                <a href="warnings-ja.txt">382</a>
               
             </td>
             <td data-label="lint">
               
-                <a href="warnings-lint-ja.txt">350</a>
+                <a href="warnings-lint-ja.txt">346</a>
               
             </td>
           </tr>
@@ -231,7 +241,7 @@
             <td data-label="updated">2025/05/01 16:40:42</td>
             <td data-label="warnings">
               
-                <a href="warnings-uk.txt">145</a>
+                <a href="warnings-uk.txt">144</a>
               
             </td>
             <td data-label="lint">
@@ -246,10 +256,10 @@
           <tr>
             <td data-label="language">Traditional Chinese (zh-tw)</td>
             <td data-label="branch">3.14</td>
-            <td data-label="updated">2026/06/05 20:12:22</td>
+            <td data-label="updated">2026/08/14 02:35:35</td>
             <td data-label="warnings">
               
-                <a href="warnings-zh-tw.txt">32</a>
+                <a href="warnings-zh-tw.txt">30</a>
               
             </td>
             <td data-label="lint">
@@ -264,10 +274,10 @@
           <tr>
             <td data-label="language">French (fr)</td>
             <td data-label="branch">3.14</td>
-            <td data-label="updated">2025/11/22 14:29:55</td>
+            <td data-label="updated">2026/07/10 20:24:05</td>
             <td data-label="warnings">
               
-                <a href="warnings-fr.txt">139</a>
+                <a href="warnings-fr.txt">133</a>
               
             </td>
             <td data-label="lint">
@@ -282,7 +292,7 @@
           <tr>
             <td data-label="language">Greek (el)</td>
             <td data-label="branch">3.14</td>
-            <td data-label="updated">2026/05/29 16:43:28</td>
+            <td data-label="updated">2026/07/15 09:28:17</td>
             <td data-label="warnings">
               
                 <a href="warnings-el.txt">0</a>
@@ -290,7 +300,7 @@
             </td>
             <td data-label="lint">
               
-                <a href="warnings-lint-el.txt">12</a>
+                <a href="warnings-lint-el.txt">11</a>
               
             </td>
           </tr>
@@ -300,15 +310,51 @@
           <tr>
             <td data-label="language">Polish (pl)</td>
             <td data-label="branch">3.15</td>
-            <td data-label="updated">2026/06/05 17:00:51</td>
+            <td data-label="updated">2026/08/22 22:14:27</td>
             <td data-label="warnings">
               
-                <a href="warnings-pl.txt">459</a>
+                <a href="warnings-pl.txt">458</a>
               
             </td>
             <td data-label="lint">
               
-                <a href="warnings-lint-pl.txt">180</a>
+                <a href="warnings-lint-pl.txt">177</a>
+              
+            </td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td data-label="language">German (de)</td>
+            <td data-label="branch">3.15</td>
+            <td data-label="updated">2026/08/22 19:13:47</td>
+            <td data-label="warnings">
+              
+                <a href="warnings-de.txt">354</a>
+              
+            </td>
+            <td data-label="lint">
+              
+                <a href="warnings-lint-de.txt">198</a>
+              
+            </td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td data-label="language">Punjabi (pa)</td>
+            <td data-label="branch">3.15</td>
+            <td data-label="updated">2026/08/22 01:26:12</td>
+            <td data-label="warnings">
+              
+                <a href="warnings-pa.txt">5</a>
+              
+            </td>
+            <td data-label="lint">
+              
+                <a href="warnings-lint-pa.txt">8</a>
               
             </td>
           </tr>
@@ -336,15 +382,15 @@
           <tr>
             <td data-label="language">Russian (ru)</td>
             <td data-label="branch">3.15</td>
-            <td data-label="updated">2026/06/05 18:02:49</td>
+            <td data-label="updated">2026/08/23 00:12:07</td>
             <td data-label="warnings">
               
-                <a href="warnings-ru.txt">101</a>
+                <a href="warnings-ru.txt">268</a>
               
             </td>
             <td data-label="lint">
               
-                <a href="warnings-lint-ru.txt">10</a>
+                <a href="warnings-lint-ru.txt">1</a>
               
             </td>
           </tr>
@@ -354,7 +400,7 @@
           <tr>
             <td data-label="language">Indonesian (id)</td>
             <td data-label="branch">3.14</td>
-            <td data-label="updated">2026/06/04 01:00:39</td>
+            <td data-label="updated">2026/08/22 00:17:44</td>
             <td data-label="warnings">
               
                 <a href="warnings-id.txt">20</a>
@@ -363,6 +409,24 @@
             <td data-label="lint">
               
                 <a href="warnings-lint-id.txt">1</a>
+              
+            </td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td data-label="language">Persian (fa)</td>
+            <td data-label="branch">3.14</td>
+            <td data-label="updated">2026/08/22 03:45:22</td>
+            <td data-label="warnings">
+              
+                <a href="warnings-fa.txt">4</a>
+              
+            </td>
+            <td data-label="lint">
+              
+                <a href="warnings-lint-fa.txt">0</a>
               
             </td>
           </tr>
@@ -408,10 +472,10 @@
           <tr>
             <td data-label="language">Swedish (sv)</td>
             <td data-label="branch">3.14</td>
-            <td data-label="updated">2026/06/04 00:35:40</td>
+            <td data-label="updated">2026/08/22 00:09:03</td>
             <td data-label="warnings">
               
-                <a href="warnings-sv.txt">100</a>
+                <a href="warnings-sv.txt">99</a>
               
             </td>
             <td data-label="lint">
@@ -426,7 +490,7 @@
           <tr>
             <td data-label="language">Vietnamese (vi)</td>
             <td data-label="branch">3.15</td>
-            <td data-label="updated">2026/06/04 00:55:03</td>
+            <td data-label="updated">2026/08/22 00:57:27</td>
             <td data-label="warnings">
               
                 <a href="warnings-vi.txt">3</a>
@@ -444,7 +508,7 @@
           <tr>
             <td data-label="language">Hungarian (hu)</td>
             <td data-label="branch">3.14</td>
-            <td data-label="updated">2026/06/05 16:54:24</td>
+            <td data-label="updated">2026/08/21 15:13:57</td>
             <td data-label="warnings">
               
                 <a href="warnings-hu.txt">33</a>
@@ -460,35 +524,17 @@
       
         
           <tr>
-            <td data-label="language">Persian (fa)</td>
-            <td data-label="branch">3.13</td>
-            <td data-label="updated">2025/07/25 21:53:55</td>
-            <td data-label="warnings">
-              
-                <a href="warnings-fa.txt">1</a>
-              
-            </td>
-            <td data-label="lint">
-              
-                <a href="warnings-lint-fa.txt">1</a>
-              
-            </td>
-          </tr>
-        
-      
-        
-          <tr>
             <td data-label="language">Tamil (ta)</td>
-            <td data-label="branch">3.14</td>
-            <td data-label="updated">2026/06/04 03:41:57</td>
+            <td data-label="branch">3.15</td>
+            <td data-label="updated">2026/08/22 11:21:55</td>
             <td data-label="warnings">
               
-                <a href="warnings-ta.txt">5</a>
+                <a href="warnings-ta.txt">3</a>
               
             </td>
             <td data-label="lint">
               
-                <a href="warnings-lint-ta.txt">3</a>
+                <a href="warnings-lint-ta.txt">5</a>
               
             </td>
           </tr>
@@ -551,8 +597,8 @@
         
           <tr>
             <td data-label="language">Marathi (mr)</td>
-            <td data-label="branch">main</td>
-            <td data-label="updated">2025/06/04 22:27:30</td>
+            <td data-label="branch">3.14</td>
+            <td data-label="updated">2026/08/21 11:53:11</td>
             <td data-label="warnings">
               
                 <a href="warnings-mr.txt">0</a>
@@ -572,7 +618,7 @@
   </table>
   <p>* number of Sphinx build process warnings</p>
   <p>
-    Last updated at Friday, 5 June 2026, 20:16:44 UTC (in 64:19 minutes).
+    Last updated at Sunday, 23 August 2026, 0:30:15 UTC (in 71:06 minutes).
   </p>
 
     </main>
@@ -588,8 +634,17 @@
     window.addEventListener('resize', padnavbar);
     document.getElementById('theme-toggle').addEventListener('click', function() {
       var next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('theme', next);
-      applyTheme(next);
+      if (next === getSystemTheme()) {
+        localStorage.removeItem('theme');
+      } else {
+        localStorage.setItem('theme', next);
+      }
+      applyTheme(getTheme());
+    });
+    colorSchemeMediaQuery.addEventListener('change', function() {
+      if (!getStoredTheme()) {
+        applyTheme(getTheme());
+      }
     });
   </script>
   <script src="https://code.jquery.com/jquery-4.0.0.slim.min.js" integrity="sha256-8DGpv13HIm+5iDNWw1XqxgFB4mj+yOKFNb+tHBZOowc=" crossorigin="anonymous">

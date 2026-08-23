@@ -136,14 +136,11 @@
     <div class="row justify-content-center">
       <div class="col-auto">
         <div class="d-flex align-items-center gap-2">
-          <label for="sortDropdown" class="fw-medium text-nowrap flex-shrink-0">Sort by:</label>
+          <label for="sortDropdown" class="fw-medium">Sort by:</label>
           <select id="sortDropdown"
-                  class="form-select form-select-sm w-auto"
-                  aria-label="Sort languages">
+                  class="form-select form-select-sm"
+                  aria-label="Sort languages by completion or name">
             <option value="completion">Completion</option>
-            <option value="core-completion">Core completion</option>
-            <option value="progress">Progress</option>
-            <option value="audience">Audience</option>
             <option value="name">Name</option>
           </select>
         </div>
@@ -154,10 +151,141 @@
     <div class="row">
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="5.750428814044655"
+             data-name="Polish">
+          <div id="pl" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#pl">Polish</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">polski</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/pl/3/"
+                       aria-label="View Polish documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/pl/"
+                       aria-label="View Polish documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://explore.transifex.com/python-doc/python-newest/"
+                     aria-label="Contribute to Polish translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 100.0%;background: linear-gradient(to left, #94cf96 0.6576684137037887%, #4caf50 0.6576684137037887%);">
+    core: 100.00%
+    
+      (+0.66%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 100.00%
+    
+      (+0.66%)
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 5.750428814044655%;background: linear-gradient(to left, #94cf96 1.4123516932505717%, #4caf50 1.4123516932505717%);">
+    overall: 5.75%
+    
+      (+0.08%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 5.75%
+    
+      (+0.08%)
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="3.944411467196361"
+             data-name="Russian">
+          <div id="ru" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#ru">Russian</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">Русский</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/ru/3/"
+                       aria-label="View Russian documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/ru/"
+                       aria-label="View Russian documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://explore.transifex.com/python-doc/python-newest/"
+                     aria-label="Contribute to Russian translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 100.0%;background: linear-gradient(to left, #94cf96 5.366574255822898%, #4caf50 5.366574255822898%);">
+    core: 100.00%
+    
+      (+5.37%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 100.00%
+    
+      (+5.37%)
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 3.944411467196361%;background: linear-gradient(to left, #94cf96 13.297727630693446%, #4caf50 13.297727630693446%);">
+    overall: 3.94%
+    
+      (+0.52%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 3.94%
+    
+      (+0.52%)
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="90.81583954645396"
-             data-core-completion="99.8421595807111"
-             data-progress="0.3711775965064561"
-             data-audience="188937"
              data-name="Simplified Chinese">
           <div id="zh-cn" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -225,9 +353,6 @@
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="54.53085738523117"
-             data-core-completion="99.8421595807111"
-             data-progress="0.44194532755066973"
-             data-audience="42992"
              data-name="Brazilian Portuguese">
           <div id="pt-br" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -294,31 +419,19 @@
         </div>
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="49.093885001589875"
-             data-core-completion="83.66496992133271"
-             data-progress="0.0"
-             data-audience="63799"
-             data-name="Spanish">
-          <div id="es" class="card shadow mb-3 w-100">
+             data-completion="4.6121583819096665"
+             data-name="Punjabi">
+          <div id="pa" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
-                <a href="#es">Spanish</a>
+                <a href="#pa">Punjabi</a>
               </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">español</h3>
+              <h3 class="card-subtitle text-muted h5 mb-2">ਪੰਜਾਬੀ</h3>
               <ul class="links-row">
                 
-                  <li>
-                    <a href="https://docs.python.org/es/3/"
-                       aria-label="View Spanish documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/es/"
-                       aria-label="View Spanish documentation analytics">Analytics</a>
-                  </li>
-                
                 <li>
-                  <a href="https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html"
-                     aria-label="Contribute to Spanish translation">Contribute</a>
+                  <a href="https://github.com/BHUVANSH855/python-docs-pa"
+                     aria-label="Contribute to Punjabi translation">Contribute</a>
                 </li>
               </ul>
               
@@ -326,12 +439,16 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 83.66496992133271%;background-color: #4caf50;">
-    core: 83.66%
+       style="width: 99.8421595807111%;background: linear-gradient(to left, #94cf96 0.18241147976247116%, #4caf50 0.18241147976247116%);">
+    core: 99.84%
+    
+      (+0.18%)
     
   </div>
   <div class="progress-bar outer-label">
-    core: 83.66%
+    core: 99.84%
+    
+      (+0.18%)
     
   </div>
 </div>
@@ -341,12 +458,12 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 49.093885001589875%;background-color: #4caf50;">
-    overall: 49.09%
+       style="width: 4.6121583819096665%;background: linear-gradient(to left, #94cf96 -64.69104356983665%, #4caf50 -64.69104356983665%);">
+    overall: 4.61%
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 49.09%
+    overall: 4.61%
     
   </div>
 </div>
@@ -356,31 +473,19 @@
         </div>
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="45.36223294668812"
-             data-core-completion="90.41806200712973"
-             data-progress="0.007168458781364961"
-             data-audience="20832"
-             data-name="Korean">
-          <div id="ko" class="card shadow mb-3 w-100">
+             data-completion="5.501809857894104"
+             data-name="German">
+          <div id="de" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
-                <a href="#ko">Korean</a>
+                <a href="#de">German</a>
               </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">한국어</h3>
+              <h3 class="card-subtitle text-muted h5 mb-2">Deutsch</h3>
               <ul class="links-row">
                 
-                  <li>
-                    <a href="https://docs.python.org/ko/3/"
-                       aria-label="View Korean documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/ko/"
-                       aria-label="View Korean documentation analytics">Analytics</a>
-                  </li>
-                
                 <li>
-                  <a href="https://www.flowdas.com/pages/python-docs-ko.html"
-                     aria-label="Contribute to Korean translation">Contribute</a>
+                  <a href="https://github.com/sba72/python-docs-de"
+                     aria-label="Contribute to German translation">Contribute</a>
                 </li>
               </ul>
               
@@ -388,12 +493,16 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 90.41806200712973%;background-color: #4caf50;">
-    core: 90.42%
+       style="width: 99.76728656130481%;background: linear-gradient(to left, #94cf96 95.3024218084459%, #4caf50 95.3024218084459%);">
+    core: 99.77%
+    
+      (+95.08%)
     
   </div>
   <div class="progress-bar outer-label">
-    core: 90.42%
+    core: 99.77%
+    
+      (+95.08%)
     
   </div>
 </div>
@@ -403,136 +512,16 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 45.36223294668812%;background: linear-gradient(to left, #94cf96 0.01580270263544936%, #4caf50 0.01580270263544936%);">
-    overall: 45.36%
+       style="width: 5.501809857894104%;background: linear-gradient(to left, #94cf96 93.52249163364608%, #4caf50 93.52249163364608%);">
+    overall: 5.50%
+    
+      (+5.15%)
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 45.36%
+    overall: 5.50%
     
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="38.70887578710039"
-             data-core-completion="90.74002873505069"
-             data-progress="0.0002259145444298838"
-             data-audience="62665"
-             data-name="Japanese">
-          <div id="ja" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#ja">Japanese</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">日本語</h3>
-              <ul class="links-row">
-                
-                  <li>
-                    <a href="https://docs.python.org/ja/3/"
-                       aria-label="View Japanese documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/ja/"
-                       aria-label="View Japanese documentation analytics">Analytics</a>
-                  </li>
-                
-                <li>
-                  <a href="https://explore.transifex.com/python-doc/python-newest/"
-                     aria-label="Contribute to Japanese translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 90.74002873505069%;background-color: #4caf50;">
-    core: 90.74%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 90.74%
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 38.70887578710039%;background: linear-gradient(to left, #94cf96 0.0005836246592962772%, #4caf50 0.0005836246592962772%);">
-    overall: 38.71%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 38.71%
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="38.37260198770912"
-             data-core-completion="53.311613412388446"
-             data-progress="0.0"
-             data-audience="0"
-             data-name="Ukrainian">
-          <div id="uk" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#uk">Ukrainian</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">українська</h3>
-              <ul class="links-row">
-                
-                  <li>
-                    <a href="https://docs.python.org/uk/3/"
-                       aria-label="View Ukrainian documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/uk/"
-                       aria-label="View Ukrainian documentation analytics">Analytics</a>
-                  </li>
-                
-                <li>
-                  <a href="https://explore.transifex.com/python-doc/python-newest/"
-                     aria-label="Contribute to Ukrainian translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 53.311613412388446%;background-color: #4caf50;">
-    core: 53.31%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 53.31%
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 38.37260198770912%;background-color: #4caf50;">
-    overall: 38.37%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 38.37%
+      (+5.15%)
     
   </div>
 </div>
@@ -543,9 +532,6 @@
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="30.318409606790087"
-             data-core-completion="96.36764676123602"
-             data-progress="0.024342292162856438"
-             data-audience="26177"
              data-name="Traditional Chinese">
           <div id="zh-tw" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -608,31 +594,19 @@
         </div>
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="24.382222558583877"
-             data-core-completion="86.05828599654235"
-             data-progress="0.0"
-             data-audience="38037"
-             data-name="French">
-          <div id="fr" class="card shadow mb-3 w-100">
+             data-completion="2.8499684566817334"
+             data-name="Persian">
+          <div id="fa" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
-                <a href="#fr">French</a>
+                <a href="#fa">Persian</a>
               </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">français</h3>
+              <h3 class="card-subtitle text-muted h5 mb-2">فارسی</h3>
               <ul class="links-row">
                 
-                  <li>
-                    <a href="https://docs.python.org/fr/3/"
-                       aria-label="View French documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/fr/"
-                       aria-label="View French documentation analytics">Analytics</a>
-                  </li>
-                
                 <li>
-                  <a href="https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst"
-                     aria-label="Contribute to French translation">Contribute</a>
+                  <a href="https://github.com/revisto/python-docs-fa"
+                     aria-label="Contribute to Persian translation">Contribute</a>
                 </li>
               </ul>
               
@@ -640,12 +614,16 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 86.05828599654235%;background-color: #4caf50;">
-    core: 86.06%
+       style="width: 96.36764676123602%;background: linear-gradient(to left, #94cf96 91.83150644660032%, #4caf50 91.83150644660032%);">
+    core: 96.37%
+    
+      (+88.50%)
     
   </div>
   <div class="progress-bar outer-label">
-    core: 86.06%
+    core: 96.37%
+    
+      (+88.50%)
     
   </div>
 </div>
@@ -655,12 +633,16 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 24.382222558583877%;background-color: #4caf50;">
-    overall: 24.38%
+       style="width: 2.8499684566817334%;background: linear-gradient(to left, #94cf96 91.72430193614872%, #4caf50 91.72430193614872%);">
+    overall: 2.85%
+    
+      (+2.61%)
     
   </div>
   <div class="progress-bar outer-label">
-    overall: 24.38%
+    overall: 2.85%
+    
+      (+2.61%)
     
   </div>
 </div>
@@ -671,9 +653,6 @@
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="13.116993800340115"
-             data-core-completion="94.25501345690755"
-             data-progress="0.0"
-             data-audience="0"
              data-name="Greek">
           <div id="el" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -732,515 +711,7 @@
         </div>
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="5.750428814044655"
-             data-core-completion="100.0"
-             data-progress="0.08121627872432846"
-             data-audience="7436"
-             data-name="Polish">
-          <div id="pl" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#pl">Polish</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">polski</h3>
-              <ul class="links-row">
-                
-                  <li>
-                    <a href="https://docs.python.org/pl/3/"
-                       aria-label="View Polish documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/pl/"
-                       aria-label="View Polish documentation analytics">Analytics</a>
-                  </li>
-                
-                <li>
-                  <a href="https://explore.transifex.com/python-doc/python-newest/"
-                     aria-label="Contribute to Polish translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 100.0%;background: linear-gradient(to left, #94cf96 0.6576684137037887%, #4caf50 0.6576684137037887%);">
-    core: 100.00%
-    
-      (+0.66%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 100.00%
-    
-      (+0.66%)
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 5.750428814044655%;background: linear-gradient(to left, #94cf96 1.4123516932505717%, #4caf50 1.4123516932505717%);">
-    overall: 5.75%
-    
-      (+0.08%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 5.75%
-    
-      (+0.08%)
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="5.501809857894104"
-             data-core-completion="99.76728656130481"
-             data-progress="5.145429664048129"
-             data-audience="0"
-             data-name="German">
-          <div id="de" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#de">German</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">Deutsch</h3>
-              <ul class="links-row">
-                
-                <li>
-                  <a href="https://github.com/sba72/python-docs-de"
-                     aria-label="Contribute to German translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 99.76728656130481%;background: linear-gradient(to left, #94cf96 95.3024218084459%, #4caf50 95.3024218084459%);">
-    core: 99.77%
-    
-      (+95.08%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 99.77%
-    
-      (+95.08%)
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 5.501809857894104%;background: linear-gradient(to left, #94cf96 93.52249163364608%, #4caf50 93.52249163364608%);">
-    overall: 5.50%
-    
-      (+5.15%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 5.50%
-    
-      (+5.15%)
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="4.6121583819096665"
-             data-core-completion="99.8421595807111"
-             data-progress="-2.9836533883510556"
-             data-audience="0"
-             data-name="Punjabi">
-          <div id="pa" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#pa">Punjabi</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">ਪੰਜਾਬੀ</h3>
-              <ul class="links-row">
-                
-                <li>
-                  <a href="https://github.com/BHUVANSH855/python-docs-pa"
-                     aria-label="Contribute to Punjabi translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 99.8421595807111%;background: linear-gradient(to left, #94cf96 0.18241147976247116%, #4caf50 0.18241147976247116%);">
-    core: 99.84%
-    
-      (+0.18%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 99.84%
-    
-      (+0.18%)
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 4.6121583819096665%;background: linear-gradient(to left, #94cf96 -64.69104356983665%, #4caf50 -64.69104356983665%);">
-    overall: 4.61%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 4.61%
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="3.958361690315213"
-             data-core-completion="82.7866190321533"
-             data-progress="0.0"
-             data-audience="5621"
-             data-name="Turkish">
-          <div id="tr" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#tr">Turkish</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">Türkçe</h3>
-              <ul class="links-row">
-                
-                  <li>
-                    <a href="https://docs.python.org/tr/3/"
-                       aria-label="View Turkish documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/tr/"
-                       aria-label="View Turkish documentation analytics">Analytics</a>
-                  </li>
-                
-                <li>
-                  <a href="https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak"
-                     aria-label="Contribute to Turkish translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 82.7866190321533%;background-color: #4caf50;">
-    core: 82.79%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 82.79%
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 3.958361690315213%;background-color: #4caf50;">
-    overall: 3.96%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 3.96%
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="3.944411467196361"
-             data-core-completion="100.0"
-             data-progress="0.5245170935416112"
-             data-audience="0"
-             data-name="Russian">
-          <div id="ru" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#ru">Russian</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">Русский</h3>
-              <ul class="links-row">
-                
-                  <li>
-                    <a href="https://docs.python.org/ru/3/"
-                       aria-label="View Russian documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/ru/"
-                       aria-label="View Russian documentation analytics">Analytics</a>
-                  </li>
-                
-                <li>
-                  <a href="https://explore.transifex.com/python-doc/python-newest/"
-                     aria-label="Contribute to Russian translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 100.0%;background: linear-gradient(to left, #94cf96 5.366574255822898%, #4caf50 5.366574255822898%);">
-    core: 100.00%
-    
-      (+5.37%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 100.00%
-    
-      (+5.37%)
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 3.944411467196361%;background: linear-gradient(to left, #94cf96 13.297727630693446%, #4caf50 13.297727630693446%);">
-    overall: 3.94%
-    
-      (+0.52%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 3.94%
-    
-      (+0.52%)
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="2.962360942538071"
-             data-core-completion="47.48365946941336"
-             data-progress="0.00022591454443521286"
-             data-audience="0"
-             data-name="Indonesian">
-          <div id="id" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#id">Indonesian</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">Indonesia</h3>
-              <ul class="links-row">
-                
-                  <li>
-                    <a href="https://docs.python.org/id/3/"
-                       aria-label="View Indonesian documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/id/"
-                       aria-label="View Indonesian documentation analytics">Analytics</a>
-                  </li>
-                
-                <li>
-                  <a href="https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan"
-                     aria-label="Contribute to Indonesian translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 47.48365946941336%;background-color: #4caf50;">
-    core: 47.48%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 47.48%
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 2.962360942538071%;background: linear-gradient(to left, #94cf96 0.007626165373408393%, #4caf50 0.007626165373408393%);">
-    overall: 2.96%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 2.96%
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="2.8499684566817334"
-             data-core-completion="96.36764676123602"
-             data-progress="2.614113672291751"
-             data-audience="0"
-             data-name="Persian">
-          <div id="fa" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#fa">Persian</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">فارسی</h3>
-              <ul class="links-row">
-                
-                <li>
-                  <a href="https://github.com/revisto/python-docs-fa"
-                     aria-label="Contribute to Persian translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 96.36764676123602%;background: linear-gradient(to left, #94cf96 91.83150644660032%, #4caf50 91.83150644660032%);">
-    core: 96.37%
-    
-      (+88.50%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 96.37%
-    
-      (+88.50%)
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 2.8499684566817334%;background: linear-gradient(to left, #94cf96 91.72430193614872%, #4caf50 91.72430193614872%);">
-    overall: 2.85%
-    
-      (+2.61%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 2.85%
-    
-      (+2.61%)
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="2.83212120767138"
-             data-core-completion="66.87172430540097"
-             data-progress="0.0"
-             data-audience="9159"
-             data-name="Italian">
-          <div id="it" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#it">Italian</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">italiano</h3>
-              <ul class="links-row">
-                
-                  <li>
-                    <a href="https://docs.python.org/it/3/"
-                       aria-label="View Italian documentation">View</a>
-                  </li>
-                  <li>
-                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/it/"
-                       aria-label="View Italian documentation analytics">Analytics</a>
-                  </li>
-                
-                <li>
-                  <a href="https://github.com/python/python-docs-it"
-                     aria-label="Contribute to Italian translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 66.87172430540097%;background-color: #4caf50;">
-    core: 66.87%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 66.87%
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 2.83212120767138%;background-color: #4caf50;">
-    overall: 2.83%
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 2.83%
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="2.6071103214142703"
-             data-core-completion="91.51911285589979"
-             data-progress="0.0"
-             data-audience="0"
              data-name="Romanian">
           <div id="ro" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -1299,10 +770,537 @@
         </div>
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="38.70887578710039"
+             data-name="Japanese">
+          <div id="ja" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#ja">Japanese</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">日本語</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/ja/3/"
+                       aria-label="View Japanese documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/ja/"
+                       aria-label="View Japanese documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://explore.transifex.com/python-doc/python-newest/"
+                     aria-label="Contribute to Japanese translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 90.74002873505069%;background-color: #4caf50;">
+    core: 90.74%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 90.74%
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 38.70887578710039%;background: linear-gradient(to left, #94cf96 0.0005836246592962772%, #4caf50 0.0005836246592962772%);">
+    overall: 38.71%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 38.71%
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="45.36223294668812"
+             data-name="Korean">
+          <div id="ko" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#ko">Korean</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">한국어</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/ko/3/"
+                       aria-label="View Korean documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/ko/"
+                       aria-label="View Korean documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://www.flowdas.com/pages/python-docs-ko.html"
+                     aria-label="Contribute to Korean translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 90.41806200712973%;background-color: #4caf50;">
+    core: 90.42%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 90.42%
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 45.36223294668812%;background: linear-gradient(to left, #94cf96 0.01580270263544936%, #4caf50 0.01580270263544936%);">
+    overall: 45.36%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 45.36%
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="24.382222558583877"
+             data-name="French">
+          <div id="fr" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#fr">French</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">français</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/fr/3/"
+                       aria-label="View French documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/fr/"
+                       aria-label="View French documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst"
+                     aria-label="Contribute to French translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 86.05828599654235%;background-color: #4caf50;">
+    core: 86.06%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 86.06%
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 24.382222558583877%;background-color: #4caf50;">
+    overall: 24.38%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 24.38%
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="49.093885001589875"
+             data-name="Spanish">
+          <div id="es" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#es">Spanish</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">español</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/es/3/"
+                       aria-label="View Spanish documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/es/"
+                       aria-label="View Spanish documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html"
+                     aria-label="Contribute to Spanish translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 83.66496992133271%;background-color: #4caf50;">
+    core: 83.66%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 83.66%
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 49.093885001589875%;background-color: #4caf50;">
+    overall: 49.09%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 49.09%
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="3.958361690315213"
+             data-name="Turkish">
+          <div id="tr" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#tr">Turkish</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">Türkçe</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/tr/3/"
+                       aria-label="View Turkish documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/tr/"
+                       aria-label="View Turkish documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://github.com/python/python-docs-tr/blob/3.12/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak"
+                     aria-label="Contribute to Turkish translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 82.7866190321533%;background-color: #4caf50;">
+    core: 82.79%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 82.79%
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 3.958361690315213%;background-color: #4caf50;">
+    overall: 3.96%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 3.96%
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="2.83212120767138"
+             data-name="Italian">
+          <div id="it" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#it">Italian</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">italiano</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/it/3/"
+                       aria-label="View Italian documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/it/"
+                       aria-label="View Italian documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://github.com/python/python-docs-it"
+                     aria-label="Contribute to Italian translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 66.87172430540097%;background-color: #4caf50;">
+    core: 66.87%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 66.87%
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 2.83212120767138%;background-color: #4caf50;">
+    overall: 2.83%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 2.83%
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="38.37260198770912"
+             data-name="Ukrainian">
+          <div id="uk" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#uk">Ukrainian</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">українська</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/uk/3/"
+                       aria-label="View Ukrainian documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/uk/"
+                       aria-label="View Ukrainian documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://explore.transifex.com/python-doc/python-newest/"
+                     aria-label="Contribute to Ukrainian translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 53.311613412388446%;background-color: #4caf50;">
+    core: 53.31%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 53.31%
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 38.37260198770912%;background-color: #4caf50;">
+    overall: 38.37%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 38.37%
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="2.962360942538071"
+             data-name="Indonesian">
+          <div id="id" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#id">Indonesian</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">Indonesia</h3>
+              <ul class="links-row">
+                
+                  <li>
+                    <a href="https://docs.python.org/id/3/"
+                       aria-label="View Indonesian documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/id/"
+                       aria-label="View Indonesian documentation analytics">Analytics</a>
+                  </li>
+                
+                <li>
+                  <a href="https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan"
+                     aria-label="Contribute to Indonesian translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 47.48365946941336%;background-color: #4caf50;">
+    core: 47.48%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 47.48%
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 2.962360942538071%;background: linear-gradient(to left, #94cf96 0.007626165373408393%, #4caf50 0.007626165373408393%);">
+    overall: 2.96%
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 2.96%
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion="1.3539623434341608"
+             data-name="Vietnamese">
+          <div id="vi" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#vi">Vietnamese</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">Tiếng Việt</h3>
+              <ul class="links-row">
+                
+                <li>
+                  <a href="https://github.com/tamnd/python-docs-vi"
+                     aria-label="Contribute to Vietnamese translation">Contribute</a>
+                </li>
+              </ul>
+              
+              
+                
+<div class="progress ">
+  <div class="progress-bar main-bar"
+       style="width: 46.08940243236133%;background: linear-gradient(to left, #94cf96 1.0844748858447524%, #4caf50 1.0844748858447524%);">
+    core: 46.09%
+    
+      (+0.50%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    core: 46.09%
+    
+      (+0.50%)
+    
+  </div>
+</div>
+              
+              
+              
+                
+<div class="progress mt-1">
+  <div class="progress-bar main-bar"
+       style="width: 1.3539623434341608%;background: linear-gradient(to left, #94cf96 1.0344971426187712%, #4caf50 1.0344971426187712%);">
+    overall: 1.35%
+    
+      (+0.01%)
+    
+  </div>
+  <div class="progress-bar outer-label">
+    overall: 1.35%
+    
+      (+0.01%)
+    
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="2.481897185161255"
-             data-core-completion="44.03545338648643"
-             data-progress="0.0"
-             data-audience="0"
              data-name="Swedish">
           <div id="sv" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -1361,71 +1359,7 @@
         </div>
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
-             data-completion="1.3539623434341608"
-             data-core-completion="46.08940243236133"
-             data-progress="0.014006701754960549"
-             data-audience="0"
-             data-name="Vietnamese">
-          <div id="vi" class="card shadow mb-3 w-100">
-            <div class="card-body">
-              <h2 class="card-title h3">
-                <a href="#vi">Vietnamese</a>
-              </h2>
-              <h3 class="card-subtitle text-muted h5 mb-2">Tiếng Việt</h3>
-              <ul class="links-row">
-                
-                <li>
-                  <a href="https://github.com/tamnd/python-docs-vi"
-                     aria-label="Contribute to Vietnamese translation">Contribute</a>
-                </li>
-              </ul>
-              
-              
-                
-<div class="progress ">
-  <div class="progress-bar main-bar"
-       style="width: 46.08940243236133%;background: linear-gradient(to left, #94cf96 1.0844748858447524%, #4caf50 1.0844748858447524%);">
-    core: 46.09%
-    
-      (+0.50%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    core: 46.09%
-    
-      (+0.50%)
-    
-  </div>
-</div>
-              
-              
-              
-                
-<div class="progress mt-1">
-  <div class="progress-bar main-bar"
-       style="width: 1.3539623434341608%;background: linear-gradient(to left, #94cf96 1.0344971426187712%, #4caf50 1.0344971426187712%);">
-    overall: 1.35%
-    
-      (+0.01%)
-    
-  </div>
-  <div class="progress-bar outer-label">
-    overall: 1.35%
-    
-      (+0.01%)
-    
-  </div>
-</div>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="0.7717805624255542"
-             data-core-completion="26.581945484347493"
-             data-progress="0.0"
-             data-audience="0"
              data-name="Hungarian">
           <div id="hu" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -1476,9 +1410,6 @@
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="0.12939255532505997"
-             data-core-completion="3.5635510047149768"
-             data-progress="0.01304656494111256"
-             data-audience="0"
              data-name="Tamil">
           <div id="ta" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -1533,9 +1464,6 @@
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="0.015023317204917482"
-             data-core-completion="0.5382763016775604"
-             data-progress="0.0"
-             data-audience="0"
              data-name="Arabic">
           <div id="ar" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -1586,9 +1514,6 @@
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="0.01304656494111255"
-             data-core-completion="0.0"
-             data-progress="0.0"
-             data-audience="0"
              data-name="Hindi">
           <div id="hi-in" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -1639,9 +1564,6 @@
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="0.011804034946720878"
-             data-core-completion="0.0"
-             data-progress="0.0"
-             data-audience="0"
              data-name="Bengali">
           <div id="bn-in" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -1701,9 +1623,6 @@
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="0.0014119659027178085"
-             data-core-completion="0.0"
-             data-progress="0.0"
-             data-audience="0"
              data-name="Marathi">
           <div id="mr" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -1754,9 +1673,6 @@
       
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="0.0"
-             data-core-completion="0.0"
-             data-progress="0.0"
-             data-audience="0"
              data-name="Lithuanian">
           <div id="lt" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -1808,8 +1724,8 @@
     </div>
   </div>
   <p class="text-center">
-    Last updated on Sunday 23 August 2026 at 0:38:59 UTC (in 11 minutes and
-    40 seconds).
+    Last updated on Sunday 23 August 2026 at 0:18:20 UTC (in 11 minutes and
+    49 seconds).
     <br />
     You can download the data on this page in
     <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
@@ -1875,28 +1791,12 @@
       return;
     }
 
-    const sortFields = {
-      'completion': 'completion',
-      'core-completion': 'coreCompletion',
-      'progress': 'progress',
-      'audience': 'audience',
-    };
     const cards = Array.from(row.children);
     cards.sort((a, b) => {
-      const aPinPriority = a.dataset.pinPriority;
-      const bPinPriority = b.dataset.pinPriority;
-      if (aPinPriority !== undefined || bPinPriority !== undefined) {
-        if (aPinPriority === undefined) return 1;
-        if (bPinPriority === undefined) return -1;
-        return Number(aPinPriority) - Number(bPinPriority);
-      }
-
-      const nameComparison = a.dataset.name.localeCompare(b.dataset.name);
       if (sortBy === 'name') {
-        return nameComparison;
+        return a.dataset.name.localeCompare(b.dataset.name);
       }
-      const sortField = sortFields[sortBy] || sortFields.completion;
-      return Number(b.dataset[sortField]) - Number(a.dataset[sortField]) || nameComparison;
+      return parseFloat(b.dataset.completion) - parseFloat(a.dataset.completion);
     });
 
     row.innerHTML = '';
@@ -1910,7 +1810,6 @@
     sortDropdown.addEventListener('change', function() {
       sortLanguages(this.value);
     });
-    sortLanguages(sortDropdown.value);
   }
 
   window.addEventListener('resize', updateProgressBarVisibility);
@@ -1918,8 +1817,11 @@
 
   (function () {
     const userLangs = Array.from(navigator.languages || []).map(lang => lang.toLowerCase());
-    const row = document.querySelector('#languageContainer > .row');
+    const row = document.querySelector('.row');
     if (!row || !userLangs.length) return;
+
+    // Capture the original column order (completion-based sort from server) before any changes.
+    const originalCols = Array.from(row.children);
 
     // Find the first matching card column for each user language preference.
     const userLangToCol = new Map();
@@ -2001,12 +1903,14 @@
       const pinnedCols = uniqueUserCols
         .filter(({ cardId }) => !unpinned.has(cardId))
         .map(({ col }) => col);
-      for (const col of row.children) {
-        delete col.dataset.pinPriority;
-      }
-      pinnedCols.forEach((col, index) => {
-        col.dataset.pinPriority = index;
-      });
+
+      // Remaining columns in original server-side sort order.
+      const pinnedSet = new Set(pinnedCols);
+      const restCols = originalCols.filter(col => !pinnedSet.has(col));
+
+      const fragment = document.createDocumentFragment();
+      [...pinnedCols, ...restCols].forEach(col => fragment.appendChild(col));
+      row.appendChild(fragment);
 
       // Sync button appearance and accessible label.
       for (const { cardId, col } of uniqueUserCols) {
@@ -2019,8 +1923,6 @@
           btn.setAttribute('aria-label', isPinned ? `Unpin ${languageName} language card` : `Pin ${languageName} language card`);
         }
       }
-
-      sortLanguages(sortDropdown?.value || 'completion');
     }
 
     reorder();

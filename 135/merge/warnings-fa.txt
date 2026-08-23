@@ -1,1 +1,4 @@
+bugs.rst:27: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`مخزن ترجمه <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`اشکالات مستندات`_'] [i18n.inconsistent_references]
+improve-page.rst:50: WARNING: inconsistent references in translated message. original: ["`translation's repository <TRANSLATION_REPO_>`_"], translated: ['`مخزن ترجمه <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
+improve-page-nojs.rst:17: WARNING: inconsistent references in translated message. original: ["`translation's repository <TRANSLATION_REPO_>`_"], translated: ['`مخزن ترجمه <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
