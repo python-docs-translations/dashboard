@@ -12,15 +12,25 @@
           rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
           crossorigin="anonymous">
-    <link href="style.css?version=3" rel="stylesheet">
+    <link href="style.css?version=4" rel="stylesheet">
   </head>
   <body>
     <script>
+      var colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      function getSystemTheme() {
+        return colorSchemeMediaQuery.matches ? 'dark' : 'light';
+      }
+      function getStoredTheme() {
+        return localStorage.getItem('theme');
+      }
+      function getTheme() {
+        return getStoredTheme() || getSystemTheme();
+      }
       function applyTheme(t) {
         document.documentElement.setAttribute('data-bs-theme', t);
         document.documentElement.classList.toggle('dark', t === 'dark');
       }
-      applyTheme(localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+      applyTheme(getTheme());
     </script>
     <header>
       <nav class="navbar navbar-expand-md fixed-top">
@@ -136,8 +146,17 @@
     window.addEventListener('resize', padnavbar);
     document.getElementById('theme-toggle').addEventListener('click', function() {
       var next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('theme', next);
-      applyTheme(next);
+      if (next === getSystemTheme()) {
+        localStorage.removeItem('theme');
+      } else {
+        localStorage.setItem('theme', next);
+      }
+      applyTheme(getTheme());
+    });
+    colorSchemeMediaQuery.addEventListener('change', function() {
+      if (!getStoredTheme()) {
+        applyTheme(getTheme());
+      }
     });
   </script>
   <script src="https://code.jquery.com/jquery-4.0.0.slim.min.js" integrity="sha256-8DGpv13HIm+5iDNWw1XqxgFB4mj+yOKFNb+tHBZOowc=" crossorigin="anonymous">
