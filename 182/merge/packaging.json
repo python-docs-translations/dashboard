@@ -4,8 +4,8 @@
       "code": "fa",
       "name": "\u0641\u0627\u0631\u0633\u06cc"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.3959320806796457,
+    "change": 0.35301113641887194,
     "built": false,
     "translated_name": "\u0641\u0627\u0631\u0633\u06cc"
   },
@@ -14,8 +14,8 @@
       "code": "gmh",
       "name": "gmh"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": ""
   },
@@ -24,8 +24,8 @@
       "code": "lzh",
       "name": "lzh"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.011312345162275592,
+    "change": -0.000287910043338932,
     "built": false,
     "translated_name": ""
   },
@@ -34,8 +34,8 @@
       "code": "zh-tw",
       "name": "\u4e2d\u6587 (\u7e41\u9ad4, \u53f0\u7063)"
     },
-    "completion": 4,
-    "change": 0,
+    "completion": 0.6323600945712056,
+    "change": -0.016094171422646353,
     "built": false,
     "translated_name": "\u4e2d\u6587 (\u7e41\u9ad4, \u53f0\u7063)"
   },
@@ -44,8 +44,8 @@
       "code": "kab",
       "name": "Taqbaylit"
     },
-    "completion": 1,
-    "change": 0,
+    "completion": 0.1165171551714386,
+    "change": 0.008634781759223525,
     "built": false,
     "translated_name": "Taqbaylit"
   },
@@ -54,8 +54,8 @@
       "code": "mrh",
       "name": "mrh"
     },
-    "completion": 0,
-    "change": 0.0,
+    "completion": 0.004524938064910237,
+    "change": 0.004524938064910237,
     "built": false,
     "translated_name": ""
   },
@@ -64,8 +64,8 @@
       "code": "ja",
       "name": "Japanese"
     },
-    "completion": 98,
-    "change": 0,
+    "completion": 99.62329890609622,
+    "change": -0.28621910329998457,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e"
   },
@@ -74,8 +74,8 @@
       "code": "zh-cn",
       "name": "\u4e2d\u6587 (\u7b80\u4f53, \u4e2d\u56fd)"
     },
-    "completion": 26,
-    "change": 0,
+    "completion": 16.78186404823584,
+    "change": -0.41783434512881357,
     "built": false,
     "translated_name": "\u4e2d\u6587 (\u7b80\u4f53, \u4e2d\u56fd)"
   },
@@ -84,8 +84,8 @@
       "code": "fil",
       "name": "Filipino"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "Filipino"
   },
@@ -94,8 +94,8 @@
       "code": "ar",
       "name": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.01357481419473071,
+    "change": -0.0003454920520067177,
     "built": false,
     "translated_name": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629"
   },
@@ -104,8 +104,8 @@
       "code": "vi",
       "name": "Ti\u1ebfng Vi\u1ec7t"
     },
-    "completion": 2,
-    "change": -1,
+    "completion": 2.402742112467336,
+    "change": -0.06115209320518877,
     "built": false,
     "translated_name": "Ti\u1ebfng Vi\u1ec7t"
   },
@@ -114,8 +114,8 @@
       "code": "eo",
       "name": "Esperanto"
     },
-    "completion": 83,
-    "change": -3,
+    "completion": 74.34473240647519,
+    "change": -3.045210172261548,
     "built": false,
     "translated_name": "Esperanto"
   },
@@ -124,8 +124,8 @@
       "code": "ars",
       "name": "ars"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": ""
   },
@@ -134,8 +134,8 @@
       "code": "ru",
       "name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439"
     },
-    "completion": 79,
-    "change": -2,
+    "completion": 81.53712146065001,
+    "change": -3.783915602165365,
     "built": false,
     "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439"
   },
@@ -144,8 +144,8 @@
       "code": "cs",
       "name": "\u010de\u0161tina"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.09728616839557008,
+    "change": -0.0024760263727148235,
     "built": false,
     "translated_name": "\u010de\u0161tina"
   },
@@ -154,8 +154,8 @@
       "code": "si",
       "name": "\u0dc3\u0dd2\u0d82\u0dc4\u0dbd"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.004524938064910237,
+    "change": -0.00011516401733557228,
     "built": false,
     "translated_name": "\u0dc3\u0dd2\u0d82\u0dc4\u0dbd"
   },
@@ -164,8 +164,8 @@
       "code": "ro",
       "name": "rom\u00e2n\u0103"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.007918641613592913,
+    "change": -0.00020153703033725344,
     "built": false,
     "translated_name": "rom\u00e2n\u0103"
   },
@@ -174,8 +174,8 @@
       "code": "frc",
       "name": "frc"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": ""
   },
@@ -184,8 +184,8 @@
       "code": "gl",
       "name": "galego"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "galego"
   },
@@ -194,8 +194,8 @@
       "code": "da",
       "name": "dansk"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.032805800970599215,
+    "change": -0.0008349391256829014,
     "built": false,
     "translated_name": "dansk"
   },
@@ -204,8 +204,8 @@
       "code": "hi",
       "name": "\u0939\u093f\u0928\u094d\u0926\u0940"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.11086098259030079,
+    "change": -0.0028215184247215447,
     "built": false,
     "translated_name": "\u0939\u093f\u0928\u094d\u0926\u0940"
   },
@@ -214,8 +214,8 @@
       "code": "id",
       "name": "Indonesia"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.2024909784047331,
+    "change": -0.005153589775766881,
     "built": false,
     "translated_name": "Indonesia"
   },
@@ -224,8 +224,8 @@
       "code": "sk",
       "name": "sloven\u010dina"
     },
-    "completion": 1,
-    "change": 0,
+    "completion": 1.1708277242955236,
+    "change": -0.02979868948557951,
     "built": false,
     "translated_name": "sloven\u010dina"
   },
@@ -234,8 +234,8 @@
       "code": "uk",
       "name": "\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430"
     },
-    "completion": 9,
-    "change": 0,
+    "completion": 2.979671715743391,
+    "change": -0.07583550541547446,
     "built": false,
     "translated_name": "\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430"
   },
@@ -244,8 +244,8 @@
       "code": "mk",
       "name": "\u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.024887159357006302,
+    "change": -0.0006334020953456497,
     "built": false,
     "translated_name": "\u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438"
   },
@@ -254,7 +254,7 @@
       "code": "my",
       "name": "\u1019\u103c\u1014\u103a\u1019\u102c"
     },
-    "completion": 0,
+    "completion": 0.0,
     "change": 0.0,
     "built": false,
     "translated_name": "\u1019\u103c\u1014\u103a\u1019\u102c"
@@ -264,8 +264,8 @@
       "code": "sai",
       "name": "sai"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": ""
   },
@@ -274,8 +274,8 @@
       "code": "fr",
       "name": "fran\u00e7ais"
     },
-    "completion": 11,
-    "change": 0,
+    "completion": 2.8936978925100965,
+    "change": -0.07480741460665996,
     "built": false,
     "translated_name": "fran\u00e7ais"
   },
@@ -284,8 +284,8 @@
       "code": "pl",
       "name": "polski"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.4739872622993473,
+    "change": -0.04918424747386774,
     "built": false,
     "translated_name": "polski"
   },
@@ -294,8 +294,8 @@
       "code": "ta",
       "name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd"
     },
-    "completion": 78,
-    "change": -2,
+    "completion": 80.00769239471035,
+    "change": -3.7449901643059462,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd"
   },
@@ -304,8 +304,8 @@
       "code": "es",
       "name": "espa\u00f1ol"
     },
-    "completion": 6,
-    "change": 0,
+    "completion": 4.287378816502449,
+    "change": -0.10911790642545505,
     "built": false,
     "translated_name": "espa\u00f1ol"
   },
@@ -314,8 +314,8 @@
       "code": "ko",
       "name": "\ud55c\uad6d\uc5b4"
     },
-    "completion": 2,
-    "change": 0,
+    "completion": 1.932148553716671,
+    "change": -0.049175035402289735,
     "built": false,
     "translated_name": "\ud55c\uad6d\uc5b4"
   },
@@ -324,8 +324,8 @@
       "code": "pt",
       "name": "portugu\u00eas"
     },
-    "completion": 52,
-    "change": 52.0,
+    "completion": 48.04918607676557,
+    "change": 48.04918607676557,
     "built": false,
     "translated_name": "portugu\u00eas"
   },
@@ -334,8 +334,8 @@
       "code": "tr",
       "name": "T\u00fcrk\u00e7e"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.26810258034593154,
+    "change": -0.006823468027132684,
     "built": false,
     "translated_name": "T\u00fcrk\u00e7e"
   },
@@ -344,8 +344,8 @@
       "code": "mr",
       "name": "\u092e\u0930\u093e\u0920\u0940"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.0022624690324551185,
+    "change": -5.758200866778614e-05,
     "built": false,
     "translated_name": "\u092e\u0930\u093e\u0920\u0940"
   },
@@ -354,8 +354,8 @@
       "code": "pt-br",
       "name": "Brazilian Portuguese"
     },
-    "completion": 56,
-    "change": -2,
+    "completion": 52.11144922453874,
+    "change": -2.8911608328825267,
     "built": true,
     "translated_name": "portugu\u00eas (Brasil)"
   },
@@ -364,8 +364,8 @@
       "code": "de",
       "name": "Deutsch"
     },
-    "completion": 5,
-    "change": 2,
+    "completion": 5.78400208147151,
+    "change": 2.699494222298608,
     "built": false,
     "translated_name": "Deutsch"
   },
@@ -374,8 +374,8 @@
       "code": "th",
       "name": "\u0e44\u0e17\u0e22"
     },
-    "completion": 0,
-    "change": 0,
+    "completion": 0.0,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u0e44\u0e17\u0e22"
   }
