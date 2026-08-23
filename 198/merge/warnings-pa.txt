@@ -1,0 +1,6 @@
+# WARNING! There might be false positives below! See https://github.com/sphinx-doc/sphinx/issues/14162
+bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`ਦਸਤਾਵੇਜ਼ੀਕਰਨ ਬੱਗ`_'] [i18n.inconsistent_references]
+using/configure.rst:1272:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+using/configure.rst:1272:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+library/fileinput.rst:176:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+library/fileinput.rst:176:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
