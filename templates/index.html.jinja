@@ -128,7 +128,7 @@
       const langBase = lang.split('-')[0];
       const card = row.querySelector(`[id="${lang}"]`) || row.querySelector(`[id="${langBase}"]`);
       if (card) {
-        const col = card.closest('.col-12');
+        const col = card.parentElement;
         if (col && col.parentElement === row) {
           userLangToCol.set(lang, col);
         }
@@ -203,7 +203,9 @@
       const pinnedSet = new Set(pinnedCols);
       const restCols = originalCols.filter(col => !pinnedSet.has(col));
 
-      [...pinnedCols, ...restCols].forEach(col => row.appendChild(col));
+      const fragment = document.createDocumentFragment();
+      [...pinnedCols, ...restCols].forEach(col => fragment.appendChild(col));
+      row.appendChild(fragment);
 
       // Sync button appearance and accessible label.
       for (const { cardId, col } of uniqueUserCols) {
