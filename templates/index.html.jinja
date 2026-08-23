@@ -152,7 +152,10 @@
     // localStorage helpers – store the set of explicitly unpinned card IDs.
     const LS_KEY = 'dashboard-unpinned';
     function getUnpinned() {
-      try { return new Set(JSON.parse(localStorage.getItem(LS_KEY) || '[]')); }
+      try {
+        const value = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+        return Array.isArray(value) ? new Set(value) : new Set();
+      }
       catch { return new Set(); }
     }
     function saveUnpinned(set) {
@@ -174,8 +177,10 @@
     for (const { cardId, col } of uniqueUserCols) {
       const card = col.querySelector('.card');
       const btn = document.createElement('button');
+      const languageName = card.querySelector('.card-title a')?.textContent?.trim() || cardId;
       btn.className = 'pin-btn';
       btn.dataset.cardId = cardId;
+      btn.dataset.languageName = languageName;
       btn.innerHTML = `<span class="pin-icon-pinned">${PIN_FILL}</span><span class="pin-icon-unpinned">${PIN_OUTLINE}</span>`;
       card.appendChild(btn);
 
@@ -187,12 +192,11 @@
           unpinned.add(cardId);
         }
         saveUnpinned(unpinned);
-        reorder();
+        reorder(unpinned);
       });
     }
 
-    function reorder() {
-      const unpinned = getUnpinned();
+    function reorder(unpinned = getUnpinned()) {
 
       // Pinned user-language columns in navigator.languages priority order.
       const pinnedCols = uniqueUserCols
@@ -212,9 +216,10 @@
         const btn = col.querySelector('.pin-btn');
         if (btn) {
           const isPinned = !unpinned.has(cardId);
+          const languageName = btn.dataset.languageName || cardId;
           btn.classList.toggle('unpinned', !isPinned);
-          btn.title = isPinned ? 'Unpin' : 'Pin';
-          btn.setAttribute('aria-label', isPinned ? 'Unpin this language card' : 'Pin this language card');
+          btn.title = isPinned ? `Unpin ${languageName}` : `Pin ${languageName}`;
+          btn.setAttribute('aria-label', isPinned ? `Unpin ${languageName} language card` : `Pin ${languageName} language card`);
         }
       }
     }
