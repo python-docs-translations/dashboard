@@ -7,8 +7,11 @@
           <label for="sortDropdown" class="fw-medium text-nowrap flex-shrink-0">Sort by:</label>
           <select id="sortDropdown"
                   class="form-select form-select-sm w-auto"
-                  aria-label="Sort languages by completion or name">
+                  aria-label="Sort languages">
             <option value="completion">Completion</option>
+            <option value="core-completion">Core completion</option>
+            <option value="progress">Progress</option>
+            <option value="audience">Audience</option>
             <option value="name">Name</option>
           </select>
         </div>
@@ -17,9 +20,12 @@
   </div>
   <div id="languageContainer">
     <div class="row">
-      {% for project in completion_progress | sort(attribute='core_completion,completion') | reverse %}
+      {% for project in completion_progress | sort(attribute='completion') | reverse %}
         <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
              data-completion="{{ project.completion }}"
+             data-core-completion="{{ project.core_completion }}"
+             data-progress="{{ project.change }}"
+             data-audience="{{ project.audience }}"
              data-name="{{ project.language.name }}">
           <div id="{{ project.language.code }}" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -90,12 +96,28 @@
       return;
     }
 
+    const sortFields = {
+      'completion': 'completion',
+      'core-completion': 'coreCompletion',
+      'progress': 'progress',
+      'audience': 'audience',
+    };
     const cards = Array.from(row.children);
     cards.sort((a, b) => {
-      if (sortBy === 'name') {
-        return a.dataset.name.localeCompare(b.dataset.name);
+      const aPinPriority = a.dataset.pinPriority;
+      const bPinPriority = b.dataset.pinPriority;
+      if (aPinPriority !== undefined || bPinPriority !== undefined) {
+        if (aPinPriority === undefined) return 1;
+        if (bPinPriority === undefined) return -1;
+        return Number(aPinPriority) - Number(bPinPriority);
       }
-      return parseFloat(b.dataset.completion) - parseFloat(a.dataset.completion);
+
+      const nameComparison = a.dataset.name.localeCompare(b.dataset.name);
+      if (sortBy === 'name') {
+        return nameComparison;
+      }
+      const sortField = sortFields[sortBy] || sortFields.completion;
+      return Number(b.dataset[sortField]) - Number(a.dataset[sortField]) || nameComparison;
     });
 
     row.innerHTML = '';
@@ -109,6 +131,7 @@
     sortDropdown.addEventListener('change', function() {
       sortLanguages(this.value);
     });
+    sortLanguages(sortDropdown.value);
   }
 
   window.addEventListener('resize', updateProgressBarVisibility);
@@ -116,11 +139,8 @@
 
   (function () {
     const userLangs = Array.from(navigator.languages || []).map(lang => lang.toLowerCase());
-    const row = document.querySelector('.row');
+    const row = document.querySelector('#languageContainer > .row');
     if (!row || !userLangs.length) return;
-
-    // Capture the original column order (completion-based sort from server) before any changes.
-    const originalCols = Array.from(row.children);
 
     // Find the first matching card column for each user language preference.
     const userLangToCol = new Map();
@@ -202,14 +222,12 @@
       const pinnedCols = uniqueUserCols
         .filter(({ cardId }) => !unpinned.has(cardId))
         .map(({ col }) => col);
-
-      // Remaining columns in original server-side sort order.
-      const pinnedSet = new Set(pinnedCols);
-      const restCols = originalCols.filter(col => !pinnedSet.has(col));
-
-      const fragment = document.createDocumentFragment();
-      [...pinnedCols, ...restCols].forEach(col => fragment.appendChild(col));
-      row.appendChild(fragment);
+      for (const col of row.children) {
+        delete col.dataset.pinPriority;
+      }
+      pinnedCols.forEach((col, index) => {
+        col.dataset.pinPriority = index;
+      });
 
       // Sync button appearance and accessible label.
       for (const { cardId, col } of uniqueUserCols) {
@@ -222,6 +240,8 @@
           btn.setAttribute('aria-label', isPinned ? `Unpin ${languageName} language card` : `Pin ${languageName} language card`);
         }
       }
+
+      sortLanguages(sortDropdown?.value || 'completion');
     }
 
     reorder();

@@ -23,12 +23,20 @@ class testIndex(unittest.TestCase):
             built=True,
             translated_name='Polish',
             contribution_link='https://example.com',
+            audience=123,
         )
-        env.get_template('index.html.jinja').render(
+        index = env.get_template('index.html.jinja').render(
             completion_progress=[language_project_data],
             generation_time=datetime.now(),
             duration=100,
         )
+        self.assertIn('<option value="core-completion">Core completion</option>', index)
+        self.assertIn('<option value="progress">Progress</option>', index)
+        self.assertIn('<option value="audience">Audience</option>', index)
+        self.assertIn('data-core-completion="100"', index)
+        self.assertIn('data-progress="2"', index)
+        self.assertIn('data-audience="123"', index)
+        self.assertIn("document.querySelector('#languageContainer > .row')", index)
 
 
 if __name__ == '__main__':

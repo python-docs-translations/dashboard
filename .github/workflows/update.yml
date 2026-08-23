@@ -20,9 +20,19 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+      - name: Check out audience statistics
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: AA-Turner/plausible-stats
+          path: plausible-stats
+          sparse-checkout: stats/docs.python.org_*/*.visitors.json
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
       - run: sudo apt-get install -y gettext
       - run: pip install -r requirements.txt
       - run: uv run generate.py  # generates index.html and index.json
+        env:
+          PLAUSIBLE_STATS_DIR: plausible-stats/stats
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0

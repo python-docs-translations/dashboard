@@ -4,6 +4,7 @@ import json
 import concurrent.futures
 import itertools
 import logging
+import os
 import subprocess
 from collections.abc import Iterator
 from dataclasses import dataclass, asdict
@@ -16,10 +17,14 @@ from urllib3 import PoolManager
 
 import translated_names
 import contribute
+from audience import get_audience
 from completion import branches_from_peps, get_completion
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
+default_plausible_stats_dir = (
+    Path(__file__).resolve().parent.parent / 'plausible-stats' / 'stats'
+)
 
 
 def get_completion_progress() -> Iterator[LanguageProjectData]:
@@ -49,13 +54,21 @@ def get_completion_progress() -> Iterator[LanguageProjectData]:
         language: translated_name
         for language, translated_name in translated_names.get_languages(PoolManager())
     }
+    languages_and_repos = list(get_languages_and_repos(devguide_dir))
+    plausible_stats_dir = os.environ.get('PLAUSIBLE_STATS_DIR')
+    audience = get_audience(
+        Path(plausible_stats_dir or default_plausible_stats_dir),
+        (language.code for language, _ in languages_and_repos),
+        required=plausible_stats_dir is not None,
+    )
 
     with concurrent.futures.ThreadPoolExecutor() as executor:
         return executor.map(
             get_project_data,
-            *zip(*get_languages_and_repos(devguide_dir)),
+            *zip(*languages_and_repos),
             itertools.repeat(languages_built),
             itertools.repeat(clones_dir),
+            itertools.repeat(audience),
         )
 
 
@@ -64,6 +77,7 @@ def get_project_data(
     repo: str | None,
     languages_built: dict[str, str],
     clones_dir: str,
+    audience: dict[str, int],
 ) -> LanguageProjectData:
     built = language.code in languages_built
     if repo:
@@ -88,6 +102,7 @@ def get_project_data(
         or translated_names.babel_autonym(language.code)
         or '',
         contribution_link=contribute.get_contrib_link(language.code, repo),
+        audience=audience[language.code],
     )
 
 
@@ -103,6 +118,7 @@ class LanguageProjectData:
     built: bool
     translated_name: str
     contribution_link: str | None
+    audience: int
 
 
 if __name__ == '__main__':
