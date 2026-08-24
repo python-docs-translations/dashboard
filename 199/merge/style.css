@@ -287,12 +287,19 @@ td[data-label="warnings"], td[data-label="lint"] {
 
 /* ---------------------------- Footer / legend ----------------------------- */
 
-.page-footer a {
-  color: var(--card-link-color);
+.page-footer {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--navbar-border);
 }
 
 .footer-inner {
   max-width: 72ch;
+  margin: 0 auto;
+}
+
+.page-footer a {
+  color: var(--card-link-color);
 }
 
 .legend {
@@ -316,20 +323,30 @@ td[data-label="warnings"], td[data-label="lint"] {
 
 /* Mimicking the card progress bars. */
 .legend-bar {
-  --bs-badge-font-size: 0.875rem;
-  --bs-badge-font-weight: normal;
-  --bs-badge-padding-y: 0;
-  --bs-badge-padding-x: 0.5em;
+  display: inline-block;
   min-width: 6.5rem;
-  line-height: 20px;
+  padding: 0 0.5em;
+  border-radius: 0.25rem;
   background-color: #4caf50;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* White on the lighter green would not be readable at this size. */
 .legend-bar-change {
-  --bs-badge-color: #15141A;
   background: linear-gradient(to left, #94cf96 60%, #4caf50 60%);
+  color: #15141A;
   text-align: right;
+}
+
+.legend-meta {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  opacity: 0.75;
+  text-align: center;
 }
 
 @media screen and (max-width: 575px) {
