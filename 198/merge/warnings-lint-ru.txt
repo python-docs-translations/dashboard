@@ -1,0 +1,4 @@
+about.po:83: missing backtick before hyperlink reference: 'GitHub: <https://github.com/python/cpython/graphs/contributors>`_'. (hyperlink-reference-missing-backtick)
+glossary.po:3058: role missing closing backtick: ':term:`операции без блокировок.\n' (missing-backtick-after-role)
+glossary.po:3267: trailing whitespace (trailing-whitespace)
+improve-page-nojs.po:49: missing space before < in hyperlink (missing-space-in-hyperlink)
