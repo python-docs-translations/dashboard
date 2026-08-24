@@ -25,10 +25,15 @@ class testIndex(unittest.TestCase):
             translated_name='Polish',
             contribution_link='https://example.com',
         )
-        env.get_template('index.html.jinja').render(
+        index = env.get_template('index.html.jinja').render(
             completion_progress=[language_project_data],
+            python_version='3.15',
+            release_cycle_status='prerelease',
             generation_time=datetime.now(),
             duration=100,
+        )
+        self.assertIn(
+            'Measured against the Python 3.15 documentation (prerelease).', index
         )
 
     def test_orders_by_completion_score(self):
