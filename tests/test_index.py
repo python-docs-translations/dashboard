@@ -31,7 +31,9 @@ class testIndex(unittest.TestCase):
             generation_time=datetime.now(),
             duration=100,
         )
-        self.assertIn('Calculating completion against Python 3.15 (prerelease).', index)
+        self.assertIn(
+            'Measured against the Python 3.15 documentation (prerelease).', index
+        )
 
 
 if __name__ == '__main__':

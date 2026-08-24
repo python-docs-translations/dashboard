@@ -40,17 +40,43 @@
       {% endfor %}
     </div>
   </div>
-  <p class="text-center">
-    Documentation's core as defined by PEP 545: <i>Tutorial</i>, <i>Built-in Functions</i> and <i>Dealing with Bugs</i>.
-    Calculating completion against Python {{ python_version }} ({{ release_cycle_status }}).
-  </p>
-  <p class="text-center">
-    Last updated {{ generation_time.strftime("on %A %-d %B %Y at %-H:%M:%S %Z") }} (in {{ duration // 60 }} minutes and
-    {{ duration % 60 }} seconds).
-    <br />
-    You can download the data on this page in
-    <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
-  </p>
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <h2 class="visually-hidden">Legend</h2>
+      <dl class="legend">
+        <dt>
+          <span class="legend-bar">core</span>
+        </dt>
+        <dd>
+          The <a href="https://docs.python.org/3/tutorial/">Tutorial</a>,
+          <a href="https://docs.python.org/3/library/functions.html">Built-in Functions</a> and
+          <a href="https://docs.python.org/3/bugs.html">Dealing with Bugs</a> pages,
+          which are required before a translation is added to the language
+          switcher on docs.python.org.
+        </dd>
+        <dt>
+          <span class="legend-bar">overall</span>
+        </dt>
+        <dd>
+          Every page of the documentation.
+        </dd>
+        <dt>
+          <span class="legend-bar legend-bar-change">+0.00%</span>
+        </dt>
+        <dd>
+          Progress over the last 30 days.
+        </dd>
+      </dl>
+      <p class="legend-meta">
+        Measured against the Python {{ python_version }} documentation ({{ release_cycle_status }}).
+        Last updated {{ generation_time.strftime("on %A %-d %B %Y at %-H:%M:%S %Z") }} (in {{ duration // 60 }} minutes and
+        {{ duration % 60 }} seconds).
+        <br />
+        You can download the data on this page in
+        <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
+      </p>
+    </div>
+  </footer>
 {% endblock main %}
 {% block extrascript %}
   <script>
