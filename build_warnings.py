@@ -5,12 +5,6 @@ from shutil import copyfile
 import sphinx.cmd.build
 
 
-WARNING_NOTICE = (
-    '# WARNING! There might be false positives below! '
-    'See https://github.com/sphinx-doc/sphinx/issues/14162'
-)
-
-
 def number(clones_dir: str, repo: str, language_code: str) -> int:
     language_part, *locale = language_code.split('-')
     if locale:
@@ -40,11 +34,10 @@ def number(clones_dir: str, repo: str, language_code: str) -> int:
         )
     )
     prefix = f'{Path(clones_dir).resolve()}/cpython/Doc/'
-    warnings = '\n'.join(
+    log = '\n'.join(
         line.removeprefix(prefix)
         for line in Path(warning_file).read_text().splitlines()
     )
-    log = f'{WARNING_NOTICE}\n{warnings}'
     Path(warning_file).write_text(log)
     copyfile(warning_file, f'build/warnings-{language_code}.txt')
-    return len(findall('ERROR|WARNING', warnings))
+    return len(findall('ERROR|WARNING', log))
