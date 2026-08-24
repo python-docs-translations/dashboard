@@ -1,2 +1,1 @@
-# WARNING! There might be false positives below! See https://github.com/sphinx-doc/sphinx/issues/14162
 bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Erori de documentație`_'] [i18n.inconsistent_references]

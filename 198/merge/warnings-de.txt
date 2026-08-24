@@ -1,4 +1,3 @@
-# WARNING! There might be false positives below! See https://github.com/sphinx-doc/sphinx/issues/14162
 distributing/index.rst:14: WARNING: inconsistent references in translated message. original: ['`Python Packaging User Guide`_', '`packaging Python projects`_'], translated: ['`Python Packaging User Guide`_', '`Packen von Python-Projekten`_'] [i18n.inconsistent_references]
 bugs.rst:27: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`Repository der Übersetzung <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Dokumentationsfehler`_'] [i18n.inconsistent_references]
@@ -32,7 +31,6 @@ glossary.rst:343: WARNING: inconsistent term references in translated message. o
 glossary.rst:395: WARNING: inconsistent term references in translated message. original: [':term:`non-deterministic`', ':term:`locks <lock>`', ':term:`synchronization primitives\n<synchronization primitive>`', ':term:`native code`', ':term:`race condition`', ':term:`thread-safe`'], translated: [':term:`nicht-deterministischem`', ':term:`Locks <lock>`', ':term:`Synchronisationsprimitiven <synchronization primitive>`', ':term:`native Code`', ':term:`Race Condition`', ':term:`thread-safe`'] [i18n.inconsistent_references]
 glossary.rst:406: WARNING: inconsistent term references in translated message. original: [':term:`locks <lock>`', ':term:`lock`', ':term:`reentrant`'], translated: [':term:`Sperren <lock>`', ':term:`Sperre`', ':term:`reentrant`'] [i18n.inconsistent_references]
 glossary.rst:491: WARNING: inconsistent term references in translated message. original: [':term:`special method`'], translated: [':term:`speziellen Methode`'] [i18n.inconsistent_references]
-glossary.rst:509: WARNING: inconsistent term references in translated message. original: [':term:`statement`', ':keyword:`while`'], translated: [':term:`Anweisungen`', ':keyword:`while`'] [i18n.inconsistent_references]
 glossary.rst:543: WARNING: inconsistent term references in translated message. original: [':term:`file object`'], translated: [':term:`Dateiobjekt`'] [i18n.inconsistent_references]
 glossary.rst:557: WARNING: inconsistent term references in translated message. original: [':term:`filesystem encoding and error handler`', ':c:func:`PyConfig_Read`', ':c:member:`~PyConfig.filesystem_encoding`', ':c:member:`~PyConfig.filesystem_errors`', ':c:type:`PyConfig`'], translated: [':term:`Dateisystem-Kodierung und der Fehlerbehandler`', ':c:func:`PyConfig_Read`', ':c:member:`~PyConfig.filesystem_encoding`', ':c:member:`~PyConfig.filesystem_errors`', ':c:type:`PyConfig`'] [i18n.inconsistent_references]
 glossary.rst:562: WARNING: inconsistent term references in translated message. original: [':term:`locale encoding`'], translated: [':term:`Lokalisierungskodierung`'] [i18n.inconsistent_references]
@@ -313,7 +311,6 @@ glossary.rst:234:<translated>:1: WARNING: term not in glossary: 'virtuellen Masc
 glossary.rst:395:<translated>:1: WARNING: term not in glossary: 'nicht-deterministischem' [ref.term]
 glossary.rst:406:<translated>:1: WARNING: term not in glossary: 'Sperre' [ref.term]
 glossary.rst:491:<translated>:1: WARNING: term not in glossary: 'speziellen Methode' [ref.term]
-glossary.rst:509:<translated>:1: WARNING: term not in glossary: 'Anweisungen' [ref.term]
 glossary.rst:557:<translated>:1: WARNING: term not in glossary: 'Dateisystem-Kodierung und der Fehlerbehandler' [ref.term]
 glossary.rst:562:<translated>:1: WARNING: term not in glossary: 'Lokalisierungskodierung' [ref.term]
 glossary.rst:620:<translated>:1: WARNING: term not in glossary: 'Variablen-Annotation' [ref.term]
