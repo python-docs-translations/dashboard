@@ -104,6 +104,10 @@ class LanguageProjectData:
     translated_name: str
     contribution_link: str | None
 
+    @property
+    def completion_score(self) -> float:
+        return self.completion + self.core_completion
+
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
