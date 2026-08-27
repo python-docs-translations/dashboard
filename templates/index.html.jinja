@@ -158,7 +158,18 @@
 
   const sortDropdown = document.getElementById('sortDropdown');
   if (sortDropdown) {
+    const sortStorageKey = 'dashboard-sort-by';
+    try {
+      const storedSort = localStorage.getItem(sortStorageKey);
+      if (Array.from(sortDropdown.options).some(option => option.value === storedSort)) {
+        sortDropdown.value = storedSort;
+      }
+    }
+    catch {}
+
     sortDropdown.addEventListener('change', function() {
+      try { localStorage.setItem(sortStorageKey, this.value); }
+      catch {}
       sortLanguages(this.value);
     });
     sortLanguages(sortDropdown.value);

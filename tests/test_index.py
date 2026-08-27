@@ -75,6 +75,9 @@ class testIndex(unittest.TestCase):
         self.assertIn('data-core-completion="100"', index)
         self.assertIn('data-progress="2"', index)
         self.assertIn("document.querySelector('#languageContainer > .row')", index)
+        self.assertIn("const sortStorageKey = 'dashboard-sort-by'", index)
+        self.assertIn('localStorage.getItem(sortStorageKey)', index)
+        self.assertIn('localStorage.setItem(sortStorageKey, this.value)', index)
 
         self.assertLess(index.index('German'), index.index('Polish'))
 
