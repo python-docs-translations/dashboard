@@ -24,7 +24,6 @@ class testIndex(unittest.TestCase):
             built=True,
             translated_name='Polish',
             contribution_link='https://example.com',
-            audience=123,
         )
         index = env.get_template('index.html.jinja').render(
             completion_progress=[language_project_data],
@@ -50,7 +49,6 @@ class testIndex(unittest.TestCase):
             built=True,
             translated_name='Polish',
             contribution_link='https://example.com',
-            audience=123,
         )
         higher_completion_score = replace(
             language_project_data,
@@ -66,12 +64,16 @@ class testIndex(unittest.TestCase):
             generation_time=datetime.now(),
             duration=100,
         )
+        self.assertIn(
+            '<option value="completion-score" selected>Completion score</option>', index
+        )
+        self.assertIn('<option value="completion">Overall completion</option>', index)
         self.assertIn('<option value="core-completion">Core completion</option>', index)
-        self.assertIn('<option value="progress">Progress</option>', index)
-        self.assertIn('<option value="audience">Audience</option>', index)
+        self.assertIn('<option value="progress">Recent changes</option>', index)
+        self.assertNotIn('<option value="audience">', index)
+        self.assertIn('data-completion-score="100"', index)
         self.assertIn('data-core-completion="100"', index)
         self.assertIn('data-progress="2"', index)
-        self.assertIn('data-audience="123"', index)
         self.assertIn("document.querySelector('#languageContainer > .row')", index)
 
         self.assertLess(index.index('German'), index.index('Polish'))
