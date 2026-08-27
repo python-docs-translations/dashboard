@@ -243,7 +243,6 @@ tutorial/modules.rst:198:<translated>:1: WARNING: Inline interpreted text or phr
 tutorial/modules.rst:198: WARNING: inconsistent term references in translated message. original: [':mod:`site`'], translated: [] [i18n.inconsistent_references]
 tutorial/modules.rst:245: WARNING: inconsistent term references in translated message. original: [':option:`-O`', ':option:`-OO`'], translated: [':option:`-O`oder :option:`'] [i18n.inconsistent_references]
 tutorial/modules.rst:441: WARNING: inconsistent term references in translated message. original: [':term:`namespace package`'], translated: [':term:`Namespace-Paket`'] [i18n.inconsistent_references]
-tutorial/modules.rst:590: WARNING: inconsistent term references in translated message. original: [':attr:`~module.__path__`', ':term:`sequence`'], translated: [':attr:`~module.__path__`', ':term:`Sequenz`'] [i18n.inconsistent_references]
 tutorial/stdlib2.rst:88:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 tutorial/stdlib2.rst:88:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 tutorial/stdlib2.rst:88:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
