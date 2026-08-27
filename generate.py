@@ -18,7 +18,7 @@ from urllib3 import PoolManager
 import translated_names
 import contribute
 from audience import get_audience
-from completion import branches_from_peps, get_completion
+from completion import branches_from_peps, get_completion, release_cycle_from_peps
 from repositories import Language, get_languages_and_repos
 
 generation_time = datetime.now(timezone.utc)
@@ -120,6 +120,10 @@ class LanguageProjectData:
     contribution_link: str | None
     audience: int
 
+    @property
+    def completion_score(self) -> float:
+        return self.completion + self.core_completion
+
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
@@ -127,10 +131,13 @@ if __name__ == '__main__':
     Path('build').mkdir(parents=True, exist_ok=True)
 
     completion_progress = list(get_completion_progress())
+    python_version = branches_from_peps()[0]
 
     env = Environment(loader=FileSystemLoader('templates'))
     index = env.get_template('index.html.jinja').render(
         completion_progress=completion_progress,
+        python_version=python_version,
+        release_cycle_status=release_cycle_from_peps()[python_version]['status'],
         generation_time=generation_time,
         duration=(datetime.now(timezone.utc) - generation_time).seconds,
     )

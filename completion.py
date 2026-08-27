@@ -10,9 +10,13 @@ from potodo.arguments_handling import Filters
 
 
 @cache
-def branches_from_peps() -> list[str]:
+def release_cycle_from_peps() -> dict[str, dict[str, str]]:
     resp = urllib3.request('GET', 'https://peps.python.org/api/release-cycle.json')
-    data = json.loads(resp.data)
+    return json.loads(resp.data)
+
+
+def branches_from_peps() -> list[str]:
+    data = release_cycle_from_peps()
     return [
         branch
         for branch, metadata in data.items()
