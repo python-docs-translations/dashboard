@@ -9,7 +9,7 @@
             <option value="completion-score" selected>Completion score</option>
             <option value="completion">Overall completion</option>
             <option value="core-completion">Core completion</option>
-            <option value="progress">Recent changes</option>
+            <option value="recent-changes">Recent changes</option>
             <option value="name">Name</option>
           </select>
         </div>
@@ -23,7 +23,7 @@
              data-completion-score="{{ project.completion_score }}"
              data-completion="{{ project.completion }}"
              data-core-completion="{{ project.core_completion }}"
-             data-progress="{{ project.change }}"
+             data-recent-changes="{{ project.change }}"
              data-name="{{ project.language.name }}">
           <div id="{{ project.language.code }}" class="card shadow mb-3 w-100">
             <div class="card-body">
@@ -128,7 +128,7 @@
       'completion-score': 'completionScore',
       'completion': 'completion',
       'core-completion': 'coreCompletion',
-      'progress': 'progress',
+      'recent-changes': 'recentChanges',
     };
     const cards = Array.from(row.children);
     cards.sort((a, b) => {
