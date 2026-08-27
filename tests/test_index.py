@@ -61,6 +61,8 @@ class testIndex(unittest.TestCase):
 
         index = env.get_template('index.html.jinja').render(
             completion_progress=[language_project_data, higher_completion_score],
+            python_version='3.15',
+            release_cycle_status='prerelease',
             generation_time=datetime.now(),
             duration=100,
         )
