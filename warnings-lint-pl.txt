@@ -18,7 +18,7 @@ c-api/init_config.po:154: missing space before role ( przez:c:func:`). (missing-
 c-api/init_config.po:166: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/init_config.po:166: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/init_config.po:33: role missing (escaped) space after role: ':c:func:`Py_InitializeFromInitConfig`P' (missing-space-after-role)
-library/turtle.po:3520: role missing (escaped) space after role: ':func:`listen`m' (missing-space-after-role)
+library/turtle.po:3545: role missing (escaped) space after role: ':func:`listen`m' (missing-space-after-role)
 deprecations/c-api-pending-removal-in-3.15.po:257: role missing closing backtick: ':c:func:`PyConfig_Get("site_import") <PyConfig_Get> zamiast tego.\n' (missing-backtick-after-role)
 deprecations/c-api-pending-removal-in-3.15.po:265: role missing closing backtick: ':c:func:`PyConfig_Get("bytes_warning") <PyConfig_Get> zamiast tego.\n' (missing-backtick-after-role)
 deprecations/c-api-pending-removal-in-3.15.po:312: role missing closing backtick: ':c:func:`PyConfig_Get("buffered_stdio") <PyConfig_Get> zamiast tego.\n' (missing-backtick-after-role)
