@@ -132,10 +132,31 @@
     </header>
     <main role="main">
       
-  <div>
+  <div class="container-fluid mb-3">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <div class="d-flex align-items-center gap-2">
+          <label for="sortDropdown" class="fw-medium text-nowrap flex-shrink-0">Sort by:</label>
+          <select id="sortDropdown" class="form-select form-select-sm w-auto">
+            <option value="completion-score" selected>Completion score</option>
+            <option value="completion">Overall completion</option>
+            <option value="core-completion">Core completion</option>
+            <option value="recent-changes">Recent changes</option>
+            <option value="name">Name</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="languageContainer">
     <div class="row">
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="190.5520997727157"
+             data-completion="90.69598466480204"
+             data-core-completion="99.85611510791367"
+             data-recent-changes="0.3442860253608444"
+             data-name="Simplified Chinese">
           <div id="zh-cn" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -200,7 +221,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="154.50860686857106"
+             data-completion="54.50860686857108"
+             data-core-completion="100.0"
+             data-recent-changes="0.5284731256071353"
+             data-name="Brazilian Portuguese">
           <div id="pt-br" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -265,7 +291,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="135.67935703459457"
+             data-completion="45.26129502746483"
+             data-core-completion="90.41806200712973"
+             data-recent-changes="0.007160080801796198"
+             data-name="Korean">
           <div id="ko" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -322,7 +353,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="132.66048737707985"
+             data-completion="48.99551745574715"
+             data-core-completion="83.66496992133271"
+             data-recent-changes="0.0"
+             data-name="Spanish">
           <div id="es" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -379,7 +415,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="129.20477758550703"
+             data-completion="38.62214509994618"
+             data-core-completion="90.58263248556085"
+             data-recent-changes="5.641258812971728e-05"
+             data-name="Japanese">
           <div id="ja" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -436,7 +477,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="126.48144605358519"
+             data-completion="30.26298420334707"
+             data-core-completion="96.21846185023811"
+             data-recent-changes="0.024313825484274076"
+             data-name="Traditional Chinese">
           <div id="zh-tw" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -497,7 +543,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="110.3826042222085"
+             data-completion="24.324318225666147"
+             data-core-completion="86.05828599654235"
+             data-recent-changes="0.0"
+             data-name="French">
           <div id="fr" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -554,7 +605,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="107.16152676081659"
+             data-completion="13.058780788580288"
+             data-core-completion="94.10274597223629"
+             data-recent-changes="0.0"
+             data-name="Greek">
           <div id="el" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -611,7 +667,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="105.60320393630319"
+             data-completion="5.747088828389522"
+             data-core-completion="99.85611510791367"
+             data-recent-changes="0.07378766527478042"
+             data-name="Polish">
           <div id="pl" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -676,7 +737,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="105.31848960400822"
+             data-completion="5.462374496094556"
+             data-core-completion="99.85611510791367"
+             data-recent-changes="5.106411064990686"
+             data-name="German">
           <div id="de" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -732,7 +798,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="104.37588901435906"
+             data-completion="4.677844632962778"
+             data-core-completion="99.69804438139629"
+             data-recent-changes="-3.0834556546285965"
+             data-name="Punjabi">
           <div id="pa" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -784,7 +855,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="104.30202397083696"
+             data-completion="4.302023970836949"
+             data-core-completion="100.0"
+             data-recent-changes="0.8941959344575992"
+             data-name="Russian">
           <div id="ru" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -849,7 +925,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="100.40194091825721"
+             data-completion="3.429603295397748"
+             data-core-completion="96.97233762285946"
+             data-recent-changes="2.390596247208987"
+             data-name="Persian">
           <div id="fa" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -868,16 +949,16 @@
                 
 <div class="progress ">
   <div class="progress-bar main-bar"
-       style="width: 96.97233762285946%;background: linear-gradient(to left, #94cf96 66.7384171699651%, #4caf50 66.7384171699651%);">
+       style="width: 96.97233762285946%;background: linear-gradient(to left, #94cf96 65.44063864914003%, #4caf50 65.44063864914003%);">
     core: 96.97%
     
-      (+64.72%)
+      (+63.46%)
     
   </div>
   <div class="progress-bar outer-label">
     core: 96.97%
     
-      (+64.72%)
+      (+63.46%)
     
   </div>
 </div>
@@ -887,16 +968,16 @@
                 
 <div class="progress mt-1">
   <div class="progress-bar main-bar"
-       style="width: 3.429603295397748%;background: linear-gradient(to left, #94cf96 70.92524056254626%, #4caf50 70.92524056254626%);">
+       style="width: 3.429603295397748%;background: linear-gradient(to left, #94cf96 69.7047454560408%, #4caf50 69.7047454560408%);">
     overall: 3.43%
     
-      (+2.43%)
+      (+2.39%)
     
   </div>
   <div class="progress-bar outer-label">
     overall: 3.43%
     
-      (+2.43%)
+      (+2.39%)
     
   </div>
 </div>
@@ -905,7 +986,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="93.9588478598608"
+             data-completion="2.595994480592377"
+             data-core-completion="91.36285337926842"
+             data-recent-changes="0.0"
+             data-name="Romanian">
           <div id="ro" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -962,7 +1048,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="91.49237810950802"
+             data-completion="38.28739280197941"
+             data-core-completion="53.204985307528624"
+             data-recent-changes="0.0"
+             data-name="Ukrainian">
           <div id="uk" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1019,7 +1110,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="84.52540425978951"
+             data-completion="3.935342147988271"
+             data-core-completion="80.59006211180125"
+             data-recent-changes="0.0"
+             data-name="Turkish">
           <div id="tr" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1076,7 +1172,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="69.59191592638089"
+             data-completion="2.807033972788824"
+             data-core-completion="66.78488195359206"
+             data-recent-changes="0.0"
+             data-name="Italian">
           <div id="it" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1133,7 +1234,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="50.32229082755726"
+             data-completion="2.9537631145164256"
+             data-core-completion="47.368527713040834"
+             data-recent-changes="5.641258813060546e-05"
+             data-name="Indonesian">
           <div id="id" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1190,7 +1296,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="47.50903111832833"
+             data-completion="1.352378975254054"
+             data-core-completion="46.156652143074275"
+             data-recent-changes="0.013990321856380161"
+             data-name="Vietnamese">
           <div id="vi" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1246,7 +1357,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="46.412511531999996"
+             data-completion="2.4465575346345085"
+             data-core-completion="43.96595399736549"
+             data-recent-changes="0.0"
+             data-name="Swedish">
           <div id="sv" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1303,7 +1419,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="27.20206020742778"
+             data-completion="0.7657444712843002"
+             data-core-completion="26.43631573614348"
+             data-recent-changes="0.0"
+             data-name="Hungarian">
           <div id="hu" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1351,7 +1472,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="3.697991872703306"
+             data-completion="0.12924123940712626"
+             data-core-completion="3.56875063329618"
+             data-recent-changes="0.0005641258813056382"
+             data-name="Tamil">
           <div id="ta" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1399,7 +1525,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="0.5540674568225056"
+             data-completion="0.015005748442730504"
+             data-core-completion="0.5390617083797751"
+             data-recent-changes="0.0"
+             data-name="Arabic">
           <div id="ar" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1447,7 +1578,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="0.013031307858160701"
+             data-completion="0.013031307858160701"
+             data-core-completion="0.0"
+             data-recent-changes="0.0"
+             data-name="Hindi">
           <div id="hi-in" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1495,7 +1631,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="0.011790230919288254"
+             data-completion="0.011790230919288254"
+             data-core-completion="0.0"
+             data-recent-changes="0.0"
+             data-name="Bengali">
           <div id="bn-in" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1552,7 +1693,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="0.0014103147032641452"
+             data-completion="0.0014103147032641452"
+             data-core-completion="0.0"
+             data-recent-changes="0.0"
+             data-name="Marathi">
           <div id="mr" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1600,7 +1746,12 @@
           </div>
         </div>
       
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="0.0"
+             data-completion="0.0"
+             data-core-completion="0.0"
+             data-recent-changes="0.0"
+             data-name="Lithuanian">
           <div id="lt" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -1679,8 +1830,8 @@
       </dl>
       <p class="small text-body-secondary text-center mb-0">
         Measured against the Python 3.15 documentation (prerelease).
-        Last updated on Friday 28 August 2026 at 5:24:21 UTC (in 7 minutes and
-        50 seconds).
+        Last updated on Friday 28 August 2026 at 13:00:52 UTC (in 9 minutes and
+        6 seconds).
         <br />
         You can download the data on this page in
         <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
@@ -1738,18 +1889,72 @@
     });
   }
 
+  function sortLanguages(sortBy) {
+    const languageContainer = document.getElementById('languageContainer');
+    if (!languageContainer) {
+      return;
+    }
+    const row = languageContainer.querySelector('.row');
+    if (!row) {
+      return;
+    }
+
+    const sortFields = {
+      'completion-score': 'completionScore',
+      'completion': 'completion',
+      'core-completion': 'coreCompletion',
+      'recent-changes': 'recentChanges',
+    };
+    const cards = Array.from(row.children);
+    cards.sort((a, b) => {
+      const aPinPriority = a.dataset.pinPriority;
+      const bPinPriority = b.dataset.pinPriority;
+      if (aPinPriority !== undefined || bPinPriority !== undefined) {
+        if (aPinPriority === undefined) return 1;
+        if (bPinPriority === undefined) return -1;
+        return Number(aPinPriority) - Number(bPinPriority);
+      }
+
+      const nameComparison = a.dataset.name.localeCompare(b.dataset.name);
+      if (sortBy === 'name') {
+        return nameComparison;
+      }
+      const sortField = sortFields[sortBy] || sortFields['completion-score'];
+      return Number(b.dataset[sortField]) - Number(a.dataset[sortField]) || nameComparison;
+    });
+
+    row.innerHTML = '';
+    cards.forEach(card => row.appendChild(card));
+  }
+
   updateProgressBarVisibility();
+
+  const sortDropdown = document.getElementById('sortDropdown');
+  if (sortDropdown) {
+    const sortStorageKey = 'dashboard-sort-by';
+    try {
+      const storedSort = localStorage.getItem(sortStorageKey);
+      if (Array.from(sortDropdown.options).some(option => option.value === storedSort)) {
+        sortDropdown.value = storedSort;
+      }
+    }
+    catch {}
+
+    sortDropdown.addEventListener('change', function() {
+      try { localStorage.setItem(sortStorageKey, this.value); }
+      catch {}
+      sortLanguages(this.value);
+    });
+    sortLanguages(sortDropdown.value);
+  }
 
   window.addEventListener('resize', updateProgressBarVisibility);
 
 
   (function () {
     const userLangs = Array.from(navigator.languages || []).map(lang => lang.toLowerCase());
-    const row = document.querySelector('.row');
+    const row = document.querySelector('#languageContainer > .row');
     if (!row || !userLangs.length) return;
-
-    // Capture the original column order (completion-based sort from server) before any changes.
-    const originalCols = Array.from(row.children);
 
     // Find the first matching card column for each user language preference.
     const userLangToCol = new Map();
@@ -1757,7 +1962,7 @@
       const langBase = lang.split('-')[0];
       const card = row.querySelector(`[id="${lang}"]`) || row.querySelector(`[id="${langBase}"]`);
       if (card) {
-        const col = card.closest('.col-12');
+        const col = card.parentElement;
         if (col && col.parentElement === row) {
           userLangToCol.set(lang, col);
         }
@@ -1781,7 +1986,10 @@
     // localStorage helpers – store the set of explicitly unpinned card IDs.
     const LS_KEY = 'dashboard-unpinned';
     function getUnpinned() {
-      try { return new Set(JSON.parse(localStorage.getItem(LS_KEY) || '[]')); }
+      try {
+        const value = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+        return Array.isArray(value) ? new Set(value) : new Set();
+      }
       catch { return new Set(); }
     }
     function saveUnpinned(set) {
@@ -1803,8 +2011,10 @@
     for (const { cardId, col } of uniqueUserCols) {
       const card = col.querySelector('.card');
       const btn = document.createElement('button');
+      const languageName = card.querySelector('.card-title a')?.textContent?.trim() || cardId;
       btn.className = 'pin-btn';
       btn.dataset.cardId = cardId;
+      btn.dataset.languageName = languageName;
       btn.innerHTML = `<span class="pin-icon-pinned">${PIN_FILL}</span><span class="pin-icon-unpinned">${PIN_OUTLINE}</span>`;
       card.appendChild(btn);
 
@@ -1816,34 +2026,36 @@
           unpinned.add(cardId);
         }
         saveUnpinned(unpinned);
-        reorder();
+        reorder(unpinned);
       });
     }
 
-    function reorder() {
-      const unpinned = getUnpinned();
+    function reorder(unpinned = getUnpinned()) {
 
       // Pinned user-language columns in navigator.languages priority order.
       const pinnedCols = uniqueUserCols
         .filter(({ cardId }) => !unpinned.has(cardId))
         .map(({ col }) => col);
-
-      // Remaining columns in original server-side sort order.
-      const pinnedSet = new Set(pinnedCols);
-      const restCols = originalCols.filter(col => !pinnedSet.has(col));
-
-      [...pinnedCols, ...restCols].forEach(col => row.appendChild(col));
+      for (const col of row.children) {
+        delete col.dataset.pinPriority;
+      }
+      pinnedCols.forEach((col, index) => {
+        col.dataset.pinPriority = index;
+      });
 
       // Sync button appearance and accessible label.
       for (const { cardId, col } of uniqueUserCols) {
         const btn = col.querySelector('.pin-btn');
         if (btn) {
           const isPinned = !unpinned.has(cardId);
+          const languageName = btn.dataset.languageName || cardId;
           btn.classList.toggle('unpinned', !isPinned);
-          btn.title = isPinned ? 'Unpin' : 'Pin';
-          btn.setAttribute('aria-label', isPinned ? 'Unpin this language card' : 'Pin this language card');
+          btn.title = isPinned ? `Unpin ${languageName}` : `Pin ${languageName}`;
+          btn.setAttribute('aria-label', isPinned ? `Unpin ${languageName} language card` : `Pin ${languageName} language card`);
         }
       }
+
+      sortLanguages(sortDropdown?.value || 'completion-score');
     }
 
     reorder();

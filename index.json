@@ -203,8 +203,8 @@
     "branch": "3.14",
     "core_completion": 96.97233762285946,
     "completion": 3.429603295397748,
-    "core_change": 64.71780322221096,
-    "change": 2.432454387601867,
+    "core_change": 63.45931705339953,
+    "change": 2.390596247208987,
     "built": false,
     "translated_name": "\u0641\u0627\u0631\u0633\u06cc",
     "contribution_link": "https://github.com/python/python-docs-fa"
