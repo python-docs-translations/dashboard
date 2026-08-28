@@ -1,9 +1,30 @@
 {% extends "base.html.jinja" %}
 {% block main %}
-  <div>
+  <div class="container-fluid mb-3">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <div class="d-flex align-items-center gap-2">
+          <label for="sortDropdown" class="fw-medium text-nowrap flex-shrink-0">Sort by:</label>
+          <select id="sortDropdown" class="form-select form-select-sm w-auto">
+            <option value="completion-score" selected>Completion score</option>
+            <option value="completion">Overall completion</option>
+            <option value="core-completion">Core completion</option>
+            <option value="recent-changes">Recent changes</option>
+            <option value="name">Name</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="languageContainer">
     <div class="row">
       {% for project in completion_progress | sort(attribute='completion_score') | reverse %}
-        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="{{ project.completion_score }}"
+             data-completion="{{ project.completion }}"
+             data-core-completion="{{ project.core_completion }}"
+             data-recent-changes="{{ project.change }}"
+             data-name="{{ project.language.name }}">
           <div id="{{ project.language.code }}" class="card shadow mb-3 w-100">
             <div class="card-body">
               <h2 class="card-title h3">
@@ -93,18 +114,72 @@
     });
   }
 
+  function sortLanguages(sortBy) {
+    const languageContainer = document.getElementById('languageContainer');
+    if (!languageContainer) {
+      return;
+    }
+    const row = languageContainer.querySelector('.row');
+    if (!row) {
+      return;
+    }
+
+    const sortFields = {
+      'completion-score': 'completionScore',
+      'completion': 'completion',
+      'core-completion': 'coreCompletion',
+      'recent-changes': 'recentChanges',
+    };
+    const cards = Array.from(row.children);
+    cards.sort((a, b) => {
+      const aPinPriority = a.dataset.pinPriority;
+      const bPinPriority = b.dataset.pinPriority;
+      if (aPinPriority !== undefined || bPinPriority !== undefined) {
+        if (aPinPriority === undefined) return 1;
+        if (bPinPriority === undefined) return -1;
+        return Number(aPinPriority) - Number(bPinPriority);
+      }
+
+      const nameComparison = a.dataset.name.localeCompare(b.dataset.name);
+      if (sortBy === 'name') {
+        return nameComparison;
+      }
+      const sortField = sortFields[sortBy] || sortFields['completion-score'];
+      return Number(b.dataset[sortField]) - Number(a.dataset[sortField]) || nameComparison;
+    });
+
+    row.innerHTML = '';
+    cards.forEach(card => row.appendChild(card));
+  }
+
   updateProgressBarVisibility();
+
+  const sortDropdown = document.getElementById('sortDropdown');
+  if (sortDropdown) {
+    const sortStorageKey = 'dashboard-sort-by';
+    try {
+      const storedSort = localStorage.getItem(sortStorageKey);
+      if (Array.from(sortDropdown.options).some(option => option.value === storedSort)) {
+        sortDropdown.value = storedSort;
+      }
+    }
+    catch {}
+
+    sortDropdown.addEventListener('change', function() {
+      try { localStorage.setItem(sortStorageKey, this.value); }
+      catch {}
+      sortLanguages(this.value);
+    });
+    sortLanguages(sortDropdown.value);
+  }
 
   window.addEventListener('resize', updateProgressBarVisibility);
 
 
   (function () {
     const userLangs = Array.from(navigator.languages || []).map(lang => lang.toLowerCase());
-    const row = document.querySelector('.row');
+    const row = document.querySelector('#languageContainer > .row');
     if (!row || !userLangs.length) return;
-
-    // Capture the original column order (completion-based sort from server) before any changes.
-    const originalCols = Array.from(row.children);
 
     // Find the first matching card column for each user language preference.
     const userLangToCol = new Map();
@@ -112,7 +187,7 @@
       const langBase = lang.split('-')[0];
       const card = row.querySelector(`[id="${lang}"]`) || row.querySelector(`[id="${langBase}"]`);
       if (card) {
-        const col = card.closest('.col-12');
+        const col = card.parentElement;
         if (col && col.parentElement === row) {
           userLangToCol.set(lang, col);
         }
@@ -136,7 +211,10 @@
     // localStorage helpers – store the set of explicitly unpinned card IDs.
     const LS_KEY = 'dashboard-unpinned';
     function getUnpinned() {
-      try { return new Set(JSON.parse(localStorage.getItem(LS_KEY) || '[]')); }
+      try {
+        const value = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+        return Array.isArray(value) ? new Set(value) : new Set();
+      }
       catch { return new Set(); }
     }
     function saveUnpinned(set) {
@@ -158,8 +236,10 @@
     for (const { cardId, col } of uniqueUserCols) {
       const card = col.querySelector('.card');
       const btn = document.createElement('button');
+      const languageName = card.querySelector('.card-title a')?.textContent?.trim() || cardId;
       btn.className = 'pin-btn';
       btn.dataset.cardId = cardId;
+      btn.dataset.languageName = languageName;
       btn.innerHTML = `<span class="pin-icon-pinned">${PIN_FILL}</span><span class="pin-icon-unpinned">${PIN_OUTLINE}</span>`;
       card.appendChild(btn);
 
@@ -171,34 +251,36 @@
           unpinned.add(cardId);
         }
         saveUnpinned(unpinned);
-        reorder();
+        reorder(unpinned);
       });
     }
 
-    function reorder() {
-      const unpinned = getUnpinned();
+    function reorder(unpinned = getUnpinned()) {
 
       // Pinned user-language columns in navigator.languages priority order.
       const pinnedCols = uniqueUserCols
         .filter(({ cardId }) => !unpinned.has(cardId))
         .map(({ col }) => col);
-
-      // Remaining columns in original server-side sort order.
-      const pinnedSet = new Set(pinnedCols);
-      const restCols = originalCols.filter(col => !pinnedSet.has(col));
-
-      [...pinnedCols, ...restCols].forEach(col => row.appendChild(col));
+      for (const col of row.children) {
+        delete col.dataset.pinPriority;
+      }
+      pinnedCols.forEach((col, index) => {
+        col.dataset.pinPriority = index;
+      });
 
       // Sync button appearance and accessible label.
       for (const { cardId, col } of uniqueUserCols) {
         const btn = col.querySelector('.pin-btn');
         if (btn) {
           const isPinned = !unpinned.has(cardId);
+          const languageName = btn.dataset.languageName || cardId;
           btn.classList.toggle('unpinned', !isPinned);
-          btn.title = isPinned ? 'Unpin' : 'Pin';
-          btn.setAttribute('aria-label', isPinned ? 'Unpin this language card' : 'Pin this language card');
+          btn.title = isPinned ? `Unpin ${languageName}` : `Pin ${languageName}`;
+          btn.setAttribute('aria-label', isPinned ? `Unpin ${languageName} language card` : `Pin ${languageName} language card`);
         }
       }
+
+      sortLanguages(sortDropdown?.value || 'completion-score');
     }
 
     reorder();
