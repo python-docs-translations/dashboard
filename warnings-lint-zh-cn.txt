@@ -8,3 +8,6 @@ whatsnew/changelog.po:694: inline literal missing (escaped) space after literal:
 whatsnew/changelog.po:1512: missing space before role ( 修复在:attr:`). (missing-space-before-role)
 whatsnew/changelog.po:694: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 whatsnew/changelog.po:694: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+whatsnew/3.15.po:5867: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+whatsnew/3.15.po:5867: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+whatsnew/3.15.po:5867: missing space before default role: '注将在``/proc/<pid>/maps``'. (missing-space-before-default-role)
