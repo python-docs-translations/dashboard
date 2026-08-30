@@ -1,3 +1,5 @@
+improve-page.po:44: trailing whitespace (trailing-whitespace)
+improve-page-nojs.po:35: trailing whitespace (trailing-whitespace)
 library/profiling.sampling.po:247: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/profiling.sampling.po:247: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/profiling.sampling.po:313: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
