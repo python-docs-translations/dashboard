@@ -1,6 +1,0 @@
-whatsnew/3.12.po:4219: inline literal missing (escaped) space after literal: '``PYTHON_FOR_REGEN``e' (missing-space-after-literal)
-whatsnew/3.12.po:4266: inline literal missing (escaped) space after literal: '``PyUnstable_Eval_RequestCodeExtraIndex()``(' (missing-space-after-literal)
-whatsnew/3.12.po:4219: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-whatsnew/3.12.po:4219: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-whatsnew/3.12.po:4266: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-whatsnew/3.12.po:4266: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
