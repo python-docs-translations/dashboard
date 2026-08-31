@@ -72,19 +72,20 @@ def get_project_data(
 ) -> LanguageProjectData:
     built = language.code in languages_built
     if repo:
-        core_complation, completion, branch, core_change, change = get_completion(
+        core_completion, completion, branch, core_change, change, total_words, core_total_words = get_completion(
             clones_dir, repo
         )
     else:
-        core_complation = completion = 0.0
+        core_completion = completion = 0.0
         core_change = change = 0.0
+        total_words = core_total_words = 0
         branch = ''
 
     return LanguageProjectData(
         language,
         repo,
         branch,
-        core_complation,
+        core_completion,
         completion,
         core_change,
         change,
@@ -93,6 +94,8 @@ def get_project_data(
         or translated_names.babel_autonym(language.code)
         or '',
         contribution_link=contribute.get_contrib_link(language.code, repo),
+        total_words=total_words,
+        core_total_words=core_total_words,
     )
 
 
@@ -108,6 +111,8 @@ class LanguageProjectData:
     built: bool
     translated_name: str
     contribution_link: str | None
+    total_words: int = 0
+    core_total_words: int = 0
 
 
 @dataclass(frozen=True)
@@ -119,12 +124,28 @@ class CombinedLanguageCard:
     cpython: LanguageProjectData | None
     packaging: PackagingProjectData | None
 
+    @property
+    def completion_score(self) -> float:
+        """Volume-weighted completion score: translated words across docs and packaging."""
+        docs_words = self.cpython.total_words if self.cpython else 0
+        pkg_words = self.packaging.total_words if self.packaging else 0
+        total = docs_words + pkg_words
+        if total == 0:
+            return 0.0
+        docs_translated = (self.cpython.completion * docs_words / 100) if self.cpython else 0.0
+        pkg_translated = (self.packaging.completion * pkg_words / 100) if self.packaging else 0.0
+        return 100 * (docs_translated + pkg_translated) / total
+
+    @property
+    def recent_changes_words(self) -> float:
+        """Approximate English words translated in the last 30 days across all resources."""
+        docs_change = (self.cpython.change * self.cpython.total_words / 100) if self.cpython else 0.0
+        pkg_change = (self.packaging.change * self.packaging.total_words / 100) if self.packaging else 0.0
+        return docs_change + pkg_change
+
 
 def _card_sort_key(c: CombinedLanguageCard) -> float:
-    """Return docs completion + docs core completion + packaging completion."""
-    return (c.cpython.completion + c.cpython.core_completion if c.cpython else 0.0) + (
-        c.packaging.completion if c.packaging else 0.0
-    )
+    return c.completion_score
 
 
 def merge_progress(

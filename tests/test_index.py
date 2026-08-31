@@ -82,32 +82,37 @@ class testIndex(unittest.TestCase):
         self.assertEqual(generate.merge_progress([], [packaging_data]), [])
 
     def test_orders_by_combined_completion_score(self):
+        """Volume-weighted score: language with high packaging completion can rank above
+        one with higher docs completion but no packaging translation."""
         polish_docs = generate.LanguageProjectData(
             language=repositories.Language('pl', 'Polish'),
             repository='python-docs-pl',
             branch='3.14',
-            core_completion=100,
-            completion=0,
+            core_completion=80,
+            completion=40,
             core_change=0,
             change=0,
             built=True,
             translated_name='Polski',
             contribution_link='https://example.com',
+            total_words=2000,
+            core_total_words=500,
         )
         german_docs = replace(
             polish_docs,
             language=repositories.Language('de', 'German'),
             repository='python-docs-de',
-            core_completion=45,
-            completion=45,
+            core_completion=50,
+            completion=30,
             translated_name='Deutsch',
         )
         german_packaging = packaging_completion.PackagingProjectData(
             language=repositories.Language('de', 'German'),
-            completion=20,
+            completion=80,
             change=0,
             built=True,
             translated_name='Deutsch',
+            total_words=2000,
         )
 
         combined = generate.merge_progress(

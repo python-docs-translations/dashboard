@@ -42,6 +42,7 @@ class PackagingProjectData:
     change: float
     built: bool
     translated_name: str
+    total_words: int = 0
 
 
 def _rtd_code_to_locale(code: str) -> str:
@@ -73,17 +74,19 @@ def get_built_languages() -> dict[str, Language]:
     return built
 
 
-def _po_completion(po_path: Path) -> float:
+def _po_completion(po_path: Path) -> tuple[float, int]:
+    """Return (completion%, total_words) for a .po file."""
     if not po_path.exists():
-        return 0.0
+        return 0.0, 0
     try:
         stats = PoFileStats(po_path)
-        return 100 * stats.translated_words / stats.words
-    except ZeroDivisionError:
-        return 0.0
+        words = stats.words
+        if words == 0:
+            return 0.0, 0
+        return 100 * stats.translated_words / words, words
     except Exception:
         logging.exception('Failed to parse %s', po_path)
-        return 0.0
+        return 0.0, 0
 
 
 def _get_locale_dirs(repo_path: Path) -> list[str]:
@@ -116,14 +119,14 @@ def get_packaging_progress(clones_dir: Path) -> list[PackagingProjectData]:
     }
 
     # Calculate current completions for all locales
-    current_completions = {
+    current_completions: dict[str, tuple[float, int]] = {
         locale: _po_completion(po_paths[locale]) for locale in locales
     }
 
     # Find the 30-days-ago commit once and gather historical completions in a
     # single checkout round-trip (avoids N checkouts, one per locale).
     month_ago_completions: dict[str, float] = {}
-    if any(current_completions.values()):
+    if any(pct for pct, _ in current_completions.values()):
         try:
             old_commit = next(
                 clone_repo.iter_commits('HEAD', max_count=1, before=CHANGE_PERIOD)
@@ -133,12 +136,12 @@ def get_packaging_progress(clones_dir: Path) -> list[PackagingProjectData]:
         else:
             clone_repo.git.checkout(old_commit.hexsha)
             for locale in locales:
-                month_ago_completions[locale] = _po_completion(po_paths[locale])
+                month_ago_completions[locale] = _po_completion(po_paths[locale])[0]
             clone_repo.git.checkout(PACKAGING_REPO_BRANCH)
 
     results = []
     for locale in locales:
-        completion = current_completions[locale]
+        completion, total_words = current_completions[locale]
         change = completion - month_ago_completions.get(locale, 0.0)
 
         # Determine language code and name.
@@ -173,6 +176,7 @@ def get_packaging_progress(clones_dir: Path) -> list[PackagingProjectData]:
                 change=change,
                 built=normalised_locale in built_languages or locale in built_languages,
                 translated_name=translated_name,
+                total_words=total_words,
             )
         )
 

@@ -44,8 +44,9 @@ class TestPoCompletion(unittest.TestCase):
     def test_missing_file_returns_zero(self):
         from pathlib import Path
 
-        result = packaging_completion._po_completion(Path('/nonexistent/messages.po'))
-        self.assertEqual(result, 0.0)
+        completion, words = packaging_completion._po_completion(Path('/nonexistent/messages.po'))
+        self.assertEqual(completion, 0.0)
+        self.assertEqual(words, 0)
 
     def test_malformed_file_returns_zero(self):
         from pathlib import Path
@@ -54,8 +55,9 @@ class TestPoCompletion(unittest.TestCase):
             f.write('this is not a valid po file\x00\xff\xfe')
             tmp_path = Path(f.name)
         try:
-            result = packaging_completion._po_completion(tmp_path)
-            self.assertEqual(result, 0.0)
+            completion, words = packaging_completion._po_completion(tmp_path)
+            self.assertEqual(completion, 0.0)
+            self.assertEqual(words, 0)
         finally:
             tmp_path.unlink(missing_ok=True)
 
@@ -75,8 +77,9 @@ class TestPoCompletion(unittest.TestCase):
             f.write(po_content)
             tmp_path = Path(f.name)
         try:
-            result = packaging_completion._po_completion(tmp_path)
-            self.assertAlmostEqual(result, 100.0)
+            completion, words = packaging_completion._po_completion(tmp_path)
+            self.assertAlmostEqual(completion, 100.0)
+            self.assertEqual(words, 1)
         finally:
             tmp_path.unlink(missing_ok=True)
 
@@ -103,8 +106,9 @@ class TestPoCompletion(unittest.TestCase):
             f.write(po_content)
             tmp_path = Path(f.name)
         try:
-            result = packaging_completion._po_completion(tmp_path)
-            self.assertAlmostEqual(result, 100 / 3)
+            completion, words = packaging_completion._po_completion(tmp_path)
+            self.assertAlmostEqual(completion, 100 / 3)
+            self.assertEqual(words, 3)
         finally:
             tmp_path.unlink(missing_ok=True)
 
@@ -126,8 +130,9 @@ class TestPoCompletion(unittest.TestCase):
             f.write(po_content)
             tmp_path = Path(f.name)
         try:
-            result = packaging_completion._po_completion(tmp_path)
-            self.assertEqual(result, 80.0)
+            completion, words = packaging_completion._po_completion(tmp_path)
+            self.assertEqual(completion, 80.0)
+            self.assertEqual(words, 5)
         finally:
             tmp_path.unlink(missing_ok=True)
 

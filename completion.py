@@ -22,7 +22,7 @@ def branches_from_peps() -> list[str]:
 
 def get_completion(
     clones_dir: str, repo: str
-) -> tuple[float, float, str, float, float]:
+) -> tuple[float, float, str, float, float, int, int]:
     clone_path = Path(clones_dir, 'translations', repo)
     for branch in branches_from_peps() + ['master', 'main']:
         try:
@@ -49,11 +49,13 @@ def get_completion(
         api_url='',
     )
     completion = project.completion
+    total_words = project.words
     core_excludes = ['**/*', '!bugs.po', '!tutorial/*', '!library/functions.po']
     project.filter(
         filters=Filters(False, True, 0, 100, False, False), exclude=core_excludes
     )
     core_completion = project.completion
+    core_total_words = project.words
 
     if completion:
         # Fetch commit from before 30 days ago and checkout
@@ -87,4 +89,4 @@ def get_completion(
     change = completion - month_ago_completion
     core_change = core_completion - month_ago_core_completion
 
-    return core_completion, completion, branch, core_change, change
+    return core_completion, completion, branch, core_change, change, total_words, core_total_words
