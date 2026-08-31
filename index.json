@@ -337,9 +337,9 @@
     "repository": "Terminal-Joint/python-docs-ta",
     "branch": "3.15",
     "core_completion": 3.56875063329618,
-    "completion": 0.12914638243564103,
+    "completion": 0.12937186717145183,
     "core_change": 0.0,
-    "change": 0.0005637118395270257,
+    "change": 0.000789196575337825,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
     "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
@@ -397,9 +397,9 @@
     "repository": "tamnd/python-docs-vi",
     "branch": "3.15",
     "core_completion": 46.156652143074275,
-    "completion": 1.3513863928981327,
+    "completion": 1.3514991352660382,
     "core_change": 0.5005573006383628,
-    "change": 0.013923682436317364,
+    "change": 0.014036424804222847,
     "built": false,
     "translated_name": "Ti\u1ebfng Vi\u1ec7t",
     "contribution_link": "https://github.com/tamnd/python-docs-vi"
