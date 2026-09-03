@@ -53,8 +53,8 @@
     "branch": "3.15",
     "core_completion": 100.0,
     "completion": 5.639535244136591,
-    "core_change": 85.4939710203668,
-    "change": 4.876645381041987,
+    "core_change": 85.50207721147027,
+    "change": 4.921110188752827,
     "built": false,
     "translated_name": "Deutsch",
     "contribution_link": "https://github.com/sba72/python-docs-de"
@@ -339,7 +339,7 @@
     "core_completion": 3.56875063329618,
     "completion": 0.12933679809426876,
     "core_change": 0.0,
-    "change": 0.0007889826463266802,
+    "change": 0.0007326267430176336,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
     "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
