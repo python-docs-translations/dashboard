@@ -217,9 +217,9 @@
     "repository": "python/python-docs-pl",
     "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 5.782205996687287,
+    "completion": 5.7824876900021405,
     "core_change": 0.30195561860371356,
-    "change": 0.0628739478754694,
+    "change": 0.06315564119032313,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -292,9 +292,9 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 90.49375204227653,
+    "completion": 90.49414641291733,
     "core_change": 0.30195561860371356,
-    "change": 0.3147077713551596,
+    "change": 0.31510214199596476,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
