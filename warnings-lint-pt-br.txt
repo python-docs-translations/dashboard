@@ -1,0 +1,1 @@
+whatsnew/changelog.po:93: missing space before role ( de:class:`). (missing-space-before-role)
