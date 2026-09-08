@@ -1,8 +1,0 @@
-library/fileinput.po:352: role missing (escaped) space after role: ':meth:`!__getitem__`ਵ' (missing-space-after-role)
-library/fileinput.po:139: trailing whitespace (trailing-whitespace)
-library/fileinput.po:165: trailing whitespace (trailing-whitespace)
-library/fileinput.po:166: trailing whitespace (trailing-whitespace)
-library/fileinput.po:274: trailing whitespace (trailing-whitespace)
-library/fileinput.po:319: trailing whitespace (trailing-whitespace)
-tutorial/errors.po:443: trailing whitespace (trailing-whitespace)
-howto/clinic.po:24: trailing whitespace (trailing-whitespace)
