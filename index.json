@@ -53,8 +53,8 @@
     "branch": "3.15",
     "core_completion": 100.0,
     "completion": 5.711977519405175,
-    "core_change": 73.39953389401155,
-    "change": 4.464626752493745,
+    "core_change": 85.50207721147027,
+    "change": 4.994022676646525,
     "built": false,
     "translated_name": "Deutsch",
     "contribution_link": "https://github.com/sba72/python-docs-de"
@@ -232,9 +232,9 @@
     "repository": "python/python-docs-pt-br",
     "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 55.46916636338746,
+    "completion": 55.59113530834763,
     "core_change": 0.30195561860371356,
-    "change": 1.2656601928292375,
+    "change": 1.3876291377894105,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
