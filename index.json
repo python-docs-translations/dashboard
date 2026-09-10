@@ -217,9 +217,9 @@
     "repository": "python/python-docs-pl",
     "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 5.788535827019402,
+    "completion": 5.792986423427489,
     "core_change": 0.30195561860371356,
-    "change": 0.06940676930079981,
+    "change": 0.07385736570888657,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
