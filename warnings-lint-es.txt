@@ -1,4 +1,4 @@
-library/importlib.metadata.po:743: Extra backtick in role: ':py:class:`pathlib.Path``' (role-with-extra-backtick)
+library/importlib.metadata.po:737: Extra backtick in role: ':py:class:`pathlib.Path``' (role-with-extra-backtick)
 library/sys_path_init.po:198: Extra backtick in role: ':data:`sys.path``' (role-with-extra-backtick)
 library/winsound.po:43: Extra backtick in role: ':exc:`RuntimeError``' (role-with-extra-backtick)
 library/decimal.po:2844: Extra backtick in role: ':const:`False``' (role-with-extra-backtick)
