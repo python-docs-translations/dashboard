@@ -53,8 +53,8 @@
     "branch": "3.15",
     "core_completion": 99.53186746377546,
     "completion": 5.68867536651441,
-    "core_change": 84.05106900395177,
-    "change": 4.943593671677434,
+    "core_change": 72.73077312797649,
+    "change": 4.436302808770438,
     "built": false,
     "translated_name": "Deutsch",
     "contribution_link": "https://github.com/sba72/python-docs-de"
@@ -203,8 +203,8 @@
     "branch": "3.14",
     "core_completion": 96.50420508663491,
     "completion": 3.402290046240235,
-    "core_change": 30.294862701388183,
-    "change": 1.456257638650303,
+    "core_change": 24.322626405917518,
+    "change": 1.2902771598019722,
     "built": false,
     "translated_name": "\u0641\u0627\u0631\u0633\u06cc",
     "contribution_link": "https://github.com/python/python-docs-fa"
@@ -248,8 +248,8 @@
     "branch": "3.15",
     "core_completion": 99.22991184517176,
     "completion": 6.0057110351392,
-    "core_change": 97.46681528017024,
-    "change": 5.938857004466323,
+    "core_change": 97.41615158577365,
+    "change": 5.937448958327467,
     "built": false,
     "translated_name": "\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40",
     "contribution_link": "https://github.com/BHUVANSH855/python-docs-pa"
@@ -279,7 +279,7 @@
     "core_completion": 99.53186746377546,
     "completion": 4.629937313785899,
     "core_change": 0.30195561860369935,
-    "change": 1.064708168357261,
+    "change": 1.0355897742057216,
     "built": true,
     "translated_name": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
