@@ -53,8 +53,8 @@
     "branch": "3.15",
     "core_completion": 99.55838284001892,
     "completion": 3.397832699641186,
-    "core_change": 36.17580568844961,
-    "change": 1.5334767987573588,
+    "core_change": 52.392092949897474,
+    "change": 1.8809139359519431,
     "built": false,
     "translated_name": "Deutsch",
     "contribution_link": "https://github.com/sba72/python-docs-de"
@@ -294,7 +294,7 @@
     "core_completion": 99.55838284001892,
     "completion": 88.00178871834613,
     "core_change": 0.3916723621260729,
-    "change": 0.2957355174921048,
+    "change": 0.2871749007221922,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
