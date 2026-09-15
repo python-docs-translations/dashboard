@@ -249,7 +249,7 @@
     "core_completion": 99.16671047789285,
     "completion": 3.983762410362952,
     "core_change": 96.8140476315651,
-    "change": 3.9057057398685426,
+    "change": 3.480223672346707,
     "built": false,
     "translated_name": "\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40",
     "contribution_link": "https://github.com/BHUVANSH855/python-docs-pa"
@@ -292,9 +292,9 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.15",
     "core_completion": 99.55838284001892,
-    "completion": 87.99881507045656,
+    "completion": 88.00399632131189,
     "core_change": 0.3916723621260729,
-    "change": 0.28716519686219044,
+    "change": 0.29234644771752016,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -337,9 +337,9 @@
     "repository": "Terminal-Joint/python-docs-ta",
     "branch": "3.15",
     "core_completion": 4.629094159087325,
-    "completion": 0.1506505004130921,
+    "completion": 0.15498698210722597,
     "core_change": 0.0,
-    "change": 0.02196399819106762,
+    "change": 0.026300479885201483,
     "built": false,
     "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
     "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
