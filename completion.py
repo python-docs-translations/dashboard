@@ -53,7 +53,7 @@ def get_completion(
         api_url='',
     )
     completion = project.completion
-    core_excludes = ['**/*', '!bugs.po', '!tutorial/*', '!library/functions.po']
+    core_excludes = ['**/*', '!bugs.po', '!tutorial/*', '!builtins/functions.po']
     project.filter(
         filters=Filters(False, True, 0, 100, False, False), exclude=core_excludes
     )
