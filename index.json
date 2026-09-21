@@ -25,8 +25,8 @@
     "completion": 0.011540219635711857,
     "core_change": 0.0,
     "change": 0.0,
-    "built": true,
-    "translated_name": "\u09ac\u09be\u0982\u09b2\u09be",
+    "built": false,
+    "translated_name": "\u09ac\u09be\u0982\u09b2\u09be (\u09ad\u09be\u09b0\u09a4)",
     "contribution_link": "https://github.com/python/python-docs-bn-in"
   },
   {
@@ -53,8 +53,8 @@
     "branch": "3.15",
     "core_completion": 76.67929727867723,
     "completion": 4.342500208286891,
-    "core_change": 29.31039747424734,
-    "change": 1.1865034598141406,
+    "core_change": 8.820489959676593,
+    "change": 1.2692552786653426,
     "built": false,
     "translated_name": "Deutsch",
     "contribution_link": "https://github.com/sba72/python-docs-de"
@@ -201,10 +201,10 @@
     },
     "repository": "python/python-docs-fa",
     "branch": "3.14",
-    "core_completion": 96.23303258279564,
-    "completion": 77.51165843651978,
-    "core_change": 22.0825594414206,
-    "change": 75.29205199741499,
+    "core_completion": 96.41344653603777,
+    "completion": 78.29256539645439,
+    "core_change": 22.262973394662723,
+    "change": 76.0729589573496,
     "built": true,
     "translated_name": "\u0641\u0627\u0631\u0633\u06cc",
     "contribution_link": "https://github.com/python/python-docs-fa"
@@ -232,9 +232,9 @@
     "repository": "python/python-docs-pt-br",
     "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 56.32606693552564,
+    "completion": 56.32116937889975,
     "core_change": 23.94480355008004,
-    "change": 4.414725095080151,
+    "change": 4.409827538454259,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
