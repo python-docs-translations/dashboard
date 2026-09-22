@@ -4,7 +4,10 @@ urllib3
 potodo
 jinja2
 docutils
-sphinx
+# The Sphinx version is pinned so that new versions that introduce
+# new warnings won't suddenly cause build failures.
+# See https://github.com/sphinx-doc/sphinx/issues/14162
+sphinx<9.0.0
 python-docs-theme
 dacite
 sphinx-lint
