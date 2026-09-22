@@ -1,0 +1,5 @@
+library/fileinput.rst:176:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+library/fileinput.rst:176:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+library/frameworks.rst:11: WARNING: inconsistent term references in translated message. original: [':mod:`cmd`', ':doc:`Command Line Interface Libraries <./cmdlinelibs>`'], translated: [':mod:`cmd`'] [i18n.inconsistent_references]
+using/configure.rst:1272:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
+using/configure.rst:1272:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
