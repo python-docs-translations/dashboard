@@ -260,9 +260,9 @@
       "name": "Romanian"
     },
     "repository": "python/python-docs-ro",
-    "branch": "",
-    "core_completion": 0.0,
-    "completion": 0.0,
+    "branch": "3.13",
+    "core_completion": 70.2052643310166,
+    "completion": 2.002819191216373,
     "core_change": 0.0,
     "change": 0.0,
     "built": true,
@@ -275,11 +275,11 @@
       "name": "Russian"
     },
     "repository": "python/python-docs-ru",
-    "branch": "3.13",
+    "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 4.575331176156668,
+    "completion": 4.651102569472123,
     "core_change": 23.78675204149866,
-    "change": 1.327857076913031,
+    "change": 1.4034032952112034,
     "built": true,
     "translated_name": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
