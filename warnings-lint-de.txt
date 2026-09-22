@@ -1,2 +1,0 @@
-library/csv.po:971: missing space before role ( von:class:`). (missing-space-before-role)
-library/csv.po:1020: missing space before role ( von:class:`). (missing-space-before-role)
