@@ -1,0 +1,2 @@
+library/csv.rst:94: WARNING: inconsistent footnote references in translated message. original: ['[1]_'], translated: [] [i18n.inconsistent_references]
+library/csv.rst:94: WARNING: inconsistent term references in translated message. original: [':meth:`~io.TextIOBase.write`', ':class:`Dialect`', ':func:`list_dialects`', ':ref:`csv-fmt-params`', ':const:`None`', ':func:`str`'], translated: [':meth:`~io.TextIOBase.write`', ':class:`Dialect`', ':func:`list_dialects`', ':ref:`csv-fmt-params`', ':const:`None`'] [i18n.inconsistent_references]

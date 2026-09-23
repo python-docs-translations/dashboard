@@ -1,0 +1,2 @@
+bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`Lỗi tài liệu`_'] [i18n.inconsistent_references]
+builtins/functions.rst:892: WARNING: inconsistent term references in translated message. original: [':class:`frozenset`', ':class:`frozenset`', ':ref:`types-set`'], translated: [':class:`frozenset`t mới, với các phần tử tùy chọn được lấy từ *iterable*. :class:`frozenset`', ':ref:`types-set`'] [i18n.inconsistent_references]
