@@ -6,8 +6,8 @@
     },
     "repository": "Abdur-rahmaanJ/python-docs-ar",
     "branch": "master",
-    "core_completion": 0.5466951660637948,
-    "completion": 0.016138357903882124,
+    "core_completion": 0.538996170290369,
+    "completion": 0.014973995349054527,
     "core_change": 0.0,
     "change": 0.0,
     "built": false,
@@ -22,11 +22,11 @@
     "repository": "python/python-docs-bn-in",
     "branch": "3.14",
     "core_completion": 0.0,
-    "completion": 0.014439583387684005,
+    "completion": 0.011540109197579617,
     "core_change": 0.0,
     "change": 0.0,
-    "built": true,
-    "translated_name": "\u09ac\u09be\u0982\u09b2\u09be",
+    "built": false,
+    "translated_name": "\u09ac\u09be\u0982\u09b2\u09be (\u09ad\u09be\u09b0\u09a4)",
     "contribution_link": "https://github.com/python/python-docs-bn-in"
   },
   {
@@ -36,8 +36,8 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.14",
-    "core_completion": 87.59563526903298,
-    "completion": 27.20538851276538,
+    "core_completion": 35.47773320991463,
+    "completion": 22.67265551423008,
     "core_change": 0.0,
     "change": 0.0,
     "built": true,
@@ -46,15 +46,30 @@
   },
   {
     "language": {
+      "code": "de",
+      "name": "German"
+    },
+    "repository": "sba72/python-docs-de",
+    "branch": "3.15",
+    "core_completion": 100.0,
+    "completion": 6.888600792721062,
+    "core_change": 23.78675204149866,
+    "change": 3.5832883456718685,
+    "built": false,
+    "translated_name": "Deutsch",
+    "contribution_link": "https://github.com/sba72/python-docs-de"
+  },
+  {
+    "language": {
       "code": "el",
       "name": "Greek"
     },
     "repository": "python/python-docs-el",
     "branch": "3.14",
-    "core_completion": 97.73717527129234,
-    "completion": 12.56389363972754,
+    "core_completion": 72.359222710786,
+    "completion": 11.177186836619638,
     "core_change": 0.0,
-    "change": 0.8541802290554745,
+    "change": 0.0,
     "built": true,
     "translated_name": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac",
     "contribution_link": "https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md"
@@ -65,11 +80,11 @@
       "name": "Hindi"
     },
     "repository": "CuriousLearner/python-docs-hi-in",
-    "branch": "3.14",
+    "branch": "3.15",
     "core_completion": 0.0,
-    "completion": 0.01650238101449601,
+    "completion": 0.0130037328031263,
     "core_change": 0.0,
-    "change": 0.010738681763109536,
+    "change": 0.0,
     "built": false,
     "translated_name": "\u0939\u093f\u0928\u094d\u0926\u0940 (\u092d\u093e\u0930\u0924)",
     "contribution_link": "https://github.com/CuriousLearner/python-docs-hi-in"
@@ -81,10 +96,10 @@
     },
     "repository": "python/python-docs-hu",
     "branch": "3.14",
-    "core_completion": 27.108681354817495,
-    "completion": 0.8342196284901474,
-    "core_change": 0.0,
-    "change": 0.0,
+    "core_completion": 26.32570768576118,
+    "completion": 0.7611968613154712,
+    "core_change": 0.00405260278413877,
+    "change": 0.0003940525091856717,
     "built": false,
     "translated_name": "magyar",
     "contribution_link": "https://github.com/python/python-docs-hu"
@@ -96,10 +111,10 @@
     },
     "repository": "python/python-docs-id",
     "branch": "3.14",
-    "core_completion": 48.96415652745807,
-    "completion": 3.260372990213239,
-    "core_change": 0.0,
-    "change": 0.012740808871486209,
+    "core_completion": 46.977771473729,
+    "completion": 2.898650257569608,
+    "core_change": 7.720208303783103,
+    "change": 0.2569785292046385,
     "built": true,
     "translated_name": "Indonesia",
     "contribution_link": "https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan"
@@ -111,8 +126,8 @@
     },
     "repository": "python/python-docs-it",
     "branch": "3.13",
-    "core_completion": 69.05623150279513,
-    "completion": 3.1065125554604376,
+    "core_completion": 50.42045753885433,
+    "completion": 1.4377287263716265,
     "core_change": 0.0,
     "change": 0.0,
     "built": true,
@@ -126,10 +141,10 @@
     },
     "repository": "python/python-docs-ja",
     "branch": "3.14",
-    "core_completion": 92.96695166063795,
-    "completion": 43.57484042136888,
-    "core_change": 0.6720651101611281,
-    "change": 0.4283338601556679,
+    "core_completion": 89.0437883730826,
+    "completion": 38.28028729805513,
+    "core_change": 20.390670908390902,
+    "change": 1.7242049005495943,
     "built": true,
     "translated_name": "\u65e5\u672c\u8a9e",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -141,28 +156,13 @@
     },
     "repository": "python/python-docs-ko",
     "branch": "3.14",
-    "core_completion": 96.41005185480654,
-    "completion": 46.92751419376275,
+    "core_completion": 40.28148507643776,
+    "completion": 43.629021278415195,
     "core_change": 0.0,
-    "change": 0.01285381333837421,
+    "change": 0.0,
     "built": true,
     "translated_name": "\ud55c\uad6d\uc5b4",
     "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
-  },
-  {
-    "language": {
-      "code": "mr",
-      "name": "Marathi"
-    },
-    "repository": "sanketgarade/python-doc-mr",
-    "branch": "main",
-    "core_completion": 0.051381124630055904,
-    "completion": 0.001516762960891177,
-    "core_change": 0.0,
-    "change": 0.0,
-    "built": false,
-    "translated_name": "\u092e\u0930\u093e\u0920\u0940",
-    "contribution_link": "https://github.com/sanketgarade/python-doc-mr"
   },
   {
     "language": {
@@ -181,18 +181,33 @@
   },
   {
     "language": {
-      "code": "fa",
-      "name": "Persian"
+      "code": "mr",
+      "name": "Marathi"
     },
-    "repository": "revisto/python-docs-fa",
-    "branch": "3.13",
-    "core_completion": 8.025731667214732,
-    "completion": 0.2564542814274802,
+    "repository": "satvikmudgal/python-docs-mr",
+    "branch": "3.14",
+    "core_completion": 0.0,
+    "completion": 0.0,
     "core_change": 0.0,
     "change": 0.0,
     "built": false,
+    "translated_name": "\u092e\u0930\u093e\u0920\u0940",
+    "contribution_link": "https://github.com/satvikmudgal/python-docs-mr"
+  },
+  {
+    "language": {
+      "code": "fa",
+      "name": "Persian"
+    },
+    "repository": "python/python-docs-fa",
+    "branch": "3.14",
+    "core_completion": 96.41344653603777,
+    "completion": 78.2888889013985,
+    "core_change": 22.262973394662723,
+    "change": 76.06930370358695,
+    "built": true,
     "translated_name": "\u0641\u0627\u0631\u0633\u06cc",
-    "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+    "contribution_link": "https://github.com/python/python-docs-fa"
   },
   {
     "language": {
@@ -200,11 +215,11 @@
       "name": "Polish"
     },
     "repository": "python/python-docs-pl",
-    "branch": "3.14",
-    "core_completion": 98.83056560341993,
-    "completion": 5.510703189509825,
-    "core_change": 0.032883919763236236,
-    "change": 0.0074624737675845765,
+    "branch": "3.15",
+    "core_completion": 98.71937752021236,
+    "completion": 5.745229290711113,
+    "core_change": 22.50612956171102,
+    "change": 0.7542165025813254,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -215,14 +230,29 @@
       "name": "Brazilian Portuguese"
     },
     "repository": "python/python-docs-pt-br",
-    "branch": "3.14",
-    "core_completion": 99.00526142716211,
-    "completion": 60.1693192828502,
-    "core_change": 0.6350707004274909,
-    "change": 0.3813748788864757,
+    "branch": "3.15",
+    "core_completion": 100.0,
+    "completion": 56.389420703406245,
+    "core_change": 23.94480355008004,
+    "change": 4.47857564654165,
     "built": true,
     "translated_name": "Portugu\u00eas brasileiro",
     "contribution_link": "https://python.org.br/traducao/"
+  },
+  {
+    "language": {
+      "code": "pa",
+      "name": "Punjabi"
+    },
+    "repository": "BHUVANSH855/python-docs-pa",
+    "branch": "3.15",
+    "core_completion": 100.0,
+    "completion": 4.903195371796986,
+    "core_change": 23.94480355008004,
+    "change": 0.9342984992791652,
+    "built": false,
+    "translated_name": "\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40",
+    "contribution_link": "https://github.com/BHUVANSH855/python-docs-pa"
   },
   {
     "language": {
@@ -231,8 +261,8 @@
     },
     "repository": "python/python-docs-ro",
     "branch": "3.13",
-    "core_completion": 94.62142387372575,
-    "completion": 2.8527884473625615,
+    "core_completion": 70.2052643310166,
+    "completion": 2.002800024543842,
     "core_change": 0.0,
     "change": 0.0,
     "built": true,
@@ -244,14 +274,14 @@
       "code": "ru",
       "name": "Russian"
     },
-    "repository": "MLGRussianXP/python-docs-ru",
-    "branch": "3.14",
-    "core_completion": 98.17699769812562,
-    "completion": 3.7437956811084745,
-    "core_change": 0.05754685958567052,
-    "change": 0.0016987745161980428,
-    "built": false,
-    "translated_name": "\u0440\u0443\u0441\u0441\u043a\u0438\u0439",
+    "repository": "python/python-docs-ru",
+    "branch": "3.15",
+    "core_completion": 100.0,
+    "completion": 4.651058059133772,
+    "core_change": 23.78675204149866,
+    "change": 1.0689518709894603,
+    "built": true,
+    "translated_name": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
   },
   {
@@ -260,11 +290,11 @@
       "name": "Simplified Chinese"
     },
     "repository": "python/python-docs-zh-cn",
-    "branch": "3.14",
-    "core_completion": 99.37520552449853,
-    "completion": 96.82347366626483,
-    "core_change": 0.5775238408418346,
-    "change": 0.28363467368666306,
+    "branch": "3.15",
+    "core_completion": 76.86774330813965,
+    "completion": 87.99794867522361,
+    "core_change": 0.8125468582196902,
+    "change": 0.33578903104177016,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -276,10 +306,10 @@
     },
     "repository": "python/python-docs-es",
     "branch": "3.14",
-    "core_completion": 85.97242035187827,
-    "completion": 55.418817689339036,
-    "core_change": 18.813397123766293,
-    "change": 0.17703657279521678,
+    "core_completion": 12.865497076023392,
+    "completion": 46.96025079753413,
+    "core_change": 0.0,
+    "change": 0.0,
     "built": true,
     "translated_name": "espa\u00f1ol",
     "contribution_link": "https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html"
@@ -291,13 +321,28 @@
     },
     "repository": "python/python-docs-sv",
     "branch": "3.14",
-    "core_completion": 45.731256165734955,
-    "completion": 2.745037606620852,
-    "core_change": 45.69015126603091,
-    "change": 2.5472517165206425,
+    "core_completion": 33.41776255800288,
+    "completion": 1.418307566990334,
+    "core_change": 0.0,
+    "change": 0.0,
     "built": true,
     "translated_name": "Svenska",
     "contribution_link": "https://github.com/python/python-docs-sv"
+  },
+  {
+    "language": {
+      "code": "ta",
+      "name": "Tamil"
+    },
+    "repository": "Terminal-Joint/python-docs-ta",
+    "branch": "3.15",
+    "core_completion": 4.4923101862170975,
+    "completion": 0.1551441021879484,
+    "core_change": 0.9239934347834895,
+    "change": 0.026514104546634137,
+    "built": false,
+    "translated_name": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
+    "contribution_link": "https://github.com/Terminal-Joint/python-docs-ta"
   },
   {
     "language": {
@@ -306,10 +351,10 @@
     },
     "repository": "python/python-docs-zh-tw",
     "branch": "3.14",
-    "core_completion": 91.89411377836238,
-    "completion": 32.40758211602994,
-    "core_change": 0.9084182834593832,
-    "change": 1.5905383113089258,
+    "core_completion": 74.15047314137504,
+    "completion": 28.69434078674272,
+    "core_change": 0.0,
+    "change": 0.0,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
@@ -321,8 +366,8 @@
     },
     "repository": "python/python-docs-tr",
     "branch": "3.12",
-    "core_completion": 83.27379019162066,
-    "completion": 4.388844633116275,
+    "core_completion": 28.56098931984261,
+    "completion": 2.918296589813292,
     "core_change": 0.0,
     "change": 0.0,
     "built": true,
@@ -336,12 +381,27 @@
     },
     "repository": "python/python-docs-uk",
     "branch": "3.13",
-    "core_completion": 55.17099638276883,
-    "completion": 43.399745305163606,
+    "core_completion": 40.580737978966994,
+    "completion": 36.67649358566955,
     "core_change": 0.0,
     "change": 0.0,
     "built": true,
     "translated_name": "\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
+  },
+  {
+    "language": {
+      "code": "vi",
+      "name": "Vietnamese"
+    },
+    "repository": "tamnd/python-docs-vi",
+    "branch": "3.15",
+    "core_completion": 45.13383720694616,
+    "completion": 1.3213706497306652,
+    "core_change": 22.084658872160645,
+    "change": 0.6183246801278758,
+    "built": false,
+    "translated_name": "Ti\u1ebfng Vi\u1ec7t",
+    "contribution_link": "https://github.com/tamnd/python-docs-vi"
   }
 ]
