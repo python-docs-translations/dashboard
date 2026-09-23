@@ -1,4 +1,3 @@
-bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`ਦਸਤਾਵੇਜ਼ੀਕਰਨ ਬੱਗ`_'] [i18n.inconsistent_references]
 library/fileinput.rst:176:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 library/fileinput.rst:176:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 library/frameworks.rst:11: WARNING: inconsistent term references in translated message. original: [':mod:`cmd`', ':doc:`Command Line Interface Libraries <./cmdlinelibs>`'], translated: [':mod:`cmd`'] [i18n.inconsistent_references]
