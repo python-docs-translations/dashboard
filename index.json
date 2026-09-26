@@ -202,9 +202,9 @@
     "repository": "python/python-docs-fa",
     "branch": "3.14",
     "core_completion": 96.41344653603777,
-    "completion": 78.2821856645464,
+    "completion": 78.7216393665879,
     "core_change": 22.14544791392271,
-    "change": 75.50016066593922,
+    "change": 75.93961436798071,
     "built": true,
     "translated_name": "\u0641\u0627\u0631\u0633\u06cc",
     "contribution_link": "https://github.com/python/python-docs-fa"
@@ -294,7 +294,7 @@
     "core_completion": 76.86774330813965,
     "completion": 87.94408937865894,
     "core_change": 0.8125468582196902,
-    "change": 0.3204877491517806,
+    "change": 0.3193622434479977,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
