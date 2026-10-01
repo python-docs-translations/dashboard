@@ -1,9 +1,14 @@
 {% extends "base.html.jinja" %}
 {% block main %}
-  <div class="alert alert-warning" role="alert">
-    <strong>Warning!</strong> There might be false positives in Sphinx build warnings! See
+  <div class="alert alert-info" role="note">
+    <strong>Note:</strong> Reproducing the dashboard’s exact warnings temporarily requires the
+    <a href="https://github.com/m-aciek/sphinx" class="alert-link">m-aciek/sphinx</a> fork
+    and its
+    <a href="https://github.com/m-aciek/sphinx/tree/copilot/fix-last-four-cases-issue-14162"
+       class="alert-link">copilot/fix-last-four-cases-issue-14162</a> branch,
+    because the fix for
     <a href="https://github.com/sphinx-doc/sphinx/issues/14162"
-       class="alert-link">sphinx#14162</a>.
+       class="alert-link">sphinx#14162</a> has not yet been merged upstream.
   </div>
   <table>
     <thead>
