@@ -1,49 +1,106 @@
 {% extends "base.html.jinja" %}
-
 {% block main %}
-<div>
-  <div class="row">
-    {% for project in completion_progress | sort(attribute='core_completion,completion') | reverse %}
-      <div class="col-12 col-sm-6 col-md-4 d-flex">
-        <div id="{{ project.language.code }}" class="card shadow mb-3 w-100">
-          <div class="card-body">
-            <h3 class="card-title"><a href="#{{ project.language.code }}">{{ project.language.name }}</a></h3>
-            <h5 class="card-subtitle mb-2 text-muted">{{ project.translated_name }}</h5>
-
-            <ul class="links-row">
-              {% if project.built %}
-              <li>
-                <a href="https://docs.python.org/{{ project.language.code }}/3/" aria-label="View {{ project.language.name }} documentation">View</a>
-              </li>
-              {% endif %}
-              <li>
-                <a href="{{ project.contribution_link }}" aria-label="Contribute to {{ project.language.name }} translation">
-                  Contribute
-                </a>
-              </li>
-            </ul>
-            {# core progress bar #}
-            {% with width=project.core_completion, change=project.core_change, kind='core' %}
-            {% include 'progress_bar.html.jinja' %}
-            {% endwith %}
-            {# overall progress bar #}
-            {% with width=project.completion, change=project.change, kind='overall', extra_container_class='mt-1' %}
-            {% include 'progress_bar.html.jinja' %}
-            {% endwith %}
-          </div>
+  <div class="container-fluid mb-3">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <div class="d-flex align-items-center gap-2">
+          <label for="sortDropdown" class="fw-medium text-nowrap flex-shrink-0">Sort by:</label>
+          <select id="sortDropdown" class="form-select form-select-sm w-auto">
+            <option value="completion-score" selected>Completion score</option>
+            <option value="completion">Overall completion</option>
+            <option value="core-completion">Core completion</option>
+            <option value="recent-changes">Recent changes</option>
+            <option value="name">Name</option>
+          </select>
         </div>
       </div>
-    {% endfor %}
+    </div>
   </div>
-</div>
-
-<p style="text-align: center;">
-  Last updated {{ generation_time.strftime('on %A %-d %B %Y at %-H:%M:%S %Z') }} (in {{ duration // 60 }} minutes and {{ duration % 60 }} seconds).<br/>
-  You can download the data on this page in <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
-</p>
-{% endblock %}
+  <div id="languageContainer">
+    <div class="row">
+      {% for project in completion_progress | sort(attribute='completion_score') | reverse %}
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 d-flex"
+             data-completion-score="{{ project.completion_score }}"
+             data-completion="{{ project.completion }}"
+             data-core-completion="{{ project.core_completion }}"
+             data-recent-changes="{{ project.change }}"
+             data-name="{{ project.language.name }}">
+          <div id="{{ project.language.code }}" class="card shadow mb-3 w-100">
+            <div class="card-body">
+              <h2 class="card-title h3">
+                <a href="#{{ project.language.code }}">{{ project.language.name }}</a>
+              </h2>
+              <h3 class="card-subtitle text-muted h5 mb-2">{{ project.translated_name }}</h3>
+              <ul class="links-row">
+                {% if project.built %}
+                  <li>
+                    <a href="https://docs.python.org/{{ project.language.code }}/3/"
+                       aria-label="View {{ project.language.name }} documentation">View</a>
+                  </li>
+                  <li>
+                    <a href="https://analytics.python.org/docs.python.org?f=contains,page,/{{ project.language.code }}/"
+                       aria-label="View {{ project.language.name }} documentation analytics">Analytics</a>
+                  </li>
+                {% endif %}
+                <li>
+                  <a href="{{ project.contribution_link }}"
+                     aria-label="Contribute to {{ project.language.name }} translation">Contribute</a>
+                </li>
+              </ul>
+              {# core progress bar #}
+              {% with width=project.core_completion, change=project.core_change, kind="core" %}
+                {% include "progress_bar.html.jinja" %}
+              {% endwith %}
+              {# overall progress bar #}
+              {% with width=project.completion, change=project.change, kind="overall", extra_container_class="mt-1" %}
+                {% include "progress_bar.html.jinja" %}
+              {% endwith %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <footer class="page-footer mt-4 pt-3 border-top">
+    <div class="footer-inner mx-auto">
+      <h2 class="visually-hidden">Legend</h2>
+      <dl class="legend">
+        <dt>
+          <span class="badge legend-bar">core</span>
+        </dt>
+        <dd>
+          The <a href="https://docs.python.org/3/tutorial/">Tutorial</a>,
+          <a href="https://docs.python.org/3/builtins/functions.html">Built-in Functions</a> and
+          <a href="https://docs.python.org/3/bugs.html">Dealing with Bugs</a>,
+          which are required before a translation is added to the language
+          switcher on docs.python.org.
+        </dd>
+        <dt>
+          <span class="badge legend-bar">overall</span>
+        </dt>
+        <dd>
+          The entire documentation.
+        </dd>
+        <dt>
+          <span class="badge legend-bar legend-bar-change">+0.00%</span>
+        </dt>
+        <dd>
+          Progress over the last 30 days.
+        </dd>
+      </dl>
+      <p class="small text-body-secondary text-center mb-0">
+        Measured against the Python {{ python_version }} documentation ({{ release_cycle_status }}).
+        Last updated {{ generation_time.strftime("on %A %-d %B %Y at %-H:%M:%S %Z") }} (in {{ duration // 60 }} minutes and
+        {{ duration % 60 }} seconds).
+        <br />
+        You can download the data on this page in
+        <a href="https://raw.githubusercontent.com/python-docs-translations/dashboard/refs/heads/gh-pages/index.json">JSON format</a>.
+      </p>
+    </div>
+  </footer>
+{% endblock main %}
 {% block extrascript %}
-<script>
+  <script>
   function updateProgressBarVisibility() {
     document.querySelectorAll('.main-bar').forEach(progressBar => {
       const barWithOverflowWidth = progressBar.scrollWidth;
@@ -57,8 +114,176 @@
     });
   }
 
+  function sortLanguages(sortBy) {
+    const languageContainer = document.getElementById('languageContainer');
+    if (!languageContainer) {
+      return;
+    }
+    const row = languageContainer.querySelector('.row');
+    if (!row) {
+      return;
+    }
+
+    const sortFields = {
+      'completion-score': 'completionScore',
+      'completion': 'completion',
+      'core-completion': 'coreCompletion',
+      'recent-changes': 'recentChanges',
+    };
+    const cards = Array.from(row.children);
+    cards.sort((a, b) => {
+      const aPinPriority = a.dataset.pinPriority;
+      const bPinPriority = b.dataset.pinPriority;
+      if (aPinPriority !== undefined || bPinPriority !== undefined) {
+        if (aPinPriority === undefined) return 1;
+        if (bPinPriority === undefined) return -1;
+        return Number(aPinPriority) - Number(bPinPriority);
+      }
+
+      const nameComparison = a.dataset.name.localeCompare(b.dataset.name);
+      if (sortBy === 'name') {
+        return nameComparison;
+      }
+      const sortField = sortFields[sortBy] || sortFields['completion-score'];
+      return Number(b.dataset[sortField]) - Number(a.dataset[sortField]) || nameComparison;
+    });
+
+    row.innerHTML = '';
+    cards.forEach(card => row.appendChild(card));
+  }
+
   updateProgressBarVisibility();
 
+  const sortDropdown = document.getElementById('sortDropdown');
+  if (sortDropdown) {
+    const sortStorageKey = 'dashboard-sort-by';
+    try {
+      const storedSort = localStorage.getItem(sortStorageKey);
+      if (Array.from(sortDropdown.options).some(option => option.value === storedSort)) {
+        sortDropdown.value = storedSort;
+      }
+    }
+    catch {}
+
+    sortDropdown.addEventListener('change', function() {
+      try { localStorage.setItem(sortStorageKey, this.value); }
+      catch {}
+      sortLanguages(this.value);
+    });
+    sortLanguages(sortDropdown.value);
+  }
+
   window.addEventListener('resize', updateProgressBarVisibility);
-</script>
-{% endblock %}
+
+
+  (function () {
+    const userLangs = Array.from(navigator.languages || []).map(lang => lang.toLowerCase());
+    const row = document.querySelector('#languageContainer > .row');
+    if (!row || !userLangs.length) return;
+
+    // Find the first matching card column for each user language preference.
+    const userLangToCol = new Map();
+    for (const lang of userLangs) {
+      const langBase = lang.split('-')[0];
+      const card = row.querySelector(`[id="${lang}"]`) || row.querySelector(`[id="${langBase}"]`);
+      if (card) {
+        const col = card.parentElement;
+        if (col && col.parentElement === row) {
+          userLangToCol.set(lang, col);
+        }
+      }
+    }
+    if (!userLangToCol.size) return;
+
+    // Deduplicate: keep one entry per unique column in navigator.languages priority order.
+    const uniqueUserCols = [];
+    const seenCols = new Set();
+    for (const lang of userLangs) {
+      const col = userLangToCol.get(lang);
+      if (col && !seenCols.has(col)) {
+        const cardEl = col.querySelector('[id]');
+        if (!cardEl) continue;
+        uniqueUserCols.push({ cardId: cardEl.id, col });
+        seenCols.add(col);
+      }
+    }
+
+    // localStorage helpers – store the set of explicitly unpinned card IDs.
+    const LS_KEY = 'dashboard-unpinned';
+    function getUnpinned() {
+      try {
+        const value = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+        return Array.isArray(value) ? new Set(value) : new Set();
+      }
+      catch { return new Set(); }
+    }
+    function saveUnpinned(set) {
+      try { localStorage.setItem(LS_KEY, JSON.stringify([...set])); }
+      catch {}
+    }
+
+    // SVG icons: filled = pinned, outline = unpinned.
+    // bi-pin-angle-fill: both paths together produce the solid filled pin.
+    const PIN_FILL = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-angle-fill" viewBox="0 0 16 16">
+  <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146" />
+</svg>`;
+    // bi-pin-angle: single outer-frame path produces a clean outline pin.
+    const PIN_OUTLINE = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-angle" viewBox="0 0 16 16">
+  <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z" />
+</svg>`;
+
+    // Inject pin button into each matching card.
+    for (const { cardId, col } of uniqueUserCols) {
+      const card = col.querySelector('.card');
+      const btn = document.createElement('button');
+      const languageName = card.querySelector('.card-title a')?.textContent?.trim() || cardId;
+      btn.className = 'pin-btn';
+      btn.dataset.cardId = cardId;
+      btn.dataset.languageName = languageName;
+      btn.innerHTML = `<span class="pin-icon-pinned">${PIN_FILL}</span><span class="pin-icon-unpinned">${PIN_OUTLINE}</span>`;
+      card.appendChild(btn);
+
+      btn.addEventListener('click', function () {
+        const unpinned = getUnpinned();
+        if (unpinned.has(cardId)) {
+          unpinned.delete(cardId);
+        } else {
+          unpinned.add(cardId);
+        }
+        saveUnpinned(unpinned);
+        reorder(unpinned);
+      });
+    }
+
+    function reorder(unpinned = getUnpinned()) {
+
+      // Pinned user-language columns in navigator.languages priority order.
+      const pinnedCols = uniqueUserCols
+        .filter(({ cardId }) => !unpinned.has(cardId))
+        .map(({ col }) => col);
+      for (const col of row.children) {
+        delete col.dataset.pinPriority;
+      }
+      pinnedCols.forEach((col, index) => {
+        col.dataset.pinPriority = index;
+      });
+
+      // Sync button appearance and accessible label.
+      for (const { cardId, col } of uniqueUserCols) {
+        const btn = col.querySelector('.pin-btn');
+        if (btn) {
+          const isPinned = !unpinned.has(cardId);
+          const languageName = btn.dataset.languageName || cardId;
+          btn.classList.toggle('unpinned', !isPinned);
+          btn.title = isPinned ? `Unpin ${languageName}` : `Pin ${languageName}`;
+          btn.setAttribute('aria-label', isPinned ? `Unpin ${languageName} language card` : `Pin ${languageName} language card`);
+        }
+      }
+
+      sortLanguages(sortDropdown?.value || 'completion-score');
+    }
+
+    reorder();
+  })();
+  </script>
+{% endblock extrascript %}

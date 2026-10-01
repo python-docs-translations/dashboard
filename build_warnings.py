@@ -40,4 +40,4 @@ def number(clones_dir: str, repo: str, language_code: str) -> int:
     )
     Path(warning_file).write_text(log)
     copyfile(warning_file, f'build/warnings-{language_code}.txt')
-    return len(findall('ERROR|WARNING', Path(warning_file).read_text()))
+    return len(findall('ERROR|WARNING', log))

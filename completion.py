@@ -10,9 +10,13 @@ from potodo.arguments_handling import Filters
 
 
 @cache
-def branches_from_peps() -> list[str]:
+def release_cycle_from_peps() -> dict[str, dict[str, str]]:
     resp = urllib3.request('GET', 'https://peps.python.org/api/release-cycle.json')
-    data = json.loads(resp.data)
+    return json.loads(resp.data)
+
+
+def branches_from_peps() -> list[str]:
+    data = release_cycle_from_peps()
     return [
         branch
         for branch, metadata in data.items()
@@ -49,7 +53,7 @@ def get_completion(
         api_url='',
     )
     completion = project.completion
-    core_excludes = ['**/*', '!bugs.po', '!tutorial/*', '!library/functions.po']
+    core_excludes = ['**/*', '!bugs.po', '!tutorial/*', '!builtins/functions.po']
     project.filter(
         filters=Filters(False, True, 0, 100, False, False), exclude=core_excludes
     )
