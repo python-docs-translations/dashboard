@@ -41,7 +41,6 @@ library/hashlib.rst:70: WARNING: inconsistent references in translated message. 
 library/hashlib.rst:453: WARNING: inconsistent references in translated message. original: ['`constants`_'], translated: ['`상수 <constants_>`_'] [i18n.inconsistent_references]
 library/asyncio-stream.rst:42: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`예제 <Examples_>`_'] [i18n.inconsistent_references]
 library/asyncio-subprocess.rst:58: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`예제 <Examples_>`_'] [i18n.inconsistent_references]
-library/configparser.rst:1477: WARNING: inconsistent references in translated message. original: ['`Customizing Parser Behaviour`_'], translated: ['`구문 분석기 동작 사용자 정의 <Customizing Parser Behaviour_>`_'] [i18n.inconsistent_references]
 howto/urllib2.rst:187: WARNING: inconsistent references in translated message. original: ['`info and geturl`_'], translated: ['`info와 geturl <info and geturl_>`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:89: WARNING: inconsistent references in translated message. original: ['`Event Loop Methods`_'], translated: ['`이벤트 루프 메서드 <Event Loop Methods_>`_'] [i18n.inconsistent_references]
 library/asyncio-eventloop.rst:92: WARNING: inconsistent references in translated message. original: ['`Callback Handles`_'], translated: ['`콜백 핸들 <Callback Handles_>`_'] [i18n.inconsistent_references]
@@ -54,3 +53,4 @@ library/asyncio-protocol.rst:59: WARNING: inconsistent references in translated 
 library/asyncio-protocol.rst:63: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`예제 <Examples_>`_'] [i18n.inconsistent_references]
 library/asyncio-protocol.rst:598: WARNING: inconsistent references in translated message. original: ['`Streaming Protocols`_'], translated: ['`스트리밍 프로토콜 <Streaming Protocols_>`_'] [i18n.inconsistent_references]
 library/asyncio-queue.rst:21: WARNING: inconsistent references in translated message. original: ['`Examples`_'], translated: ['`예제 <Examples_>`_'] [i18n.inconsistent_references]
+library/configparser.rst:1477: WARNING: inconsistent references in translated message. original: ['`Customizing Parser Behaviour`_'], translated: ['`구문 분석기 동작 사용자 정의 <Customizing Parser Behaviour_>`_'] [i18n.inconsistent_references]
