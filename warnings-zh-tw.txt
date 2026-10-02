@@ -1,6 +1,6 @@
 bugs.rst:27: WARNING: inconsistent references in translated message. original: ['`translation’s repository <TRANSLATION_REPO_>`_'], translated: ['`翻譯存儲庫 <TRANSLATION_REPO_>`_'] [i18n.inconsistent_references]
 bugs.rst:40: WARNING: inconsistent references in translated message. original: ['`Documentation bugs`_'], translated: ['`說明文件錯誤`_'] [i18n.inconsistent_references]
-bugs.rst:108: WARNING: inconsistent references in translated message. original: ["`Python Developer's Guide`_", '`core-mentorship mailing list`_'], translated: ['`Python 開發者指南`_', '`核心導師郵寄清單`_'] [i18n.inconsistent_references]
+bugs.rst:108: WARNING: inconsistent references in translated message. original: ["`Python Developer's Guide`_", '`core-mentorship mailing list`_'], translated: ["`Python 開發者指南 <Python Developer's Guide_>`_", '`核心導師郵寄清單 <core-mentorship mailing list_>`_'] [i18n.inconsistent_references]
 library/unittest.mock.rst:25: WARNING: inconsistent references in translated message. original: ['`quick guide`_'], translated: ['`快速導引 <quick guide_>`_'] [i18n.inconsistent_references]
 library/xml.rst:102: WARNING: inconsistent references in translated message. original: ['`Billion Laughs`_'], translated: ['`十億笑聲 <Billion Laughs_>`_'] [i18n.inconsistent_references]
 library/xml.rst:109: WARNING: inconsistent references in translated message. original: ['`Billion Laughs`_'], translated: ['`十億笑聲 <Billion Laughs_>`_'] [i18n.inconsistent_references]
