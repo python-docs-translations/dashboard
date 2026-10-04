@@ -1,0 +1,3 @@
+library/re.po:1019: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/re.po:1019: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+library/re.po:1019: missing space before default role: "e a``'<usuario@host.com>'``". (missing-space-before-default-role)
