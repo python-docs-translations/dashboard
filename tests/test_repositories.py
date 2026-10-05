@@ -1,9 +1,9 @@
-import unittest
-import support
-import tempfile
 import shutil
-
+import tempfile
+import unittest
 from pathlib import Path
+
+import support
 from git import Repo
 
 with support.import_scripts():

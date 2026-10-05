@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-import json
 import concurrent.futures
 import itertools
+import json
 import logging
 import subprocess
 from collections.abc import Iterator
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -14,8 +14,8 @@ from git import Repo
 from jinja2 import Environment, FileSystemLoader
 from urllib3 import PoolManager
 
-import translated_names
 import contribute
+import translated_names
 from completion import branches_from_peps, get_completion, release_cycle_from_peps
 from repositories import Language, get_languages_and_repos
 

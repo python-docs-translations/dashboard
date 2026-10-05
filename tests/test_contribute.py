@@ -1,6 +1,7 @@
 import unittest
-import urllib3
+
 import support
+import urllib3
 
 with support.import_scripts():
     import contribute
