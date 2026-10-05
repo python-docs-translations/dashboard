@@ -1,0 +1,2 @@
+reference/datamodel.rst:2213: WARNING: inconsistent term references in translated message. original: [':meth:`__hash__`', ':term:`hashable`'], translated: [':meth:`__hash__`', ':term:`хешируемых`'] [i18n.inconsistent_references]
+reference/datamodel.rst:2213:<translated>:1: WARNING: term not in glossary: 'хешируемых' [ref.term]

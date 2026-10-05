@@ -1,0 +1,6 @@
+whatsnew/changelog.rst:20695:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+whatsnew/changelog.rst:29271:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+build/NEWS:7310: WARNING: inconsistent term references in translated message. original: ['`~decimal.Decimal`'], translated: [':class:`~decimal.Decimal`'] [i18n.inconsistent_references]
+whatsnew/changelog.rst:20695:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+whatsnew/changelog.rst:29271:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
+build/NEWS:39435: WARNING: inconsistent term references in translated message. original: [':func:`curses.unget_wch`'], translated: [':c:func:`curses.unget_wch`'] [i18n.inconsistent_references]
