@@ -1,1 +1,0 @@
-howto/annotations.rst:154: WARNING: inconsistent term references in translated message. original: [':func:`functools.update_wrapper`', ':deco:`functools.wraps`', ':func:`functools.partial`'], translated: [':func:`functools.update_wrapper`', ':func:`functools.wraps`', ':func:`functools.partial`'] [i18n.inconsistent_references]
