@@ -1,6 +1,6 @@
-import tomllib
 from collections.abc import Iterator
 
+import tomllib
 from babel import Locale
 from babel.core import UnknownLocaleError
 from urllib3 import PoolManager

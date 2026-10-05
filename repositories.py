@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from docutils import core
-from docutils.nodes import table, row
+from docutils.nodes import row, table
 
 
 def get_languages_and_repos(
