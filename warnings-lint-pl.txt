@@ -1,4 +1,3 @@
-library/turtle.po:2784: role missing (escaped) space after role: ':func:`listen`m' (missing-space-after-role)
 c-api/conversion.po:64: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/conversion.po:64: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/conversion.po:64: missing space before default role: "owy``'\\0'``". (missing-space-before-default-role)
