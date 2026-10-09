@@ -1,2 +1,2 @@
-whatsnew/changelog.po:13921: missing space before role ( غیر:term:`). (missing-space-before-role)
-whatsnew/changelog.po:38330: role missing colon before first backtick ( :unittest.TestLoader.discover`). (missing-colon-in-role)
+whatsnew/changelog.po:13924: missing space before role ( غیر:term:`). (missing-space-before-role)
+whatsnew/changelog.po:38333: role missing colon before first backtick ( :unittest.TestLoader.discover`). (missing-colon-in-role)
