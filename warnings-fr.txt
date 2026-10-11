@@ -9,7 +9,7 @@ faq/programming.rst:1551: WARNING: inconsistent term references in translated me
 howto/curses.rst:119: WARNING: inconsistent term references in translated message. original: [':func:`~curses.endwin`'], translated: [':func:`~curses.enddwin`'] [i18n.inconsistent_references]
 howto/enum.rst:743: WARNING: inconsistent term references in translated message. original: [':class:`IntFlag`'], translated: [':class:`Intflag`'] [i18n.inconsistent_references]
 howto/index.rst:66: WARNING: inconsistent term references in translated message. original: [':ref:`python_2.3_mro`'], translated: [':ref:`isolating-extensions-howto`'] [i18n.inconsistent_references]
-library/turtle.rst:2235: WARNING: inconsistent term references in translated message. original: [':class:`Screen`'], translated: [':class:`screen`'] [i18n.inconsistent_references]
+library/turtle.rst:2229: WARNING: inconsistent term references in translated message. original: [':class:`Screen`'], translated: [':class:`screen`'] [i18n.inconsistent_references]
 library/unittest.rst:1158: WARNING: inconsistent term references in translated message. original: [':class:`logging.Logger`', ':class:`str`'], translated: [':class:`logging.logger`', ':class:`str`'] [i18n.inconsistent_references]
 library/unittest.rst:1287: WARNING: inconsistent term references in translated message. original: [':meth:`assertAlmostEqual`', ':meth:`assertNotAlmostEqual`'], translated: [':meth:`assertAlmostEqual`', ':meth:`assertNotNotAlmostEqual`'] [i18n.inconsistent_references]
 library/unittest.rst:2218: WARNING: inconsistent term references in translated message. original: [':attr:`failures`'], translated: [':attr:`errors`'] [i18n.inconsistent_references]
