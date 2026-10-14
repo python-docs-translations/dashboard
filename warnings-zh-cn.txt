@@ -3,4 +3,3 @@ whatsnew/changelog.rst:30051:<translated>:1: WARNING: Inline emphasis start-stri
 build/NEWS:8090: WARNING: inconsistent term references in translated message. original: ['`~decimal.Decimal`'], translated: [':class:`~decimal.Decimal`'] [i18n.inconsistent_references]
 whatsnew/changelog.rst:21475:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 whatsnew/changelog.rst:30051:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
-build/NEWS:40215: WARNING: inconsistent term references in translated message. original: [':func:`curses.unget_wch`'], translated: [':c:func:`curses.unget_wch`'] [i18n.inconsistent_references]
