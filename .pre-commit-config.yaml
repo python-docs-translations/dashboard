@@ -47,7 +47,7 @@ repos:
         args: [".", "--per-rule-ignores", "DEP002=python-docs-theme", "--package-module-name-map", "gitpython=git,sphinx-lint=sphinxlint"]
 
   - repo: https://github.com/djlint/djLint
-    rev: 97266b950ee135d6ef89c9ace9d88baadced6f67  # frozen: v1.46.4
+    rev: 1399b56bfc493191c39ff1a525a8ab9c11201cd3  # frozen: v1.46.6
     hooks:
       - id: djlint-reformat-jinja
       - id: djlint-jinja
