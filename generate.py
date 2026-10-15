@@ -1,25 +1,26 @@
 from __future__ import annotations
 
-import json
 import concurrent.futures
 import itertools
+import json
 import logging
 import subprocess
 from collections.abc import Iterator
-from dataclasses import dataclass, asdict
-from datetime import datetime, timezone
+from dataclasses import asdict, dataclass
+from datetime import UTC, datetime
 from pathlib import Path
 
 from git import Repo
 from jinja2 import Environment, FileSystemLoader
 from urllib3 import PoolManager
 
-import translated_names
 import contribute
+import translated_names
 from completion import branches_from_peps, get_completion, release_cycle_from_peps
 from repositories import Language, get_languages_and_repos
 
-generation_time = datetime.now(timezone.utc)
+logger = logging.getLogger('pydocs-translation-dashboard')
+generation_time = datetime.now(UTC)
 
 
 def get_completion_progress() -> Iterator[LanguageProjectData]:
@@ -111,7 +112,7 @@ class LanguageProjectData:
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
-    logging.info(f'starting at {generation_time}')
+    logger.info('starting at %s', generation_time)
     Path('build').mkdir(parents=True, exist_ok=True)
 
     completion_progress = list(get_completion_progress())
@@ -123,7 +124,7 @@ if __name__ == '__main__':
         python_version=python_version,
         release_cycle_status=release_cycle_from_peps()[python_version]['status'],
         generation_time=generation_time,
-        duration=(datetime.now(timezone.utc) - generation_time).seconds,
+        duration=(datetime.now(UTC) - generation_time).seconds,
     )
 
     Path('build/style.css').write_bytes(Path('src/style.css').read_bytes())

@@ -1,5 +1,5 @@
-import sys
 import contextlib
+import sys
 
 # -------------------------------- Imports ----------------------------------- #
 
@@ -11,7 +11,7 @@ def import_scripts(dir='..'):
         yield cm
 
 
-class DirsOnSysPath(object):
+class DirsOnSysPath:
     def __init__(self, *paths):
         self.original_value = sys.path[:]
         self.original_object = sys.path

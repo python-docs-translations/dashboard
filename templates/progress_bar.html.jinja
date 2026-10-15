@@ -4,11 +4,12 @@
    - change: numeric change value (same units as width) or falsy
 #}
 <div class="progress {{ extra_container_class }}">
+  {% set relative_change_percent = change * 100 / width if change and width else 0 %}
+  {# djlint:off H021 #}
   <div class="progress-bar main-bar"
        style="width: {{ width }}%;
-              {%- if change and width -%} {# compute the relative change percentage safely #} {%- set rel = (change * 100 / width) -%} background: linear-gradient(to left, #94cf96 {{ rel }}%, #4caf50 {{ rel }}%);
-              {%- else -%} background-color: #4caf50;
-              {%- endif -%}">
+              --progress-change: {{ relative_change_percent }}%">
+    {# djlint:on #}
     {{ kind }}: {{ '{:.2f}%'.format(width) }}
     {% if change >= 0.01 %}
       ({{ '{:+.2f}%'.format(change) }})
