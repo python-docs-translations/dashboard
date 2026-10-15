@@ -43,7 +43,7 @@ class testContributeLink(unittest.TestCase):
                     if isinstance(e.reason, urllib3.exceptions.ReadTimeoutError):
                         self.skipTest(f'{link}: read timeout, skipping slow server')
                     self.fail(f'{link}: {e}')
-                except Exception as e:
+                except urllib3.exceptions.HTTPError as e:
                     self.fail(f'{link}: {e}')
 
 

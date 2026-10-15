@@ -2,7 +2,7 @@ import concurrent.futures
 import itertools
 import logging
 from collections.abc import Iterator, Sequence
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from json import loads
 from pathlib import Path
 from sys import argv
@@ -17,7 +17,8 @@ import sphinx_lint
 from generate import LanguageProjectData
 from repositories import Language
 
-generation_time = datetime.now(timezone.utc)
+logger = logging.getLogger('pydocs-translation-dashboard')
+generation_time = datetime.now(UTC)
 
 
 def get_projects_build_details(
@@ -54,7 +55,7 @@ def get_language_repo_and_completion(
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
-    logging.info(f'starting at {generation_time}')
+    logger.info('starting at %s', generation_time)
     env = Environment(loader=FileSystemLoader('templates'))
     if (index_path := Path('build/index.json')).exists():
         index_json = loads(Path('build/index.json').read_text())
@@ -70,7 +71,7 @@ if __name__ == '__main__':
             completion_progress, get_projects_build_details(completion_progress)
         ),
         generation_time=generation_time,
-        duration=(datetime.now(timezone.utc) - generation_time).seconds,
+        duration=(datetime.now(UTC) - generation_time).seconds,
     )
 
     Path('build/build-details.html').write_text(output)

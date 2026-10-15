@@ -31,7 +31,7 @@ class testRepositories(unittest.TestCase):
         result = list(repositories.get_languages_and_repos(self.test_repo_path))
 
         for entry in result:
-            info, repo = entry
+            info, _repo = entry
             self.assertIsInstance(info, Language)
 
         self.assertIn(
