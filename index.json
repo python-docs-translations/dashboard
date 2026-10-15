@@ -350,11 +350,11 @@
       "name": "Traditional Chinese"
     },
     "repository": "python/python-docs-zh-tw",
-    "branch": "3.14",
-    "core_completion": 74.04994131692905,
-    "completion": 28.500805819602842,
-    "core_change": 0.0,
-    "change": 0.021062785587002253,
+    "branch": "3.15",
+    "core_completion": 95.26690679509491,
+    "completion": 30.431915946041176,
+    "core_change": 21.21696547816586,
+    "change": 1.9521729120253362,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
     "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
