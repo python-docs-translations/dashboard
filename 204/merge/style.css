@@ -220,6 +220,14 @@ ul.links-row li:not(:first-child)::before {
   height: 20px;
 }
 
+.progress-bar.main-bar {
+  background: linear-gradient(
+    to left,
+    #94cf96 var(--progress-change, 0%),
+    #4caf50 var(--progress-change, 0%)
+  );
+}
+
 .outer-label {
   display: none;
   padding-left: .5em;
