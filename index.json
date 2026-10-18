@@ -53,8 +53,8 @@
     "branch": "3.15",
     "core_completion": 99.84013922052694,
     "completion": 24.342482474411522,
-    "core_change": 23.264802298757544,
-    "change": 20.571793321239,
+    "core_change": 23.246590311222633,
+    "change": 20.551860064055187,
     "built": true,
     "translated_name": "Deutsch",
     "contribution_link": "https://github.com/sba72/python-docs-de"
@@ -140,7 +140,7 @@
       "name": "Japanese"
     },
     "repository": "python/python-docs-ja",
-    "branch": "3.14",
+    "branch": "3.15",
     "core_completion": 88.89878182038933,
     "completion": 37.910927456382005,
     "core_change": 0.0,
