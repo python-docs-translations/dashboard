@@ -1,6 +1,6 @@
 import unittest
-import support
 
+import support
 from urllib3 import PoolManager
 
 with support.import_scripts():

@@ -1,9 +1,9 @@
-import unittest
-import support
-import tempfile
 import shutil
-
+import tempfile
+import unittest
 from pathlib import Path
+
+import support
 from git import Repo
 
 with support.import_scripts():
@@ -31,7 +31,7 @@ class testRepositories(unittest.TestCase):
         result = list(repositories.get_languages_and_repos(self.test_repo_path))
 
         for entry in result:
-            info, repo = entry
+            info, _repo = entry
             self.assertIsInstance(info, Language)
 
         self.assertIn(
