@@ -11,7 +11,7 @@ library/shutil.rst:182: WARNING: inconsistent term references in translated mess
 library/ssl.rst:1809: WARNING: inconsistent term references in translated message. original: [':meth:`SSLSocket.selected_npn_protocol`'], translated: [':meth:`SSLSocket.selected_alpn_protocol`'] [i18n.inconsistent_references]
 library/multiprocessing.rst:2911: WARNING: inconsistent term references in translated message. original: [':meth:`Connection.recv <Connection.recv>`', ':class:`Listener`', ':func:`Client`', ':mod:`hmac`'], translated: [':meth:`Connection.recv <multiprocessing.Connection.recv>`', ':class:`Listener`', ':func:`Client`', ':mod:`hmac`'] [i18n.inconsistent_references]
 library/os.rst:318: WARNING: inconsistent term references in translated message. original: [':class:`str`', ':class:`bytes`', ':meth:`~os.PathLike.__fspath__`', ':class:`str`', ':class:`bytes`', ':exc:`TypeError`'], translated: [':class:`str`', ':class:`bytes:`', ':meth:`~os.PathLike.__fspath__`', ':class:`str`', ':class:`bytes`', ':exc:`TypeError`'] [i18n.inconsistent_references]
-library/pathlib.rst:1714: WARNING: inconsistent term references in translated message. original: [':exc:`FileNotFoundError`'], translated: [':exc:`FileExistsError`'] [i18n.inconsistent_references]
+library/pathlib.rst:1729: WARNING: inconsistent term references in translated message. original: [':exc:`FileNotFoundError`'], translated: [':exc:`FileExistsError`'] [i18n.inconsistent_references]
 library/hashlib.rst:107:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 library/hashlib.rst:107:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 library/hashlib.rst:107:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
