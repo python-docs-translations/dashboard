@@ -1,1 +1,1 @@
-build/NEWS:8322: WARNING: inconsistent term references in translated message. original: ['`~decimal.Decimal`'], translated: [':class:`~decimal.Decimal`'] [i18n.inconsistent_references]
+build/NEWS:8340: WARNING: inconsistent term references in translated message. original: ['`~decimal.Decimal`'], translated: [':class:`~decimal.Decimal`'] [i18n.inconsistent_references]
