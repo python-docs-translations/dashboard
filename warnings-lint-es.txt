@@ -10,7 +10,7 @@ library/re.po:2510: found an unbalanced inline literal markup. (unbalanced-inlin
 library/re.po:2510: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 library/re.po:2496: missing space before default role: ', o``None``'. (missing-space-before-default-role)
 library/re.po:2510: missing space before default role: ', o``None``'. (missing-space-before-default-role)
-library/gzip.po:352: Extra backtick in role: ':attr:`~GzipFile.name``' (role-with-extra-backtick)
+library/gzip.po:340: Extra backtick in role: ':attr:`~GzipFile.name``' (role-with-extra-backtick)
 library/decimal.po:2844: Extra backtick in role: ':const:`False``' (role-with-extra-backtick)
 library/concurrent.futures.po:921: Extra backtick in role: ':meth:`Future.running``' (role-with-extra-backtick)
 library/zoneinfo.po:473: Extra backtick in role: ':func:`repr``' (role-with-extra-backtick)
