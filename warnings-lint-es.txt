@@ -12,7 +12,7 @@ library/re.po:2496: missing space before default role: ', o``None``'. (missing-s
 library/re.po:2510: missing space before default role: ', o``None``'. (missing-space-before-default-role)
 library/gzip.po:340: Extra backtick in role: ':attr:`~GzipFile.name``' (role-with-extra-backtick)
 library/decimal.po:2844: Extra backtick in role: ':const:`False``' (role-with-extra-backtick)
-library/concurrent.futures.po:921: Extra backtick in role: ':meth:`Future.running``' (role-with-extra-backtick)
+library/concurrent.futures.po:917: Extra backtick in role: ':meth:`Future.running``' (role-with-extra-backtick)
 library/zoneinfo.po:473: Extra backtick in role: ':func:`repr``' (role-with-extra-backtick)
 library/winsound.po:43: Extra backtick in role: ':exc:`RuntimeError``' (role-with-extra-backtick)
 library/http.server.po:462: Extra backtick in role: ':func:`time.time``' (role-with-extra-backtick)
