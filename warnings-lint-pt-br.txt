@@ -1,4 +1,1 @@
-builtins/functions.po:948: role missing (escaped) space after role: ':exc:`ValueError`S' (missing-space-after-role)
-builtins/functions.po:948: role missing (escaped) space after role: ':exc:`MemoryError`o' (missing-space-after-role)
-builtins/functions.po:948: role missing (escaped) space after role: ':exc:`RecursionError`s' (missing-space-after-role)
-builtins/functions.po:948: role missing (escaped) space after role: ':exc:`OverflowError`s' (missing-space-after-role)
+c-api/pyexpat.po:120: missing backtick before hyperlink reference: 'Expat <https://libexpat.github.io/doc/api/latest/>`_'. (hyperlink-reference-missing-backtick)
