@@ -1,1 +1,1 @@
-build/NEWS:8672: WARNING: inconsistent cross-references in translated message. original: ['`~decimal.Decimal`'], translated: [':class:`~decimal.Decimal`'] [i18n.inconsistent_references]
+build/NEWS:8675: WARNING: inconsistent cross-references in translated message. original: ['`~decimal.Decimal`'], translated: [':class:`~decimal.Decimal`'] [i18n.inconsistent_references]
