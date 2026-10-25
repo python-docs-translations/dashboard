@@ -1,1 +1,0 @@
-c-api/pyexpat.po:151: missing backtick before hyperlink reference: 'Expat <https://libexpat.github.io/doc/api/latest/>`_'. (hyperlink-reference-missing-backtick)
