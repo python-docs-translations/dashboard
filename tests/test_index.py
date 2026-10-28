@@ -35,6 +35,15 @@ class testIndex(unittest.TestCase):
         self.assertIn(
             'Measured against the Python 3.15 documentation (prerelease).', index
         )
+        self.assertIn(
+            '<a class="nav-link"\n'
+            '                   href="https://discuss.python.org/c/documentation/translations/"\n'
+            '                   target="_blank"\n'
+            '                   rel="noopener noreferrer">',
+            index,
+        )
+        self.assertIn('                  Get help\n', index)
+        self.assertIn('class="bi bi-box-arrow-up-right"', index)
 
     def test_orders_by_completion_score(self):
         env = Environment(loader=FileSystemLoader('templates'))
