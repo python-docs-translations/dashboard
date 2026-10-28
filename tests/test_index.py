@@ -42,8 +42,22 @@ class testIndex(unittest.TestCase):
             '                   rel="noopener noreferrer">',
             index,
         )
-        self.assertIn('                  Get help\n', index)
-        self.assertIn('class="bi bi-box-arrow-up-right"', index)
+        for href, label in (
+            (
+                'https://devguide.python.org/documentation/translations/translating/',
+                'Translating',
+            ),
+            (
+                'https://discuss.python.org/c/documentation/translations/',
+                'Get help',
+            ),
+        ):
+            link = index[index.index(href):index.index('</a>', index.index(href))]
+            self.assertLess(
+                link.index(label), link.index('class="bi bi-box-arrow-up-right"')
+            )
+            self.assertIn('width="14"', link)
+            self.assertIn('height="14"', link)
 
     def test_orders_by_completion_score(self):
         env = Environment(loader=FileSystemLoader('templates'))
