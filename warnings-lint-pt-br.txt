@@ -1,0 +1,1 @@
+library/tkinter.po:46: role missing (escaped) space after role: ':mod:`!tkinter`e' (missing-space-after-role)
