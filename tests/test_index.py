@@ -41,6 +41,10 @@ class testIndex(unittest.TestCase):
             link_end = index.index('</a>', link_start)
             return index[link_start:link_end]
 
+        build_details_link = link_for('build-details.html')
+        self.assertIn('Build details', build_details_link)
+        self.assertNotIn('<svg', build_details_link)
+
         for href, label in (
             (
                 'https://devguide.python.org/documentation/translations/translating/',
@@ -54,10 +58,10 @@ class testIndex(unittest.TestCase):
             link = link_for(href)
             self.assertIn('target="_blank"', link)
             self.assertLess(
-                link.index(label), link.index('class="bi bi-box-arrow-up-right"')
+                link.index(label), link.index('class="external-link-icon"')
             )
-            self.assertIn('width="12"', link)
-            self.assertIn('height="12"', link)
+            self.assertIn('viewBox="0 0 12 12"', link)
+            self.assertIn('stroke="currentColor"', link)
         self.assertIn(
             'rel="noopener noreferrer"',
             link_for('https://discuss.python.org/c/documentation/translations/'),

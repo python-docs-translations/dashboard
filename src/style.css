@@ -96,6 +96,13 @@ body {
   margin-top: -4.5px;
 }
 
+.nav-link .external-link-icon {
+  width: 0.75em;
+  height: 0.75em;
+  margin: 0 0 0 0.15em;
+  vertical-align: baseline;
+}
+
 .theme-toggle-btn {
   border: none;
   color: var(--navbar-link-color);
