@@ -1,3 +1,0 @@
-builtins/functions.po:2276: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-builtins/functions.po:2276: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
-builtins/functions.po:2276: missing space before default role: "默认为``'r'``". (missing-space-before-default-role)

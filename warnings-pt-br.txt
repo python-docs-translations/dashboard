@@ -1,2 +1,1 @@
 bugs.rst:40: WARNING: inconsistent named references in translated message. original: ['`Documentation bugs`_'], translated: ['`Bugs na documentação`_'] [i18n.inconsistent_references]
-library/pathlib.rst:310: WARNING: inconsistent cross-references in translated message. original: [':attr:`~PurePath.parent`', ':attr:`~PurePath.name`', ':attr:`~PurePath.stem`', ':attr:`~PurePath.suffix`'], translated: [] [i18n.inconsistent_references]

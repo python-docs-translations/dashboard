@@ -177,4 +177,3 @@ c-api/conversion.po:227: role missing (escaped) space after role: ':c:macro:`!IN
 c-api/conversion.po:64: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/conversion.po:64: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
 c-api/conversion.po:64: missing space before default role: "owy``'\\0'``". (missing-space-before-default-role)
-builtins/stdtypes.po:55: missing space before role ( funkcji:func:`). (missing-space-before-role)
