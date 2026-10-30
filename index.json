@@ -36,10 +36,10 @@
     },
     "repository": "python/python-docs-fr",
     "branch": "3.15",
-    "core_completion": 19.543051359516618,
-    "completion": 22.190103296106187,
-    "core_change": -15.769432645192396,
-    "change": 0.021522351381175753,
+    "core_completion": 28.199382531620355,
+    "completion": 22.260148766964925,
+    "core_change": -7.113101473088658,
+    "change": 0.091567822239913,
     "built": true,
     "translated_name": "fran\u00e7ais",
     "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst"
@@ -219,7 +219,7 @@
     "core_completion": 99.83010396019579,
     "completion": 5.686037528272544,
     "core_change": 0.40451438048623345,
-    "change": 0.1007357849061794,
+    "change": 0.09570458588200825,
     "built": true,
     "translated_name": "polski",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -294,7 +294,7 @@
     "core_completion": 99.6885239270256,
     "completion": 93.66555272193457,
     "core_change": 23.022935965373563,
-    "change": 7.004323477028109,
+    "change": 7.001304757613596,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
