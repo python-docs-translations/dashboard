@@ -1,2 +1,1 @@
 library/pathlib.po:651: superfluous backtick in front of role (backtick-before-role)
-library/tkinter.po:46: role missing (escaped) space after role: ':mod:`!tkinter`e' (missing-space-after-role)
