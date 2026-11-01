@@ -1,2 +1,0 @@
-library/tkinter.po:908: missing backtick before hyperlink reference: 'Oficial <https://www.tcl-lang.org/man/tcl9.0/TkCmd/index.html>`_'. (hyperlink-reference-missing-backtick)
-library/tkinter.po:847: role missing (escaped) space after role: ':meth:`~Misc.keys`p' (missing-space-after-role)
