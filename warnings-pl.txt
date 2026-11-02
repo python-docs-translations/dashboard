@@ -1,5 +1,3 @@
-faq/programming.rst:22: WARNING: inconsistent cross-references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [':mod:`pdb`', ':mod:`udokumentowany <pdb>`', ':mod:`pdb`'] [i18n.inconsistent_references]
-faq/programming.rst:302: WARNING: inconsistent cross-references in translated message. original: [':mod:`sys`', ':mod:`os`', ':mod:`argparse`', ':mod:`re`'], translated: [] [i18n.inconsistent_references]
 c-api/init_config.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 c-api/init_config.rst:92:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init_config.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -12,6 +10,8 @@ c-api/init_config.rst:83: WARNING: inconsistent cross-references in translated m
 c-api/init_config.rst:92:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init_config.rst:654: WARNING: inconsistent cross-references in translated message. original: [':c:func:`Py_RunMain`'], translated: [] [i18n.inconsistent_references]
 c-api/init_config.rst:657: WARNING: inconsistent cross-references in translated message. original: [':ref:`Initialization, Finalization, and Threads <initialization>`'], translated: [] [i18n.inconsistent_references]
+faq/programming.rst:22: WARNING: inconsistent cross-references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [':mod:`pdb`', ':mod:`udokumentowany <pdb>`', ':mod:`pdb`'] [i18n.inconsistent_references]
+faq/programming.rst:302: WARNING: inconsistent cross-references in translated message. original: [':mod:`sys`', ':mod:`os`', ':mod:`argparse`', ':mod:`re`'], translated: [] [i18n.inconsistent_references]
 c-api/typeobj.rst:162:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
 c-api/typeobj.rst:122: WARNING: inconsistent cross-references in translated message. original: [':c:member:`~PyTypeObject.tp_init`'], translated: [] [i18n.inconsistent_references]
 c-api/typeobj.rst:162:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
@@ -399,155 +399,104 @@ whatsnew/3.14.rst:123:<translated>:1: WARNING: Inline interpreted text or phrase
 deprecations/c-api-pending-removal-in-3.15.rst:123: WARNING: inconsistent cross-references in translated message. original: [':c:member:`PyConfig.filesystem_errors`', ':c:func:`PyConfig_Get("filesystem_errors") <PyConfig_Get>`'], translated: [':c:member:`PyConfig.filesystem_errors`'] [i18n.inconsistent_references]
 deprecations/c-api-pending-removal-in-3.15.rst:126: WARNING: inconsistent cross-references in translated message. original: [':c:member:`PyPreConfig.utf8_mode`', ':c:func:`PyConfig_Get("utf8_mode") <PyConfig_Get>`', ':c:func:`Py_PreInitialize`'], translated: [':c:member:`PyPreConfig.utf8_mode`', ':c:func:`PyConfig_Get("utf8_mode") <PyConfig_Get>`'] [i18n.inconsistent_references]
 deprecations/c-api-pending-removal-in-3.15.rst:131: WARNING: inconsistent cross-references in translated message. original: [':c:func:`Py_InitializeFromConfig`', ':c:type:`PyConfig`', ':c:func:`PyConfig_Get`'], translated: [] [i18n.inconsistent_references]
-c-api/extension-modules.rst:64:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_mod_create`z :c:macro:`Py_mod_exec'
-Invalid C declaration: Expected end of definition. [error at 13]
-  Py_mod_create`z :c:macro:`Py_mod_exec
-  -------------^
-c-api/extension-modules.rst:153:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_mod_gil`i :c:data:`Py_mod_multiple_interpreters'
-Invalid C declaration: Expected end of definition. [error at 10]
-  Py_mod_gil`i :c:data:`Py_mod_multiple_interpreters
-  ----------^
-c-api/init_config.rst:31:<translated>:1: WARNING: undefined label: 'tryb deweloperski python' [ref.ref]
-c-api/init_config.rst:80:<translated>:1: WARNING: undefined label: 'izolowana konfiguracja' [ref.ref]
-c-api/typeobj.rst:538:<translated>:1: WARNING: undefined label: 'statycznie przydzielanych' [ref.ref]
-c-api/typeobj.rst:538:<translated>:1: WARNING: undefined label: 'dynamicznie przydzielanych' [ref.ref]
-c-api/typeobj.rst:570:<translated>:1: WARNING: undefined label: 'obiektów typu przydzielanych dynamicznie' [ref.ref]
-c-api/typeobj.rst:575:<translated>:1: WARNING: undefined label: 'statycznie alokowanych' [ref.ref]
-deprecations/c-api-pending-removal-in-3.15.rst:25:<translated>:1: WARNING: Unparseable C cross-reference: 'Py Config Pobierz("prefix") <PyConfig_Get> ` (:data:`sys.prefix'
-Invalid C declaration: Expected end of definition. [error at 3]
-  Py Config Pobierz("prefix") <PyConfig_Get> ` (:data:`sys.prefix
-  ---^
-deprecations/c-api-pending-removal-in-3.15.rst:63:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_InitializeFromConfig`API należy używać z :c:type:`PyConfig'
-Invalid C declaration: Expected end of definition. [error at 23]
-  Py_InitializeFromConfig`API należy używać z :c:type:`PyConfig
-  -----------------------^
-deprecations/c-api-pending-removal-in-3.15.rst:68:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("parser_debug") <PyConfig_Get> Zamiast.'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("parser_debug") <PyConfig_Get> Zamiast.
-  ------------^
-deprecations/c-api-pending-removal-in-3.15.rst:117:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio'
-Invalid C declaration: Expected end of definition. [error at 25]
-  Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio
-  -------------------------^
-deprecations/index.rst:22:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path
-  ------------^
-deprecations/index.rst:25:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix
-  ------------^
-deprecations/index.rst:30:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix
-  ------------^
-deprecations/index.rst:36:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable
-  ------------^
-deprecations/index.rst:39:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig Get("executable") <PyConfig_Get> ` (:data:`sys.executable'
-Invalid C declaration: Expected end of definition. [error at 9]
-  PyConfig Get("executable") <PyConfig_Get> ` (:data:`sys.executable
-  ---------^
-deprecations/index.rst:63:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_InitializeFromConfig`API należy używać z :c:type:`PyConfig'
-Invalid C declaration: Expected end of definition. [error at 23]
-  Py_InitializeFromConfig`API należy używać z :c:type:`PyConfig
-  -----------------------^
-deprecations/index.rst:68:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("parser_debug") <PyConfig_Get> Zamiast.'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("parser_debug") <PyConfig_Get> Zamiast.
-  ------------^
-deprecations/index.rst:77:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("interactive")'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("interactive")
-  ------------^
-deprecations/index.rst:117:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio'
-Invalid C declaration: Expected end of definition. [error at 25]
-  Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio
-  -------------------------^
-faq/programming.rst:456: WARNING: inconsistent glossary references in translated message. original: [':term:`mutable`'], translated: [':term:`mutowalny`'] [i18n.inconsistent_references]
-faq/programming.rst:456:<translated>:1: WARNING: term not in glossary: 'mutowalny' [ref.term]
-whatsnew/3.12.rst:22:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path
-  ------------^
-whatsnew/3.12.rst:25:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix
-  ------------^
-whatsnew/3.12.rst:30:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix
-  ------------^
-whatsnew/3.12.rst:36:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable
-  ------------^
-whatsnew/3.12.rst:39:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig Get("executable") <PyConfig_Get> ` (:data:`sys.executable'
-Invalid C declaration: Expected end of definition. [error at 9]
-  PyConfig Get("executable") <PyConfig_Get> ` (:data:`sys.executable
-  ---------^
-whatsnew/3.12.rst:63:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_InitializeFromConfig`API należy używać z :c:type:`PyConfig'
-Invalid C declaration: Expected end of definition. [error at 23]
-  Py_InitializeFromConfig`API należy używać z :c:type:`PyConfig
-  -----------------------^
-whatsnew/3.12.rst:68:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("parser_debug") <PyConfig_Get> Zamiast.'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("parser_debug") <PyConfig_Get> Zamiast.
-  ------------^
-whatsnew/3.12.rst:77:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("interactive")'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("interactive")
-  ------------^
-whatsnew/3.12.rst:117:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio'
-Invalid C declaration: Expected end of definition. [error at 25]
-  Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio
-  -------------------------^
-whatsnew/3.13.rst:22:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("module_search_paths") <PyConfig_Get> ( :data:`sys.path
-  ------------^
-whatsnew/3.13.rst:25:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("prefix") <PyConfig_Get> ` (:data:`sys.prefix
-  ------------^
-whatsnew/3.13.rst:30:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("exec_prefix") <PyConfig_Get> ` ( :data:`sys.exec_prefix
-  ------------^
-whatsnew/3.13.rst:36:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable
-  ------------^
-whatsnew/3.13.rst:39:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig Get("executable") <PyConfig_Get> ` (:data:`sys.executable'
-Invalid C declaration: Expected end of definition. [error at 9]
-  PyConfig Get("executable") <PyConfig_Get> ` (:data:`sys.executable
-  ---------^
-whatsnew/3.13.rst:63:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_InitializeFromConfig`API należy używać z :c:type:`PyConfig'
-Invalid C declaration: Expected end of definition. [error at 23]
-  Py_InitializeFromConfig`API należy używać z :c:type:`PyConfig
-  -----------------------^
-whatsnew/3.13.rst:68:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("parser_debug") <PyConfig_Get> Zamiast.'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("parser_debug") <PyConfig_Get> Zamiast.
-  ------------^
-whatsnew/3.13.rst:77:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("interactive")'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("interactive")
-  ------------^
-whatsnew/3.13.rst:117:<translated>:1: WARNING: Unparseable C cross-reference: 'Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio'
-Invalid C declaration: Expected end of definition. [error at 25]
-  Py_LegacyWindowsStdioFlag`używać :c:member:`PyConfig.legacy_windows_stdio
-  -------------------------^
-whatsnew/3.14.rst:36:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("executable") <PyConfig_Get> ` ( :data:`sys.executable
-  ------------^
-whatsnew/3.14.rst:39:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig Get("executable") <PyConfig_Get> ` (:data:`sys.executable'
-Invalid C declaration: Expected end of definition. [error at 9]
-  PyConfig Get("executable") <PyConfig_Get> ` (:data:`sys.executable
-  ---------^
-whatsnew/3.14.rst:77:<translated>:1: WARNING: Unparseable C cross-reference: 'PyConfig_Get("interactive")'
-Invalid C declaration: Expected end of definition. [error at 12]
-  PyConfig_Get("interactive")
-  ------------^
+
+
+Versions
+========
+
+* Platform:         linux; (Linux-7.0.0-1017-azure-x86_64-with-glibc2.43)
+* Python version:   3.15.1 (CPython)
+* Sphinx version:   9.3.0
+* Docutils version: 0.23
+* Jinja2 version:   3.1.6
+* Pygments version: 2.21.0
+
+Last Messages
+=============
+
+
+    looking for now-outdated files...
+    none found
+    pickling environment...
+    done
+    checking consistency...
+    /home/runner/work/dashboard/dashboard/clones/cpython/Doc/howto/argparse.rst: document is referenced in multiple toctrees: ['howto/index', 'library/argparse'], selecting: library/argparse <- howto/argparse
+    done
+    preparing documents...
+    failed
+
+Loaded Extensions
+=================
+
+* sphinx.ext.mathjax (9.3.0)
+* alabaster (1.0.0)
+* sphinxcontrib.applehelp (2.0.0)
+* sphinxcontrib.devhelp (2.0.0)
+* sphinxcontrib.htmlhelp (2.1.0)
+* sphinxcontrib.serializinghtml (2.0.0)
+* sphinxcontrib.qthelp (2.0.0)
+* audit_events (2.0)
+* availability (1.0)
+* c_annotations (1.0)
+* changes (1.0)
+* glossary_search (1.0)
+* grammar_snippet (1.0)
+* implementation_detail (1.0)
+* issue_role (1.0)
+* lexers (1.0)
+* misc_news (1.0)
+* profiling_trace (1.0)
+* pydoc_topics (1.0)
+* pyspecific (1.0)
+* sphinx.ext.coverage (9.3.0)
+* sphinx.ext.doctest (9.3.0)
+* sphinx.ext.extlinks (9.3.0)
+* python_docs_theme (2026.9.1)
+
+Traceback
+=========
+
+    Traceback (most recent call last):
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/cmd/build.py", line 432, in build_main
+        app.build(args.force_all, args.filenames)
+        ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/application.py", line 442, in build
+        self.builder.build_update()
+        ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 381, in build_update
+        self.build(
+        ~~~~~~~~~~^
+            to_build,
+            ^^^^^^^^^
+        ...<2 lines>...
+            method='update',
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 460, in build
+        self.write(docnames, updated_docnames, method)
+        ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 742, in write
+        self.prepare_writing(docnames)
+        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/html/__init__.py", line 434, in prepare_writing
+        self.indexer = IndexBuilder(
+                       ~~~~~~~~~~~~^
+            self.env,
+            ^^^^^^^^^
+        ...<2 lines>...
+            self.config.html_search_scorer,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/search/__init__.py", line 315, in __init__
+        with open(scoring, 'rb') as fp:
+             ~~~~^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: 'tools/static/search_scorer.js'
+
+
+The full traceback has been saved in:
+/tmp/sphinx-err-6zqn5v1_.log
+
+To report this error to the developers, please open an issue at <https://github.com/sphinx-doc/sphinx/issues/>. Thanks!
+Please also report this if it was a user error, so that a better error message can be provided next time.

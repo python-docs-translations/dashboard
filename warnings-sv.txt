@@ -16,38 +16,104 @@ glossary.rst:1063: WARNING: inconsistent cross-references in translated message.
 glossary.rst:1133: WARNING: inconsistent cross-references in translated message. original: [':keyword:`nonlocal`'], translated: [] [i18n.inconsistent_references]
 tutorial/controlflow.rst:94:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 tutorial/controlflow.rst:513: WARNING: inconsistent footnote references in translated message. original: ['[#]_'], translated: [] [i18n.inconsistent_references]
-glossary.rst:89: WARNING: inconsistent cross-references in translated message. original: [':term:`parameter`', ':ref:`the difference between arguments and parameters\n<faq-argument-vs-parameter>`'], translated: [':term:`parameter`'] [i18n.inconsistent_references]
-glossary.rst:204: WARNING: inconsistent glossary references in translated message. original: [':term:`strong reference`'], translated: [] [i18n.inconsistent_references]
-glossary.rst:234: WARNING: inconsistent glossary references in translated message. original: [':term:`virtual machine`'], translated: [':term:`virtuell maskin`'] [i18n.inconsistent_references]
-glossary.rst:330: WARNING: inconsistent cross-references in translated message. original: [':class:`contextvars.Context`', ':term:`current\ncontext`'], translated: [':class:`contextvars.Context`', ':term:`aktuellt sammanhang`'] [i18n.inconsistent_references]
-glossary.rst:343: WARNING: inconsistent cross-references in translated message. original: [':term:`current\ncontext`', ':class:`contextvars.ContextVar`'], translated: [':term:`aktuell kontext`', ':class:`contextvars.ContextVar`'] [i18n.inconsistent_references]
-glossary.rst:381: WARNING: inconsistent cross-references in translated message. original: [':term:`context`', ':class:`contextvars.Context`', ':class:`~contextvars.ContextVar`', ':term:`context variables <context variable>`', ':mod:`asyncio`'], translated: [':term:`kontext`', ':class:`contextvars.Context`', ':class:`~contextvars.ContextVar`', ':term:`kontextvariabler <context variable>`', ':mod:`asyncio`'] [i18n.inconsistent_references]
-glossary.rst:389: WARNING: inconsistent glossary references in translated message. original: [':term:`cyclic garbage collector <garbage collection>`'], translated: [] [i18n.inconsistent_references]
-glossary.rst:565: WARNING: inconsistent cross-references in translated message. original: [':term:`filesystem encoding and error handler`', ':c:func:`PyConfig_Read`', ':c:member:`~PyConfig.filesystem_encoding`', ':c:member:`~PyConfig.filesystem_errors`', ':c:type:`PyConfig`'], translated: [':term:`filsystemets kodning och felhantering`', ':c:func:`PyConfig_Read`', ':c:member:`~PyConfig.filesystem_encoding`', ':c:member:`~PyConfig.filesystem_errors`', ':c:type:`PyConfig`'] [i18n.inconsistent_references]
-glossary.rst:603: WARNING: inconsistent cross-references in translated message. original: [':ref:`language execution model <bind_names>`', ':term:`closure variable`', ':attr:`codeobject.co_freevars`', ':term:`closure variable`'], translated: [':term:`closure variable`', ':attr:`codeobject.co_freevars`', ':term:`closure variable`'] [i18n.inconsistent_references]
-glossary.rst:703: WARNING: inconsistent cross-references in translated message. original: [':term:`type`', ':ref:`container class<sequence-types>`', ':class:`list`', ':class:`dict`', ':term:`type hints <type hint>`', ':term:`annotations <annotation>`'], translated: [':term:`typ`', ':ref:`container class<sequence-types>`', ':class:`list`', ':class:`dict`', ':term:`type hints <type hint>`', ':term:`annotations <annotation>`'] [i18n.inconsistent_references]
-glossary.rst:778: WARNING: inconsistent cross-references in translated message. original: [':term:`reference count`', ':const:`True`', ':const:`None`'], translated: [':term:`referensantal`', ':const:`True`', ':const:`None`'] [i18n.inconsistent_references]
-glossary.rst:1005: WARNING: inconsistent glossary references in translated message. original: [':term:`filesystem encoding and error handler`'], translated: [':term:`filsystemets kodning och felhantering`'] [i18n.inconsistent_references]
-glossary.rst:1010: WARNING: inconsistent glossary references in translated message. original: [':term:`special method`'], translated: [':term:`specialmetod`'] [i18n.inconsistent_references]
-glossary.rst:1021: WARNING: inconsistent cross-references in translated message. original: [':term:`finder`', ':data:`sys.meta_path`', ':term:`path entry finders\n<path entry finder>`'], translated: [':term:`finner`', ':data:`sys.meta_path`', ':term:`path entry finders <path entry finder>`'] [i18n.inconsistent_references]
-glossary.rst:1066: WARNING: inconsistent glossary references in translated message. original: [':term:`method resolution order`'], translated: [':term:`Metodbeslutsordning`'] [i18n.inconsistent_references]
-glossary.rst:1113: WARNING: inconsistent glossary references in translated message. original: [':term:`package`', ':term:`regular package`'], translated: [':term:`paket`', ':term:`vanligt paket`'] [i18n.inconsistent_references]
-glossary.rst:1118: WARNING: inconsistent glossary references in translated message. original: [':term:`regular package`'], translated: [':term:`vanlig paket`'] [i18n.inconsistent_references]
-glossary.rst:1198: WARNING: inconsistent glossary references in translated message. original: [':term:`function`', ':term:`argument`'], translated: [':term:`funktions`', ':term:`argument`'] [i18n.inconsistent_references]
-glossary.rst:234:<translated>:1: WARNING: term not in glossary: 'virtuell maskin' [ref.term]
-glossary.rst:330:<translated>:1: WARNING: term not in glossary: 'aktuellt sammanhang' [ref.term]
-glossary.rst:343:<translated>:1: WARNING: term not in glossary: 'aktuell kontext' [ref.term]
-glossary.rst:381:<translated>:1: WARNING: term not in glossary: 'kontext' [ref.term]
-glossary.rst:458:<translated>:1: WARNING: undefined label: 'förståelse' [ref.ref]
-glossary.rst:565:<translated>:1: WARNING: term not in glossary: 'filsystemets kodning och felhantering' [ref.term]
-glossary.rst:703:<translated>:1: WARNING: term not in glossary: 'typ' [ref.term]
-glossary.rst:778:<translated>:1: WARNING: term not in glossary: 'referensantal' [ref.term]
-glossary.rst:991:<translated>:1: WARNING: undefined label: 'sökare-och-laddare' [ref.ref]
-glossary.rst:1005:<translated>:1: WARNING: term not in glossary: 'filsystemets kodning och felhantering' [ref.term]
-glossary.rst:1010:<translated>:1: WARNING: term not in glossary: 'specialmetod' [ref.term]
-glossary.rst:1021:<translated>:1: WARNING: term not in glossary: 'finner' [ref.term]
-glossary.rst:1063:<translated>:1: WARNING: undefined label: 'modul-specs' [ref.ref]
-glossary.rst:1066:<translated>:1: WARNING: term not in glossary: 'Metodbeslutsordning' [ref.term]
-glossary.rst:1113:<translated>:1: WARNING: term not in glossary: 'vanligt paket' [ref.term]
-glossary.rst:1118:<translated>:1: WARNING: term not in glossary: 'vanlig paket' [ref.term]
-glossary.rst:1198:<translated>:1: WARNING: term not in glossary: 'funktions' [ref.term]
+
+
+Versions
+========
+
+* Platform:         linux; (Linux-7.0.0-1017-azure-x86_64-with-glibc2.43)
+* Python version:   3.15.1 (CPython)
+* Sphinx version:   9.3.0
+* Docutils version: 0.23
+* Jinja2 version:   3.1.6
+* Pygments version: 2.21.0
+
+Last Messages
+=============
+
+
+    looking for now-outdated files...
+    none found
+    pickling environment...
+    done
+    checking consistency...
+    /home/runner/work/dashboard/dashboard/clones/cpython/Doc/howto/argparse.rst: document is referenced in multiple toctrees: ['howto/index', 'library/argparse'], selecting: library/argparse <- howto/argparse
+    done
+    preparing documents...
+    failed
+
+Loaded Extensions
+=================
+
+* sphinx.ext.mathjax (9.3.0)
+* alabaster (1.0.0)
+* sphinxcontrib.applehelp (2.0.0)
+* sphinxcontrib.devhelp (2.0.0)
+* sphinxcontrib.htmlhelp (2.1.0)
+* sphinxcontrib.serializinghtml (2.0.0)
+* sphinxcontrib.qthelp (2.0.0)
+* audit_events (2.0)
+* availability (1.0)
+* c_annotations (1.0)
+* changes (1.0)
+* glossary_search (1.0)
+* grammar_snippet (1.0)
+* implementation_detail (1.0)
+* issue_role (1.0)
+* lexers (1.0)
+* misc_news (1.0)
+* profiling_trace (1.0)
+* pydoc_topics (1.0)
+* pyspecific (1.0)
+* sphinx.ext.coverage (9.3.0)
+* sphinx.ext.doctest (9.3.0)
+* sphinx.ext.extlinks (9.3.0)
+* python_docs_theme (2026.9.1)
+
+Traceback
+=========
+
+    Traceback (most recent call last):
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/cmd/build.py", line 432, in build_main
+        app.build(args.force_all, args.filenames)
+        ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/application.py", line 442, in build
+        self.builder.build_update()
+        ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 381, in build_update
+        self.build(
+        ~~~~~~~~~~^
+            to_build,
+            ^^^^^^^^^
+        ...<2 lines>...
+            method='update',
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 460, in build
+        self.write(docnames, updated_docnames, method)
+        ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 742, in write
+        self.prepare_writing(docnames)
+        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/html/__init__.py", line 434, in prepare_writing
+        self.indexer = IndexBuilder(
+                       ~~~~~~~~~~~~^
+            self.env,
+            ^^^^^^^^^
+        ...<2 lines>...
+            self.config.html_search_scorer,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/search/__init__.py", line 315, in __init__
+        with open(scoring, 'rb') as fp:
+             ~~~~^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: 'tools/static/search_scorer.js'
+
+
+The full traceback has been saved in:
+/tmp/sphinx-err-uvusrue9.log
+
+To report this error to the developers, please open an issue at <https://github.com/sphinx-doc/sphinx/issues/>. Thanks!
+Please also report this if it was a user error, so that a better error message can be provided next time.

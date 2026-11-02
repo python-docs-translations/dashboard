@@ -2,25 +2,126 @@ library/test.rst:1874: WARNING: inconsistent cross-references in translated mess
 library/array.rst:74: WARNING: inconsistent named references in translated message. original: ['`IEEE 754 standard <ieee 754 standard_>`_'], translated: [] [i18n.inconsistent_references]
 whatsnew/3.10.rst:1093: WARNING: inconsistent cross-references in translated message. original: [':class:`~enum.Enum`', ':func:`~object.__repr__`', ':func:`~object.__str__`', ':func:`repr`'], translated: [':func:`~object.__repr__`', ':class:`~enum.Enum`', ':func:`~object.__str__`', ':func:`repr`ی برابر با ``module_name.member_name``'] [i18n.inconsistent_references]
 whatsnew/3.4.rst:1696: WARNING: inconsistent cross-references in translated message. original: [':meth:`~unittest.TestCase.assertLogs`', ':mod:`logging`', ':class:`~logging.LogRecord`'], translated: [':meth:`~unittest.TestCase.assertLogs`', ':mod:`logging`', ':class:`~logging.LogRecord`ها و/یا پیام\u200cهای قالب\u200cبندی\u200cشده\u200cای را که ثبت شده\u200cاند، پرس\u200cوجو کرد. (مشارکت\u200cشده توسط آنتوان پی\u200cترو در :issue:`18937`'] [i18n.inconsistent_references]
-build/NEWS:4637: WARNING: inconsistent cross-references in translated message. original: [':c:macro:`Py_LIMITED_API`', ':c:macro:`Py_GIL_DISABLED`'], translated: [':c:macro:`Py_LIMITED_API`', '`free-threaded build`', ':c:macro:`Py_GIL_DISABLED`'] [i18n.inconsistent_references]
-build/NEWS:15418: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`sys.stdout.shell`'] [i18n.inconsistent_references]
-build/NEWS:34798: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`co_code`', '`co_linetable`', '`co_consts`'] [i18n.inconsistent_references]
-build/NEWS:35735: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`f_lineno`'] [i18n.inconsistent_references]
-build/NEWS:50788: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`register`'] [i18n.inconsistent_references]
-build/NEWS:51330: WARNING: inconsistent cross-references in translated message. original: [], translated: ["`int('')`"] [i18n.inconsistent_references]
-build/NEWS:51401: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`create_font_tab`', '`set_samples`', '`var_changed_font`', '`test_font_set`', '`test_indent_scale`', '`set_samples`'] [i18n.inconsistent_references]
-build/NEWS:52994: WARNING: inconsistent cross-references in translated message. original: [], translated: ["`int('')`"] [i18n.inconsistent_references]
-build/NEWS:53065: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`create_font_tab`', '`set_samples`', '`var_changed_font`', '`test_font_set`', '`test_indent_scale`', '`set_samples`'] [i18n.inconsistent_references]
-build/NEWS:53428: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`__int__`'] [i18n.inconsistent_references]
-build/NEWS:53471: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`Py_LIMITED_API`'] [i18n.inconsistent_references]
-build/NEWS:57348: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`__int__`'] [i18n.inconsistent_references]
-build/NEWS:59695: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`__ne__`', '`__eq__`'] [i18n.inconsistent_references]
-build/NEWS:59705: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`chunk.Chunk.read()`'] [i18n.inconsistent_references]
-build/NEWS:59712: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`SMTP.auth()`', '`SMTP.login()`'] [i18n.inconsistent_references]
-build/NEWS:59715: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`inspect.getsource()`', '`async def`'] [i18n.inconsistent_references]
-build/NEWS:59718: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`ast.get_docstring()`', '`async def`'] [i18n.inconsistent_references]
-build/NEWS:59743: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`types.CoroutineType`', '`inspect.getcoroutinestate`', '`inspect.getcoroutinelocals`', '`sys.set_coroutine_wrapper`', '`async def`', '`inspect.iscoroutine`', '`collections.abc.Coroutine`', '`async def`', '`GET_YIELD_FROM_ITER`', '`types.coroutine`', '`collections.abc.Generator`', '`collections.abc.Awaitable`', '`collections.abc.Coroutine`', '`inspect.isawaitable`'] [i18n.inconsistent_references]
-build/NEWS:59754: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`gi_yieldfrom`', '`cr_await`'] [i18n.inconsistent_references]
-build/NEWS:59762: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`mock_open.read_data`'] [i18n.inconsistent_references]
-build/NEWS:59840: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`startswith`', '`endswith`', '`str`'] [i18n.inconsistent_references]
-build/NEWS:60408: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`__sizeof__`'] [i18n.inconsistent_references]
+build/NEWS:4649: WARNING: inconsistent cross-references in translated message. original: [':c:macro:`Py_LIMITED_API`', ':c:macro:`Py_GIL_DISABLED`'], translated: [':c:macro:`Py_LIMITED_API`', '`free-threaded build`', ':c:macro:`Py_GIL_DISABLED`'] [i18n.inconsistent_references]
+build/NEWS:15430: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`sys.stdout.shell`'] [i18n.inconsistent_references]
+build/NEWS:34810: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`co_code`', '`co_linetable`', '`co_consts`'] [i18n.inconsistent_references]
+build/NEWS:35747: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`f_lineno`'] [i18n.inconsistent_references]
+build/NEWS:50800: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`register`'] [i18n.inconsistent_references]
+build/NEWS:51342: WARNING: inconsistent cross-references in translated message. original: [], translated: ["`int('')`"] [i18n.inconsistent_references]
+build/NEWS:51413: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`create_font_tab`', '`set_samples`', '`var_changed_font`', '`test_font_set`', '`test_indent_scale`', '`set_samples`'] [i18n.inconsistent_references]
+build/NEWS:53006: WARNING: inconsistent cross-references in translated message. original: [], translated: ["`int('')`"] [i18n.inconsistent_references]
+build/NEWS:53077: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`create_font_tab`', '`set_samples`', '`var_changed_font`', '`test_font_set`', '`test_indent_scale`', '`set_samples`'] [i18n.inconsistent_references]
+build/NEWS:53440: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`__int__`'] [i18n.inconsistent_references]
+build/NEWS:53483: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`Py_LIMITED_API`'] [i18n.inconsistent_references]
+build/NEWS:57360: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`__int__`'] [i18n.inconsistent_references]
+build/NEWS:59707: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`__ne__`', '`__eq__`'] [i18n.inconsistent_references]
+build/NEWS:59717: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`chunk.Chunk.read()`'] [i18n.inconsistent_references]
+build/NEWS:59724: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`SMTP.auth()`', '`SMTP.login()`'] [i18n.inconsistent_references]
+build/NEWS:59727: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`inspect.getsource()`', '`async def`'] [i18n.inconsistent_references]
+build/NEWS:59730: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`ast.get_docstring()`', '`async def`'] [i18n.inconsistent_references]
+build/NEWS:59755: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`types.CoroutineType`', '`inspect.getcoroutinestate`', '`inspect.getcoroutinelocals`', '`sys.set_coroutine_wrapper`', '`async def`', '`inspect.iscoroutine`', '`collections.abc.Coroutine`', '`async def`', '`GET_YIELD_FROM_ITER`', '`types.coroutine`', '`collections.abc.Generator`', '`collections.abc.Awaitable`', '`collections.abc.Coroutine`', '`inspect.isawaitable`'] [i18n.inconsistent_references]
+build/NEWS:59766: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`gi_yieldfrom`', '`cr_await`'] [i18n.inconsistent_references]
+build/NEWS:59774: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`mock_open.read_data`'] [i18n.inconsistent_references]
+build/NEWS:59852: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`startswith`', '`endswith`', '`str`'] [i18n.inconsistent_references]
+build/NEWS:60420: WARNING: inconsistent cross-references in translated message. original: [], translated: ['`__sizeof__`'] [i18n.inconsistent_references]
+
+
+Versions
+========
+
+* Platform:         linux; (Linux-7.0.0-1017-azure-x86_64-with-glibc2.43)
+* Python version:   3.15.1 (CPython)
+* Sphinx version:   9.3.0
+* Docutils version: 0.23
+* Jinja2 version:   3.1.6
+* Pygments version: 2.21.0
+
+Last Messages
+=============
+
+
+    looking for now-outdated files...
+    none found
+    pickling environment...
+    done
+    checking consistency...
+    /home/runner/work/dashboard/dashboard/clones/cpython/Doc/howto/argparse.rst: document is referenced in multiple toctrees: ['howto/index', 'library/argparse'], selecting: library/argparse <- howto/argparse
+    done
+    preparing documents...
+    failed
+
+Loaded Extensions
+=================
+
+* sphinx.ext.mathjax (9.3.0)
+* alabaster (1.0.0)
+* sphinxcontrib.applehelp (2.0.0)
+* sphinxcontrib.devhelp (2.0.0)
+* sphinxcontrib.htmlhelp (2.1.0)
+* sphinxcontrib.serializinghtml (2.0.0)
+* sphinxcontrib.qthelp (2.0.0)
+* audit_events (2.0)
+* availability (1.0)
+* c_annotations (1.0)
+* changes (1.0)
+* glossary_search (1.0)
+* grammar_snippet (1.0)
+* implementation_detail (1.0)
+* issue_role (1.0)
+* lexers (1.0)
+* misc_news (1.0)
+* profiling_trace (1.0)
+* pydoc_topics (1.0)
+* pyspecific (1.0)
+* sphinx.ext.coverage (9.3.0)
+* sphinx.ext.doctest (9.3.0)
+* sphinx.ext.extlinks (9.3.0)
+* python_docs_theme (2026.9.1)
+
+Traceback
+=========
+
+    Traceback (most recent call last):
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/cmd/build.py", line 432, in build_main
+        app.build(args.force_all, args.filenames)
+        ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/application.py", line 442, in build
+        self.builder.build_update()
+        ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 381, in build_update
+        self.build(
+        ~~~~~~~~~~^
+            to_build,
+            ^^^^^^^^^
+        ...<2 lines>...
+            method='update',
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 460, in build
+        self.write(docnames, updated_docnames, method)
+        ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 742, in write
+        self.prepare_writing(docnames)
+        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/html/__init__.py", line 434, in prepare_writing
+        self.indexer = IndexBuilder(
+                       ~~~~~~~~~~~~^
+            self.env,
+            ^^^^^^^^^
+        ...<2 lines>...
+            self.config.html_search_scorer,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/search/__init__.py", line 315, in __init__
+        with open(scoring, 'rb') as fp:
+             ~~~~^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: 'tools/static/search_scorer.js'
+
+
+The full traceback has been saved in:
+/tmp/sphinx-err-k6wg2e7a.log
+
+To report this error to the developers, please open an issue at <https://github.com/sphinx-doc/sphinx/issues/>. Thanks!
+Please also report this if it was a user error, so that a better error message can be provided next time.
