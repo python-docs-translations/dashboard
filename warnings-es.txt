@@ -147,8 +147,8 @@ library/asyncio-llapi-index.rst:314: WARNING: inconsistent cross-references in t
 library/concurrent.futures.rst:395: WARNING: inconsistent cross-references in translated message. original: [':exc:`~concurrent.futures.process.BrokenProcessPool`'], translated: [':exc:`~concurrent.futures.thread.BrokenProcessPool`'] [i18n.inconsistent_references]
 library/concurrent.futures.rst:603: WARNING: inconsistent cross-references in translated message. original: [':class:`Future`', ':meth:`Future.running`'], translated: [':class:`Future`', ':meth:`Future.running``'] [i18n.inconsistent_references]
 library/ctypes.rst:691: WARNING: inconsistent cross-references in translated message. original: [':func:`GetLastError`'], translated: [':func:`GetLastError``'] [i18n.inconsistent_references]
-library/ctypes.rst:1185: WARNING: inconsistent cross-references in translated message. original: [':func:`CFUNCTYPE`', ':func:`WINFUNCTYPE`'], translated: [':func:`CFUNCTYPE``', ':func:`WINFUNCTYPE`'] [i18n.inconsistent_references]
-library/ctypes.rst:2505: WARNING: inconsistent cross-references in translated message. original: [':func:`addressof`', ':attr:`_objects`'], translated: [':func:`addressof`', ':attr:`_objetos`'] [i18n.inconsistent_references]
+library/ctypes.rst:1184: WARNING: inconsistent cross-references in translated message. original: [':func:`CFUNCTYPE`', ':func:`WINFUNCTYPE`'], translated: [':func:`CFUNCTYPE``', ':func:`WINFUNCTYPE`'] [i18n.inconsistent_references]
+library/ctypes.rst:2500: WARNING: inconsistent cross-references in translated message. original: [':func:`addressof`', ':attr:`_objects`'], translated: [':func:`addressof`', ':attr:`_objetos`'] [i18n.inconsistent_references]
 library/decimal.rst:713: WARNING: inconsistent cross-references in translated message. original: [':meth:`logical_and`', ':ref:`logical_operands_label`'], translated: [':meth:`logic_and`', ':ref:`logical_operands_label`'] [i18n.inconsistent_references]
 library/decimal.rst:719: WARNING: inconsistent cross-references in translated message. original: [':meth:`logical_invert`'], translated: [':meth:`logic_invert`'] [i18n.inconsistent_references]
 library/decimal.rst:730: WARNING: inconsistent cross-references in translated message. original: [':meth:`logical_xor`', ':ref:`logical_operands_label`'], translated: [':meth:`logic_xor`', ':ref:`logical_operands_label`'] [i18n.inconsistent_references]
@@ -253,7 +253,7 @@ Traceback
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-7e94dzgg.log
+/tmp/sphinx-err-lmrmc3fs.log
 
 To report this error to the developers, please open an issue at <https://github.com/sphinx-doc/sphinx/issues/>. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.

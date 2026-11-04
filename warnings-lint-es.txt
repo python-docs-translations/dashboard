@@ -25,6 +25,6 @@ library/gettext.po:988: Extra backtick in role: ':func:`!N_``' (role-with-extra-
 library/http.server.po:462: Extra backtick in role: ':func:`time.time``' (role-with-extra-backtick)
 library/sys_path_init.po:198: Extra backtick in role: ':data:`sys.path``' (role-with-extra-backtick)
 library/zoneinfo.po:473: Extra backtick in role: ':func:`repr``' (role-with-extra-backtick)
-library/ctypes.po:974: Extra backtick in role: ':func:`GetLastError``' (role-with-extra-backtick)
-library/ctypes.po:1645: Extra backtick in role: ':func:`CFUNCTYPE``' (role-with-extra-backtick)
+library/ctypes.po:956: Extra backtick in role: ':func:`GetLastError``' (role-with-extra-backtick)
+library/ctypes.po:1598: Extra backtick in role: ':func:`CFUNCTYPE``' (role-with-extra-backtick)
 library/gzip.po:340: Extra backtick in role: ':attr:`~GzipFile.name``' (role-with-extra-backtick)
