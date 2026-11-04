@@ -1,14 +1,6 @@
 bugs.rst:40: WARNING: inconsistent named references in translated message. original: ['`Documentation bugs`_'], translated: ['`Bogues de documentation`_'] [i18n.inconsistent_references]
 c-api/bool.rst:22: WARNING: inconsistent cross-references in translated message. original: [':c:data:`PyBool_Type`'], translated: [':c:data:`PyBook_Type`'] [i18n.inconsistent_references]
 c-api/frame.rst:17: WARNING: inconsistent cross-references in translated message. original: [':c:func:`PyEval_GetFrame`', ':c:func:`PyThreadState_GetFrame`'], translated: [':func:`PyEval_GetFrame`', ':c:func:`PyThreadState_GetFrame`'] [i18n.inconsistent_references]
-extending/embedding.rst:32: WARNING: inconsistent cross-references in translated message. original: [':c:func:`PyRun_SimpleString`', ':c:func:`PyRun_SimpleFile`'], translated: [':c:func:`PyRun_SimpleString`', ':c:func:`PyRunSimpleFile`'] [i18n.inconsistent_references]
-faq/design.rst:593: WARNING: inconsistent cross-references in translated message. original: [':mod:`doctest`', ':mod:`unittest`'], translated: [':mod:`doctest`', ':mod:`UnitTest`'] [i18n.inconsistent_references]
-faq/extending.rst:48: WARNING: inconsistent cross-references in translated message. original: [':c:func:`PyRun_SimpleString`', ':exc:`SyntaxError`', ':c:func:`PyRun_String`', ':c:func:`PyRun_SimpleString`'], translated: [':c:func:`PyRun_SimpleStringString`', ':exc:`SyntaxError`', ':c:func:`PyRun_String`', ':c:func:`PyRun_SimpleString`'] [i18n.inconsistent_references]
-faq/programming.rst:480: WARNING: inconsistent cross-references in translated message. original: [':func:`sorted(y) <sorted>`'], translated: [':func:`sorted(y)`'] [i18n.inconsistent_references]
-faq/programming.rst:1551: WARNING: inconsistent cross-references in translated message. original: [':func:`isinstance`'], translated: [':func:`isInstance`'] [i18n.inconsistent_references]
-howto/curses.rst:119: WARNING: inconsistent cross-references in translated message. original: [':func:`~curses.endwin`'], translated: [':func:`~curses.enddwin`'] [i18n.inconsistent_references]
-howto/enum.rst:743: WARNING: inconsistent cross-references in translated message. original: [':class:`IntFlag`'], translated: [':class:`Intflag`'] [i18n.inconsistent_references]
-howto/index.rst:66: WARNING: inconsistent cross-references in translated message. original: [':ref:`python_2.3_mro`'], translated: [':ref:`isolating-extensions-howto`'] [i18n.inconsistent_references]
 library/turtle.rst:2196: WARNING: inconsistent cross-references in translated message. original: [':class:`Screen`'], translated: [':class:`screen`'] [i18n.inconsistent_references]
 library/unittest.rst:1158: WARNING: inconsistent cross-references in translated message. original: [':class:`logging.Logger`', ':class:`str`'], translated: [':class:`logging.logger`', ':class:`str`'] [i18n.inconsistent_references]
 library/unittest.rst:1287: WARNING: inconsistent cross-references in translated message. original: [':meth:`assertAlmostEqual`', ':meth:`assertNotAlmostEqual`'], translated: [':meth:`assertAlmostEqual`', ':meth:`assertNotNotAlmostEqual`'] [i18n.inconsistent_references]
@@ -19,6 +11,14 @@ library/unittest.rst:2582: WARNING: inconsistent cross-references in translated 
 library/unittest.rst:2600: WARNING: inconsistent cross-references in translated message. original: [':func:`tearDownModule`', ':func:`setUpModule`', ':func:`setUpModule`'], translated: [':meth:`tearDownModule`', ':meth:`setUpModule`', ':meth:`setUpModule`'] [i18n.inconsistent_references]
 library/unittest.rst:2608: WARNING: inconsistent cross-references in translated message. original: [':func:`doModuleCleanups`'], translated: [':meth:`doModuleCleanups`'] [i18n.inconsistent_references]
 library/xml.sax.rst:137: WARNING: inconsistent cross-references in translated message. original: [':exc:`SAXException`', ':class:`~xml.sax.xmlreader.XMLReader`'], translated: [':exc:`SAXException`', ':class:`~xml.sax.xmlreader. XMLReader`'] [i18n.inconsistent_references]
+extending/embedding.rst:32: WARNING: inconsistent cross-references in translated message. original: [':c:func:`PyRun_SimpleString`', ':c:func:`PyRun_SimpleFile`'], translated: [':c:func:`PyRun_SimpleString`', ':c:func:`PyRunSimpleFile`'] [i18n.inconsistent_references]
+faq/design.rst:593: WARNING: inconsistent cross-references in translated message. original: [':mod:`doctest`', ':mod:`unittest`'], translated: [':mod:`doctest`', ':mod:`UnitTest`'] [i18n.inconsistent_references]
+faq/extending.rst:48: WARNING: inconsistent cross-references in translated message. original: [':c:func:`PyRun_SimpleString`', ':exc:`SyntaxError`', ':c:func:`PyRun_String`', ':c:func:`PyRun_SimpleString`'], translated: [':c:func:`PyRun_SimpleStringString`', ':exc:`SyntaxError`', ':c:func:`PyRun_String`', ':c:func:`PyRun_SimpleString`'] [i18n.inconsistent_references]
+faq/programming.rst:480: WARNING: inconsistent cross-references in translated message. original: [':func:`sorted(y) <sorted>`'], translated: [':func:`sorted(y)`'] [i18n.inconsistent_references]
+faq/programming.rst:1551: WARNING: inconsistent cross-references in translated message. original: [':func:`isinstance`'], translated: [':func:`isInstance`'] [i18n.inconsistent_references]
+howto/curses.rst:119: WARNING: inconsistent cross-references in translated message. original: [':func:`~curses.endwin`'], translated: [':func:`~curses.enddwin`'] [i18n.inconsistent_references]
+howto/enum.rst:743: WARNING: inconsistent cross-references in translated message. original: [':class:`IntFlag`'], translated: [':class:`Intflag`'] [i18n.inconsistent_references]
+howto/index.rst:66: WARNING: inconsistent cross-references in translated message. original: [':ref:`python_2.3_mro`'], translated: [':ref:`isolating-extensions-howto`'] [i18n.inconsistent_references]
 library/zoneinfo.rst:60: WARNING: inconsistent cross-references in translated message. original: [':attr:`~datetime.datetime.fold`'], translated: [':attr:`~datetime.dateime.fold`'] [i18n.inconsistent_references]
 reference/compound_stmts.rst:886: WARNING: inconsistent cross-references in translated message. original: [':token:`~python-grammar:wildcard_pattern`'], translated: [':token:`~python-grammar:wilcard_pattern`'] [i18n.inconsistent_references]
 reference/compound_stmts.rst:1059: WARNING: inconsistent cross-references in translated message. original: [':exc:`SyntaxError`', ':exc:`ValueError`'], translated: [':exc:`Syntax Error`', ':exc:`ValueError`'] [i18n.inconsistent_references]
@@ -72,8 +72,8 @@ library/asyncio-policy.rst:131: WARNING: inconsistent cross-references in transl
 Versions
 ========
 
-* Platform:         linux; (Linux-7.0.0-1017-azure-x86_64-with-glibc2.43)
-* Python version:   3.15.1 (CPython)
+* Platform:         linux; (Linux-7.0.0-1019-azure-x86_64-with-glibc2.43)
+* Python version:   3.15.2 (CPython)
 * Sphinx version:   9.3.0
 * Docutils version: 0.23
 * Jinja2 version:   3.1.6
@@ -125,13 +125,13 @@ Traceback
 =========
 
     Traceback (most recent call last):
-      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/cmd/build.py", line 432, in build_main
+      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/cmd/build.py", line 432, in build_main
         app.build(args.force_all, args.filenames)
         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/application.py", line 442, in build
+      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/application.py", line 442, in build
         self.builder.build_update()
         ~~~~~~~~~~~~~~~~~~~~~~~~~^^
-      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 381, in build_update
+      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 381, in build_update
         self.build(
         ~~~~~~~~~~^
             to_build,
@@ -141,13 +141,13 @@ Traceback
             ^^^^^^^^^^^^^^^^
         )
         ^
-      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 460, in build
+      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 460, in build
         self.write(docnames, updated_docnames, method)
         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 742, in write
+      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 742, in write
         self.prepare_writing(docnames)
         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/html/__init__.py", line 434, in prepare_writing
+      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/builders/html/__init__.py", line 434, in prepare_writing
         self.indexer = IndexBuilder(
                        ~~~~~~~~~~~~^
             self.env,
@@ -157,14 +157,14 @@ Traceback
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         )
         ^
-      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/search/__init__.py", line 315, in __init__
+      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/search/__init__.py", line 315, in __init__
         with open(scoring, 'rb') as fp:
              ~~~~^^^^^^^^^^^^^^^
     FileNotFoundError: [Errno 2] No such file or directory: 'tools/static/search_scorer.js'
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-dquv_p3i.log
+/tmp/sphinx-err-x1fgwzey.log
 
 To report this error to the developers, please open an issue at <https://github.com/sphinx-doc/sphinx/issues/>. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.
