@@ -23,7 +23,7 @@ library/zoneinfo.rst:60: WARNING: inconsistent cross-references in translated me
 reference/compound_stmts.rst:886: WARNING: inconsistent cross-references in translated message. original: [':token:`~python-grammar:wildcard_pattern`'], translated: [':token:`~python-grammar:wilcard_pattern`'] [i18n.inconsistent_references]
 reference/compound_stmts.rst:1059: WARNING: inconsistent cross-references in translated message. original: [':exc:`SyntaxError`', ':exc:`ValueError`'], translated: [':exc:`Syntax Error`', ':exc:`ValueError`'] [i18n.inconsistent_references]
 reference/datamodel.rst:1903: WARNING: inconsistent cross-references in translated message. original: [':attr:`~slice.start`', ':attr:`~slice.stop`', ':attr:`~slice.step`'], translated: [':attr:`~decoupe.start`', ':attr:`~decoupe.stop`', ':attr:`~decoupe.step`'] [i18n.inconsistent_references]
-reference/expressions.rst:2126: WARNING: inconsistent cross-references in translated message. original: [':ref:`typesnumeric`', ':class:`fractions.Fraction`', ':class:`decimal.Decimal`'], translated: [':ref:`typesnumeric`', ':class:`fractions.Fraction`', ':class:`decimal.decimal`'] [i18n.inconsistent_references]
+reference/expressions.rst:2125: WARNING: inconsistent cross-references in translated message. original: [':ref:`typesnumeric`', ':class:`fractions.Fraction`', ':class:`decimal.Decimal`'], translated: [':ref:`typesnumeric`', ':class:`fractions.Fraction`', ':class:`decimal.decimal`'] [i18n.inconsistent_references]
 tutorial/classes.rst:826: WARNING: inconsistent cross-references in translated message. original: [':meth:`~container.__iter__`', ':meth:`~iterator.__next__`'], translated: [':meth:`~container.__iter__`', ':meth:`~iterator.!__next__`'] [i18n.inconsistent_references]
 tutorial/introduction.rst:422: WARNING: inconsistent cross-references in translated message. original: [':meth:`list.append`'], translated: [] [i18n.inconsistent_references]
 library/sys.rst:384: WARNING: inconsistent cross-references in translated message. original: [':option:`-B`', ':envvar:`PYTHONDONTWRITEBYTECODE`'], translated: [':option:`-B`', ':envvar:`PYTHONDONDONTWRITEBYTECODE`'] [i18n.inconsistent_references]
@@ -49,18 +49,18 @@ library/idle.rst:662: WARNING: inconsistent cross-references in translated messa
 library/inspect.rst:854: WARNING: inconsistent cross-references in translated message. original: [':func:`functools.partial`'], translated: [':func:`functools.partials`'] [i18n.inconsistent_references]
 library/inspect.rst:914: WARNING: inconsistent cross-references in translated message. original: [':class:`Parameter`'], translated: [':class:`Parameters`'] [i18n.inconsistent_references]
 library/logging.rst:322: WARNING: inconsistent cross-references in translated message. original: [':ref:`logrecord-attributes`'], translated: [':class:`Formatter`'] [i18n.inconsistent_references]
-library/asyncio-queue.rst:148: WARNING: inconsistent cross-references in translated message. original: [':meth:`join`', ':meth:`task_done`', ':meth:`~Queue.put`'], translated: [':meth:`join`', ':meth:`task_done`', ':meth:`put`'] [i18n.inconsistent_references]
-library/collections.rst:426: WARNING: inconsistent cross-references in translated message. original: [':meth:`~Counter.update`', ':meth:`~Counter.subtract`'], translated: [':meth:`~Counter.update`', ':meth:`~Cointer.substract`'] [i18n.inconsistent_references]
-library/collections.rst:709: WARNING: inconsistent cross-references in translated message. original: [':meth:`~deque.rotate`', ':class:`deque`'], translated: [':meth:`~deque.rotate`', ':class:`deques`'] [i18n.inconsistent_references]
-library/collections.rst:756: WARNING: inconsistent cross-references in translated message. original: [':attr:`default_factory`'], translated: [':attr:`default_fatory`'] [i18n.inconsistent_references]
-library/collections.rst:1087: WARNING: inconsistent cross-references in translated message. original: [':class:`typing.NamedTuple`', ':keyword:`class`'], translated: [':meth:`typing.NamedTuple`', ':keyword:`class`'] [i18n.inconsistent_references]
-library/collections.rst:1377: WARNING: inconsistent cross-references in translated message. original: [':attr:`data`', ':class:`UserList`', ':class:`UserList`'], translated: [':class:`UserList`', ':attr:`UserList`', ':class:`UserList`'] [i18n.inconsistent_references]
 library/configparser.rst:34: WARNING: inconsistent cross-references in translated message. original: [':mod:`tomllib`'], translated: [':mod:`tomlib`'] [i18n.inconsistent_references]
 library/configparser.rst:387: WARNING: inconsistent cross-references in translated message. original: [':class:`ConfigParser`'], translated: [':class:`Configparser`'] [i18n.inconsistent_references]
 library/configparser.rst:715: WARNING: inconsistent cross-references in translated message. original: [':class:`RawConfigParser`'], translated: [':class:`RowConfigParser`'] [i18n.inconsistent_references]
 library/datetime.rst:1508: WARNING: inconsistent cross-references in translated message. original: [':meth:`datetime.utctimetuple`', ':meth:`.datetime.timetuple`'], translated: [':meth:`datetime.utcfromtimetuple`', ':meth:`.datetime.timetuple`'] [i18n.inconsistent_references]
 library/doctest.rst:1456: WARNING: inconsistent cross-references in translated message. original: [':class:`DocTestParser`'], translated: [':class:`DocTestFinder`'] [i18n.inconsistent_references]
 library/doctest.rst:1861: WARNING: inconsistent cross-references in translated message. original: [':class:`DocTestRunner`', ':ref:`doctest-advanced-api`'], translated: [':class:`DocTestrunner`', ':reF:`doctest-advanced-api`'] [i18n.inconsistent_references]
+library/asyncio-queue.rst:148: WARNING: inconsistent cross-references in translated message. original: [':meth:`join`', ':meth:`task_done`', ':meth:`~Queue.put`'], translated: [':meth:`join`', ':meth:`task_done`', ':meth:`put`'] [i18n.inconsistent_references]
+library/collections.rst:426: WARNING: inconsistent cross-references in translated message. original: [':meth:`~Counter.update`', ':meth:`~Counter.subtract`'], translated: [':meth:`~Counter.update`', ':meth:`~Cointer.substract`'] [i18n.inconsistent_references]
+library/collections.rst:709: WARNING: inconsistent cross-references in translated message. original: [':meth:`~deque.rotate`', ':class:`deque`'], translated: [':meth:`~deque.rotate`', ':class:`deques`'] [i18n.inconsistent_references]
+library/collections.rst:756: WARNING: inconsistent cross-references in translated message. original: [':attr:`default_factory`'], translated: [':attr:`default_fatory`'] [i18n.inconsistent_references]
+library/collections.rst:1087: WARNING: inconsistent cross-references in translated message. original: [':class:`typing.NamedTuple`', ':keyword:`class`'], translated: [':meth:`typing.NamedTuple`', ':keyword:`class`'] [i18n.inconsistent_references]
+library/collections.rst:1377: WARNING: inconsistent cross-references in translated message. original: [':attr:`data`', ':class:`UserList`', ':class:`UserList`'], translated: [':class:`UserList`', ':attr:`UserList`', ':class:`UserList`'] [i18n.inconsistent_references]
 howto/regex.rst:1089: WARNING: inconsistent cross-references in translated message. original: [':meth:`~re.Pattern.split`', ':meth:`~str.split`', ':func:`re.split`'], translated: [':meth:`~re.Pattern.Pattern.split`', ':meth:`~str.split`', ':func:`re.split`'] [i18n.inconsistent_references]
 howto/regex.rst:1167: WARNING: inconsistent cross-references in translated message. original: [':meth:`~re.Pattern.subn`'], translated: [':meth:`~re.Pattern.subn.subn`'] [i18n.inconsistent_references]
 library/argparse.rst:1180: WARNING: inconsistent cross-references in translated message. original: [':class:`list`', ':class:`tuple`'], translated: [':class:`list`', ':class:`set`'] [i18n.inconsistent_references]
@@ -164,7 +164,7 @@ Traceback
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-3csbwhkc.log
+/tmp/sphinx-err-ohxzdu2f.log
 
 To report this error to the developers, please open an issue at <https://github.com/sphinx-doc/sphinx/issues/>. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.
