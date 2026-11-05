@@ -32,6 +32,10 @@ library/time.rst:332: WARNING: inconsistent cross-references in translated messa
 library/tkinter.rst:3416: WARNING: inconsistent cross-references in translated message. original: [':func:`tkinter.Tcl() <Tcl>`'], translated: [':func:`tkinter.*Tcl*() <*Tcl*>`'] [i18n.inconsistent_references]
 library/tkinter.rst:6525: WARNING: inconsistent cross-references in translated message. original: [':class:`~io.BufferedIOBase`', ':class:`~io.TextIOBase`', ':meth:`~io.BufferedIOBase.read`', ':meth:`~io.IOBase.readline`', ':meth:`~socket.socket.recv`', ':meth:`~socket.socket.recvfrom`'], translated: [':class:`~io.BufferedIOBase`', ':class:`~io.TextIOBase`', ':meth:`~io.BufferedIOBase.read`', ':meth:`~io.IOBase.readline`', ':meth:`~socket.socket.socket.recv`', ':meth:`~socket.socket.recvfrom`'] [i18n.inconsistent_references]
 library/tokenize.rst:181: WARNING: inconsistent cross-references in translated message. original: [':func:`detect_encoding`'], translated: [':func:`dectect_encoding`'] [i18n.inconsistent_references]
+library/idle.rst:662: WARNING: inconsistent cross-references in translated message. original: [':envvar:`IDLESTARTUP`', ':envvar:`PYTHONSTARTUP`'], translated: [':envvar:`IDLE*STARTUP`', ':envvar:`PYTHONSTARTUP`'] [i18n.inconsistent_references]
+library/inspect.rst:854: WARNING: inconsistent cross-references in translated message. original: [':func:`functools.partial`'], translated: [':func:`functools.partials`'] [i18n.inconsistent_references]
+library/inspect.rst:914: WARNING: inconsistent cross-references in translated message. original: [':class:`Parameter`'], translated: [':class:`Parameters`'] [i18n.inconsistent_references]
+library/logging.rst:322: WARNING: inconsistent cross-references in translated message. original: [':ref:`logrecord-attributes`'], translated: [':class:`Formatter`'] [i18n.inconsistent_references]
 library/email.generator.rst:130: WARNING: inconsistent cross-references in translated message. original: [':class:`~email.message.EmailMessage`', ':meth:`~email.message.EmailMessage.as_bytes`', ':meth:`~email.message.EmailMessage.__bytes__`', ':mod:`email.message`'], translated: [':class:`~email.message.EmailMessage`', ':meth:`~email.message.EmailMessage.as_bytes`', ':meth:`~email.message .EmailMessage.__bytes__`', ':mod:`email.message`'] [i18n.inconsistent_references]
 library/email.generator.rst:228: WARNING: inconsistent cross-references in translated message. original: [':class:`~email.message.EmailMessage`', ':meth:`~email.message.EmailMessage.as_string`', ':meth:`~email.message.EmailMessage.__str__`', ':mod:`email.message`'], translated: [':class:`~email.message.EmailMessage`', ':meth:`~email.message.EmailMessage.as_string`', ':meth:`~email.message .EmailMessage.__str__`', ':mod:`email.message`'] [i18n.inconsistent_references]
 library/email.parser.rst:11: WARNING: inconsistent cross-references in translated message. original: [':class:`~email.message.EmailMessage`', ':meth:`~email.message.EmailMessage.set_content`'], translated: [':class:`~email.message.message.EmailMessage`', ':meth:`~email.message.message.EmailMessage.set_content`'] [i18n.inconsistent_references]
@@ -45,22 +49,18 @@ library/os.rst:2434: WARNING: inconsistent cross-references in translated messag
 library/os.rst:3140: WARNING: inconsistent cross-references in translated message. original: [':class:`stat_result`'], translated: [':class:`stat.result`'] [i18n.inconsistent_references]
 library/os.rst:4331: WARNING: inconsistent cross-references in translated message. original: [':ref:`paths relative to directory descriptors\n<dir_fd>`', ':ref:`not following symlinks <follow_symlinks>`', ':func:`fwalk`'], translated: [':ref:`les chemins relatifs à des descripteurs de fichiers <dir_fd>`', ':ref:`le non-suivi des liens symboliques <follow_symlinks>`', ':func:`walk`'] [i18n.inconsistent_references]
 library/os.rst:4944: WARNING: inconsistent cross-references in translated message. original: [':func:`execve`', ':data:`os.supports_fd`', ':exc:`NotImplementedError`'], translated: [':func:`execve`', ':data:`os._supports_fd`', ':exc:`NotImplementedError`'] [i18n.inconsistent_references]
-library/idle.rst:662: WARNING: inconsistent cross-references in translated message. original: [':envvar:`IDLESTARTUP`', ':envvar:`PYTHONSTARTUP`'], translated: [':envvar:`IDLE*STARTUP`', ':envvar:`PYTHONSTARTUP`'] [i18n.inconsistent_references]
-library/inspect.rst:854: WARNING: inconsistent cross-references in translated message. original: [':func:`functools.partial`'], translated: [':func:`functools.partials`'] [i18n.inconsistent_references]
-library/inspect.rst:914: WARNING: inconsistent cross-references in translated message. original: [':class:`Parameter`'], translated: [':class:`Parameters`'] [i18n.inconsistent_references]
-library/logging.rst:322: WARNING: inconsistent cross-references in translated message. original: [':ref:`logrecord-attributes`'], translated: [':class:`Formatter`'] [i18n.inconsistent_references]
-library/configparser.rst:34: WARNING: inconsistent cross-references in translated message. original: [':mod:`tomllib`'], translated: [':mod:`tomlib`'] [i18n.inconsistent_references]
-library/configparser.rst:387: WARNING: inconsistent cross-references in translated message. original: [':class:`ConfigParser`'], translated: [':class:`Configparser`'] [i18n.inconsistent_references]
-library/configparser.rst:715: WARNING: inconsistent cross-references in translated message. original: [':class:`RawConfigParser`'], translated: [':class:`RowConfigParser`'] [i18n.inconsistent_references]
-library/datetime.rst:1508: WARNING: inconsistent cross-references in translated message. original: [':meth:`datetime.utctimetuple`', ':meth:`.datetime.timetuple`'], translated: [':meth:`datetime.utcfromtimetuple`', ':meth:`.datetime.timetuple`'] [i18n.inconsistent_references]
-library/doctest.rst:1456: WARNING: inconsistent cross-references in translated message. original: [':class:`DocTestParser`'], translated: [':class:`DocTestFinder`'] [i18n.inconsistent_references]
-library/doctest.rst:1861: WARNING: inconsistent cross-references in translated message. original: [':class:`DocTestRunner`', ':ref:`doctest-advanced-api`'], translated: [':class:`DocTestrunner`', ':reF:`doctest-advanced-api`'] [i18n.inconsistent_references]
 library/asyncio-queue.rst:148: WARNING: inconsistent cross-references in translated message. original: [':meth:`join`', ':meth:`task_done`', ':meth:`~Queue.put`'], translated: [':meth:`join`', ':meth:`task_done`', ':meth:`put`'] [i18n.inconsistent_references]
 library/collections.rst:426: WARNING: inconsistent cross-references in translated message. original: [':meth:`~Counter.update`', ':meth:`~Counter.subtract`'], translated: [':meth:`~Counter.update`', ':meth:`~Cointer.substract`'] [i18n.inconsistent_references]
 library/collections.rst:709: WARNING: inconsistent cross-references in translated message. original: [':meth:`~deque.rotate`', ':class:`deque`'], translated: [':meth:`~deque.rotate`', ':class:`deques`'] [i18n.inconsistent_references]
 library/collections.rst:756: WARNING: inconsistent cross-references in translated message. original: [':attr:`default_factory`'], translated: [':attr:`default_fatory`'] [i18n.inconsistent_references]
 library/collections.rst:1087: WARNING: inconsistent cross-references in translated message. original: [':class:`typing.NamedTuple`', ':keyword:`class`'], translated: [':meth:`typing.NamedTuple`', ':keyword:`class`'] [i18n.inconsistent_references]
 library/collections.rst:1377: WARNING: inconsistent cross-references in translated message. original: [':attr:`data`', ':class:`UserList`', ':class:`UserList`'], translated: [':class:`UserList`', ':attr:`UserList`', ':class:`UserList`'] [i18n.inconsistent_references]
+library/configparser.rst:34: WARNING: inconsistent cross-references in translated message. original: [':mod:`tomllib`'], translated: [':mod:`tomlib`'] [i18n.inconsistent_references]
+library/configparser.rst:387: WARNING: inconsistent cross-references in translated message. original: [':class:`ConfigParser`'], translated: [':class:`Configparser`'] [i18n.inconsistent_references]
+library/configparser.rst:715: WARNING: inconsistent cross-references in translated message. original: [':class:`RawConfigParser`'], translated: [':class:`RowConfigParser`'] [i18n.inconsistent_references]
+library/datetime.rst:1508: WARNING: inconsistent cross-references in translated message. original: [':meth:`datetime.utctimetuple`', ':meth:`.datetime.timetuple`'], translated: [':meth:`datetime.utcfromtimetuple`', ':meth:`.datetime.timetuple`'] [i18n.inconsistent_references]
+library/doctest.rst:1456: WARNING: inconsistent cross-references in translated message. original: [':class:`DocTestParser`'], translated: [':class:`DocTestFinder`'] [i18n.inconsistent_references]
+library/doctest.rst:1861: WARNING: inconsistent cross-references in translated message. original: [':class:`DocTestRunner`', ':ref:`doctest-advanced-api`'], translated: [':class:`DocTestrunner`', ':reF:`doctest-advanced-api`'] [i18n.inconsistent_references]
 howto/regex.rst:1089: WARNING: inconsistent cross-references in translated message. original: [':meth:`~re.Pattern.split`', ':meth:`~str.split`', ':func:`re.split`'], translated: [':meth:`~re.Pattern.Pattern.split`', ':meth:`~str.split`', ':func:`re.split`'] [i18n.inconsistent_references]
 howto/regex.rst:1167: WARNING: inconsistent cross-references in translated message. original: [':meth:`~re.Pattern.subn`'], translated: [':meth:`~re.Pattern.subn.subn`'] [i18n.inconsistent_references]
 library/argparse.rst:1180: WARNING: inconsistent cross-references in translated message. original: [':class:`list`', ':class:`tuple`'], translated: [':class:`list`', ':class:`set`'] [i18n.inconsistent_references]
@@ -72,8 +72,8 @@ library/asyncio-policy.rst:131: WARNING: inconsistent cross-references in transl
 Versions
 ========
 
-* Platform:         linux; (Linux-7.0.0-1019-azure-x86_64-with-glibc2.43)
-* Python version:   3.15.2 (CPython)
+* Platform:         linux; (Linux-7.0.0-1017-azure-x86_64-with-glibc2.43)
+* Python version:   3.15.1 (CPython)
 * Sphinx version:   9.3.0
 * Docutils version: 0.23
 * Jinja2 version:   3.1.6
@@ -125,13 +125,13 @@ Traceback
 =========
 
     Traceback (most recent call last):
-      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/cmd/build.py", line 432, in build_main
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/cmd/build.py", line 432, in build_main
         app.build(args.force_all, args.filenames)
         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/application.py", line 442, in build
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/application.py", line 442, in build
         self.builder.build_update()
         ~~~~~~~~~~~~~~~~~~~~~~~~~^^
-      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 381, in build_update
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 381, in build_update
         self.build(
         ~~~~~~~~~~^
             to_build,
@@ -141,13 +141,13 @@ Traceback
             ^^^^^^^^^^^^^^^^
         )
         ^
-      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 460, in build
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 460, in build
         self.write(docnames, updated_docnames, method)
         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 742, in write
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/__init__.py", line 742, in write
         self.prepare_writing(docnames)
         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/builders/html/__init__.py", line 434, in prepare_writing
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/builders/html/__init__.py", line 434, in prepare_writing
         self.indexer = IndexBuilder(
                        ~~~~~~~~~~~~^
             self.env,
@@ -157,14 +157,14 @@ Traceback
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         )
         ^
-      File "/opt/hostedtoolcache/Python/3.15.2/x64/lib/python3.15/site-packages/sphinx/search/__init__.py", line 315, in __init__
+      File "/opt/hostedtoolcache/Python/3.15.1/x64/lib/python3.15/site-packages/sphinx/search/__init__.py", line 315, in __init__
         with open(scoring, 'rb') as fp:
              ~~~~^^^^^^^^^^^^^^^
     FileNotFoundError: [Errno 2] No such file or directory: 'tools/static/search_scorer.js'
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-ohxzdu2f.log
+/tmp/sphinx-err-lbv9rm1x.log
 
 To report this error to the developers, please open an issue at <https://github.com/sphinx-doc/sphinx/issues/>. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.
