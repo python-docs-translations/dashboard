@@ -1,5 +1,3 @@
-faq/programming.rst:22: WARNING: inconsistent cross-references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [':mod:`pdb`', ':mod:`udokumentowany <pdb>`', ':mod:`pdb`'] [i18n.inconsistent_references]
-faq/programming.rst:302: WARNING: inconsistent cross-references in translated message. original: [':mod:`sys`', ':mod:`os`', ':mod:`argparse`', ':mod:`re`'], translated: [] [i18n.inconsistent_references]
 c-api/init_config.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
 c-api/init_config.rst:92:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init_config.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string. [docutils]
@@ -12,6 +10,8 @@ c-api/init_config.rst:83: WARNING: inconsistent cross-references in translated m
 c-api/init_config.rst:92:<translated>:1: WARNING: Inline literal start-string without end-string. [docutils]
 c-api/init_config.rst:666: WARNING: inconsistent cross-references in translated message. original: [':c:func:`Py_RunMain`'], translated: [] [i18n.inconsistent_references]
 c-api/init_config.rst:669: WARNING: inconsistent cross-references in translated message. original: [':ref:`Initialization, Finalization, and Threads <initialization>`'], translated: [] [i18n.inconsistent_references]
+faq/programming.rst:22: WARNING: inconsistent cross-references in translated message. original: [':mod:`documented in the Library\nReference Manual <pdb>`'], translated: [':mod:`pdb`', ':mod:`udokumentowany <pdb>`', ':mod:`pdb`'] [i18n.inconsistent_references]
+faq/programming.rst:302: WARNING: inconsistent cross-references in translated message. original: [':mod:`sys`', ':mod:`os`', ':mod:`argparse`', ':mod:`re`'], translated: [] [i18n.inconsistent_references]
 c-api/typeobj.rst:162:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
 c-api/typeobj.rst:122: WARNING: inconsistent cross-references in translated message. original: [':c:member:`~PyTypeObject.tp_init`'], translated: [] [i18n.inconsistent_references]
 c-api/typeobj.rst:162:<translated>:1: WARNING: Inline strong start-string without end-string. [docutils]
@@ -496,7 +496,7 @@ Traceback
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-zn_z3mr3.log
+/tmp/sphinx-err-h248e5p0.log
 
 To report this error to the developers, please open an issue at <https://github.com/sphinx-doc/sphinx/issues/>. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.
