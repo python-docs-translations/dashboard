@@ -1,0 +1,6 @@
+whatsnew/changelog.po:1322: missing space before role ( 系统中:func:`). (missing-space-before-role)
+whatsnew/changelog.po:1322: missing space before role ( 及:meth:`). (missing-space-before-role)
+whatsnew/changelog.po:1322: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+whatsnew/changelog.po:1322: found an unbalanced inline literal markup. (unbalanced-inline-literals-delimiters)
+whatsnew/changelog.po:1322: missing space before default role: ': 与``follow_symlinks=真``'. (missing-space-before-default-role)
+whatsnew/changelog.po:1322: trailing whitespace (trailing-whitespace)
