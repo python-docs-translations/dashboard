@@ -1,0 +1,1 @@
+library/tkinter.po:964: missing space before < in hyperlink (missing-space-in-hyperlink)
