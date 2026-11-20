@@ -55,21 +55,19 @@ class testContributeLink(unittest.TestCase):
                     )
 
     def test_links_are_valid(self):
-        http = urllib3.PoolManager()
+        http = urllib3.PoolManager(
+            timeout=1.0, retries=urllib3.Retry(total=3, read=False)
+        )
         for lang, link in contribute.custom_contributing_links.items():
             link = link.format(branch='3.12' if lang == 'tr' else '3.14')
-            with self.subTest(lang=lang):
+            with self.subTest(lang=lang, link=link):
                 try:
-                    r = http.request('HEAD', link, timeout=urllib3.Timeout(10.0))
-                    self.assertTrue(
-                        200 <= r.status < 400, f'{link} returned {r.status}'
-                    )
-                except urllib3.exceptions.MaxRetryError as e:
-                    if isinstance(e.reason, urllib3.exceptions.ReadTimeoutError):
-                        self.skipTest(f'{link}: read timeout, skipping slow server')
-                    self.fail(f'{link}: {e}')
-                except urllib3.exceptions.HTTPError as e:
-                    self.fail(f'{link}: {e}')
+                    response = http.request('HEAD', link)
+                except urllib3.exceptions.ReadTimeoutError:
+                    self.skipTest(f'{link}: read timeout, skipping slow server')
+                self.assertTrue(
+                    200 <= response.status < 400, f'{link} returned {response.status}'
+                )
 
 
 if __name__ == '__main__':
