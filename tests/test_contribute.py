@@ -9,49 +9,36 @@ with support.import_scripts():
 
 class testContributeLink(unittest.TestCase):
     def test_get_contrib_link(self):
-        PULL_FROM_TX = 'https://explore.transifex.com/python-doc/python-newest/'
-        DEVGUIDE = 'https://devguide.python.org/documentation/translations/translating/'
-
         for code, repo, expected in (
-            ('en', None, DEVGUIDE),
-            ('pl', None, PULL_FROM_TX),
+            (
+                'en',
+                None,
+                'https://devguide.python.org/documentation/translations/translating/',
+            ),
+            ('pl', None, 'https://explore.transifex.com/python-doc/python-newest/'),
             ('ar', 'python/python-docs-ar', 'https://github.com/python/python-docs-ar'),
-            (
-                'zh-tw',
-                None,
-                'https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2',
-            ),
-            (
-                'id',
-                None,
-                'https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan',
-            ),
-            (
-                'fr',
-                None,
-                'https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst',
-            ),
-            (
-                'tr',
-                None,
-                'https://github.com/python/python-docs-tr/blob/3.14/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak',
-            ),
-            (
-                'el',
-                None,
-                'https://github.com/python/python-docs-el/blob/3.14/CONTRIBUTING.md',
-            ),
-            (
-                'es',
-                None,
-                'https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html',
-            ),
         ):
             for branch in ('3.12', '3.14', '3.15', 'main', 'master'):
                 with self.subTest(code=code, repo=repo, branch=branch):
                     self.assertEqual(
-                        contribute.get_contrib_link(code, repo, branch),
-                        expected.replace('/3.14/', f'/{branch}/'),
+                        contribute.get_contrib_link(code, repo, branch), expected
+                    )
+
+    def test_custom_contrib_links(self):
+        expected_links = {
+            'zh-tw': 'https://github.com/python/python-docs-zh-tw/blob/{branch}/README.rst#id2',
+            'id': 'https://github.com/python/python-docs-id/blob/{branch}/README.md#berkontribusi-untuk-menerjemahkan',
+            'fr': 'https://git.afpy.org/AFPy/python-docs-fr/src/branch/{branch}/CONTRIBUTING.rst',
+            'tr': 'https://github.com/python/python-docs-tr/blob/{branch}/README.md#%C3%A7eviriye-katk%C4%B1da-bulunmak',
+            'el': 'https://github.com/python/python-docs-el/blob/{branch}/CONTRIBUTING.md',
+            'es': 'https://python-docs-es.readthedocs.io/page/CONTRIBUTING.html',
+        }
+        for code, expected in expected_links.items():
+            for branch in ('3.12', '3.14', '3.15', 'main', 'master'):
+                with self.subTest(code=code, branch=branch):
+                    self.assertEqual(
+                        contribute.get_contrib_link(code, None, branch),
+                        expected.format(branch=branch),
                     )
 
     def test_links_are_valid(self):
