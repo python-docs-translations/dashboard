@@ -140,7 +140,7 @@
         return nameComparison;
       }
       const sortField = sortFields[sortBy] || sortFields['completion-score'];
-      return Number(b.dataset[sortField]) - Number(a.dataset[sortField]) || nameComparison;
+      return Number(b.dataset[sortField]) - Number(a.dataset[sortField]);
     });
 
     row.innerHTML = '';
