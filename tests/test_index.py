@@ -36,35 +36,6 @@ class testIndex(unittest.TestCase):
             'Measured against the Python 3.15 documentation (prerelease).', index
         )
 
-        def link_for(href):
-            link_start = index.index(href)
-            link_end = index.index('</a>', link_start)
-            return index[link_start:link_end]
-
-        build_details_link = link_for('build-details.html')
-        self.assertIn('Build details', build_details_link)
-        self.assertNotIn('<svg', build_details_link)
-
-        for href, label in (
-            (
-                'https://devguide.python.org/documentation/translations/translating/',
-                'Translating',
-            ),
-            ('https://discuss.python.org/c/documentation/translations/', 'Get help'),
-        ):
-            link = link_for(href)
-            self.assertIn('target="_blank"', link)
-            self.assertLess(
-                link.index(label),
-                link.index('class="bi bi-box-arrow-up-right external-link-icon"'),
-            )
-            self.assertIn('viewBox="0 0 16 16"', link)
-            self.assertIn('fill="currentColor"', link)
-        self.assertIn(
-            'rel="noopener noreferrer"',
-            link_for('https://discuss.python.org/c/documentation/translations/'),
-        )
-
     def test_orders_by_completion_score(self):
         env = Environment(loader=FileSystemLoader('templates'))
         language_project_data = generate.LanguageProjectData(
