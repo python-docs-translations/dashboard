@@ -91,16 +91,16 @@ body {
   color: var(--navbar-title-color);
 }
 
-.nav-link svg {
-  vertical-align: middle;
-  margin-top: -4.5px;
+.nav-link.external-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.375em;
 }
 
 .nav-link .external-link-icon {
   width: 0.75em;
   height: 0.75em;
-  margin: 0 0 0 0.15em;
-  vertical-align: baseline;
+  flex-shrink: 0;
 }
 
 .theme-toggle-btn {

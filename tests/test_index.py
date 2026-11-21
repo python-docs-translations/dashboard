@@ -50,18 +50,16 @@ class testIndex(unittest.TestCase):
                 'https://devguide.python.org/documentation/translations/translating/',
                 'Translating',
             ),
-            (
-                'https://discuss.python.org/c/documentation/translations/',
-                'Get help',
-            ),
+            ('https://discuss.python.org/c/documentation/translations/', 'Get help'),
         ):
             link = link_for(href)
             self.assertIn('target="_blank"', link)
             self.assertLess(
-                link.index(label), link.index('class="external-link-icon"')
+                link.index(label),
+                link.index('class="bi bi-box-arrow-up-right external-link-icon"'),
             )
-            self.assertIn('viewBox="0 0 12 12"', link)
-            self.assertIn('stroke="currentColor"', link)
+            self.assertIn('viewBox="0 0 16 16"', link)
+            self.assertIn('fill="currentColor"', link)
         self.assertIn(
             'rel="noopener noreferrer"',
             link_for('https://discuss.python.org/c/documentation/translations/'),
