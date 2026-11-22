@@ -155,11 +155,11 @@
       "name": "Korean"
     },
     "repository": "python/python-docs-ko",
-    "branch": "3.14",
-    "core_completion": 40.19175826836473,
-    "completion": 42.38344946803771,
-    "core_change": 0.0,
-    "change": 0.006181722595478334,
+    "branch": "3.15",
+    "core_completion": 27.72684752104771,
+    "completion": 42.37231137895248,
+    "core_change": -12.46491074731702,
+    "change": -0.004956366489750508,
     "built": true,
     "translated_name": "\ud55c\uad6d\uc5b4",
     "contribution_link": "https://www.flowdas.com/pages/python-docs-ko.html"
