@@ -13,6 +13,7 @@ from jinja2 import Environment, FileSystemLoader
 from urllib3 import request
 
 import build_warnings
+import pospell_check
 import sphinx_lint
 from generate import LanguageProjectData
 from repositories import Language
@@ -23,7 +24,7 @@ generation_time = datetime.now(UTC)
 
 def get_projects_build_details(
     completion_progress: Sequence[LanguageProjectData],
-) -> Iterator[tuple[int, int, datetime | None]]:
+) -> Iterator[tuple[int, int, datetime | None, int | None]]:
     with concurrent.futures.ProcessPoolExecutor() as executor:
         return executor.map(
             get_build_details,
@@ -33,24 +34,32 @@ def get_projects_build_details(
 
 
 def get_build_details(
-    language: Language, repo: str | None, completion: float, clones_dir: str
-) -> tuple[int, int, datetime | None]:
+    language: Language,
+    repo: str | None,
+    completion: float,
+    branch: str,
+    clones_dir: str,
+) -> tuple[int, int, datetime | None, int | None]:
     if not repo or not (repo_path := Path(clones_dir, 'translations', repo)).exists():
-        return 0, 0, None
+        return 0, 0, None, None
     latest_commit = Repo(repo_path).head.commit.committed_datetime
+    spelling_failures = pospell_check.store_and_count_failures(
+        repo, branch, language.code
+    )
     if not completion:
-        return 0, 0, latest_commit
+        return 0, 0, latest_commit, spelling_failures
     return (
         build_warnings.number(clones_dir, repo, language.code),
         sphinx_lint.store_and_count_failures(clones_dir, repo, language.code),
         latest_commit,
+        spelling_failures,
     )
 
 
 def get_language_repo_and_completion(
     project: LanguageProjectData,
-) -> tuple[Language, str | None, float]:
-    return project.language, project.repository, project.completion
+) -> tuple[Language, str | None, float, str]:
+    return project.language, project.repository, project.completion, project.branch
 
 
 if __name__ == '__main__':

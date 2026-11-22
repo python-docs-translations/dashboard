@@ -258,7 +258,7 @@ th, td {
 th {
   background-color: var(--table-header-bg);
 }
-td[data-label="warnings"], td[data-label="lint"] {
+td[data-label="warnings"], td[data-label="lint"], td[data-label="pospell"] {
   text-align: right;
 }
 
@@ -288,7 +288,7 @@ td[data-label="warnings"], td[data-label="lint"] {
     left: 10px;
     position: absolute;
   }
-  td[data-label="warnings"], td[data-label="lint"] {
+  td[data-label="warnings"], td[data-label="lint"], td[data-label="pospell"] {
     text-align: left;
   }
 }

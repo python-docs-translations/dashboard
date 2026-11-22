@@ -6,3 +6,17 @@ This project generates a dashboard presenting the Python documentation translati
 There are two entrypoints:
 - `generate.py`: Generates dashboard HTML and JSON files.
 - `generate_build_details.py`: Generates the build details HTML file and log files for each translation project.
+
+Build details downloads pospell results from each translation repository's
+`spellcheck-<language-code>` Actions artifact, containing `spellcheck.json` in the
+schema version 1 described in `python-docs-pl/SPELLCHECK_REPORT.md`.
+Set `GH_TOKEN` (or `GITHUB_TOKEN`) to a token able to read those Actions artifacts
+when running locally. The update workflow uses `SPELLCHECK_REPORTS_TOKEN` when
+configured, falling back to its GitHub token. A separate token needs Actions read
+access to the translation repositories whose artifacts it downloads.
+Only complete reports from completed push, schedule, or manual runs in the same
+repository and translation branch are used, including runs that failed because
+they found spelling issues. The count is the number of PO entries with findings,
+and links to `warnings-pospell-<language-code>.txt`, with suspect words, entry
+identities, and report provenance. Missing, expired, invalid, or inaccessible
+reports are shown as unavailable. Reports can predate the current checkout.

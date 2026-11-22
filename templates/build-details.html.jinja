@@ -16,6 +16,7 @@
         <th>last updated</th>
         <th>build warnings*</th>
         <th>lint failures</th>
+        <th>pospell check</th>
       </tr>
     </thead>
     <tbody>
@@ -39,12 +40,24 @@
                 {{ metadata[1] }}
               {% endif %}
             </td>
+            <td data-label="pospell">
+              {% if metadata[3] is not none %}
+                <a href="warnings-pospell-{{ project.language.code }}.txt">{{ metadata[3] }}</a>
+              {% else %}
+                unavailable
+              {% endif %}
+            </td>
           </tr>
         {% endif %}
       {% endfor %}
     </tbody>
   </table>
   <p>* number of Sphinx build process warnings</p>
+  <p>
+    Pospell check counts PO entries with spelling findings in the latest complete report for the translation branch.
+    Reports may predate the latest translation updates; the report file includes its date and revision.
+    Unavailable means no usable report could be downloaded.
+  </p>
   <p>
     Last updated at {{ generation_time.strftime("%A, %-d %B %Y, %-H:%M:%S %Z") }} (in {{ duration // 60 }}:{{ "{:02}".format(duration % 60) }} minutes).
   </p>
