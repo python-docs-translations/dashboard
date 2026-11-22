@@ -8,6 +8,7 @@ from pathlib import Path
 from sys import argv
 
 import dacite
+import humanize
 from git import Repo
 from jinja2 import Environment, FileSystemLoader
 from urllib3 import request
@@ -57,6 +58,7 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logger.info('starting at %s', generation_time)
     env = Environment(loader=FileSystemLoader('templates'))
+    env.filters['naturaltime'] = humanize.naturaltime
     if (index_path := Path('build/index.json')).exists():
         index_json = loads(Path('build/index.json').read_text())
     else:

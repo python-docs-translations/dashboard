@@ -24,7 +24,12 @@
           <tr>
             <td data-label="language">{{ project.language.name }} ({{ project.language.code }})</td>
             <td data-label="branch">{{ project.branch }}</td>
-            <td data-label="updated">{{ metadata[2].strftime("%Y/%m/%d %T") if metadata[2] else '' }}</td>
+            <td data-label="updated">
+              {% if metadata[2] %}
+                <time datetime="{{ metadata[2].isoformat() }}"
+                      title="{{ metadata[2].strftime('%Y/%m/%d %T') }}">{{ metadata[2] | naturaltime(when=generation_time) }}</time>
+              {% endif %}
+            </td>
             <td data-label="warnings">
               {% if project.completion %}
                 <a href="warnings-{{ project.language.code }}.txt">{{ metadata[0] }}</a>
