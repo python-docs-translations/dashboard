@@ -42,7 +42,7 @@
     "change": 0.08949333731576914,
     "built": true,
     "translated_name": "fran\u00e7ais",
-    "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.14/CONTRIBUTING.rst"
+    "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.15/CONTRIBUTING.rst"
   },
   {
     "language": {
@@ -294,7 +294,7 @@
     "core_completion": 100.0,
     "completion": 97.09547869183699,
     "core_change": 1.9211693017794573,
-    "change": 8.45249525367683,
+    "change": 8.449653310835544,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
@@ -346,6 +346,21 @@
   },
   {
     "language": {
+      "code": "te",
+      "name": "Telugu"
+    },
+    "repository": "divya0795/python-docs-te",
+    "branch": "3.15",
+    "core_completion": 100.0,
+    "completion": 2.778026989541093,
+    "core_change": 77.5694880255886,
+    "change": 2.160600976179504,
+    "built": false,
+    "translated_name": "\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41",
+    "contribution_link": "https://github.com/divya0795/python-docs-te"
+  },
+  {
+    "language": {
       "code": "zh-tw",
       "name": "Traditional Chinese"
     },
@@ -357,7 +372,7 @@
     "change": 0.2768386673628491,
     "built": true,
     "translated_name": "\u7e41\u9ad4\u4e2d\u6587",
-    "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.14/README.rst#id2"
+    "contribution_link": "https://github.com/python/python-docs-zh-tw/blob/3.15/README.rst#id2"
   },
   {
     "language": {
