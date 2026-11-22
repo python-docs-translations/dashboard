@@ -20,3 +20,9 @@ they found spelling issues. The count is the number of PO entries with findings,
 and links to `warnings-pospell-<language-code>.txt`, with suspect words, entry
 identities, and report provenance. Missing, expired, invalid, or inaccessible
 reports are shown as unavailable. Reports can predate the current checkout.
+
+The same report is published unchanged at
+`https://translations.python.org/spellcheck-<language-code>.json` for consumers such
+as `potodo-docs-priority`. The file contains JSON `null` when no usable report is
+available, replacing any previously published report. Consumers need no GitHub
+token; only this dashboard downloads Actions artifacts.

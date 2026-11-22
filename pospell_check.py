@@ -111,6 +111,9 @@ def format_failures(report: dict) -> list[str]:
 
 def store_and_count_failures(repo: str, branch: str, language_code: str) -> int | None:
     filepath = Path(f'build/warnings-pospell-{language_code}.txt')
+    report_path = filepath.with_name(f'spellcheck-{language_code}.json')
+    # Deploys retain existing files, so explicitly replace unavailable reports.
+    report_path.write_text('null\n', encoding='utf-8')
     filepath.unlink(missing_ok=True)
     try:
         report = download_report(repo, branch, language_code)
@@ -119,6 +122,9 @@ def store_and_count_failures(repo: str, branch: str, language_code: str) -> int 
         return None
     if report is None:
         return None
+    report_path.write_text(
+        json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+    )
     failures = format_failures(report)
     header = '\n'.join(
         f'{field}: {report.get(field, "")}'

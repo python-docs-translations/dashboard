@@ -62,6 +62,7 @@ class TestPospellCheck(unittest.TestCase):
         }
         self.api = self.enterContext(patch('pospell_check.github_api'))
         self.api.side_effect = self.github_api
+        self.published = self.output.with_name('spellcheck-pl.json')
         self.enterContext(patch('pospell_check.Path', return_value=self.output))
 
     def github_api(self, endpoint):
@@ -79,6 +80,7 @@ class TestPospellCheck(unittest.TestCase):
 
     def test_failed_run_with_complete_report_counts_entries_and_writes_log(self):
         self.assertEqual(self.store(), 1)
+        self.assertEqual(json.loads(self.published.read_text()), self.report)
         log = self.output.read_text(encoding='utf-8')
         for text in (
             'tutorial/guide.po: Błont, literufka',
@@ -99,10 +101,12 @@ class TestPospellCheck(unittest.TestCase):
 
     def test_missing_report_removes_previous_log(self):
         self.output.write_text('old findings')
+        self.published.write_text(json.dumps(self.report))
         self.api.side_effect = None
         self.api.return_value = b'{"artifacts": []}'
         self.assertIsNone(self.store())
         self.assertFalse(self.output.exists())
+        self.assertIsNone(json.loads(self.published.read_text()))
 
     def test_expired_wrong_branch_and_fork_artifacts_are_skipped(self):
         candidates = [copy.deepcopy(self.artifact) for _ in range(3)]
@@ -114,6 +118,7 @@ class TestPospellCheck(unittest.TestCase):
         self.assertIsNone(self.store())
         self.assertEqual(self.api.call_count, 1)
         self.assertFalse(self.output.exists())
+        self.assertIsNone(json.loads(self.published.read_text()))
 
     def test_pr_incomplete_and_wrong_repository_runs_are_skipped(self):
         for changes in (
@@ -127,6 +132,7 @@ class TestPospellCheck(unittest.TestCase):
                 self.run.update(changes)
                 self.assertIsNone(self.store())
                 self.assertFalse(self.output.exists())
+                self.assertIsNone(json.loads(self.published.read_text()))
                 self.run = original
 
     def test_incompatible_or_malformed_reports_are_unavailable(self):
@@ -145,6 +151,7 @@ class TestPospellCheck(unittest.TestCase):
                 self.report[field] = value
                 self.assertIsNone(self.store())
                 self.assertFalse(self.output.exists())
+                self.assertIsNone(json.loads(self.published.read_text()))
                 self.report = original
 
     def test_older_complete_report_is_used_after_incomplete_report(self):
@@ -176,10 +183,12 @@ class TestPospellCheck(unittest.TestCase):
 
     def test_download_failure_is_unavailable_and_removes_old_log(self):
         self.output.write_text('old findings')
+        self.published.write_text(json.dumps(self.report))
         self.api.side_effect = HTTPError('Forbidden')
         with self.assertLogs('pydocs-translation-dashboard', level='WARNING'):
             self.assertIsNone(self.store())
         self.assertFalse(self.output.exists())
+        self.assertIsNone(json.loads(self.published.read_text()))
 
     def test_corrupt_archive_is_skipped(self):
         original_api = self.github_api
@@ -188,6 +197,7 @@ class TestPospellCheck(unittest.TestCase):
         )
         self.assertIsNone(self.store())
         self.assertFalse(self.output.exists())
+        self.assertIsNone(json.loads(self.published.read_text()))
 
 
 class TestGitHubAPI(unittest.TestCase):
