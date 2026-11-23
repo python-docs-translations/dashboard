@@ -1,0 +1,2 @@
+library/tkinter.po:1263: role missing (escaped) space after role: ':meth:`~Misc.keys`n' (missing-space-after-role)
+library/idle.po:461: trailing whitespace (trailing-whitespace)
