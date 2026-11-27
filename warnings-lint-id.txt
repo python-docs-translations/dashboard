@@ -1,2 +1,1 @@
-extending/building.po:33: role with no backticks: " :ref:'extension-modules' " (role-without-backticks)
 c-api/arg.po:1365: role missing opening tag colon ( c:expr:`). (missing-space-before-role)
