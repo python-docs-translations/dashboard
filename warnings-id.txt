@@ -1,3 +1,5 @@
+extending/building.rst:12: WARNING: inconsistent cross-references in translated message. original: [':ref:`extension-modules`'], translated: [] [i18n.inconsistent_references]
+extending/building.rst:29: WARNING: inconsistent cross-references in translated message. original: [':mod:`distutils`'], translated: [] [i18n.inconsistent_references]
 builtins/functions.rst:1104: WARNING: inconsistent cross-references in translated message. original: [':class:`int`', ':meth:`base.__index__ <object.__index__>`', ':meth:`base.__int__ <object.__int__>`', ':meth:`base.__index__\n<object.__index__>`'], translated: [':class:`int`', ':meth:`base.__index__ <object.__index__>`'] [i18n.inconsistent_references]
 c-api/allocation.rst:17: WARNING: inconsistent cross-references in translated message. original: [':meth:`~object.__init__`', ':c:member:`~PyTypeObject.tp_init`'], translated: [':meth:`~object.__init__`'] [i18n.inconsistent_references]
 c-api/arg.rst:126: WARNING: inconsistent cross-references in translated message. original: [':ref:`borrowed <c-arg-borrowed-buffer>`', ':exc:`ValueError`'], translated: [':exc:`ValueError`'] [i18n.inconsistent_references]
@@ -9,12 +11,18 @@ c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without 
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 c-api/cell.rst:48:<translated>:1: WARNING: Inline emphasis start-string without end-string. [docutils]
 tutorial/datastructures.rst:762: WARNING: inconsistent cross-references in translated message. original: [':ref:`walrus operator <why-can-t-i-use-an-assignment-in-an-expression>`'], translated: [] [i18n.inconsistent_references]
+library/fcntl.rst:149:<translated>:1: ERROR: Unknown interpreted text role "kelas". [docutils]
+library/fcntl.rst:258:<translated>:1: ERROR: Unknown interpreted text role "kelas". [docutils]
+library/fcntl.rst:149:<translated>:1: ERROR: Unknown interpreted text role "kelas". [docutils]
+library/fcntl.rst:149: WARNING: inconsistent cross-references in translated message. original: [':class:`bytearray`', ':c:func:`ioctl`', ':func:`ioctl`'], translated: [':c:func:`ioctl`', ':func:`ioctl`'] [i18n.inconsistent_references]
+library/fcntl.rst:258:<translated>:1: ERROR: Unknown interpreted text role "kelas". [docutils]
+library/fcntl.rst:258: WARNING: inconsistent cross-references in translated message. original: [':class:`bytes`', ':func:`flock`'], translated: [':func:`flock`'] [i18n.inconsistent_references]
 
 
 Versions
 ========
 
-* Platform:         linux; (Linux-7.0.0-1016-aws-x86_64-with-glibc2.43)
+* Platform:         linux; (Linux-7.0.0-1020-azure-x86_64-with-glibc2.43)
 * Python version:   3.15.2 (CPython)
 * Sphinx version:   9.3.0
 * Docutils version: 0.23
@@ -106,7 +114,7 @@ Traceback
 
 
 The full traceback has been saved in:
-/tmp/sphinx-err-9zmuh3pf.log
+/tmp/sphinx-err-upr5daq8.log
 
 To report this error to the developers, please open an issue at <https://github.com/sphinx-doc/sphinx/issues/>. Thanks!
 Please also report this if it was a user error, so that a better error message can be provided next time.
