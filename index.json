@@ -39,7 +39,7 @@
     "core_completion": 28.262713979138592,
     "completion": 21.940230990213212,
     "core_change": 22.217353154396324,
-    "change": 0.08936028386078831,
+    "change": 0.08780232125300103,
     "built": true,
     "translated_name": "fran\u00e7ais",
     "contribution_link": "https://git.afpy.org/AFPy/python-docs-fr/src/branch/3.15/CONTRIBUTING.rst"
@@ -112,9 +112,9 @@
     "repository": "python/python-docs-id",
     "branch": "3.14",
     "core_completion": 46.66072838431484,
-    "completion": 4.50501580497424,
+    "completion": 4.712669963983243,
     "core_change": 0.0,
-    "change": 1.6625130270712694,
+    "change": 1.8701671860802715,
     "built": true,
     "translated_name": "Indonesia",
     "contribution_link": "https://github.com/python/python-docs-id/blob/3.14/README.md#berkontribusi-untuk-menerjemahkan"
@@ -292,9 +292,9 @@
     "repository": "python/python-docs-zh-cn",
     "branch": "3.15",
     "core_completion": 100.0,
-    "completion": 96.83204996163516,
+    "completion": 96.83789232141436,
     "core_change": 0.9069376682794541,
-    "change": 4.422833277413602,
+    "change": 4.428675637192796,
     "built": true,
     "translated_name": "\u7b80\u4f53\u4e2d\u6587",
     "contribution_link": "https://explore.transifex.com/python-doc/python-newest/"
